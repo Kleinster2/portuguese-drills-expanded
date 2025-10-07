@@ -498,7 +498,9 @@ async function startNewSession() {
 }
 
 async function openDrillChat(drillId) {
-  console.log('Opening drill chat for:', drillId); // Debug log
+  console.log('🔥 Opening drill chat for:', drillId); // Enhanced debug log
+  console.log('🔥 Previous currentDrillId:', currentDrillId);
+  console.log('🔥 Current drillSessions state:', JSON.stringify(drillSessions, null, 2));
   
   const modal = document.getElementById('chat-modal');
   const messagesContainer = document.getElementById('chat-messages');
@@ -514,11 +516,17 @@ async function openDrillChat(drillId) {
   const drillTitle = document.getElementById('chat-drill-title');
   drillTitle.textContent = drillId === 'ser-estar' ? 'Ser vs. Estar Drill' : 'Regular -ar Verb Drill';
   
-  console.log('Current drill sessions:', drillSessions); // Debug log
+  console.log('🔥 After setting currentDrillId to:', currentDrillId);
+  console.log('🔥 Looking for existing session with key:', drillId);
+  
+  // TEMPORARY: Force new sessions for debugging - set to true to always create fresh sessions
+  const FORCE_NEW_SESSIONS = false;
   
   // Check if we already have a session for this drill
-  if (drillSessions[drillId]) {
-    console.log('Restoring existing session for:', drillId, drillSessions[drillId]);
+  if (drillSessions[drillId] && !FORCE_NEW_SESSIONS) {
+    console.log('🔥 Found existing session for:', drillId);
+    console.log('🔥 Session details:', drillSessions[drillId]);
+    console.log('🔥 Restoring session...');
     // Restore existing session
     currentChatSession = drillSessions[drillId].sessionId;
     messagesContainer.innerHTML = '';
@@ -581,6 +589,10 @@ async function openDrillChat(drillId) {
       sessionId: data.sessionId,
       messages: [{ role: 'assistant', content: data.response }]
     };
+    
+    console.log('🔥 Created new session for drillId:', drillId);
+    console.log('🔥 Session data:', drillSessions[drillId]);
+    console.log('🔥 All sessions now:', JSON.stringify(drillSessions, null, 2));
     
     // Clear loading and show AI response
     messagesContainer.innerHTML = '';
