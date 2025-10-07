@@ -498,9 +498,15 @@ async function startNewSession() {
 }
 
 async function openDrillChat(drillId) {
-  console.log('🔥 Opening drill chat for:', drillId); // Enhanced debug log
-  console.log('🔥 Previous currentDrillId:', currentDrillId);
-  console.log('🔥 Current drillSessions state:', JSON.stringify(drillSessions, null, 2));
+  
+  // Detect if we're switching drill types BEFORE updating currentDrillId
+  const previousDrillId = currentDrillId;
+  const isSwitchingDrillTypes = previousDrillId && previousDrillId !== drillId;
+  
+  // If switching to different drill type, reset current session
+  if (isSwitchingDrillTypes) {
+    currentChatSession = null;
+  }
   
   const modal = document.getElementById('chat-modal');
   const messagesContainer = document.getElementById('chat-messages');
@@ -518,12 +524,27 @@ async function openDrillChat(drillId) {
   
   console.log('🔥 After setting currentDrillId to:', currentDrillId);
   console.log('🔥 Looking for existing session with key:', drillId);
+  console.log('🔥 drillSessions[drillId]:', drillSessions[drillId]);
+  console.log('🔥 All drillSessions keys:', Object.keys(drillSessions));
   
-  // TEMPORARY: Force new sessions for debugging - set to true to always create fresh sessions
-  const FORCE_NEW_SESSIONS = false;
+  // Safety check: If stored session doesn't match drill type, clear it
+  if (drillSessions[drillId] && drillSessions[drillId].drillType !== drillId) {
+    console.log('🔥 WARNING: Session drill type mismatch! Clearing corrupted session.');
+    console.log('🔥 Expected:', drillId, 'but found:', drillSessions[drillId].drillType);
+    delete drillSessions[drillId];
+  }
   
-  // Check if we already have a session for this drill
-  if (drillSessions[drillId] && !FORCE_NEW_SESSIONS) {
+  // IMPORTANT: Only restore session if it's for the EXACT same drill type
+  // and the stored session actually has the correct drill type
+  // AND we're not switching from a different drill type
+  console.log('🔥 isSwitchingDrillTypes:', isSwitchingDrillTypes);
+  
+  // Only create fresh session if we're switching to a DIFFERENT drill type
+  // If we're returning to the same drill type, restore the session
+  const shouldRestoreSession = drillSessions[drillId] && drillSessions[drillId].drillType === drillId;
+  console.log('🔥 shouldRestoreSession:', shouldRestoreSession);
+  
+  if (shouldRestoreSession) {
     console.log('🔥 Found existing session for:', drillId);
     console.log('🔥 Session details:', drillSessions[drillId]);
     console.log('🔥 Restoring session...');
@@ -550,13 +571,18 @@ async function openDrillChat(drillId) {
     
     return;
   } else {
-    console.log('No existing session found for:', drillId, 'Creating new session');
+    console.log('🔥 No existing session found for:', drillId, 'or switching drill types');
+    console.log('🔥 Creating new session...');
   }
   
   // Disable input while starting new session
   chatInput.disabled = true;
   sendButton.disabled = true;
-  loadingMessage.textContent = 'Starting your drill session...';
+  
+  // Show loading message
+  messagesContainer.innerHTML = '<div class="flex items-start space-x-3"><div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"><span class="text-green-600 text-sm font-bold">AI</span></div><div class="bg-slate-100 rounded-2xl p-3 max-w-2xl"><div id="loading-message" class="text-slate-600">Starting your drill session...</div></div></div>';
+  
+  console.log('🔥 Set loading message and disabled input');
   
   try {
     // Start new chat session with timeout
@@ -587,6 +613,7 @@ async function openDrillChat(drillId) {
     // Store new session data
     drillSessions[drillId] = {
       sessionId: data.sessionId,
+      drillType: drillId, // Explicitly store the drill type
       messages: [{ role: 'assistant', content: data.response }]
     };
     

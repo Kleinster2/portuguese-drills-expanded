@@ -91,20 +91,17 @@ async function callClaude(apiKey, messages) {
 export async function onRequestPost({ request, env }) {
   const headers = corsHeaders(request);
   
-  console.log('=== CHAT API CALLED ===');
-  console.log('Debug: env object keys:', Object.keys(env || {}));
-  console.log('Debug: ANTHROPIC_API_KEY exists:', !!env?.ANTHROPIC_API_KEY);
-  console.log('Debug: ANTHROPIC_API_KEY value:', env?.ANTHROPIC_API_KEY);
-  console.log('Debug: API key length:', env?.ANTHROPIC_API_KEY ? env.ANTHROPIC_API_KEY.length : 'undefined');
   
   try {
     const body = await request.json().catch(() => ({}));
     const { sessionId, drillId, message, isNewSession } = body;
+    
 
     if (isNewSession || !sessionId) {
       // Create new session and return welcome message
       const newSessionId = generateSessionId();
       const actualDrillId = drillId || 'regular-ar';
+      
       const session = {
         sessionId: newSessionId,
         drillId: actualDrillId,
@@ -124,12 +121,7 @@ export async function onRequestPost({ request, env }) {
       const apiKey = env.ANTHROPIC_API_KEY;
       if (!apiKey) {
         return new Response(JSON.stringify({ 
-          error: 'Anthropic API key not configured',
-          debug: {
-            envKeys: Object.keys(env || {}),
-            hasKey: !!env?.ANTHROPIC_API_KEY,
-            keyLength: env?.ANTHROPIC_API_KEY ? env.ANTHROPIC_API_KEY.length : 'undefined'
-          }
+          error: 'Anthropic API key not configured'
         }), {
           status: 500,
           headers: { ...headers, 'Content-Type': 'application/json' }
