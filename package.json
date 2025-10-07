@@ -1,0 +1,24 @@
+{
+  "name": "portuguese-drills-expanded",
+  "version": "1.0.0",
+  "description": "An expanded version of Portuguese learning drills with additional content, features, and practice materials. Filter by topic, search by keyword, and launch a drill to practice.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev": "wrangler pages dev . --compatibility-date=2024-01-01 --local",
+    "deploy": "wrangler pages deploy . --project-name=portuguese-drills-expanded",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kleinster2/portuguese-drills-expanded.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Kleinster2/portuguese-drills-expanded/issues"
+  },
+  "homepage": "https://github.com/Kleinster2/portuguese-drills-expanded#readme"
+}
