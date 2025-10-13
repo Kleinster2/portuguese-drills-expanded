@@ -325,7 +325,12 @@
                             <button onclick="openDrillChat('adjective-agreement')" class="flex-1 text-center bg-green-600 text-white rounded-lg px-4 py-2.5 font-semibold hover:bg-green-700 transition-colors text-sm">🚀 Try Integrated</button>
                         </div>
                     </div></div>
-                <div id="drill-demonstratives" class="drill-card flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1" data-topic="grammar" data-cefr="b1"><div class="p-6 flex-grow"><span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">Grammar & Prepositions</span><h2 class="text-xl font-bold text-slate-900 mb-2">🔗 Demonstrative Pronouns Drill</h2><p class="text-slate-600 text-base flex-grow">Master the tricky distinction between `este` (near me), `esse` (near you), and `aquele` (over there).</p></div><div class="p-6 bg-slate-50"><a href="https://chatgpt.com/g/g-68c251a602148191becd5a26169c727e-demonstratives-drill?model=gpt-5" target="_blank" class="block w-full text-center bg-purple-600 text-white rounded-lg px-4 py-2.5 font-semibold hover:bg-purple-700 transition-colors">Start Drill</a></div></div>
+                <div id="drill-demonstratives" class="drill-card flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1" data-topic="grammar" data-cefr="b1"><div class="p-6 flex-grow"><span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">Grammar & Prepositions</span><h2 class="text-xl font-bold text-slate-900 mb-2">🔗 Demonstrative Pronouns Drill</h2><p class="text-slate-600 text-base flex-grow">Master the tricky distinction between `este` (near me), `esse` (near you), and `aquele` (over there).</p></div><div class="p-6 bg-slate-50">
+                        <div class="flex gap-2">
+                            <a href="https://chatgpt.com/g/g-68c251a602148191becd5a26169c727e-demonstratives-drill?model=gpt-5" target="_blank" class="flex-1 text-center bg-blue-600 text-white rounded-lg px-4 py-2.5 font-semibold hover:bg-blue-700 transition-colors text-sm">ChatGPT Version</a>
+                            <button onclick="openDrillChat('demonstratives')" class="flex-1 text-center bg-green-600 text-white rounded-lg px-4 py-2.5 font-semibold hover:bg-green-700 transition-colors text-sm">🚀 Try Integrated</button>
+                        </div>
+                    </div></div>
                 <div id="drill-ir-transportation" class="drill-card flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1" data-topic="grammar" data-cefr="a1"><div class="p-6 flex-grow"><span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">Grammar & Prepositions</span><h2 class="text-xl font-bold text-slate-900 mb-2">🔗 'Ir' + Transportation Drill</h2><p class="text-slate-600 text-base flex-grow">Practice using the verb 'ir' (to go) with different modes of transportation like 'de carro', 'a pé', and 'de Uber'.</p></div><div class="p-6 bg-slate-50">
                         <div class="flex gap-2">
                             <a href="https://chatgpt.com/g/g-68c253cd531c819193e9f7a6e862b116-ir-transport-tutor" target="_blank" class="flex-1 text-center bg-purple-600 text-white rounded-lg px-4 py-2.5 font-semibold hover:bg-purple-700 transition-colors text-sm">ChatGPT Version</a>
@@ -662,6 +667,9 @@ async function openDrillChat(drillId) {
       break;
     case 'adjective-agreement':
       drillTitle.textContent = 'Adjective Gender & Number Agreement';
+      break;
+    case 'demonstratives':
+      drillTitle.textContent = 'Demonstrative Pronouns Drill';
       break;
     default:
       drillTitle.textContent = 'Portuguese Drill';
