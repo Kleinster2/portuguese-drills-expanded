@@ -1175,9 +1175,10 @@ async function addDrillToChat(drillId) {
     systemMessage.remove();
     addMessageToChat('ai', data.response);
 
-    // Enable input
+    // Enable input and restore placeholder
     chatInput.disabled = false;
     sendButton.disabled = false;
+    chatInput.placeholder = 'Type your answer...';
     chatInput.focus();
 
   } catch (error) {
@@ -1192,23 +1193,90 @@ async function addDrillToChat(drillId) {
   }
 }
 
+async function removeDrillFromChat(drillId) {
+  if (!currentChatSession) {
+    return;
+  }
+
+  // Remove drill from activeDrills array
+  const index = activeDrills.indexOf(drillId);
+  if (index === -1) {
+    return; // Drill not found
+  }
+
+  activeDrills.splice(index, 1);
+
+  // Update the session's active drills
+  if (drillSessions[currentDrillId]) {
+    drillSessions[currentDrillId].activeDrills = [...activeDrills];
+  }
+
+  // Update the badges display
+  updateActiveDrillsBadges();
+
+  // Add a system message to the chat
+  const messagesContainer = document.getElementById('chat-messages');
+  const systemMessage = document.createElement('div');
+  systemMessage.className = 'flex justify-center my-2';
+  systemMessage.innerHTML = `
+    <div class="bg-slate-100 text-slate-600 text-xs px-3 py-1.5 rounded-full">
+      Removed "${getDrillName(drillId)}" from active drills
+    </div>
+  `;
+  messagesContainer.appendChild(systemMessage);
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+  // If no drills remain, disable input and show message
+  if (activeDrills.length === 0) {
+    const chatInput = document.getElementById('chat-input');
+    const sendButton = document.getElementById('chat-send-btn');
+    chatInput.disabled = true;
+    sendButton.disabled = true;
+    chatInput.placeholder = 'Add a drill to continue...';
+
+    // Add empty state message
+    const emptyMessage = document.createElement('div');
+    emptyMessage.className = 'flex justify-center my-4';
+    emptyMessage.innerHTML = `
+      <div class="text-center p-4 bg-slate-50 rounded-lg max-w-md">
+        <p class="text-slate-600 mb-2">All drills have been removed.</p>
+        <p class="text-sm text-slate-500">Click the "+ Add Drill" button to add drills and continue practicing.</p>
+      </div>
+    `;
+    messagesContainer.appendChild(emptyMessage);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }
+}
+
 function updateActiveDrillsBadges() {
   const container = document.getElementById('active-drills-container');
   const badgesContainer = document.getElementById('active-drills-badges');
 
-  if (activeDrills.length <= 1) {
-    // Hide container if only one drill
-    container.classList.add('hidden');
+  if (activeDrills.length === 0) {
+    // Show empty state message
+    container.classList.remove('hidden');
+    badgesContainer.innerHTML = `
+      <span class="text-xs text-slate-500 italic">No drills loaded. Click "+ Add Drill" to start practicing.</span>
+    `;
     return;
   }
 
-  // Show container and populate badges
+  // Show container and populate badges with remove buttons
   container.classList.remove('hidden');
   badgesContainer.innerHTML = activeDrills.map(drillId => {
     const drillName = getDrillName(drillId);
     return `
-      <span class="inline-flex items-center gap-1 px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
         ${escapeHtml(drillName)}
+        <button
+          onclick="removeDrillFromChat('${drillId}')"
+          class="hover:bg-green-200 rounded-full p-0.5 transition-colors"
+          title="Remove this drill"
+        >
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
       </span>
     `;
   }).join('');
