@@ -355,7 +355,12 @@
                             <button onclick="openDrillChat('contractions-de')" class="flex-1 text-center bg-green-600 text-white rounded-lg px-4 py-2.5 font-semibold hover:bg-green-700 transition-colors text-sm">🚀 Try Integrated</button>
                         </div>
                     </div></div>
-                <div id="drill-contractions-em" class="drill-card flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1" data-topic="grammar" data-cefr="a2"><div class="p-6 flex-grow"><span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">Grammar & Prepositions</span><h2 class="text-xl font-bold text-slate-900 mb-2">🔗 Contraction Trainer (`nele`/`nela`)</h2><p class="text-slate-600 text-base flex-grow">Practice location (`in it`) and verb objects (`I think about him`).</p></div><div class="p-6 bg-slate-50"><a href="https://chatgpt.com/g/g-68c30b7ff3a48191b69acb4dd4953656-nele-nela-neles-nelas" target="_blank" class="block w-full text-center bg-purple-600 text-white rounded-lg px-4 py-2.5 font-semibold hover:bg-purple-700 transition-colors">Start Drill</a></div></div>
+                <div id="drill-contractions-em" class="drill-card flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1" data-topic="grammar" data-cefr="a2"><div class="p-6 flex-grow"><span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">Grammar & Prepositions</span><h2 class="text-xl font-bold text-slate-900 mb-2">🔗 Contraction Trainer (`nele`/`nela`)</h2><p class="text-slate-600 text-base flex-grow">Practice location (`in it`) and verb objects (`I think about him`).</p></div><div class="p-6 bg-slate-50">
+                        <div class="flex gap-2">
+                            <a href="https://chatgpt.com/g/g-68c30b7ff3a48191b69acb4dd4953656-nele-nela-neles-nelas" target="_blank" class="flex-1 text-center bg-blue-600 text-white rounded-lg px-4 py-2.5 font-semibold hover:bg-blue-700 transition-colors text-sm">ChatGPT Version</a>
+                            <button onclick="openDrillChat('contractions-em')" class="flex-1 text-center bg-green-600 text-white rounded-lg px-4 py-2.5 font-semibold hover:bg-green-700 transition-colors text-sm">🚀 Try Integrated</button>
+                        </div>
+                    </div></div>
                 <div id="drill-contractions-articles" class="drill-card flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1" data-topic="grammar" data-cefr="a1"><div class="p-6 flex-grow"><span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">Grammar & Prepositions</span><h2 class="text-xl font-bold text-slate-900 mb-2">🔗 Contractions with Articles (de/em)</h2><p class="text-slate-600 text-base flex-grow">Learn how "de" and "em" contract with articles using step-by-step fill-in-the-blank drills.</p></div><div class="p-6 bg-slate-50">
                         <div class="flex gap-2">
                             <a href="https://chatgpt.com/g/g-68c30c8714b081919c37309e9fdee081-contraction-trainer-de-em" target="_blank" class="flex-1 text-center bg-blue-600 text-white rounded-lg px-4 py-2.5 font-semibold hover:bg-blue-700 transition-colors text-sm">ChatGPT Version</a>
@@ -694,6 +699,9 @@ async function openDrillChat(drillId) {
       break;
     case 'contractions-de':
       drillTitle.textContent = 'Contraction Trainer (dele/dela)';
+      break;
+    case 'contractions-em':
+      drillTitle.textContent = 'Contraction Trainer (nele/nela)';
       break;
     default:
       drillTitle.textContent = 'Portuguese Drill';
