@@ -565,7 +565,15 @@
                     </button>
                 </div>
             </div>
-            
+
+            <!-- Active Drills Badges -->
+            <div id="active-drills-container" class="hidden px-4 pt-3 pb-2 border-b border-slate-200 bg-slate-50">
+                <div class="flex items-center gap-2 flex-wrap">
+                    <span class="text-xs font-medium text-slate-600">Active Drills:</span>
+                    <div id="active-drills-badges" class="flex flex-wrap gap-2"></div>
+                </div>
+            </div>
+
             <!-- Chat Messages -->
             <div id="chat-messages" class="flex-1 overflow-y-auto p-4 space-y-4">
                 <div class="flex items-start space-x-3">
@@ -625,6 +633,7 @@
 // Chat functionality
 let currentChatSession = null;
 let currentDrillId = null;
+let activeDrills = []; // Array of drill IDs active in current session
 let drillSessions = {}; // Store separate sessions for each drill type
 
 // Function to reset all sessions - for debugging
@@ -633,25 +642,27 @@ function resetAllSessions() {
   drillSessions = {};
   currentChatSession = null;
   currentDrillId = null;
+  activeDrills = [];
 }
 
 // Function to start a new session for the current drill
 async function startNewSession() {
   if (!currentDrillId) return;
-  
+
   console.log('Starting new session for drill:', currentDrillId);
   console.log('Before clearing - drillSessions:', drillSessions);
-  
+
   // Clear the current drill's session completely
   delete drillSessions[currentDrillId];
   currentChatSession = null;
-  
+  activeDrills = []; // Clear active drills array
+
   console.log('After clearing - drillSessions:', drillSessions);
-  
+
   // Clear the UI immediately
   const messagesContainer = document.getElementById('chat-messages');
   messagesContainer.innerHTML = '<div class="flex items-start space-x-3"><div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"><span class="text-green-600 text-sm font-bold">AI</span></div><div class="bg-slate-100 rounded-2xl p-3 max-w-2xl"><div id="loading-message" class="text-slate-600">Starting fresh session...</div></div></div>';
-  
+
   // Start completely new session
   setTimeout(() => {
     openDrillChat(currentDrillId);
@@ -806,25 +817,29 @@ async function openDrillChat(drillId) {
     console.log('🔥 Restoring session...');
     // Restore existing session
     currentChatSession = drillSessions[drillId].sessionId;
+    activeDrills = drillSessions[drillId].activeDrills || [drillId]; // Restore activeDrills
     messagesContainer.innerHTML = '';
-    
+
     // Restore all messages from this session
     drillSessions[drillId].messages.forEach(msg => {
       addMessageToChat(msg.role === 'user' ? 'user' : 'ai', msg.content);
     });
-    
+
+    // Update drill badges display
+    updateActiveDrillsBadges();
+
     // Enable input
     chatInput.disabled = false;
     sendButton.disabled = false;
     chatInput.focus();
-    
+
     // Add enter key handler
     chatInput.onkeypress = function(e) {
       if (e.key === 'Enter') {
         sendChatMessage();
       }
     };
-    
+
     return;
   } else {
     console.log('🔥 No existing session found for:', drillId, 'or switching drill types');
@@ -865,14 +880,18 @@ async function openDrillChat(drillId) {
     
     const data = await response.json();
     currentChatSession = data.sessionId;
-    
+
+    // Initialize activeDrills array with the first drill
+    activeDrills = [drillId];
+
     // Store new session data
     drillSessions[drillId] = {
       sessionId: data.sessionId,
       drillType: drillId, // Explicitly store the drill type
+      activeDrills: [drillId], // Track active drills
       messages: [{ role: 'assistant', content: data.response }]
     };
-    
+
     console.log('🔥 Created new session for drillId:', drillId);
     console.log('🔥 Session data:', drillSessions[drillId]);
     console.log('🔥 All sessions now:', JSON.stringify(drillSessions, null, 2));
@@ -880,12 +899,15 @@ async function openDrillChat(drillId) {
     // Clear loading and show AI response
     messagesContainer.innerHTML = '';
     addMessageToChat('ai', data.response);
-    
+
+    // Update drill badges display
+    updateActiveDrillsBadges();
+
     // Enable input
     chatInput.disabled = false;
     sendButton.disabled = false;
     chatInput.focus();
-    
+
     // Add enter key handler
     chatInput.onkeypress = function(e) {
       if (e.key === 'Enter') {
@@ -903,29 +925,36 @@ async function sendChatMessage() {
   const chatInput = document.getElementById('chat-input');
   const sendButton = document.getElementById('chat-send-btn');
   const message = chatInput.value.trim();
-  
+
   if (!message || !currentChatSession) return;
-  
+
   // Add user message to chat
   addMessageToChat('user', message);
-  
+
   // Store user message in session history
   if (currentDrillId && drillSessions[currentDrillId]) {
     drillSessions[currentDrillId].messages.push({ role: 'user', content: message });
   }
-  
+
   // Clear input and disable while processing
   chatInput.value = '';
   chatInput.disabled = true;
   sendButton.disabled = true;
-  
+
   // Show typing indicator
   const typingIndicator = addMessageToChat('ai', '...');
-  
+
   try {
+    // Randomly select a drill from activeDrills array
+    const selectedDrill = activeDrills.length > 0
+      ? activeDrills[Math.floor(Math.random() * activeDrills.length)]
+      : currentDrillId;
+
+    console.log('🎲 Randomly selected drill:', selectedDrill, 'from', activeDrills);
+
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 60000); // 60 second timeout for responses
-    
+
     const response = await fetch('/api/chat', {
       method: 'POST',
       headers: {
@@ -933,7 +962,7 @@ async function sendChatMessage() {
       },
       body: JSON.stringify({
         sessionId: currentChatSession,
-        drillId: currentDrillId,
+        drillId: selectedDrill, // Use randomly selected drill
         message: message
       }),
       signal: controller.signal
@@ -1036,7 +1065,7 @@ function openDrillSelector() {
       const descriptionElement = card.querySelector('p.text-slate-600');
       const categoryElement = card.querySelector('span.inline-block');
 
-      if (titleElement && drillId !== currentDrillId) {
+      if (titleElement && !activeDrills.includes(drillId)) {
         drillsWithIntegration.push({
           id: drillId,
           title: titleElement.textContent.trim(),
@@ -1081,6 +1110,13 @@ async function addDrillToChat(drillId) {
     return;
   }
 
+  // Check if drill is already active
+  if (activeDrills.includes(drillId)) {
+    alert('This drill is already active in the current session.');
+    closeDrillSelector();
+    return;
+  }
+
   closeDrillSelector();
 
   const messagesContainer = document.getElementById('chat-messages');
@@ -1109,7 +1145,7 @@ async function addDrillToChat(drillId) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         sessionId: currentChatSession,
-        message: `[SYSTEM: User wants to add the "${drillId}" drill to this conversation. Please acknowledge this and begin providing exercises for this drill while maintaining the conversation context.]`,
+        message: `[SYSTEM: User wants to add the "${drillId}" drill to this conversation. From now on, alternate between the active drills. Acknowledge this briefly and provide the first exercise for this new drill.]`,
         drillType: drillId
       })
     });
@@ -1120,20 +1156,20 @@ async function addDrillToChat(drillId) {
 
     const data = await response.json();
 
-    // Update the session's drill type
+    // Add the drill to activeDrills array
+    activeDrills.push(drillId);
+
+    // Update the session's active drills
     if (drillSessions[currentDrillId]) {
-      drillSessions[currentDrillId].drillType = drillId;
+      drillSessions[currentDrillId].activeDrills = [...activeDrills];
       drillSessions[currentDrillId].messages.push(
         { role: 'user', content: `[Added drill: ${drillId}]` },
         { role: 'assistant', content: data.response }
       );
     }
 
-    // Update the current drill ID
-    currentDrillId = drillId;
-
-    // Update the title
-    updateChatTitle(drillId);
+    // Update the badges display
+    updateActiveDrillsBadges();
 
     // Remove system message and add AI response
     systemMessage.remove();
@@ -1154,6 +1190,64 @@ async function addDrillToChat(drillId) {
     chatInput.disabled = false;
     sendButton.disabled = false;
   }
+}
+
+function updateActiveDrillsBadges() {
+  const container = document.getElementById('active-drills-container');
+  const badgesContainer = document.getElementById('active-drills-badges');
+
+  if (activeDrills.length <= 1) {
+    // Hide container if only one drill
+    container.classList.add('hidden');
+    return;
+  }
+
+  // Show container and populate badges
+  container.classList.remove('hidden');
+  badgesContainer.innerHTML = activeDrills.map(drillId => {
+    const drillName = getDrillName(drillId);
+    return `
+      <span class="inline-flex items-center gap-1 px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
+        ${escapeHtml(drillName)}
+      </span>
+    `;
+  }).join('');
+}
+
+function getDrillName(drillId) {
+  const names = {
+    'ar-verbs': 'Regular -ar Verbs',
+    'er-verbs': 'Regular -er Verbs',
+    'ir-verbs': 'Regular -ir Verbs',
+    'irregular-verbs': 'Irregular Verbs',
+    'ser-estar': 'Ser vs. Estar',
+    'reflexive-verbs': 'Reflexive Verbs',
+    'immediate-future': 'Immediate Future',
+    'present-continuous': 'Present Continuous',
+    'imperfect-tense': 'Imperfect Tense',
+    'future-tense': 'Future Tense',
+    'conditional-tense': 'Conditional Tense',
+    'present-subjunctive': 'Present Subjunctive',
+    'imperfect-subjunctive': 'Imperfect Subjunctive',
+    'future-subjunctive': 'Future Subjunctive',
+    'imperative': 'Imperative',
+    'noun-plurals': 'Noun Plurals',
+    'adjective-agreement': 'Adjective Agreement',
+    'demonstratives': 'Demonstratives',
+    'ir-transportation': 'Ir + Transportation',
+    'advanced-demonstratives': 'Advanced Demonstratives',
+    'crase': 'Crase (à)',
+    'contractions-de': 'Contractions (de)',
+    'contractions-em': 'Contractions (em)',
+    'contractions-articles': 'Contractions with Articles',
+    'syllable-stress': 'Syllable Stress',
+    'phonetics-br': 'Phonetics',
+    'colloquial-speech': 'Colloquial Speech',
+    'conversational-answers': 'Conversational Answers',
+    'self-introduction': 'Self-Introduction',
+    'portuguese-for-spanish': 'PT for Spanish'
+  };
+  return names[drillId] || drillId;
 }
 
 function updateChatTitle(drillId) {
