@@ -542,12 +542,12 @@
         <div class="bg-white rounded-2xl shadow-2xl w-full max-w-3xl h-[90vh] flex flex-col">
             <!-- Header -->
             <div class="flex items-center justify-between p-4 border-b border-slate-200">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                <div class="flex items-center space-x-3 flex-1 min-w-0">
+                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                         <span class="text-green-600 font-bold">PT</span>
                     </div>
-                    <div>
-                        <h3 id="chat-drill-title" class="font-semibold text-slate-900">Regular -ar Verb Drill</h3>
+                    <div class="min-w-0 flex-1">
+                        <div id="chat-drill-title" class="font-semibold text-slate-900 mb-1"></div>
                         <p class="text-sm text-slate-500">Integrated AI Tutor</p>
                     </div>
                 </div>
@@ -828,6 +828,9 @@ async function openDrillChat(drillId) {
     // Update drill badges display
     updateActiveDrillsBadges();
 
+    // Update the chat title
+    updateChatTitle();
+
     // Enable input
     chatInput.disabled = false;
     sendButton.disabled = false;
@@ -902,6 +905,9 @@ async function openDrillChat(drillId) {
 
     // Update drill badges display
     updateActiveDrillsBadges();
+
+    // Update the chat title
+    updateChatTitle();
 
     // Enable input
     chatInput.disabled = false;
@@ -1171,6 +1177,9 @@ async function addDrillToChat(drillId) {
     // Update the badges display
     updateActiveDrillsBadges();
 
+    // Update the chat title
+    updateChatTitle();
+
     // Remove system message and add AI response
     systemMessage.remove();
     addMessageToChat('ai', data.response);
@@ -1213,6 +1222,9 @@ async function removeDrillFromChat(drillId) {
 
   // Update the badges display
   updateActiveDrillsBadges();
+
+  // Update the chat title
+  updateChatTitle();
 
   // Add a system message to the chat
   const messagesContainer = document.getElementById('chat-messages');
@@ -1318,104 +1330,22 @@ function getDrillName(drillId) {
   return names[drillId] || drillId;
 }
 
-function updateChatTitle(drillId) {
-  const drillTitle = document.getElementById('chat-drill-title');
+function updateChatTitle() {
+  const drillTitleContainer = document.getElementById('chat-drill-title');
 
-  // Map drill IDs to proper titles
-  switch(drillId) {
-    case 'ar-verbs':
-      drillTitle.textContent = 'Regular -ar Verb Drill';
-      break;
-    case 'er-verbs':
-      drillTitle.textContent = 'Regular -er Verb Drill';
-      break;
-    case 'ir-verbs':
-      drillTitle.textContent = 'Regular -ir Verb Drill';
-      break;
-    case 'irregular-verbs':
-      drillTitle.textContent = 'Irregular Verb Drill';
-      break;
-    case 'ser-estar':
-      drillTitle.textContent = 'Ser vs. Estar Drill';
-      break;
-    case 'reflexive-verbs':
-      drillTitle.textContent = 'Reflexive Verbs Drill';
-      break;
-    case 'immediate-future':
-      drillTitle.textContent = 'Immediate Future Drill';
-      break;
-    case 'present-continuous':
-      drillTitle.textContent = 'Present Continuous Tense';
-      break;
-    case 'imperfect-tense':
-      drillTitle.textContent = 'Imperfect Tense Drill';
-      break;
-    case 'future-tense':
-      drillTitle.textContent = 'Future Tense Drill';
-      break;
-    case 'conditional-tense':
-      drillTitle.textContent = 'Conditional Tense Drill';
-      break;
-    case 'present-subjunctive':
-      drillTitle.textContent = 'Present Subjunctive Drill';
-      break;
-    case 'imperfect-subjunctive':
-      drillTitle.textContent = 'Imperfect Subjunctive Drill';
-      break;
-    case 'future-subjunctive':
-      drillTitle.textContent = 'Future Subjunctive Drill';
-      break;
-    case 'imperative':
-      drillTitle.textContent = 'Imperative Drill';
-      break;
-    case 'noun-plurals':
-      drillTitle.textContent = 'Noun Plural Tutor';
-      break;
-    case 'adjective-agreement':
-      drillTitle.textContent = 'Adjective Gender & Number Agreement';
-      break;
-    case 'demonstratives':
-      drillTitle.textContent = 'Demonstrative Pronouns Drill';
-      break;
-    case 'ir-transportation':
-      drillTitle.textContent = "'Ir' + Transportation Drill";
-      break;
-    case 'advanced-demonstratives':
-      drillTitle.textContent = 'Advanced Demonstratives';
-      break;
-    case 'crase':
-      drillTitle.textContent = 'Crase (à) Tutor';
-      break;
-    case 'contractions-de':
-      drillTitle.textContent = 'Contraction Trainer (dele/dela)';
-      break;
-    case 'contractions-em':
-      drillTitle.textContent = 'Contraction Trainer (nele/nela)';
-      break;
-    case 'contractions-articles':
-      drillTitle.textContent = 'Contractions with Articles';
-      break;
-    case 'syllable-stress':
-      drillTitle.textContent = 'Syllable Stress Drill';
-      break;
-    case 'phonetics-br':
-      drillTitle.textContent = 'Brazilian Portuguese Phonetics Tutor';
-      break;
-    case 'colloquial-speech':
-      drillTitle.textContent = 'Colloquial Speech Drill';
-      break;
-    case 'conversational-answers':
-      drillTitle.textContent = 'Conversational Answers Drill';
-      break;
-    case 'self-introduction':
-      drillTitle.textContent = 'Self-Introduction Drill';
-      break;
-    case 'portuguese-for-spanish':
-      drillTitle.textContent = 'Portuguese for Spanish Speakers';
-      break;
-    default:
-      drillTitle.textContent = 'Portuguese Drill';
+  if (activeDrills.length === 0) {
+    drillTitleContainer.textContent = 'No drills active';
+    return;
   }
+
+  if (activeDrills.length === 1) {
+    drillTitleContainer.textContent = getDrillName(activeDrills[0]);
+    return;
+  }
+
+  // Multiple drills - show as a list
+  const drillNames = activeDrills.map(id => getDrillName(id));
+  drillTitleContainer.textContent = drillNames.join(' • ');
 }
     </script>
 </body>
