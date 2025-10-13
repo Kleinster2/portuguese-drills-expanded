@@ -898,7 +898,6 @@ async function openDrillChat(drillId) {
     // Enable input
     chatInput.disabled = false;
     sendButton.disabled = false;
-    chatInput.focus();
 
     // Add enter key handler
     chatInput.onkeypress = function(e) {
@@ -976,7 +975,6 @@ async function openDrillChat(drillId) {
     // Enable input
     chatInput.disabled = false;
     sendButton.disabled = false;
-    chatInput.focus();
 
     // Add enter key handler
     chatInput.onkeypress = function(e) {
@@ -1062,7 +1060,6 @@ async function sendChatMessage() {
     // Re-enable input
     chatInput.disabled = false;
     sendButton.disabled = false;
-    chatInput.focus();
   }
 }
 
@@ -1248,8 +1245,7 @@ async function addDrillToChat(drillId) {
       chatInput.disabled = false;
       sendButton.disabled = false;
       chatInput.placeholder = 'Type your answer...';
-      chatInput.focus();
-
+  
       return;
     }
 
@@ -1296,7 +1292,6 @@ async function addDrillToChat(drillId) {
     chatInput.disabled = false;
     sendButton.disabled = false;
     chatInput.placeholder = 'Type your answer...';
-    chatInput.focus();
 
   } catch (error) {
     console.error('Error adding drill:', error);
