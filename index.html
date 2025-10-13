@@ -989,23 +989,28 @@ async function openDrillChat(drillId) {
   }
 }
 
-async function sendChatMessage() {
+async function sendChatMessage(retryMessage = null) {
   const chatInput = document.getElementById('chat-input');
   const sendButton = document.getElementById('chat-send-btn');
-  const message = chatInput.value.trim();
+  const message = retryMessage || chatInput.value.trim();
 
   if (!message || !currentChatSession) return;
 
-  // Add user message to chat
-  addMessageToChat('user', message);
+  let userMessageDiv = null;
 
-  // Store user message in session history
-  if (currentDrillId && drillSessions[currentDrillId]) {
-    drillSessions[currentDrillId].messages.push({ role: 'user', content: message });
+  // Only add user message if this is not a retry
+  if (!retryMessage) {
+    userMessageDiv = addMessageToChat('user', message);
+
+    // Store user message in session history
+    if (currentDrillId && drillSessions[currentDrillId]) {
+      drillSessions[currentDrillId].messages.push({ role: 'user', content: message });
+    }
+
+    // Clear input and disable while processing
+    chatInput.value = '';
   }
 
-  // Clear input and disable while processing
-  chatInput.value = '';
   chatInput.disabled = true;
   sendButton.disabled = true;
 
@@ -1021,7 +1026,7 @@ async function sendChatMessage() {
     console.log('🎲 Randomly selected drill:', selectedDrill, 'from', activeDrills);
 
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 60000); // 60 second timeout for responses
+    const timeoutId = setTimeout(() => controller.abort(), 90000); // 90 second timeout for mobile
 
     const response = await fetch('/api/chat', {
       method: 'POST',
@@ -1030,37 +1035,80 @@ async function sendChatMessage() {
       },
       body: JSON.stringify({
         sessionId: currentChatSession,
-        drillId: selectedDrill, // Use randomly selected drill
+        drillId: selectedDrill,
         message: message
       }),
       signal: controller.signal
     });
-    
+
     clearTimeout(timeoutId);
-    
+
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      const errorText = await response.text().catch(() => 'Unknown error');
+      throw new Error(`Server error (${response.status}): ${errorText}`);
     }
-    
+
     const data = await response.json();
-    
+
     // Remove typing indicator and add real response
     typingIndicator.remove();
     addMessageToChat('ai', data.response);
-    
+
     // Store AI response in session history
     if (currentDrillId && drillSessions[currentDrillId]) {
       drillSessions[currentDrillId].messages.push({ role: 'assistant', content: data.response });
     }
-    
+
   } catch (error) {
     console.error('Error sending message:', error);
-    typingIndicator.querySelector('.message-content').textContent = 'Sorry, there was an error. Please try again.';
+
+    // Remove typing indicator
+    typingIndicator.remove();
+
+    // Determine error type
+    let errorMessage = 'Connection error. ';
+    if (error.name === 'AbortError') {
+      errorMessage = 'Request timed out. ';
+    } else if (error.message.includes('Failed to fetch')) {
+      errorMessage = 'Network error. Check your connection. ';
+    } else if (error.message.includes('Server error')) {
+      errorMessage = error.message + ' ';
+    }
+
+    // Show error with retry button
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'flex justify-center my-4';
+    errorDiv.innerHTML = `
+      <div class="bg-red-50 border border-red-200 rounded-lg p-4 max-w-md">
+        <p class="text-red-800 text-sm mb-3">${errorMessage}</p>
+        <button
+          onclick="retrySendMessage('${escapeForJs(message)}')"
+          class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded-lg transition-colors text-sm"
+        >
+          Retry Message
+        </button>
+      </div>
+    `;
+
+    const messagesContainer = document.getElementById('chat-messages');
+    messagesContainer.appendChild(errorDiv);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
   } finally {
     // Re-enable input
     chatInput.disabled = false;
     sendButton.disabled = false;
   }
+}
+
+// Helper function to escape strings for JavaScript
+function escapeForJs(str) {
+  return str.replace(/'/g, "\\'").replace(/"/g, '\\"').replace(/\n/g, '\\n');
+}
+
+// Retry function
+function retrySendMessage(message) {
+  sendChatMessage(message);
 }
 
 function addMessageToChat(sender, content) {
