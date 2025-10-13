@@ -46,6 +46,7 @@ class PromptManager {
       const conversationalAnswersPrompt = this.loadPromptConfig('./config/prompts/conversational-answers.json');
       const selfIntroductionPrompt = this.loadPromptConfig('./config/prompts/self-introduction.json');
       const portugueseForSpanishPrompt = this.loadPromptConfig('./config/prompts/portuguese-for-spanish.json');
+      const a1SimplifierPrompt = this.loadPromptConfig('./config/prompts/a1-simplifier.json');
 
       if (regularArPrompt) {
         this.prompts.set(regularArPrompt.id, regularArPrompt);
@@ -195,6 +196,11 @@ class PromptManager {
       if (portugueseForSpanishPrompt) {
         this.prompts.set(portugueseForSpanishPrompt.id, portugueseForSpanishPrompt);
         console.log(`✓ Loaded prompt configuration: ${portugueseForSpanishPrompt.id} (${portugueseForSpanishPrompt.name})`);
+      }
+
+      if (a1SimplifierPrompt) {
+        this.prompts.set(a1SimplifierPrompt.id, a1SimplifierPrompt);
+        console.log(`✓ Loaded prompt configuration: ${a1SimplifierPrompt.id} (${a1SimplifierPrompt.name})`);
       }
 
       if (this.prompts.size === 0) {
