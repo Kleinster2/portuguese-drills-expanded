@@ -552,6 +552,9 @@
                     </div>
                 </div>
                 <div class="flex items-center space-x-2">
+                    <button onclick="openDrillSelector()" class="text-green-600 hover:text-green-700 p-2 rounded-lg hover:bg-green-50 text-sm font-medium">
+                        + Add Drill
+                    </button>
                     <button onclick="startNewSession()" class="text-blue-500 hover:text-blue-700 p-2 rounded-lg hover:bg-blue-50 text-sm font-medium">
                         New Session
                     </button>
@@ -594,6 +597,26 @@
                         Send
                     </button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Drill Selector Modal -->
+    <div id="drill-selector-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[80vh] overflow-y-auto">
+            <!-- Header -->
+            <div class="flex items-center justify-between p-6 border-b border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-900">Add Another Drill</h2>
+                <button onclick="closeDrillSelector()" class="text-slate-400 hover:text-slate-600 p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Drill List -->
+            <div id="drill-selector-list" class="p-6 space-y-3">
+                <!-- Drills will be populated here by JavaScript -->
             </div>
         </div>
     </div>
@@ -994,6 +1017,243 @@ function closeDrillChat() {
   const modal = document.getElementById('chat-modal');
   modal.classList.add('hidden');
   currentChatSession = null;
+}
+
+// Drill selector functions
+function openDrillSelector() {
+  const modal = document.getElementById('drill-selector-modal');
+  const listContainer = document.getElementById('drill-selector-list');
+
+  // Get all drill cards that have integrated chat support
+  const drillCards = document.querySelectorAll('.drill-card');
+  const drillsWithIntegration = [];
+
+  drillCards.forEach(card => {
+    const integratedButton = card.querySelector('button[onclick^="openDrillChat"]');
+    if (integratedButton) {
+      const drillId = card.id.replace('drill-', '');
+      const titleElement = card.querySelector('h2');
+      const descriptionElement = card.querySelector('p.text-slate-600');
+      const categoryElement = card.querySelector('span.inline-block');
+
+      if (titleElement && drillId !== currentDrillId) {
+        drillsWithIntegration.push({
+          id: drillId,
+          title: titleElement.textContent.trim(),
+          description: descriptionElement ? descriptionElement.textContent.trim() : '',
+          category: categoryElement ? categoryElement.textContent.trim() : ''
+        });
+      }
+    }
+  });
+
+  // Build the drill list HTML
+  if (drillsWithIntegration.length === 0) {
+    listContainer.innerHTML = '<p class="text-slate-500 text-center py-8">No other drills available to add.</p>';
+  } else {
+    listContainer.innerHTML = drillsWithIntegration.map(drill => `
+      <button onclick="addDrillToChat('${drill.id}')" class="w-full text-left p-4 rounded-lg border border-slate-200 hover:border-green-500 hover:bg-green-50 transition-all">
+        <div class="flex items-start justify-between">
+          <div class="flex-1">
+            <h3 class="font-semibold text-slate-900 mb-1">${escapeHtml(drill.title)}</h3>
+            ${drill.category ? `<span class="inline-block text-xs px-2 py-1 rounded-full bg-slate-100 text-slate-600 mb-2">${escapeHtml(drill.category)}</span>` : ''}
+            <p class="text-sm text-slate-600">${escapeHtml(drill.description)}</p>
+          </div>
+          <svg class="w-5 h-5 text-green-600 flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+          </svg>
+        </div>
+      </button>
+    `).join('');
+  }
+
+  modal.classList.remove('hidden');
+}
+
+function closeDrillSelector() {
+  const modal = document.getElementById('drill-selector-modal');
+  modal.classList.add('hidden');
+}
+
+async function addDrillToChat(drillId) {
+  if (!currentChatSession) {
+    alert('No active chat session. Please start a drill first.');
+    return;
+  }
+
+  closeDrillSelector();
+
+  const messagesContainer = document.getElementById('chat-messages');
+  const chatInput = document.getElementById('chat-input');
+  const sendButton = document.getElementById('chat-send-btn');
+
+  // Disable input while adding drill
+  chatInput.disabled = true;
+  sendButton.disabled = true;
+
+  // Add a system message
+  const systemMessage = document.createElement('div');
+  systemMessage.className = 'flex justify-center my-2';
+  systemMessage.innerHTML = `
+    <div class="bg-blue-100 text-blue-800 text-sm px-4 py-2 rounded-full">
+      Adding new drill to conversation...
+    </div>
+  `;
+  messagesContainer.appendChild(systemMessage);
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+  try {
+    // Send a message to add the drill
+    const response = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        sessionId: currentChatSession,
+        message: `[SYSTEM: User wants to add the "${drillId}" drill to this conversation. Please acknowledge this and begin providing exercises for this drill while maintaining the conversation context.]`,
+        drillType: drillId
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    // Update the session's drill type
+    if (drillSessions[currentDrillId]) {
+      drillSessions[currentDrillId].drillType = drillId;
+      drillSessions[currentDrillId].messages.push(
+        { role: 'user', content: `[Added drill: ${drillId}]` },
+        { role: 'assistant', content: data.response }
+      );
+    }
+
+    // Update the current drill ID
+    currentDrillId = drillId;
+
+    // Update the title
+    updateChatTitle(drillId);
+
+    // Remove system message and add AI response
+    systemMessage.remove();
+    addMessageToChat('ai', data.response);
+
+    // Enable input
+    chatInput.disabled = false;
+    sendButton.disabled = false;
+    chatInput.focus();
+
+  } catch (error) {
+    console.error('Error adding drill:', error);
+    systemMessage.innerHTML = `
+      <div class="bg-red-100 text-red-800 text-sm px-4 py-2 rounded-full">
+        Failed to add drill. Please try again.
+      </div>
+    `;
+    chatInput.disabled = false;
+    sendButton.disabled = false;
+  }
+}
+
+function updateChatTitle(drillId) {
+  const drillTitle = document.getElementById('chat-drill-title');
+
+  // Map drill IDs to proper titles
+  switch(drillId) {
+    case 'ar-verbs':
+      drillTitle.textContent = 'Regular -ar Verb Drill';
+      break;
+    case 'er-verbs':
+      drillTitle.textContent = 'Regular -er Verb Drill';
+      break;
+    case 'ir-verbs':
+      drillTitle.textContent = 'Regular -ir Verb Drill';
+      break;
+    case 'irregular-verbs':
+      drillTitle.textContent = 'Irregular Verb Drill';
+      break;
+    case 'ser-estar':
+      drillTitle.textContent = 'Ser vs. Estar Drill';
+      break;
+    case 'reflexive-verbs':
+      drillTitle.textContent = 'Reflexive Verbs Drill';
+      break;
+    case 'immediate-future':
+      drillTitle.textContent = 'Immediate Future Drill';
+      break;
+    case 'present-continuous':
+      drillTitle.textContent = 'Present Continuous Tense';
+      break;
+    case 'imperfect-tense':
+      drillTitle.textContent = 'Imperfect Tense Drill';
+      break;
+    case 'future-tense':
+      drillTitle.textContent = 'Future Tense Drill';
+      break;
+    case 'conditional-tense':
+      drillTitle.textContent = 'Conditional Tense Drill';
+      break;
+    case 'present-subjunctive':
+      drillTitle.textContent = 'Present Subjunctive Drill';
+      break;
+    case 'imperfect-subjunctive':
+      drillTitle.textContent = 'Imperfect Subjunctive Drill';
+      break;
+    case 'future-subjunctive':
+      drillTitle.textContent = 'Future Subjunctive Drill';
+      break;
+    case 'imperative':
+      drillTitle.textContent = 'Imperative Drill';
+      break;
+    case 'noun-plurals':
+      drillTitle.textContent = 'Noun Plural Tutor';
+      break;
+    case 'adjective-agreement':
+      drillTitle.textContent = 'Adjective Gender & Number Agreement';
+      break;
+    case 'demonstratives':
+      drillTitle.textContent = 'Demonstrative Pronouns Drill';
+      break;
+    case 'ir-transportation':
+      drillTitle.textContent = "'Ir' + Transportation Drill";
+      break;
+    case 'advanced-demonstratives':
+      drillTitle.textContent = 'Advanced Demonstratives';
+      break;
+    case 'crase':
+      drillTitle.textContent = 'Crase (à) Tutor';
+      break;
+    case 'contractions-de':
+      drillTitle.textContent = 'Contraction Trainer (dele/dela)';
+      break;
+    case 'contractions-em':
+      drillTitle.textContent = 'Contraction Trainer (nele/nela)';
+      break;
+    case 'contractions-articles':
+      drillTitle.textContent = 'Contractions with Articles';
+      break;
+    case 'syllable-stress':
+      drillTitle.textContent = 'Syllable Stress Drill';
+      break;
+    case 'phonetics-br':
+      drillTitle.textContent = 'Brazilian Portuguese Phonetics Tutor';
+      break;
+    case 'colloquial-speech':
+      drillTitle.textContent = 'Colloquial Speech Drill';
+      break;
+    case 'conversational-answers':
+      drillTitle.textContent = 'Conversational Answers Drill';
+      break;
+    case 'self-introduction':
+      drillTitle.textContent = 'Self-Introduction Drill';
+      break;
+    case 'portuguese-for-spanish':
+      drillTitle.textContent = 'Portuguese for Spanish Speakers';
+      break;
+    default:
+      drillTitle.textContent = 'Portuguese Drill';
+  }
 }
     </script>
 </body>
