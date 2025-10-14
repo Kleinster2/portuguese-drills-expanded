@@ -101,13 +101,16 @@ export async function onRequestPost({ request, env }) {
       // Create new session and return welcome message
       const newSessionId = generateSessionId();
       const actualDrillId = drillId || 'regular-ar';
-      
+
+      // Use provided message or default greeting
+      const initialMessage = message || 'Hello, I\'m ready to start practicing!';
+
       const session = {
         sessionId: newSessionId,
         drillId: actualDrillId,
         messages: [
           { role: 'system', content: getDrillPrompt(actualDrillId), timestamp: new Date() },
-          { role: 'user', content: 'Hello, I\'m ready to start practicing!', timestamp: new Date() }
+          { role: 'user', content: initialMessage, timestamp: new Date() }
         ],
         createdAt: new Date(),
         lastActivity: new Date(),
