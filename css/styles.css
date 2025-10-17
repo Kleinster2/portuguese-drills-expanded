@@ -1,0 +1,131 @@
+/**
+ * Custom Styles for Portuguese Language Drills
+ */
+
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Drill Card Styles */
+.drill-card {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.drill-card.hidden {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute; /* Take it out of the flow to prevent empty space */
+    transform: scale(0.95);
+}
+
+.drill-card.highlight {
+    box-shadow: 0 0 0 3px #3b82f6; /* blue-500 */
+    transform: translateY(-4px) scale(1.02);
+}
+
+.drill-card.highlight:hover {
+    box-shadow: 0 0 0 3px #3b82f6, 0 25px 50px -12px rgb(0 0 0 / 0.25); /* Combines blue ring with shadow-2xl */
+    transform: translateY(-6px) scale(1.03); /* A slightly more pronounced effect */
+}
+
+/* Screen Reader Only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Learning Path Animations */
+#path-display-container .learning-path {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Learning Path Structure */
+.learning-path ol {
+    position: relative;
+    padding-left: 2rem;
+    list-style: none;
+}
+
+.learning-path > ol > li {
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+
+.learning-path > ol > li:last-child {
+    padding-bottom: 0;
+}
+
+/* Node style (the circle) for TOP-LEVEL items only */
+.learning-path > ol > li::before {
+    content: '';
+    position: absolute;
+    left: -1.75rem;
+    top: 0.4rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 9999px;
+    background-color: #fff;
+    border: 3px solid #6366f1; /* indigo-600 */
+    z-index: 1;
+}
+
+/* Connecting line for TOP-LEVEL items only */
+.learning-path > ol > li::after {
+    content: '';
+    position: absolute;
+    left: -1.2rem;
+    top: 0.5rem;
+    bottom: -0.5rem;
+    width: 2px;
+    background-color: #6366f1; /* Solid indigo for core path */
+}
+
+.learning-path > ol > li:last-child::after {
+    display: none;
+}
+
+/* Style for supplemental path nodes (TOP-LEVEL) */
+.learning-path > ol > li.supplemental-step::before {
+    background-color: #f8fafc; /* bg-slate-50 */
+    border: 2px dashed #94a3b8; /* slate-400 */
+}
+
+.learning-path > ol > li.supplemental-step::after {
+    background-image: linear-gradient(to bottom, #94a3b8 60%, transparent 40%);
+    background-size: 2px 8px;
+    background-repeat: repeat-y;
+    background-color: transparent; /* Remove solid color */
+}
+
+/* Learning Bundles */
+.learning-bundle {
+    background-color: #f8fafc; /* slate-50 */
+    border: 1px solid #e2e8f0; /* slate-200 */
+    border-radius: 0.75rem;
+    padding: 1rem;
+}
+
+.learning-bundle-title {
+    font-weight: 600;
+    color: #475569; /* slate-600 */
+    margin-bottom: 0.75rem;
+}
