@@ -210,7 +210,7 @@ function getAllConjugations(infinitive) {
 }
 
 // Add conjugation buttons to message container
-function addConjugationButtons(messagesContainer, content, shuffleArray, escapeHtml) {
+function addConjugationButtons(messagesContainer, content) {
   const verb = extractVerbFromMessage(content);
   if (!verb) return;
 

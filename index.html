@@ -1306,8 +1306,8 @@ function addMessageToChat(sender, content) {
 
   messagesContainer.appendChild(messageDiv);
 
-  // Add conjugation buttons if this is a question in regular-ar drill
-  if (sender === 'ai' && shouldShowConjugationButtons(content)) {
+  // Add conjugation buttons if this is a question in verb drills
+  if (sender === 'ai' && shouldShowConjugationButtons(content, activeDrills)) {
     addConjugationButtons(messagesContainer, content);
   }
 
