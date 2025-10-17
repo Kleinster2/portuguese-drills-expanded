@@ -1397,11 +1397,117 @@ function retrySendMessage(message) {
   sendChatMessage(message);
 }
 
+// Conjugation button helpers for -ar verbs
+function shouldShowConjugationButtons(content) {
+  // Only show for regular-ar drill when there's a question with blank
+  if (!activeDrills.includes('regular-ar')) {
+    return false;
+  }
+
+  // Check if message contains a blank and a verb in parentheses
+  return content.includes('______') && /\(([a-záàâãéêíóôõúç]+ar)\)/i.test(content);
+}
+
+function extractVerbFromMessage(content) {
+  // Extract verb from pattern: ______ (falar)
+  const match = content.match(/\(([a-záàâãéêíóôõúç]+ar)\)/i);
+  return match ? match[1].toLowerCase() : null;
+}
+
+function conjugateArVerb(infinitive, tense) {
+  // Get the stem by removing -ar
+  const stem = infinitive.slice(0, -2);
+
+  if (tense === 'present') {
+    return {
+      'eu': stem + 'o',
+      'ele/ela/você': stem + 'a',
+      'a gente': stem + 'a',
+      'nós': stem + 'amos',
+      'eles/elas/vocês': stem + 'am'
+    };
+  } else if (tense === 'past') {
+    // Handle orthographic changes for -car, -gar, -çar verbs
+    let euStem = stem;
+    if (stem.endsWith('c')) {
+      euStem = stem.slice(0, -1) + 'qu';
+    } else if (stem.endsWith('g')) {
+      euStem = stem.slice(0, -1) + 'gu';
+    } else if (stem.endsWith('ç')) {
+      euStem = stem.slice(0, -1) + 'c';
+    }
+
+    return {
+      'eu': euStem + 'ei',
+      'ele/ela/você': stem + 'ou',
+      'a gente': stem + 'ou',
+      'nós': stem + 'amos',
+      'eles/elas/vocês': stem + 'aram'
+    };
+  }
+}
+
+function getAllConjugations(infinitive) {
+  // Get both present and past conjugations
+  const present = conjugateArVerb(infinitive, 'present');
+  const past = conjugateArVerb(infinitive, 'past');
+
+  // Combine all unique forms
+  const allForms = new Set();
+  Object.values(present).forEach(form => allForms.add(form));
+  Object.values(past).forEach(form => allForms.add(form));
+
+  return Array.from(allForms);
+}
+
+function shuffleArray(array) {
+  // Fisher-Yates shuffle
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+function addConjugationButtons(messagesContainer, content) {
+  const verb = extractVerbFromMessage(content);
+  if (!verb) return;
+
+  const conjugations = getAllConjugations(verb);
+  const shuffled = shuffleArray(conjugations);
+
+  // Create button container
+  const buttonContainer = document.createElement('div');
+  buttonContainer.className = 'flex items-start space-x-3 mb-4';
+  buttonContainer.innerHTML = `
+    <div class="w-8 h-8 flex-shrink-0"></div>
+    <div class="flex flex-wrap gap-2 max-w-2xl">
+      ${shuffled.map(conj => `
+        <button
+          onclick="sendConjugation('${conj.replace(/'/g, "\\'")}')"
+          class="bg-blue-100 hover:bg-blue-200 text-blue-800 font-medium px-4 py-2 rounded-full text-sm transition-colors"
+        >
+          ${escapeHtml(conj)}
+        </button>
+      `).join('')}
+    </div>
+  `;
+
+  messagesContainer.appendChild(buttonContainer);
+}
+
+function sendConjugation(conjugation) {
+  const chatInput = document.getElementById('chat-input');
+  chatInput.value = conjugation;
+  sendChatMessage();
+}
+
 function addMessageToChat(sender, content) {
   const messagesContainer = document.getElementById('chat-messages');
   const messageDiv = document.createElement('div');
   messageDiv.className = 'flex items-start space-x-3';
-  
+
   if (sender === 'user') {
     messageDiv.className += ' justify-end';
     messageDiv.innerHTML = `
@@ -1422,10 +1528,16 @@ function addMessageToChat(sender, content) {
       </div>
     `;
   }
-  
+
   messagesContainer.appendChild(messageDiv);
+
+  // Add conjugation buttons if this is a question in regular-ar drill
+  if (sender === 'ai' && shouldShowConjugationButtons(content)) {
+    addConjugationButtons(messagesContainer, content);
+  }
+
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
-  
+
   return messageDiv;
 }
 
