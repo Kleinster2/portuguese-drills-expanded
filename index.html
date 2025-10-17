@@ -658,12 +658,13 @@
 
             filterAndSearch();
 
-            // Check for drill URL parameter and auto-open chat
+            // Check for drill URL parameters and auto-open chat
             const urlParams = new URLSearchParams(window.location.search);
-            const drillParam = urlParams.get('drill');
+            const drillParam = urlParams.get('drill');        // Single drill
+            const drillsParam = urlParams.get('drills');      // Multiple drills (comma-separated)
 
             if (drillParam) {
-                // Small delay to ensure DOM is fully ready
+                // Single drill mode
                 setTimeout(() => {
                     openDrillChat(drillParam);
 
@@ -674,6 +675,37 @@
                         targetCard.classList.add('highlight');
                     }
                 }, 300);
+            } else if (drillsParam) {
+                // Multiple drills mode
+                const drillIds = drillsParam.split(',').map(id => id.trim()).filter(id => id);
+
+                if (drillIds.length > 0) {
+                    setTimeout(async () => {
+                        // Open empty session first
+                        openEmptySession();
+
+                        // Small delay to let empty session initialize
+                        await new Promise(resolve => setTimeout(resolve, 500));
+
+                        // Add each drill to the session sequentially
+                        for (const drillId of drillIds) {
+                            try {
+                                await addDrillToChat(drillId);
+                                // Small delay between adding drills
+                                await new Promise(resolve => setTimeout(resolve, 300));
+                            } catch (error) {
+                                console.error(`Failed to add drill ${drillId}:`, error);
+                            }
+                        }
+
+                        // Scroll to and highlight the first drill card
+                        const targetCard = document.getElementById('drill-' + drillIds[0]);
+                        if (targetCard) {
+                            targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            targetCard.classList.add('highlight');
+                        }
+                    }, 300);
+                }
             }
         });
     </script>
@@ -698,6 +730,9 @@
                     </button>
                     <button onclick="startNewSession()" class="text-blue-500 hover:text-blue-700 p-2 rounded-lg hover:bg-blue-50 text-sm font-medium">
                         New Session
+                    </button>
+                    <button id="share-chat-btn" onclick="shareChatState(this)" class="text-purple-600 hover:text-purple-700 p-2 rounded-lg hover:bg-purple-50 text-sm font-medium" title="Share this chat session">
+                        🔗 Share
                     </button>
                     <button onclick="closeDrillChat()" class="text-slate-400 hover:text-slate-600 p-2">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1436,6 +1471,42 @@ async function copyDrillLink(drillId, buttonElement) {
     }, 2000);
   } catch (err) {
     console.error('Failed to copy link:', err);
+    // Fallback: show the URL in an alert
+    alert(`Copy this link:\n${shareableUrl}`);
+  }
+}
+
+// Share current chat state with all active drills
+async function shareChatState(buttonElement) {
+  const baseUrl = window.location.origin + window.location.pathname;
+
+  // Get all active drills from the current session
+  if (!activeDrills || activeDrills.length === 0) {
+    alert('No active drills to share. Please add a drill first.');
+    return;
+  }
+
+  // Create URL with comma-separated drill IDs
+  const drillsParam = activeDrills.join(',');
+  const shareableUrl = `${baseUrl}?drills=${drillsParam}`;
+
+  try {
+    await navigator.clipboard.writeText(shareableUrl);
+
+    // Visual feedback
+    const originalText = buttonElement.innerHTML;
+    buttonElement.innerHTML = '✓ Copied!';
+    buttonElement.classList.add('bg-purple-800', 'text-white');
+    buttonElement.classList.remove('text-purple-600', 'hover:text-purple-700');
+
+    // Reset after 2 seconds
+    setTimeout(() => {
+      buttonElement.innerHTML = originalText;
+      buttonElement.classList.remove('bg-purple-800', 'text-white');
+      buttonElement.classList.add('text-purple-600', 'hover:text-purple-700');
+    }, 2000);
+  } catch (err) {
+    console.error('Failed to copy chat link:', err);
     // Fallback: show the URL in an alert
     alert(`Copy this link:\n${shareableUrl}`);
   }
