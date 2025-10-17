@@ -65,6 +65,7 @@ Designed to be dialect-neutral (PT-PT and PT-BR) with enhanced learning experien
 - ✅ Empty state messaging and guidance
 - ✅ Updated site branding to "Portuguese Language Drills"
 - ✅ Simplified subtitle focusing on core functionality
+- ✅ **Shareable Links** - Each drill has a "Copy Link" button for direct URL sharing
 
 ## Usage
 
@@ -81,6 +82,18 @@ Designed to be dialect-neutral (PT-PT and PT-BR) with enhanced learning experien
 2. Chat opens with that drill active
 3. Optionally add more drills with "+ Add Drill"
 4. Practice single drill or multiple drills together
+
+**Option 3: Use Shareable Link**
+1. Use a direct drill URL like `?drill=regular-ar`
+2. The chat automatically opens for that drill
+3. The drill card is highlighted and scrolled into view
+4. Perfect for bookmarks, sharing with others, or external links
+
+### Sharing Drills
+- **Copy Link**: Click "🔗 Copy Link" button on any drill card
+- **Share with Others**: Send the copied URL to students or study partners
+- **Bookmark Favorites**: Save specific drill URLs for quick access
+- See [SHAREABLE_LINKS.md](SHAREABLE_LINKS.md) for complete list of drill URLs
 
 ### Managing Drills
 - **Add Drill**: Click "+ Add Drill" button → Select from available drills
