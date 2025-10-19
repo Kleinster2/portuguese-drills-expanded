@@ -303,6 +303,11 @@ async function sendChatMessage(retryMessage = null) {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 90000); // 90 second timeout for mobile
 
+    // Get current session messages for stateless mode
+    const sessionMessages = currentDrillId && drillSessions[currentDrillId]
+      ? drillSessions[currentDrillId].messages
+      : [];
+
     const response = await fetch('/api/chat', {
       method: 'POST',
       headers: {
@@ -311,7 +316,8 @@ async function sendChatMessage(retryMessage = null) {
       body: JSON.stringify({
         sessionId: currentChatSession,
         drillId: selectedDrill,
-        message: message
+        message: message,
+        messages: sessionMessages
       }),
       signal: controller.signal
     });

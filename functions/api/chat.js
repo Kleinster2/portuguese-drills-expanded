@@ -90,11 +90,11 @@ async function callClaude(apiKey, messages) {
 
 export async function onRequestPost({ request, env }) {
   const headers = corsHeaders(request);
-  
-  
+
+
   try {
     const body = await request.json().catch(() => ({}));
-    const { sessionId, drillId, message, isNewSession } = body;
+    const { sessionId, drillId, message, isNewSession, messages: clientMessages } = body;
     
 
     if (isNewSession || !sessionId) {
@@ -146,7 +146,23 @@ export async function onRequestPost({ request, env }) {
       });
     } else {
       // Continue existing session
-      const session = sessions.get(sessionId);
+      let session = sessions.get(sessionId);
+
+      // If session not found but client provided messages, use those (stateless mode)
+      if (!session && clientMessages && Array.isArray(clientMessages)) {
+        const actualDrillId = drillId || 'regular-ar';
+        session = {
+          sessionId: sessionId,
+          drillId: actualDrillId,
+          messages: clientMessages,
+          createdAt: new Date(),
+          lastActivity: new Date(),
+          metadata: { dialect: 'BP' }
+        };
+        // Store it temporarily
+        sessions.set(sessionId, session);
+      }
+
       if (!session) {
         return new Response(JSON.stringify({ error: 'Session not found' }), {
           status: 404,
