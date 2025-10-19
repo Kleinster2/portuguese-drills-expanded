@@ -30,7 +30,8 @@ function shouldShowConjugationButtons(content, activeDrills) {
   // Support multiple blank formats: ______, ___, [blank], etc.
   const hasBlank = content.includes('______') || content.includes('___') || /\[blank\]/i.test(content) || /_+/.test(content);
   // Match verbs ending in -ar, -er, -ir, with optional reflexive pronouns (-se, -me, -te, -nos)
-  const hasVerb = /\(([a-záàâãéêíóôõúç]+(?:ar|er|ir)(?:-(?:se|me|te|nos))?)\)/i.test(content);
+  // Use * instead of + to match short verbs like "ir" (2 letters)
+  const hasVerb = /\(([a-záàâãéêíóôõúç]*(?:ar|er|ir)(?:-(?:se|me|te|nos))?)\)/i.test(content);
 
   console.log('  hasBlank:', hasBlank);
   console.log('  hasVerb:', hasVerb);
@@ -41,10 +42,11 @@ function shouldShowConjugationButtons(content, activeDrills) {
 
 // Extract verb infinitive from message
 function extractVerbFromMessage(content) {
-  // Extract verb from pattern: ______ (falar/comer/abrir) or (sentar-se)
+  // Extract verb from pattern: ______ (falar/comer/abrir) or (sentar-se) or (ir)
   // Look for the LAST occurrence to avoid matching English words like "(singular)" that end in -ar
   // Match verbs with optional reflexive pronouns (-se, -me, -te, -nos)
-  const matches = content.matchAll(/\(([a-záàâãéêíóôõúç]+(?:ar|er|ir)(?:-(?:se|me|te|nos))?)\)/gi);
+  // Use * instead of + to match short verbs like "ir" (2 letters)
+  const matches = content.matchAll(/\(([a-záàâãéêíóôõúç]*(?:ar|er|ir)(?:-(?:se|me|te|nos))?)\)/gi);
   const allMatches = Array.from(matches);
 
   // Return the last match (the Portuguese verb, not English clarifiers)
