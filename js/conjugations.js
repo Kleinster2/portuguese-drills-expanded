@@ -522,11 +522,22 @@ function addSubjectIdentificationButtons(messagesContainer, content) {
     </button>
   `).join('');
 
+  // Add special "Omit" button with distinctive styling
+  const omitButtonHtml = `
+    <button
+      data-subject="omit"
+      class="subject-chip bg-amber-50 hover:bg-amber-100 text-amber-800 font-medium px-4 py-2 rounded-full text-sm transition-colors border-2 border-transparent"
+    >
+      ∅ Omit (typically dropped)
+    </button>
+  `;
+
   buttonContainer.innerHTML = `
     <div class="w-8 h-8 flex-shrink-0"></div>
     <div class="flex flex-col gap-3 max-w-2xl">
       <div class="flex flex-wrap gap-2">
         ${buttonsHtml}
+        ${omitButtonHtml}
       </div>
     </div>
   `;
@@ -542,17 +553,28 @@ function addSubjectIdentificationButtons(messagesContainer, content) {
   chips.forEach(chip => {
     chip.addEventListener('click', () => {
       const subject = chip.dataset.subject;
+      const isOmit = subject === 'omit';
 
       if (selectedSubjects.has(subject)) {
         // Deselect
         selectedSubjects.delete(subject);
-        chip.classList.remove('bg-blue-500', 'text-white', 'border-blue-600');
-        chip.classList.add('bg-gray-100', 'text-gray-700');
+        if (isOmit) {
+          chip.classList.remove('bg-amber-600', 'text-white', 'border-amber-700');
+          chip.classList.add('bg-amber-50', 'text-amber-800');
+        } else {
+          chip.classList.remove('bg-blue-500', 'text-white', 'border-blue-600');
+          chip.classList.add('bg-gray-100', 'text-gray-700');
+        }
       } else {
         // Select
         selectedSubjects.add(subject);
-        chip.classList.remove('bg-gray-100', 'text-gray-700');
-        chip.classList.add('bg-blue-500', 'text-white', 'border-blue-600');
+        if (isOmit) {
+          chip.classList.remove('bg-amber-50', 'text-amber-800');
+          chip.classList.add('bg-amber-600', 'text-white', 'border-amber-700');
+        } else {
+          chip.classList.remove('bg-gray-100', 'text-gray-700');
+          chip.classList.add('bg-blue-500', 'text-white', 'border-blue-600');
+        }
       }
 
       // Update chat input with selected subjects
