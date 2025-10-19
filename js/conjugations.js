@@ -503,7 +503,7 @@ function addSubjectIdentificationButtons(messagesContainer, content) {
     'alguém', 'ninguém', 'todo mundo', 'quem',
     'cada um', 'o senhor/a senhora',
     'os senhores/as senhoras',
-    'todos', 'todas', 'alguns', 'algumas'
+    'todos/todas', 'alguns/algumas'
   ];
 
   // Track selected subjects
