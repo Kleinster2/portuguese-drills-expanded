@@ -26,9 +26,20 @@ function shouldShowConjugationButtons(content, activeDrills) {
     return false;
   }
 
-  // Check if message contains a blank and a verb in parentheses
+  // Check if message contains a blank
   // Support multiple blank formats: ______, ___, [blank], etc.
   const hasBlank = content.includes('______') || content.includes('___') || /\[blank\]/i.test(content) || /_+/.test(content);
+
+  // For subject-identification drill, we only need a blank (verb is already conjugated in sentence)
+  if (activeDrills.includes('subject-identification')) {
+    const hasInstruction = content.toLowerCase().includes('select all') || content.toLowerCase().includes('click all');
+    console.log('  hasBlank:', hasBlank);
+    console.log('  hasInstruction:', hasInstruction);
+    console.log('  result (subject-identification):', hasBlank && hasInstruction);
+    return hasBlank && hasInstruction;
+  }
+
+  // For other drills, check for verb in parentheses
   // Match verbs ending in -ar, -er, -ir, with optional reflexive pronouns (-se, -me, -te, -nos)
   // Use * instead of + to match short verbs like "ir" (2 letters)
   const hasVerb = /\(([a-záàâãéêíóôõúç]*(?:ar|er|ir)(?:-(?:se|me|te|nos))?)\)/i.test(content);
