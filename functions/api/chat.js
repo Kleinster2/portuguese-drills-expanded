@@ -151,10 +151,15 @@ export async function onRequestPost({ request, env }) {
       // If session not found but client provided messages, use those (stateless mode)
       if (!session && clientMessages && Array.isArray(clientMessages)) {
         const actualDrillId = drillId || 'regular-ar';
+
+        // Reconstruct session with system message first
+        const systemMessage = { role: 'system', content: getDrillPrompt(actualDrillId), timestamp: new Date() };
+        const allMessages = [systemMessage, ...clientMessages];
+
         session = {
           sessionId: sessionId,
           drillId: actualDrillId,
-          messages: clientMessages,
+          messages: allMessages,
           createdAt: new Date(),
           lastActivity: new Date(),
           metadata: { dialect: 'BP' }
