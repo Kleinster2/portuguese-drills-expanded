@@ -417,6 +417,12 @@ function getAllConjugations(infinitive, activeDrills = []) {
 
 // Add conjugation buttons to message container
 function addConjugationButtons(messagesContainer, content, activeDrills = []) {
+  // Check if this is a reflexive verbs drill (asking for pronouns, not verbs)
+  if (activeDrills.includes('reflexive-verbs')) {
+    addReflexivePronounButtons(messagesContainer, content);
+    return;
+  }
+
   const verb = extractVerbFromMessage(content);
   if (!verb) return;
 
@@ -435,6 +441,32 @@ function addConjugationButtons(messagesContainer, content, activeDrills = []) {
           class="bg-blue-100 hover:bg-blue-200 text-blue-800 font-medium px-4 py-2 rounded-full text-sm transition-colors"
         >
           ${escapeHtml(conj)}
+        </button>
+      `).join('')}
+    </div>
+  `;
+
+  messagesContainer.appendChild(buttonContainer);
+}
+
+// Add reflexive pronoun buttons for reflexive verbs drill
+function addReflexivePronounButtons(messagesContainer, content) {
+  // Reflexive pronouns in Portuguese
+  const pronouns = ['me', 'te', 'se', 'nos'];
+  const shuffled = shuffleArray(pronouns);
+
+  // Create button container
+  const buttonContainer = document.createElement('div');
+  buttonContainer.className = 'flex items-start space-x-3 mb-4';
+  buttonContainer.innerHTML = `
+    <div class="w-8 h-8 flex-shrink-0"></div>
+    <div class="flex flex-wrap gap-2 max-w-2xl">
+      ${shuffled.map(pronoun => `
+        <button
+          onclick="sendConjugation('${pronoun}')"
+          class="bg-purple-100 hover:bg-purple-200 text-purple-800 font-medium px-4 py-2 rounded-full text-sm transition-colors"
+        >
+          ${escapeHtml(pronoun)}
         </button>
       `).join('')}
     </div>
