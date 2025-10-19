@@ -1308,7 +1308,7 @@ function addMessageToChat(sender, content) {
 
   // Add conjugation buttons if this is a question in verb drills
   if (sender === 'ai' && shouldShowConjugationButtons(content, activeDrills)) {
-    addConjugationButtons(messagesContainer, content);
+    addConjugationButtons(messagesContainer, content, activeDrills);
   }
 
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
@@ -1729,7 +1729,7 @@ function updateChatTitle() {
   drillTitleContainer.textContent = drillNames.join(' • ');
 }
     </script>
-    <script src="/js/utils.js"></script>
-    <script src="/js/conjugations.js"></script>
+    <script src="/js/utils.js?v=1760843029000"></script>
+    <script src="/js/conjugations.js?v=1760843029000"></script>
 </body>
 </html>

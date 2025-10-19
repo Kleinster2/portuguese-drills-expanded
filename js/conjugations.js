@@ -6,23 +6,52 @@
 // Check if conjugation buttons should be shown for current drill
 function shouldShowConjugationButtons(content, activeDrills) {
   // List of verb drills that support conjugation buttons
-  const verbDrills = ['regular-ar', 'regular-er', 'regular-ir', 'irregular-verbs'];
+  const verbDrills = [
+    'regular-ar', 'regular-er', 'regular-ir',
+    'irregular-verbs', 'ser-estar', 'reflexive-verbs',
+    'imperfect-tense', 'future-tense', 'conditional-tense',
+    'present-subjunctive', 'imperfect-subjunctive', 'future-subjunctive',
+    'imperative'
+  ];
 
   // Check if any verb drill is active
   const hasVerbDrill = verbDrills.some(drill => activeDrills.includes(drill));
+
+  console.log('🔍 shouldShowConjugationButtons DEBUG:');
+  console.log('  activeDrills:', activeDrills);
+  console.log('  hasVerbDrill:', hasVerbDrill);
+  console.log('  content:', content);
+
   if (!hasVerbDrill) {
     return false;
   }
 
   // Check if message contains a blank and a verb in parentheses
-  return content.includes('______') && /\(([a-záàâãéêíóôõúç]+(?:ar|er|ir))\)/i.test(content);
+  // Support multiple blank formats: ______, ___, [blank], etc.
+  const hasBlank = content.includes('______') || content.includes('___') || /\[blank\]/i.test(content) || /_+/.test(content);
+  const hasVerb = /\(([a-záàâãéêíóôõúç]+(?:ar|er|ir))\)/i.test(content);
+
+  console.log('  hasBlank:', hasBlank);
+  console.log('  hasVerb:', hasVerb);
+  console.log('  result:', hasBlank && hasVerb);
+
+  return hasBlank && hasVerb;
 }
 
 // Extract verb infinitive from message
 function extractVerbFromMessage(content) {
   // Extract verb from pattern: ______ (falar/comer/abrir)
-  const match = content.match(/\(([a-záàâãéêíóôõúç]+(?:ar|er|ir))\)/i);
-  return match ? match[1].toLowerCase() : null;
+  // Look for the LAST occurrence to avoid matching English words like "(singular)" that end in -ar
+  const matches = content.matchAll(/\(([a-záàâãéêíóôõúç]+(?:ar|er|ir))\)/gi);
+  const allMatches = Array.from(matches);
+
+  // Return the last match (the Portuguese verb, not English clarifiers)
+  if (allMatches.length > 0) {
+    const lastMatch = allMatches[allMatches.length - 1];
+    return lastMatch[1].toLowerCase();
+  }
+
+  return null;
 }
 
 // Determine verb type by ending
@@ -64,6 +93,54 @@ function conjugateArVerb(infinitive, tense) {
       'nós': stem + 'amos',
       'eles/elas/vocês': stem + 'aram'
     };
+  } else if (tense === 'imperfect') {
+    return {
+      'eu': stem + 'ava',
+      'ele/ela/você': stem + 'ava',
+      'a gente': stem + 'ava',
+      'nós': stem + 'ávamos',
+      'eles/elas/vocês': stem + 'avam'
+    };
+  } else if (tense === 'future') {
+    return {
+      'eu': infinitive + 'ei',
+      'ele/ela/você': infinitive + 'á',
+      'a gente': infinitive + 'á',
+      'nós': infinitive + 'emos',
+      'eles/elas/vocês': infinitive + 'ão'
+    };
+  } else if (tense === 'conditional') {
+    return {
+      'eu': infinitive + 'ia',
+      'ele/ela/você': infinitive + 'ia',
+      'a gente': infinitive + 'ia',
+      'nós': infinitive + 'íamos',
+      'eles/elas/vocês': infinitive + 'iam'
+    };
+  } else if (tense === 'present-subjunctive') {
+    return {
+      'eu': stem + 'e',
+      'ele/ela/você': stem + 'e',
+      'a gente': stem + 'e',
+      'nós': stem + 'emos',
+      'eles/elas/vocês': stem + 'em'
+    };
+  } else if (tense === 'imperfect-subjunctive') {
+    return {
+      'eu': stem + 'asse',
+      'ele/ela/você': stem + 'asse',
+      'a gente': stem + 'asse',
+      'nós': stem + 'ássemos',
+      'eles/elas/vocês': stem + 'assem'
+    };
+  } else if (tense === 'future-subjunctive') {
+    return {
+      'eu': stem + 'ar',
+      'ele/ela/você': stem + 'ar',
+      'a gente': stem + 'ar',
+      'nós': stem + 'armos',
+      'eles/elas/vocês': stem + 'arem'
+    };
   }
 }
 
@@ -88,6 +165,54 @@ function conjugateErVerb(infinitive, tense) {
       'nós': stem + 'emos',
       'eles/elas/vocês': stem + 'eram'
     };
+  } else if (tense === 'imperfect') {
+    return {
+      'eu': stem + 'ia',
+      'ele/ela/você': stem + 'ia',
+      'a gente': stem + 'ia',
+      'nós': stem + 'íamos',
+      'eles/elas/vocês': stem + 'iam'
+    };
+  } else if (tense === 'future') {
+    return {
+      'eu': infinitive + 'ei',
+      'ele/ela/você': infinitive + 'á',
+      'a gente': infinitive + 'á',
+      'nós': infinitive + 'emos',
+      'eles/elas/vocês': infinitive + 'ão'
+    };
+  } else if (tense === 'conditional') {
+    return {
+      'eu': infinitive + 'ia',
+      'ele/ela/você': infinitive + 'ia',
+      'a gente': infinitive + 'ia',
+      'nós': infinitive + 'íamos',
+      'eles/elas/vocês': infinitive + 'iam'
+    };
+  } else if (tense === 'present-subjunctive') {
+    return {
+      'eu': stem + 'a',
+      'ele/ela/você': stem + 'a',
+      'a gente': stem + 'a',
+      'nós': stem + 'amos',
+      'eles/elas/vocês': stem + 'am'
+    };
+  } else if (tense === 'imperfect-subjunctive') {
+    return {
+      'eu': stem + 'esse',
+      'ele/ela/você': stem + 'esse',
+      'a gente': stem + 'esse',
+      'nós': stem + 'êssemos',
+      'eles/elas/vocês': stem + 'essem'
+    };
+  } else if (tense === 'future-subjunctive') {
+    return {
+      'eu': stem + 'er',
+      'ele/ela/você': stem + 'er',
+      'a gente': stem + 'er',
+      'nós': stem + 'ermos',
+      'eles/elas/vocês': stem + 'erem'
+    };
   }
 }
 
@@ -111,6 +236,54 @@ function conjugateIrVerb(infinitive, tense) {
       'a gente': stem + 'iu',
       'nós': stem + 'imos',
       'eles/elas/vocês': stem + 'iram'
+    };
+  } else if (tense === 'imperfect') {
+    return {
+      'eu': stem + 'ia',
+      'ele/ela/você': stem + 'ia',
+      'a gente': stem + 'ia',
+      'nós': stem + 'íamos',
+      'eles/elas/vocês': stem + 'iam'
+    };
+  } else if (tense === 'future') {
+    return {
+      'eu': infinitive + 'ei',
+      'ele/ela/você': infinitive + 'á',
+      'a gente': infinitive + 'á',
+      'nós': infinitive + 'emos',
+      'eles/elas/vocês': infinitive + 'ão'
+    };
+  } else if (tense === 'conditional') {
+    return {
+      'eu': infinitive + 'ia',
+      'ele/ela/você': infinitive + 'ia',
+      'a gente': infinitive + 'ia',
+      'nós': infinitive + 'íamos',
+      'eles/elas/vocês': infinitive + 'iam'
+    };
+  } else if (tense === 'present-subjunctive') {
+    return {
+      'eu': stem + 'a',
+      'ele/ela/você': stem + 'a',
+      'a gente': stem + 'a',
+      'nós': stem + 'amos',
+      'eles/elas/vocês': stem + 'am'
+    };
+  } else if (tense === 'imperfect-subjunctive') {
+    return {
+      'eu': stem + 'isse',
+      'ele/ela/você': stem + 'isse',
+      'a gente': stem + 'isse',
+      'nós': stem + 'íssemos',
+      'eles/elas/vocês': stem + 'issem'
+    };
+  } else if (tense === 'future-subjunctive') {
+    return {
+      'eu': stem + 'ir',
+      'ele/ela/você': stem + 'ir',
+      'a gente': stem + 'ir',
+      'nós': stem + 'irmos',
+      'eles/elas/vocês': stem + 'irem'
     };
   }
 }
@@ -175,46 +348,72 @@ const irregularVerbs = {
   }
 };
 
-// Get all conjugations for a verb (present + past, all unique forms)
-function getAllConjugations(infinitive) {
-  let present, past;
+// Get all conjugations for a verb based on active drills
+function getAllConjugations(infinitive, activeDrills = []) {
+  const allForms = new Set();
+  const verbType = getVerbType(infinitive);
 
-  // Check if it's an irregular verb first
-  if (irregularVerbs[infinitive]) {
-    present = irregularVerbs[infinitive].present;
-    past = irregularVerbs[infinitive].past;
-  } else {
-    // Regular verb - determine type and conjugate
-    const verbType = getVerbType(infinitive);
+  // Determine which tenses to include based on active drills
+  const tenses = [];
 
-    if (verbType === 'ar') {
-      present = conjugateArVerb(infinitive, 'present');
-      past = conjugateArVerb(infinitive, 'past');
-    } else if (verbType === 'er') {
-      present = conjugateErVerb(infinitive, 'present');
-      past = conjugateErVerb(infinitive, 'past');
-    } else if (verbType === 'ir') {
-      present = conjugateIrVerb(infinitive, 'present');
-      past = conjugateIrVerb(infinitive, 'past');
-    } else {
-      return [];
+  // Map drills to their respective tenses
+  const drillToTense = {
+    'imperfect-tense': 'imperfect',
+    'future-tense': 'future',
+    'conditional-tense': 'conditional',
+    'present-subjunctive': 'present-subjunctive',
+    'imperfect-subjunctive': 'imperfect-subjunctive',
+    'future-subjunctive': 'future-subjunctive'
+  };
+
+  // Check if specific tense drill is active
+  let hasSpecificTense = false;
+  for (const drill of activeDrills) {
+    if (drillToTense[drill]) {
+      tenses.push(drillToTense[drill]);
+      hasSpecificTense = true;
     }
   }
 
-  // Combine all unique forms
-  const allForms = new Set();
-  if (present) Object.values(present).forEach(form => allForms.add(form));
-  if (past) Object.values(past).forEach(form => allForms.add(form));
+  // If no specific tense drill, or if present/past drills are active, include present and past
+  if (!hasSpecificTense ||
+      activeDrills.some(d => ['regular-ar', 'regular-er', 'regular-ir', 'irregular-verbs', 'ser-estar', 'reflexive-verbs'].includes(d))) {
+    tenses.push('present', 'past');
+  }
+
+  // Get conjugations for each tense
+  for (const tense of tenses) {
+    let conjugation;
+
+    // Check if it's an irregular verb (only for present/past)
+    if ((tense === 'present' || tense === 'past') && irregularVerbs[infinitive]) {
+      conjugation = irregularVerbs[infinitive][tense];
+    } else {
+      // Regular verb - conjugate based on type
+      if (verbType === 'ar') {
+        conjugation = conjugateArVerb(infinitive, tense);
+      } else if (verbType === 'er') {
+        conjugation = conjugateErVerb(infinitive, tense);
+      } else if (verbType === 'ir') {
+        conjugation = conjugateIrVerb(infinitive, tense);
+      }
+    }
+
+    // Add all unique forms
+    if (conjugation) {
+      Object.values(conjugation).forEach(form => allForms.add(form));
+    }
+  }
 
   return Array.from(allForms);
 }
 
 // Add conjugation buttons to message container
-function addConjugationButtons(messagesContainer, content) {
+function addConjugationButtons(messagesContainer, content, activeDrills = []) {
   const verb = extractVerbFromMessage(content);
   if (!verb) return;
 
-  const conjugations = getAllConjugations(verb);
+  const conjugations = getAllConjugations(verb, activeDrills);
   const shuffled = shuffleArray(conjugations);
 
   // Create button container
