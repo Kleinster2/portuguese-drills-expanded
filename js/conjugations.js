@@ -29,7 +29,8 @@ function shouldShowConjugationButtons(content, activeDrills) {
   // Check if message contains a blank and a verb in parentheses
   // Support multiple blank formats: ______, ___, [blank], etc.
   const hasBlank = content.includes('______') || content.includes('___') || /\[blank\]/i.test(content) || /_+/.test(content);
-  const hasVerb = /\(([a-záàâãéêíóôõúç]+(?:ar|er|ir))\)/i.test(content);
+  // Match verbs ending in -ar, -er, -ir, with optional reflexive pronouns (-se, -me, -te, -nos)
+  const hasVerb = /\(([a-záàâãéêíóôõúç]+(?:ar|er|ir)(?:-(?:se|me|te|nos))?)\)/i.test(content);
 
   console.log('  hasBlank:', hasBlank);
   console.log('  hasVerb:', hasVerb);
@@ -40,15 +41,21 @@ function shouldShowConjugationButtons(content, activeDrills) {
 
 // Extract verb infinitive from message
 function extractVerbFromMessage(content) {
-  // Extract verb from pattern: ______ (falar/comer/abrir)
+  // Extract verb from pattern: ______ (falar/comer/abrir) or (sentar-se)
   // Look for the LAST occurrence to avoid matching English words like "(singular)" that end in -ar
-  const matches = content.matchAll(/\(([a-záàâãéêíóôõúç]+(?:ar|er|ir))\)/gi);
+  // Match verbs with optional reflexive pronouns (-se, -me, -te, -nos)
+  const matches = content.matchAll(/\(([a-záàâãéêíóôõúç]+(?:ar|er|ir)(?:-(?:se|me|te|nos))?)\)/gi);
   const allMatches = Array.from(matches);
 
   // Return the last match (the Portuguese verb, not English clarifiers)
   if (allMatches.length > 0) {
     const lastMatch = allMatches[allMatches.length - 1];
-    return lastMatch[1].toLowerCase();
+    let verb = lastMatch[1].toLowerCase();
+
+    // Strip reflexive pronoun to get the base verb for conjugation
+    verb = verb.replace(/-(?:se|me|te|nos)$/, '');
+
+    return verb;
   }
 
   return null;
