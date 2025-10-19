@@ -54,6 +54,9 @@ async function openDrillChat(drillId) {
     case 'reflexive-verbs':
       drillTitle.textContent = 'Reflexive Verbs Drill';
       break;
+    case 'subject-identification':
+      drillTitle.textContent = 'Subject Identification';
+      break;
     case 'immediate-future':
       drillTitle.textContent = 'Immediate Future Drill';
       break;

@@ -24,6 +24,7 @@ class PromptManager {
       const contractionsArticlesPrompt = this.loadPromptConfig('./config/prompts/contractions-articles.json');
       const irregularVerbsPrompt = this.loadPromptConfig('./config/prompts/irregular-verbs.json');
       const reflexiveVerbsPrompt = this.loadPromptConfig('./config/prompts/reflexive-verbs.json');
+      const subjectIdentificationPrompt = this.loadPromptConfig('./config/prompts/subject-identification.json');
       const immediateFuturePrompt = this.loadPromptConfig('./config/prompts/immediate-future.json');
       const presentContinuousPrompt = this.loadPromptConfig('./config/prompts/present-continuous.json');
       const imperfectTensePrompt = this.loadPromptConfig('./config/prompts/imperfect-tense.json');
@@ -86,6 +87,11 @@ class PromptManager {
       if (reflexiveVerbsPrompt) {
         this.prompts.set(reflexiveVerbsPrompt.id, reflexiveVerbsPrompt);
         console.log(`✓ Loaded prompt configuration: ${reflexiveVerbsPrompt.id} (${reflexiveVerbsPrompt.name})`);
+      }
+
+      if (subjectIdentificationPrompt) {
+        this.prompts.set(subjectIdentificationPrompt.id, subjectIdentificationPrompt);
+        console.log(`✓ Loaded prompt configuration: ${subjectIdentificationPrompt.id} (${subjectIdentificationPrompt.name})`);
       }
 
       if (immediateFuturePrompt) {
