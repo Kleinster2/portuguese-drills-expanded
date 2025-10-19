@@ -498,11 +498,11 @@ function addReflexivePronounButtons(messagesContainer, content) {
 function addSubjectIdentificationButtons(messagesContainer, content) {
   // All possible subjects
   const subjects = [
-    'eu', 'você', 'ele', 'ela', 'a gente', 'nós',
-    'vocês', 'eles', 'elas', 'tu',
+    'eu', 'você', 'ele/ela', 'a gente', 'nós',
+    'vocês', 'eles/elas', 'tu',
     'alguém', 'ninguém', 'todo mundo', 'quem',
-    'cada um', 'o senhor', 'a senhora',
-    'os senhores', 'as senhoras',
+    'cada um', 'o senhor/a senhora',
+    'os senhores/as senhoras',
     'todos', 'todas', 'alguns', 'algumas'
   ];
 
