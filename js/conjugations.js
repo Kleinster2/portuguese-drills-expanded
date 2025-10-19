@@ -528,21 +528,16 @@ function addSubjectIdentificationButtons(messagesContainer, content) {
       <div class="flex flex-wrap gap-2">
         ${buttonsHtml}
       </div>
-      <button
-        id="submit-subjects-btn"
-        class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 rounded-lg text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed w-fit"
-        disabled
-      >
-        Submit Selected Subjects
-      </button>
     </div>
   `;
 
   messagesContainer.appendChild(buttonContainer);
 
+  // Get chat input field
+  const chatInput = document.getElementById('chat-input');
+
   // Add click handlers for subject chips
   const chips = buttonContainer.querySelectorAll('.subject-chip');
-  const submitBtn = buttonContainer.querySelector('#submit-subjects-btn');
 
   chips.forEach(chip => {
     chip.addEventListener('click', () => {
@@ -560,17 +555,13 @@ function addSubjectIdentificationButtons(messagesContainer, content) {
         chip.classList.add('bg-blue-500', 'text-white', 'border-blue-600');
       }
 
-      // Enable/disable submit button
-      submitBtn.disabled = selectedSubjects.size === 0;
+      // Update chat input with selected subjects
+      if (selectedSubjects.size > 0) {
+        chatInput.value = Array.from(selectedSubjects).sort().join(', ');
+      } else {
+        chatInput.value = '';
+      }
     });
-  });
-
-  // Add click handler for submit button
-  submitBtn.addEventListener('click', () => {
-    if (selectedSubjects.size > 0) {
-      const answer = Array.from(selectedSubjects).sort().join(', ');
-      sendConjugation(answer);
-    }
   });
 }
 
