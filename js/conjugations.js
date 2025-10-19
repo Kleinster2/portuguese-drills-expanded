@@ -5,13 +5,13 @@
 
 // Check if conjugation buttons should be shown for current drill
 function shouldShowConjugationButtons(content, activeDrills) {
-  // List of verb drills that support conjugation buttons
+  // List of verb drills that support conjugation buttons (or subject buttons)
   const verbDrills = [
     'regular-ar', 'regular-er', 'regular-ir',
     'irregular-verbs', 'ser-estar', 'reflexive-verbs',
     'imperfect-tense', 'future-tense', 'conditional-tense',
     'present-subjunctive', 'imperfect-subjunctive', 'future-subjunctive',
-    'imperative'
+    'imperative', 'subject-identification'
   ];
 
   // Check if any verb drill is active
@@ -419,6 +419,12 @@ function getAllConjugations(infinitive, activeDrills = []) {
 
 // Add conjugation buttons to message container
 function addConjugationButtons(messagesContainer, content, activeDrills = []) {
+  // Check if this is a subject identification drill (asking for subjects, not conjugations)
+  if (activeDrills.includes('subject-identification')) {
+    addSubjectIdentificationButtons(messagesContainer, content);
+    return;
+  }
+
   // Check if this is a reflexive verbs drill (asking for pronouns, not verbs)
   if (activeDrills.includes('reflexive-verbs')) {
     addReflexivePronounButtons(messagesContainer, content);
@@ -475,6 +481,86 @@ function addReflexivePronounButtons(messagesContainer, content) {
   `;
 
   messagesContainer.appendChild(buttonContainer);
+}
+
+// Add subject identification buttons (multi-select)
+function addSubjectIdentificationButtons(messagesContainer, content) {
+  // All possible subjects
+  const subjects = [
+    'eu', 'você', 'ele', 'ela', 'a gente', 'nós',
+    'vocês', 'eles', 'elas', 'tu',
+    'alguém', 'ninguém', 'todo mundo', 'quem',
+    'cada um', 'o senhor', 'a senhora',
+    'os senhores', 'as senhoras',
+    'todos', 'todas', 'alguns', 'algumas'
+  ];
+
+  // Track selected subjects
+  const selectedSubjects = new Set();
+
+  // Create button container
+  const buttonContainer = document.createElement('div');
+  buttonContainer.className = 'flex items-start space-x-3 mb-4';
+
+  const buttonsHtml = subjects.map(subject => `
+    <button
+      data-subject="${subject}"
+      class="subject-chip bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium px-4 py-2 rounded-full text-sm transition-colors border-2 border-transparent"
+    >
+      ${escapeHtml(subject)}
+    </button>
+  `).join('');
+
+  buttonContainer.innerHTML = `
+    <div class="w-8 h-8 flex-shrink-0"></div>
+    <div class="flex flex-col gap-3 max-w-2xl">
+      <div class="flex flex-wrap gap-2">
+        ${buttonsHtml}
+      </div>
+      <button
+        id="submit-subjects-btn"
+        class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 rounded-lg text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed w-fit"
+        disabled
+      >
+        Submit Selected Subjects
+      </button>
+    </div>
+  `;
+
+  messagesContainer.appendChild(buttonContainer);
+
+  // Add click handlers for subject chips
+  const chips = buttonContainer.querySelectorAll('.subject-chip');
+  const submitBtn = buttonContainer.querySelector('#submit-subjects-btn');
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const subject = chip.dataset.subject;
+
+      if (selectedSubjects.has(subject)) {
+        // Deselect
+        selectedSubjects.delete(subject);
+        chip.classList.remove('bg-blue-500', 'text-white', 'border-blue-600');
+        chip.classList.add('bg-gray-100', 'text-gray-700');
+      } else {
+        // Select
+        selectedSubjects.add(subject);
+        chip.classList.remove('bg-gray-100', 'text-gray-700');
+        chip.classList.add('bg-blue-500', 'text-white', 'border-blue-600');
+      }
+
+      // Enable/disable submit button
+      submitBtn.disabled = selectedSubjects.size === 0;
+    });
+  });
+
+  // Add click handler for submit button
+  submitBtn.addEventListener('click', () => {
+    if (selectedSubjects.size > 0) {
+      const answer = Array.from(selectedSubjects).sort().join(', ');
+      sendConjugation(answer);
+    }
+  });
 }
 
 // Send conjugation answer
