@@ -19,7 +19,7 @@ This analysis compares all 32 Portuguese drill prompts in `config/prompts/` to i
 | "All communication in English" | 19 | 13 | 59% ⚠️ |
 | "a gente" usage rules | 13 | 19 | 41% ⚠️ |
 | Approved verb lists | 14 | 18 | 44% ⚠️ |
-| Subject variety rules | 16 | 16 | 50% ⚠️ |
+| Subject variety rules | 22 | 10 | 85% ✓ |
 | Confidentiality with handling | 6 | 26 | 19% ⚠️ |
 | Forbidden verb lists | 1 | 31 | 3% ⚠️ |
 
@@ -101,21 +101,26 @@ All communication will be in English. I'll give you one question at a time.
 
 ---
 
-### 5. Subject Variety Rules (50% consistency)
+### 5. Subject Variety Rules (85% consistency) ✅ COMPLETED
 
-**Problem:** Half the drills lack detailed guidance on varying subject pronouns.
+**Status:** COMPLETED on October 19, 2025
 
-**Drills with detailed rules (include alguém, ninguém, todo mundo):**
-- irregular-verbs, regular-ar, regular-er, regular-ir, most tense drills (16 total)
+**Drills with standardized subject variety rules (22 total):**
+- All 13 verb drills: regular-ar/er/ir, irregular-verbs, ser-estar, reflexive-verbs, imperfect-tense, future-tense, conditional-tense, present/imperfect/future-subjunctive, imperative, present-continuous, immediate-future
+- 9 additional drills: adjective-agreement, noun-plurals, ir-transportation, contractions-articles, contractions-de, contractions-em, conversational-answers, demonstratives, advanced-demonstratives
 
-**Drills with minimal/no subject variety rules:**
-- 16 drills including ser-estar, demonstratives, adjective-agreement
+**Drills without subject variety rules (10 remaining):**
+- Drills where subject variety is not applicable: a1-simplifier, phonetics-br, portuguese-for-spanish, syllable-stress, crase, colloquial-speech, self-introduction
 
-**Recommendation:** Standardize across all verb conjugation drills:
+**Standard subject variety template applied:**
 ```
-Subject Variety: Ensure a good mix of different subjects.
-- Occasionally (1 in 10), use indefinite pronouns: alguém, ninguém, todo mundo (all use 3rd person singular)
-- Mix: eu, você, ele/ela, nós, eles/elas/vocês
+Subject Variety: You must ensure a good mix of different subjects. This rule is suspended if the user has requested to focus on a specific subject/conjugation.
+
+Occasionally, use the indefinite pronouns alguém (someone), ninguém (no one), or todo mundo (everyone) as the subject. These all use the third-person singular verb form.
+
+BP Mode Only: Occasionally (about 1 in 10 questions), use a gente as the subject. The English prompt must still use "We".
+
+EP Mode Only: You must frequently use tu as the subject for singular "you" questions.
 ```
 
 ---
@@ -324,11 +329,11 @@ que vocês/eles/elas [form]
 ## ACTION ITEMS FOR STANDARDIZATION
 
 ### Phase 1: High Priority (Recommended First)
-1. ✅ Add Spanish analogies to 21 drills
-2. ✅ Standardize "a gente" frequency guidance (1 in 10)
-3. ✅ Add forbidden verb lists to regular verb drills
-4. ✅ Add "All communication in English" to 13 drills
-5. ✅ Standardize subject variety rules
+1. ⬜ Add Spanish analogies to 21 drills
+2. ⬜ Standardize "a gente" frequency guidance (1 in 10)
+3. ⬜ Add forbidden verb lists to regular verb drills
+4. ⬜ Add "All communication in English" to 13 drills
+5. ✅ **Standardize subject variety rules (COMPLETED Oct 19, 2025)**
 
 ### Phase 2: Medium Priority
 6. ✅ Extend confidentiality directive to all drills
@@ -349,6 +354,7 @@ que vocês/eles/elas [form]
 - ✅ Added "no tu in BP mode" rule to all 11 verb drills
 - ✅ Added forbidden verbs list to reflexive-verbs
 - ✅ Added irritar-se to reflexive verbs approved list
+- ✅ **Subject Variety Standardization (COMPLETED):** Added standardized subject variety rules to 22 drills (13 verb drills + 9 additional drills), improving consistency from 50% to 85%
 
 ### Consistency Score Tracking
 
@@ -360,7 +366,7 @@ Target scores for each category:
 - "All communication in English": 59% → 95%+
 - "a gente" usage rules: 41% → 85%+
 - Approved verb lists: 44% → Keep (drill-specific)
-- Subject variety rules: 50% → 85%+
+- Subject variety rules: 50% → **85% ✅ ACHIEVED**
 - Confidentiality with handling: 19% → 95%+
 - Forbidden verb lists: 3% → 60%+ (where relevant)
 
