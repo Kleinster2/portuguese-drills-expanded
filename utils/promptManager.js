@@ -48,6 +48,12 @@ class PromptManager {
       const selfIntroductionPrompt = this.loadPromptConfig('./config/prompts/self-introduction.json');
       const portugueseForSpanishPrompt = this.loadPromptConfig('./config/prompts/portuguese-for-spanish.json');
       const a1SimplifierPrompt = this.loadPromptConfig('./config/prompts/a1-simplifier.json');
+      const interrogativesPrompt = this.loadPromptConfig('./config/prompts/interrogatives.json');
+      const eQueQuestionsPrompt = this.loadPromptConfig('./config/prompts/e-que-questions.json');
+      const numbersPrompt = this.loadPromptConfig('./config/prompts/numbers.json');
+      const preteriteTensePrompt = this.loadPromptConfig('./config/prompts/preterite-tense.json');
+      const possessivesPrompt = this.loadPromptConfig('./config/prompts/possessives.json');
+      const porVsParaPrompt = this.loadPromptConfig('./config/prompts/por-vs-para.json');
 
       if (regularArPrompt) {
         this.prompts.set(regularArPrompt.id, regularArPrompt);
@@ -207,6 +213,36 @@ class PromptManager {
       if (a1SimplifierPrompt) {
         this.prompts.set(a1SimplifierPrompt.id, a1SimplifierPrompt);
         console.log(`✓ Loaded prompt configuration: ${a1SimplifierPrompt.id} (${a1SimplifierPrompt.name})`);
+      }
+
+      if (interrogativesPrompt) {
+        this.prompts.set(interrogativesPrompt.id, interrogativesPrompt);
+        console.log(`✓ Loaded prompt configuration: ${interrogativesPrompt.id} (${interrogativesPrompt.name})`);
+      }
+
+      if (eQueQuestionsPrompt) {
+        this.prompts.set(eQueQuestionsPrompt.id, eQueQuestionsPrompt);
+        console.log(`✓ Loaded prompt configuration: ${eQueQuestionsPrompt.id} (${eQueQuestionsPrompt.name})`);
+      }
+
+      if (numbersPrompt) {
+        this.prompts.set(numbersPrompt.id, numbersPrompt);
+        console.log(`✓ Loaded prompt configuration: ${numbersPrompt.id} (${numbersPrompt.name})`);
+      }
+
+      if (preteriteTensePrompt) {
+        this.prompts.set(preteriteTensePrompt.id, preteriteTensePrompt);
+        console.log(`✓ Loaded prompt configuration: ${preteriteTensePrompt.id} (${preteriteTensePrompt.name})`);
+      }
+
+      if (possessivesPrompt) {
+        this.prompts.set(possessivesPrompt.id, possessivesPrompt);
+        console.log(`✓ Loaded prompt configuration: ${possessivesPrompt.id} (${possessivesPrompt.name})`);
+      }
+
+      if (porVsParaPrompt) {
+        this.prompts.set(porVsParaPrompt.id, porVsParaPrompt);
+        console.log(`✓ Loaded prompt configuration: ${porVsParaPrompt.id} (${porVsParaPrompt.name})`);
       }
 
       if (this.prompts.size === 0) {
