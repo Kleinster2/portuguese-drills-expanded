@@ -425,8 +425,8 @@ function getAllConjugations(infinitive, activeDrills = []) {
   for (const tense of tenses) {
     let conjugation;
 
-    // Check if it's an irregular verb (only for present/past)
-    if ((tense === 'present' || tense === 'past') && irregularVerbs[infinitive]) {
+    // Check if it's an irregular verb and has this tense defined
+    if (irregularVerbs[infinitive] && irregularVerbs[infinitive][tense]) {
       conjugation = irregularVerbs[infinitive][tense];
     } else {
       // Regular verb - conjugate based on type
