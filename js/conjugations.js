@@ -146,6 +146,8 @@ function conjugateArVerb(infinitive, tense) {
       'eles/elas/vocês': stem + 'em'
     };
   } else if (tense === 'imperfect-subjunctive') {
+    // Imperfect subjunctive: 3rd person plural preterite minus 'ram' plus 'sse'
+    // For regular -ar verbs: falaram -> fala- -> falasse
     return {
       'eu': stem + 'asse',
       'ele/ela/você': stem + 'asse',
@@ -218,6 +220,8 @@ function conjugateErVerb(infinitive, tense) {
       'eles/elas/vocês': stem + 'am'
     };
   } else if (tense === 'imperfect-subjunctive') {
+    // Imperfect subjunctive: 3rd person plural preterite minus 'ram' plus 'sse'
+    // For regular -er verbs: comeram -> come- -> comesse
     return {
       'eu': stem + 'esse',
       'ele/ela/você': stem + 'esse',
@@ -290,6 +294,8 @@ function conjugateIrVerb(infinitive, tense) {
       'eles/elas/vocês': stem + 'am'
     };
   } else if (tense === 'imperfect-subjunctive') {
+    // Imperfect subjunctive: 3rd person plural preterite minus 'ram' plus 'sse'
+    // For regular -ir verbs: partiram -> parti- -> partisse
     return {
       'eu': stem + 'isse',
       'ele/ela/você': stem + 'isse',
@@ -312,59 +318,73 @@ function conjugateIrVerb(infinitive, tense) {
 const irregularVerbs = {
   'ser': {
     present: { 'eu': 'sou', 'ele/ela/você': 'é', 'a gente': 'é', 'nós': 'somos', 'eles/elas/vocês': 'são' },
-    past: { 'eu': 'fui', 'ele/ela/você': 'foi', 'a gente': 'foi', 'nós': 'fomos', 'eles/elas/vocês': 'foram' }
+    past: { 'eu': 'fui', 'ele/ela/você': 'foi', 'a gente': 'foi', 'nós': 'fomos', 'eles/elas/vocês': 'foram' },
+    'imperfect-subjunctive': { 'eu': 'fosse', 'ele/ela/você': 'fosse', 'a gente': 'fosse', 'nós': 'fôssemos', 'eles/elas/vocês': 'fossem' }
   },
   'estar': {
     present: { 'eu': 'estou', 'ele/ela/você': 'está', 'a gente': 'está', 'nós': 'estamos', 'eles/elas/vocês': 'estão' },
-    past: { 'eu': 'estive', 'ele/ela/você': 'esteve', 'a gente': 'esteve', 'nós': 'estivemos', 'eles/elas/vocês': 'estiveram' }
+    past: { 'eu': 'estive', 'ele/ela/você': 'esteve', 'a gente': 'esteve', 'nós': 'estivemos', 'eles/elas/vocês': 'estiveram' },
+    'imperfect-subjunctive': { 'eu': 'estivesse', 'ele/ela/você': 'estivesse', 'a gente': 'estivesse', 'nós': 'estivéssemos', 'eles/elas/vocês': 'estivessem' }
   },
   'ir': {
     present: { 'eu': 'vou', 'ele/ela/você': 'vai', 'a gente': 'vai', 'nós': 'vamos', 'eles/elas/vocês': 'vão' },
-    past: { 'eu': 'fui', 'ele/ela/você': 'foi', 'a gente': 'foi', 'nós': 'fomos', 'eles/elas/vocês': 'foram' }
+    past: { 'eu': 'fui', 'ele/ela/você': 'foi', 'a gente': 'foi', 'nós': 'fomos', 'eles/elas/vocês': 'foram' },
+    'imperfect-subjunctive': { 'eu': 'fosse', 'ele/ela/você': 'fosse', 'a gente': 'fosse', 'nós': 'fôssemos', 'eles/elas/vocês': 'fossem' }
   },
   'ter': {
     present: { 'eu': 'tenho', 'ele/ela/você': 'tem', 'a gente': 'tem', 'nós': 'temos', 'eles/elas/vocês': 'têm' },
-    past: { 'eu': 'tive', 'ele/ela/você': 'teve', 'a gente': 'teve', 'nós': 'tivemos', 'eles/elas/vocês': 'tiveram' }
+    past: { 'eu': 'tive', 'ele/ela/você': 'teve', 'a gente': 'teve', 'nós': 'tivemos', 'eles/elas/vocês': 'tiveram' },
+    'imperfect-subjunctive': { 'eu': 'tivesse', 'ele/ela/você': 'tivesse', 'a gente': 'tivesse', 'nós': 'tivéssemos', 'eles/elas/vocês': 'tivessem' }
   },
   'fazer': {
     present: { 'eu': 'faço', 'ele/ela/você': 'faz', 'a gente': 'faz', 'nós': 'fazemos', 'eles/elas/vocês': 'fazem' },
-    past: { 'eu': 'fiz', 'ele/ela/você': 'fez', 'a gente': 'fez', 'nós': 'fizemos', 'eles/elas/vocês': 'fizeram' }
+    past: { 'eu': 'fiz', 'ele/ela/você': 'fez', 'a gente': 'fez', 'nós': 'fizemos', 'eles/elas/vocês': 'fizeram' },
+    'imperfect-subjunctive': { 'eu': 'fizesse', 'ele/ela/você': 'fizesse', 'a gente': 'fizesse', 'nós': 'fizéssemos', 'eles/elas/vocês': 'fizessem' }
   },
   'dizer': {
     present: { 'eu': 'digo', 'ele/ela/você': 'diz', 'a gente': 'diz', 'nós': 'dizemos', 'eles/elas/vocês': 'dizem' },
-    past: { 'eu': 'disse', 'ele/ela/você': 'disse', 'a gente': 'disse', 'nós': 'dissemos', 'eles/elas/vocês': 'disseram' }
+    past: { 'eu': 'disse', 'ele/ela/você': 'disse', 'a gente': 'disse', 'nós': 'dissemos', 'eles/elas/vocês': 'disseram' },
+    'imperfect-subjunctive': { 'eu': 'dissesse', 'ele/ela/você': 'dissesse', 'a gente': 'dissesse', 'nós': 'disséssemos', 'eles/elas/vocês': 'dissessem' }
   },
   'poder': {
     present: { 'eu': 'posso', 'ele/ela/você': 'pode', 'a gente': 'pode', 'nós': 'podemos', 'eles/elas/vocês': 'podem' },
-    past: { 'eu': 'pude', 'ele/ela/você': 'pôde', 'a gente': 'pôde', 'nós': 'pudemos', 'eles/elas/vocês': 'puderam' }
+    past: { 'eu': 'pude', 'ele/ela/você': 'pôde', 'a gente': 'pôde', 'nós': 'pudemos', 'eles/elas/vocês': 'puderam' },
+    'imperfect-subjunctive': { 'eu': 'pudesse', 'ele/ela/você': 'pudesse', 'a gente': 'pudesse', 'nós': 'pudéssemos', 'eles/elas/vocês': 'pudessem' }
   },
   'pôr': {
     present: { 'eu': 'ponho', 'ele/ela/você': 'põe', 'a gente': 'põe', 'nós': 'pomos', 'eles/elas/vocês': 'põem' },
-    past: { 'eu': 'pus', 'ele/ela/você': 'pôs', 'a gente': 'pôs', 'nós': 'pusemos', 'eles/elas/vocês': 'puseram' }
+    past: { 'eu': 'pus', 'ele/ela/você': 'pôs', 'a gente': 'pôs', 'nós': 'pusemos', 'eles/elas/vocês': 'puseram' },
+    'imperfect-subjunctive': { 'eu': 'pusesse', 'ele/ela/você': 'pusesse', 'a gente': 'pusesse', 'nós': 'puséssemos', 'eles/elas/vocês': 'pusessem' }
   },
   'querer': {
     present: { 'eu': 'quero', 'ele/ela/você': 'quer', 'a gente': 'quer', 'nós': 'queremos', 'eles/elas/vocês': 'querem' },
-    past: { 'eu': 'quis', 'ele/ela/você': 'quis', 'a gente': 'quis', 'nós': 'quisemos', 'eles/elas/vocês': 'quiseram' }
+    past: { 'eu': 'quis', 'ele/ela/você': 'quis', 'a gente': 'quis', 'nós': 'quisemos', 'eles/elas/vocês': 'quiseram' },
+    'imperfect-subjunctive': { 'eu': 'quisesse', 'ele/ela/você': 'quisesse', 'a gente': 'quisesse', 'nós': 'quiséssemos', 'eles/elas/vocês': 'quisessem' }
   },
   'saber': {
     present: { 'eu': 'sei', 'ele/ela/você': 'sabe', 'a gente': 'sabe', 'nós': 'sabemos', 'eles/elas/vocês': 'sabem' },
-    past: { 'eu': 'soube', 'ele/ela/você': 'soube', 'a gente': 'soube', 'nós': 'soubemos', 'eles/elas/vocês': 'souberam' }
+    past: { 'eu': 'soube', 'ele/ela/você': 'soube', 'a gente': 'soube', 'nós': 'soubemos', 'eles/elas/vocês': 'souberam' },
+    'imperfect-subjunctive': { 'eu': 'soubesse', 'ele/ela/você': 'soubesse', 'a gente': 'soubesse', 'nós': 'soubéssemos', 'eles/elas/vocês': 'soubessem' }
   },
   'ver': {
     present: { 'eu': 'vejo', 'ele/ela/você': 'vê', 'a gente': 'vê', 'nós': 'vemos', 'eles/elas/vocês': 'veem' },
-    past: { 'eu': 'vi', 'ele/ela/você': 'viu', 'a gente': 'viu', 'nós': 'vimos', 'eles/elas/vocês': 'viram' }
+    past: { 'eu': 'vi', 'ele/ela/você': 'viu', 'a gente': 'viu', 'nós': 'vimos', 'eles/elas/vocês': 'viram' },
+    'imperfect-subjunctive': { 'eu': 'visse', 'ele/ela/você': 'visse', 'a gente': 'visse', 'nós': 'víssemos', 'eles/elas/vocês': 'vissem' }
   },
   'dar': {
     present: { 'eu': 'dou', 'ele/ela/você': 'dá', 'a gente': 'dá', 'nós': 'damos', 'eles/elas/vocês': 'dão' },
-    past: { 'eu': 'dei', 'ele/ela/você': 'deu', 'a gente': 'deu', 'nós': 'demos', 'eles/elas/vocês': 'deram' }
+    past: { 'eu': 'dei', 'ele/ela/você': 'deu', 'a gente': 'deu', 'nós': 'demos', 'eles/elas/vocês': 'deram' },
+    'imperfect-subjunctive': { 'eu': 'desse', 'ele/ela/você': 'desse', 'a gente': 'desse', 'nós': 'déssemos', 'eles/elas/vocês': 'dessem' }
   },
   'trazer': {
     present: { 'eu': 'trago', 'ele/ela/você': 'traz', 'a gente': 'traz', 'nós': 'trazemos', 'eles/elas/vocês': 'trazem' },
-    past: { 'eu': 'trouxe', 'ele/ela/você': 'trouxe', 'a gente': 'trouxe', 'nós': 'trouxemos', 'eles/elas/vocês': 'trouxeram' }
+    past: { 'eu': 'trouxe', 'ele/ela/você': 'trouxe', 'a gente': 'trouxe', 'nós': 'trouxemos', 'eles/elas/vocês': 'trouxeram' },
+    'imperfect-subjunctive': { 'eu': 'trouxesse', 'ele/ela/você': 'trouxesse', 'a gente': 'trouxesse', 'nós': 'trouxéssemos', 'eles/elas/vocês': 'trouxessem' }
   },
   'vir': {
     present: { 'eu': 'venho', 'ele/ela/você': 'vem', 'a gente': 'vem', 'nós': 'vimos', 'eles/elas/vocês': 'vêm' },
-    past: { 'eu': 'vim', 'ele/ela/você': 'veio', 'a gente': 'veio', 'nós': 'viemos', 'eles/elas/vocês': 'vieram' }
+    past: { 'eu': 'vim', 'ele/ela/você': 'veio', 'a gente': 'veio', 'nós': 'viemos', 'eles/elas/vocês': 'vieram' },
+    'imperfect-subjunctive': { 'eu': 'viesse', 'ele/ela/você': 'viesse', 'a gente': 'viesse', 'nós': 'viéssemos', 'eles/elas/vocês': 'viessem' }
   }
 };
 
