@@ -269,6 +269,10 @@
                         <button onclick="openDrillChat('imperative')" class="w-full text-center bg-green-600 text-white rounded-lg px-4 py-2.5 font-semibold hover:bg-green-700 transition-colors text-sm mb-2">Start</button>
                         <button onclick="copyDrillLink('imperative', this)" class="w-full text-center bg-slate-200 text-slate-700 rounded-lg px-4 py-2 font-medium hover:bg-slate-300 transition-colors text-sm">🔗 Copy Link</button>
                     </div></div>
+                <div id="drill-articles" class="drill-card flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1" data-topic="grammar" data-cefr="a1"><div class="p-6 flex-grow"><span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">Grammar & Prepositions</span><h2 class="text-xl font-bold text-slate-900 mb-2">📄 Articles (Definite & Indefinite)</h2><p class="text-slate-600 text-base flex-grow">Master o/a/os/as (the) and um/uma/uns/umas (a/an/some) with proper gender/number agreement. Learn when to use and omit articles.</p></div><div class="p-6 bg-slate-50">
+                        <button onclick="openDrillChat('articles')" class="w-full text-center bg-green-600 text-white rounded-lg px-4 py-2.5 font-semibold hover:bg-green-700 transition-colors text-sm mb-2">Start</button>
+                        <button onclick="copyDrillLink('articles', this)" class="w-full text-center bg-slate-200 text-slate-700 rounded-lg px-4 py-2 font-medium hover:bg-slate-300 transition-colors text-sm">🔗 Copy Link</button>
+                    </div></div>
                 <div id="drill-noun-plurals" class="drill-card flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1" data-topic="grammar" data-cefr="a1"><div class="p-6 flex-grow"><span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">Grammar & Prepositions</span><h2 class="text-xl font-bold text-slate-900 mb-2">🔗 Noun Plural Tutor</h2><p class="text-slate-600 text-base flex-grow">Master the rules for forming noun plurals, with analogies for Spanish speakers.</p></div><div class="p-6 bg-slate-50">
                         <button onclick="openDrillChat('noun-plurals')" class="w-full text-center bg-green-600 text-white rounded-lg px-4 py-2.5 font-semibold hover:bg-green-700 transition-colors text-sm mb-2">Start</button>
                         <button onclick="copyDrillLink('noun-plurals', this)" class="w-full text-center bg-slate-200 text-slate-700 rounded-lg px-4 py-2 font-medium hover:bg-slate-300 transition-colors text-sm">🔗 Copy Link</button>
@@ -1670,7 +1674,7 @@ function updateChatTitle() {
   drillTitleContainer.textContent = drillNames.join(' • ');
 }
     </script>
-    <script src="/js/utils.js?v=1760952000000"></script>
-    <script src="/js/conjugations.js?v=1760952000000"></script>
+    <script src="/js/utils.js?v=1761165000000"></script>
+    <script src="/js/conjugations.js?v=1761165000000"></script>
 </body>
 </html>
