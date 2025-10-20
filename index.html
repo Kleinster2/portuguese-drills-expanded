@@ -317,6 +317,10 @@
                         <button onclick="openDrillChat('common-prepositions')" class="w-full text-center bg-green-600 text-white rounded-lg px-4 py-2.5 font-semibold hover:bg-green-700 transition-colors text-sm mb-2">Start</button>
                         <button onclick="copyDrillLink('common-prepositions', this)" class="w-full text-center bg-slate-200 text-slate-700 rounded-lg px-4 py-2 font-medium hover:bg-slate-300 transition-colors text-sm">🔗 Copy Link</button>
                     </div></div>
+                <div id="drill-question-words" class="drill-card flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1" data-topic="grammar" data-cefr="a1"><div class="p-6 flex-grow"><span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">Grammar & Prepositions</span><h2 class="text-xl font-bold text-slate-900 mb-2">❓ Question Words</h2><p class="text-slate-600 text-base flex-grow">Master Portuguese interrogatives: quem (who), o que (what), quando (when), onde (where), como (how), por que (why), qual (which), quanto (how much/many).</p></div><div class="p-6 bg-slate-50">
+                        <button onclick="openDrillChat('question-words')" class="w-full text-center bg-green-600 text-white rounded-lg px-4 py-2.5 font-semibold hover:bg-green-700 transition-colors text-sm mb-2">Start</button>
+                        <button onclick="copyDrillLink('question-words', this)" class="w-full text-center bg-slate-200 text-slate-700 rounded-lg px-4 py-2 font-medium hover:bg-slate-300 transition-colors text-sm">🔗 Copy Link</button>
+                    </div></div>
                 <div id="drill-advanced-demonstratives" class="drill-card flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1" data-topic="grammar" data-cefr="b2"><div class="p-6 flex-grow"><span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full mb-3">Grammar & Prepositions</span><h2 class="text-xl font-bold text-slate-900 mb-2">🔗 Advanced Demonstratives</h2><p class="text-slate-600 text-base flex-grow">Master conversational uses, including discourse proximity and the common 'este' -> 'esse' conflation.</p></div><div class="p-6 bg-slate-50">
                         <button onclick="openDrillChat('advanced-demonstratives')" class="w-full text-center bg-green-600 text-white rounded-lg px-4 py-2.5 font-semibold hover:bg-green-700 transition-colors text-sm mb-2">Start</button>
                         <button onclick="copyDrillLink('advanced-demonstratives', this)" class="w-full text-center bg-slate-200 text-slate-700 rounded-lg px-4 py-2 font-medium hover:bg-slate-300 transition-colors text-sm">🔗 Copy Link</button>
@@ -1682,7 +1686,7 @@ function updateChatTitle() {
   drillTitleContainer.textContent = drillNames.join(' • ');
 }
     </script>
-    <script src="/js/utils.js?v=1761180000000"></script>
-    <script src="/js/conjugations.js?v=1761180000000"></script>
+    <script src="/js/utils.js?v=1761190000000"></script>
+    <script src="/js/conjugations.js?v=1761190000000"></script>
 </body>
 </html>
