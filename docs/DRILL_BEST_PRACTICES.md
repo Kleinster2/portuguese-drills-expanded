@@ -4,6 +4,28 @@ This document captures best practices identified from analyzing existing drills 
 
 ---
 
+## Gold Standard Reference Implementation
+
+**`config/prompts/common-prepositions.json`** - This drill implements ALL 10 best practices perfectly and serves as the reference implementation for new drills.
+
+**What it demonstrates:**
+- ✅ Grammatical Isolation - only the preposition needs filling
+- ✅ Explicit Rotation Rules - 5-6 gap between same preposition
+- ✅ Percentage-Based Exercise Types - 60%/25%/15% split
+- ✅ Comprehensive Welcome Message - visual examples of all 10 prepositions
+- ✅ Spanish Analogies - in every single feedback case
+- ✅ First Question Rule - must start with 'em' location context
+- ✅ Usage Notes - explaining function in real contexts
+- ✅ Focus Mode System - can practice specific prepositions
+- ✅ Specific Error Cases - wrong prep, missing contraction, etc.
+- ✅ Real-World Contexts - daily routines, food, communication, time
+
+**Coverage:** 10 essential prepositions (em, de, para, por, com, sem, sobre, entre, até, desde) with precise distribution percentages, contractions, and dialect differences.
+
+**Use this drill as your reference when creating new drills.** For a ready-to-copy template, see [DRILL_TEMPLATE.md](./DRILL_TEMPLATE.md).
+
+---
+
 ## Table of Contents
 
 1. [Structural Patterns](#structural-patterns)
@@ -839,6 +861,11 @@ Before finalizing a new drill, verify:
 ---
 
 ## Version History
+
+- **2025-01-20**: Updated with gold standard reference implementation
+  - Added common-prepositions.json as reference implementation
+  - Created DRILL_TEMPLATE.md for easy copying
+  - Added gold standard section at top of document
 
 - **2025-01-20**: Initial version created from analysis of existing drills
   - Analyzed: regular-ar, preterite-tense, possessives, numbers, contractions-de, demonstratives, advanced-demonstratives, time-expressions
