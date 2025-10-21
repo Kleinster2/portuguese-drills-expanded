@@ -565,7 +565,7 @@
 
     <!-- Chat Modal -->
     <div id="chat-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-2">
-        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-3xl h-[90vh] flex flex-col">
+        <div id="chat-container" class="bg-white rounded-2xl shadow-2xl w-full max-w-3xl h-[90vh] flex flex-col transition-all duration-300 ease-in-out">
             <!-- Header -->
             <div class="p-4 border-b border-slate-200">
                 <!-- Drill Title Row -->
@@ -590,11 +590,21 @@
                             🔗 Share
                         </button>
                     </div>
-                    <button onclick="closeDrillChat()" class="text-slate-400 hover:text-slate-600 p-2">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
+                    <div class="flex items-center gap-1">
+                        <button id="maximize-chat-btn" onclick="toggleMaximizeChat()" class="text-slate-400 hover:text-slate-600 p-2 rounded-lg hover:bg-slate-100" title="Maximize">
+                            <svg id="maximize-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
+                            </svg>
+                            <svg id="minimize-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25"></path>
+                            </svg>
+                        </button>
+                        <button onclick="closeDrillChat()" class="text-slate-400 hover:text-slate-600 p-2 rounded-lg hover:bg-slate-100" title="Close">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -1312,6 +1322,42 @@ function closeDrillChat() {
   const modal = document.getElementById('chat-modal');
   modal.classList.add('hidden');
   currentChatSession = null;
+
+  // Reset maximize state when closing
+  const container = document.getElementById('chat-container');
+  if (container.classList.contains('max-w-full')) {
+    toggleMaximizeChat();
+  }
+}
+
+function toggleMaximizeChat() {
+  const container = document.getElementById('chat-container');
+  const maximizeIcon = document.getElementById('maximize-icon');
+  const minimizeIcon = document.getElementById('minimize-icon');
+  const modal = document.getElementById('chat-modal');
+
+  // Toggle between normal and maximized states
+  if (container.classList.contains('max-w-3xl')) {
+    // Maximize
+    container.classList.remove('max-w-3xl', 'h-[90vh]', 'rounded-2xl');
+    container.classList.add('max-w-full', 'h-full', 'rounded-none');
+    modal.classList.remove('p-2');
+    modal.classList.add('p-0');
+
+    // Swap icons
+    maximizeIcon.classList.add('hidden');
+    minimizeIcon.classList.remove('hidden');
+  } else {
+    // Minimize (restore to normal)
+    container.classList.remove('max-w-full', 'h-full', 'rounded-none');
+    container.classList.add('max-w-3xl', 'h-[90vh]', 'rounded-2xl');
+    modal.classList.remove('p-0');
+    modal.classList.add('p-2');
+
+    // Swap icons
+    maximizeIcon.classList.remove('hidden');
+    minimizeIcon.classList.add('hidden');
+  }
 }
 
 // Copy shareable link for a specific drill
