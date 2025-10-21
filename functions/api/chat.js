@@ -82,7 +82,7 @@ async function callClaude(apiKey, messages, retryCount = 0) {
 
   const requestBody = {
     model: 'claude-sonnet-4-5-20250929',
-    max_tokens: 500,
+    max_tokens: 1024, // Increased to accommodate full welcome messages + first question
     temperature: 0.85, // Increased for more variety in questions
     messages: conversationMessages
   };
