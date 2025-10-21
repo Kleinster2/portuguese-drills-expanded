@@ -57,14 +57,17 @@ Remember: Variety and randomization are KEY to maintaining user interest and pre
   return basePrompt + randomizationSuffix;
 }
 
-async function callClaude(apiKey, messages) {
+async function callClaude(apiKey, messages, retryCount = 0) {
+  const MAX_RETRIES = 3;
+  const BASE_DELAY = 1000; // 1 second
+
   // Use full context for Claude reliability
   const limitedMessages = messages.slice(-10); // Keep last 10 messages for context
-  
+
   // Convert messages to Claude format - separate system message from conversation
   let systemMessage = '';
   const conversationMessages = [];
-  
+
   for (const msg of limitedMessages) {
     if (msg.role === 'system') {
       systemMessage = msg.content;
@@ -76,37 +79,66 @@ async function callClaude(apiKey, messages) {
       });
     }
   }
-  
+
   const requestBody = {
     model: 'claude-sonnet-4-5-20250929',
     max_tokens: 500,
     temperature: 0.85, // Increased for more variety in questions
     messages: conversationMessages
   };
-  
+
   // Add system message if present
   if (systemMessage) {
     requestBody.system = systemMessage;
   }
-  
-  const resp = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: {
-      'x-api-key': apiKey,
-      'Content-Type': 'application/json',
-      'anthropic-version': '2023-06-01'
-    },
-    body: JSON.stringify(requestBody)
-  });
 
-  if (!resp.ok) {
-    const text = await resp.text();
-    throw new Error(`Anthropic error ${resp.status}: ${text}`);
+  try {
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'x-api-key': apiKey,
+        'Content-Type': 'application/json',
+        'anthropic-version': '2023-06-01'
+      },
+      body: JSON.stringify(requestBody)
+    });
+
+    if (!resp.ok) {
+      const text = await resp.text();
+      const status = resp.status;
+
+      // Retry on 503 (service unavailable) or 529 (overloaded)
+      if ((status === 503 || status === 529) && retryCount < MAX_RETRIES) {
+        const delay = BASE_DELAY * Math.pow(2, retryCount); // Exponential backoff
+        console.log(`Anthropic API error ${status}, retrying in ${delay}ms (attempt ${retryCount + 1}/${MAX_RETRIES})`);
+
+        // Wait before retrying
+        await new Promise(resolve => setTimeout(resolve, delay));
+
+        // Retry with incremented count
+        return await callClaude(apiKey, messages, retryCount + 1);
+      }
+
+      // If not retryable or max retries reached, throw error
+      throw new Error(`Anthropic error ${status}: ${text}`);
+    }
+
+    const data = await resp.json();
+    const content = data.content?.[0]?.text ?? '';
+    return String(content);
+
+  } catch (error) {
+    // If this is a network error and we haven't exceeded retries, try again
+    if (retryCount < MAX_RETRIES && error.message.includes('fetch')) {
+      const delay = BASE_DELAY * Math.pow(2, retryCount);
+      console.log(`Network error, retrying in ${delay}ms (attempt ${retryCount + 1}/${MAX_RETRIES})`);
+
+      await new Promise(resolve => setTimeout(resolve, delay));
+      return await callClaude(apiKey, messages, retryCount + 1);
+    }
+
+    throw error;
   }
-
-  const data = await resp.json();
-  const content = data.content?.[0]?.text ?? '';
-  return String(content);
 }
 
 export async function onRequestPost({ request, env }) {
@@ -255,8 +287,28 @@ export async function onRequestPost({ request, env }) {
 
   } catch (err) {
     console.error('Chat API Error:', err);
-    const msg = err?.message || 'Unknown error';
-    return new Response(JSON.stringify({ error: msg }), {
+    const rawMessage = err?.message || 'Unknown error';
+
+    // Provide user-friendly error messages
+    let userMessage = rawMessage;
+
+    // Handle Anthropic API errors
+    if (rawMessage.includes('503') || rawMessage.includes('1200')) {
+      userMessage = "Anthropic's AI service is temporarily busy. We automatically retried 3 times but it's still unavailable. Please wait a moment and try again.";
+    } else if (rawMessage.includes('529')) {
+      userMessage = "Anthropic's AI service is overloaded right now. Please wait 30 seconds and try again.";
+    } else if (rawMessage.includes('401') || rawMessage.includes('authentication')) {
+      userMessage = "API authentication error. Please contact support.";
+    } else if (rawMessage.includes('429') || rawMessage.includes('rate limit')) {
+      userMessage = "Too many requests. Please wait a minute before trying again.";
+    } else if (rawMessage.includes('timeout')) {
+      userMessage = "Request timed out. The AI took too long to respond. Please try again.";
+    }
+
+    return new Response(JSON.stringify({
+      error: userMessage,
+      technicalDetails: rawMessage
+    }), {
       status: 500,
       headers: { ...headers, 'Content-Type': 'application/json' }
     });
