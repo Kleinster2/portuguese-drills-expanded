@@ -33,7 +33,28 @@ function generateSessionId() {
 import promptManager from '../../utils/promptManager.js';
 
 function getDrillPrompt(drillId) {
-  return promptManager.getSystemPrompt(drillId);
+  const basePrompt = promptManager.getSystemPrompt(drillId);
+
+  // Add strong randomization instructions to avoid repetitive questions
+  const randomizationSuffix = `\n\n**CRITICAL RANDOMIZATION REQUIREMENT:**
+You MUST randomize your questions to avoid repetition. This is EXTREMELY IMPORTANT for user experience.
+
+**Question Generation Rules:**
+1. NEVER ask the same question twice in a row
+2. NEVER use the same verb/word twice in a row
+3. ALWAYS vary subjects (eu, você, ele/ela, nós, eles/elas)
+4. ALWAYS vary tenses when applicable (present, past, future)
+5. Use different sentence structures and contexts
+6. Rotate through ALL available vocabulary/verbs before repeating
+7. Mix statement and question formats
+8. Vary difficulty - don't always start with the easiest examples
+
+**Starting Questions:**
+Your FIRST question should be randomly selected from the full range of available content, not always the same basic example. Pick something from the middle difficulty range to keep users engaged.
+
+Remember: Variety and randomization are KEY to maintaining user interest and preventing boredom. Every session should feel fresh and different.`;
+
+  return basePrompt + randomizationSuffix;
 }
 
 async function callClaude(apiKey, messages) {
@@ -59,7 +80,7 @@ async function callClaude(apiKey, messages) {
   const requestBody = {
     model: 'claude-sonnet-4-5-20250929',
     max_tokens: 500,
-    temperature: 0.7,
+    temperature: 0.85, // Increased for more variety in questions
     messages: conversationMessages
   };
   
@@ -102,8 +123,18 @@ export async function onRequestPost({ request, env }) {
       const newSessionId = generateSessionId();
       const actualDrillId = drillId || 'regular-ar';
 
-      // Use provided message or default greeting
-      const initialMessage = message || 'Hello, I\'m ready to start practicing!';
+      // Use provided message or random greeting to ensure variety
+      const greetings = [
+        'Hello, I\'m ready to start practicing!',
+        'Hi! Let\'s begin.',
+        'Ready to practice!',
+        'I\'m ready to learn.',
+        'Let\'s get started!',
+        'Hello! I\'m ready.',
+        'Ready when you are!',
+        'Let\'s practice!'
+      ];
+      const initialMessage = message || greetings[Math.floor(Math.random() * greetings.length)];
 
       const session = {
         sessionId: newSessionId,
