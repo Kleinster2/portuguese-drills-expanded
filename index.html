@@ -21,9 +21,15 @@
                 <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">
                     Start a fresh new session, or choose from the drill cards.
                 </p>
-                <div class="mt-6">
+                <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center items-center">
                     <button onclick="startEmptySession()" class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow-md hover:shadow-lg">
                         Start Empty Session
+                    </button>
+                    <button onclick="showLearningPaths()" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow-md hover:shadow-lg flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+                        </svg>
+                        Learning Paths
                     </button>
                 </div>
             </div>
@@ -1696,5 +1702,6 @@ function updateChatTitle() {
     </script>
     <script src="/js/utils.js?v=1761210000000"></script>
     <script src="/js/conjugations.js?v=1761210000000"></script>
+    <script src="/js/dependencies.js?v=1761210000000"></script>
 </body>
 </html>

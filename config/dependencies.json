@@ -1,0 +1,476 @@
+{
+  "learningTracks": {
+    "foundations": {
+      "name": "Foundations",
+      "description": "Essential building blocks for Portuguese",
+      "color": "#3B82F6",
+      "drills": ["numbers", "colors", "days-of-week", "time-expressions"]
+    },
+    "verbs-present": {
+      "name": "Present Tense Verbs",
+      "description": "Master present tense conjugations",
+      "color": "#10B981",
+      "drills": ["regular-ar", "regular-er", "regular-ir", "irregular-verbs", "ser-estar", "reflexive-verbs"]
+    },
+    "verbs-past": {
+      "name": "Past Tenses",
+      "description": "Express past actions and states",
+      "color": "#F59E0B",
+      "drills": ["preterite-tense", "imperfect-tense"]
+    },
+    "verbs-future": {
+      "name": "Future & Conditional",
+      "description": "Talk about future plans and hypotheticals",
+      "color": "#8B5CF6",
+      "drills": ["immediate-future", "future-tense", "conditional-tense"]
+    },
+    "verbs-subjunctive": {
+      "name": "Subjunctive Mood",
+      "description": "Express wishes, doubts, and hypotheticals",
+      "color": "#EF4444",
+      "drills": ["present-subjunctive", "imperfect-subjunctive", "future-subjunctive"]
+    },
+    "verbs-imperative": {
+      "name": "Commands",
+      "description": "Give commands and instructions",
+      "color": "#EC4899",
+      "drills": ["imperative"]
+    },
+    "grammar-basics": {
+      "name": "Basic Grammar",
+      "description": "Gender, number, and agreement",
+      "color": "#06B6D4",
+      "drills": ["noun-plurals", "adjective-agreement", "demonstratives", "possessives"]
+    },
+    "grammar-advanced": {
+      "name": "Advanced Grammar",
+      "description": "Complex grammatical structures",
+      "color": "#6366F1",
+      "drills": ["advanced-demonstratives", "object-pronouns", "subject-identification"]
+    },
+    "prepositions": {
+      "name": "Prepositions",
+      "description": "Connect words and express relationships",
+      "color": "#14B8A6",
+      "drills": ["common-prepositions", "por-vs-para", "contractions-articles", "contractions-de", "contractions-em"]
+    },
+    "questions": {
+      "name": "Questions",
+      "description": "Ask questions effectively",
+      "color": "#A855F7",
+      "drills": ["question-words", "interrogatives", "e-que-questions"]
+    },
+    "conversation": {
+      "name": "Conversation",
+      "description": "Real-world communication skills",
+      "color": "#F97316",
+      "drills": ["conversational-answers", "colloquial-speech", "self-introduction"]
+    },
+    "pronunciation": {
+      "name": "Pronunciation",
+      "description": "Sound like a native speaker",
+      "color": "#84CC16",
+      "drills": ["phonetics-br", "syllable-stress"]
+    },
+    "special": {
+      "name": "Special Topics",
+      "description": "Advanced and specialized drills",
+      "color": "#64748B",
+      "drills": ["crase", "ir-transportation", "present-continuous", "portuguese-for-spanish", "a1-simplifier"]
+    }
+  },
+  "drillMetadata": {
+    "numbers": {
+      "level": "A1",
+      "difficulty": 1,
+      "prerequisites": [],
+      "unlocks": ["time-expressions"],
+      "estimatedTime": "15 min"
+    },
+    "colors": {
+      "level": "A1",
+      "difficulty": 1,
+      "prerequisites": [],
+      "unlocks": ["adjective-agreement"],
+      "estimatedTime": "10 min"
+    },
+    "days-of-week": {
+      "level": "A1",
+      "difficulty": 1,
+      "prerequisites": [],
+      "unlocks": ["time-expressions"],
+      "estimatedTime": "10 min"
+    },
+    "time-expressions": {
+      "level": "A1",
+      "difficulty": 2,
+      "prerequisites": ["numbers", "days-of-week"],
+      "unlocks": ["preterite-tense", "future-tense"],
+      "estimatedTime": "20 min"
+    },
+    "regular-ar": {
+      "level": "A1",
+      "difficulty": 2,
+      "prerequisites": [],
+      "unlocks": ["regular-er", "preterite-tense", "present-continuous"],
+      "estimatedTime": "25 min"
+    },
+    "regular-er": {
+      "level": "A1",
+      "difficulty": 2,
+      "prerequisites": ["regular-ar"],
+      "unlocks": ["regular-ir", "preterite-tense"],
+      "estimatedTime": "25 min"
+    },
+    "regular-ir": {
+      "level": "A1",
+      "difficulty": 2,
+      "prerequisites": ["regular-er"],
+      "unlocks": ["irregular-verbs", "preterite-tense"],
+      "estimatedTime": "25 min"
+    },
+    "irregular-verbs": {
+      "level": "A2",
+      "difficulty": 4,
+      "prerequisites": ["regular-ar", "regular-er", "regular-ir"],
+      "unlocks": ["preterite-tense", "present-subjunctive"],
+      "estimatedTime": "40 min"
+    },
+    "ser-estar": {
+      "level": "A1",
+      "difficulty": 3,
+      "prerequisites": ["regular-ar"],
+      "unlocks": ["adjective-agreement", "present-continuous", "preterite-tense"],
+      "estimatedTime": "30 min"
+    },
+    "reflexive-verbs": {
+      "level": "A2",
+      "difficulty": 4,
+      "prerequisites": ["regular-ar", "regular-er", "regular-ir"],
+      "unlocks": ["object-pronouns"],
+      "estimatedTime": "30 min"
+    },
+    "preterite-tense": {
+      "level": "A2",
+      "difficulty": 5,
+      "prerequisites": ["regular-ar", "regular-er", "regular-ir", "time-expressions"],
+      "unlocks": ["imperfect-tense"],
+      "estimatedTime": "45 min"
+    },
+    "imperfect-tense": {
+      "level": "A2",
+      "difficulty": 5,
+      "prerequisites": ["preterite-tense"],
+      "unlocks": ["conditional-tense", "imperfect-subjunctive"],
+      "estimatedTime": "40 min"
+    },
+    "immediate-future": {
+      "level": "A1",
+      "difficulty": 3,
+      "prerequisites": ["regular-ar", "irregular-verbs"],
+      "unlocks": ["future-tense"],
+      "estimatedTime": "20 min"
+    },
+    "future-tense": {
+      "level": "A2",
+      "difficulty": 4,
+      "prerequisites": ["regular-ar", "regular-er", "regular-ir", "immediate-future"],
+      "unlocks": ["conditional-tense", "future-subjunctive"],
+      "estimatedTime": "35 min"
+    },
+    "conditional-tense": {
+      "level": "B1",
+      "difficulty": 5,
+      "prerequisites": ["future-tense", "imperfect-tense"],
+      "unlocks": ["present-subjunctive"],
+      "estimatedTime": "35 min"
+    },
+    "present-subjunctive": {
+      "level": "B1",
+      "difficulty": 7,
+      "prerequisites": ["irregular-verbs", "conditional-tense"],
+      "unlocks": ["imperfect-subjunctive", "future-subjunctive"],
+      "estimatedTime": "50 min"
+    },
+    "imperfect-subjunctive": {
+      "level": "B2",
+      "difficulty": 8,
+      "prerequisites": ["present-subjunctive", "imperfect-tense"],
+      "unlocks": [],
+      "estimatedTime": "50 min"
+    },
+    "future-subjunctive": {
+      "level": "B2",
+      "difficulty": 8,
+      "prerequisites": ["present-subjunctive", "future-tense"],
+      "unlocks": [],
+      "estimatedTime": "45 min"
+    },
+    "imperative": {
+      "level": "A2",
+      "difficulty": 5,
+      "prerequisites": ["regular-ar", "regular-er", "regular-ir", "irregular-verbs"],
+      "unlocks": [],
+      "estimatedTime": "35 min"
+    },
+    "present-continuous": {
+      "level": "A2",
+      "difficulty": 3,
+      "prerequisites": ["regular-ar", "ser-estar"],
+      "unlocks": [],
+      "estimatedTime": "25 min"
+    },
+    "noun-plurals": {
+      "level": "A1",
+      "difficulty": 2,
+      "prerequisites": [],
+      "unlocks": ["adjective-agreement", "demonstratives"],
+      "estimatedTime": "20 min"
+    },
+    "adjective-agreement": {
+      "level": "A1",
+      "difficulty": 3,
+      "prerequisites": ["noun-plurals", "ser-estar"],
+      "unlocks": ["possessives", "demonstratives"],
+      "estimatedTime": "30 min"
+    },
+    "demonstratives": {
+      "level": "A1",
+      "difficulty": 3,
+      "prerequisites": ["noun-plurals", "adjective-agreement"],
+      "unlocks": ["advanced-demonstratives"],
+      "estimatedTime": "25 min"
+    },
+    "advanced-demonstratives": {
+      "level": "A2",
+      "difficulty": 5,
+      "prerequisites": ["demonstratives"],
+      "unlocks": [],
+      "estimatedTime": "30 min"
+    },
+    "possessives": {
+      "level": "A1",
+      "difficulty": 4,
+      "prerequisites": ["adjective-agreement"],
+      "unlocks": ["object-pronouns"],
+      "estimatedTime": "35 min"
+    },
+    "object-pronouns": {
+      "level": "A2",
+      "difficulty": 6,
+      "prerequisites": ["possessives", "reflexive-verbs"],
+      "unlocks": [],
+      "estimatedTime": "40 min"
+    },
+    "subject-identification": {
+      "level": "A1",
+      "difficulty": 2,
+      "prerequisites": ["regular-ar"],
+      "unlocks": [],
+      "estimatedTime": "20 min"
+    },
+    "common-prepositions": {
+      "level": "A1",
+      "difficulty": 3,
+      "prerequisites": [],
+      "unlocks": ["por-vs-para", "contractions-articles", "contractions-de", "contractions-em"],
+      "estimatedTime": "35 min"
+    },
+    "por-vs-para": {
+      "level": "A2",
+      "difficulty": 6,
+      "prerequisites": ["common-prepositions"],
+      "unlocks": [],
+      "estimatedTime": "40 min"
+    },
+    "contractions-articles": {
+      "level": "A1",
+      "difficulty": 3,
+      "prerequisites": ["common-prepositions"],
+      "unlocks": ["contractions-de", "contractions-em"],
+      "estimatedTime": "25 min"
+    },
+    "contractions-de": {
+      "level": "A2",
+      "difficulty": 4,
+      "prerequisites": ["contractions-articles"],
+      "unlocks": [],
+      "estimatedTime": "25 min"
+    },
+    "contractions-em": {
+      "level": "A2",
+      "difficulty": 4,
+      "prerequisites": ["contractions-articles"],
+      "unlocks": [],
+      "estimatedTime": "25 min"
+    },
+    "question-words": {
+      "level": "A1",
+      "difficulty": 2,
+      "prerequisites": [],
+      "unlocks": ["interrogatives", "e-que-questions"],
+      "estimatedTime": "20 min"
+    },
+    "interrogatives": {
+      "level": "A1",
+      "difficulty": 3,
+      "prerequisites": ["question-words"],
+      "unlocks": ["e-que-questions"],
+      "estimatedTime": "25 min"
+    },
+    "e-que-questions": {
+      "level": "A2",
+      "difficulty": 4,
+      "prerequisites": ["interrogatives"],
+      "unlocks": [],
+      "estimatedTime": "30 min"
+    },
+    "conversational-answers": {
+      "level": "A2",
+      "difficulty": 4,
+      "prerequisites": ["regular-ar", "regular-er", "regular-ir", "question-words"],
+      "unlocks": ["colloquial-speech"],
+      "estimatedTime": "30 min"
+    },
+    "colloquial-speech": {
+      "level": "B1",
+      "difficulty": 6,
+      "prerequisites": ["conversational-answers"],
+      "unlocks": [],
+      "estimatedTime": "40 min"
+    },
+    "self-introduction": {
+      "level": "A1",
+      "difficulty": 2,
+      "prerequisites": ["regular-ar", "ser-estar"],
+      "unlocks": [],
+      "estimatedTime": "20 min"
+    },
+    "phonetics-br": {
+      "level": "A1",
+      "difficulty": 3,
+      "prerequisites": [],
+      "unlocks": ["syllable-stress"],
+      "estimatedTime": "30 min"
+    },
+    "syllable-stress": {
+      "level": "A2",
+      "difficulty": 5,
+      "prerequisites": ["phonetics-br"],
+      "unlocks": [],
+      "estimatedTime": "35 min"
+    },
+    "crase": {
+      "level": "B1",
+      "difficulty": 7,
+      "prerequisites": ["common-prepositions", "contractions-articles"],
+      "unlocks": [],
+      "estimatedTime": "40 min"
+    },
+    "ir-transportation": {
+      "level": "A1",
+      "difficulty": 3,
+      "prerequisites": ["irregular-verbs", "common-prepositions"],
+      "unlocks": [],
+      "estimatedTime": "25 min"
+    },
+    "portuguese-for-spanish": {
+      "level": "A1",
+      "difficulty": 2,
+      "prerequisites": [],
+      "unlocks": [],
+      "estimatedTime": "30 min",
+      "note": "Designed specifically for Spanish speakers"
+    },
+    "a1-simplifier": {
+      "level": "A1",
+      "difficulty": 1,
+      "prerequisites": [],
+      "unlocks": [],
+      "estimatedTime": "Variable",
+      "note": "Tool for simplifying texts, not a drill"
+    }
+  },
+  "learningPaths": {
+    "beginner": {
+      "name": "Complete Beginner Path",
+      "description": "Start from zero and build a solid foundation",
+      "targetLevel": "A2",
+      "recommendedOrder": [
+        "numbers",
+        "colors",
+        "days-of-week",
+        "regular-ar",
+        "ser-estar",
+        "regular-er",
+        "regular-ir",
+        "noun-plurals",
+        "adjective-agreement",
+        "subject-identification",
+        "self-introduction",
+        "question-words",
+        "common-prepositions",
+        "time-expressions",
+        "demonstratives",
+        "possessives",
+        "irregular-verbs",
+        "immediate-future",
+        "present-continuous",
+        "contractions-articles",
+        "interrogatives"
+      ]
+    },
+    "intermediate": {
+      "name": "Intermediate Path",
+      "description": "Build on your foundation with more complex grammar",
+      "targetLevel": "B1",
+      "prerequisitePath": "beginner",
+      "recommendedOrder": [
+        "preterite-tense",
+        "imperfect-tense",
+        "reflexive-verbs",
+        "object-pronouns",
+        "future-tense",
+        "conditional-tense",
+        "imperative",
+        "por-vs-para",
+        "contractions-de",
+        "contractions-em",
+        "e-que-questions",
+        "advanced-demonstratives",
+        "conversational-answers",
+        "present-subjunctive",
+        "phonetics-br",
+        "syllable-stress",
+        "crase"
+      ]
+    },
+    "advanced": {
+      "name": "Advanced Path",
+      "description": "Master the most complex aspects of Portuguese",
+      "targetLevel": "B2",
+      "prerequisitePath": "intermediate",
+      "recommendedOrder": [
+        "imperfect-subjunctive",
+        "future-subjunctive",
+        "colloquial-speech"
+      ]
+    },
+    "quick-start": {
+      "name": "Quick Start (Spanish Speakers)",
+      "description": "Fast track for Spanish speakers",
+      "targetLevel": "A2",
+      "recommendedOrder": [
+        "portuguese-for-spanish",
+        "regular-ar",
+        "ser-estar",
+        "noun-plurals",
+        "contractions-articles",
+        "possessives",
+        "irregular-verbs",
+        "preterite-tense",
+        "por-vs-para"
+      ]
+    }
+  }
+}
