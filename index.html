@@ -1234,7 +1234,7 @@ async function sendChatMessage(retryMessage = null) {
 
     const messagesContainer = document.getElementById('chat-messages');
     messagesContainer.appendChild(errorDiv);
-    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    smartScrollToBottom(messagesContainer, true); // Force scroll for error messages
 
   } finally {
     // Re-enable input
@@ -1248,6 +1248,18 @@ function retrySendMessage(message) {
   sendChatMessage(message);
 }
 
+// Smart scroll function - only scrolls if user is near the bottom
+function smartScrollToBottom(container, force = false) {
+  if (!container) return;
+
+  const threshold = 150; // pixels from bottom
+  const isNearBottom = container.scrollHeight - container.scrollTop - container.clientHeight < threshold;
+
+  // Always scroll for user messages, or if user is already near bottom, or if forced
+  if (force || isNearBottom) {
+    container.scrollTop = container.scrollHeight;
+  }
+}
 
 function addMessageToChat(sender, content) {
   const messagesContainer = document.getElementById('chat-messages');
@@ -1282,7 +1294,8 @@ function addMessageToChat(sender, content) {
     addConjugationButtons(messagesContainer, content, activeDrills);
   }
 
-  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  // Smart scroll: force scroll for user messages, conditional for AI messages
+  smartScrollToBottom(messagesContainer, sender === 'user');
 
   return messageDiv;
 }
@@ -1447,7 +1460,7 @@ async function addDrillToChat(drillId) {
     </div>
   `;
   messagesContainer.appendChild(systemMessage);
-  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  smartScrollToBottom(messagesContainer, false); // Don't force scroll for system messages
 
   try {
     // If this is an empty session (no currentChatSession), start a new session with this drill
@@ -1588,7 +1601,7 @@ async function removeDrillFromChat(drillId) {
     </div>
   `;
   messagesContainer.appendChild(systemMessage);
-  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  smartScrollToBottom(messagesContainer, false); // Don't force scroll for system messages
 
   // If no drills remain, disable input and show message
   if (activeDrills.length === 0) {
@@ -1608,7 +1621,7 @@ async function removeDrillFromChat(drillId) {
       </div>
     `;
     messagesContainer.appendChild(emptyMessage);
-    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    smartScrollToBottom(messagesContainer, false); // Don't force scroll for system messages
   }
 }
 
