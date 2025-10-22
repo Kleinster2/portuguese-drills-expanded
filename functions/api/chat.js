@@ -71,11 +71,22 @@ When explaining these cases in feedback, you MUST:
 **FORBIDDEN EXAMPLES - DO NOT USE:**
 NEVER use "correio" (mail/post office) in examples because both "por correio" (without article) and "pelo correio" (with article) are valid but have different meanings, which creates confusion for learners.
 
-Use clear examples instead:
-- ✅ "pelo parque" (through the park)
-- ✅ "pela cidade" (through the city)
-- ✅ "pelos corredores" (through the hallways)
-- ✅ "pelas ruas" (through the streets)
+**Examples with MANDATORY contraction (por + article):**
+- ✅ "pelo parque" (through THE park)
+- ✅ "pela cidade" (through THE city)
+- ✅ "pelos corredores" (through THE hallways)
+- ✅ "pelas ruas" (through THE streets)
+
+**Examples with "por" WITHOUT article (for contrast):**
+- ✅ "por email" (by email - common usage)
+- ✅ "por amor" (for love - abstract reason)
+- ✅ "por medo" (out of fear - abstract reason)
+- ✅ "por curiosidade" (out of curiosity - abstract reason)
+- ✅ "por dois dias" (for two days - duration)
+- ✅ "por dez reais" (for ten reais - price)
+- ✅ "por você" (for you - in favor of someone)
+
+DO NOT use: "por telefone", "por avião", "por trem", "por carta" (these are uncommon; people say "de avião", "de trem", etc.)
 
 Remember: Variety and randomization are KEY to maintaining user interest and preventing boredom. Every session should feel fresh and different.`;
 
