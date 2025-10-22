@@ -1342,12 +1342,17 @@ function addMessageToChat(sender, content) {
       </div>
     `;
   } else {
+    // Remove [CHIPS: ...] marker from displayed message (if answerChips.js is loaded)
+    const displayContent = typeof removeChipsMarker === 'function'
+      ? removeChipsMarker(content)
+      : content.replace(/\[CHIPS:\s*[^\]]+\]/gi, '').trim();
+
     messageDiv.innerHTML = `
       <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
         <span class="text-green-600 text-sm font-bold">AI</span>
       </div>
       <div class="bg-slate-100 rounded-2xl p-3 max-w-2xl">
-        <div class="message-content">${formatAIMessage(content)}</div>
+        <div class="message-content">${formatAIMessage(displayContent)}</div>
       </div>
     `;
   }
@@ -1357,6 +1362,10 @@ function addMessageToChat(sender, content) {
   // Add conjugation buttons if this is a question in verb drills
   if (sender === 'ai' && shouldShowConjugationButtons(content, activeDrills)) {
     addConjugationButtons(messagesContainer, content, activeDrills);
+  }
+  // Add answer chips if the message contains answer options
+  else if (sender === 'ai' && shouldShowAnswerChips(content, activeDrills)) {
+    addAnswerChips(messagesContainer, content);
   }
 
   // Smart scroll: force scroll for user messages, conditional for AI messages
@@ -1816,6 +1825,7 @@ function updateChatTitle() {
     </script>
     <script src="/js/utils.js?v=1761210000000"></script>
     <script src="/js/conjugations.js?v=1761210000000"></script>
+    <script src="/js/answerChips.js?v=1761210000000"></script>
     <script src="/js/dependencies.js?v=1761210000000"></script>
 </body>
 </html>
