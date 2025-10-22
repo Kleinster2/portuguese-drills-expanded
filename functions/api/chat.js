@@ -68,6 +68,15 @@ When explaining these cases in feedback, you MUST:
 2. Explain that the contraction is REQUIRED, not just "more common"
 3. Never say "or more commonly" - the contraction is the ONLY correct form
 
+**FORBIDDEN EXAMPLES - DO NOT USE:**
+NEVER use "correio" (mail/post office) in examples because both "por correio" (without article) and "pelo correio" (with article) are valid but have different meanings, which creates confusion for learners.
+
+Use clear examples instead:
+- ✅ "pelo parque" (through the park)
+- ✅ "pela cidade" (through the city)
+- ✅ "pelos corredores" (through the hallways)
+- ✅ "pelas ruas" (through the streets)
+
 Remember: Variety and randomization are KEY to maintaining user interest and preventing boredom. Every session should feel fresh and different.`;
 
   return basePrompt + randomizationSuffix;
