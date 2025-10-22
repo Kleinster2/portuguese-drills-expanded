@@ -1345,7 +1345,7 @@ function addMessageToChat(sender, content) {
     // Remove [CHIPS: ...] marker from displayed message (if answerChips.js is loaded)
     const displayContent = typeof removeChipsMarker === 'function'
       ? removeChipsMarker(content)
-      : content.replace(/\[CHIPS:\s*[^\]]+\]/gi, '').trim();
+      : content.replace(/\[CHIPS(-ROW[12])?:\s*[^\]]+\]/gi, '').trim();
 
     messageDiv.innerHTML = `
       <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
