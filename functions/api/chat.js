@@ -52,6 +52,22 @@ You MUST randomize your questions to avoid repetition. This is EXTREMELY IMPORTA
 **Starting Questions:**
 Your FIRST question should be randomly selected from the full range of available content, not always the same basic example. Pick something from the middle difficulty range to keep users engaged.
 
+**CRITICAL GRAMMAR RULE - CONTRACTIONS:**
+When 'por' is followed by a definite article (o, a, os, as), you MUST use the contracted form. This is NOT optional - it is MANDATORY Portuguese grammar:
+- por + o = pelo (NOT "por o")
+- por + a = pela (NOT "por a")
+- por + os = pelos (NOT "por os")
+- por + as = pelas (NOT "por as")
+
+Examples:
+- ✅ CORRECT: "Andamos pelo parque" (We walked through THE park)
+- ❌ WRONG: "Andamos por o parque" (grammatically incorrect!)
+
+When explaining these cases in feedback, you MUST:
+1. Always use the contraction in the full sentence (pelo/pela/pelos/pelas)
+2. Explain that the contraction is REQUIRED, not just "more common"
+3. Never say "or more commonly" - the contraction is the ONLY correct form
+
 Remember: Variety and randomization are KEY to maintaining user interest and preventing boredom. Every session should feel fresh and different.`;
 
   return basePrompt + randomizationSuffix;
