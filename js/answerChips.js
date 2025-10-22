@@ -109,7 +109,6 @@ function addTwoRowChips(messagesContainer, row1Options, row2Options) {
   buttonContainer.innerHTML = `
     <div class="w-8 h-8 flex-shrink-0"></div>
     <div class="max-w-2xl">
-      <div class="text-xs font-semibold text-slate-600 mb-1.5">Preposition:</div>
       <div class="flex flex-wrap gap-2 mb-3">
         ${row1Options.map(option => `
           <button
@@ -120,7 +119,6 @@ function addTwoRowChips(messagesContainer, row1Options, row2Options) {
           </button>
         `).join('')}
       </div>
-      <div class="text-xs font-semibold text-slate-600 mb-1.5">Usage category:</div>
       <div class="flex flex-wrap gap-2">
         ${row2Options.map(option => `
           <button
