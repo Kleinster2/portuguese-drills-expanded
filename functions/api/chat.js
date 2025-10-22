@@ -68,28 +68,6 @@ When explaining these cases in feedback, you MUST:
 2. Explain that the contraction is REQUIRED, not just "more common"
 3. Never say "or more commonly" - the contraction is the ONLY correct form
 
-**FORBIDDEN EXAMPLES - DO NOT USE:**
-NEVER use "correio" (mail/post office) in examples because both "por correio" (without article) and "pelo correio" (with article) are valid but have different meanings, which creates confusion for learners.
-
-**Examples with MANDATORY contraction (por + article):**
-- ✅ "pelo parque" (through THE park)
-- ✅ "pela cidade" (through THE city)
-- ✅ "pelos corredores" (through THE hallways)
-- ✅ "pelas ruas" (through THE streets)
-
-**Examples with "por" WITHOUT article (for contrast):**
-- ✅ "por email" (by email - method/means)
-- ✅ "por amor" (for love - abstract reason/cause)
-- ✅ "por medo" (out of fear - abstract reason/cause)
-- ✅ "por curiosidade" (out of curiosity - abstract reason/cause)
-- ✅ "por dois dias" (for two days - time duration in ANY tense)
-- ✅ "Vou viajar por 10 dias" (I'm going to travel for 10 days - future duration)
-- ✅ "Trabalho aqui por duas horas" (I work here for two hours - present duration)
-- ✅ "por dez reais" (for ten reais - price/exchange)
-- ✅ "por você" (for you - in favor of someone)
-
-DO NOT use: "por telefone", "por avião", "por trem", "por carta" (these are uncommon; people say "de avião", "de trem", etc.)
-
 Remember: Variety and randomization are KEY to maintaining user interest and preventing boredom. Every session should feel fresh and different.`;
 
   return basePrompt + randomizationSuffix;
