@@ -78,12 +78,14 @@ NEVER use "correio" (mail/post office) in examples because both "por correio" (w
 - ✅ "pelas ruas" (through THE streets)
 
 **Examples with "por" WITHOUT article (for contrast):**
-- ✅ "por email" (by email - common usage)
-- ✅ "por amor" (for love - abstract reason)
-- ✅ "por medo" (out of fear - abstract reason)
-- ✅ "por curiosidade" (out of curiosity - abstract reason)
-- ✅ "por dois dias" (for two days - duration)
-- ✅ "por dez reais" (for ten reais - price)
+- ✅ "por email" (by email - method/means)
+- ✅ "por amor" (for love - abstract reason/cause)
+- ✅ "por medo" (out of fear - abstract reason/cause)
+- ✅ "por curiosidade" (out of curiosity - abstract reason/cause)
+- ✅ "por dois dias" (for two days - time duration in ANY tense)
+- ✅ "Vou viajar por 10 dias" (I'm going to travel for 10 days - future duration)
+- ✅ "Trabalho aqui por duas horas" (I work here for two hours - present duration)
+- ✅ "por dez reais" (for ten reais - price/exchange)
 - ✅ "por você" (for you - in favor of someone)
 
 DO NOT use: "por telefone", "por avião", "por trem", "por carta" (these are uncommon; people say "de avião", "de trem", etc.)
