@@ -11,7 +11,11 @@ This is a ready-to-copy template implementing all 10 best practices from [DRILL_
 1. Copy this entire template
 2. Replace all `[PLACEHOLDERS]` with your content
 3. Adjust percentages and distributions for your specific drill
-4. Test locally before deploying
+4. Save as `config/prompts/[your-drill-id].json`
+5. Run `npm run build` to sync into the system
+6. Test locally before deploying
+
+**Important:** The build script automatically embeds your JSON prompt into `utils/promptManager.js`. You never need to manually edit that file!
 
 ---
 
@@ -408,27 +412,14 @@ Once your drill JSON is ready:
    </div>
    ```
 
-3. **Update `utils/promptManager.js`:**
-
-   a. Add loadPromptConfig call (around line 59):
-   ```javascript
-   const yourDrillPrompt = this.loadPromptConfig('./config/prompts/[your-drill-id].json');
-   ```
-
-   b. Add registration block (around line 261):
-   ```javascript
-   if (yourDrillPrompt) {
-     this.prompts.set(yourDrillPrompt.id, yourDrillPrompt);
-     console.log(`✓ Loaded prompt configuration: ${yourDrillPrompt.id} (${yourDrillPrompt.name})`);
-   }
-   ```
-
-   c. Generate escaped entry for hardcoded object:
+3. **Build the prompt system:**
    ```bash
-   node -e "const fs = require('fs'); const config = JSON.parse(fs.readFileSync('./config/prompts/[your-drill-id].json', 'utf8')); console.log('        \\'./config/prompts/[your-drill-id].json\\': {'); console.log('          \"id\": \"' + config.id + '\",'); console.log('          \"name\": \"' + config.name + '\",'); console.log('          \"description\": \"' + config.description + '\",'); console.log('          \"systemPrompt\": ' + JSON.stringify(config.systemPrompt)); console.log('        },');"
+   npm run build
    ```
 
-   d. Add the generated entry to hardcoded promptConfigs object (around line 270+)
+   This automatically syncs your new JSON file into `utils/promptManager.js`. No manual editing required! ✅
+
+   The build script (`scripts/build-prompts.js`) reads all JSON files from `config/prompts/` and embeds them into the JavaScript code for Cloudflare Workers deployment.
 
 4. **Update cache busting in `index.html`:**
    ```html
@@ -447,9 +438,11 @@ Once your drill JSON is ready:
    ```bash
    git add config/prompts/[your-drill-id].json index.html utils/promptManager.js
    git commit -m "Add [Drill Name] drill"
-   git push
-   npx wrangler pages deploy . --project-name=portuguese-drills-expanded
+   git push origin master
+   npm run deploy
    ```
+
+   **Note:** `npm run deploy` automatically runs `npm run build` first, then deploys to Cloudflare Pages.
 
 ---
 
@@ -500,6 +493,7 @@ Once your drill JSON is ready:
 
 ---
 
-**Last updated:** 2025-01-20
-**Template version:** 1.0
+**Last updated:** 2025-10-22
+**Template version:** 1.1
 **Based on:** Analysis of 10+ high-quality drills
+**Build system:** Automated with `npm run build` (see `scripts/build-prompts.js`)
