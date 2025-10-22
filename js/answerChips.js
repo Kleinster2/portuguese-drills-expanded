@@ -106,6 +106,9 @@ function addTwoRowChips(messagesContainer, row1Options, row2Options) {
   // Generate unique ID for this chip set
   const chipSetId = 'chipset-' + Date.now();
 
+  // Scramble row 2 options
+  const shuffledRow2 = shuffleArray([...row2Options]);
+
   // Create button container with two rows
   const buttonContainer = document.createElement('div');
   buttonContainer.className = 'flex items-start space-x-3 mb-4';
@@ -126,7 +129,7 @@ function addTwoRowChips(messagesContainer, row1Options, row2Options) {
         `).join('')}
       </div>
       <div class="flex flex-wrap gap-2 mb-3" data-row="2">
-        ${row2Options.map(option => `
+        ${shuffledRow2.map(option => `
           <button
             data-option="${escapeHtml(option)}"
             data-row="2"
