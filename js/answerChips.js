@@ -245,51 +245,38 @@ function addThreeRowSerEstarChips(messagesContainer, row1Options, row2Options, r
   // Generate unique ID for this chip set
   const chipSetId = 'chipset-' + Date.now();
 
-  // Create button container with three rows
+  // Merge row2 and row3, then scramble all conjugations together
+  const allConjugations = [...row2Options, ...row3Options];
+  const scrambledConjugations = shuffleArray(allConjugations);
+
+  // Create button container with two rows
   const buttonContainer = document.createElement('div');
   buttonContainer.className = 'flex items-start space-x-3 mb-4';
   buttonContainer.setAttribute('data-chipset-id', chipSetId);
   buttonContainer.innerHTML = `
     <div class="w-8 h-8 flex-shrink-0"></div>
     <div class="max-w-2xl">
-      <!-- Row 1: Verb choice (ser/estar/both) -->
+      <!-- Row 1: Verb choice (ser/estar/both) - Blue -->
       <div class="flex flex-wrap gap-2 mb-3" data-row="1">
         ${row1Options.map(option => `
           <button
             data-option="${escapeHtml(option)}"
             data-row="1"
             onclick="selectSerEstarVerbType(this, '${chipSetId}')"
-            class="ser-estar-verb-chip bg-purple-100 hover:bg-purple-200 text-purple-800 font-semibold px-5 py-2.5 rounded-full text-base transition-colors border-2 border-transparent"
+            class="ser-estar-verb-chip bg-blue-100 hover:bg-blue-200 text-blue-800 font-semibold px-5 py-2.5 rounded-full text-base transition-colors border-2 border-transparent"
           >
             ${escapeHtml(option)}
           </button>
         `).join('')}
       </div>
-      <!-- Row 2: Ser conjugations -->
-      <div class="flex flex-wrap gap-2 mb-3" data-row="2" data-verb="ser">
-        ${row2Options.map(option => `
+      <!-- Row 2: All conjugations scrambled - Green -->
+      <div class="flex flex-wrap gap-2 mb-3" data-row="2">
+        ${scrambledConjugations.map(option => `
           <button
             data-option="${escapeHtml(option)}"
             data-row="2"
-            data-verb="ser"
             onclick="selectSerEstarConjugation(this, '${chipSetId}')"
-            disabled
-            class="ser-estar-conj-chip bg-blue-100 text-blue-800 font-medium px-4 py-2 rounded-full text-sm transition-colors border-2 border-transparent opacity-40 cursor-not-allowed"
-          >
-            ${escapeHtml(option)}
-          </button>
-        `).join('')}
-      </div>
-      <!-- Row 3: Estar conjugations -->
-      <div class="flex flex-wrap gap-2 mb-3" data-row="3" data-verb="estar">
-        ${row3Options.map(option => `
-          <button
-            data-option="${escapeHtml(option)}"
-            data-row="3"
-            data-verb="estar"
-            onclick="selectSerEstarConjugation(this, '${chipSetId}')"
-            disabled
-            class="ser-estar-conj-chip bg-green-100 text-green-700 font-medium px-4 py-2 rounded-full text-sm transition-colors border-2 border-transparent opacity-40 cursor-not-allowed"
+            class="ser-estar-conj-chip bg-green-100 hover:bg-green-200 text-green-700 font-medium px-4 py-2 rounded-full text-sm transition-colors border-2 border-transparent"
           >
             ${escapeHtml(option)}
           </button>
@@ -304,114 +291,39 @@ function addThreeRowSerEstarChips(messagesContainer, row1Options, row2Options, r
 // Handle verb type selection (ser/estar/both) in row 1
 function selectSerEstarVerbType(button, chipSetId) {
   const chipSet = document.querySelector(`[data-chipset-id="${chipSetId}"]`);
-  const selectedVerb = button.getAttribute('data-option').toLowerCase();
 
   // Deselect all row 1 buttons
   chipSet.querySelectorAll('button[data-row="1"]').forEach(btn => {
-    btn.classList.remove('border-purple-600', 'ring-2', 'ring-purple-300');
+    btn.classList.remove('border-blue-600', 'ring-2', 'ring-blue-300');
     btn.classList.add('border-transparent');
   });
 
   // Select this button
   button.classList.remove('border-transparent');
-  button.classList.add('border-purple-600', 'ring-2', 'ring-purple-300');
-
-  // Get all conjugation buttons
-  const serButtons = chipSet.querySelectorAll('button[data-verb="ser"]');
-  const estarButtons = chipSet.querySelectorAll('button[data-verb="estar"]');
-
-  // Reset all conjugation selections
-  chipSet.querySelectorAll('.ser-estar-conj-chip').forEach(btn => {
-    btn.classList.remove('border-blue-600', 'border-green-600', 'ring-2', 'ring-blue-300', 'ring-green-300');
-    btn.classList.add('border-transparent');
-  });
-
-  // Enable/disable conjugation rows based on selection
-  if (selectedVerb === 'ser') {
-    // Enable only ser conjugations
-    serButtons.forEach(btn => {
-      btn.disabled = false;
-      btn.classList.remove('opacity-40', 'cursor-not-allowed');
-      btn.classList.add('hover:bg-blue-200');
-    });
-    estarButtons.forEach(btn => {
-      btn.disabled = true;
-      btn.classList.add('opacity-40', 'cursor-not-allowed');
-      btn.classList.remove('hover:bg-green-200');
-    });
-  } else if (selectedVerb === 'estar') {
-    // Enable only estar conjugations
-    estarButtons.forEach(btn => {
-      btn.disabled = false;
-      btn.classList.remove('opacity-40', 'cursor-not-allowed');
-      btn.classList.add('hover:bg-green-200');
-    });
-    serButtons.forEach(btn => {
-      btn.disabled = true;
-      btn.classList.add('opacity-40', 'cursor-not-allowed');
-      btn.classList.remove('hover:bg-blue-200');
-    });
-  } else if (selectedVerb === 'both') {
-    // Enable all conjugations
-    serButtons.forEach(btn => {
-      btn.disabled = false;
-      btn.classList.remove('opacity-40', 'cursor-not-allowed');
-      btn.classList.add('hover:bg-blue-200');
-    });
-    estarButtons.forEach(btn => {
-      btn.disabled = false;
-      btn.classList.remove('opacity-40', 'cursor-not-allowed');
-      btn.classList.add('hover:bg-green-200');
-    });
-  }
+  button.classList.add('border-blue-600', 'ring-2', 'ring-blue-300');
 }
 
-// Handle conjugation selection in rows 2 and 3
+// Handle conjugation selection in row 2
 function selectSerEstarConjugation(button, chipSetId) {
   const chipSet = document.querySelector(`[data-chipset-id="${chipSetId}"]`);
-  const verbType = button.getAttribute('data-verb'); // 'ser' or 'estar'
-  const row1Selected = chipSet.querySelector('button[data-row="1"].border-purple-600');
+  const row1Selected = chipSet.querySelector('button[data-row="1"].border-blue-600');
 
-  if (!row1Selected) return; // Shouldn't happen, but safety check
+  if (!row1Selected) {
+    // No verb type selected yet - ignore click
+    return;
+  }
 
   const selectedMode = row1Selected.getAttribute('data-option').toLowerCase();
+  const conjugation = button.getAttribute('data-option');
 
-  if (selectedMode === 'both') {
-    // In 'both' mode: Select this button and gray out other buttons of the same verb
-    const sameVerbButtons = chipSet.querySelectorAll(`button[data-verb="${verbType}"]`);
+  // If "both" was selected, send "both" as the answer
+  // Otherwise, send the conjugation
+  const answer = (selectedMode === 'both') ? 'both' : conjugation;
 
-    // Deselect and gray out all buttons of this verb
-    sameVerbButtons.forEach(btn => {
-      if (btn === button) {
-        // This is the clicked button - select it
-        btn.classList.remove('border-transparent', 'opacity-40');
-        btn.classList.add(verbType === 'ser' ? 'border-blue-600' : 'border-green-600');
-        btn.classList.add('ring-2', verbType === 'ser' ? 'ring-blue-300' : 'ring-green-300');
-      } else {
-        // Other buttons of same verb - gray them out
-        btn.disabled = true;
-        btn.classList.add('opacity-40', 'cursor-not-allowed');
-        btn.classList.remove('hover:bg-blue-200', 'hover:bg-green-200');
-      }
-    });
+  // Disable all chips after submission
+  chipSet.querySelectorAll('button').forEach(btn => btn.disabled = true);
 
-    // Check if both verbs have selections
-    const serSelected = chipSet.querySelector('button[data-verb="ser"].ring-2');
-    const estarSelected = chipSet.querySelector('button[data-verb="estar"].ring-2');
-
-    if (serSelected && estarSelected) {
-      // Both selected - send "both" answer
-      const answer = 'both';
-      chipSet.querySelectorAll('button').forEach(btn => btn.disabled = true);
-      sendAnswer(answer);
-    }
-
-  } else {
-    // In 'ser' or 'estar' mode: Just send the conjugation immediately
-    const answer = button.getAttribute('data-option');
-    chipSet.querySelectorAll('button').forEach(btn => btn.disabled = true);
-    sendAnswer(answer);
-  }
+  sendAnswer(answer);
 }
 
 // Send answer when chip is clicked (with tracking for multi-click support)
