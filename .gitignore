@@ -1,2 +1,5 @@
 .dev.vars
 .wrangler/
+
+# Session notes and working documentation
+.sessions/
