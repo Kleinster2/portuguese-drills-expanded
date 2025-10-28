@@ -269,14 +269,15 @@ function addThreeRowSerEstarChips(messagesContainer, row1Options, row2Options, r
           </button>
         `).join('')}
       </div>
-      <!-- Row 2: All conjugations scrambled - Green -->
+      <!-- Row 2: All conjugations scrambled - Green (initially disabled) -->
       <div class="flex flex-wrap gap-2 mb-3" data-row="2">
         ${scrambledConjugations.map(option => `
           <button
             data-option="${escapeHtml(option)}"
             data-row="2"
             onclick="selectSerEstarConjugation(this, '${chipSetId}')"
-            class="ser-estar-conj-chip bg-green-100 hover:bg-green-200 text-green-700 font-medium px-4 py-2 rounded-full text-sm transition-colors border-2 border-transparent"
+            disabled
+            class="ser-estar-conj-chip bg-green-100 text-green-700 font-medium px-4 py-2 rounded-full text-sm transition-colors border-2 border-transparent opacity-40 cursor-not-allowed"
           >
             ${escapeHtml(option)}
           </button>
@@ -301,6 +302,13 @@ function selectSerEstarVerbType(button, chipSetId) {
   // Select this button
   button.classList.remove('border-transparent');
   button.classList.add('border-blue-600', 'ring-2', 'ring-blue-300');
+
+  // Enable all row 2 conjugation buttons
+  chipSet.querySelectorAll('button[data-row="2"]').forEach(btn => {
+    btn.disabled = false;
+    btn.classList.remove('opacity-40', 'cursor-not-allowed');
+    btn.classList.add('hover:bg-green-200');
+  });
 }
 
 // Handle conjugation selection in row 2
