@@ -81,16 +81,22 @@ function addSingleRowChips(messagesContainer, options) {
   // Shuffle options for variety
   const shuffled = shuffleArray(options);
 
+  // Generate unique ID for this chip set
+  const chipSetId = 'chipset-' + Date.now();
+
   // Create button container
   const buttonContainer = document.createElement('div');
   buttonContainer.className = 'flex items-start space-x-3 mb-4';
+  buttonContainer.setAttribute('data-chipset-id', chipSetId);
+  buttonContainer.setAttribute('data-click-count', '0');
   buttonContainer.innerHTML = `
     <div class="w-8 h-8 flex-shrink-0"></div>
     <div class="flex flex-wrap gap-2 max-w-2xl">
       ${shuffled.map(option => `
         <button
-          onclick="sendAnswer('${option.replace(/'/g, "\\'")}')"
-          class="bg-green-100 hover:bg-green-200 text-green-800 font-medium px-4 py-2 rounded-full text-sm transition-colors"
+          data-option="${escapeHtml(option)}"
+          onclick="sendAnswerWithTracking('${chipSetId}', '${option.replace(/'/g, "\\'")}')"
+          class="single-row-chip bg-green-100 hover:bg-green-200 text-green-800 font-medium px-4 py-2 rounded-full text-sm transition-colors"
         >
           ${escapeHtml(option)}
         </button>
@@ -203,6 +209,42 @@ function submitTwoRowAnswer(chipSetId) {
 
     sendAnswer(answer);
   }
+}
+
+// Send answer when chip is clicked (with tracking for multi-click support)
+function sendAnswerWithTracking(chipSetId, answer) {
+  const chipSet = document.querySelector(`[data-chipset-id="${chipSetId}"]`);
+  if (!chipSet) return;
+
+  // Get current click count
+  let clickCount = parseInt(chipSet.getAttribute('data-click-count') || '0');
+
+  // Find the clicked button and gray it out
+  const buttons = chipSet.querySelectorAll('button.single-row-chip');
+  buttons.forEach(btn => {
+    if (btn.getAttribute('data-option') === answer) {
+      btn.disabled = true;
+      btn.classList.remove('bg-green-100', 'hover:bg-green-200', 'text-green-800');
+      btn.classList.add('bg-gray-200', 'text-gray-500', 'cursor-not-allowed', 'opacity-60');
+    }
+  });
+
+  // Increment click count
+  clickCount++;
+  chipSet.setAttribute('data-click-count', clickCount.toString());
+
+  // If this is the second click, disable all remaining chips
+  if (clickCount >= 2) {
+    buttons.forEach(btn => {
+      btn.disabled = true;
+      if (!btn.classList.contains('opacity-60')) {
+        btn.classList.add('opacity-50', 'cursor-not-allowed');
+      }
+    });
+  }
+
+  // Send the answer
+  sendAnswer(answer);
 }
 
 // Send answer when chip is clicked
