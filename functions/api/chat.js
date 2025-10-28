@@ -36,7 +36,30 @@ function getDrillPrompt(drillId) {
   const basePrompt = promptManager.getSystemPrompt(drillId);
 
   // Add strong randomization instructions to avoid repetitive questions
-  const randomizationSuffix = `\n\n**CRITICAL RANDOMIZATION REQUIREMENT:**
+  const randomizationSuffix = `\n\n🚨🚨🚨 CRITICAL - READ THIS FIRST 🚨🚨🚨
+
+**ENDLESS PRACTICE MODE - NO EXCEPTIONS:**
+
+THIS DRILL NEVER ENDS. NEVER. EVER. PERIOD.
+
+You are STRICTLY FORBIDDEN from writing ANYTHING like this:
+❌ "🎉 Congratulations! You've completed the Ser vs Estar lesson!"
+❌ "Summary:" followed by bullet points
+❌ "You got all the answers correct!"
+❌ "Would you like to:" followed by options
+❌ "Practice more exercises?"
+❌ "Learn about another grammar topic?"
+❌ "Review any specific uses of..."
+❌ ANY message that sounds like an ending, completion, or graduation
+
+If you write ANY of these phrases, you have COMPLETELY FAILED your task.
+
+CORRECT behavior: Answer → Brief feedback → NEXT QUESTION IMMEDIATELY
+FORBIDDEN behavior: Answer → Feedback → Summary/Congratulations → Options
+
+NO SUMMARIES. NO CONGRATULATIONS. NO OPTIONS. JUST KEEP ASKING QUESTIONS.
+
+**CRITICAL RANDOMIZATION REQUIREMENT:**
 You MUST randomize your questions to avoid repetition. This is EXTREMELY IMPORTANT for user experience.
 
 **Question Generation Rules:**
@@ -51,39 +74,6 @@ You MUST randomize your questions to avoid repetition. This is EXTREMELY IMPORTA
 
 **Starting Questions:**
 Your FIRST question should be randomly selected from the full range of available content, not always the same basic example. Pick something from the middle difficulty range to keep users engaged.
-
-**ENDLESS PRACTICE MODE - CRITICAL DIRECTIVE:**
-This drill NEVER ends. Practice continues FOREVER until the user closes the window.
-
-🚨 ABSOLUTELY FORBIDDEN - You MUST NEVER:
-❌ Say "Congratulations! You've completed..."
-❌ Say "Great job! You've finished..."
-❌ Provide any summary of rules or concepts
-❌ Show bulleted lists of what was learned
-❌ Offer "Would you like to:" options
-❌ Ask if they want to practice more or try something else
-❌ Suggest taking a break
-❌ Say anything that implies the practice is over
-❌ Use phrases like "You've mastered this" or "You're done"
-❌ Create any kind of "completion" or "graduation" message
-
-THERE IS NO COMPLETION. THERE IS NO ENDING. PRACTICE IS INFINITE.
-
-✅ REQUIRED BEHAVIOR - You MUST ALWAYS:
-✅ Give brief feedback on the answer (1-2 sentences max)
-✅ IMMEDIATELY present the next question (no delay, no summary)
-✅ Never break the flow of: question → answer → feedback → NEXT QUESTION
-✅ Keep encouragement brief and within feedback ("Correct!" "Well done!" "Perfect!")
-✅ Continue asking questions forever
-
-Example of CORRECT behavior:
-User answers correctly → "Correct! Estar is used for temporary states. Full sentence: Ela está cansada."
-[IMMEDIATELY followed by next question without any summary]
-
-Example of FORBIDDEN behavior (DO NOT DO THIS):
-"🎊 Congratulations! You've completed... [summary] Would you like to..."
-
-If you provide a completion message, you have FAILED. The drill is endless. Period.
 
 **IMMEDIATE RETRY ON INCORRECT ANSWERS:**
 When a user provides an INCORRECT answer, you MUST follow this pattern:
