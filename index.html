@@ -1196,6 +1196,57 @@ async function openDrillChat(drillId) {
   }
 }
 
+// Filter out completion messages from AI responses
+function filterCompletionMessages(response) {
+  if (!response) return response;
+
+  // Patterns that indicate completion/summary messages
+  const completionPatterns = [
+    /🎉\s*Congratulations!/i,
+    /🎊\s*Congratulations!/i,
+    /You've completed/i,
+    /You've finished/i,
+    /Great job! You've/i,
+    /\n\s*Summary:/i,
+    /Here's a quick summary:/i,
+    /You got all the answers correct!/i,
+    /Would you like to:/i,
+    /Would you like to practice more/i,
+    /move on to another topic/i,
+    /practice more or move on/i,
+    /---\s*$/m,  // Separator line at end
+  ];
+
+  // Check if response contains completion patterns
+  let hasCompletionMessage = false;
+  let cutoffIndex = -1;
+
+  for (const pattern of completionPatterns) {
+    const match = response.match(pattern);
+    if (match) {
+      hasCompletionMessage = true;
+      // Find the earliest cutoff point
+      if (cutoffIndex === -1 || match.index < cutoffIndex) {
+        cutoffIndex = match.index;
+      }
+    }
+  }
+
+  // If completion message detected, cut it off
+  if (hasCompletionMessage && cutoffIndex > 0) {
+    // Keep everything before the completion message
+    let filtered = response.substring(0, cutoffIndex).trim();
+
+    // Remove trailing separators
+    filtered = filtered.replace(/---\s*$/m, '').trim();
+
+    console.log('🚫 Filtered out completion message');
+    return filtered;
+  }
+
+  return response;
+}
+
 async function sendChatMessage(retryMessage = null) {
   const chatInput = document.getElementById('chat-input');
   const sendButton = document.getElementById('chat-send-btn');
@@ -1261,13 +1312,16 @@ async function sendChatMessage(retryMessage = null) {
 
     const data = await response.json();
 
+    // Filter out completion messages before displaying
+    const filteredResponse = filterCompletionMessages(data.response);
+
     // Remove typing indicator and add real response
     typingIndicator.remove();
-    addMessageToChat('ai', data.response);
+    addMessageToChat('ai', filteredResponse);
 
     // Store AI response in session history
     if (currentDrillId && drillSessions[currentDrillId]) {
-      drillSessions[currentDrillId].messages.push({ role: 'assistant', content: data.response });
+      drillSessions[currentDrillId].messages.push({ role: 'assistant', content: filteredResponse });
     }
 
   } catch (error) {
