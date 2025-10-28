@@ -324,6 +324,10 @@ function selectSerEstarConjugation(button, chipSetId) {
   const selectedMode = row1Selected.getAttribute('data-option').toLowerCase();
   const conjugation = button.getAttribute('data-option');
 
+  // Highlight the selected conjugation button with green border/ring
+  button.classList.remove('border-transparent');
+  button.classList.add('border-green-600', 'ring-2', 'ring-green-300');
+
   // If "both" was selected, send "both" as the answer
   // Otherwise, send the conjugation
   const answer = (selectedMode === 'both') ? 'both' : conjugation;
