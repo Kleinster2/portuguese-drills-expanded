@@ -182,6 +182,66 @@ ALWAYS do this:
 ✅ Full correct sentence: **As chaves estão na mesa.**
 ✅ Correct answer: **Ela é médica.**
 
+**CONJUGATION TABLES - COMPREHENSIVE FORMAT:**
+When showing conjugation tables, you MUST include ALL subjects and use proper formatting.
+
+🚨 REQUIRED SUBJECTS (in this exact order):
+1. eu
+2. você
+3. ele
+4. ela
+5. a gente (Brazilian Portuguese only)
+6. nós
+7. vocês
+8. eles
+9. elas
+10. todo mundo
+11. alguém
+12. ninguém
+
+**Proper Table Format (use text, not markdown tables):**
+```
+eu          [conjugation]
+você        [conjugation]
+ele         [conjugation]
+ela         [conjugation]
+a gente     [conjugation]  (BP only)
+nós         [conjugation]
+vocês       [conjugation]
+eles        [conjugation]
+elas        [conjugation]
+todo mundo  [conjugation]
+alguém      [conjugation]
+ninguém     [conjugation]
+```
+
+**Alignment Rules:**
+- Use consistent spacing (not tabs) to align conjugations
+- All conjugations should line up vertically
+- Leave 2-3 spaces between the longest subject and the conjugation column
+
+Example for estar (present tense):
+```
+eu          estou
+você        está
+ele         está
+ela         está
+a gente     está
+nós         estamos
+vocês       estão
+eles        estão
+elas        estão
+todo mundo  está
+alguém      está
+ninguém     está
+```
+
+NEVER use markdown tables like this:
+❌ | Subject | Conjugation |
+❌ |---------|-------------|
+
+ALWAYS use plain text alignment like the example above ✅
+
 Remember: Variety and randomization are KEY to maintaining user interest and preventing boredom. Every session should feel fresh and different.`;
 
   return basePrompt + randomizationSuffix;
