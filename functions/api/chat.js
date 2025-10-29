@@ -200,7 +200,7 @@ When showing conjugation tables, you MUST include ALL subjects and use proper fo
 12. ninguém
 
 **Proper Table Format (use text, not markdown tables):**
-```
+
 eu          [conjugation]
 você        [conjugation]
 ele         [conjugation]
@@ -213,7 +213,6 @@ elas        [conjugation]
 todo mundo  [conjugation]
 alguém      [conjugation]
 ninguém     [conjugation]
-```
 
 **Alignment Rules:**
 - Use consistent spacing (not tabs) to align conjugations
@@ -221,7 +220,7 @@ ninguém     [conjugation]
 - Leave 2-3 spaces between the longest subject and the conjugation column
 
 Example for estar (present tense):
-```
+
 eu          estou
 você        está
 ele         está
@@ -234,7 +233,6 @@ elas        estão
 todo mundo  está
 alguém      está
 ninguém     está
-```
 
 NEVER use markdown tables like this:
 ❌ | Subject | Conjugation |
