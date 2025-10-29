@@ -159,6 +159,29 @@ When explaining these cases in feedback, you MUST:
 2. Explain that the contraction is REQUIRED, not just "more common"
 3. Never say "or more commonly" - the contraction is the ONLY correct form
 
+**FORMATTING FOR CORRECT ANSWERS - APPLIES TO ALL DRILLS:**
+When showing the correct answer or full sentence, you MUST use this exact format:
+
+Full correct sentence: **[Portuguese sentence]**
+
+Examples:
+- Full correct sentence: **As chaves estão na mesa.**
+- Correct answer: **Ela é médica.**
+- The answer is: **Nós somos brasileiros.**
+
+🚨 CRITICAL FORMATTING RULE 🚨
+- Only the PORTUGUESE SENTENCE should be bold
+- The label ("Full correct sentence:", "Correct answer:", etc.) should NOT be bold
+- This makes the Portuguese stand out and be easier to read
+
+NEVER do this:
+❌ **Full correct sentence: As chaves estão na mesa.**
+❌ **Correct answer: Ela é médica.**
+
+ALWAYS do this:
+✅ Full correct sentence: **As chaves estão na mesa.**
+✅ Correct answer: **Ela é médica.**
+
 Remember: Variety and randomization are KEY to maintaining user interest and preventing boredom. Every session should feel fresh and different.`;
 
   return basePrompt + randomizationSuffix;
