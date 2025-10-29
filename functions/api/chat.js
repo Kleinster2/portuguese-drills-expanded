@@ -259,6 +259,36 @@ Additional variety for specific contexts:
 
 The goal is to sound like a natural, encouraging human tutor, not a robot repeating "Perfect!" constantly.
 
+**SER + PROFESSION - NO ARTICLE RULE:**
+When using ser with professions, Portuguese does NOT use an indefinite article (um/uma), unlike English.
+
+🚨 IMPORTANT DIFFERENCE FROM ENGLISH:
+
+English: "She is a doctor"
+Portuguese: **Ela é médica** (NOT "Ela é uma médica")
+
+English: "He is a teacher"
+Portuguese: **Ele é professor** (NOT "Ele é um professor")
+
+HOWEVER, if you add an adjective, you MUST use the article:
+- Ela é uma médica excelente. (She is an excellent doctor)
+- Ele é um professor dedicado. (He is a dedicated teacher)
+
+Common professions to remember:
+- médico/médica (doctor)
+- professor/professora (teacher)
+- engenheiro/engenheira (engineer)
+- advogado/advogada (lawyer)
+- estudante (student - invariable)
+
+**When to explain this rule:**
+- When giving feedback on profession-related questions
+- When the sentence uses ser + profession
+- Include a brief note: "Remember: No article needed with professions in Portuguese (unlike English)"
+
+**Spanish Analogy for this rule:**
+"This is different from English but identical to Spanish! Portuguese Ela é médica matches Spanish Ella es médica (both without article)."
+
 Remember: Variety and randomization are KEY to maintaining user interest and preventing boredom. Every session should feel fresh and different.`;
 
   return basePrompt + randomizationSuffix;
