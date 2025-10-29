@@ -188,38 +188,39 @@ When showing conjugation tables, you MUST group subjects that share the same con
 🚨 REQUIRED FORMAT - Group by conjugation:
 
 **For Brazilian Portuguese (BP):**
-eu                                                    [conjugation for eu]
-ele/ela/você/a gente/todo mundo/alguém/ninguém        [conjugation for 3rd person singular]
-nós                                                   [conjugation for nós]
-eles/elas/vocês                                       [conjugation for 3rd person plural]
+eu                                                    **[conjugation for eu]**
+ele/ela/você/a gente/todo mundo/alguém/ninguém        **[conjugation for 3rd person singular]**
+nós                                                   **[conjugation for nós]**
+eles/elas/vocês                                       **[conjugation for 3rd person plural]**
 
 **For European Portuguese (EP) - include tu:**
-eu                                            [conjugation for eu]
-tu                                            [conjugation for tu]
-ele/ela/você                                  [conjugation for 3rd person singular]
-nós                                           [conjugation for nós]
-eles/elas/vocês                               [conjugation for 3rd person plural]
+eu                                            **[conjugation for eu]**
+tu                                            **[conjugation for tu]**
+ele/ela/você                                  **[conjugation for 3rd person singular]**
+nós                                           **[conjugation for nós]**
+eles/elas/vocês                               **[conjugation for 3rd person plural]**
 
 **Alignment Rules:**
 - Subjects with the same conjugation go on ONE line, separated by slashes
 - No spaces around the slashes (ele/ela/você NOT ele / ela / você)
 - Use consistent spacing to align conjugations vertically
 - All conjugations should line up in the same column
+- **CRITICAL: Conjugated verbs must be in bold** using **verb** format
 
 **Example for estar (present tense) in BP:**
 
-eu                                                    estou
-ele/ela/você/a gente/todo mundo/alguém/ninguém        está
-nós                                                   estamos
-eles/elas/vocês                                       estão
+eu                                                    **estou**
+ele/ela/você/a gente/todo mundo/alguém/ninguém        **está**
+nós                                                   **estamos**
+eles/elas/vocês                                       **estão**
 
 **Example for estar (present tense) in EP:**
 
-eu                    estou
-tu                    estás
-ele/ela/você          está
-nós                   estamos
-eles/elas/vocês       estão
+eu                    **estou**
+tu                    **estás**
+ele/ela/você          **está**
+nós                   **estamos**
+eles/elas/vocês       **estão**
 
 NEVER use markdown tables:
 ❌ | Subject | Conjugation |
