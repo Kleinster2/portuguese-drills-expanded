@@ -183,62 +183,55 @@ ALWAYS do this:
 ✅ Correct answer: **Ela é médica.**
 
 **CONJUGATION TABLES - COMPREHENSIVE FORMAT:**
-When showing conjugation tables, you MUST include ALL subjects and use proper formatting.
+When showing conjugation tables, you MUST group subjects that share the same conjugation on ONE line.
 
-🚨 REQUIRED SUBJECTS (in this exact order):
-1. eu
-2. você
-3. ele
-4. ela
-5. a gente (Brazilian Portuguese only)
-6. nós
-7. vocês
-8. eles
-9. elas
-10. todo mundo
-11. alguém
-12. ninguém
+🚨 REQUIRED FORMAT - Group by conjugation:
 
-**Proper Table Format (use text, not markdown tables):**
+**For Brazilian Portuguese (BP):**
+eu                                                    [conjugation for eu]
+ele/ela/você/a gente/todo mundo/alguém/ninguém        [conjugation for 3rd person singular]
+nós                                                   [conjugation for nós]
+eles/elas/vocês                                       [conjugation for 3rd person plural]
 
-eu          [conjugation]
-você        [conjugation]
-ele         [conjugation]
-ela         [conjugation]
-a gente     [conjugation]  (BP only)
-nós         [conjugation]
-vocês       [conjugation]
-eles        [conjugation]
-elas        [conjugation]
-todo mundo  [conjugation]
-alguém      [conjugation]
-ninguém     [conjugation]
+**For European Portuguese (EP) - include tu:**
+eu                                            [conjugation for eu]
+tu                                            [conjugation for tu]
+ele/ela/você                                  [conjugation for 3rd person singular]
+nós                                           [conjugation for nós]
+eles/elas/vocês                               [conjugation for 3rd person plural]
 
 **Alignment Rules:**
-- Use consistent spacing (not tabs) to align conjugations
-- All conjugations should line up vertically
-- Leave 2-3 spaces between the longest subject and the conjugation column
+- Subjects with the same conjugation go on ONE line, separated by slashes
+- No spaces around the slashes (ele/ela/você NOT ele / ela / você)
+- Use consistent spacing to align conjugations vertically
+- All conjugations should line up in the same column
 
-Example for estar (present tense):
+**Example for estar (present tense) in BP:**
 
-eu          estou
-você        está
-ele         está
-ela         está
-a gente     está
-nós         estamos
-vocês       estão
-eles        estão
-elas        estão
-todo mundo  está
-alguém      está
-ninguém     está
+eu                                                    estou
+ele/ela/você/a gente/todo mundo/alguém/ninguém        está
+nós                                                   estamos
+eles/elas/vocês                                       estão
 
-NEVER use markdown tables like this:
+**Example for estar (present tense) in EP:**
+
+eu                    estou
+tu                    estás
+ele/ela/você          está
+nós                   estamos
+eles/elas/vocês       estão
+
+NEVER use markdown tables:
 ❌ | Subject | Conjugation |
 ❌ |---------|-------------|
 
-ALWAYS use plain text alignment like the example above ✅
+NEVER list each subject on a separate line:
+❌ eu          estou
+❌ você        está
+❌ ele         está
+❌ ela         está
+
+ALWAYS group subjects with the same conjugation ✅
 
 Remember: Variety and randomization are KEY to maintaining user interest and preventing boredom. Every session should feel fresh and different.`;
 
