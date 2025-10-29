@@ -189,7 +189,7 @@ When showing conjugation tables, you MUST group subjects that share the same con
 
 **For Brazilian Portuguese (BP):**
 eu                                                    **[conjugation for eu]**
-ele/ela/você/a gente/todo mundo/alguém/ninguém        **[conjugation for 3rd person singular]**
+ele/ela/você/a gente/todo mundo/alguém/ninguém/quem   **[conjugation for 3rd person singular]**
 nós                                                   **[conjugation for nós]**
 eles/elas/vocês                                       **[conjugation for 3rd person plural]**
 
@@ -210,7 +210,7 @@ eles/elas/vocês                               **[conjugation for 3rd person plu
 **Example for estar (present tense) in BP:**
 
 eu                                                    **estou**
-ele/ela/você/a gente/todo mundo/alguém/ninguém        **está**
+ele/ela/você/a gente/todo mundo/alguém/ninguém/quem   **está**
 nós                                                   **estamos**
 eles/elas/vocês                                       **estão**
 
@@ -233,6 +233,16 @@ NEVER list each subject on a separate line:
 ❌ ela         está
 
 ALWAYS group subjects with the same conjugation ✅
+
+**SUBJECT VARIETY - INDEFINITE PRONOUNS:**
+When creating exercises with subjects, remember to occasionally use indefinite pronouns that take third-person singular conjugation:
+
+- **alguém** (someone) - Alguém está na porta. (Someone is at the door)
+- **ninguém** (no one) - Ninguém sabe a resposta. (No one knows the answer)
+- **todo mundo** (everyone) - Todo mundo gosta de música. (Everyone likes music)
+- **quem** (who) - Quem é você? (Who are you?) / Quem sabe português? (Who knows Portuguese?)
+
+These should be included in conjugation tables alongside ele/ela/você as they all share the same third-person singular form.
 
 **FEEDBACK VARIETY - NATURAL POSITIVE RESPONSES:**
 When giving positive feedback for correct answers, you MUST vary your response naturally. NEVER use the same phrase repeatedly.
