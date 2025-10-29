@@ -324,18 +324,58 @@ function selectSerEstarConjugation(button, chipSetId) {
   const selectedMode = row1Selected.getAttribute('data-option').toLowerCase();
   const conjugation = button.getAttribute('data-option');
 
-  // Highlight the selected conjugation button with green border/ring
-  button.classList.remove('border-transparent');
-  button.classList.add('border-green-600', 'ring-2', 'ring-green-300');
+  // Determine if this is a ser or estar conjugation
+  const serConjugations = ['sou', 'é', 'somos', 'são'];
+  const estarConjugations = ['estou', 'está', 'estamos', 'estão'];
+  const isSer = serConjugations.includes(conjugation);
+  const isEstar = estarConjugations.includes(conjugation);
 
-  // If "both" was selected, send "both" as the answer
-  // Otherwise, send the conjugation
-  const answer = (selectedMode === 'both') ? 'both' : conjugation;
+  if (selectedMode === 'both') {
+    // In 'both' mode: need to collect one from each verb
+    // Mark this button as selected
+    button.classList.remove('border-transparent');
+    button.classList.add('border-green-600', 'ring-2', 'ring-green-300');
 
-  // Disable all chips after submission
-  chipSet.querySelectorAll('button').forEach(btn => btn.disabled = true);
+    // Store which conjugation was selected
+    button.setAttribute('data-selected', 'true');
 
-  sendAnswer(answer);
+    // Check if we have one from each verb
+    const allButtons = chipSet.querySelectorAll('button[data-row="2"]');
+    let serSelected = null;
+    let estarSelected = null;
+
+    allButtons.forEach(btn => {
+      if (btn.getAttribute('data-selected') === 'true') {
+        const btnConjugation = btn.getAttribute('data-option');
+        if (serConjugations.includes(btnConjugation)) {
+          serSelected = btnConjugation;
+        } else if (estarConjugations.includes(btnConjugation)) {
+          estarSelected = btnConjugation;
+        }
+      }
+    });
+
+    // If both are selected, send the answer
+    if (serSelected && estarSelected) {
+      const answer = serSelected + '/' + estarSelected;
+
+      // Disable all chips after submission
+      chipSet.querySelectorAll('button').forEach(btn => btn.disabled = true);
+
+      sendAnswer(answer);
+    }
+    // Otherwise, wait for the other conjugation to be selected
+
+  } else {
+    // In 'ser' or 'estar' mode: just send the conjugation immediately
+    button.classList.remove('border-transparent');
+    button.classList.add('border-green-600', 'ring-2', 'ring-green-300');
+
+    // Disable all chips after submission
+    chipSet.querySelectorAll('button').forEach(btn => btn.disabled = true);
+
+    sendAnswer(conjugation);
+  }
 }
 
 // Send answer when chip is clicked (with tracking for multi-click support)
