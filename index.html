@@ -1198,7 +1198,7 @@ async function openDrillChat(drillId) {
 
 // Filter out completion messages from AI responses
 function filterCompletionMessages(response) {
-  if (!response) return response;
+  if (!response) return { text: response, needsNextQuestion: false };
 
   // Patterns that indicate completion/summary messages
   const completionPatterns = [
@@ -1214,7 +1214,6 @@ function filterCompletionMessages(response) {
     /Would you like to practice more/i,
     /move on to another topic/i,
     /practice more or move on/i,
-    /---\s*$/m,  // Separator line at end
   ];
 
   // Check if response contains completion patterns
@@ -1241,13 +1240,20 @@ function filterCompletionMessages(response) {
     filtered = filtered.replace(/---\s*$/m, '').trim();
 
     console.log('🚫 Filtered out completion message');
-    return filtered;
+
+    // Check if the filtered response contains a question
+    const hasQuestion = /\?/.test(filtered) || /\[CHIPS/.test(filtered) || /____/.test(filtered);
+
+    return {
+      text: filtered,
+      needsNextQuestion: !hasQuestion
+    };
   }
 
-  return response;
+  return { text: response, needsNextQuestion: false };
 }
 
-async function sendChatMessage(retryMessage = null) {
+async function sendChatMessage(retryMessage = null, silent = false) {
   const chatInput = document.getElementById('chat-input');
   const sendButton = document.getElementById('chat-send-btn');
   const message = retryMessage || chatInput.value.trim();
@@ -1256,8 +1262,8 @@ async function sendChatMessage(retryMessage = null) {
 
   let userMessageDiv = null;
 
-  // Only add user message if this is not a retry
-  if (!retryMessage) {
+  // Only add user message if this is not a retry and not silent
+  if (!retryMessage && !silent) {
     userMessageDiv = addMessageToChat('user', message);
 
     // Store user message in session history
@@ -1267,6 +1273,11 @@ async function sendChatMessage(retryMessage = null) {
 
     // Clear input and disable while processing
     chatInput.value = '';
+  } else if (silent) {
+    // For silent messages, still store in history but don't display
+    if (currentDrillId && drillSessions[currentDrillId]) {
+      drillSessions[currentDrillId].messages.push({ role: 'user', content: message });
+    }
   }
 
   chatInput.disabled = true;
@@ -1313,15 +1324,24 @@ async function sendChatMessage(retryMessage = null) {
     const data = await response.json();
 
     // Filter out completion messages before displaying
-    const filteredResponse = filterCompletionMessages(data.response);
+    const filterResult = filterCompletionMessages(data.response);
 
     // Remove typing indicator and add real response
     typingIndicator.remove();
-    addMessageToChat('ai', filteredResponse);
+    addMessageToChat('ai', filterResult.text);
 
     // Store AI response in session history
     if (currentDrillId && drillSessions[currentDrillId]) {
-      drillSessions[currentDrillId].messages.push({ role: 'assistant', content: filteredResponse });
+      drillSessions[currentDrillId].messages.push({ role: 'assistant', content: filterResult.text });
+    }
+
+    // If we filtered out a completion and there's no question, request the next question
+    if (filterResult.needsNextQuestion) {
+      console.log('🔄 Requesting next question after completion filter');
+      // Send a silent message to request the next question
+      setTimeout(() => {
+        sendChatMessage('Please give me the next question.', true);
+      }, 500);
     }
 
   } catch (error) {
