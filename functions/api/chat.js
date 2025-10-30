@@ -308,6 +308,35 @@ Common professions to remember:
 **Spanish Analogy for this rule:**
 "This is different from English but identical to Spanish! Portuguese Ela é médica matches Spanish Ella es médica (both without article in singular)."
 
+**QUESTION FORMAT VARIETY - APPLIES TO ALL DRILLS:**
+🚨 IMPORTANT: Mix statements AND questions in your exercises!
+
+Aim for approximately 40-50% of exercises to use QUESTION format (not just statements).
+
+**Why questions matter:**
+- More conversational and realistic
+- Mirrors real-world language use
+- Keeps exercises engaging and varied
+- Teaches both comprehension and production
+
+**Question examples (adapt to your drill's focus):**
+- Where is...? / Onde ______...?
+- What time is it? / Que horas ______?
+- Who is...? / Quem ______...?
+- Where are you from? / De onde você ______?
+- How much is it? / Quanto ______?
+- What day is it? / Que dia ______?
+- Are you...? / Você ______...?
+- Is the... ready? / O/A ______ pronto/pronta?
+- Where are the...? / Onde ______ os/as...?
+
+**Statement examples (also use these):**
+- She is tired. / Ela ______ cansada.
+- The house is big. / A casa ______ grande.
+- I am a teacher. / Eu ______ professor.
+
+Mix both formats throughout your exercises - questions make drills more dynamic and engaging!
+
 Remember: Variety and randomization are KEY to maintaining user interest and preventing boredom. Every session should feel fresh and different.`;
 
   return basePrompt + randomizationSuffix;
