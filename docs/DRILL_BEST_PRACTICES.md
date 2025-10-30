@@ -28,6 +28,7 @@ This document captures best practices identified from analyzing existing drills 
 
 ## Table of Contents
 
+0. [Core Principles](#core-principles) ⭐⭐⭐ **READ THIS FIRST**
 1. [Structural Patterns](#structural-patterns)
 2. [Pedagogical Features](#pedagogical-features)
 3. [Feedback Structure](#feedback-structure)
@@ -39,6 +40,37 @@ This document captures best practices identified from analyzing existing drills 
 9. [Security & Confidentiality](#security--confidentiality)
 10. [Flow Control](#flow-control)
 11. [Drill Template](#drill-template)
+
+---
+
+## 0. Core Principles ⭐⭐⭐
+
+### Language Requirements - CRITICAL ⚠️
+
+**🚨 ABSOLUTE RULE: ALL INSTRUCTIONAL CONTENT MUST BE IN ENGLISH 🚨**
+
+**Why:**
+- Users don't know Portuguese yet - that's why they're learning!
+- Portuguese should ONLY appear in the examples being taught
+- Category names, explanations, feedback - everything in English
+
+**✅ CORRECT Examples:**
+
+
+**❌ WRONG Examples:**
+
+
+**Where This Applies:**
+- ✅ Category names (TIME, PROFESSIONS, LOCATION - all in English)
+- ✅ All feedback and explanations (in English)
+- ✅ Error messages (in English)
+- ✅ Instructions (in English)
+- ✅ Welcome messages (in English, except for example sentences)
+- ❌ Portuguese examples (these should be in Portuguese, obviously)
+
+**Golden Rule:**
+If it's explaining the language, use English.
+If it's demonstrating the language, use Portuguese.
 
 ---
 
