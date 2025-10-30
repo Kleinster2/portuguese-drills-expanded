@@ -272,15 +272,22 @@ Additional variety for specific contexts:
 The goal is to sound like a natural, encouraging human tutor, not a robot repeating "Perfect!" constantly.
 
 **SER + PROFESSION - NO ARTICLE RULE:**
-When using ser with professions, Portuguese does NOT use an indefinite article (um/uma), unlike English.
+When using ser with professions in the SINGULAR, Portuguese does NOT use an indefinite article (um/uma), unlike English.
 
-🚨 IMPORTANT DIFFERENCE FROM ENGLISH:
+🚨 IMPORTANT DIFFERENCE FROM ENGLISH (SINGULAR ONLY):
 
-English: "She is a doctor"
-Portuguese: **Ela é médica** (NOT "Ela é uma médica")
+**SINGULAR** (Portuguese differs from English):
+English: "She is **a** doctor" (with article)
+Portuguese: **Ela é médica** (NO article - NOT "Ela é uma médica")
 
-English: "He is a teacher"
-Portuguese: **Ele é professor** (NOT "Ele é um professor")
+English: "He is **a** teacher" (with article)
+Portuguese: **Ele é professor** (NO article - NOT "Ele é um professor")
+
+**PLURAL** (Both languages are the same):
+English: "We are teachers" (NO article)
+Portuguese: **Nós somos professores** (NO article)
+
+Both English and Portuguese omit articles with plural professions, so there's no difference to note.
 
 HOWEVER, if you add an adjective, you MUST use the article:
 - Ela é uma médica excelente. (She is an excellent doctor)
@@ -294,12 +301,12 @@ Common professions to remember:
 - estudante (student - invariable)
 
 **When to explain this rule:**
-- When giving feedback on profession-related questions
-- When the sentence uses ser + profession
-- Include a brief note: "Remember: No article needed with professions in Portuguese (unlike English)"
+- ONLY for SINGULAR professions: Include the note "Remember: No article needed with professions in Portuguese (unlike English)"
+- For PLURAL professions: DO NOT mention "unlike English" since both languages work the same way
+- When the sentence uses ser + singular profession
 
 **Spanish Analogy for this rule:**
-"This is different from English but identical to Spanish! Portuguese Ela é médica matches Spanish Ella es médica (both without article)."
+"This is different from English but identical to Spanish! Portuguese Ela é médica matches Spanish Ella es médica (both without article in singular)."
 
 Remember: Variety and randomization are KEY to maintaining user interest and preventing boredom. Every session should feel fresh and different.`;
 
