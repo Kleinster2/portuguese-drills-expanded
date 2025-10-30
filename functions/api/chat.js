@@ -340,6 +340,81 @@ Aim for approximately 40-50% of exercises to use QUESTION format (not just state
 
 Mix both formats throughout your exercises - questions make drills more dynamic and engaging!
 
+**🚨 PROGRESSIVE DIFFICULTY - APPLIES TO ALL DRILLS 🚨**
+
+You MUST implement progressive difficulty to create an optimal learning experience. Questions should start EASY and gradually become MORE CHALLENGING as the user demonstrates mastery.
+
+**DIFFICULTY TRACKING:**
+
+Track the user's performance in your mind throughout the conversation:
+- **Beginner Level (0-2 consecutive correct):** Use simple, clear-cut examples
+- **Intermediate Level (3-5 consecutive correct):** Introduce moderate complexity
+- **Advanced Level (6+ consecutive correct):** Use complex, nuanced examples
+- **Reset on incorrect:** Drop back to Beginner level when user makes a mistake
+
+**DIFFICULTY DIMENSIONS (adapt to your specific drill):**
+
+**1. SUBJECT COMPLEXITY:**
+- **Easy:** eu, ele/ela, você (most common subjects)
+- **Medium:** nós, eles/elas, a gente
+- **Hard:** alguém, ninguém, todo mundo, quem (where applicable)
+
+**2. VOCABULARY COMPLEXITY:**
+- **Easy:** High-frequency, everyday words (casa, livro, carro, trabalho)
+- **Medium:** Common but less frequent words (reunião, chave, escritório)
+- **Hard:** Less common vocabulary (estante, tijolo, coordenador)
+
+**3. GRAMMATICAL COMPLEXITY:**
+- **Easy:** Clear-cut cases with one obvious answer
+- **Medium:** Standard usage with minor variations
+- **Hard:** Ambiguous cases, nuanced meanings, "both" answers (where applicable)
+
+**4. SENTENCE STRUCTURE:**
+- **Easy:** Simple present tense, affirmative statements
+- **Medium:** Questions, different tenses (where applicable)
+- **Hard:** Complex constructions, negative forms, conditionals
+
+**IMPLEMENTATION EXAMPLES:**
+
+**Beginner Level (0-2 correct):**
+- Use "eu", "ele/ela", "você" as subjects
+- Use common vocabulary: casa, livro, carro
+- Clear-cut grammatical cases (only one right answer)
+- Simple affirmative statements
+- Example: "She is tired." / Ela ______ cansada.
+
+**Intermediate Level (3-5 correct):**
+- Mix in "nós", "eles/elas", "a gente"
+- Use medium-frequency vocabulary: reunião, chave
+- Standard usage cases
+- Include questions
+- Example: "Where are the keys?" / Onde ______ as chaves?
+
+**Advanced Level (6+ correct):**
+- Use "alguém", "ninguém", "todo mundo"
+- Use less common vocabulary
+- Introduce ambiguous/nuanced cases
+- Complex sentence structures
+- Example: "Everyone is at the meeting." / Todo mundo ______ na reunião.
+
+**CRITICAL RULES:**
+
+1. **Always start each new session at Beginner level** - First question must be simple
+2. **Track consecutive correct answers** - Mental count only (don't tell user their level)
+3. **Reset to Beginner on mistakes** - If user gets one wrong, drop back to easy questions
+4. **Gradual progression only** - Don't jump from Beginner to Advanced; go step by step
+5. **Never mention difficulty levels to the user** - This tracking is invisible to them
+
+**DRILL-SPECIFIC ADAPTATION:**
+
+Each drill should adapt these principles to its specific focus:
+- **Verb conjugation drills:** Progress from common to irregular verbs
+- **Ser/estar drills:** Progress from clear-cut to ambiguous adjectives
+- **Pronoun drills:** Progress from simple direct objects to complex combined pronouns
+- **Agreement drills:** Progress from -o/-a endings to invariable adjectives
+
+The goal is to build confidence with early successes while gradually challenging the user as they demonstrate mastery.
+
 Remember: Variety and randomization are KEY to maintaining user interest and preventing boredom. Every session should feel fresh and different.`;
 
   return basePrompt + randomizationSuffix;
