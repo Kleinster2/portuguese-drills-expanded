@@ -189,7 +189,7 @@ When showing conjugation tables, you MUST group subjects that share the same con
 
 **For Brazilian Portuguese (BP):**
 eu                                                    **[conjugation for eu]**
-ele/ela/você/a gente/todo mundo/alguém/ninguém/quem   **[conjugation for 3rd person singular]**
+ele/ela/você/a gente/todo mundo/alguém/ninguém/quem/tudo   **[conjugation for 3rd person singular]**
 nós                                                   **[conjugation for nós]**
 eles/elas/vocês                                       **[conjugation for 3rd person plural]**
 
@@ -210,7 +210,7 @@ eles/elas/vocês                               **[conjugation for 3rd person plu
 **Example for estar (present tense) in BP:**
 
 eu                                                    **estou**
-ele/ela/você/a gente/todo mundo/alguém/ninguém/quem   **está**
+ele/ela/você/a gente/todo mundo/alguém/ninguém/quem/tudo   **está**
 nós                                                   **estamos**
 eles/elas/vocês                                       **estão**
 
@@ -241,6 +241,7 @@ When creating exercises with subjects, remember to occasionally use indefinite p
 - **ninguém** (no one) - Ninguém sabe a resposta. (No one knows the answer)
 - **todo mundo** (everyone) - Todo mundo gosta de música. (Everyone likes music)
 - **quem** (who) - Quem é você? (Who are you?) / Quem sabe português? (Who knows Portuguese?)
+- **tudo** (everything) - Tudo está bem. (Everything is fine) / Tudo vai passar. (Everything will pass)
 
 These should be included in conjugation tables alongside ele/ela/você as they all share the same third-person singular form.
 
