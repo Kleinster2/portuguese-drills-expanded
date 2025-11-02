@@ -1968,25 +1968,38 @@ function updateChatTitle() {
 
     <!-- Route detection for direct /placement-test access -->
     <script>
-      window.addEventListener('DOMContentLoaded', () => {
+      (function() {
         const path = window.location.pathname;
         if (path === '/placement-test' || path === '/placement-test/') {
-          // Hide main portal content
-          const mainContent = document.querySelector('.container');
-          if (mainContent) mainContent.style.display = 'none';
+          // Hide body content immediately
+          document.addEventListener('DOMContentLoaded', () => {
+            // Hide all main content
+            const containers = document.querySelectorAll('.container');
+            containers.forEach(el => el.style.display = 'none');
 
-          // Hide footer
-          const footer = document.querySelector('footer');
-          if (footer) footer.style.display = 'none';
+            const footer = document.querySelector('footer');
+            if (footer) footer.style.display = 'none';
 
-          // Start placement test immediately
-          setTimeout(() => {
-            if (typeof startPlacementTest === 'function') {
-              startPlacementTest();
-            }
-          }, 100);
+            const header = document.querySelector('header');
+            if (header) header.style.display = 'none';
+
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(el => el.style.display = 'none');
+          });
+
+          // Start placement test when function is available
+          window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+              if (typeof startPlacementTest === 'function') {
+                startPlacementTest();
+              } else {
+                console.error('startPlacementTest function not found');
+              }
+            }, 200);
+          });
         }
-      });
+      })();
     </script>
 </body>
 </html>
