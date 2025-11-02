@@ -455,11 +455,34 @@ The goal is to build confidence with early successes while gradually challenging
 
 Remember: Variety and randomization are KEY to maintaining user interest and preventing boredom. Every session should feel fresh and different.`;
 
+  // Don't add randomization suffix to placement test - it needs to end at 50 questions
+  if (drillId === 'placement-test') {
+    return basePrompt;
+  }
+
   return basePrompt + randomizationSuffix;
 }
 
-async function callClaude(apiKey, messages, retryCount = 0) {
+// Check if response contains forbidden words
+function containsForbiddenWords(text) {
+  const forbidden = ['café', 'frio', 'fria', 'velho', 'velha', 'feliz', 'ensolarado', 'ventoso'];
+  const lowerText = text.toLowerCase();
+
+  for (const word of forbidden) {
+    // Check for the word as a standalone word (not part of another word)
+    const wordRegex = new RegExp(`\\b${word}\\b`, 'i');
+    if (wordRegex.test(lowerText)) {
+      console.log(`Backend filter: Found forbidden word "${word}" in response`);
+      return true;
+    }
+  }
+
+  return false;
+}
+
+async function callClaude(apiKey, messages, retryCount = 0, forbiddenWordRetryCount = 0) {
   const MAX_RETRIES = 3;
+  const MAX_FORBIDDEN_WORD_RETRIES = 3; // Max attempts to avoid forbidden words
   const BASE_DELAY = 1000; // 1 second
 
   // Use full context for Claude reliability
@@ -517,7 +540,7 @@ async function callClaude(apiKey, messages, retryCount = 0) {
         await new Promise(resolve => setTimeout(resolve, delay));
 
         // Retry with incremented count
-        return await callClaude(apiKey, messages, retryCount + 1);
+        return await callClaude(apiKey, messages, retryCount + 1, forbiddenWordRetryCount);
       }
 
       // If not retryable or max retries reached, throw error
@@ -526,7 +549,34 @@ async function callClaude(apiKey, messages, retryCount = 0) {
 
     const data = await resp.json();
     const content = data.content?.[0]?.text ?? '';
-    return String(content);
+    const contentStr = String(content);
+
+    // 🚨 BACKEND FILTER: Check for forbidden words
+    if (containsForbiddenWords(contentStr) && forbiddenWordRetryCount < MAX_FORBIDDEN_WORD_RETRIES) {
+      console.log(`Backend filter: Forbidden word detected (attempt ${forbiddenWordRetryCount + 1}/${MAX_FORBIDDEN_WORD_RETRIES}), regenerating response...`);
+
+      // Add a stronger reminder to the conversation to avoid these words
+      const reminderMessage = {
+        role: 'user',
+        content: 'Please provide a different question without using café, frio, fria, velho, velha, feliz, ensolarado, or ventoso. Generate a completely different question from a different category.'
+      };
+
+      // Create new messages array with the reminder
+      const messagesWithReminder = [...messages, reminderMessage];
+
+      // Wait a brief moment to avoid rate limiting
+      await new Promise(resolve => setTimeout(resolve, 500));
+
+      // Retry with incremented forbidden word count
+      return await callClaude(apiKey, messagesWithReminder, 0, forbiddenWordRetryCount + 1);
+    }
+
+    // If we've exhausted retries and still have forbidden words, log warning but allow
+    if (containsForbiddenWords(contentStr)) {
+      console.warn('Backend filter: Forbidden words still present after max retries, allowing response to prevent infinite loop');
+    }
+
+    return contentStr;
 
   } catch (error) {
     // If this is a network error and we haven't exceeded retries, try again
@@ -535,7 +585,7 @@ async function callClaude(apiKey, messages, retryCount = 0) {
       console.log(`Network error, retrying in ${delay}ms (attempt ${retryCount + 1}/${MAX_RETRIES})`);
 
       await new Promise(resolve => setTimeout(resolve, delay));
-      return await callClaude(apiKey, messages, retryCount + 1);
+      return await callClaude(apiKey, messages, retryCount + 1, forbiddenWordRetryCount);
     }
 
     throw error;

@@ -141,8 +141,8 @@ function addTwoRowChips(messagesContainer, row1Options, row2Options) {
   // Generate unique ID for this chip set
   const chipSetId = 'chipset-' + Date.now();
 
-  // Scramble row 2 options
-  const shuffledRow2 = shuffleArray([...row2Options]);
+  // Don't shuffle row 2 - keep the order as provided (reflexive, reciprocal, both)
+  const orderedRow2 = row2Options;
 
   // Create button container with two rows
   const buttonContainer = document.createElement('div');
@@ -164,26 +164,17 @@ function addTwoRowChips(messagesContainer, row1Options, row2Options) {
         `).join('')}
       </div>
       <div class="flex flex-wrap gap-2 mb-3" data-row="2">
-        ${shuffledRow2.map(option => `
+        ${orderedRow2.map(option => `
           <button
             data-option="${escapeHtml(option)}"
             data-row="2"
             onclick="selectTwoRowChip(this, '${chipSetId}')"
-            class="two-row-chip bg-green-100 hover:bg-green-200 text-green-700 font-medium px-4 py-2 rounded-full text-sm transition-colors border-2 border-transparent"
+            disabled
+            class="two-row-chip bg-green-100 text-green-700 font-semibold px-5 py-2.5 rounded-full text-base transition-colors border-2 border-transparent opacity-40 cursor-not-allowed"
           >
             ${escapeHtml(option)}
           </button>
         `).join('')}
-      </div>
-      <div class="flex justify-end">
-        <button
-          id="submit-${chipSetId}"
-          onclick="submitTwoRowAnswer('${chipSetId}')"
-          disabled
-          class="bg-green-600 text-white font-semibold px-6 py-2 rounded-lg transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed hover:bg-green-700 disabled:hover:bg-gray-300"
-        >
-          Submit Answer
-        </button>
       </div>
     </div>
   `;
@@ -207,20 +198,31 @@ function selectTwoRowChip(button, chipSetId) {
   if (row === '1') {
     button.classList.remove('border-transparent');
     button.classList.add('border-blue-600', 'ring-2', 'ring-blue-300');
+
+    // Enable row 2 buttons when row 1 is selected
+    const row2Buttons = chipSet.querySelectorAll('button[data-row="2"].two-row-chip');
+    row2Buttons.forEach(btn => {
+      btn.disabled = false;
+      btn.classList.remove('opacity-40', 'cursor-not-allowed');
+      btn.classList.add('hover:bg-green-200');
+    });
   } else {
+    // Row 2 selected - highlight and auto-submit
     button.classList.remove('border-transparent');
     button.classList.add('border-green-600', 'ring-2', 'ring-green-300');
-  }
 
-  // Check if both rows have selections
-  const row1Selected = chipSet.querySelector('button[data-row="1"].border-blue-600');
-  const row2Selected = chipSet.querySelector('button[data-row="2"].border-green-600');
-  const submitButton = document.getElementById(`submit-${chipSetId}`);
+    // Get both selections and auto-submit
+    const row1Selected = chipSet.querySelector('button[data-row="1"].border-blue-600');
+    const row2Selected = button;
 
-  if (row1Selected && row2Selected) {
-    submitButton.disabled = false;
-  } else {
-    submitButton.disabled = true;
+    if (row1Selected && row2Selected) {
+      const answer = row1Selected.getAttribute('data-option') + ' - ' + row2Selected.getAttribute('data-option');
+
+      // Disable all chips after submission
+      chipSet.querySelectorAll('button').forEach(btn => btn.disabled = true);
+
+      sendAnswer(answer);
+    }
   }
 }
 

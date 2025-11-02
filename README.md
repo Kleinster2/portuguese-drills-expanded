@@ -8,6 +8,17 @@ Designed to be dialect-neutral (PT-PT and PT-BR) with enhanced learning experien
 - **Tech Stack**: HTML + Tailwind CSS + Cloudflare Pages Functions + Anthropic Claude API
 - **No Build Step**: Pure HTML with CDN-based styling
 
+## 📚 Documentation
+
+### For Users
+- **[A1 Curriculum Guide](docs/curriculum/A1-curriculum-primer.md)** - Detailed explanation of what each A1 drill teaches
+- **[Shareable Links Guide](docs/features/SHAREABLE_LINKS.md)** - How to share and bookmark specific drills
+
+### For Developers
+- **[Project Architecture](docs/development/PROJECT_README.md)** - Tech stack, architecture, and development guide
+- **[Code Map](docs/development/CODEMAP.md)** - Quick reference for finding code by feature (with line numbers)
+- **[Consistency Analysis](docs/development/DRILL_CONSISTENCY_ANALYSIS.md)** - Analysis of drill patterns and improvement roadmap
+
 ## Key Features
 
 ### 🎯 Multi-Drill Sessions
@@ -35,13 +46,50 @@ Designed to be dialect-neutral (PT-PT and PT-BR) with enhanced learning experien
 - **Responsive Design**: Works seamlessly on desktop and mobile devices
 - **Clean Header**: "No drills active" / Single drill name / Multiple drills separated by bullets
 
+### 🎯 Placement Test
+- **Comprehensive Evaluation**: 25-question test covering A1 to B2 levels
+- **Instant Results**: Detailed proficiency report with personalized recommendations
+- **Structured Assessment**: Progressive difficulty testing across 5 sections
+- **Drill Recommendations**: Get specific drill suggestions based on your level
+
 ### 📚 Extensive Drill Library
-- **40+ Drills Available**: Covering A1 to B2+ levels
+- **48 Drills Available**: Covering A1 to B2+ levels
 - **Filterable by Topic**: Verbs, Grammar, Tenses, Pronunciation, Conversation
 - **Search Functionality**: Find specific drills by keyword
 - **Learning Paths**: Structured progression from A1 to B2
 
-## Recent Updates (Last 2 Weeks)
+## Recent Updates
+
+### Latest Enhancements (December 2024)
+
+**Placement Test - NEW:**
+- ✅ **Comprehensive 25-question evaluation** - Tests A1 through B2 proficiency
+- ✅ **Structured in 5 sections** - A1 Basics, A1-A2 Foundation, A2 Intermediate, B1 Advanced, B2 Proficient
+- ✅ **Instant detailed report** - Performance breakdown by level with strengths and weaknesses
+- ✅ **Personalized recommendations** - Specific drill suggestions based on your results
+- ✅ **10-15 minute completion time** - Quick but thorough assessment
+
+**Reflexive Verbs Drill - Major Upgrade:**
+- ✅ **Non-Reflexive Questions Added** - Learn when verbs ARE and AREN'T reflexive
+- ✅ **3-Type Question System** - Reflexive (50%), Reciprocal (25%), Non-Reflexive (25%)
+- ✅ **Enhanced Chip System** - Now includes "none" option for non-reflexive verbs
+- ✅ **Comparative Learning** - "Eu me lavo" vs "Eu lavo o carro" side-by-side
+
+**Ser vs Estar Drill - Deep Analysis & Fixes:**
+- ✅ **Backend Forbidden Words Filter** - Automatically regenerates questions with problematic words (café, frio)
+- ✅ **Mode-Specific Chips** - BP uses 11 conjugations, EP includes tu forms (13 total)
+- ✅ **8 Ambiguous Adjectives** - Split bom/bonito/chato into separate entries
+- ✅ **Conjugation Table Format** - Added clear formatting guidelines
+- ✅ **Subject Omission Notes** - Proper handling of weather/time expressions
+- ✅ **"Both" Always Visible** - Pedagogical improvement for learning edge cases
+
+**Por vs Para Drill:**
+- ✅ **Fixed Drill Loading** - Now properly loads correct prompt configuration
+
+**Technical Improvements:**
+- ✅ **Wrangler Updated** - Latest version 4.45.3
+- ✅ **Prompt Optimization** - Removed redundant instructions and fixed inconsistencies
+- ✅ **5-Layer Defense System** - Multiple safeguards against forbidden word generation
 
 ### New Drills Added
 - ✅ **Portuguese for Spanish Speakers** - Leverage Spanish knowledge with false friends, vocabulary gaps, and grammar differences

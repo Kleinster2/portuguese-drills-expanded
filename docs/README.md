@@ -1,48 +1,95 @@
-# Portuguese Drills - Documentation
+# Portuguese Drills - Documentation Index
 
-This directory contains documentation for the Portuguese Drills platform.
+Welcome to the Portuguese Language Drills documentation! This directory contains comprehensive guides for users, developers, and contributors.
 
-## Available Documentation
+## 📂 Directory Structure
+
+```
+docs/
+├── curriculum/          # Learning guides for users
+├── development/         # Technical documentation for developers
+└── features/           # Feature-specific user guides
+```
+
+---
+
+## 👥 For Users
+
+### [A1 Curriculum Guide](curriculum/A1-curriculum-primer.md)
+**16 KB | Comprehensive learning guide**
+
+Detailed explanation of what each A1-level drill teaches, including verb conjugations, grammar structures, and progression path.
+
+**Best for:** Language learners who want to understand the curriculum structure.
+
+---
+
+### [Shareable Links Guide](features/SHAREABLE_LINKS.md)
+**4.6 KB | Feature documentation**
+
+How to share and bookmark specific drills using the "Copy Link" button and direct URLs.
+
+**Best for:** Users who want to share drills with others or bookmark favorites.
+
+---
+
+## 👨‍💻 For Developers
+
+### [Project Architecture](development/PROJECT_README.md)
+**9 KB | Architecture overview**
+
+Complete technical guide covering tech stack, serverless architecture, session management, build system, and recent updates.
+
+**Best for:** New contributors or developers who want to understand the system architecture.
+
+---
+
+### [Code Map](development/CODEMAP.md)
+**14 KB | Code location reference**
+
+Quick reference with exact file paths and line numbers for debugging and development.
+
+**Best for:** Developers actively working on bug fixes or new features.
+
+---
+
+### [Consistency Analysis](development/DRILL_CONSISTENCY_ANALYSIS.md)
+**14 KB | Improvement roadmap**
+
+Analysis of drill patterns and standardization opportunities across all 47 drills.
+
+**Best for:** Maintainers planning systematic improvements.
+
+---
+
+## 🎯 Creating New Drills
 
 ### [DRILL_TEMPLATE.md](./DRILL_TEMPLATE.md)
 **START HERE** - Ready-to-copy template for creating new drills implementing all 10 best practices.
 
-**Includes:**
-- Complete system prompt template with placeholders
-- Implementation checklist for all 10 best practices
-- Integration steps (index.html, promptManager.js, deployment)
-- Reference to gold standard implementation (common-prepositions.json)
-- Tips for success
-
-**Use this when:**
-- Creating a new drill from scratch
-- Need a quick-start template
-- Want to ensure all best practices are implemented
-
 ### [DRILL_BEST_PRACTICES.md](./DRILL_BEST_PRACTICES.md)
-Comprehensive guide on creating high-quality drill prompts based on analysis of existing drills.
+Comprehensive guide on creating high-quality drill prompts with examples and explanations.
 
-**Includes:**
-- Gold standard reference implementation (common-prepositions.json)
-- Structural patterns for drill design
-- Pedagogical best practices
-- Feedback structure guidelines
-- Error handling approaches
-- Top 10 critical best practices with examples
-- Checklist for new drills
+---
 
-**Use this when:**
-- Understanding WHY each best practice matters
-- Need detailed examples and explanations
-- Improving existing drills
-- Maintaining consistency across the platform
-- Onboarding new contributors
+## 🚀 Quick Start
 
-## Quick Links
+**I want to...**
 
-- **Main Project**: [../README.md](../README.md) (if exists)
+- **Use the drills** → Visit the live site (no docs needed!)
+- **Understand curriculum** → [A1 Curriculum Guide](curriculum/A1-curriculum-primer.md)
+- **Share a drill** → [Shareable Links Guide](features/SHAREABLE_LINKS.md)
+- **Contribute code** → [Project Architecture](development/PROJECT_README.md)
+- **Fix a bug** → [Code Map](development/CODEMAP.md)
+- **Add a new drill** → [DRILL_TEMPLATE.md](./DRILL_TEMPLATE.md)
+
+---
+
+## 🔗 Quick Links
+
+- **Main Project**: [../README.md](../README.md)
 - **Drill Configs**: [../config/prompts/](../config/prompts/)
-- **UI**: [../index.html](../index.html)
+- **Source Code**: [../index.html](../index.html)
 
 ## Documentation Standards
 
@@ -63,4 +110,6 @@ To improve documentation:
 
 ---
 
-**Last updated:** 2025-01-20
+---
+
+**Last updated:** December 2024
