@@ -280,6 +280,9 @@ window.copyHash = function() {
   });
 };
 
+// Expose to global scope for route detection
+window.startPlacementTest = startPlacementTest;
+
 // Export for use in other modules
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { startPlacementTest, loadQuestionBank };
