@@ -1,0 +1,639 @@
+{
+  "metadata": {
+    "version": "3.0.1",
+    "title": "Brazilian Portuguese Placement Test - Curriculum Aligned",
+    "description": "75-question diagnostic with varied formats following Nick's syllabus progression",
+    "variant": "pt-BR",
+    "totalQuestions": 75,
+    "estimatedMinutes": 45,
+    "structure": "Lessons 1-16 sequential assessment"
+  },
+  "lessons": [
+    {"num": 1, "name": "Regular -AR Verbs (present, eu)", "range": [1, 6]},
+    {"num": 2, "name": "Regular -ER Verbs (present, eu)", "range": [7, 10]},
+    {"num": 3, "name": "Regular -IR Verbs (present, eu)", "range": [11, 14]},
+    {"num": 4, "name": "Prepositions & Contractions (eu)", "range": [15, 18]},
+    {"num": 5, "name": "Verb ser (eu sou)", "range": [19, 22]},
+    {"num": 6, "name": "Verb estar (eu estou)", "range": [23, 27]},
+    {"num": 7, "name": "Irregular Verbs - Part 1 (eu)", "range": [28, 31]},
+    {"num": 8, "name": "Irregular Verbs - Part 2 (eu)", "range": [32, 36]},
+    {"num": 9, "name": "Preterite Regular (eu)", "range": [37, 43]},
+    {"num": 10, "name": "Preterite Irregular (eu)", "range": [44, 49]},
+    {"num": 11, "name": "Periphrastic Future (eu vou + infinitive)", "range": [50, 55]},
+    {"num": 12, "name": "Articles & Agreement", "range": [56, 60]},
+    {"num": 13, "name": "Demonstratives & Possessives", "range": [61, 64]},
+    {"num": 14, "name": "Interrogatives, Imperative, Reflexives", "range": [65, 70]},
+    {"num": 15, "name": "Imperfect Tense (all persons)", "range": [71, 74]},
+    {"num": 16, "name": "Subjunctive Introduction", "range": [75, 75]}
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "lesson": 1,
+      "en": "I work at a hospital.",
+      "pt": "Eu ______ em um hospital.",
+      "correct": "trabalho",
+      "options": ["trabalho", "trabalhar", "trabalha", "trabalham", "trabalhei", "trabalhava", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 2,
+      "lesson": 1,
+      "en": "Where do I speak Portuguese every day?",
+      "pt": "Onde eu ______ português todo dia? Na escola.",
+      "correct": "falo",
+      "options": ["falo", "falar", "fala", "falam", "falei", "falava", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 3,
+      "lesson": 1,
+      "en": "I don't study in the morning. When do I study?",
+      "pt": "Eu não estudo de manhã. Eu ______ de noite.",
+      "correct": "estudo",
+      "options": ["estudo", "estudar", "estuda", "estudam", "estudei", "estudava", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 4,
+      "lesson": 1,
+      "en": "My friend runs. What do I do in the park?",
+      "pt": "Meu amigo corre. Eu ______ no parque.",
+      "correct": "caminho",
+      "options": ["caminho", "caminhar", "caminha", "caminham", "caminhei", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 5,
+      "lesson": 1,
+      "en": "What do I do with samba?",
+      "pt": "O que eu faço com samba? Eu ______!",
+      "correct": "danço",
+      "options": ["danço", "dançar", "dança", "dançam", "dancei", "dançava", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 6,
+      "lesson": 1,
+      "en": "My brother lives in Portugal.",
+      "pt": "Meu irmão mora em Portugal. Eu ______ no Brasil.",
+      "correct": "moro",
+      "options": ["moro", "morar", "mora", "moramos", "morei", "morava", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 7,
+      "lesson": 2,
+      "en": "I don't eat meat. What do I eat?",
+      "pt": "Eu não como carne. Eu ______ arroz e feijão.",
+      "correct": "como",
+      "options": ["como", "comer", "come", "comem", "comi", "comia", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 8,
+      "lesson": 2,
+      "en": "Coffee or water?",
+      "pt": "Eu não bebo café. Eu ______ água.",
+      "correct": "bebo",
+      "options": ["bebo", "beber", "bebe", "bebem", "bebi", "bebia", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 9,
+      "lesson": 2,
+      "en": "What language am I learning?",
+      "pt": "Que língua eu ______? Português!",
+      "correct": "aprendo",
+      "options": ["aprendo", "aprender", "aprende", "aprendem", "aprendi", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 10,
+      "lesson": 2,
+      "en": "I run every morning.",
+      "pt": "Eu ______ toda manhã.",
+      "correct": "Nenhuma das anteriores",
+      "options": ["corre", "corremos", "correram", "corria", "correu", "correndo", "Nenhuma das anteriores"],
+      "note": "Correct answer is 'corro' but not provided"
+    },
+    {
+      "id": 11,
+      "lesson": 3,
+      "en": "Every morning, at 8 AM...",
+      "pt": "Todo dia, às 8h, eu ______ a porta da loja.",
+      "correct": "abro",
+      "options": ["abro", "abrir", "abre", "abrem", "abri", "abria", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 12,
+      "lesson": 3,
+      "en": "I'm not slow. How do I decide?",
+      "pt": "Eu não sou devagar. Eu ______ rápido.",
+      "correct": "decido",
+      "options": ["decido", "decidir", "decide", "decidem", "decidi", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 13,
+      "lesson": 3,
+      "en": "When do I leave work?",
+      "pt": "A que horas eu ______ do trabalho? Às seis da tarde.",
+      "correct": "saio",
+      "options": ["saio", "sair", "sai", "saem", "saí", "saía", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 14,
+      "lesson": 3,
+      "en": "The teacher needs help.",
+      "pt": "O professor precisa de ajuda. Eu ______ ele.",
+      "correct": "ajudo",
+      "options": ["ajudo", "ajudar", "ajuda", "ajudam", "ajudei", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 15,
+      "lesson": 4,
+      "en": "My origin...",
+      "pt": "Eu sou ______ São Paulo.",
+      "correct": "de",
+      "options": ["de", "do", "da", "em", "no", "na", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 16,
+      "lesson": 4,
+      "en": "Which city? (Rio is masculine)",
+      "pt": "Em que cidade eu moro? Eu moro ______ Rio.",
+      "correct": "no",
+      "options": ["no", "em", "na", "do", "de", "o", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 17,
+      "lesson": 4,
+      "en": "My preference...",
+      "pt": "Eu não gosto de chá. Eu gosto ______ café.",
+      "correct": "de",
+      "options": ["de", "do", "da", "em", "no", "o", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 18,
+      "lesson": 4,
+      "en": "Where do I study? (universidade is feminine)",
+      "pt": "Onde eu estudo? Eu estudo ______ universidade.",
+      "correct": "na",
+      "options": ["na", "em", "no", "a", "da", "de", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 19,
+      "lesson": 5,
+      "en": "My nationality...",
+      "pt": "Qual é minha nacionalidade? Eu ______ brasileiro.",
+      "correct": "sou",
+      "options": ["sou", "estou", "ser", "estar", "somos", "são", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 20,
+      "lesson": 5,
+      "en": "Not a student - what am I?",
+      "pt": "Eu não sou estudante. Eu ______ professor.",
+      "correct": "sou",
+      "options": ["sou", "estou", "ser", "está", "é", "foi", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 21,
+      "lesson": 5,
+      "en": "Not from Portugal...",
+      "pt": "Eu não sou de Portugal. Eu ______ do Brasil.",
+      "correct": "sou",
+      "options": ["sou", "estou", "ser", "estar", "fui", "era", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 22,
+      "lesson": 5,
+      "en": "I am tall.",
+      "pt": "Eu ______ alto.",
+      "correct": "Nenhuma das anteriores",
+      "options": ["estou", "estar", "estava", "fui", "era", "seja", "Nenhuma das anteriores"],
+      "note": "Correct answer is 'sou' but not provided"
+    },
+    {
+      "id": 23,
+      "lesson": 6,
+      "en": "How am I feeling right now?",
+      "pt": "Como eu me sinto agora? Eu ______ cansado.",
+      "correct": "estou",
+      "options": ["estou", "sou", "estar", "ser", "estava", "fui", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 24,
+      "lesson": 6,
+      "en": "My current location...",
+      "pt": "Onde eu ______? Em casa.",
+      "correct": "estou",
+      "options": ["estou", "sou", "estar", "ser", "foi", "era", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 25,
+      "lesson": 6,
+      "en": "My mood today (temporary state)...",
+      "pt": "Hoje eu ______ feliz, mas ontem eu estava triste.",
+      "correct": "estou",
+      "options": ["estou", "sou", "estar", "ser", "estava", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 26,
+      "lesson": 6,
+      "en": "Can't work because...",
+      "pt": "Eu não posso trabalhar hoje porque eu ______ doente.",
+      "correct": "estou",
+      "options": ["estou", "sou", "estar", "ser", "fiquei", "estava", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 27,
+      "lesson": 6,
+      "en": "Temporary location vs. permanent residence",
+      "pt": "Eu moro no Rio, mas agora eu ______ em São Paulo.",
+      "correct": "estou",
+      "options": ["estou", "sou", "estar", "ser", "moro", "fico", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 28,
+      "lesson": 7,
+      "en": "What do I possess?",
+      "pt": "O que eu ______? Um carro.",
+      "correct": "tenho",
+      "options": ["tenho", "ter", "tem", "temos", "tive", "tinha", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 29,
+      "lesson": 7,
+      "en": "Where am I going?",
+      "pt": "Para onde eu ______? Para a escola.",
+      "correct": "vou",
+      "options": ["vou", "ir", "vai", "vamos", "fui", "ia", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 30,
+      "lesson": 7,
+      "en": "What do I do every night?",
+      "pt": "O que eu faço toda noite? Eu ______ a lição de casa.",
+      "correct": "faço",
+      "options": ["faço", "fazer", "faz", "fazemos", "fiz", "fazia", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 31,
+      "lesson": 7,
+      "en": "Direction of movement...",
+      "pt": "De onde eu ______? Do trabalho.",
+      "correct": "venho",
+      "options": ["venho", "vir", "vem", "vimos", "vim", "vinha", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 32,
+      "lesson": 8,
+      "en": "I can speak Portuguese.",
+      "pt": "Eu ______ falar português.",
+      "correct": "Nenhuma das anteriores",
+      "options": ["podo", "pode", "podem", "podia", "pude", "poderia", "Nenhuma das anteriores"],
+      "note": "Correct answer is 'posso' but not provided"
+    },
+    {
+      "id": 33,
+      "lesson": 8,
+      "en": "Not tea - what do I want?",
+      "pt": "Eu não quero chá. Eu ______ café.",
+      "correct": "quero",
+      "options": ["quero", "querer", "quer", "queremos", "quis", "queria", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 34,
+      "lesson": 8,
+      "en": "I never lie. What do I say?",
+      "pt": "Eu nunca minto. Eu sempre ______ a verdade.",
+      "correct": "digo",
+      "options": ["digo", "dizer", "diz", "dizemos", "disse", "dizia", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 35,
+      "lesson": 8,
+      "en": "I'm generous. What do I give?",
+      "pt": "Eu sou generoso. Eu ______ dinheiro para pessoas na rua.",
+      "correct": "dou",
+      "options": ["dou", "dar", "dá", "damos", "dei", "dava", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 36,
+      "lesson": 8,
+      "en": "I studied! Now what?",
+      "pt": "Eu estudei muito. Agora eu ______ a resposta.",
+      "correct": "sei",
+      "options": ["sei", "saber", "sabe", "sabemos", "soube", "sabia", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 37,
+      "lesson": 9,
+      "en": "What did I do yesterday?",
+      "pt": "O que eu fiz ontem? Eu ______.",
+      "correct": "trabalhei",
+      "options": ["trabalhei", "trabalho", "trabalhar", "trabalhava", "trabalharei", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 38,
+      "lesson": 9,
+      "en": "Past action - completed",
+      "pt": "Ontem eu ______ com a Maria sobre o projeto.",
+      "correct": "falei",
+      "options": ["falei", "falo", "falar", "falava", "falarei", "falaria", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 39,
+      "lesson": 9,
+      "en": "I'm tired because...",
+      "pt": "Estou cansado porque eu ______ muito ontem à noite.",
+      "correct": "estudei",
+      "options": ["estudei", "estudo", "estudar", "estudava", "estudarei", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 40,
+      "lesson": 9,
+      "en": "What did I eat yesterday?",
+      "pt": "O que eu comi ontem? Eu ______ pizza.",
+      "correct": "comi",
+      "options": ["comi", "como", "comer", "comia", "comerei", "comeria", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 41,
+      "lesson": 9,
+      "en": "I opened the window.",
+      "pt": "Eu ______ a janela.",
+      "correct": "Nenhuma das anteriores",
+      "options": ["abro", "abrí", "abriu", "abria", "abrimos", "abriram", "Nenhuma das anteriores"],
+      "note": "Correct answer is 'abri' but not provided"
+    },
+    {
+      "id": 42,
+      "lesson": 9,
+      "en": "Negative past action",
+      "pt": "Quando eu cheguei no Brasil, eu não ______ português.",
+      "correct": "falei",
+      "options": ["falei", "falo", "falar", "falava", "falarei", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 43,
+      "lesson": 9,
+      "en": "When did I make the decision?",
+      "pt": "Quando eu decidi? Eu ______ ontem.",
+      "correct": "decidi",
+      "options": ["decidi", "decido", "decidir", "decidia", "decidirei", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 44,
+      "lesson": 10,
+      "en": "Where did I go last weekend?",
+      "pt": "Para onde eu fui no fim de semana? Eu ______ para a praia.",
+      "correct": "fui",
+      "options": ["fui", "vou", "ir", "ia", "irei", "seria", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 45,
+      "lesson": 10,
+      "en": "My past identity...",
+      "pt": "Agora eu sou professor, mas antes eu ______ estudante.",
+      "correct": "fui",
+      "options": ["fui", "era", "sou", "ser", "estava", "estive", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 46,
+      "lesson": 10,
+      "en": "I had a pet (no longer have it)...",
+      "pt": "Quando eu era criança, eu ______ um cachorro.",
+      "correct": "tive",
+      "options": ["tive", "tenho", "ter", "tinha", "terei", "teria", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 47,
+      "lesson": 10,
+      "en": "Completed past action with 'fazer'",
+      "pt": "Ontem eu ______ todo o trabalho sozinho.",
+      "correct": "fiz",
+      "options": ["fiz", "faço", "fazer", "fazia", "farei", "faria", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 48,
+      "lesson": 10,
+      "en": "Past ability - one time",
+      "pt": "Foi difícil, mas finalmente eu ______ ajudar.",
+      "correct": "pude",
+      "options": ["pude", "posso", "poder", "podia", "poderei", "poderia", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 49,
+      "lesson": 10,
+      "en": "What was my answer?",
+      "pt": "Ela me perguntou se eu queria ir. Eu ______ que sim.",
+      "correct": "disse",
+      "options": ["disse", "digo", "dizer", "dizia", "direi", "diria", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 50,
+      "lesson": 11,
+      "en": "My near future plan...",
+      "pt": "Agora eu ______ estudar para a prova.",
+      "correct": "vou",
+      "options": ["vou", "vou a", "irei", "ir", "vá", "foi", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 51,
+      "lesson": 11,
+      "en": "I'm going to travel tomorrow.",
+      "pt": "Eu ______ viajar amanhã.",
+      "correct": "Nenhuma das anteriores",
+      "options": ["viajarei", "viajo", "viajei", "viajava", "viajaria", "viajasse", "Nenhuma das anteriores"],
+      "note": "Correct answer is 'vou' but not provided"
+    },
+    {
+      "id": 52,
+      "lesson": 11,
+      "en": "Tonight's plan...",
+      "pt": "Hoje à noite eu ______ trabalhar até tarde.",
+      "correct": "vou",
+      "options": ["vou", "irei", "ir", "trabalharei", "trabalhei", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 53,
+      "lesson": 11,
+      "en": "Right now - immediate future",
+      "pt": "Estou com fome. Eu ______ comer agora.",
+      "correct": "vou",
+      "options": ["vou", "irei", "comerei", "como", "comi", "comeria", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 54,
+      "lesson": 11,
+      "en": "Tomorrow's schedule...",
+      "pt": "Amanhã eu tenho consulta. Eu ______ sair cedo.",
+      "correct": "vou",
+      "options": ["vou", "irei", "sairei", "saio", "saí", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 55,
+      "lesson": 11,
+      "en": "Store errand...",
+      "pt": "Não tem pão em casa. Eu ______ comprar pão na padaria.",
+      "correct": "vou",
+      "options": ["vou", "irei", "comprarei", "compro", "comprei", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 56,
+      "lesson": 12,
+      "en": "Definite article - masculine singular",
+      "pt": "Eu vejo ______ livro na mesa.",
+      "correct": "o",
+      "options": ["o", "a", "um", "uma", "os", "as", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 57,
+      "lesson": 12,
+      "en": "Indefinite article - feminine singular",
+      "pt": "Eu tenho ______ casa grande.",
+      "correct": "uma",
+      "options": ["uma", "um", "a", "o", "umas", "uns", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 58,
+      "lesson": 12,
+      "en": "I am at home.",
+      "pt": "Eu estou em ______.",
+      "correct": "Nenhuma das anteriores",
+      "options": ["a casa", "o casa", "uma casa", "um casa", "da casa", "na casa", "Nenhuma das anteriores"],
+      "note": "Correct answer is 'casa' (no article) but not provided"
+    },
+    {
+      "id": 59,
+      "lesson": 12,
+      "en": "Gender agreement - masculine",
+      "pt": "Eu sou um estudante ______.",
+      "correct": "brasileiro",
+      "options": ["brasileiro", "brasileira", "brasileiros", "brasileiras", "brasil", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 60,
+      "lesson": 12,
+      "en": "Gender agreement - feminine, invariable adjective",
+      "pt": "Eu sou uma estudante ______.",
+      "correct": "inteligente",
+      "options": ["inteligente", "inteligento", "inteligenta", "inteligentes", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 61,
+      "lesson": 13,
+      "en": "Demonstrative - this (near me)",
+      "pt": "______ livro aqui é meu.",
+      "correct": "Este",
+      "options": ["Este", "Esse", "Aquele", "Isto", "Isso", "Aquilo", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 62,
+      "lesson": 13,
+      "en": "Demonstrative - that (near you)",
+      "pt": "______ carro aí é caro.",
+      "correct": "Esse",
+      "options": ["Esse", "Este", "Aquele", "Isso", "Isto", "Aquilo", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 63,
+      "lesson": 13,
+      "en": "Possessive - masculine singular",
+      "pt": "______ nome é Gil. Como é o seu?",
+      "correct": "Meu",
+      "options": ["Meu", "Minha", "Meus", "Minhas", "O meu", "A minha", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 64,
+      "lesson": 13,
+      "en": "Possessive - feminine singular",
+      "pt": "______ casa é aqui nesta rua.",
+      "correct": "Minha",
+      "options": ["Minha", "Meu", "Minhas", "Meus", "A minha", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 65,
+      "lesson": 14,
+      "en": "Interrogative - what",
+      "pt": "______ eu faço no trabalho? Eu ensino português.",
+      "correct": "O que",
+      "options": ["O que", "Que", "Qual", "Onde", "Quando", "Como", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 66,
+      "lesson": 14,
+      "en": "Where do I live?",
+      "pt": "______ eu moro?",
+      "correct": "Nenhuma das anteriores",
+      "options": ["Aonde", "Quando", "Como", "Qual", "Quem", "Por que", "Nenhuma das anteriores"],
+      "note": "Correct answer is 'Onde' but not provided"
+    },
+    {
+      "id": 67,
+      "lesson": 14,
+      "en": "Imperative - tu (affirmative)",
+      "pt": "______ comigo! (tu)",
+      "correct": "Fala",
+      "options": ["Fala", "Fale", "Falas", "Falar", "Falando", "Falou", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 68,
+      "lesson": 14,
+      "en": "Imperative - você (negative)",
+      "pt": "Não ______ agora! Espera. (você)",
+      "correct": "fale",
+      "options": ["fale", "fala", "falar", "falas", "falou", "falando", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 69,
+      "lesson": 14,
+      "en": "Reflexive pronoun - first person",
+      "pt": "Todo dia eu ______ levanto às 6h.",
+      "correct": "me",
+      "options": ["me", "te", "se", "nos", "lhe", "o", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 70,
+      "lesson": 14,
+      "en": "Reflexive pronoun - você",
+      "pt": "Como você ______ chama?",
+      "correct": "se",
+      "options": ["se", "me", "te", "nos", "lhe", "o", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 71,
+      "lesson": 15,
+      "en": "Imperfect - habitual past action",
+      "pt": "Quando eu era criança, eu ______ inglês em casa.",
+      "correct": "falava",
+      "options": ["falava", "falo", "falei", "falar", "falarei", "falaria", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 72,
+      "lesson": 15,
+      "en": "Imperfect - você",
+      "pt": "Você mora em São Paulo agora? Antes você ______ aqui no Rio.",
+      "correct": "morava",
+      "options": ["morava", "mora", "morou", "morar", "morará", "moraria", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 73,
+      "lesson": 15,
+      "en": "We used to dance samba.",
+      "pt": "Nós ______ samba.",
+      "correct": "Nenhuma das anteriores",
+      "options": ["dançava", "dançamos", "dançaram", "dançar", "dançaremos", "dançaríamos", "Nenhuma das anteriores"],
+      "note": "Correct answer is 'dançávamos' but not provided"
+    },
+    {
+      "id": 74,
+      "lesson": 15,
+      "en": "Imperfect - nós (habitual past)",
+      "pt": "Todo verão nós ______ para a praia.",
+      "correct": "íamos",
+      "options": ["íamos", "vamos", "fomos", "ir", "iremos", "iríamos", "Nenhuma das anteriores"]
+    },
+    {
+      "id": 75,
+      "lesson": 16,
+      "en": "Subjunctive - present (with esperar que)",
+      "pt": "Espero que você ______ português bem.",
+      "correct": "fale",
+      "options": ["fale", "fala", "falar", "falou", "falava", "falará", "Nenhuma das anteriores"]
+    }
+  ]
+}

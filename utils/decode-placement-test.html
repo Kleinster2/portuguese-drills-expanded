@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placement Test Decoder - Portuguese Drills</title>
+  <script src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #f8f9fa;
+      line-height: 1.6;
+    }
+    h1 { margin-bottom: 10px; color: #1e293b; font-size: 28px; }
+    h2 { margin: 30px 0 15px 0; color: #334155; font-size: 22px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
+    h3 { margin: 20px 0 10px 0; color: #475569; font-size: 18px; }
+    .subtitle { color: #64748b; margin-bottom: 30px; }
+    .input-section {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    label { display: block; margin-bottom: 8px; font-weight: 600; color: #475569; }
+    #hash-input {
+      width: 100%;
+      padding: 14px;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    #hash-input:focus {
+      outline: none;
+      border-color: #3b82f6;
+    }
+    button {
+      background: #16a34a;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    button:hover { background: #15803d; }
+    button:active { transform: scale(0.98); }
+    #report {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .meta-info {
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 15px 0;
+      font-size: 14px;
+    }
+    .meta-info p { margin: 5px 0; }
+    .meta-info strong { color: #334155; }
+    .placement-box {
+      background: linear-gradient(135deg, #dcfce7 0%, #d1fae5 100%);
+      border: 2px solid #16a34a;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 25px 0;
+    }
+    .placement-box h3 { margin-top: 0; color: #166534; }
+    .placement-box .lesson-num { font-size: 32px; font-weight: bold; color: #16a34a; }
+    .placement-box .lesson-name { font-size: 20px; margin: 10px 0; color: #166534; }
+    .placement-box .notes { font-size: 14px; color: #166534; margin-top: 10px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    th, td {
+      padding: 12px 10px;
+      text-align: left;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    th {
+      background: #f8fafc;
+      font-weight: 600;
+      color: #475569;
+      position: sticky;
+      top: 0;
+    }
+    tr:hover { background: #f8fafc; }
+    .correct { color: #16a34a; font-weight: bold; }
+    .incorrect { color: #dc2626; font-weight: bold; }
+    .lesson-section {
+      margin-top: 40px;
+      padding-top: 25px;
+      border-top: 2px solid #e2e8f0;
+    }
+    .score-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .score-excellent { background: #dcfce7; color: #166534; }
+    .score-good { background: #fef3c7; color: #854d0e; }
+    .score-needs-work { background: #fee2e2; color: #991b1b; }
+    @media print {
+      body { background: white; }
+      button { display: none; }
+      .input-section { display: none; }
+      .no-print { display: none; }
+    }
+    @media (max-width: 768px) {
+      body { padding: 10px; }
+      h1 { font-size: 24px; }
+      table { font-size: 12px; }
+      th, td { padding: 8px 6px; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🇧🇷 Portuguese Placement Test Decoder</h1>
+  <p class="subtitle">Diagnostic Report Generator - Brazilian Portuguese</p>
+
+  <div class="input-section">
+    <label for="hash-input">Paste Student Hash:</label>
+    <input
+      type="text"
+      id="hash-input"
+      placeholder="PT-BR-N4IgdghgtgpiBcIDKBXA..."
+      autofocus
+    >
+    <button onclick="decode()">📊 Decode & Generate Report</button>
+  </div>
+
+  <div id="report"></div>
+
+  <script>
+    // Question bank will be fetched
+    let QUESTION_BANK = null;
+
+    // Load question bank
+    async function loadQuestionBank() {
+      try {
+        const response = await fetch('../config/placement-test-questions-v3.json');
+        if (!response.ok) {
+          throw new Error('Failed to load question bank');
+        }
+        QUESTION_BANK = await response.json();
+        console.log('✓ Question bank loaded:', QUESTION_BANK.questions.length, 'questions');
+      } catch (error) {
+        console.error('Error loading question bank:', error);
+        alert('Error: Could not load question bank. Make sure this file is in the utils/ directory of the project.');
+        throw error;
+      }
+    }
+
+    async function decode() {
+      const input = document.getElementById('hash-input').value.trim();
+
+      if (!input.startsWith('PT-BR-')) {
+        alert('Invalid hash format. Hash must start with "PT-BR-"');
+        return;
+      }
+
+      // Load question bank if not loaded
+      if (!QUESTION_BANK) {
+        document.getElementById('report').innerHTML = '<p>Loading question bank...</p>';
+        try {
+          await loadQuestionBank();
+        } catch (error) {
+          document.getElementById('report').innerHTML = '<p style="color: red;">Error loading question bank. See console for details.</p>';
+          return;
+        }
+      }
+
+      try {
+        const encoded = input.replace('PT-BR-', '');
+        const json = LZString.decompressFromBase64(encoded);
+
+        if (!json) {
+          throw new Error('Failed to decompress hash');
+        }
+
+        const data = JSON.parse(json);
+        generateReport(data, input);
+      } catch (error) {
+        alert('Error decoding hash. Please check the code and try again.\\n\\nError: ' + error.message);
+        console.error('Decode error:', error);
+      }
+    }
+
+    function generateReport(data, originalHash) {
+      const timestamp = new Date(data.t * 1000);
+      const totalCorrect = data.a.filter(a => a.c).length;
+      const totalScore = Math.round(totalCorrect / 75 * 100);
+
+      // Calculate lesson scores
+      const lessonScores = {};
+      data.a.forEach(answer => {
+        const lesson = answer.lesson;
+        if (!lessonScores[lesson]) {
+          lessonScores[lesson] = { correct: 0, total: 0 };
+        }
+        lessonScores[lesson].total++;
+        if (answer.c) lessonScores[lesson].correct++;
+      });
+
+      // Determine placement
+      const placement = determinePlacement(lessonScores);
+
+      // Build HTML report
+      let html = `
+        <h2>Diagnostic Report</h2>
+
+        <div class="meta-info">
+          <p><strong>Hash:</strong> <code>${originalHash}</code></p>
+          <p><strong>Test Date:</strong> ${timestamp.toLocaleString('en-US', {
+            dateStyle: 'full',
+            timeStyle: 'short'
+          })}</p>
+          <p><strong>Test Version:</strong> ${data.v} (Brazilian Portuguese)</p>
+          <p><strong>Total Score:</strong> ${totalCorrect}/75 questions correct (${totalScore}%)</p>
+        </div>
+
+        <div class="placement-box">
+          <h3>📍 Recommended Starting Point</h3>
+          <div class="lesson-num">Lesson ${placement.lesson}</div>
+          <div class="lesson-name">${placement.name}</div>
+          ${placement.notes ? `<div class="notes">${placement.notes}</div>` : ''}
+        </div>
+
+        <h2>Question-by-Question Results</h2>
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 60px;">Q#</th>
+              <th style="width: 80px;">Lesson</th>
+              <th>Selected Answer</th>
+              <th style="width: 80px;">Result</th>
+              <th>Correct Answer</th>
+            </tr>
+          </thead>
+          <tbody>
+      `;
+
+      data.a.forEach((answer) => {
+        const question = QUESTION_BANK.questions.find(q => q.id === answer.q);
+        const status = answer.c ?
+          '<span class="correct">✓ Correct</span>' :
+          '<span class="incorrect">✗ Wrong</span>';
+
+        html += `
+          <tr>
+            <td><strong>${answer.q}</strong></td>
+            <td>L${answer.lesson}</td>
+            <td><code>${answer.s}</code></td>
+            <td>${status}</td>
+            <td>${answer.c ? '—' : '<code>' + question.correct + '</code>'}</td>
+          </tr>
+        `;
+      });
+
+      html += `
+          </tbody>
+        </table>
+
+        <div class="lesson-section">
+          <h2>Performance by Lesson</h2>
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 80px;">Lesson</th>
+                <th>Topic</th>
+                <th style="width: 100px;">Score</th>
+                <th style="width: 100px;">Percentage</th>
+                <th style="width: 120px;">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+      `;
+
+      QUESTION_BANK.lessons.forEach(lesson => {
+        const score = lessonScores[lesson.num];
+        if (score) {
+          const pct = Math.round(score.correct / score.total * 100);
+          let badge = '';
+          if (pct >= 85) {
+            badge = '<span class="score-badge score-excellent">Mastered</span>';
+          } else if (pct >= 70) {
+            badge = '<span class="score-badge score-good">Good</span>';
+          } else {
+            badge = '<span class="score-badge score-needs-work">Needs Work</span>';
+          }
+
+          html += `
+            <tr>
+              <td><strong>${lesson.num}</strong></td>
+              <td>${lesson.name}</td>
+              <td>${score.correct}/${score.total}</td>
+              <td>${pct}%</td>
+              <td>${badge}</td>
+            </tr>
+          `;
+        }
+      });
+
+      html += `
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #e2e8f0; color: #64748b; font-size: 13px;">
+          <p>Report generated: ${new Date().toLocaleString()}</p>
+          <p class="no-print">Tip: Use your browser's print function (Ctrl+P / Cmd+P) to save or print this report.</p>
+        </div>
+      `;
+
+      document.getElementById('report').innerHTML = html;
+    }
+
+    function determinePlacement(scores) {
+      const THRESHOLD = 0.75; // 75% mastery required
+
+      for (let lesson = 1; lesson <= 16; lesson++) {
+        const score = scores[lesson];
+
+        // No data for this lesson = hasn't reached it yet
+        if (!score || score.total === 0) {
+          const lessonInfo = QUESTION_BANK.lessons.find(l => l.num === lesson);
+          return {
+            lesson: lesson,
+            name: lessonInfo.name,
+            notes: 'Student has not yet covered this material. Start instruction here.'
+          };
+        }
+
+        // Check mastery
+        const accuracy = score.correct / score.total;
+        if (accuracy < THRESHOLD) {
+          const lessonInfo = QUESTION_BANK.lessons.find(l => l.num === lesson);
+          return {
+            lesson: lesson,
+            name: lessonInfo.name,
+            notes: `Student scored ${Math.round(accuracy*100)}% on this lesson (below 75% mastery threshold). Review recommended.`
+          };
+        }
+      }
+
+      // Mastered everything!
+      return {
+        lesson: 17,
+        name: 'Advanced Content (Beyond Curriculum)',
+        notes: 'Student has mastered all 16 curriculum lessons with 75%+ accuracy. Ready for B2+ advanced material.'
+      };
+    }
+
+    // Auto-load question bank on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      loadQuestionBank().catch(console.error);
+    });
+  </script>
+</body>
+</html>
