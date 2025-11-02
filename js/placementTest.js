@@ -12,7 +12,7 @@ let testAnswers = [];
  */
 async function loadQuestionBank() {
   try {
-    const response = await fetch('/config/placement-test-questions-v3.json');
+    const response = await fetch('/config/placement-test-questions-v4.json');
     if (!response.ok) {
       throw new Error(`Failed to load questions: ${response.status}`);
     }
@@ -99,6 +99,7 @@ function shuffleArray(array) {
 
 /**
  * Display a question (incognito - no topic labels)
+ * v4 format: Comprehension-based with English questions and options
  */
 function displayQuestion(index) {
   const messagesContainer = document.getElementById('chat-messages');
@@ -107,15 +108,18 @@ function displayQuestion(index) {
   // Shuffle options to randomize answer positions
   const shuffledOptions = shuffleArray(question.options);
 
+  // v4 format: Show Portuguese sentence (if exists) + English question + English options
+  const portugueseLine = question.pt ? `<p class="font-mono mb-3 text-lg text-blue-700">${question.pt}</p>` : '';
+
   const questionHTML = `
     <div class="flex items-start space-x-3 mb-4" data-question-id="${question.id}">
       <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
         <span class="text-blue-600 text-sm font-bold">${index + 1}</span>
       </div>
       <div class="bg-slate-100 rounded-2xl p-4 max-w-2xl w-full">
-        <p class="text-xs text-slate-500 mb-2">Question ${index + 1} of 75</p>
-        <p class="mb-2">"${question.en}"</p>
-        <p class="font-mono mb-3 text-lg">${question.pt}</p>
+        <p class="text-xs text-slate-500 mb-2">Question ${index + 1} of ${questionBank.questions.length}</p>
+        ${portugueseLine}
+        <p class="mb-3 font-semibold text-slate-800">${question.question}</p>
         <div class="flex flex-wrap gap-2" id="question-${question.id}-options">
           ${shuffledOptions.map(opt => `
             <button
@@ -245,7 +249,7 @@ function showCompletionScreen() {
  */
 function generateHash() {
   const testData = {
-    v: "3.0.0",
+    v: "4.0.0",
     t: Math.floor(Date.now() / 1000),
     a: testAnswers
   };

@@ -154,7 +154,7 @@
     // Load question bank
     async function loadQuestionBank() {
       try {
-        const response = await fetch('../config/placement-test-questions-v3.json');
+        const response = await fetch('../config/placement-test-questions-v4.json');
         if (!response.ok) {
           throw new Error('Failed to load question bank');
         }
@@ -205,7 +205,8 @@
     function generateReport(data, originalHash) {
       const timestamp = new Date(data.t * 1000);
       const totalCorrect = data.a.filter(a => a.c).length;
-      const totalScore = Math.round(totalCorrect / 75 * 100);
+      const totalQuestions = data.a.length;
+      const totalScore = Math.round(totalCorrect / totalQuestions * 100);
 
       // Calculate lesson scores
       const lessonScores = {};
@@ -232,7 +233,7 @@
             timeStyle: 'short'
           })}</p>
           <p><strong>Test Version:</strong> ${data.v} (Brazilian Portuguese)</p>
-          <p><strong>Total Score:</strong> ${totalCorrect}/75 questions correct (${totalScore}%)</p>
+          <p><strong>Total Score:</strong> ${totalCorrect}/${totalQuestions} questions correct (${totalScore}%)</p>
         </div>
 
         <div class="placement-box">

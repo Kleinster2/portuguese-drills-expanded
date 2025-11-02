@@ -1,0 +1,643 @@
+{
+  "metadata": {
+    "version": "4.0.0",
+    "title": "Brazilian Portuguese Placement Test - Comprehension Based",
+    "description": "Zero-knowledge friendly comprehension test using eu-only approach",
+    "variant": "pt-BR",
+    "totalQuestions": 70,
+    "estimatedMinutes": 35,
+    "structure": "Progressive comprehension from single words to complex sentences (eu-only)"
+  },
+  "lessons": [
+    {"num": 1, "name": "Single Word Recognition", "range": [1, 10]},
+    {"num": 2, "name": "Two-Word Phrases (eu + verb)", "range": [11, 20]},
+    {"num": 3, "name": "Simple Sentences (Present -AR verbs)", "range": [21, 28]},
+    {"num": 4, "name": "Simple Sentences (Present -ER/-IR verbs)", "range": [29, 35]},
+    {"num": 5, "name": "Irregular Verbs (ser, estar, ter, ir)", "range": [36, 43]},
+    {"num": 6, "name": "ser vs estar Recognition", "range": [44, 48]},
+    {"num": 7, "name": "Prepositions & Contractions", "range": [49, 53]},
+    {"num": 8, "name": "Past Tense (Preterite) Recognition", "range": [54, 60]},
+    {"num": 9, "name": "Future (vou + infinitive)", "range": [61, 65]},
+    {"num": 10, "name": "Complex Structures (negation, reflexives, imperfect)", "range": [66, 70]}
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "lesson": 1,
+      "type": "word-recognition",
+      "pt": "Eu",
+      "question": "What does 'Eu' mean?",
+      "correct": "I",
+      "options": ["I", "You", "He", "We", "They", "She"]
+    },
+    {
+      "id": 2,
+      "lesson": 1,
+      "type": "word-recognition",
+      "pt": "sou",
+      "question": "What does 'sou' mean?",
+      "correct": "am",
+      "options": ["am", "have", "go", "want", "can", "do"]
+    },
+    {
+      "id": 3,
+      "lesson": 1,
+      "type": "word-recognition",
+      "pt": "tenho",
+      "question": "What does 'tenho' mean?",
+      "correct": "have",
+      "options": ["have", "am", "go", "want", "work", "live"]
+    },
+    {
+      "id": 4,
+      "lesson": 1,
+      "type": "word-recognition",
+      "pt": "trabalho",
+      "question": "What does 'trabalho' mean?",
+      "correct": "work",
+      "options": ["work", "live", "speak", "study", "eat", "drink"]
+    },
+    {
+      "id": 5,
+      "lesson": 1,
+      "type": "word-recognition",
+      "pt": "moro",
+      "question": "What does 'moro' mean?",
+      "correct": "live",
+      "options": ["live", "work", "study", "speak", "eat", "walk"]
+    },
+    {
+      "id": 6,
+      "lesson": 1,
+      "type": "word-recognition",
+      "pt": "falo",
+      "question": "What does 'falo' mean?",
+      "correct": "speak",
+      "options": ["speak", "work", "live", "eat", "study", "drink"]
+    },
+    {
+      "id": 7,
+      "lesson": 1,
+      "type": "word-recognition",
+      "pt": "como",
+      "question": "What does 'como' mean?",
+      "correct": "eat",
+      "options": ["eat", "drink", "speak", "work", "live", "study"]
+    },
+    {
+      "id": 8,
+      "lesson": 1,
+      "type": "word-recognition",
+      "pt": "estudo",
+      "question": "What does 'estudo' mean?",
+      "correct": "study",
+      "options": ["study", "work", "speak", "live", "eat", "walk"]
+    },
+    {
+      "id": 9,
+      "lesson": 1,
+      "type": "word-recognition",
+      "pt": "vou",
+      "question": "What does 'vou' mean?",
+      "correct": "go / am going",
+      "options": ["go / am going", "have", "am", "want", "can", "do"]
+    },
+    {
+      "id": 10,
+      "lesson": 1,
+      "type": "word-recognition",
+      "pt": "estou",
+      "question": "What does 'estou' mean?",
+      "correct": "am",
+      "options": ["am", "have", "go", "want", "live", "work"]
+    },
+    {
+      "id": 11,
+      "lesson": 2,
+      "type": "phrase-recognition",
+      "pt": "Eu sou",
+      "question": "What does 'Eu sou' mean?",
+      "correct": "I am",
+      "options": ["I am", "I have", "I go", "I want", "I can", "I do"]
+    },
+    {
+      "id": 12,
+      "lesson": 2,
+      "type": "phrase-recognition",
+      "pt": "Eu tenho",
+      "question": "What does 'Eu tenho' mean?",
+      "correct": "I have",
+      "options": ["I have", "I am", "I go", "I want", "I work", "I live"]
+    },
+    {
+      "id": 13,
+      "lesson": 2,
+      "type": "phrase-recognition",
+      "pt": "Eu trabalho",
+      "question": "What does 'Eu trabalho' mean?",
+      "correct": "I work",
+      "options": ["I work", "I live", "I speak", "I study", "I eat", "I drink"]
+    },
+    {
+      "id": 14,
+      "lesson": 2,
+      "type": "phrase-recognition",
+      "pt": "Eu moro",
+      "question": "What does 'Eu moro' mean?",
+      "correct": "I live",
+      "options": ["I live", "I work", "I speak", "I study", "I eat", "I go"]
+    },
+    {
+      "id": 15,
+      "lesson": 2,
+      "type": "phrase-recognition",
+      "pt": "Eu falo",
+      "question": "What does 'Eu falo' mean?",
+      "correct": "I speak",
+      "options": ["I speak", "I work", "I live", "I study", "I eat", "I walk"]
+    },
+    {
+      "id": 16,
+      "lesson": 2,
+      "type": "phrase-production",
+      "question": "Which phrase means 'I study'?",
+      "correct": "Eu estudo",
+      "options": ["Eu estudo", "Eu trabalho", "Eu falo", "Eu moro", "Eu como", "Eu bebo"]
+    },
+    {
+      "id": 17,
+      "lesson": 2,
+      "type": "phrase-production",
+      "question": "Which phrase means 'I eat'?",
+      "correct": "Eu como",
+      "options": ["Eu como", "Eu bebo", "Eu falo", "Eu estudo", "Eu trabalho", "Eu moro"]
+    },
+    {
+      "id": 18,
+      "lesson": 2,
+      "type": "phrase-recognition",
+      "pt": "Eu vou",
+      "question": "What does 'Eu vou' mean?",
+      "correct": "I go / I am going",
+      "options": ["I go / I am going", "I have", "I am", "I want", "I can", "I do"]
+    },
+    {
+      "id": 19,
+      "lesson": 2,
+      "type": "phrase-recognition",
+      "pt": "Eu estou",
+      "question": "What does 'Eu estou' mean?",
+      "correct": "I am",
+      "options": ["I am", "I have", "I go", "I want", "I work", "I live"]
+    },
+    {
+      "id": 20,
+      "lesson": 2,
+      "type": "phrase-production",
+      "question": "Which phrase means 'I have'?",
+      "correct": "Eu tenho",
+      "options": ["Eu tenho", "Eu sou", "Eu estou", "Eu vou", "Eu faço", "Eu quero"]
+    },
+    {
+      "id": 21,
+      "lesson": 3,
+      "type": "sentence-comprehension",
+      "pt": "Eu trabalho em um hospital.",
+      "question": "What does 'Eu trabalho em um hospital' mean?",
+      "correct": "I work at a hospital",
+      "options": ["I work at a hospital", "I live in a hospital", "I study at a hospital", "I go to a hospital", "I am at a hospital"]
+    },
+    {
+      "id": 22,
+      "lesson": 3,
+      "type": "sentence-comprehension",
+      "pt": "Eu moro no Brasil.",
+      "question": "What does 'Eu moro no Brasil' mean?",
+      "correct": "I live in Brazil",
+      "options": ["I live in Brazil", "I work in Brazil", "I am from Brazil", "I go to Brazil", "I study in Brazil"]
+    },
+    {
+      "id": 23,
+      "lesson": 3,
+      "type": "sentence-comprehension",
+      "pt": "Eu falo português.",
+      "question": "What does 'Eu falo português' mean?",
+      "correct": "I speak Portuguese",
+      "options": ["I speak Portuguese", "I study Portuguese", "I learn Portuguese", "I understand Portuguese", "I write Portuguese"]
+    },
+    {
+      "id": 24,
+      "lesson": 3,
+      "type": "sentence-comprehension",
+      "pt": "Eu estudo de noite.",
+      "question": "What does 'Eu estudo de noite' mean?",
+      "correct": "I study at night",
+      "options": ["I study at night", "I work at night", "I sleep at night", "I eat at night", "I go at night"]
+    },
+    {
+      "id": 25,
+      "lesson": 3,
+      "type": "sentence-comprehension",
+      "pt": "Eu caminho no parque.",
+      "question": "What does 'Eu caminho no parque' mean?",
+      "correct": "I walk in the park",
+      "options": ["I walk in the park", "I run in the park", "I work in the park", "I live in the park", "I study in the park"]
+    },
+    {
+      "id": 26,
+      "lesson": 3,
+      "type": "sentence-production",
+      "question": "Which sentence means 'I dance samba'?",
+      "correct": "Eu danço samba",
+      "options": ["Eu danço samba", "Eu canto samba", "Eu escuto samba", "Eu toco samba", "Eu gosto de samba"]
+    },
+    {
+      "id": 27,
+      "lesson": 3,
+      "type": "sentence-comprehension",
+      "pt": "Eu canto bem.",
+      "question": "What does 'Eu canto bem' mean?",
+      "correct": "I sing well",
+      "options": ["I sing well", "I dance well", "I speak well", "I work well", "I study well"]
+    },
+    {
+      "id": 28,
+      "lesson": 3,
+      "type": "sentence-comprehension",
+      "pt": "Eu escuto música.",
+      "question": "What does 'Eu escuto música' mean?",
+      "correct": "I listen to music",
+      "options": ["I listen to music", "I play music", "I sing music", "I write music", "I study music"]
+    },
+    {
+      "id": 29,
+      "lesson": 4,
+      "type": "sentence-comprehension",
+      "pt": "Eu como arroz e feijão.",
+      "question": "What does 'Eu como arroz e feijão' mean?",
+      "correct": "I eat rice and beans",
+      "options": ["I eat rice and beans", "I cook rice and beans", "I like rice and beans", "I buy rice and beans", "I want rice and beans"]
+    },
+    {
+      "id": 30,
+      "lesson": 4,
+      "type": "sentence-comprehension",
+      "pt": "Eu bebo água.",
+      "question": "What does 'Eu bebo água' mean?",
+      "correct": "I drink water",
+      "options": ["I drink water", "I want water", "I need water", "I have water", "I like water"]
+    },
+    {
+      "id": 31,
+      "lesson": 4,
+      "type": "sentence-comprehension",
+      "pt": "Eu aprendo português.",
+      "question": "What does 'Eu aprendo português' mean?",
+      "correct": "I learn Portuguese",
+      "options": ["I learn Portuguese", "I speak Portuguese", "I study Portuguese", "I teach Portuguese", "I understand Portuguese"]
+    },
+    {
+      "id": 32,
+      "lesson": 4,
+      "type": "sentence-comprehension",
+      "pt": "Eu corro toda manhã.",
+      "question": "What does 'Eu corro toda manhã' mean?",
+      "correct": "I run every morning",
+      "options": ["I run every morning", "I walk every morning", "I work every morning", "I study every morning", "I eat every morning"]
+    },
+    {
+      "id": 33,
+      "lesson": 4,
+      "type": "sentence-comprehension",
+      "pt": "Eu abro a porta.",
+      "question": "What does 'Eu abro a porta' mean?",
+      "correct": "I open the door",
+      "options": ["I open the door", "I close the door", "I see the door", "I want the door", "I have the door"]
+    },
+    {
+      "id": 34,
+      "lesson": 4,
+      "type": "sentence-comprehension",
+      "pt": "Eu decido rápido.",
+      "question": "What does 'Eu decido rápido' mean?",
+      "correct": "I decide quickly",
+      "options": ["I decide quickly", "I work quickly", "I run quickly", "I speak quickly", "I eat quickly"]
+    },
+    {
+      "id": 35,
+      "lesson": 4,
+      "type": "sentence-production",
+      "question": "Which sentence means 'I leave at 6 PM'?",
+      "correct": "Eu saio às seis da tarde",
+      "options": ["Eu saio às seis da tarde", "Eu vou às seis da tarde", "Eu trabalho às seis da tarde", "Eu chego às seis da tarde", "Eu como às seis da tarde"]
+    },
+    {
+      "id": 36,
+      "lesson": 5,
+      "type": "sentence-comprehension",
+      "pt": "Eu sou brasileiro.",
+      "question": "What does 'Eu sou brasileiro' mean?",
+      "correct": "I am Brazilian",
+      "options": ["I am Brazilian", "I like Brazil", "I live in Brazil", "I am from Brazil", "I go to Brazil"]
+    },
+    {
+      "id": 37,
+      "lesson": 5,
+      "type": "sentence-comprehension",
+      "pt": "Eu sou professor.",
+      "question": "What does 'Eu sou professor' mean?",
+      "correct": "I am a teacher",
+      "options": ["I am a teacher", "I have a teacher", "I like the teacher", "I want to be a teacher", "I study with a teacher"]
+    },
+    {
+      "id": 38,
+      "lesson": 5,
+      "type": "sentence-comprehension",
+      "pt": "Eu estou cansado.",
+      "question": "What does 'Eu estou cansado' mean?",
+      "correct": "I am tired",
+      "options": ["I am tired", "I am happy", "I am sad", "I am hungry", "I am thirsty"]
+    },
+    {
+      "id": 39,
+      "lesson": 5,
+      "type": "sentence-comprehension",
+      "pt": "Eu estou em casa.",
+      "question": "What does 'Eu estou em casa' mean?",
+      "correct": "I am at home",
+      "options": ["I am at home", "I live at home", "I work at home", "I go home", "I have a home"]
+    },
+    {
+      "id": 40,
+      "lesson": 5,
+      "type": "sentence-comprehension",
+      "pt": "Eu tenho um carro.",
+      "question": "What does 'Eu tenho um carro' mean?",
+      "correct": "I have a car",
+      "options": ["I have a car", "I want a car", "I am a car", "I drive a car", "I see a car"]
+    },
+    {
+      "id": 41,
+      "lesson": 5,
+      "type": "sentence-comprehension",
+      "pt": "Eu vou para a escola.",
+      "question": "What does 'Eu vou para a escola' mean?",
+      "correct": "I go to school",
+      "options": ["I go to school", "I am at school", "I work at school", "I study at school", "I live near school"]
+    },
+    {
+      "id": 42,
+      "lesson": 5,
+      "type": "sentence-comprehension",
+      "pt": "Eu faço a lição de casa.",
+      "question": "What does 'Eu faço a lição de casa' mean?",
+      "correct": "I do homework",
+      "options": ["I do homework", "I have homework", "I want homework", "I study homework", "I finish homework"]
+    },
+    {
+      "id": 43,
+      "lesson": 5,
+      "type": "sentence-comprehension",
+      "pt": "Eu venho do trabalho.",
+      "question": "What does 'Eu venho do trabalho' mean?",
+      "correct": "I come from work",
+      "options": ["I come from work", "I go to work", "I am at work", "I work", "I leave work"]
+    },
+    {
+      "id": 44,
+      "lesson": 6,
+      "type": "ser-vs-estar",
+      "pt": "Eu sou alto.",
+      "question": "What does 'Eu sou alto' mean?",
+      "correct": "I am tall (permanent trait)",
+      "options": ["I am tall (permanent trait)", "I am tall right now (temporary)", "I have height", "I am standing tall", "I feel tall"]
+    },
+    {
+      "id": 45,
+      "lesson": 6,
+      "type": "ser-vs-estar",
+      "pt": "Eu estou feliz hoje.",
+      "question": "What does 'Eu estou feliz hoje' mean?",
+      "correct": "I am happy today (current state)",
+      "options": ["I am happy today (current state)", "I am a happy person (always)", "I have happiness", "I want to be happy", "I was happy"]
+    },
+    {
+      "id": 46,
+      "lesson": 6,
+      "type": "sentence-production",
+      "question": "Which sentence means 'I am from Brazil' (origin)?",
+      "correct": "Eu sou do Brasil",
+      "options": ["Eu sou do Brasil", "Eu estou no Brasil", "Eu moro no Brasil", "Eu vou para o Brasil", "Eu tenho Brasil"]
+    },
+    {
+      "id": 47,
+      "lesson": 6,
+      "type": "sentence-production",
+      "question": "Which sentence means 'I am in São Paulo' (location)?",
+      "correct": "Eu estou em São Paulo",
+      "options": ["Eu estou em São Paulo", "Eu sou de São Paulo", "Eu moro em São Paulo", "Eu vou para São Paulo", "Eu tenho São Paulo"]
+    },
+    {
+      "id": 48,
+      "lesson": 6,
+      "type": "ser-vs-estar",
+      "pt": "Eu estou doente.",
+      "question": "What does 'Eu estou doente' mean?",
+      "correct": "I am sick (temporary condition)",
+      "options": ["I am sick (temporary condition)", "I am a sick person (permanent)", "I have sickness", "I feel sick", "I was sick"]
+    },
+    {
+      "id": 49,
+      "lesson": 7,
+      "type": "sentence-comprehension",
+      "pt": "Eu sou de São Paulo.",
+      "question": "What does 'Eu sou de São Paulo' mean?",
+      "correct": "I am from São Paulo",
+      "options": ["I am from São Paulo", "I am in São Paulo", "I live in São Paulo", "I go to São Paulo", "I like São Paulo"]
+    },
+    {
+      "id": 50,
+      "lesson": 7,
+      "type": "sentence-comprehension",
+      "pt": "Eu moro no Rio.",
+      "question": "What does 'no' mean in 'Eu moro no Rio'?",
+      "correct": "in the (em + o = no)",
+      "options": ["in the (em + o = no)", "in a", "of the", "from the", "to the"]
+    },
+    {
+      "id": 51,
+      "lesson": 7,
+      "type": "sentence-comprehension",
+      "pt": "Eu gosto de café.",
+      "question": "What does 'Eu gosto de café' mean?",
+      "correct": "I like coffee",
+      "options": ["I like coffee", "I have coffee", "I drink coffee", "I want coffee", "I am coffee"]
+    },
+    {
+      "id": 52,
+      "lesson": 7,
+      "type": "sentence-comprehension",
+      "pt": "Eu estudo na universidade.",
+      "question": "What does 'na' mean in 'Eu estudo na universidade'?",
+      "correct": "at the / in the (em + a = na)",
+      "options": ["at the / in the (em + a = na)", "in a", "of the", "from the", "to the"]
+    },
+    {
+      "id": 53,
+      "lesson": 7,
+      "type": "sentence-production",
+      "question": "Which means 'I am from Brazil' using a contraction?",
+      "correct": "Eu sou do Brasil",
+      "options": ["Eu sou do Brasil", "Eu sou de o Brasil", "Eu sou em Brasil", "Eu sou no Brasil", "Eu sou da Brasil"]
+    },
+    {
+      "id": 54,
+      "lesson": 8,
+      "type": "tense-recognition",
+      "question": "Which sentence is in the PAST tense?",
+      "correct": "Eu trabalhei ontem",
+      "options": ["Eu trabalhei ontem", "Eu trabalho hoje", "Eu vou trabalhar amanhã", "Eu trabalho sempre", "Eu estou trabalhando"]
+    },
+    {
+      "id": 55,
+      "lesson": 8,
+      "type": "sentence-comprehension",
+      "pt": "Eu trabalhei ontem.",
+      "question": "What does 'Eu trabalhei ontem' mean?",
+      "correct": "I worked yesterday",
+      "options": ["I worked yesterday", "I work today", "I will work tomorrow", "I am working", "I always work"]
+    },
+    {
+      "id": 56,
+      "lesson": 8,
+      "type": "sentence-comprehension",
+      "pt": "Eu falei com Maria.",
+      "question": "What does 'Eu falei com Maria' mean?",
+      "correct": "I spoke with Maria",
+      "options": ["I spoke with Maria", "I speak with Maria", "I will speak with Maria", "I am speaking with Maria", "I like Maria"]
+    },
+    {
+      "id": 57,
+      "lesson": 8,
+      "type": "sentence-comprehension",
+      "pt": "Eu comi pizza.",
+      "question": "What does 'Eu comi pizza' mean?",
+      "correct": "I ate pizza",
+      "options": ["I ate pizza", "I eat pizza", "I will eat pizza", "I like pizza", "I want pizza"]
+    },
+    {
+      "id": 58,
+      "lesson": 8,
+      "type": "sentence-comprehension",
+      "pt": "Eu fui para a praia.",
+      "question": "What does 'Eu fui para a praia' mean?",
+      "correct": "I went to the beach",
+      "options": ["I went to the beach", "I go to the beach", "I will go to the beach", "I am at the beach", "I like the beach"]
+    },
+    {
+      "id": 59,
+      "lesson": 8,
+      "type": "sentence-comprehension",
+      "pt": "Eu tive um cachorro.",
+      "question": "What does 'Eu tive um cachorro' mean?",
+      "correct": "I had a dog",
+      "options": ["I had a dog", "I have a dog", "I want a dog", "I like dogs", "I see a dog"]
+    },
+    {
+      "id": 60,
+      "lesson": 8,
+      "type": "sentence-production",
+      "question": "Which sentence means 'I did the work' (past)?",
+      "correct": "Eu fiz o trabalho",
+      "options": ["Eu fiz o trabalho", "Eu faço o trabalho", "Eu vou fazer o trabalho", "Eu tenho trabalho", "Eu gosto do trabalho"]
+    },
+    {
+      "id": 61,
+      "lesson": 9,
+      "type": "tense-recognition",
+      "question": "Which sentence is in the FUTURE tense?",
+      "correct": "Eu vou estudar amanhã",
+      "options": ["Eu vou estudar amanhã", "Eu estudei ontem", "Eu estudo hoje", "Eu estudo sempre", "Eu estudava"]
+    },
+    {
+      "id": 62,
+      "lesson": 9,
+      "type": "sentence-comprehension",
+      "pt": "Eu vou estudar amanhã.",
+      "question": "What does 'Eu vou estudar amanhã' mean?",
+      "correct": "I am going to study tomorrow",
+      "options": ["I am going to study tomorrow", "I studied yesterday", "I study today", "I always study", "I want to study"]
+    },
+    {
+      "id": 63,
+      "lesson": 9,
+      "type": "sentence-comprehension",
+      "pt": "Eu vou trabalhar hoje à noite.",
+      "question": "What does 'Eu vou trabalhar hoje à noite' mean?",
+      "correct": "I am going to work tonight",
+      "options": ["I am going to work tonight", "I worked tonight", "I work tonight", "I am working tonight", "I like working at night"]
+    },
+    {
+      "id": 64,
+      "lesson": 9,
+      "type": "sentence-comprehension",
+      "pt": "Eu vou comer agora.",
+      "question": "What does 'Eu vou comer agora' mean?",
+      "correct": "I am going to eat now",
+      "options": ["I am going to eat now", "I ate now", "I eat now", "I am eating now", "I want to eat now"]
+    },
+    {
+      "id": 65,
+      "lesson": 9,
+      "type": "sentence-production",
+      "question": "Which sentence means 'I am going to buy bread' (future)?",
+      "correct": "Eu vou comprar pão",
+      "options": ["Eu vou comprar pão", "Eu comprei pão", "Eu compro pão", "Eu quero pão", "Eu tenho pão"]
+    },
+    {
+      "id": 66,
+      "lesson": 10,
+      "type": "sentence-comprehension",
+      "pt": "Eu não trabalho hoje.",
+      "question": "What does 'Eu não trabalho hoje' mean?",
+      "correct": "I don't work today",
+      "options": ["I don't work today", "I work today", "I didn't work today", "I will not work today", "I never work"]
+    },
+    {
+      "id": 67,
+      "lesson": 10,
+      "type": "sentence-comprehension",
+      "pt": "Eu me levanto às 6h.",
+      "question": "What does 'Eu me levanto às 6h' mean?",
+      "correct": "I wake up at 6 AM",
+      "options": ["I wake up at 6 AM", "I get up at 6 AM", "I work at 6 AM", "I leave at 6 AM", "I eat at 6 AM"]
+    },
+    {
+      "id": 68,
+      "lesson": 10,
+      "type": "sentence-comprehension",
+      "pt": "Eu me chamo Gil.",
+      "question": "What does 'Eu me chamo Gil' mean?",
+      "correct": "My name is Gil",
+      "options": ["My name is Gil", "I call Gil", "I am Gil", "I have Gil", "I like Gil"]
+    },
+    {
+      "id": 69,
+      "lesson": 10,
+      "type": "sentence-comprehension",
+      "pt": "Eu falava inglês.",
+      "question": "What does 'Eu falava inglês' mean?",
+      "correct": "I used to speak English",
+      "options": ["I used to speak English", "I speak English", "I spoke English (one time)", "I will speak English", "I am speaking English"]
+    },
+    {
+      "id": 70,
+      "lesson": 10,
+      "type": "sentence-comprehension",
+      "pt": "Eu morava no Rio.",
+      "question": "What does 'Eu morava no Rio' mean?",
+      "correct": "I used to live in Rio",
+      "options": ["I used to live in Rio", "I live in Rio", "I lived in Rio (for a period)", "I will live in Rio", "I am living in Rio"]
+    }
+  ]
+}
