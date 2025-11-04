@@ -568,6 +568,14 @@ This simplifies speech dramatically and makes students sound much more natural. 
 - Estou com fome (I'm hungry)
 - Estou doente (I'm sick)
 
+**🗣️ Spoken Brazilian Portuguese:**
+In casual conversation, Brazilians almost always use **"tá"** instead of **"está"** (and **"tô"** instead of **"estou"**):
+- Formal/Writing: "Eu estou em casa" / "Você está cansado?"
+- Casual Speech: "Tô em casa" / "Cê tá cansado?"
+- Very common: "Tá bom?" (Is that okay?), "Tá tudo bem?" (Is everything okay?)
+
+**Note:** This is universal in Brazilian Portuguese speech. Learn the formal conjugation (estou, está, está, estamos, estão) for writing and formal contexts, but recognize "tá/tô" for listening comprehension. European Portuguese maintains the full forms more strictly.
+
 **Critical Distinctions:**
 - Sou brasileiro (permanent nationality) vs Estou no Brasil (current location)
 - Sou feliz (happy person by nature) vs Estou feliz (happy right now)
@@ -1227,6 +1235,18 @@ This simplifies speech dramatically and makes students sound much more natural. 
 - Não estou cansado (I'm not tired)
 - Não estou em casa (I'm not at home)
 
+**🗣️ Spoken Brazilian Portuguese:**
+In casual speech, "não" before verbs is often pronounced as **"num"**:
+- Formal/Writing: "Eu não sei" / "Não moro no Rio"
+- Casual Speech: "Num sei" / "Num moro no Rio"
+- Very common: "Num é?" (Isn't it?), "Num tem" (There isn't/doesn't have)
+
+**Important:**
+- **Always write "não"** - "num" is only a pronunciation
+- This is extremely common in spoken Brazilian Portuguese
+- European Portuguese typically pronounces "não" more fully
+- Recognize this in speech, but use "não" in your own production until very comfortable
+
 **Combining affirmative + negative (very common):**
 - Falo português, mas **não** falo espanhol (I speak Portuguese, but I don't speak Spanish)
 - Moro em São Paulo, mas **não** trabalho em São Paulo (I live in São Paulo, but I don't work in São Paulo)
@@ -1658,6 +1678,24 @@ Students can now express preferences about HUNDREDS of verbs without learning co
 - Você tem cachorro? (Do you have a dog?)
 - Você está cansado? (Are you tired?)
 
+**🗣️ Spoken Brazilian Portuguese:**
+In casual speech, "você" is often reduced to **"cê"** (pronounced like "seh"):
+- Formal/Writing: "Você está em casa?" / "Você é brasileiro?"
+- Casual Speech: "Cê tá em casa?" / "Cê é brasileiro?"
+- Very common: "Cê vai?" (Are you going?), "Cê quer?" (Do you want?)
+
+**Important:**
+- This reduction happens **before verbs** in casual speech
+- Write "você" but recognize "cê" in conversation
+- Often combined with other reductions: "Cê tá" = Você está
+- European Portuguese uses "tu" instead of "você" with different verb forms
+
+**💬 Natural Answers to Yes/No Questions:**
+Brazilians typically **repeat the verb** rather than just saying "sim/não":
+- Q: "Você fala português?"
+- Natural A: "**Falo.**" (not just "Sim")
+- Emphatic: "Falo, sim!" or "Não, não falo."
+
 **Verb Form Comparison:**
 - **eu moro** / você mora
 - **eu trabalho** / você trabalha
@@ -1884,6 +1922,25 @@ Students can now express preferences about HUNDREDS of verbs without learning co
 - -ER verbs: infinitive stem + **-em** (comer → comem)
 - Irregular: são, estão, têm (but all end in -m or nasal sound)
 - **The -am/-em ending signals plural "you"**
+
+**💬 Natural Answers to "Vocês...?" Questions:**
+
+When asked "Vocês...?" questions (addressing a group), Brazilians naturally **answer with "nós"** (we) and repeat the verb:
+
+- Q: "Vocês são brasileiros?"
+- Natural A: "**Somos.**" (We are.) - not just "Sim"
+- Full answer: "Somos, sim." or "Não, não somos."
+
+- Q: "Vocês falam português?"
+- Natural A: "**Falamos.**" (We speak.)
+
+- Q: "Vocês moram em São Paulo?"
+- Natural A: "**Moramos.**" (We live [here].) or "Não, moramos no Rio."
+
+**Important:**
+- The subject "nós" is usually dropped (pro-drop) - just say "Moramos" not "Nós moramos"
+- This mirrors the você/vocês pattern: Q: "Você fala?" A: "Falo." / Q: "Vocês falam?" A: "Falamos."
+- Emphatic answers add "sim": "Falamos, sim!" or double negation: "Não, não falamos, não."
 
 **Sample Conversation:**
 - A: Olá! Vocês são estudantes?
@@ -2124,6 +2181,18 @@ Students can now express preferences about HUNDREDS of verbs without learning co
 - Vou comer no restaurante depois (I'm going to eat at the restaurant later)
 - Não vou assistir filmes hoje (I'm not going to watch movies today)
 - Vou dormir cedo (I'm going to sleep early)
+
+**🗣️ Spoken Brazilian Portuguese:**
+In casual speech, "vou" is often pronounced as **"vô"** (sounds like "voh"):
+- Formal/Writing: "Eu vou fazer" / "Vou trabalhar amanhã"
+- Casual Speech: "Vô fazê" / "Vô trabalhá amanhã"
+- Very common: "Vô lá" (I'm going there), "Vô indo" (I'm going/leaving)
+
+**Important:**
+- Always write "vou" - "vô" is only pronunciation
+- In fast speech, infinitive endings may also reduce: fazer → fazê, trabalhar → trabalhá
+- This is extremely common in spontaneous Brazilian Portuguese
+- Recognize in speech, but use full forms in your own production initially
 
 **Full Conjugation - "Ir + Infinitive" (All Pronouns):**
 | Pronoun | ir (to go) | + infinitive | Example |
@@ -3378,6 +3447,44 @@ This is THE most important question in past tense conversation:
 - Onde fica...? (Where is... located?)
 - Quanto tempo? (How long? / literally: How much time?)
 
+**🗣️ Emphatic Questions with "É que" (EXTREMELY COMMON IN BP):**
+
+The construction **"é que"** makes questions more emphatic and conversational. This is one of the most characteristic features of Brazilian Portuguese speech:
+
+**Pattern:** [Question word] + **é que** + [rest of sentence]
+
+**Examples:**
+- Basic: Onde você mora?
+- Emphatic: Onde **é que** você mora? (Where do you live? - with emphasis)
+
+- Basic: O que você quer?
+- Emphatic: O que **é que** você quer? (What do you want? - more natural)
+
+- Basic: Quando você vai?
+- Emphatic: Quando **é que** você vai? (When are you going?)
+
+- Basic: Como você sabe?
+- Emphatic: Como **é que** você sabe? (How do you know?)
+
+**With all question words:**
+- Onde **é que** você trabalha? (Where do you work?)
+- Quem **é que** fez isso? (Who did this?)
+- Por que **é que** você não foi? (Why didn't you go?)
+- Qual **é que** é melhor? (Which one is better?)
+- Quanto **é que** custa? (How much does it cost?)
+
+**Special case - "O que é que":**
+- O que **é que** é isso? (What is this?)
+- O que **é que** você fez? (What did you do?)
+- Note: Looks strange but is grammatically correct! First "é" is part of "é que", second "é" is the verb "to be"
+
+**Important:**
+- **"É que" makes questions less abrupt** and more conversational
+- Very common in spoken Brazilian Portuguese
+- Optional - both forms are correct, but "é que" sounds more natural in conversation
+- In formal writing, simpler form is preferred (Onde você mora?)
+- In speech, "é que" form is much more common
+
 **Question Word Order:**
 - Simple: **Question word + verb + (subject)**
   - Onde mora você? (Where do you live?)
@@ -4225,6 +4332,18 @@ Ontem quis ir ao parque, mas não pude porque tive que trabalhar. Fui ao trabalh
 - Mandei por email (I sent by email) - means
 - Obrigado por tudo (Thank you for everything) - reason
 - Por favor (Please) - fixed expression
+
+**🗣️ Spoken Brazilian Portuguese:**
+In casual speech and even informal writing, **"para"** is almost always contracted to **"pra"** (and **"para o/a"** becomes **"pro/pra"**):
+- Formal/Writing: "para você" / "para o Brasil" / "para a escola"
+- Casual Speech: "pra você" / "pro Brasil" / "pra escola"
+- Very common: "Vou pro trabalho" (I'm going to work), "É pra mim?" (Is it for me?)
+
+**Important:**
+- **"Pra/pro"** are so universal in speech they're accepted in informal writing (text messages, social media)
+- In formal writing, always use "para o/a" (not "pra/pro")
+- **"Por"** does NOT contract in the same way - always say/write "por"
+- Regional note: Some Brazilians write "prá" with accent, but "pra" (no accent) is more common
 
 **PARA - Detailed Usage:**
 
