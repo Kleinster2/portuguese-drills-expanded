@@ -1,6 +1,8 @@
 # Portuguese Curriculum - Micro-Sequence Syllabus
 ## Zero-Knowledge to Functional Portuguese
 
+**Curriculum Scope:** 90 Units (Beginner A1 → Upper-Intermediate B2)
+
 **Teaching Philosophy:** eu-first approach (first person singular only until specified)
 
 ---
@@ -10864,6 +10866,1506 @@ Examples:
 - Ultra-granular: focuses ONLY on school and education
 - Practical: immediate use for describing studies, academic life
 - Culturally relevant: introduces Brazilian school system
+
+---
+
+### Unit 76: Future Tense (Farei, Fará)
+**New vocabulary:**
+- farei (I will do), fará (he/she will do)
+- viajarei (I will travel), comerei (I will eat)
+- serei (I will be), estarei (I will be - location/state)
+- direi (I will say - irregular)
+- trarei (I will bring - irregular)
+- amanhã (tomorrow), próxima semana (next week), no futuro (in the future)
+
+**Grammar introduced:**
+- **Future tense formation:** infinitive + -ei/-á/-emos/-ão
+- Regular pattern: falar → falarei, falarás, falará, falaremos, falarão
+- ONLY 3 irregulars: fazer → farei, dizer → direi, trazer → trarei
+- All three drop the middle syllable: fa(ze)r → farei, di(ze)r → direi, tra(ze)r → trarei
+- When to use future tense vs "vou + infinitive"
+
+**Uses of Future Tense:**
+1. **Formal predictions:** O Brasil ganhará a Copa. (Brazil will win the Cup.)
+2. **Uncertain future:** Será que vai chover? (I wonder if it will rain?)
+3. **Formal writing:** O governo fará mudanças. (The government will make changes.)
+4. **Distant future:** Em 2030, morarei em Portugal. (In 2030, I'll live in Portugal.)
+
+**Future vs Vou + Infinitive:**
+- **Vou + infinitive (Unit 29):** immediate, planned future - "Vou viajar amanhã" (I'm going to travel tomorrow)
+- **Future tense:** formal, uncertain, distant future - "Viajarei no próximo ano" (I will travel next year)
+- BP speakers heavily prefer "vou + infinitive" in speech
+- Future tense more common in writing and formal contexts
+
+**Practice format:**
+- Conjugate verbs in future tense
+- Choose between "vou + infinitive" vs future tense
+- Transform present tense to future tense
+- Translate future plans and predictions
+
+**Student can now:**
+- Make formal predictions and talk about distant future
+- Use future tense in formal writing
+- Understand the difference between two future constructions
+- Handle the 3 irregular future verbs (fazer, dizer, trazer)
+
+**Typical sentences:**
+- Eu falarei com você amanhã. (I will speak with you tomorrow - formal)
+- Eles viajarão para o Brasil no próximo ano. (They will travel to Brazil next year.)
+- Você fará isso? (Will you do this?)
+- Direi a verdade. (I will tell the truth - irregular)
+- No futuro, morarei em Lisboa. (In the future, I'll live in Lisbon.)
+
+**Common Mistakes to Avoid:**
+- ❌ "fazerei" (incorrect irregular)
+- ✅ "farei" (correct - fazer → farei)
+- ❌ "dizerei" (incorrect irregular)
+- ✅ "direi" (correct - dizer → direi)
+- ❌ Using future tense for immediate plans
+- ✅ Use "vou + infinitive" for immediate/planned: "Vou comer agora" (I'm going to eat now)
+
+**Connecting to Previous Units:**
+- Unit 29: Vou + infinitive (informal future) → now add formal future
+- Unit 34-35: Past tense formation → similar pattern (add endings to infinitive)
+- Unit 77: Conditional → uses same irregular stems (fazer → faria)
+
+**Why This Unit:**
+- **ESSENTIAL:** Completes the tense system (past, present, future)
+- Good news: ONLY 3 irregular verbs (fazer, dizer, trazer)!
+- Understanding when to use future vs "vou + infinitive" is key
+- Future tense common in formal writing, news, predictions
+- Regular formation pattern is very predictable
+
+---
+
+### Unit 77: Conditional Tense (Faria, Gostaria)
+**New vocabulary:**
+- faria (I would do), gostaria (I would like)
+- seria (I would be), estaria (I would be - location/state)
+- poderia (I could), deveria (I should)
+- comeria (I would eat), viajaria (I would travel)
+- talvez (maybe), se eu fosse (if I were)
+
+**Grammar introduced:**
+- **Conditional formation:** infinitive + -ia/-ia/-íamos/-iam
+- Regular pattern: falar → falaria, falarias, falaria, falaríamos, falariam
+- Same 3 irregulars as future: fazer → faria, dizer → diria, trazer → traria
+- Note: All persons except nós use same ending (-ia)
+
+**Uses of Conditional:**
+1. **Polite requests:** Gostaria de um café. (I would like a coffee.)
+2. **Hypotheticals:** Eu faria isso, mas não tenho tempo. (I would do that, but I don't have time.)
+3. **Advice:** Você deveria descansar. (You should rest.)
+4. **Possibilities:** Seria bom viajar. (It would be good to travel.)
+
+**Practice format:**
+- Conjugate verbs in conditional
+- Polite requests with "gostaria de"
+- Hypothetical situations: "Eu faria... mas..."
+- Advice with "deveria"
+
+**Student can now:**
+- Make polite requests (gostaria de instead of quero)
+- Express hypothetical situations
+- Give advice using conditional
+- Sound more formal and polite in Portuguese
+
+**Typical sentences:**
+- Gostaria de uma xícara de café. (I would like a cup of coffee - polite)
+- Eu viajaria para o Brasil, mas não tenho dinheiro. (I would travel to Brazil, but I don't have money.)
+- Você deveria estudar mais. (You should study more.)
+- Seria interessante morar em Lisboa. (It would be interesting to live in Lisbon.)
+- O que você faria? (What would you do?)
+
+**Polite Requests with Gostaria:**
+- Gostaria de um café. (I would like a coffee.) ← very polite
+- Quero um café. (I want a coffee.) ← direct
+- Poderia me ajudar? (Could you help me?) ← polite
+- Você poderia abrir a janela? (Could you open the window?) ← polite request
+
+**Common Mistakes to Avoid:**
+- ❌ "faziria" (incorrect irregular)
+- ✅ "faria" (correct - fazer → faria)
+- ❌ Using "quero" when being polite
+- ✅ Use "gostaria de" for polite requests
+- ❌ Confusing conditional with imperfect
+- ✅ Imperfect = did (past), Conditional = would do (hypothetical)
+
+**Connecting to Previous Units:**
+- Unit 76: Future tense → same 3 irregular stems
+- Unit 45-46: Imperfect → similar endings but different meaning
+- Unit 84: Imperfect subjunctive → used together for hypotheticals
+
+**Why This Unit:**
+- **ESSENTIAL FOR POLITENESS:** "Gostaria de" is extremely common
+- Follows naturally from future tense (same irregulars)
+- Key for expressing hypotheticals and advice
+- Makes Portuguese sound more sophisticated and polite
+- Regular formation very easy to learn
+
+---
+
+### Unit 78: É que - Emphatic Questions
+**New vocabulary:**
+- é que (emphatic marker)
+- onde é que (where...?), o que é que (what...?)
+- quando é que (when...?), como é que (how...?)
+- por que é que (why...?), qual é que (which...?)
+- quanto é que (how much...?)
+
+**Grammar introduced:**
+- **É que construction:** [Question word] + é que + [rest of sentence]
+- Makes questions more emphatic and conversational
+- EXTREMELY common in Brazilian Portuguese speech
+- Optional but very natural-sounding
+
+**Pattern:**
+- Basic: Onde você mora? (Where do you live?)
+- Emphatic: Onde **é que** você mora? (Where do you live? - more emphasis)
+- Basic: O que você quer? (What do you want?)
+- Emphatic: O que **é que** você quer? (What do you want? - more emphasis)
+
+**Practice format:**
+- Transform basic questions into é que questions
+- Recognize é que in conversations
+- Use with all question words
+
+**Student can now:**
+- Ask questions that sound more natural and conversational
+- Understand this extremely common BP construction
+- Add emphasis and flow to questions
+- Sound more like a native BP speaker
+
+**Typical sentences:**
+- Onde é que você trabalha? (Where do you work?)
+- O que é que você está fazendo? (What are you doing?)
+- Quando é que você vai viajar? (When are you going to travel?)
+- Como é que se faz isso? (How do you do this?)
+- Por que é que você não foi? (Why didn't you go?)
+- Qual é que é o seu? (Which one is yours?)
+
+**Special Case - O que é que:**
+- O que **é que** é isso? (What is this?)
+- First "é" = part of "é que" construction
+- Second "é" = the verb "to be"
+- Looks strange but grammatically correct!
+- Very common in Portuguese
+
+**Common Mistakes to Avoid:**
+- ❌ "Onde que você mora?" (missing "é")
+- ✅ "Onde **é que** você mora?" (correct - need both words)
+- ❌ Using é que in formal writing
+- ✅ Better for conversation, use simple questions in formal writing
+
+**Connecting to Previous Units:**
+- Unit 38: Question words → now make them more emphatic
+- Unit 23-27: Você, ele/ela, nós, etc. → use with all subjects
+- Unit 1: Ser verb → "é" from ser is part of "é que"
+
+**Why This Unit:**
+- **EXTREMELY COMMON:** You'll hear this constantly in Brazilian Portuguese
+- Makes questions sound more natural and conversational
+- Simple to learn, big impact on fluency
+- Characteristic feature of BP (less common in EP)
+- Already introduced in Unit 38 (Wave 1), now full unit dedicated to it
+
+---
+
+### Unit 79: Crase (à, às)
+**New vocabulary:**
+- à (to the - feminine singular)
+- às (to the - feminine plural)
+- à esquerda (to/on the left)
+- à direita (to/on the right)
+- às três horas (at 3 o'clock)
+- ir à praia (go to the beach)
+- à noite (at night)
+
+**Grammar introduced:**
+- **Crase:** contraction of a (preposition) + a (article) = à
+- Written with grave accent: à
+- Plural form: às (a + as)
+- ONLY occurs with feminine articles
+- One of the trickiest aspects of Portuguese!
+
+**When Crase Occurs:**
+1. **Preposition a + feminine article a:**
+   - Vou (a + a) praia → Vou **à** praia (I'm going to the beach)
+   - (a + a) esquerda → **à** esquerda (to/on the left)
+
+2. **With hours (time):**
+   - às 3 horas, às 8 da manhã
+   - (a + as) três horas → **às** três horas
+
+3. **Fixed expressions:**
+   - à noite (at night), à tarde (in the afternoon)
+   - à vontade (at ease), às vezes (sometimes)
+
+**When Crase Does NOT Occur:**
+1. **Masculine nouns:** ao (not à)
+   - Vou ao mercado (NOT à mercado)
+2. **Verbs:** a falar (NOT à falar)
+3. **Indefinite articles:** a uma praia (NOT à uma)
+4. **Before names:** a Maria (NOT à Maria) - unless with article
+
+**Practice format:**
+- Identify when to use crase
+- Fill in à vs a vs ao
+- Common expressions with crase
+- Time expressions with às
+
+**Student can now:**
+- Use crase correctly with feminine nouns
+- Tell time with às + hours
+- Use direction expressions (à esquerda/direita)
+- Understand when crase is required
+
+**Typical sentences:**
+- Vou à praia. (I'm going to the beach.)
+- Vire à direita. (Turn right.)
+- Às três horas. (At 3 o'clock.)
+- Vou à escola. (I'm going to school.)
+- À noite, eu estudo. (At night, I study.)
+- Às vezes, eu viajo. (Sometimes, I travel.)
+
+**Common Mistakes to Avoid:**
+- ❌ "Vou a praia" (missing crase)
+- ✅ "Vou à praia" (correct - à = a + a)
+- ❌ "Vou à mercado" (masculine - no crase)
+- ✅ "Vou ao mercado" (correct - ao = a + o masculine)
+- ❌ "as 3 horas" (missing crase)
+- ✅ "às 3 horas" (correct - às = a + as)
+- ❌ "à falar" (before verb)
+- ✅ "a falar" (correct - no crase before verbs)
+
+**Connecting to Previous Units:**
+- Unit 13: Location (em casa, na escola) → now add "à" for movement to
+- Unit 49: Telling time → às + hours
+- Unit 60: Directions → à esquerda, à direita
+
+**Why This Unit:**
+- **NOTORIOUSLY DIFFICULT:** Even native speakers struggle with crase
+- Essential for correct written Portuguese
+- Common in daily expressions (à noite, às vezes, à direita)
+- Helps distinguish between: a (preposition), a (article), à (contraction)
+- Practice is key - this takes time to master!
+
+---
+
+### Unit 80: Todo vs Tudo
+**New vocabulary:**
+- todo/toda (all, every - adjective)
+- todos/todas (all - plural)
+- tudo (everything - pronoun)
+- todo o/toda a (the whole)
+- todos os dias (every day)
+- todo mundo (everyone)
+- Tudo bem? (Everything okay?)
+
+**Grammar introduced:**
+- **Todo/toda:** adjective that agrees with noun (all, every, whole)
+- **Tudo:** invariable pronoun meaning "everything"
+- Never confuse them - different parts of speech!
+
+**Todo/Toda (Adjective):**
+- Agrees with noun: todo livro (m), toda casa (f)
+- Plural: todos os livros, todas as casas
+- Means "all" or "every" or "whole"
+- Examples:
+  - todo o dia (the whole day)
+  - toda a noite (the whole night)
+  - todos os dias (every day)
+  - todas as pessoas (all the people)
+
+**Tudo (Pronoun):**
+- Invariable - never changes
+- Means "everything"
+- Stands alone, doesn't modify nouns
+- Examples:
+  - Tudo bem? (Everything okay?)
+  - Eu sei tudo. (I know everything.)
+  - Tudo está certo. (Everything is right.)
+
+**Common Expressions:**
+- **todo mundo:** everyone (literally "all world")
+- **todos os dias:** every day
+- **toda hora:** all the time
+- **Tudo bem?:** Everything okay? / How are you?
+- **Tudo bom?:** Everything good? (same meaning)
+- **de todo:** at all (negation)
+
+**Practice format:**
+- Choose between todo/toda/todos/todas vs tudo
+- Complete expressions (todo mundo, todos os dias)
+- Translate sentences requiring correct form
+
+**Student can now:**
+- Distinguish between todo (adjective) and tudo (pronoun)
+- Use common expressions with todo/tudo correctly
+- Use "todo mundo" for "everyone"
+- Greet with "Tudo bem?"
+
+**Typical sentences:**
+- Todo dia eu estudo. (Every day I study.)
+- Todos os alunos estão aqui. (All the students are here.)
+- Tudo bem? (Everything okay? / How are you?)
+- Eu fiz tudo. (I did everything.)
+- Todo mundo gosta de música. (Everyone likes music.)
+- Ela trabalha toda semana. (She works every week.)
+
+**Common Mistakes to Avoid:**
+- ❌ "Tudo dia" (tudo doesn't modify nouns)
+- ✅ "Todo dia" (correct - todo = every)
+- ❌ "Eu sei todo" (todo needs a noun)
+- ✅ "Eu sei tudo" (correct - tudo = everything)
+- ❌ "Todos bem?" (todos is plural adjective)
+- ✅ "Tudo bem?" (correct - tudo = everything)
+- ❌ "tudo as pessoas" (tudo doesn't agree)
+- ✅ "todas as pessoas" (correct - todas agrees with feminine plural)
+
+**Connecting to Previous Units:**
+- Unit 8: Todo o dia (whole day) vs todos os dias (every day)
+- Unit 50: Days of week → todos os dias (every day)
+- Unit 23-27: Todo mundo (everyone) uses singular verb
+
+**Why This Unit:**
+- **COMMONLY CONFUSED:** Even intermediate learners mix these up
+- "Todo mundo" (everyone) is extremely common
+- "Tudo bem?" is one of the most common greetings
+- Mastering this distinction is essential for correct Portuguese
+- Different parts of speech: todo (adjective) vs tudo (pronoun)
+
+---
+
+### Unit 81: Introduction to Subjunctive Mood
+**New vocabulary:**
+- modo indicativo (indicative mood - facts)
+- modo subjunctivo (subjunctive mood - wishes, doubts, hypotheticals)
+- que (that - introduces subjunctive clauses)
+- espero que (I hope that), quero que (I want that)
+- duvido que (I doubt that), talvez (maybe)
+- é importante que (it's important that)
+
+**Grammar introduced:**
+- **Mood concept:** indicative vs subjunctive
+- **Indicative:** states facts, certainty, reality
+  - Ele **fala** português. (He speaks Portuguese - fact)
+- **Subjunctive:** expresses wishes, doubts, emotions, hypotheticals, commands
+  - Espero que ele **fale** português. (I hope he speaks Portuguese - wish)
+- **When subjunctive is triggered:** certain verbs and expressions require it
+
+**Subjunctive Triggers (Preview):**
+
+1. **Wishes/Desires:**
+   - espero que (I hope that)
+   - quero que (I want that)
+   - desejo que (I wish that)
+
+2. **Doubt/Uncertainty:**
+   - duvido que (I doubt that)
+   - talvez (maybe)
+   - não acho que (I don't think that)
+
+3. **Emotions:**
+   - é bom que (it's good that)
+   - é importante que (it's important that)
+   - tenho medo que (I'm afraid that)
+
+4. **Commands/Requests:**
+   - Ele sugere que... (He suggests that...)
+   - Ela pede que... (She asks that...)
+
+5. **Future conditions (Portuguese unique!):**
+   - quando (when - future)
+   - se (if - future hypothetical)
+
+**Practice format:**
+- Identify indicative vs subjunctive contexts
+- Recognize subjunctive triggers
+- Understand why subjunctive is needed
+- Preview subjunctive formation (Units 82-85)
+
+**Student can now:**
+- Understand the concept of grammatical mood
+- Recognize when subjunctive is needed (triggers)
+- Differentiate between facts (indicative) and wishes/doubts (subjunctive)
+- Prepare for learning subjunctive conjugations in Units 82-85
+
+**Typical patterns:**
+- **Indicative (fact):** Ele fala português. (He speaks Portuguese.)
+- **Subjunctive (wish):** Espero que ele fale português. (I hope he speaks Portuguese.)
+- **Indicative (fact):** Eles estão aqui. (They are here.)
+- **Subjunctive (doubt):** Duvido que eles estejam aqui. (I doubt they are here.)
+
+**Why Subjunctive Exists:**
+Portuguese distinguishes between:
+- **Reality/Facts:** indicative mood
+- **Non-reality (wishes, doubts, hypotheticals):** subjunctive mood
+
+This is grammatically required in Portuguese - you cannot omit the subjunctive when it's triggered.
+
+**Common Mistakes to Avoid:**
+- ❌ "Espero que ele fala" (using indicative after trigger)
+- ✅ "Espero que ele fale" (correct - must use subjunctive after espero que)
+- ❌ Avoiding subjunctive because it seems hard
+- ✅ Embrace it - it's essential for correct Portuguese!
+
+**Connecting to Previous Units:**
+- All present tense verbs (Units 1-28) → now transform to subjunctive
+- Unit 18: Negation → "não acho que" triggers subjunctive
+- Units 82-85: Will learn actual subjunctive conjugations
+
+**Why This Unit:**
+- **THEORETICAL FOUNDATION:** Understand WHY subjunctive exists before learning HOW
+- Subjunctive is not optional - it's grammatically required
+- Portuguese has THREE subjunctive tenses (present, imperfect, future)
+- This unit prepares students conceptually before conjugations
+- Makes Units 82-85 easier by establishing the framework
+
+---
+
+### Unit 82: Present Subjunctive - Regular Verbs
+**New vocabulary:**
+- que eu fale (that I speak), que você coma (that you eat)
+- que nós falemos (that we speak), que eles partam (that they leave)
+- espero que (I hope that), é importante que (it's important that)
+- talvez (maybe), antes que (before), para que (so that)
+
+**Grammar introduced:**
+- **Present subjunctive formation - Regular verbs:**
+  - **-AR verbs:** Change -o to -e
+    - falo → fale, fales, fale, falemos, falem
+  - **-ER/-IR verbs:** Change -o to -a
+    - como → coma, comas, coma, comamos, comam
+    - parto → parta, partas, parta, partamos, partam
+
+**Formation Pattern:**
+1. Start with first person present indicative: falo, como, parto
+2. Drop the -o: fal-, com-, part-
+3. Add opposite vowel endings:
+   - -AR verbs get E endings: -e, -es, -e, -emos, -em
+   - -ER/-IR verbs get A endings: -a, -as, -a, -amos, -am
+
+**Regular Examples:**
+
+**Falar (to speak):**
+- que eu **fale**
+- que você/ele/ela **fale**
+- que nós **falemos**
+- que vocês/eles/elas **falem**
+
+**Comer (to eat):**
+- que eu **coma**
+- que você/ele/ela **coma**
+- que nós **comamos**
+- que vocês/eles/elas **comam**
+
+**Partir (to leave):**
+- que eu **parta**
+- que você/ele/ela **parta**
+- que nós **partamos**
+- que vocês/eles/elas **partam**
+
+**Common Triggers (Review from Unit 81):**
+- Espero que você **fale** com ele. (I hope you speak with him.)
+- É importante que nós **comamos** bem. (It's important that we eat well.)
+- Talvez eles **partam** amanhã. (Maybe they'll leave tomorrow.)
+
+**Practice format:**
+- Conjugate regular verbs in present subjunctive
+- Complete sentences with subjunctive triggers
+- Transform indicative to subjunctive
+
+**Student can now:**
+- Form present subjunctive of all regular verbs
+- Use subjunctive after common triggers
+- Express wishes, doubts, and emotions correctly
+- Apply the "opposite vowel" rule
+
+**Typical sentences:**
+- Espero que você fale português. (I hope you speak Portuguese.)
+- É bom que nós estudemos juntos. (It's good that we study together.)
+- Talvez ela coma aqui. (Maybe she'll eat here.)
+- Quero que eles venham. (I want them to come.) [vir is irregular - Unit 83]
+- É importante que você descanse. (It's important that you rest.)
+
+**Common Mistakes to Avoid:**
+- ❌ "Espero que você fala" (using indicative)
+- ✅ "Espero que você fale" (correct - subjunctive required)
+- ❌ "que eu falo" (indicative form)
+- ✅ "que eu fale" (correct - subjunctive form)
+- ❌ Forgetting the opposite vowel rule
+- ✅ AR→E, ER/IR→A
+
+**Connecting to Previous Units:**
+- Unit 81: Subjunctive concept → now learn the conjugations
+- Units 5-7, 22, 28: Regular verbs → now in subjunctive
+- Unit 83: Irregular subjunctives → coming next
+
+**Why This Unit:**
+- **CORE GRAMMAR:** Present subjunctive is the most common subjunctive tense
+- Regular formation is very systematic (opposite vowel)
+- Builds on present indicative knowledge
+- Opens up expressing wishes, doubts, emotions naturally
+- Most common subjunctive tense in daily speech
+
+---
+
+### Unit 83: Present Subjunctive - Irregular Verbs
+**New vocabulary:**
+- que eu seja (that I be), que você esteja (that you be - location)
+- que ele tenha (that he has), que nós vamos (that we go)
+- que eles deem (that they give), que eu saiba (that I know)
+- que você possa (that you can), que ele queira (that he wants)
+
+**Grammar introduced:**
+- **Present subjunctive - Irregular verbs**
+- Most common irregular verbs have unpredictable subjunctive forms
+- Must memorize these key verbs
+
+**Key Irregular Subjunctives:**
+
+**Ser (to be):**
+- que eu **seja**, que você **seja**, que ele/ela **seja**
+- que nós **sejamos**, que vocês **sejam**, que eles **sejam**
+
+**Estar (to be - location/state):**
+- que eu **esteja**, que você **esteja**, que ele/ela **esteja**
+- que nós **estejamos**, que vocês **estejam**, que eles **estejam**
+
+**Ter (to have):**
+- que eu **tenha**, que você **tenha**, que ele/ela **tenha**
+- que nós **tenhamos**, que vocês **tenham**, que eles **tenham**
+
+**Ir (to go):**
+- que eu **vá**, que você **vá**, que ele/ela **vá**
+- que nós **vamos**, que vocês **vão**, que eles **vão**
+
+**Dar (to give):**
+- que eu **dê**, que você **dê**, que ele/ela **dê**
+- que nós **demos**, que vocês **deem**, que eles **deem**
+
+**Saber (to know):**
+- que eu **saiba**, que você **saiba**, que ele/ela **saiba**
+- que nós **saibamos**, que vocês **saibam**, que eles **saibam**
+
+**Querer (to want):**
+- que eu **queira**, que você **queira**, que ele/ela **queira**
+- que nós **queiramos**, que vocês **queiram**, que eles **queiram**
+
+**Poder (to be able):**
+- que eu **possa**, que você **possa**, que ele/ela **possa**
+- que nós **possamos**, que vocês **possam**, que eles **possam**
+
+**Haver (to have - impersonal):**
+- que **haja** (only 3rd person singular used)
+
+**Practice format:**
+- Memorize irregular subjunctive forms
+- Complete sentences using irregular subjunctives
+- Distinguish when to use irregular vs regular forms
+
+**Student can now:**
+- Use present subjunctive of all major irregular verbs
+- Express complex wishes and doubts with common verbs
+- Handle ser/estar/ter/ir in subjunctive contexts
+- Combine with triggers from Unit 81-82
+
+**Typical sentences:**
+- Espero que você esteja bem. (I hope you are well.)
+- É importante que nós sejamos honestos. (It's important that we be honest.)
+- Talvez ele tenha razão. (Maybe he's right.)
+- Quero que vocês vão comigo. (I want you all to go with me.)
+- Duvido que ela saiba a resposta. (I doubt she knows the answer.)
+- É bom que você possa vir. (It's good that you can come.)
+
+**Common Mistakes to Avoid:**
+- ❌ "Espero que você é feliz" (using indicative ser)
+- ✅ "Espero que você seja feliz" (correct - irregular seja)
+- ❌ "que eu tenho" (indicative form)
+- ✅ "que eu tenha" (correct - irregular subjunctive)
+- ❌ "que nós vamos" when vamos is subjunctive
+- ✅ Context determines: "Nós vamos" (indicative) vs "que nós vamos" (subjunctive - same form!)
+
+**Memory Aids:**
+- **Ser → seja:** think "SEJa content"
+- **Estar → esteja:** ends in -esteja (similar pattern to seja)
+- **Ter → tenha:** TENha sounds like TEN
+- **Ir → vá:** super short, just vá!
+- **Dar → dê:** give accent to dê
+- **Saber → saiba:** SAIba has AI
+- **Querer → queira:** QUEIra has EI
+- **Poder → possa:** POSSa has double S
+
+**Connecting to Previous Units:**
+- Unit 82: Regular subjunctives → now add irregulars
+- Unit 1, 12, 36: Ser/estar/ter → now in subjunctive mood
+- Unit 29: Ir (vou) → now "que eu vá" (subjunctive)
+
+**Why This Unit:**
+- **ESSENTIAL VERBS:** These are the most common verbs in Portuguese
+- Can't express many ideas without these irregular forms
+- Ser/estar/ter/ir appear constantly in subjunctive contexts
+- Memorization required - no shortcuts for irregulars
+- Completes present subjunctive knowledge
+
+---
+
+### Unit 84: Imperfect Subjunctive
+**New vocabulary:**
+- se eu fosse (if I were), se você tivesse (if you had)
+- se ele pudesse (if he could), se nós soubéssemos (if we knew)
+- seria (would be), faria (would do)
+- eu gostaria que (I would like that), eu quisera (I wished)
+
+**Grammar introduced:**
+- **Imperfect subjunctive formation:**
+  - Take preterite 3rd person plural: eles falaram
+  - Remove -ram: fala-
+  - Add -sse endings: -sse, -sses, -sse, -ssemos, -ssem
+
+**Formation Examples:**
+
+**Falar:** eles falaram → fala- → falasse
+- que eu **falasse**, que você **falasse**
+- que nós **falássemos**, que eles **falassem**
+
+**Comer:** eles comeram → come- → comesse
+- que eu **comesse**, que você **comesse**
+- que nós **comêssemos**, que eles **comessem**
+
+**Ter:** eles tiveram → tive- → tivesse
+- que eu **tivesse**, que você **tivesse**
+- que nós **tivéssemos**, que eles **tivessem**
+
+**Ser/Ir:** eles foram → fo- → fosse
+- que eu **fosse**, que você **fosse**
+- que nós **fôssemos**, que eles **fossem**
+
+**Uses of Imperfect Subjunctive:**
+
+1. **Se clauses (hypotheticals):**
+   - Se eu **fosse** rico, eu viajaria. (If I were rich, I would travel.)
+   - Se você **tivesse** tempo, você viria? (If you had time, would you come?)
+
+2. **After past tense triggers:**
+   - Eu queria que você **viesse**. (I wanted you to come.)
+   - Era importante que nós **estudássemos**. (It was important that we studied.)
+
+3. **Polite suggestions:**
+   - Seria bom se você **descansasse**. (It would be good if you rested.)
+
+4. **Wishes about past:**
+   - Eu gostaria que ele **estivesse** aqui. (I would like him to be here.)
+
+**Se + Imperfect Subjunctive + Conditional:**
+- **Se eu tivesse** dinheiro, eu **compraria** uma casa.
+  (If I had money, I would buy a house.)
+- **Se você fosse**, eu **iria** também.
+  (If you went, I would go too.)
+
+**Practice format:**
+- Form imperfect subjunctive from preterite
+- Complete se clauses with imperfect subjunctive + conditional
+- Transform present subjunctive to imperfect subjunctive
+
+**Student can now:**
+- Express hypothetical situations in past or present
+- Use "se" (if) clauses correctly
+- Make polite suggestions
+- Express wishes about impossible or contrary-to-fact situations
+
+**Typical sentences:**
+- Se eu fosse você, eu aceitaria. (If I were you, I would accept.)
+- Se ele soubesse a verdade, ele entenderia. (If he knew the truth, he would understand.)
+- Eu queria que você viesse à festa. (I wanted you to come to the party.)
+- Se nós tivéssemos tempo, nós viajaríamos. (If we had time, we would travel.)
+- Era importante que eles estudassem. (It was important that they studied.)
+
+**Common Mistakes to Avoid:**
+- ❌ "Se eu seria" (using conditional in se clause)
+- ✅ "Se eu fosse" (correct - imperfect subjunctive in se clause)
+- ❌ "Se ele tem" (using present in hypothetical)
+- ✅ "Se ele tivesse" (correct - imperfect subjunctive for hypothesis)
+- ❌ Forgetting to use conditional in main clause
+- ✅ Se eu fosse rico, eu **compraria** (would buy) - conditional
+
+**Connecting to Previous Units:**
+- Unit 77: Conditional → used with imperfect subjunctive in se clauses
+- Unit 34-43: Preterite → basis for forming imperfect subjunctive
+- Units 82-83: Present subjunctive → now add imperfect subjunctive
+
+**Why This Unit:**
+- **ESSENTIAL FOR HYPOTHETICALS:** "If I were you..." constructions
+- Follows logically from preterite (uses preterite stem)
+- Enables expressing contrary-to-fact situations
+- Common in polite suggestions and wishes
+- Pairs with conditional tense naturally
+
+---
+
+### Unit 85: Future Subjunctive
+**New vocabulary:**
+- quando eu falar (when I speak), se você tiver (if you have)
+- quando ele vier (when he comes), se nós formos (if we go)
+- assim que (as soon as), logo que (as soon as)
+- enquanto (while), caso (in case)
+
+**Grammar introduced:**
+- **Future subjunctive formation:**
+  - Take preterite 3rd person plural: eles falaram
+  - Remove -ram: fala-
+  - Add -r endings: -r, -res, -r, -rmos, -rem
+
+**UNIQUE TO PORTUGUESE:**
+Future subjunctive DOES NOT EXIST in Spanish! This is a unique feature of Portuguese grammar.
+
+**Formation Examples:**
+
+**Falar:** eles falaram → fala- → falar
+- quando eu **falar**, quando você **falar**
+- quando nós **falarmos**, quando eles **falarem**
+
+**Ter:** eles tiveram → tive- → tiver
+- se eu **tiver**, se você **tiver**
+- se nós **tivermos**, se eles **tiverem**
+
+**Ser/Ir:** eles foram → fo- → for
+- quando eu **for**, quando você **for**
+- quando nós **formos**, quando eles **forem**
+
+**Vir:** eles vieram → vie- → vier
+- quando eu **vier**, quando você **vier**
+- quando nós **viermos**, quando eles **vierem**
+
+**Uses of Future Subjunctive:**
+
+1. **After "quando" (when - future):**
+   - Quando eu **tiver** tempo, vou viajar. (When I have time, I'll travel.)
+   - Quando você **vier**, me ligue. (When you come, call me.)
+
+2. **After "se" (if - future possibility):**
+   - Se eu **puder**, eu vou. (If I can, I'll go.)
+   - Se você **quiser**, você pode vir. (If you want, you can come.)
+
+3. **After time conjunctions:**
+   - Assim que eu **chegar**, te aviso. (As soon as I arrive, I'll let you know.)
+   - Enquanto você **estiver** aqui, fique à vontade. (While you're here, make yourself at home.)
+
+**Key Conjunctions Requiring Future Subjunctive:**
+- **quando** (when - future)
+- **se** (if - future possibility)
+- **assim que / logo que** (as soon as)
+- **enquanto** (while - future)
+- **depois que** (after - future)
+- **sempre que** (whenever - future)
+- **caso** (in case)
+
+**Future Subjunctive vs Imperfect Subjunctive:**
+- **Future subjunctive:** real future possibilities
+  - Se eu **tiver** tempo, vou. (If I have time, I'll go - likely possibility)
+- **Imperfect subjunctive:** hypothetical/contrary to fact
+  - Se eu **tivesse** tempo, iria. (If I had time, I would go - but I don't)
+
+**Practice format:**
+- Form future subjunctive from preterite
+- Complete quando/se clauses with future subjunctive
+- Distinguish future subjunctive vs imperfect subjunctive
+
+**Student can now:**
+- Use future subjunctive after quando, se, and time conjunctions
+- Express future conditions and possibilities correctly
+- Understand this unique Portuguese grammar feature
+- Distinguish between future possibilities (future subj.) and hypotheticals (imperf. subj.)
+
+**Typical sentences:**
+- Quando eu for ao Brasil, vou visitar você. (When I go to Brazil, I'll visit you.)
+- Se você tiver dúvidas, me pergunte. (If you have doubts, ask me.)
+- Assim que eu chegar em casa, vou ligar. (As soon as I arrive home, I'll call.)
+- Enquanto você estiver aqui, aproveite. (While you're here, enjoy.)
+- Quando nós formos, te avisamos. (When we go, we'll let you know.)
+
+**Common Mistakes to Avoid:**
+- ❌ "Quando eu vou" (using present/future indicative)
+- ✅ "Quando eu for" (correct - future subjunctive after quando)
+- ❌ "Se você tem tempo" (using present indicative)
+- ✅ "Se você tiver tempo" (correct - future subjunctive after se)
+- ❌ Confusing with imperfect subjunctive
+- ✅ Future subjunctive = real possibility, Imperfect = hypothetical
+
+**Spanish Speaker Note:**
+This tense DOES NOT EXIST in Spanish! Spanish uses present subjunctive where Portuguese uses future subjunctive:
+- PT: Quando eu **for** (future subjunctive)
+- ES: Cuando yo **vaya** (present subjunctive)
+Portuguese makes the distinction; Spanish doesn't.
+
+**Connecting to Previous Units:**
+- Unit 84: Imperfect subjunctive → similar formation, different use
+- Unit 34-43: Preterite → basis for formation (same as imperfect subj.)
+- Unit 29: Vou + infinitive → now can say "quando eu for" (when I go)
+
+**Why This Unit:**
+- **UNIQUE TO PORTUGUESE:** Doesn't exist in Spanish!
+- Very common - "quando" (when) always triggers it in future contexts
+- Essential for correct Portuguese grammar
+- Follows naturally from imperfect subjunctive (similar formation)
+- Completes the subjunctive system (present, imperfect, future)
+
+---
+
+### Unit 86: Colloquial Brazilian Portuguese Consolidated
+**New vocabulary:**
+- tá (está), tô (estou), tava (estava), tínha (tinha)
+- cê (você), ocê (você - some regions)
+- vô (vou), fazê (fazer), comê (comer)
+- num (não), né (não é?), sabe (you know)
+- pra (para), pro (para o), praquela (para aquela)
+- tipo (like), assim (like), então (so)
+
+**Grammar introduced:**
+- **Systematic overview of colloquial BP reductions and speech patterns**
+- Recognition vs production: understand in listening, use in appropriate contexts
+- Formal vs informal: knowing when each is appropriate
+
+**Major Colloquial Reductions:**
+
+**1. Estar Reductions (Universal in BP):**
+- estou → **tô**
+- está → **tá**
+- estamos → **tamo** (very informal)
+- estão → **tão**
+- estava → **tava**
+- Example: "Tô indo" (I'm going) instead of "Estou indo"
+
+**2. Você Reductions:**
+- você → **cê** (before verbs)
+- vocês → **cês**
+- Example: "Cê vai?" (Are you going?) instead of "Você vai?"
+
+**3. Verb Reductions:**
+- vou → **vô**
+- fazer → **fazê**
+- comer → **comê**
+- falar → **falá**
+- estar → **tá**
+- Example: "Vô fazê" (I'm gonna do) instead of "Vou fazer"
+
+**4. Negation Reduction:**
+- não → **num** (before verbs in pronunciation)
+- não é? → **né?** (tag question)
+- Example: "Num sei" (I don't know) - but WRITE "não sei"
+
+**5. Para Contractions:**
+- para → **pra**
+- para o → **pro**
+- para a → **pra**
+- para os → **pros**
+- para as → **pras**
+- Example: "Vou pro Brasil" (I'm going to Brazil)
+
+**6. Infinitive Reductions:**
+In fast speech, final -r often drops:
+- falar → **falá**
+- comer → **comê**
+- dormir → **dormí**
+- Example: "Vou dormí" (I'm going to sleep)
+
+**Discourse Markers (Very Common):**
+- **né?** - tag question (isn't it? right?)
+- **sabe?** - you know?
+- **tipo** - like (filler)
+- **assim** - like, sort of
+- **então** - so, well then
+- **pois é** - yeah, exactly
+- **com certeza** - for sure, definitely
+- **cara / mano** - dude, man (informal address)
+
+**Double Negation (Emphasis):**
+- Não sei, **não**. (I don't know - emphatic)
+- Não vou, **não**. (I'm not going - emphatic)
+- Pattern: negative + não at end for emphasis
+
+**Ellipsis (Dropping Words):**
+- (Eu) Tô indo. (I'm going.) - drop subject
+- (Nós) Vamos lá. (We're going there.) - drop subject
+- Pode vir. (You can come.) - drop você
+
+**Practice format:**
+- Recognize colloquial forms in listening
+- Distinguish formal vs informal contexts
+- Practice appropriate usage
+- Understand regional variations
+
+**Student can now:**
+- Understand authentic Brazilian Portuguese conversations
+- Recognize all major reductions and colloquialisms
+- Know when to use formal vs informal speech
+- Sound more natural in casual conversation (when appropriate)
+
+**Typical conversations:**
+
+**Formal:** Você está indo para casa?
+**Colloquial:** Cê tá indo pra casa?
+
+**Formal:** Eu vou fazer isso amanhã.
+**Colloquial:** Vô fazê isso amanhã.
+
+**Formal:** Eu não sei.
+**Colloquial:** Num sei. OR Não sei, não.
+
+**Formal:** Você quer ir ao cinema?
+**Colloquial:** Cê quer ir no cinema?
+
+**Common Mistakes to Avoid:**
+- ❌ Writing "tô" in formal contexts
+- ✅ Always WRITE "estou" - use "tô" only in very informal messages
+- ❌ Using "cê" with strangers or in professional settings
+- ✅ Use "você" in formal settings, "cê" with friends
+- ❌ Overusing colloquialisms when learning
+- ✅ Master formal Portuguese first, add colloquial for comprehension
+
+**When to Use Colloquial BP:**
+✅ **Appropriate:**
+- Friends and family
+- Casual text messages
+- Informal social situations
+- Understanding songs, movies, street conversation
+
+❌ **Inappropriate:**
+- Formal writing (essays, business)
+- Professional settings
+- Speaking with strangers initially
+- Academic contexts
+
+**Connecting to Previous Units:**
+- Wave 1 added colloquial notes to Units 12, 18, 23, 29, 42
+- Now: Systematic consolidation of ALL colloquial patterns
+- Unit 12: Estar → tá
+- Unit 18: Não → num
+- Unit 23: Você → cê
+- Unit 29: Vou → vô
+- Unit 42: Para → pra/pro
+
+**Why This Unit:**
+- **ESSENTIAL FOR LISTENING:** Real BP sounds very different from formal teaching
+- Consolidates all Wave 1 colloquial additions
+- Adds discourse markers and additional patterns
+- Recognition vs production: understand everything, use appropriately
+- Bridges gap between classroom Portuguese and street Portuguese
+
+---
+
+### Unit 87: Advanced Demonstratives - Discourse and Temporal Uses
+**New vocabulary:**
+- este/isto (this - near speaker)
+- esse/isso (that - near listener OR discourse reference)
+- aquele/aquilo (that - far from both OR distant time)
+- discourse proximity (recently mentioned)
+- temporal reference (this/recent/distant)
+
+**Grammar introduced:**
+- **Beyond physical proximity:** demonstratives have multiple uses
+- **Three uses:** physical, discourse, temporal
+
+**Physical Proximity (Basic - Unit 72):**
+- **este/esta/isto:** near speaker (this)
+- **esse/essa/isso:** near listener (that)
+- **aquele/aquela/aquilo:** far from both (that over there)
+
+**Discourse Proximity (NEW):**
+Demonstratives refer to things mentioned in conversation:
+- **Este/isto:** about to mention
+  - **Este** é o problema: ele não estuda. (This is the problem: he doesn't study.)
+- **Esse/isso:** just mentioned
+  - Ele não estuda. **Esse** é o problema. (He doesn't study. That's the problem.)
+- **Aquele/aquilo:** mentioned earlier in discourse
+  - Falei com João ontem. **Aquele** rapaz é inteligente. (I spoke with João yesterday. That guy is intelligent.)
+
+**Temporal Reference (NEW):**
+Demonstratives indicate time frames:
+- **Este/esta:** present time, current
+  - **Esta** semana (this week - current)
+  - **Este** ano (this year)
+  - Neste momento (at this moment)
+- **Esse/essa:** recent past
+  - **Essa** semana (that week - just passed)
+  - Nesse dia (on that day - recently)
+- **Aquele/aquela:** distant past
+  - **Aquele** ano (that year - long ago)
+  - Naquele tempo (in those days)
+
+**BP Informal Pattern:**
+In spoken BP, "esse/isso" is often used for everything:
+- Formal: **Este** livro é bom. (This book is good - near me)
+- BP informal: **Esse** livro é bom. (common usage)
+- "Este/esta" sounds formal in spoken BP
+- "Esse/essa" is more versatile in casual speech
+
+**EP vs BP:**
+- EP maintains stricter distinctions (este vs esse)
+- BP tends to use "esse" more broadly in speech
+- Both follow the rules in formal writing
+
+**Practice format:**
+- Identify physical vs discourse vs temporal use
+- Choose appropriate demonstrative for context
+- Understand BP informal patterns
+
+**Student can now:**
+- Use demonstratives for more than physical location
+- Refer to things previously mentioned in conversation
+- Express time frames with demonstratives
+- Understand why BP speakers often use "esse" for everything
+
+**Typical sentences:**
+
+**Discourse Use:**
+- Eu vi um filme ontem. Esse filme foi ótimo. (I saw a movie yesterday. That movie was great.)
+- Vou te contar uma história. Esta história é interessante. (I'm going to tell you a story. This story is interesting.)
+
+**Temporal Use:**
+- Esta semana estou muito ocupado. (This week I'm very busy - current)
+- Naquele ano, eu morava em São Paulo. (In that year, I lived in São Paulo - distant past)
+- Nesse dia, tudo mudou. (On that day, everything changed - recent past)
+
+**Common Mistakes to Avoid:**
+- ❌ Only thinking of demonstratives as physical location
+- ✅ They also work for discourse and time
+- ❌ Being too strict in spoken BP
+- ✅ "Esse" is very versatile in casual BP speech
+- ❌ "Este livro" in casual conversation
+- ✅ "Esse livro" sounds more natural in spoken BP
+
+**Connecting to Previous Units:**
+- Unit 72: Basic demonstratives (physical proximity) → now expand uses
+- Unit 12: Discourse flow → demonstratives help connect ideas
+- Unit 50-51: Days and months → temporal demonstratives with time expressions
+
+**Why This Unit:**
+- **EXPANDS BEYOND BASICS:** Unit 72 taught physical proximity only
+- Discourse use is extremely common in conversation
+- Temporal use essential for talking about time
+- Understanding BP informal "esse" preference helps comprehension
+- Makes demonstratives more functional and natural
+
+---
+
+### Unit 88: Conversational Strategies & Discourse Markers
+**New vocabulary:**
+- então (so, well then), pois é (yeah, exactly)
+- aliás (by the way, actually), além disso (besides, moreover)
+- por outro lado (on the other hand), enfim (anyway, in short)
+- quer dizer (that is to say), ou seja (in other words)
+- na verdade (actually, in fact), tipo (like - filler)
+- assim (like, sort of), sabe? (you know?)
+
+**Grammar introduced:**
+- **Discourse markers:** words that organize conversation and connect ideas
+- **Fillers:** words that give time to think
+- **Turn-taking:** how to enter and maintain conversation
+- **Repair strategies:** how to clarify and rephrase
+
+**Discourse Markers by Function:**
+
+**1. Starting/Introducing:**
+- **Então...** (So... / Well then...)
+- **Bom...** (Well... / So...)
+- **Olha...** (Look... / Listen...)
+- **Veja bem...** (You see... / Look here...)
+
+**2. Continuing/Adding:**
+- **E...** (And...)
+- **Além disso...** (Besides... / Moreover...)
+- **Também...** (Also...)
+- **E ainda...** (And also... / And even...)
+
+**3. Contrasting:**
+- **Mas...** (But...)
+- **Por outro lado...** (On the other hand...)
+- **No entanto...** (However...)
+- **Porém...** (However... / Nevertheless...)
+
+**4. Clarifying/Rephrasing:**
+- **Quer dizer...** (That is to say... / I mean...)
+- **Ou seja...** (In other words...)
+- **Digamos...** (Let's say...)
+- **Na verdade...** (Actually... / In fact...)
+
+**5. Concluding:**
+- **Enfim...** (Anyway... / In short...)
+- **Então é isso.** (So that's it.)
+- **Resumindo...** (To sum up... / In summary...)
+- **No fim das contas...** (In the end... / After all...)
+
+**6. Agreeing:**
+- **Pois é!** (Yeah! / Exactly! / Right!)
+- **Exatamente!** (Exactly!)
+- **Com certeza!** (For sure! / Definitely!)
+- **É verdade.** (That's true.)
+- **Concordo.** (I agree.)
+
+**7. Disagreeing Politely:**
+- **Mas não sei...** (But I don't know...)
+- **Talvez...** (Maybe...)
+- **Depende...** (It depends...)
+- **Não necessariamente...** (Not necessarily...)
+
+**Fillers (Give Time to Think):**
+- **tipo** (like)
+- **assim** (like, sort of)
+- **né?** (right? / isn't it?)
+- **sabe?** (you know?)
+- **entende?** (understand?)
+- **bem...** (well...)
+
+**Turn-Taking Strategies:**
+
+**Entering conversation:**
+- Posso falar uma coisa? (Can I say something?)
+- Deixa eu falar. (Let me speak.)
+- Com licença... (Excuse me...)
+
+**Holding the floor:**
+- E... (And...)
+- Então... (So...)
+- Sabe? (You know?)
+- Continue saying something to keep the turn!
+
+**Giving the floor:**
+- E você? (And you?)
+- O que você acha? (What do you think?)
+- Você concorda? (Do you agree?)
+
+**Repair Strategies (When Communication Breaks Down):**
+
+**Asking for clarification:**
+- Como? (What? / Pardon?)
+- Não entendi. (I didn't understand.)
+- Pode repetir? (Can you repeat?)
+- O que você quer dizer? (What do you mean?)
+
+**Clarifying your own speech:**
+- Quer dizer... (I mean...)
+- Ou seja... (In other words...)
+- Deixa eu explicar melhor. (Let me explain better.)
+- O que eu quero dizer é... (What I want to say is...)
+
+**Practice format:**
+- Identify discourse markers in conversations
+- Use fillers appropriately
+- Practice turn-taking in dialogues
+- Repair communication breakdowns
+
+**Student can now:**
+- Organize ideas in conversation with discourse markers
+- Sound more fluent with fillers
+- Enter and maintain conversations naturally
+- Clarify and rephrase when needed
+- Understand conversational flow in Portuguese
+
+**Sample conversation with markers:**
+
+A: **Então**, você vai viajar?
+   (So, are you going to travel?)
+
+B: **Pois é**, eu queria, **mas** não tenho dinheiro.
+   (Yeah, I wanted to, but I don't have money.)
+
+A: **Entendo**. **Por outro lado**, você pode economizar, **né?**
+   (I understand. On the other hand, you could save up, right?)
+
+B: **É verdade**. **Aliás**, estou tentando economizar.
+   (That's true. By the way, I'm trying to save.)
+
+A: **Então é isso**! **No fim das contas**, você vai conseguir!
+   (So that's it! In the end, you'll manage!)
+
+**Common Mistakes to Avoid:**
+- ❌ Speaking without discourse markers (sounds choppy)
+- ✅ Use markers to connect ideas smoothly
+- ❌ Overusing fillers (tipo, assim, sabe in every sentence)
+- ✅ Use fillers strategically, not excessively
+- ❌ Not pausing or using markers when thinking
+- ✅ "Então..." or "Bem..." buys thinking time
+
+**Connecting to Previous Units:**
+- Unit 86: Colloquial BP → discourse markers are part of natural speech
+- Unit 81-85: Subjunctive → "talvez" is both marker and subjunctive trigger
+- All conversation units → markers make conversations flow better
+
+**Why This Unit:**
+- **FLUENCY BOOSTER:** Discourse markers make speech sound natural
+- Essential for sounding like a proficient speaker
+- Helps organize complex ideas
+- Turn-taking strategies necessary for real conversations
+- Repair strategies reduce communication breakdowns
+
+---
+
+### Unit 89: Advanced Por/Para & Idiomatic Expressions
+**New vocabulary:**
+- por acaso (by chance), por exemplo (for example)
+- por enquanto (for now), por via das dúvidas (just in case)
+- estar por (to be about to), estar para (to be about to)
+- por aí (around there), por aqui (around here)
+- para sempre (forever), para variar (for a change)
+- de vez em quando (from time to time)
+
+**Grammar introduced:**
+- **Advanced por/para:** idiomatic expressions and fixed phrases
+- **Subtle distinctions:** estar por vs estar para
+- **Regional variations:** BP vs EP usage differences
+
+**Review Basic Por/Para (Unit 42):**
+- **Para:** destination, purpose, recipient, deadline
+- **Por:** duration, cause, means, through, exchange
+
+**Advanced Por Expressions:**
+
+**1. Fixed Expressions:**
+- **por favor** - please
+- **por exemplo** - for example
+- **por acaso** - by chance
+- **por enquanto** - for now
+- **por isso** - therefore, that's why
+- **por causa de** - because of
+- **por volta de** - around (time)
+
+**2. Location/Movement:**
+- **por aí** - around there, that way
+- **por aqui** - around here, this way
+- **por ali** - around there
+- **por todo lugar** - everywhere
+
+**3. Estar por (About to / In favor of):**
+- Estou **por** sair. (I'm about to leave - haven't yet)
+- Sou **por** essa ideia. (I'm in favor of this idea)
+
+**Advanced Para Expressions:**
+
+**1. Fixed Expressions:**
+- **para sempre** - forever
+- **para variar** - for a change (often ironic)
+- **para começo de conversa** - to start with
+- **para ser sincero** - to be honest
+
+**2. Estar para (About to / Ready to):**
+- Está **para** chover. (It's about to rain - imminent)
+- Ela está **para** vir. (She's about to come)
+
+**Estar Por vs Estar Para:**
+- **Estar por:** hasn't happened yet, less imminent
+  - Estou **por** fazer a lição. (I still need to do the homework - not started)
+- **Estar para:** very imminent, about to happen
+  - Está **para** chover. (It's about to rain - any minute now)
+
+**Idiomatic Expressions:**
+
+**Time Expressions:**
+- **de vez em quando** - from time to time (uses "de" not "por")
+- **de repente** - suddenly
+- **por volta de** - around (time): por volta das 3 horas
+- **para sempre** - forever
+
+**Common Idioms:**
+- **Não estar nem aí para** - to not care about
+  - Ele não está nem aí para isso. (He doesn't care about that at all.)
+- **Estar por um fio** - to hang by a thread
+- **Por via das dúvidas** - just in case
+- **Para seu governo** - for your information (sarcastic)
+
+**Regional Variations (BP vs EP):**
+- BP tends to use "em" where EP uses "para" in some cases
+- BP: "no cinema" (at the movies)
+- EP: "ao cinema" (to the movies - movement)
+- BP: "vou na casa dele" (colloquial - technically wrong but very common)
+- Formal/EP: "vou à casa dele" (correct)
+
+**Practice format:**
+- Memorize fixed expressions
+- Distinguish estar por vs estar para
+- Use idiomatic expressions in context
+- Understand regional variations
+
+**Student can now:**
+- Use advanced por/para expressions naturally
+- Distinguish subtle meanings (estar por vs estar para)
+- Use common idioms with por/para
+- Understand regional BP/EP differences
+
+**Typical sentences:**
+- Por favor, me ajude. (Please help me.)
+- Estou estudando há duas horas, por isso estou cansado. (I've been studying for two hours, that's why I'm tired.)
+- Ele não está nem aí para o trabalho. (He doesn't care about work at all.)
+- Está para chover. (It's about to rain.)
+- Estou por fazer isso ainda. (I still need to do that.)
+- De vez em quando, eu viajo. (From time to time, I travel.)
+- Vou embora por volta das 5. (I'm leaving around 5.)
+
+**Common Mistakes to Avoid:**
+- ❌ "Estou para fazer" when you mean "I still need to" (not imminent)
+- ✅ "Estou por fazer" (correct - haven't done yet)
+- ❌ Translating English idioms literally
+- ✅ Learn Portuguese idioms separately
+- ❌ Forgetting fixed expressions
+- ✅ "Por favor" (never "para favor"), "por exemplo" (never "para exemplo")
+
+**Connecting to Previous Units:**
+- Unit 42: Basic por/para → now advanced expressions
+- Unit 63: Frequency → "de vez em quando"
+- Unit 29: Estar + gerund → now "estar por/para"
+
+**Why This Unit:**
+- **IDIOMATIC FLUENCY:** Fixed expressions are extremely common
+- "Por favor" and "por exemplo" used constantly
+- Estar por/para distinction is nuanced and important
+- Idioms make speech sound natural and native-like
+- Completes the por/para system
+
+---
+
+### Unit 90: Synthesis & Communication - Integration of All Skills
+**New vocabulary:**
+- ALL previous vocabulary integrated
+- Communication strategies
+- Real-world scenarios
+- Cultural competence
+
+**Grammar introduced:**
+- **NO NEW GRAMMAR:** synthesis and integration only
+- **Practice ALL grammar** from Units 1-89 in realistic contexts
+- **Communication focus:** using Portuguese functionally
+
+**Purpose of This Unit:**
+This is a **capstone unit** that synthesizes everything learned in Units 1-89. The goal is to integrate all skills and use Portuguese for real communication.
+
+**Areas of Integration:**
+
+**1. Tense Integration:**
+- **Present:** describe current situations
+- **Past (Preterite):** narrate completed events
+- **Past (Imperfect):** describe past situations and habits
+- **Future (Vou + inf):** talk about plans
+- **Future (Farei):** make predictions
+- **Conditional:** express hypotheticals
+- **Subjunctive (Present):** express wishes and doubts
+- **Subjunctive (Imperfect):** express hypothetical situations
+- **Subjunctive (Future):** express future conditions
+
+**2. Communication Functions:**
+- Introduce yourself and others
+- Ask and answer questions
+- Narrate past events
+- Describe people, places, things
+- Express opinions and emotions
+- Make plans and predictions
+- Give advice and suggestions
+- Agree and disagree politely
+- Request information and help
+- Navigate real-world situations
+
+**3. Real-World Scenarios:**
+
+**Scenario 1: Travel**
+- Booking hotels (gostaria de reservar...)
+- Asking directions (onde fica...? como chego a...?)
+- Ordering food (para mim, o que você recomenda?)
+- Shopping (quanto custa? aceita cartão?)
+
+**Scenario 2: Social**
+- Meeting new people (prazer em conhecê-lo)
+- Making plans (que tal...? vamos...?)
+- Talking about hobbies (gosto de..., costumo...)
+- Sharing experiences (quando eu era..., eu fiz...)
+
+**Scenario 3: Professional**
+- Job interview basics (trabalho como..., tenho experiência em...)
+- Email etiquette (gostaria de..., agradeço...)
+- Phone conversations (poderia falar com...? gostaria de...)
+
+**Scenario 4: Academic**
+- Classroom language (não entendi, pode explicar?)
+- Discussing topics (acho que..., na minha opinião...)
+- Asking questions (por que...? como é que...?)
+
+**4. Cultural Competence:**
+- Formal vs informal address (você vs tu, when to use formal)
+- Regional differences (BP vs EP, colloquial vs formal)
+- Gestures and non-verbal communication
+- Brazilian and Portuguese cultural norms
+
+**Practice format:**
+- **Complex dialogues:** multi-turn conversations
+- **Role-plays:** real-world scenario practice
+- **Narration tasks:** tell stories using multiple tenses
+- **Problem-solving:** navigate situations requiring all skills
+- **Placement test:** assess overall proficiency
+
+**Student can now:**
+- Communicate effectively in Portuguese in real situations
+- Integrate all grammar and vocabulary naturally
+- Switch between tenses appropriately
+- Navigate cultural differences
+- Handle unexpected situations in Portuguese
+- Demonstrate B1/B2 level proficiency
+
+**Comprehensive Example - Narrating a Trip:**
+
+"No ano passado, **viajei** para o Brasil. (Preterite - completed action)
+
+**Era** verão e **estava** muito calor. (Imperfect - setting/description)
+
+Eu **fiquei** em São Paulo por duas semanas. (Preterite - completed action)
+
+**Todos os dias**, eu **ia** à praia de manhã. (Imperfect - habitual past)
+
+**Conheci** muitas pessoas interessantes. (Preterite - specific event)
+
+Quando **chegava** na praia, **gostava** de nadar. (Imperfect - habitual)
+
+**Espero que** um dia eu **possa** voltar. (Present subjunctive - wish)
+
+Se eu **tivesse** mais dinheiro, eu **viajaria** todo ano. (Imperfect subj. + conditional - hypothetical)
+
+Quando eu **for** de novo, **vou** ficar mais tempo. (Future subjunctive + future - future plan)
+
+**No próximo ano**, **viajarei** para Portugal. (Future tense - prediction)"
+
+**Assessment Areas:**
+1. Grammatical accuracy
+2. Vocabulary range and accuracy
+3. Fluency and coherence
+4. Pronunciation and intonation
+5. Cultural appropriateness
+6. Communication strategies
+
+**Common Final Skills to Master:**
+- Storytelling with multiple past tenses
+- Expressing complex opinions with subjunctive
+- Negotiating and problem-solving in Portuguese
+- Understanding authentic materials (news, shows, conversations)
+- Writing coherent paragraphs and emails
+- Speaking spontaneously on various topics
+
+**Connecting to Previous Units:**
+- **EVERY UNIT from 1-89** is integrated here
+- This unit demonstrates that all previous learning comes together
+- Placement test (placement-test.json drill) assesses comprehensive knowledge
+
+**Why This Unit:**
+- **CAPSTONE:** Synthesizes 89 units of learning
+- Demonstrates functional proficiency
+- Assesses readiness for advanced study or real-world use
+- Integrates skills that were taught separately
+- Provides sense of completion and achievement
+- Placement test helps identify strengths and areas for continued study
+
+**Next Steps After Unit 90:**
+- Continue with advanced literature, media, conversation
+- Focus on specialized vocabulary (business, academic, technical)
+- Work on accent reduction and native-like fluency
+- Engage with native materials (books, podcasts, films)
+- Consider certification exams (CELPE-Bras for BP, CAPLE for EP)
 
 ---
 
