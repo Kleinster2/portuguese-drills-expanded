@@ -1,9 +1,9 @@
 /**
  * Placement Test Module - Incognito Mode (No Feedback)
- * 308-question pragmatic diagnostic test (v7.0.0)
+ * 308-question pragmatic diagnostic test (v7.1.0)
  * Complete coverage: Units 1-89 (A1 Beginner → B2 Upper-Intermediate)
  * Assessment Types: Comprehension (PT→EN, 6-7 options) + Production (EN→PT, 8-10 chip options)
- * Features: Pragmatic allocation (questions based on what needs testing), "I don't know" skip, three-way scoring
+ * Features: Pragmatic allocation, unambiguous questions with temporal context, "I don't know" skip, three-way scoring
  * Question Distribution: 174 Comprehension (56.5%) + 134 Production (43.5%)
  */
 
@@ -16,7 +16,7 @@ let testAnswers = [];
  */
 async function loadQuestionBank() {
   try {
-    const response = await fetch('/config/placement-test-questions-v7.0-pragmatic-FULL.json');
+    const response = await fetch('/config/placement-test-questions-v7.1-fixed.json');
     if (!response.ok) {
       throw new Error(`Failed to load questions: ${response.status}`);
     }
@@ -530,7 +530,7 @@ function showCompletionScreen() {
  */
 function generateHash() {
   const testData = {
-    v: "7.0.0",
+    v: "7.1.0",
     t: Math.floor(Date.now() / 1000),
     a: testAnswers
   };
