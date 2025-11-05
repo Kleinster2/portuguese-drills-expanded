@@ -1,8 +1,8 @@
 /**
  * Placement Test Module - Incognito Mode (No Feedback)
- * 180-question dual-assessment diagnostic test (v6.0.0)
+ * 180-question dual-assessment diagnostic test (v6.1.0)
  * Complete coverage: Units 1-90 (A1 Beginner → B2 Upper-Intermediate)
- * Assessment Types: Comprehension (PT→EN) + Production (EN→PT)
+ * Assessment Types: Comprehension (PT→EN, multiple choice) + Production (EN→PT, chip-based fill-in-the-blank)
  */
 
 let questionBank = null;
@@ -14,7 +14,7 @@ let testAnswers = [];
  */
 async function loadQuestionBank() {
   try {
-    const response = await fetch('/config/placement-test-questions-v6.json');
+    const response = await fetch('/config/placement-test-questions-v6.1-chips.json');
     if (!response.ok) {
       throw new Error(`Failed to load questions: ${response.status}`);
     }
@@ -119,9 +119,25 @@ function displayQuestion(index) {
   const isProduction = question.type === 'production';
 
   if (isProduction) {
-    // PRODUCTION QUESTION: Text input
+    // PRODUCTION QUESTION: Chip-based fill-in-the-blank
     const englishLine = question.en ? `<p class="font-mono mb-3 text-lg text-green-700">${question.en}</p>` : '';
     const hintLine = question.hint ? `<p class="text-xs text-slate-500 mt-2 italic">💡 ${question.hint}</p>` : '';
+
+    // Calculate number of blanks
+    const numBlanks = Array.isArray(question.correct) ? question.correct.length : 1;
+
+    // Create template with clickable blanks
+    const templateParts = question.template.split('__');
+    let templateHTML = '';
+    for (let i = 0; i < templateParts.length; i++) {
+      templateHTML += `<span>${templateParts[i]}</span>`;
+      if (i < templateParts.length - 1) {
+        templateHTML += `<span class="inline-block min-w-[80px] px-3 py-1 mx-1 border-2 border-green-400 border-dashed rounded bg-white text-center" id="blank-${question.id}-${i}" data-blank-index="${i}">___</span>`;
+      }
+    }
+
+    // Shuffle chips
+    const shuffledChips = shuffleArray(question.chips);
 
     const questionHTML = `
       <div class="flex items-start space-x-3 mb-4" data-question-id="${question.id}">
@@ -133,21 +149,34 @@ function displayQuestion(index) {
           ${unitInfo}
           ${englishLine}
           <p class="mb-3 font-semibold text-slate-800">${question.question}</p>
-          <input
-            type="text"
-            id="production-input-${question.id}"
-            class="w-full px-4 py-2 border-2 border-green-300 rounded-lg focus:outline-none focus:border-green-500"
-            placeholder="Type your answer in Portuguese..."
-            autocomplete="off"
-            autocapitalize="off"
-            autocorrect="off"
-            spellcheck="false"
-            onkeydown="if(event.key==='Enter'){handleProductionAnswer(${question.id});}"
-          />
+
+          <!-- Template with blanks -->
+          <div class="mb-4 p-4 bg-white rounded-lg border-2 border-green-300">
+            <p class="text-lg font-mono leading-relaxed" id="template-${question.id}">
+              ${templateHTML}
+            </p>
+          </div>
+
           ${hintLine}
+
+          <!-- Chips -->
+          <div class="flex flex-wrap gap-2 mb-3" id="chips-${question.id}">
+            ${shuffledChips.map((chip, idx) => `
+              <button
+                onclick="selectChip(${question.id}, '${chip.replace(/'/g, "\\'")}', ${idx})"
+                id="chip-${question.id}-${idx}"
+                class="px-4 py-2 bg-white border-2 border-green-400 rounded-lg hover:border-green-600 hover:bg-green-100 transition-all text-sm font-medium"
+              >
+                ${chip}
+              </button>
+            `).join('')}
+          </div>
+
           <button
             onclick="handleProductionAnswer(${question.id})"
-            class="mt-3 w-full px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all font-semibold"
+            id="submit-${question.id}"
+            disabled
+            class="w-full px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Submit Answer
           </button>
@@ -156,10 +185,6 @@ function displayQuestion(index) {
     `;
 
     messagesContainer.insertAdjacentHTML('beforeend', questionHTML);
-    // Focus on input field
-    setTimeout(() => {
-      document.getElementById(`production-input-${question.id}`)?.focus();
-    }, 100);
 
   } else {
     // COMPREHENSION QUESTION: Multiple choice
@@ -260,36 +285,100 @@ window.handlePlacementAnswer = function(questionId, selectedAnswer) {
 };
 
 /**
- * Handle production answer submission (text input)
+ * State management for chip selection
+ */
+const chipSelectionState = {};
+
+/**
+ * Handle chip selection (fill-in-the-blank)
+ */
+window.selectChip = function(questionId, chipValue, chipIndex) {
+  const question = questionBank.questions.find(q => q.id === questionId);
+  const numBlanks = Array.isArray(question.correct) ? question.correct.length : 1;
+
+  // Initialize state if not exists
+  if (!chipSelectionState[questionId]) {
+    chipSelectionState[questionId] = {
+      selectedChips: [],
+      currentBlankIndex: 0
+    };
+  }
+
+  const state = chipSelectionState[questionId];
+
+  // Check if already filled all blanks
+  if (state.selectedChips.length >= numBlanks) {
+    return;
+  }
+
+  // Fill the next blank
+  const blankElement = document.getElementById(`blank-${questionId}-${state.currentBlankIndex}`);
+  if (blankElement) {
+    blankElement.textContent = chipValue;
+    blankElement.classList.remove('border-dashed');
+    blankElement.classList.add('border-solid', 'bg-green-100', 'font-semibold');
+  }
+
+  // Disable the clicked chip
+  const chipButton = document.getElementById(`chip-${questionId}-${chipIndex}`);
+  if (chipButton) {
+    chipButton.disabled = true;
+    chipButton.classList.add('opacity-50', 'cursor-not-allowed');
+    chipButton.classList.remove('hover:border-green-600', 'hover:bg-green-100');
+  }
+
+  // Store selection
+  state.selectedChips.push(chipValue);
+  state.currentBlankIndex++;
+
+  // Enable submit button if all blanks filled
+  if (state.selectedChips.length === numBlanks) {
+    const submitButton = document.getElementById(`submit-${questionId}`);
+    if (submitButton) {
+      submitButton.disabled = false;
+    }
+  }
+};
+
+/**
+ * Handle production answer submission (chip-based)
  */
 window.handleProductionAnswer = function(questionId) {
   const question = questionBank.questions.find(q => q.id === questionId);
-  const inputElement = document.getElementById(`production-input-${questionId}`);
-  const userAnswer = inputElement.value.trim();
+  const state = chipSelectionState[questionId];
 
-  // Normalize for comparison (lowercase, remove extra spaces)
-  const normalizedAnswer = userAnswer.toLowerCase().replace(/\s+/g, ' ');
-  const normalizedCorrect = question.correct.toLowerCase().replace(/\s+/g, ' ');
+  if (!state || state.selectedChips.length === 0) {
+    return;
+  }
 
-  // Check against correct answer and alternatives
-  const alternatives = question.alternatives || [];
-  const normalizedAlternatives = alternatives.map(alt => alt.toLowerCase().replace(/\s+/g, ' '));
+  // Get user's selected chips
+  const userAnswer = state.selectedChips;
+  const correctAnswer = Array.isArray(question.correct) ? question.correct : [question.correct];
 
-  const isCorrect = normalizedAnswer === normalizedCorrect || normalizedAlternatives.includes(normalizedAnswer);
+  // Check if correct (exact match in order)
+  const isCorrect = userAnswer.length === correctAnswer.length &&
+                   userAnswer.every((chip, idx) => chip === correctAnswer[idx]);
 
-  // 1. Visual acknowledgment only
-  const submitButton = event.target || document.querySelector(`[onclick="handleProductionAnswer(${questionId})"]`);
+  // 1. Disable all chips and submit button
+  const chipsContainer = document.getElementById(`chips-${questionId}`);
+  if (chipsContainer) {
+    const allChips = chipsContainer.querySelectorAll('button');
+    allChips.forEach(btn => {
+      btn.disabled = true;
+      btn.classList.add('opacity-50', 'cursor-not-allowed');
+    });
+  }
+
+  const submitButton = document.getElementById(`submit-${questionId}`);
   if (submitButton) {
     submitButton.disabled = true;
-    submitButton.classList.add('opacity-50', 'cursor-not-allowed');
+    submitButton.classList.add('opacity-50');
   }
-  inputElement.disabled = true;
-  inputElement.classList.add('opacity-50');
 
   // 2. Store answer silently
   testAnswers.push({
     q: questionId,
-    s: userAnswer,
+    s: userAnswer.join(' '),
     c: isCorrect,
     type: 'production',
     unit: question.unit
@@ -309,7 +398,8 @@ window.handleProductionAnswer = function(questionId) {
   messagesContainer.insertAdjacentHTML('beforeend', processingHTML);
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
-  // 4. Move to next question after brief delay
+  // 4. Clean up state and move to next question
+  delete chipSelectionState[questionId];
   currentQuestionIndex++;
 
   setTimeout(() => {
@@ -371,7 +461,7 @@ function showCompletionScreen() {
  */
 function generateHash() {
   const testData = {
-    v: "6.0.0",
+    v: "6.1.0",
     t: Math.floor(Date.now() / 1000),
     a: testAnswers
   };
