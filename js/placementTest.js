@@ -174,7 +174,7 @@ function displayQuestion(index) {
             <button
               onclick="skipProductionQuestion(${question.id})"
               id="skip-${question.id}"
-              class="px-4 py-2 bg-slate-200 border-2 border-slate-400 text-slate-700 rounded-lg hover:bg-slate-300 hover:border-slate-500 transition-all text-sm font-medium"
+              class="px-4 py-2 bg-white border-2 border-green-400 rounded-lg hover:border-green-600 hover:bg-green-100 transition-all text-sm font-medium"
             >
               I don't know
             </button>
