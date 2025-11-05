@@ -80,20 +80,20 @@
       "unit": 7,
       "unitName": "Basic Verbs - Morar (to live)",
       "phase": 1,
-      "pt": "Eu moro em São Paulo",
-      "question": "What does 'Eu moro em São Paulo' mean?",
-      "correct": "I live in São Paulo",
-      "options": ["I live in São Paulo", "I work in São Paulo", "I died in São Paulo", "I am from São Paulo"]
+      "pt": "Eu __ em São Paulo (morar)",
+      "question": "Complete the sentence: 'Eu __ em São Paulo' (morar - to live)",
+      "correct": "moro",
+      "options": ["moro", "mora", "morar", "moramos"]
     },
     {
       "id": 8,
       "unit": 8,
       "unitName": "Basic Verbs - Falar (to speak)",
       "phase": 1,
-      "pt": "Eu falo português",
-      "question": "What does 'Eu falo português' mean?",
-      "correct": "I speak Portuguese",
-      "options": ["I speak Portuguese", "I study Portuguese", "I am Portuguese", "I need Portuguese"]
+      "pt": "Eu __ português (falar)",
+      "question": "Complete the sentence: 'Eu __ português' (falar - to speak)",
+      "correct": "falo",
+      "options": ["falo", "fala", "falar", "falamos"]
     },
     {
       "id": 9,
@@ -110,20 +110,20 @@
       "unit": 10,
       "unitName": "Basic Verbs - Estudar (to study)",
       "phase": 1,
-      "pt": "Eu estudo português",
-      "question": "What does 'Eu estudo português' mean?",
-      "correct": "I study Portuguese",
-      "options": ["I study Portuguese", "I speak Portuguese", "I am Portuguese", "I like Portuguese"]
+      "pt": "Eu __ português (estudar)",
+      "question": "Complete the sentence: 'Eu __ português' (estudar - to study)",
+      "correct": "estudo",
+      "options": ["estudo", "estuda", "estudar", "estudamos"]
     },
     {
       "id": 11,
       "unit": 11,
       "unitName": "Verb Ficar (to be located / to stay)",
       "phase": 1,
-      "pt": "A escola fica perto",
-      "question": "What does 'A escola fica perto' mean?",
-      "correct": "The school is nearby",
-      "options": ["The school is nearby", "The school stays open", "I stay at school", "The school is closed"]
+      "pt": "A escola __ perto (ficar)",
+      "question": "Complete the sentence: 'A escola __ perto' (ficar - to be located)",
+      "correct": "fica",
+      "options": ["fica", "fico", "ficar", "ficam"]
     },
     {
       "id": 12,
@@ -200,10 +200,10 @@
       "unit": 19,
       "unitName": "Verb Precisar de (to need)",
       "phase": 1,
-      "pt": "Eu preciso de ajuda",
-      "question": "What does 'Eu preciso de ajuda' mean?",
-      "correct": "I need help",
-      "options": ["I need help", "I help someone", "I have help", "I give help"]
+      "pt": "Eu preciso __ ajuda (precisar de)",
+      "question": "Complete the sentence: 'Eu preciso __ ajuda' (precisar de - to need)",
+      "correct": "de",
+      "options": ["de", "em", "para", "a"]
     },
     {
       "id": 20,
@@ -260,20 +260,20 @@
       "unit": 25,
       "unitName": "Verb Gostar de (to like)",
       "phase": 1,
-      "pt": "Eu gosto de música",
-      "question": "What does 'Eu gosto de música' mean?",
-      "correct": "I like music",
-      "options": ["I like music", "I have music", "I listen to music", "I am musical"]
+      "pt": "Eu gosto __ música (gostar de)",
+      "question": "Complete the sentence: 'Eu gosto __ música' (gostar de - to like)",
+      "correct": "de",
+      "options": ["de", "em", "para", "com"]
     },
     {
       "id": 26,
       "unit": 26,
       "unitName": "Regular -IR Verbs (Abrir, Partir)",
       "phase": 2,
-      "pt": "Eu abro a porta",
-      "question": "What does 'Eu abro a porta' mean?",
-      "correct": "I open the door",
-      "options": ["I open the door", "I opened the door", "I will open the door", "I close the door"]
+      "pt": "Eu __ a porta (abrir)",
+      "question": "Complete the sentence: 'Eu __ a porta' (abrir - to open)",
+      "correct": "abro",
+      "options": ["abro", "abre", "abrir", "abrimos"]
     },
     {
       "id": 27,
