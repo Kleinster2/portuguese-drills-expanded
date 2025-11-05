@@ -109,8 +109,12 @@ function displayQuestion(index) {
   // Shuffle options to randomize answer positions
   const shuffledOptions = shuffleArray(question.options);
 
-  // v4 format: Show Portuguese sentence (if exists) + English question + English options
+  // v5 format: Show unit info + Portuguese sentence (if exists) + English question + English options
   const portugueseLine = question.pt ? `<p class="font-mono mb-3 text-lg text-blue-700">${question.pt}</p>` : '';
+  const unitInfo = question.unit && question.unitName ?
+    `<div class="mb-2 pb-2 border-b border-slate-300">
+      <p class="text-xs font-semibold text-purple-600">Unit ${question.unit}: ${question.unitName}</p>
+    </div>` : '';
 
   const questionHTML = `
     <div class="flex items-start space-x-3 mb-4" data-question-id="${question.id}">
@@ -119,6 +123,7 @@ function displayQuestion(index) {
       </div>
       <div class="bg-slate-100 rounded-2xl p-4 max-w-2xl w-full">
         <p class="text-xs text-slate-500 mb-2">Question ${index + 1} of ${questionBank.questions.length}</p>
+        ${unitInfo}
         ${portugueseLine}
         <p class="mb-3 font-semibold text-slate-800">${question.question}</p>
         <div class="flex flex-wrap gap-2" id="question-${question.id}-options">

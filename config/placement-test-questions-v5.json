@@ -61,10 +61,10 @@
       "unit": 5,
       "unitName": "Location with Estar",
       "phase": 1,
-      "pt": "Eu estou em casa",
-      "question": "What does 'Eu estou em casa' mean?",
-      "correct": "I am at home",
-      "options": ["I am at home", "I am a house", "I have a house", "I go home"]
+      "pt": "Eu estou no trabalho",
+      "question": "What does 'Eu estou no trabalho' mean?",
+      "correct": "I am at work",
+      "options": ["I am at work", "I am a worker", "I have work", "I work"]
     },
     {
       "id": 6,
