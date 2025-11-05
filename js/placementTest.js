@@ -1,6 +1,7 @@
 /**
  * Placement Test Module - Incognito Mode (No Feedback)
- * 75-question curriculum-aligned diagnostic test
+ * 90-question curriculum-aligned diagnostic test (v5.0.0)
+ * Complete coverage: Units 1-90 (A1 Beginner → B2 Upper-Intermediate)
  */
 
 let questionBank = null;
@@ -12,12 +13,12 @@ let testAnswers = [];
  */
 async function loadQuestionBank() {
   try {
-    const response = await fetch('/config/placement-test-questions-v4.json');
+    const response = await fetch('/config/placement-test-questions-v5.json');
     if (!response.ok) {
       throw new Error(`Failed to load questions: ${response.status}`);
     }
     questionBank = await response.json();
-    console.log(`✓ Loaded ${questionBank.questions.length} questions`);
+    console.log(`✓ Loaded ${questionBank.questions.length} questions (v${questionBank.metadata.version})`);
     return questionBank;
   } catch (error) {
     console.error('Error loading question bank:', error);
@@ -249,7 +250,7 @@ function showCompletionScreen() {
  */
 function generateHash() {
   const testData = {
-    v: "4.0.0",
+    v: "5.0.0",
     t: Math.floor(Date.now() / 1000),
     a: testAnswers
   };
