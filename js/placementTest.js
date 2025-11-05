@@ -1,7 +1,8 @@
 /**
  * Placement Test Module - Incognito Mode (No Feedback)
- * 90-question curriculum-aligned diagnostic test (v5.0.0)
+ * 180-question dual-assessment diagnostic test (v6.0.0)
  * Complete coverage: Units 1-90 (A1 Beginner → B2 Upper-Intermediate)
+ * Assessment Types: Comprehension (PT→EN) + Production (EN→PT)
  */
 
 let questionBank = null;
@@ -13,12 +14,14 @@ let testAnswers = [];
  */
 async function loadQuestionBank() {
   try {
-    const response = await fetch('/config/placement-test-questions-v5.json');
+    const response = await fetch('/config/placement-test-questions-v6.json');
     if (!response.ok) {
       throw new Error(`Failed to load questions: ${response.status}`);
     }
     questionBank = await response.json();
     console.log(`✓ Loaded ${questionBank.questions.length} questions (v${questionBank.metadata.version})`);
+    console.log(`  - ${questionBank.metadata.assessmentTypes.comprehension}`);
+    console.log(`  - ${questionBank.metadata.assessmentTypes.production}`);
     return questionBank;
   } catch (error) {
     console.error('Error loading question bank:', error);
@@ -100,47 +103,96 @@ function shuffleArray(array) {
 
 /**
  * Display a question (incognito - no topic labels)
- * v4 format: Comprehension-based with English questions and options
+ * v6 format: Dual assessment - comprehension (multiple choice) + production (text input)
  */
 function displayQuestion(index) {
   const messagesContainer = document.getElementById('chat-messages');
   const question = questionBank.questions[index];
 
-  // Shuffle options to randomize answer positions
-  const shuffledOptions = shuffleArray(question.options);
-
-  // v5 format: Show unit info + Portuguese sentence (if exists) + English question + English options
-  const portugueseLine = question.pt ? `<p class="font-mono mb-3 text-lg text-blue-700">${question.pt}</p>` : '';
+  // Unit info display
   const unitInfo = question.unit && question.unitName ?
     `<div class="mb-2 pb-2 border-b border-slate-300">
       <p class="text-xs font-semibold text-purple-600">Unit ${question.unit}: ${question.unitName}</p>
     </div>` : '';
 
-  const questionHTML = `
-    <div class="flex items-start space-x-3 mb-4" data-question-id="${question.id}">
-      <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-        <span class="text-blue-600 text-sm font-bold">${index + 1}</span>
-      </div>
-      <div class="bg-slate-100 rounded-2xl p-4 max-w-2xl w-full">
-        <p class="text-xs text-slate-500 mb-2">Question ${index + 1} of ${questionBank.questions.length}</p>
-        ${unitInfo}
-        ${portugueseLine}
-        <p class="mb-3 font-semibold text-slate-800">${question.question}</p>
-        <div class="flex flex-wrap gap-2" id="question-${question.id}-options">
-          ${shuffledOptions.map(opt => `
-            <button
-              onclick="handlePlacementAnswer(${question.id}, '${opt.replace(/'/g, "\\'")}')"
-              class="px-4 py-2 bg-white border-2 border-slate-300 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-all text-sm font-medium"
-            >
-              ${opt}
-            </button>
-          `).join('')}
+  // Check question type
+  const isProduction = question.type === 'production';
+
+  if (isProduction) {
+    // PRODUCTION QUESTION: Text input
+    const englishLine = question.en ? `<p class="font-mono mb-3 text-lg text-green-700">${question.en}</p>` : '';
+    const hintLine = question.hint ? `<p class="text-xs text-slate-500 mt-2 italic">💡 ${question.hint}</p>` : '';
+
+    const questionHTML = `
+      <div class="flex items-start space-x-3 mb-4" data-question-id="${question.id}">
+        <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+          <span class="text-green-600 text-sm font-bold">${index + 1}</span>
+        </div>
+        <div class="bg-green-50 rounded-2xl p-4 max-w-2xl w-full">
+          <p class="text-xs text-slate-500 mb-2">Question ${index + 1} of ${questionBank.questions.length} <span class="text-green-600 font-semibold">[PRODUCTION]</span></p>
+          ${unitInfo}
+          ${englishLine}
+          <p class="mb-3 font-semibold text-slate-800">${question.question}</p>
+          <input
+            type="text"
+            id="production-input-${question.id}"
+            class="w-full px-4 py-2 border-2 border-green-300 rounded-lg focus:outline-none focus:border-green-500"
+            placeholder="Type your answer in Portuguese..."
+            autocomplete="off"
+            autocapitalize="off"
+            autocorrect="off"
+            spellcheck="false"
+            onkeydown="if(event.key==='Enter'){handleProductionAnswer(${question.id});}"
+          />
+          ${hintLine}
+          <button
+            onclick="handleProductionAnswer(${question.id})"
+            class="mt-3 w-full px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all font-semibold"
+          >
+            Submit Answer
+          </button>
         </div>
       </div>
-    </div>
-  `;
+    `;
 
-  messagesContainer.insertAdjacentHTML('beforeend', questionHTML);
+    messagesContainer.insertAdjacentHTML('beforeend', questionHTML);
+    // Focus on input field
+    setTimeout(() => {
+      document.getElementById(`production-input-${question.id}`)?.focus();
+    }, 100);
+
+  } else {
+    // COMPREHENSION QUESTION: Multiple choice
+    const shuffledOptions = shuffleArray(question.options);
+    const portugueseLine = question.pt ? `<p class="font-mono mb-3 text-lg text-blue-700">${question.pt}</p>` : '';
+
+    const questionHTML = `
+      <div class="flex items-start space-x-3 mb-4" data-question-id="${question.id}">
+        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+          <span class="text-blue-600 text-sm font-bold">${index + 1}</span>
+        </div>
+        <div class="bg-slate-100 rounded-2xl p-4 max-w-2xl w-full">
+          <p class="text-xs text-slate-500 mb-2">Question ${index + 1} of ${questionBank.questions.length} <span class="text-blue-600 font-semibold">[COMPREHENSION]</span></p>
+          ${unitInfo}
+          ${portugueseLine}
+          <p class="mb-3 font-semibold text-slate-800">${question.question}</p>
+          <div class="flex flex-wrap gap-2" id="question-${question.id}-options">
+            ${shuffledOptions.map(opt => `
+              <button
+                onclick="handlePlacementAnswer(${question.id}, '${opt.replace(/'/g, "\\'")}')"
+                class="px-4 py-2 bg-white border-2 border-slate-300 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-all text-sm font-medium"
+              >
+                ${opt}
+              </button>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+
+    messagesContainer.insertAdjacentHTML('beforeend', questionHTML);
+  }
+
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }
 
@@ -208,6 +260,70 @@ window.handlePlacementAnswer = function(questionId, selectedAnswer) {
 };
 
 /**
+ * Handle production answer submission (text input)
+ */
+window.handleProductionAnswer = function(questionId) {
+  const question = questionBank.questions.find(q => q.id === questionId);
+  const inputElement = document.getElementById(`production-input-${questionId}`);
+  const userAnswer = inputElement.value.trim();
+
+  // Normalize for comparison (lowercase, remove extra spaces)
+  const normalizedAnswer = userAnswer.toLowerCase().replace(/\s+/g, ' ');
+  const normalizedCorrect = question.correct.toLowerCase().replace(/\s+/g, ' ');
+
+  // Check against correct answer and alternatives
+  const alternatives = question.alternatives || [];
+  const normalizedAlternatives = alternatives.map(alt => alt.toLowerCase().replace(/\s+/g, ' '));
+
+  const isCorrect = normalizedAnswer === normalizedCorrect || normalizedAlternatives.includes(normalizedAnswer);
+
+  // 1. Visual acknowledgment only
+  const submitButton = event.target || document.querySelector(`[onclick="handleProductionAnswer(${questionId})"]`);
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.classList.add('opacity-50', 'cursor-not-allowed');
+  }
+  inputElement.disabled = true;
+  inputElement.classList.add('opacity-50');
+
+  // 2. Store answer silently
+  testAnswers.push({
+    q: questionId,
+    s: userAnswer,
+    c: isCorrect,
+    type: 'production',
+    unit: question.unit
+  });
+
+  // 3. Show brief "processing" indicator
+  const messagesContainer = document.getElementById('chat-messages');
+  const processingHTML = `
+    <div class="flex items-center justify-center py-3" id="processing-indicator-${questionId}">
+      <div class="flex gap-1">
+        <div class="w-2 h-2 bg-green-400 rounded-full animate-bounce" style="animation-delay: 0ms"></div>
+        <div class="w-2 h-2 bg-green-400 rounded-full animate-bounce" style="animation-delay: 150ms"></div>
+        <div class="w-2 h-2 bg-green-400 rounded-full animate-bounce" style="animation-delay: 300ms"></div>
+      </div>
+    </div>
+  `;
+  messagesContainer.insertAdjacentHTML('beforeend', processingHTML);
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+  // 4. Move to next question after brief delay
+  currentQuestionIndex++;
+
+  setTimeout(() => {
+    document.getElementById(`processing-indicator-${questionId}`)?.remove();
+
+    if (currentQuestionIndex < questionBank.questions.length) {
+      displayQuestion(currentQuestionIndex);
+    } else {
+      showCompletionScreen();
+    }
+  }, 800);
+};
+
+/**
  * Show completion screen with hash (NO SCORE SHOWN)
  */
 function showCompletionScreen() {
@@ -255,7 +371,7 @@ function showCompletionScreen() {
  */
 function generateHash() {
   const testData = {
-    v: "5.0.0",
+    v: "6.0.0",
     t: Math.floor(Date.now() / 1000),
     a: testAnswers
   };
