@@ -231,9 +231,9 @@
       "unitName": "Regular -ER Verbs (Comer, Beber)",
       "phase": 1,
       "pt": "Eu como pão",
-      "question": "What is the ending for 'eu' with -ER verbs?",
-      "correct": "-o",
-      "options": ["-o", "-e", "-a", "-i"]
+      "question": "What does 'Eu como pão' mean?",
+      "correct": "I eat bread",
+      "options": ["I eat bread", "I ate bread", "I like bread", "I have bread"]
     },
     {
       "id": 23,
@@ -431,9 +431,9 @@
       "unitName": "Prepositions Por and Para",
       "phase": 2,
       "pt": "Viajo para o Brasil por duas semanas",
-      "question": "In this sentence, what does 'para' indicate and what does 'por' indicate?",
-      "correct": "Para = destination, por = duration",
-      "options": ["Para = destination, por = duration", "Para = duration, por = destination", "Both mean 'for'", "Both mean 'to'"]
+      "question": "What does 'Viajo para o Brasil por duas semanas' mean?",
+      "correct": "I travel to Brazil for two weeks",
+      "options": ["I travel to Brazil for two weeks", "I travel from Brazil for two weeks", "I travel through Brazil in two weeks", "I travel around Brazil by two weeks"]
     },
     {
       "id": 43,
@@ -600,10 +600,10 @@
       "unit": 59,
       "unitName": "Emotions and Feelings",
       "phase": 3,
-      "pt": "Eu estou feliz",
-      "question": "Why do we use 'estar' in 'Eu estou feliz'?",
-      "correct": "Emotions are temporary states",
-      "options": ["Emotions are temporary states", "Emotions are permanent", "It's the only option", "Feliz requires estar"]
+      "pt": "Eu estou feliz / Eu tenho fome",
+      "question": "What do these sentences mean? 'Eu estou feliz' and 'Eu tenho fome'",
+      "correct": "I am happy / I am hungry",
+      "options": ["I am happy / I am hungry", "I am happy / I have food", "I stay happy / I have hunger", "I feel happy / I want food"]
     },
     {
       "id": 60,
@@ -640,10 +640,10 @@
       "unit": 63,
       "unitName": "Frequency Adverbs",
       "phase": 3,
-      "pt": "Eu sempre estudo",
-      "question": "Where do frequency adverbs typically go in Brazilian Portuguese?",
-      "correct": "Before the verb",
-      "options": ["Before the verb", "After the verb", "At the end of sentence", "At the beginning of sentence"]
+      "pt": "Eu sempre estudo / Eu nunca trabalho aos domingos",
+      "question": "What do these sentences mean?",
+      "correct": "I always study / I never work on Sundays",
+      "options": ["I always study / I never work on Sundays", "I often study / I rarely work on Sundays", "I study forever / I don't work on Sundays", "I am studying / I never worked Sundays"]
     },
     {
       "id": 64,
@@ -670,10 +670,10 @@
       "unit": 66,
       "unitName": "Hobbies and Leisure Activities",
       "phase": 3,
-      "pt": "Eu jogo futebol",
-      "question": "Which verb is used for playing sports in Portuguese?",
-      "correct": "Jogar",
-      "options": ["Jogar", "Tocar", "Praticar", "Fazer"]
+      "pt": "Eu jogo futebol / Eu toco piano",
+      "question": "What do these sentences mean?",
+      "correct": "I play soccer / I play piano",
+      "options": ["I play soccer / I play piano", "I like soccer / I touch piano", "I watch soccer / I study piano", "I practice soccer / I have a piano"]
     },
     {
       "id": 67,
@@ -700,10 +700,10 @@
       "unit": 69,
       "unitName": "Professions and Work",
       "phase": 3,
-      "pt": "Eu sou professor",
-      "question": "Why is there no article in 'Eu sou professor'?",
-      "correct": "Professions with ser don't use articles",
-      "options": ["Professions with ser don't use articles", "It's a mistake", "Only formal speech uses articles", "Professor is a special case"]
+      "pt": "Eu sou professor / Ela é médica",
+      "question": "What do these sentences mean?",
+      "correct": "I am a teacher / She is a doctor",
+      "options": ["I am a teacher / She is a doctor", "I am the teacher / She is the doctor", "I work as teacher / She works as doctor", "I have a teacher / She has a doctor"]
     },
     {
       "id": 70,
@@ -730,10 +730,10 @@
       "unit": 72,
       "unitName": "Demonstratives - This/That",
       "phase": 3,
-      "pt": "Este livro, esse carro, aquela casa",
-      "question": "What is the three-way distinction in Portuguese demonstratives?",
-      "correct": "Este (near me), esse (near you), aquele (far from both)",
-      "options": ["Este (near me), esse (near you), aquele (far from both)", "Este (singular), esse (plural), aquele (formal)", "Este (masculine), esse (feminine), aquele (neutral)", "No real distinction in speech"]
+      "pt": "Este livro é meu, esse carro é seu, aquela casa é dela",
+      "question": "What does this sentence mean?",
+      "correct": "This book is mine, that car is yours, that house (over there) is hers",
+      "options": ["This book is mine, that car is yours, that house (over there) is hers", "This book is mine, this car is yours, this house is hers", "The book is mine, the car is yours, the house is hers", "These books are mine, those cars are yours, those houses are hers"]
     },
     {
       "id": 73,
@@ -760,10 +760,10 @@
       "unit": 75,
       "unitName": "School and Education",
       "phase": 3,
-      "pt": "Eu estudo matemática",
-      "question": "Is there an article before the subject name in 'Eu estudo matemática'?",
-      "correct": "No, school subjects don't use articles",
-      "options": ["No, school subjects don't use articles", "Yes, it should be 'a matemática'", "Only in formal speech", "Only in European Portuguese"]
+      "pt": "Eu estudo matemática e história",
+      "question": "What does 'Eu estudo matemática e história' mean?",
+      "correct": "I study math and history",
+      "options": ["I study math and history", "I study the math and the history", "I studied math and history", "I like math and history"]
     },
     {
       "id": 76,
@@ -790,50 +790,50 @@
       "unit": 78,
       "unitName": "É que - Emphatic Questions",
       "phase": 4,
-      "pt": "Onde é que você mora?",
-      "question": "What does 'é que' do in 'Onde é que você mora?'?",
-      "correct": "Adds emphasis (very common in BP)",
-      "options": ["Adds emphasis (very common in BP)", "Indicates past tense", "Makes it more formal", "It's grammatically required"]
+      "pt": "Onde é que você mora? / O que é que você quer?",
+      "question": "What do these questions mean?",
+      "correct": "Where do you live? / What do you want?",
+      "options": ["Where do you live? / What do you want?", "Where is it that you live? / What is it that you want?", "Where were you living? / What did you want?", "Where are you going? / What do you have?"]
     },
     {
       "id": 79,
       "unit": 79,
       "unitName": "Crase (à, às)",
       "phase": 4,
-      "pt": "Vou à praia",
-      "question": "What does the 'à' represent in 'Vou à praia'?",
-      "correct": "Contraction of a + a (preposition + article)",
-      "options": ["Contraction of a + a (preposition + article)", "Just a regular preposition", "An accent for emphasis", "European Portuguese spelling"]
+      "pt": "Vou à praia às três horas",
+      "question": "What does 'Vou à praia às três horas' mean?",
+      "correct": "I'm going to the beach at 3 o'clock",
+      "options": ["I'm going to the beach at 3 o'clock", "I go to the beach for three hours", "I went to a beach at three hours", "I will go the beach by three o'clock"]
     },
     {
       "id": 80,
       "unit": 80,
       "unitName": "Todo vs Tudo",
       "phase": 4,
-      "pt": "Todo dia / Tudo bem?",
-      "question": "What's the difference between 'todo' and 'tudo'?",
-      "correct": "Todo = adjective (agrees), tudo = pronoun (invariable)",
-      "options": ["Todo = adjective (agrees), tudo = pronoun (invariable)", "No difference, they're interchangeable", "Todo is formal, tudo is informal", "Todo is BP, tudo is EP"]
+      "pt": "Todo dia eu estudo / Tudo bem?",
+      "question": "What do these sentences mean?",
+      "correct": "Every day I study / Everything okay?",
+      "options": ["Every day I study / Everything okay?", "All day I study / All is well?", "The whole day I study / Is everything good?", "Each day I studied / Was everything okay?"]
     },
     {
       "id": 81,
       "unit": 81,
       "unitName": "Introduction to Subjunctive Mood",
       "phase": 4,
-      "pt": "Espero que ele fale",
-      "question": "Why is subjunctive used in 'Espero que ele fale'?",
-      "correct": "Expresses wish/hope (not a fact)",
-      "options": ["Expresses wish/hope (not a fact)", "It's a statement of fact", "It's required after all verbs", "It indicates future tense"]
+      "pt": "Espero que ele fale português",
+      "question": "What does 'Espero que ele fale português' mean?",
+      "correct": "I hope (that) he speaks Portuguese",
+      "options": ["I hope (that) he speaks Portuguese", "I expect that he spoke Portuguese", "I hope that he will speak Portuguese", "I wait for him to speak Portuguese"]
     },
     {
       "id": 82,
       "unit": 82,
       "unitName": "Present Subjunctive - Regular Verbs",
       "phase": 4,
-      "pt": "Espero que você fale português",
-      "question": "What is the 'opposite vowel rule' for subjunctive?",
-      "correct": "-AR verbs use -e, -ER/-IR verbs use -a",
-      "options": ["-AR verbs use -e, -ER/-IR verbs use -a", "-AR verbs use -a, -ER/-IR verbs use -e", "All verbs use -a", "All verbs use -e"]
+      "pt": "Espero que você fale português / Espero que ele coma bem",
+      "question": "What do these sentences mean?",
+      "correct": "I hope you speak Portuguese / I hope he eats well",
+      "options": ["I hope you speak Portuguese / I hope he eats well", "I hope you spoke Portuguese / I hope he ate well", "I expect you to speak Portuguese / I expect him to eat well", "I wait for you to speak Portuguese / I wait for him to eat well"]
     },
     {
       "id": 83,
@@ -861,9 +861,9 @@
       "unitName": "Future Subjunctive",
       "phase": 4,
       "pt": "Quando eu tiver tempo, vou viajar",
-      "question": "What makes the future subjunctive unique to Portuguese?",
-      "correct": "Doesn't exist in Spanish or other Romance languages",
-      "options": ["Doesn't exist in Spanish or other Romance languages", "It's exactly like Spanish", "It's only used in writing", "It's the same as present subjunctive"]
+      "question": "What does 'Quando eu tiver tempo, vou viajar' mean?",
+      "correct": "When I have time, I will travel",
+      "options": ["When I have time, I will travel", "When I had time, I traveled", "If I have time, I would travel", "While I have time, I am traveling"]
     },
     {
       "id": 86,
