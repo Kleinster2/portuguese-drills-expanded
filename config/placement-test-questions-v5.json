@@ -41,9 +41,10 @@
       "unit": 3,
       "unitName": "Definite Articles (o, a, os, as)",
       "phase": 1,
-      "question": "Which article is correct? '__ casa é grande'",
-      "correct": "A",
-      "options": ["A", "O", "Um", "Uma"]
+      "pt": "__ livros estão na mesa",
+      "question": "Which definite article is correct? '__ livros estão na mesa' (the books are on the table)",
+      "correct": "Os",
+      "options": ["Os", "As", "O", "A"]
     },
     {
       "id": 4,
