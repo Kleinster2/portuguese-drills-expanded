@@ -160,7 +160,7 @@ function displayQuestion(index) {
 
           ${hintLine}
 
-          <!-- Chips -->
+          <!-- Chips with "I don't know" option -->
           <div class="flex flex-wrap gap-2 mb-3" id="chips-${question.id}">
             ${shuffledChips.map((chip, idx) => `
               <button
@@ -171,26 +171,24 @@ function displayQuestion(index) {
                 ${chip}
               </button>
             `).join('')}
-          </div>
-
-          <!-- Action buttons -->
-          <div class="flex gap-2">
-            <button
-              onclick="handleProductionAnswer(${question.id})"
-              id="submit-${question.id}"
-              disabled
-              class="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              Submit Answer
-            </button>
             <button
               onclick="skipProductionQuestion(${question.id})"
               id="skip-${question.id}"
-              class="px-4 py-2 bg-slate-300 text-slate-700 rounded-lg hover:bg-slate-400 transition-all font-medium"
+              class="px-4 py-2 bg-slate-200 border-2 border-slate-400 text-slate-700 rounded-lg hover:bg-slate-300 hover:border-slate-500 transition-all text-sm font-medium"
             >
               I don't know
             </button>
           </div>
+
+          <!-- Submit button -->
+          <button
+            onclick="handleProductionAnswer(${question.id})"
+            id="submit-${question.id}"
+            disabled
+            class="w-full px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            Submit Answer
+          </button>
         </div>
       </div>
     `;
