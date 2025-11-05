@@ -299,7 +299,8 @@ window.handlePlacementAnswer = function(questionId, selectedAnswer) {
 const chipSelectionState = {};
 
 /**
- * Handle chip selection (fill-in-the-blank)
+ * Handle chip selection (fill-in-the-blank with re-selection support)
+ * Supports wraparound: after filling all blanks, next click replaces blank 0, then blank 1, etc.
  */
 window.selectChip = function(questionId, chipValue, chipIndex) {
   const question = questionBank.questions.find(q => q.id === questionId);
@@ -308,40 +309,31 @@ window.selectChip = function(questionId, chipValue, chipIndex) {
   // Initialize state if not exists
   if (!chipSelectionState[questionId]) {
     chipSelectionState[questionId] = {
-      selectedChips: [],
+      selectedChips: new Array(numBlanks).fill(null), // Pre-allocate array for all blanks
       currentBlankIndex: 0
     };
   }
 
   const state = chipSelectionState[questionId];
 
-  // Check if already filled all blanks
-  if (state.selectedChips.length >= numBlanks) {
-    return;
-  }
+  // Determine which blank to fill (wraparound)
+  const blankToFill = state.currentBlankIndex % numBlanks;
 
-  // Fill the next blank
-  const blankElement = document.getElementById(`blank-${questionId}-${state.currentBlankIndex}`);
+  // Fill/replace the blank
+  const blankElement = document.getElementById(`blank-${questionId}-${blankToFill}`);
   if (blankElement) {
     blankElement.textContent = chipValue;
     blankElement.classList.remove('border-dashed');
     blankElement.classList.add('border-solid', 'bg-green-100', 'font-semibold');
   }
 
-  // Disable the clicked chip
-  const chipButton = document.getElementById(`chip-${questionId}-${chipIndex}`);
-  if (chipButton) {
-    chipButton.disabled = true;
-    chipButton.classList.add('opacity-50', 'cursor-not-allowed');
-    chipButton.classList.remove('hover:border-green-600', 'hover:bg-green-100');
-  }
-
-  // Store selection
-  state.selectedChips.push(chipValue);
+  // Store selection (replace if already exists)
+  state.selectedChips[blankToFill] = chipValue;
   state.currentBlankIndex++;
 
-  // Enable submit button if all blanks filled
-  if (state.selectedChips.length === numBlanks) {
+  // Enable submit button if at least all blanks have been filled once
+  const allBlanksFilled = state.selectedChips.every(chip => chip !== null);
+  if (allBlanksFilled) {
     const submitButton = document.getElementById(`submit-${questionId}`);
     if (submitButton) {
       submitButton.disabled = false;
@@ -356,12 +348,12 @@ window.handleProductionAnswer = function(questionId) {
   const question = questionBank.questions.find(q => q.id === questionId);
   const state = chipSelectionState[questionId];
 
-  if (!state || state.selectedChips.length === 0) {
+  if (!state || !state.selectedChips || state.selectedChips.every(chip => chip === null)) {
     return;
   }
 
-  // Get user's selected chips
-  const userAnswer = state.selectedChips;
+  // Get user's selected chips (filter out nulls, though there shouldn't be any)
+  const userAnswer = state.selectedChips.filter(chip => chip !== null);
   const correctAnswer = Array.isArray(question.correct) ? question.correct : [question.correct];
 
   // Check if correct (exact match in order)
