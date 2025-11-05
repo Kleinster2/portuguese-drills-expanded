@@ -1,8 +1,9 @@
 /**
  * Placement Test Module - Incognito Mode (No Feedback)
- * 180-question dual-assessment diagnostic test (v6.1.0)
+ * 180-question dual-assessment diagnostic test (v6.1.1)
  * Complete coverage: Units 1-90 (A1 Beginner → B2 Upper-Intermediate)
  * Assessment Types: Comprehension (PT→EN, multiple choice) + Production (EN→PT, chip-based fill-in-the-blank)
+ * Features: "I don't know" skip option for honest assessment, three-way scoring (correct/incorrect/skipped)
  */
 
 let questionBank = null;
@@ -172,14 +173,24 @@ function displayQuestion(index) {
             `).join('')}
           </div>
 
-          <button
-            onclick="handleProductionAnswer(${question.id})"
-            id="submit-${question.id}"
-            disabled
-            class="w-full px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            Submit Answer
-          </button>
+          <!-- Action buttons -->
+          <div class="flex gap-2">
+            <button
+              onclick="handleProductionAnswer(${question.id})"
+              id="submit-${question.id}"
+              disabled
+              class="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-all font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              Submit Answer
+            </button>
+            <button
+              onclick="skipProductionQuestion(${question.id})"
+              id="skip-${question.id}"
+              class="px-4 py-2 bg-slate-300 text-slate-700 rounded-lg hover:bg-slate-400 transition-all font-medium"
+            >
+              I don't know
+            </button>
+          </div>
         </div>
       </div>
     `;
@@ -414,6 +425,73 @@ window.handleProductionAnswer = function(questionId) {
 };
 
 /**
+ * Handle skipping a production question ("I don't know")
+ */
+window.skipProductionQuestion = function(questionId) {
+  const question = questionBank.questions.find(q => q.id === questionId);
+
+  // 1. Disable all chips and both buttons
+  const chipsContainer = document.getElementById(`chips-${questionId}`);
+  if (chipsContainer) {
+    const allChips = chipsContainer.querySelectorAll('button');
+    allChips.forEach(btn => {
+      btn.disabled = true;
+      btn.classList.add('opacity-50', 'cursor-not-allowed');
+    });
+  }
+
+  const submitButton = document.getElementById(`submit-${questionId}`);
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.classList.add('opacity-50');
+  }
+
+  const skipButton = document.getElementById(`skip-${questionId}`);
+  if (skipButton) {
+    skipButton.disabled = true;
+    skipButton.classList.add('opacity-50', 'cursor-not-allowed');
+  }
+
+  // 2. Store as skipped (three-way scoring: correct/incorrect/skipped)
+  testAnswers.push({
+    q: questionId,
+    s: null, // null indicates skipped
+    c: false, // incorrect for placement purposes
+    skipped: true, // flag for instructor analysis
+    type: 'production',
+    unit: question.unit
+  });
+
+  // 3. Show brief "processing" indicator
+  const messagesContainer = document.getElementById('chat-messages');
+  const processingHTML = `
+    <div class="flex items-center justify-center py-3" id="processing-indicator-${questionId}">
+      <div class="flex gap-1">
+        <div class="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style="animation-delay: 0ms"></div>
+        <div class="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style="animation-delay: 150ms"></div>
+        <div class="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style="animation-delay: 300ms"></div>
+      </div>
+    </div>
+  `;
+  messagesContainer.insertAdjacentHTML('beforeend', processingHTML);
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+  // 4. Clean up state and move to next question
+  delete chipSelectionState[questionId];
+  currentQuestionIndex++;
+
+  setTimeout(() => {
+    document.getElementById(`processing-indicator-${questionId}`)?.remove();
+
+    if (currentQuestionIndex < questionBank.questions.length) {
+      displayQuestion(currentQuestionIndex);
+    } else {
+      showCompletionScreen();
+    }
+  }, 600); // Slightly faster for skipped questions
+};
+
+/**
  * Show completion screen with hash (NO SCORE SHOWN)
  */
 function showCompletionScreen() {
@@ -461,7 +539,7 @@ function showCompletionScreen() {
  */
 function generateHash() {
   const testData = {
-    v: "6.1.0",
+    v: "6.1.1",
     t: Math.floor(Date.now() / 1000),
     a: testAnswers
   };
