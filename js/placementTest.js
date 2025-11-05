@@ -1,9 +1,9 @@
 /**
  * Placement Test Module - Incognito Mode (No Feedback)
- * 180-question dual-assessment diagnostic test (v6.1.1)
+ * 180-question dual-assessment diagnostic test (v6.2.0)
  * Complete coverage: Units 1-90 (A1 Beginner → B2 Upper-Intermediate)
  * Assessment Types: Comprehension (PT→EN, multiple choice) + Production (EN→PT, chip-based fill-in-the-blank)
- * Features: "I don't know" skip option for honest assessment, three-way scoring (correct/incorrect/skipped)
+ * Features: 8-10 strategic distractors per production question, "I don't know" skip option, three-way scoring
  */
 
 let questionBank = null;
@@ -15,7 +15,7 @@ let testAnswers = [];
  */
 async function loadQuestionBank() {
   try {
-    const response = await fetch('/config/placement-test-questions-v6.1-chips.json');
+    const response = await fetch('/config/placement-test-questions-v6.2-expanded-chips.json');
     if (!response.ok) {
       throw new Error(`Failed to load questions: ${response.status}`);
     }
@@ -529,7 +529,7 @@ function showCompletionScreen() {
  */
 function generateHash() {
   const testData = {
-    v: "6.1.1",
+    v: "6.2.0",
     t: Math.floor(Date.now() / 1000),
     a: testAnswers
   };
