@@ -1,0 +1,1059 @@
+================================================================================
+PORTUGUESE PLACEMENT TEST V7.0 - PRAGMATIC ALLOCATION PLAN
+================================================================================
+
+PHILOSOPHY CHANGE:
+Old: Rigid 90 units × 2 questions (1C + 1P) = 180 questions
+New: Allocate questions based on WHAT NEEDS TESTING, not arbitrary rules
+
+Target: ~200-220 strategic questions that test meaningful competencies
+
+
+================================================================================
+UNIT CATEGORIZATION & ALLOCATION STRATEGY
+================================================================================
+
+CATEGORY 1: PURE GRAMMAR UNITS (Contractions, Articles, Agreement)
+   Allocation: 0-1 comprehension + 3-5 production
+   Rationale: Must test ALL variations of grammar rules, not just one example
+
+CATEGORY 2: VOCABULARY/MEANING UNITS (Question words, Prepositions, Time)
+   Allocation: 3-5 comprehension + 0-1 production
+   Rationale: Multiple vocabulary items per unit need individual testing
+
+CATEGORY 3: BALANCED VERB UNITS (Basic conjugations, Simple statements)
+   Allocation: 1 comprehension + 1-2 production
+   Rationale: Test understanding + basic conjugation ability
+
+CATEGORY 4: COMPLEX TENSE/MOOD UNITS (Subjunctive, Conditional, Preterite)
+   Allocation: 1-2 comprehension + 2-4 production
+   Rationale: Complex conjugation patterns need more production questions
+
+CATEGORY 5: RECOGNITION-ONLY UNITS (Negation, Word order, Usage distinctions)
+   Allocation: 1-2 comprehension + 0 production
+   Rationale: Just need to recognize/understand, not actively produce
+
+CATEGORY 6: USAGE/NUANCE UNITS (Ser vs estar, Por vs para, Ficar usage)
+   Allocation: 2-3 comprehension + 1-2 production
+   Rationale: Test understanding of WHEN to use which option
+
+
+================================================================================
+DETAILED UNIT-BY-UNIT ANALYSIS
+================================================================================
+
+PHASE 1: FOUNDATION (A1) - Units 1-25
+--------------------------------------------------------------------------------
+
+Unit 1: Identity Statements (Eu sou)
+Current: 1C + 1P
+Category: Balanced Verb Unit (Category 3)
+Recommended: 1C + 2P
+Rationale: Test both "sou" (first person) and common confusions with estar
+Questions:
+  [COMP] Q1: "Eu sou professor" → "I am a teacher"
+  [PROD] Q2: Complete "Eu __ brasileiro" → sou (vs. é, estou, era)
+  [PROD] Q3: Complete "Eu __ médico" → sou (vs. sou um, é, estou)
+
+Unit 2: Origin with Contractions (de + article)
+Current: 1C + 1P
+Category: Pure Grammar Unit (Category 1)
+Recommended: 0C + 4P
+Rationale: MUST test all 4 contractions (do, da, dos, das) - not just one!
+Questions:
+  [PROD] Q1: "I am from Brazil" → Eu sou __ Brasil → do (de+o, masc sing)
+  [PROD] Q2: "I am from Argentina" → Eu sou __ Argentina → da (de+a, fem sing)
+  [PROD] Q3: "I am from the United States" → Eu sou __ Estados Unidos → dos (de+os, masc pl)
+  [PROD] Q4: "I am from the Philippines" → Eu sou __ Filipinas → das (de+as, fem pl)
+
+Unit 3: Definite Articles (o, a, os, as)
+Current: 1C + 1P
+Category: Pure Grammar Unit (Category 1)
+Recommended: 0C + 4P
+Rationale: MUST test all 4 articles with appropriate nouns
+Questions:
+  [PROD] Q1: "The boy is here" → __ menino está aqui → O (masc sing)
+  [PROD] Q2: "The girl is here" → __ menina está aqui → A (fem sing)
+  [PROD] Q3: "The boys are here" → __ meninos estão aqui → Os (masc pl)
+  [PROD] Q4: "The girls are here" → __ meninas estão aqui → As (fem pl)
+
+Unit 4: Indefinite Articles (um, uma, uns, umas)
+Current: 1C + 1P
+Category: Pure Grammar Unit (Category 1)
+Recommended: 0C + 4P
+Rationale: MUST test all 4 articles
+Questions:
+  [PROD] Q1: "I have a dog" → Eu tenho __ cachorro → um (masc sing)
+  [PROD] Q2: "I have a cat" → Eu tenho __ gata → uma (fem sing)
+  [PROD] Q3: "I have some books" → Eu tenho __ livros → uns (masc pl)
+  [PROD] Q4: "I have some pens" → Eu tenho __ canetas → umas (fem pl)
+
+Unit 5: Location with Estar
+Current: 1C + 1P
+Category: Balanced Verb Unit (Category 3)
+Recommended: 1C + 2P
+Rationale: Test estar for location vs. ser for identity
+Questions:
+  [COMP] Q1: "Eu estou no trabalho" → "I am at work"
+  [PROD] Q2: Complete "Eu __ em casa" → estou (vs. sou, fico, estava)
+  [PROD] Q3: Complete "Eu __ no Brasil" → estou (vs. sou)
+
+Unit 6: Adjective Agreement
+Current: 1C + 1P
+Category: Pure Grammar Unit (Category 1)
+Recommended: 0C + 4P
+Rationale: MUST test all 4 gender/number combinations
+Questions:
+  [PROD] Q1: "The tall boy" → O menino __ → alto (masc sing)
+  [PROD] Q2: "The tall girl" → A menina __ → alta (fem sing)
+  [PROD] Q3: "The tall boys" → Os meninos __ → altos (masc pl)
+  [PROD] Q4: "The tall girls" → As meninas __ → altas (fem pl)
+
+Unit 7: Basic Verbs - Morar (to live)
+Current: 1C + 1P
+Category: Balanced Verb Unit (Category 3)
+Recommended: 1C + 1P
+Rationale: Simple verb, just needs basic testing
+Questions:
+  [COMP] Q1: "Eu __ em São Paulo" → moro
+  [PROD] Q2: Complete "Eu __ no Rio" → moro
+
+Unit 8: Basic Verbs - Falar (to speak)
+Current: 1C + 1P
+Category: Balanced Verb Unit (Category 3)
+Recommended: 1C + 1P
+Rationale: Simple verb, basic testing sufficient
+Questions:
+  [COMP] Q1: "Eu __ português" → falo
+  [PROD] Q2: Complete "Eu __ espanhol" → falo
+
+Unit 9: Basic Verbs - Trabalhar (to work)
+Current: 1C + 1P
+Category: Balanced Verb Unit (Category 3)
+Recommended: 1C + 2P
+Rationale: Tests both verb AND contraction (no, na)
+Questions:
+  [COMP] Q1: "Eu trabalho no banco" → focus on contraction "no"
+  [PROD] Q2: Complete "Eu trabalho __ hospital" → no (em+o)
+  [PROD] Q3: Complete "Eu trabalho __ escola" → na (em+a)
+
+Unit 10: Basic Verbs - Estudar (to study)
+Current: 1C + 1P
+Category: Balanced Verb Unit (Category 3)
+Recommended: 1C + 1P
+Rationale: Simple verb, basic testing sufficient
+Questions:
+  [COMP] Q1: "Eu __ português" → estudo
+  [PROD] Q2: Complete "Eu __ inglês" → estudo
+
+Unit 11: Verb Ficar (to be located / to stay)
+Current: 1C + 1P
+Category: Usage/Nuance Unit (Category 6)
+Recommended: 2C + 2P
+Rationale: Ficar has multiple meanings (location, state change, stay)
+Questions:
+  [COMP] Q1: "A escola fica perto" → "The school is located nearby"
+  [COMP] Q2: "Eu fico feliz" → "I become/get happy"
+  [PROD] Q3: Complete "A casa __ longe" → fica (location)
+  [PROD] Q4: Complete "Eu __ em casa" → fico (stay)
+
+Unit 12: Verb Estar (Eu estou)
+Current: 1C + 1P
+Category: Balanced Verb Unit (Category 3)
+Recommended: 1C + 2P
+Rationale: Critical verb distinguishing temporary states from ser
+Questions:
+  [COMP] Q1: "Eu estou cansado" → "I am tired"
+  [PROD] Q2: Complete "Eu __ feliz" → estou (vs. sou)
+  [PROD] Q3: Complete "Eu __ em casa" → estou (vs. sou)
+
+Unit 13: Location Prepositions (em casa, no trabalho)
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 3C + 1P
+Rationale: Multiple preposition+place combinations
+Questions:
+  [COMP] Q1: "Eu estou em casa" → "I am at home"
+  [COMP] Q2: "Eu estou no trabalho" → "I am at work"
+  [COMP] Q3: "Eu estou na escola" → "I am at school"
+  [PROD] Q4: Complete "Eu estou __ trabalho" → no
+
+Unit 14: Family Members (Minha mãe, meu pai)
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 4C + 0P
+Rationale: Pure vocabulary - just need to recognize meanings
+Questions:
+  [COMP] Q1: "Meu pai trabalha" → "My father works"
+  [COMP] Q2: "Minha mãe estuda" → "My mother studies"
+  [COMP] Q3: "Meu irmão mora aqui" → "My brother lives here"
+  [COMP] Q4: "Minha irmã fala português" → "My sister speaks Portuguese"
+
+Unit 15: Negation with Não
+Current: 1C + 1P
+Category: Recognition-Only Unit (Category 5)
+Recommended: 2C + 0P
+Rationale: Simple word order, just need to recognize
+Questions:
+  [COMP] Q1: "Eu não falo inglês" → "I don't speak English"
+  [COMP] Q2: "Ele não mora aqui" → "He doesn't live here"
+
+Unit 16: Verb Ter (Eu tenho)
+Current: 1C + 1P
+Category: Balanced Verb Unit (Category 3)
+Recommended: 1C + 2P
+Rationale: Important irregular verb, test possession
+Questions:
+  [COMP] Q1: "Eu tenho um carro" → "I have a car"
+  [PROD] Q2: Complete "Eu __ uma casa" → tenho
+  [PROD] Q3: Complete "Eu __ dois irmãos" → tenho
+
+Unit 17: Age with Ter (Eu tenho X anos)
+Current: 1C + 1P
+Category: Recognition-Only Unit (Category 5)
+Recommended: 1C + 0P
+Rationale: Just idiomatic expression - recognize it
+Questions:
+  [COMP] Q1: "Eu tenho 25 anos" → "I am 25 years old"
+
+Unit 18: Yes/No Questions (Você fala?)
+Current: 1C + 1P
+Category: Recognition-Only Unit (Category 5)
+Recommended: 2C + 0P
+Rationale: Just intonation change, recognize question structure
+Questions:
+  [COMP] Q1: "Você fala português?" → "Do you speak Portuguese?"
+  [COMP] Q2: "Você mora aqui?" → "Do you live here?"
+
+Unit 19: Verb Precisar de (to need)
+Current: 1C + 1P
+Category: Balanced Verb Unit (Category 3)
+Recommended: 1C + 2P
+Rationale: Important verb + preposition "de"
+Questions:
+  [COMP] Q1: "Eu preciso de ajuda" → "I need help"
+  [PROD] Q2: Complete "Eu preciso __ dinheiro" → de
+  [PROD] Q3: Complete "Eu preciso __ você" → de
+
+Unit 20: Basic Food Vocabulary
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 4C + 0P
+Rationale: Multiple food items to recognize
+Questions:
+  [COMP] Q1: "Eu como arroz e feijão" → "I eat rice and beans"
+  [COMP] Q2: "Eu gosto de carne" → "I like meat"
+  [COMP] Q3: "Eu quero pão" → "I want bread"
+  [COMP] Q4: "Eu tenho fruta" → "I have fruit"
+
+Unit 21: Drinks and Beverages
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 4C + 0P
+Rationale: Multiple drink vocabulary items
+Questions:
+  [COMP] Q1: "Eu bebo água" → "I drink water"
+  [COMP] Q2: "Eu gosto de café" → "I like coffee"
+  [COMP] Q3: "Eu quero chá" → "I want tea"
+  [COMP] Q4: "Eu bebo suco" → "I drink juice"
+
+Unit 22: Regular -ER Verbs (Comer, Beber)
+Current: 1C + 1P
+Category: Balanced Verb Unit (Category 3)
+Recommended: 1C + 2P
+Rationale: Test -ER conjugation pattern with 2 verbs
+Questions:
+  [COMP] Q1: "Eu como pão" → "I eat bread"
+  [PROD] Q2: Complete "Eu __ fruta" → como
+  [PROD] Q3: Complete "Eu __ água" → bebo
+
+Unit 23: Você/Ele/Ela Forms
+Current: 1C + 1P
+Category: Pure Grammar Unit (Category 1)
+Recommended: 0C + 3P
+Rationale: Test third-person singular conjugation across verb types
+Questions:
+  [PROD] Q1: Complete "Você __ português" (falar) → fala (-AR verb)
+  [PROD] Q2: Complete "Ele __ pão" (comer) → come (-ER verb)
+  [PROD] Q3: Complete "Ela __ aqui" (morar) → mora (-AR verb)
+
+Unit 24: Nós Forms (We)
+Current: 1C + 1P
+Category: Pure Grammar Unit (Category 1)
+Recommended: 0C + 3P
+Rationale: Test first-person plural across verb types
+Questions:
+  [PROD] Q1: Complete "Nós __ português" (falar) → falamos (-AR verb)
+  [PROD] Q2: Complete "Nós __ aqui" (morar) → moramos (-AR verb)
+  [PROD] Q3: Complete "Nós __ água" (beber) → bebemos (-ER verb)
+
+Unit 25: Verb Gostar de (to like)
+Current: 1C + 1P
+Category: Balanced Verb Unit (Category 3)
+Recommended: 1C + 2P
+Rationale: Important verb + preposition "de"
+Questions:
+  [COMP] Q1: "Eu gosto de café" → "I like coffee"
+  [PROD] Q2: Complete "Eu gosto __ música" → de
+  [PROD] Q3: Complete "Eu gosto __ estudar" → de
+
+
+PHASE 2: ELEMENTARY (A2) - Units 26-50
+--------------------------------------------------------------------------------
+
+Unit 26: Regular -IR Verbs (Abrir, Partir)
+Current: 1C + 1P
+Category: Balanced Verb Unit (Category 3)
+Recommended: 1C + 2P
+Rationale: Test -IR conjugation pattern
+Questions:
+  [COMP] Q1: "Eu abro a porta" → "I open the door"
+  [PROD] Q2: Complete "Eu __ a janela" (abrir) → abro
+  [PROD] Q3: Complete "Eu __ o pão" (partir) → parto
+
+Unit 27: Future with Ir + Infinitive
+Current: 1C + 1P
+Category: Balanced Verb Unit (Category 3)
+Recommended: 1C + 2P
+Rationale: Important periphrastic future structure
+Questions:
+  [COMP] Q1: "Eu vou viajar" → "I am going to travel"
+  [PROD] Q2: Complete "Eu vou __ português" (estudar) → estudar
+  [PROD] Q3: Complete "Eu vou __ em casa" (ficar) → ficar
+
+Unit 28: Vocês/Eles/Elas Forms (You all/They)
+Current: 1C + 1P
+Category: Pure Grammar Unit (Category 1)
+Recommended: 0C + 3P
+Rationale: Test third-person plural across verb types
+Questions:
+  [PROD] Q1: Complete "Vocês __ português" (falar) → falam (-AR)
+  [PROD] Q2: Complete "Eles __ aqui" (morar) → moram (-AR)
+  [PROD] Q3: Complete "Elas __ água" (beber) → bebem (-ER)
+
+Unit 29: Time Expressions (hoje, amanhã, ontem)
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 4C + 0P
+Rationale: Multiple time vocabulary items
+Questions:
+  [COMP] Q1: "Eu vou viajar amanhã" → "I will travel tomorrow"
+  [COMP] Q2: "Eu trabalhei ontem" → "I worked yesterday"
+  [COMP] Q3: "Eu estudo hoje" → "I study today"
+  [COMP] Q4: "Eu moro aqui agora" → "I live here now"
+
+Unit 30: Common Question Words (Onde, O que, Quando)
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 5C + 1P
+Rationale: MUST test all major question words individually
+Questions:
+  [COMP] Q1: "Onde você mora?" → "Where do you live?"
+  [COMP] Q2: "O que você faz?" → "What do you do?"
+  [COMP] Q3: "Quando você trabalha?" → "When do you work?"
+  [COMP] Q4: "Como você está?" → "How are you?"
+  [COMP] Q5: "Por que você estuda?" → "Why do you study?"
+  [PROD] Q6: Complete "__ você mora?" → Onde
+
+Unit 31: Possessive Adjectives - Meu/Minha
+Current: 1C + 1P
+Category: Pure Grammar Unit (Category 1)
+Recommended: 0C + 2P
+Rationale: Test gender agreement with possessives
+Questions:
+  [PROD] Q1: Complete "__ pai trabalha" → Meu (masc)
+  [PROD] Q2: Complete "__ mãe estuda" → Minha (fem)
+
+Unit 32: Possessive Adjectives - Seu/Sua
+Current: 1C + 1P
+Category: Pure Grammar Unit (Category 1)
+Recommended: 0C + 2P
+Rationale: Test gender agreement
+Questions:
+  [PROD] Q1: Complete "__ carro é novo" → Seu (masc)
+  [PROD] Q2: Complete "__ casa é grande" → Sua (fem)
+
+Unit 33: Possessive Adjectives - Nosso/Nossa
+Current: 1C + 1P
+Category: Pure Grammar Unit (Category 1)
+Recommended: 0C + 2P
+Rationale: Test gender agreement
+Questions:
+  [PROD] Q1: Complete "__ amigo mora aqui" → Nosso (masc)
+  [PROD] Q2: Complete "__ amiga trabalha lá" → Nossa (fem)
+
+Unit 34: Preterite Tense - Regular -AR Verbs
+Current: 1C + 1P
+Category: Complex Tense/Mood Unit (Category 4)
+Recommended: 1C + 3P
+Rationale: Critical past tense, test multiple persons
+Questions:
+  [COMP] Q1: "Eu trabalhei ontem" → "I worked yesterday"
+  [PROD] Q2: Complete "Eu __ português" (falar) → falei (1st person)
+  [PROD] Q3: Complete "Você __ aqui" (morar) → morou (3rd sing)
+  [PROD] Q4: Complete "Nós __" (viajar) → viajamos (1st pl)
+
+Unit 35: Preterite Tense - Regular -ER/-IR Verbs
+Current: 1C + 1P
+Category: Complex Tense/Mood Unit (Category 4)
+Recommended: 1C + 3P
+Rationale: Past tense for other verb types
+Questions:
+  [COMP] Q1: "Eu comi pão" → "I ate bread"
+  [PROD] Q2: Complete "Eu __ água" (beber) → bebi (-ER)
+  [PROD] Q3: Complete "Eu __ a porta" (abrir) → abri (-IR)
+  [PROD] Q4: Complete "Nós __ aqui" (viver) → vivemos (-ER)
+
+Unit 36: Irregular Preterite - Ser/Ir (fui, foi)
+Current: 1C + 1P
+Category: Complex Tense/Mood Unit (Category 4)
+Recommended: 2C + 3P
+Rationale: Confusing irregular forms (same for ser/ir)
+Questions:
+  [COMP] Q1: "Eu fui ao Brasil" → "I went to Brazil"
+  [COMP] Q2: "Eu fui professor" → "I was a teacher"
+  [PROD] Q3: Complete "Eu __ ao parque" → fui (ir)
+  [PROD] Q4: Complete "Ele __ médico" → foi (ser)
+  [PROD] Q5: Complete "Nós __ lá" → fomos (ir/ser)
+
+Unit 37: Irregular Preterite - Ter/Estar
+Current: 1C + 1P
+Category: Complex Tense/Mood Unit (Category 4)
+Recommended: 1C + 3P
+Rationale: Important irregular verbs
+Questions:
+  [COMP] Q1: "Eu tive uma reunião" → "I had a meeting"
+  [PROD] Q2: Complete "Eu __ em casa" (estar) → estive
+  [PROD] Q3: Complete "Eu __ tempo" (ter) → tive
+  [PROD] Q4: Complete "Nós __ sorte" (ter) → tivemos
+
+Unit 38: Irregular Preterite - Fazer/Dizer/Trazer
+Current: 1C + 1P
+Category: Complex Tense/Mood Unit (Category 4)
+Recommended: 1C + 3P
+Rationale: Complex irregular forms
+Questions:
+  [COMP] Q1: "Eu fiz o trabalho" → "I did the work"
+  [PROD] Q2: Complete "Eu __ tudo" (dizer) → disse
+  [PROD] Q3: Complete "Eu __ o livro" (trazer) → trouxe
+  [PROD] Q4: Complete "Nós __ isso" (fazer) → fizemos
+
+Unit 39: Irregular Preterite - Ver/Vir/Dar
+Current: 1C + 1P
+Category: Complex Tense/Mood Unit (Category 4)
+Recommended: 1C + 3P
+Rationale: Confusing similar verbs (ver vs vir)
+Questions:
+  [COMP] Q1: "Eu vi o filme" → "I saw the movie"
+  [PROD] Q2: Complete "Eu __ aqui" (vir) → vim
+  [PROD] Q3: Complete "Eu __ isso" (ver) → vi
+  [PROD] Q4: Complete "Eu __ dinheiro" (dar) → dei
+
+Unit 40: Irregular Preterite - Poder/Pôr/Saber/Querer
+Current: 1C + 1P
+Category: Complex Tense/Mood Unit (Category 4)
+Recommended: 1C + 4P
+Rationale: Multiple important irregular verbs
+Questions:
+  [COMP] Q1: "Eu pude ir" → "I was able to go"
+  [PROD] Q2: Complete "Eu __ ir" (querer) → quis
+  [PROD] Q3: Complete "Eu __ disso" (saber) → soube
+  [PROD] Q4: Complete "Eu __ viajar" (poder) → pude
+  [PROD] Q5: Complete "Eu __ o livro lá" (pôr) → pus
+
+Unit 41: Contractions with Preposition A (ao, à, aos, às)
+Current: 1C + 1P
+Category: Pure Grammar Unit (Category 1)
+Recommended: 0C + 4P
+Rationale: MUST test all 4 contractions
+Questions:
+  [PROD] Q1: "I go to the park" → Eu vou __ parque → ao (a+o)
+  [PROD] Q2: "I go to school" → Eu vou __ escola → à (a+a)
+  [PROD] Q3: "I go to the banks" → Eu vou __ bancos → aos (a+os)
+  [PROD] Q4: "I go to the schools" → Eu vou __ escolas → às (a+as)
+
+Unit 42: Prepositions Por and Para
+Current: 1C + 1P
+Category: Usage/Nuance Unit (Category 6)
+Recommended: 3C + 2P
+Rationale: Complex usage distinction needs multiple examples
+Questions:
+  [COMP] Q1: "Eu vou para casa" → "I am going home" (destination)
+  [COMP] Q2: "Eu passo por aqui" → "I pass through here" (through)
+  [COMP] Q3: "Eu faço isso para você" → "I do this for you" (recipient)
+  [PROD] Q4: Complete "Eu vou __ casa" → para (destination)
+  [PROD] Q5: Complete "Eu ando __ rua" → pela (through)
+
+Unit 43: Numbers 0-100
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 3C + 0P
+Rationale: Recognition sufficient for placement
+Questions:
+  [COMP] Q1: "Eu tenho vinte anos" → "I am 20 years old"
+  [COMP] Q2: "Custa cinquenta reais" → "It costs 50 reais"
+  [COMP] Q3: "São oitenta pessoas" → "There are 80 people"
+
+Unit 44: Numbers 100-1000 and Beyond
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 2C + 0P
+Rationale: Recognition sufficient
+Questions:
+  [COMP] Q1: "Custa duzentos reais" → "It costs 200 reais"
+  [COMP] Q2: "Mil pessoas vieram" → "1000 people came"
+
+Unit 45: Imperfect Tense - Regular Verbs
+Current: 1C + 1P
+Category: Complex Tense/Mood Unit (Category 4)
+Recommended: 2C + 3P
+Rationale: Important past tense, test understanding + production
+Questions:
+  [COMP] Q1: "Eu morava em São Paulo" → "I used to live in São Paulo"
+  [COMP] Q2: "Eu falava português" → "I used to speak Portuguese"
+  [PROD] Q3: Complete "Eu __ aqui" (morar) → morava (-AR)
+  [PROD] Q4: Complete "Eu __ muito" (comer) → comia (-ER)
+  [PROD] Q5: Complete "Nós __ lá" (viver) → vivíamos (-ER)
+
+Unit 46: Imperfect Tense - Irregular Verbs (ser, ter, vir)
+Current: 1C + 1P
+Category: Complex Tense/Mood Unit (Category 4)
+Recommended: 1C + 3P
+Rationale: Critical irregular forms
+Questions:
+  [COMP] Q1: "Eu era professor" → "I used to be a teacher"
+  [PROD] Q2: Complete "Eu __ feliz" (ser) → era
+  [PROD] Q3: Complete "Eu __ tempo" (ter) → tinha
+  [PROD] Q4: Complete "Eu __ aqui sempre" (vir) → vinha
+
+Unit 47: Comparatives (mais...que, menos...que, tão...quanto)
+Current: 1C + 1P
+Category: Pure Grammar Unit (Category 1)
+Recommended: 0C + 3P
+Rationale: Test all 3 comparison types
+Questions:
+  [PROD] Q1: "John is taller than Mary" → João é __ alto __ Maria → mais...que
+  [PROD] Q2: "Mary is less tall than John" → Maria é __ alta __ João → menos...que
+  [PROD] Q3: "Mary is as smart as John" → Maria é __ inteligente __ João → tão...quanto
+
+Unit 48: Superlatives (O mais..., O menos...)
+Current: 1C + 1P
+Category: Pure Grammar Unit (Category 1)
+Recommended: 0C + 2P
+Rationale: Test both forms
+Questions:
+  [PROD] Q1: "The tallest" → __ mais alto → O
+  [PROD] Q2: "The least tall" → __ menos alto → O
+
+Unit 49: Telling Time (Que horas são?)
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 3C + 1P
+Rationale: Multiple time expressions
+Questions:
+  [COMP] Q1: "São três horas" → "It's 3 o'clock"
+  [COMP] Q2: "É meio-dia" → "It's noon"
+  [COMP] Q3: "São duas e meia" → "It's 2:30"
+  [PROD] Q4: Complete "São cinco __" (hours) → horas
+
+Unit 50: Days of the Week
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 3C + 0P
+Rationale: Recognition sufficient
+Questions:
+  [COMP] Q1: "Eu trabalho na segunda-feira" → "I work on Monday"
+  [COMP] Q2: "Hoje é sexta-feira" → "Today is Friday"
+  [COMP] Q3: "Eu não trabalho no domingo" → "I don't work on Sunday"
+
+
+PHASE 3: INTERMEDIATE (B1) - Units 51-75
+--------------------------------------------------------------------------------
+
+Unit 51: Months of the Year
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 3C + 0P
+Rationale: Recognition sufficient
+Questions:
+  [COMP] Q1: "Meu aniversário é em janeiro" → "My birthday is in January"
+  [COMP] Q2: "Eu viajo em julho" → "I travel in July"
+  [COMP] Q3: "Natal é em dezembro" → "Christmas is in December"
+
+Unit 52: Dates (Calendar Dates)
+Current: 1C + 1P
+Category: Recognition-Only Unit (Category 5)
+Recommended: 2C + 0P
+Rationale: Just format recognition
+Questions:
+  [COMP] Q1: "Hoje é 15 de março" → "Today is March 15th"
+  [COMP] Q2: "Nasci em 10 de maio de 1990" → "I was born on May 10, 1990"
+
+Unit 53: Ordinal Numbers
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 3C + 0P
+Rationale: Recognition sufficient
+Questions:
+  [COMP] Q1: "O primeiro dia" → "The first day"
+  [COMP] Q2: "O segundo andar" → "The second floor"
+  [COMP] Q3: "O terceiro lugar" → "The third place"
+
+Unit 54: Weather Expressions
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 4C + 0P
+Rationale: Multiple weather expressions
+Questions:
+  [COMP] Q1: "Está chovendo" → "It's raining"
+  [COMP] Q2: "Faz calor" → "It's hot"
+  [COMP] Q3: "Faz frio" → "It's cold"
+  [COMP] Q4: "Está ensolarado" → "It's sunny"
+
+Unit 55: Colors
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 4C + 0P
+Rationale: Multiple color vocabulary
+Questions:
+  [COMP] Q1: "A casa é vermelha" → "The house is red"
+  [COMP] Q2: "O carro é azul" → "The car is blue"
+  [COMP] Q3: "A porta é verde" → "The door is green"
+  [COMP] Q4: "O livro é amarelo" → "The book is yellow"
+
+Unit 56: Clothing Basics
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 4C + 0P
+Rationale: Multiple clothing items
+Questions:
+  [COMP] Q1: "Eu visto uma camisa" → "I wear a shirt"
+  [COMP] Q2: "Eu compro calças" → "I buy pants"
+  [COMP] Q3: "Eu tenho sapatos novos" → "I have new shoes"
+  [COMP] Q4: "Eu gosto deste vestido" → "I like this dress"
+
+Unit 57: Body Parts
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 4C + 0P
+Rationale: Multiple body vocabulary
+Questions:
+  [COMP] Q1: "Minha cabeça dói" → "My head hurts"
+  [COMP] Q2: "Meu braço está quebrado" → "My arm is broken"
+  [COMP] Q3: "Minha perna dói" → "My leg hurts"
+  [COMP] Q4: "Meus olhos são azuis" → "My eyes are blue"
+
+Unit 58: Family Members Expanded
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 4C + 0P
+Rationale: Extended family vocabulary
+Questions:
+  [COMP] Q1: "Minha avó mora aqui" → "My grandmother lives here"
+  [COMP] Q2: "Meu tio trabalha lá" → "My uncle works there"
+  [COMP] Q3: "Minha prima estuda" → "My cousin (f) studies"
+  [COMP] Q4: "Meu sobrinho tem 5 anos" → "My nephew is 5 years old"
+
+Unit 59: Emotions and Feelings
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 4C + 1P
+Rationale: Multiple emotion vocabulary + estar usage
+Questions:
+  [COMP] Q1: "Eu estou feliz" → "I am happy"
+  [COMP] Q2: "Eu estou triste" → "I am sad"
+  [COMP] Q3: "Eu estou cansado" → "I am tired"
+  [COMP] Q4: "Eu estou animado" → "I am excited"
+  [PROD] Q5: Complete "Eu estou __" (happy) → feliz
+
+Unit 60: Locations and Directions
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 5C + 1P
+Rationale: Multiple preposition phrases
+Questions:
+  [COMP] Q1: "Em cima de" → "on top of"
+  [COMP] Q2: "Embaixo de" → "under"
+  [COMP] Q3: "Ao lado de" → "beside"
+  [COMP] Q4: "Dentro de" → "inside"
+  [COMP] Q5: "Perto de" → "near"
+  [PROD] Q6: Complete "O livro está __ mesa" → embaixo da
+
+Unit 61: House and Rooms
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 4C + 0P
+Rationale: Room vocabulary
+Questions:
+  [COMP] Q1: "Minha casa tem três quartos" → "My house has 3 bedrooms"
+  [COMP] Q2: "A cozinha é grande" → "The kitchen is big"
+  [COMP] Q3: "A sala está limpa" → "The living room is clean"
+  [COMP] Q4: "O banheiro é pequeno" → "The bathroom is small"
+
+Unit 62: Daily Activities Verbs
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 3C + 1P
+Rationale: Multiple activity verbs
+Questions:
+  [COMP] Q1: "Eu acordo às 7h" → "I wake up at 7am"
+  [COMP] Q2: "Eu me deito às 10h" → "I go to bed at 10pm"
+  [COMP] Q3: "Eu me levanto cedo" → "I get up early"
+  [PROD] Q4: Complete "Eu me __ às 10h" (go to bed) → deito
+
+Unit 63: Frequency Adverbs
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 4C + 1P
+Rationale: Multiple frequency words
+Questions:
+  [COMP] Q1: "Eu sempre estudo" → "I always study"
+  [COMP] Q2: "Eu nunca trabalho aos domingos" → "I never work on Sundays"
+  [COMP] Q3: "Eu às vezes como carne" → "I sometimes eat meat"
+  [COMP] Q4: "Eu raramente viajo" → "I rarely travel"
+  [PROD] Q5: Complete "Eu __ como carne" → às vezes
+
+Unit 64: Food and Meals Expanded
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 4C + 0P
+Rationale: Extended food vocabulary
+Questions:
+  [COMP] Q1: "Arroz e feijão is a staple" → cultural knowledge
+  [COMP] Q2: "Eu gosto de frango" → "I like chicken"
+  [COMP] Q3: "Eu como peixe" → "I eat fish"
+  [COMP] Q4: "Eu quero batata" → "I want potato"
+
+Unit 65: Transportation and Travel
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 4C + 0P
+Rationale: Transportation vocabulary
+Questions:
+  [COMP] Q1: "Eu vou de ônibus" → "I go by bus"
+  [COMP] Q2: "Eu viajo de avião" → "I travel by plane"
+  [COMP] Q3: "Eu ando de carro" → "I go by car"
+  [COMP] Q4: "Eu pego o metrô" → "I take the subway"
+
+Unit 66: Hobbies and Leisure Activities
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 4C + 0P
+Rationale: Hobby vocabulary
+Questions:
+  [COMP] Q1: "Eu jogo futebol" → "I play soccer"
+  [COMP] Q2: "Eu leio livros" → "I read books"
+  [COMP] Q3: "Eu assisto TV" → "I watch TV"
+  [COMP] Q4: "Eu ouço música" → "I listen to music"
+
+Unit 67: Technology and Communication
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 3C + 0P
+Rationale: Tech vocabulary
+Questions:
+  [COMP] Q1: "Eu uso o computador" → "I use the computer"
+  [COMP] Q2: "Eu mando mensagem" → "I send a message"
+  [COMP] Q3: "Eu navego na internet" → "I browse the internet"
+
+Unit 68: Shopping and Money
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 3C + 1P
+Rationale: Shopping expressions
+Questions:
+  [COMP] Q1: "Quanto custa?" → "How much does it cost?"
+  [COMP] Q2: "Eu compro pão" → "I buy bread"
+  [COMP] Q3: "Eu pago em dinheiro" → "I pay in cash"
+  [PROD] Q4: Complete "__ custa?" → Quanto
+
+Unit 69: Professions and Work
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 4C + 0P
+Rationale: Profession vocabulary
+Questions:
+  [COMP] Q1: "Eu sou professor" → "I am a teacher"
+  [COMP] Q2: "Ela é médica" → "She is a doctor"
+  [COMP] Q3: "Ele é engenheiro" → "He is an engineer"
+  [COMP] Q4: "Eu sou advogado" → "I am a lawyer"
+
+Unit 70: Health and Medical Basics
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 3C + 0P
+Rationale: Health vocabulary
+Questions:
+  [COMP] Q1: "Eu estou doente" → "I am sick"
+  [COMP] Q2: "Minha cabeça dói" → "My head hurts"
+  [COMP] Q3: "Eu preciso de remédio" → "I need medicine"
+
+Unit 71: Commands/Imperative Mood
+Current: 1C + 1P
+Category: Complex Tense/Mood Unit (Category 4)
+Recommended: 1C + 3P
+Rationale: Multiple imperative forms (você, vocês)
+Questions:
+  [COMP] Q1: "Fale português!" → "Speak Portuguese!"
+  [PROD] Q2: Complete "__ aqui!" (Come - você) → Venha
+  [PROD] Q3: Complete "__ português!" (Speak - você) → Fale
+  [PROD] Q4: Complete "__ a porta!" (Open - vocês) → Abram
+
+Unit 72: Demonstratives - This/That
+Current: 1C + 1P
+Category: Pure Grammar Unit (Category 1)
+Recommended: 0C + 3P
+Rationale: Test all 3 levels (este/esse/aquele)
+Questions:
+  [PROD] Q1: "This book" (near me) → __ livro → Este
+  [PROD] Q2: "That book" (near you) → __ livro → Esse
+  [PROD] Q3: "That book" (far from both) → __ livro → Aquele
+
+Unit 73: Furniture and Household Items
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 3C + 0P
+Rationale: Furniture vocabulary
+Questions:
+  [COMP] Q1: "A mesa está na sala" → "The table is in the living room"
+  [COMP] Q2: "A cadeira é confortável" → "The chair is comfortable"
+  [COMP] Q3: "A cama é grande" → "The bed is big"
+
+Unit 74: Nature and Animals
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 3C + 0P
+Rationale: Nature vocabulary
+Questions:
+  [COMP] Q1: "O cachorro late" → "The dog barks"
+  [COMP] Q2: "O gato mia" → "The cat meows"
+  [COMP] Q3: "A árvore é alta" → "The tree is tall"
+
+Unit 75: School and Education
+Current: 1C + 1P
+Category: Vocabulary/Meaning Unit (Category 2)
+Recommended: 3C + 0P
+Rationale: School vocabulary
+Questions:
+  [COMP] Q1: "Eu estudo matemática" → "I study math"
+  [COMP] Q2: "O professor ensina" → "The teacher teaches"
+  [COMP] Q3: "A aula começa" → "The class begins"
+
+
+PHASE 4: UPPER-INTERMEDIATE (B2) - Units 76-90
+--------------------------------------------------------------------------------
+
+Unit 76: Future Tense (Farei, Fará)
+Current: 1C + 1P
+Category: Complex Tense/Mood Unit (Category 4)
+Recommended: 1C + 3P
+Rationale: Formal future tense conjugation
+Questions:
+  [COMP] Q1: "Eu falarei português" → "I will speak Portuguese"
+  [PROD] Q2: Complete "Eu __ amanhã" (viajar) → viajarei
+  [PROD] Q3: Complete "Nós __ lá" (estar) → estaremos
+  [PROD] Q4: Complete "Você __ isso" (fazer) → fará
+
+Unit 77: Conditional Tense (Faria, Gostaria)
+Current: 1C + 1P
+Category: Complex Tense/Mood Unit (Category 4)
+Recommended: 1C + 3P
+Rationale: Conditional mood conjugation
+Questions:
+  [COMP] Q1: "Eu gostaria de viajar" → "I would like to travel"
+  [PROD] Q2: Complete "Eu __ português" (falar) → falaria
+  [PROD] Q3: Complete "Eu __ isso" (fazer) → faria
+  [PROD] Q4: Complete "Nós __ lá" (ir) → iríamos
+
+Unit 78: É que - Emphatic Questions
+Current: 1C + 1P
+Category: Recognition-Only Unit (Category 5)
+Recommended: 2C + 0P
+Rationale: Just recognize construction
+Questions:
+  [COMP] Q1: "Onde é que você mora?" → "Where do you live?"
+  [COMP] Q2: "O que é que você faz?" → "What do you do?"
+
+Unit 79: Crase (à, às)
+Current: 1C + 1P
+Category: Pure Grammar Unit (Category 1)
+Recommended: 0C + 3P
+Rationale: Test crase usage patterns
+Questions:
+  [PROD] Q1: Complete "Eu vou __ praia" → à (a+a)
+  [PROD] Q2: Complete "Eu vou __ duas horas" → às (time)
+  [PROD] Q3: Complete "Eu vou __ escola" → à (a+a)
+
+Unit 80: Todo vs Tudo
+Current: 1C + 1P
+Category: Usage/Nuance Unit (Category 6)
+Recommended: 2C + 1P
+Rationale: Common confusion needs examples
+Questions:
+  [COMP] Q1: "Todo dia eu estudo" → "Every day I study"
+  [COMP] Q2: "Eu sei tudo" → "I know everything"
+  [PROD] Q3: Complete "__ mundo veio" → Todo (every)
+
+Unit 81: Introduction to Subjunctive Mood
+Current: 1C + 1P
+Category: Recognition-Only Unit (Category 5)
+Recommended: 2C + 0P
+Rationale: Conceptual understanding before production
+Questions:
+  [COMP] Q1: "Espero que você venha" → "I hope you come"
+  [COMP] Q2: "Talvez eu vá" → "Maybe I'll go"
+
+Unit 82: Present Subjunctive - Regular Verbs
+Current: 1C + 1P
+Category: Complex Tense/Mood Unit (Category 4)
+Recommended: 1C + 4P
+Rationale: Difficult mood, test multiple verb types
+Questions:
+  [COMP] Q1: "Espero que você fale" → "I hope you speak"
+  [PROD] Q2: Complete "Espero que você __" (falar) → fale
+  [PROD] Q3: Complete "Espero que você __" (comer) → coma
+  [PROD] Q4: Complete "Espero que você __" (partir) → parta
+  [PROD] Q5: Complete "Talvez nós __" (viajar) → viajemos
+
+Unit 83: Present Subjunctive - Irregular Verbs
+Current: 1C + 1P
+Category: Complex Tense/Mood Unit (Category 4)
+Recommended: 1C + 4P
+Rationale: Difficult irregular forms
+Questions:
+  [COMP] Q1: "Espero que você seja feliz" → "I hope you are happy"
+  [PROD] Q2: Complete "Espero que você __" (ser) → seja
+  [PROD] Q3: Complete "Espero que você __" (estar) → esteja
+  [PROD] Q4: Complete "Espero que você __" (ir) → vá
+  [PROD] Q5: Complete "Talvez eu __" (ter) → tenha
+
+Unit 84: Imperfect Subjunctive
+Current: 1C + 1P
+Category: Complex Tense/Mood Unit (Category 4)
+Recommended: 2C + 3P
+Rationale: Very difficult form, needs context
+Questions:
+  [COMP] Q1: "Se eu fosse rico, viajaria" → "If I were rich, I would travel"
+  [COMP] Q2: "Se eu soubesse, diria" → "If I knew, I would say"
+  [PROD] Q3: Complete "Se eu __ dinheiro" (ter) → tivesse
+  [PROD] Q4: Complete "Se eu __ lá" (estar) → estivesse
+  [PROD] Q5: Complete "Se nós __ tempo" (ter) → tivéssemos
+
+Unit 85: Future Subjunctive
+Current: 1C + 1P
+Category: Complex Tense/Mood Unit (Category 4)
+Recommended: 1C + 3P
+Rationale: Unique to Portuguese, important form
+Questions:
+  [COMP] Q1: "Quando eu tiver tempo, vou viajar" → "When I have time..."
+  [PROD] Q2: Complete "Quando você __" (chegar) → chegar
+  [PROD] Q3: Complete "Se você __ tempo" (ter) → tiver
+  [PROD] Q4: Complete "Quando nós __" (poder) → pudermos
+
+Unit 86: Colloquial Brazilian Portuguese
+Current: 1C + 1P
+Category: Recognition-Only Unit (Category 5)
+Recommended: 2C + 1P
+Rationale: Recognize informal forms
+Questions:
+  [COMP] Q1: "Cê tá indo pra casa?" → formal version
+  [COMP] Q2: "Tô indo lá" → "I'm going there"
+  [PROD] Q3: Complete colloquial "Cê __ indo" → tá
+
+Unit 87: Advanced Demonstratives
+Current: 1C + 1P
+Category: Recognition-Only Unit (Category 5)
+Recommended: 2C + 0P
+Rationale: Time references with demonstratives
+Questions:
+  [COMP] Q1: "Esta semana" → "This week (current)"
+  [COMP] Q2: "Aquele ano" → "That year (distant past)"
+
+Unit 88: Discourse Markers
+Current: 1C + 1P
+Category: Recognition-Only Unit (Category 5)
+Recommended: 2C + 0P
+Rationale: Recognize conversational markers
+Questions:
+  [COMP] Q1: "Então, você vai?" → discourse marker function
+  [COMP] Q2: "Né? Você entende?" → tag question
+
+Unit 89: Advanced Por/Para & Idioms
+Current: 1C + 1P
+Category: Usage/Nuance Unit (Category 6)
+Recommended: 3C + 1P
+Rationale: Complex idiomatic usage
+Questions:
+  [COMP] Q1: "Por enquanto" → "For now"
+  [COMP] Q2: "Para sempre" → "Forever"
+  [COMP] Q3: "Por acaso" → "By chance"
+  [PROD] Q4: Complete "__ sempre" → Para
+
+Unit 90: Comprehensive Synthesis
+Current: 1C + 1P
+Category: Recognition-Only Unit (Category 5)
+Recommended: 0C + 0P
+Rationale: Redundant - entire test is already comprehensive
+Questions: NONE (covered by other units)
+
+
+================================================================================
+SUMMARY STATISTICS
+================================================================================
+
+Total Units: 90
+Units with questions: 89 (Unit 90 eliminated as redundant)
+
+Question Distribution by Category:
+  Category 1 (Pure Grammar): 15 units → ~45-60 production questions
+  Category 2 (Vocabulary): 35 units → ~120-140 comprehension questions
+  Category 3 (Balanced Verbs): 15 units → ~15-25 mixed questions
+  Category 4 (Complex Tenses): 15 units → ~30-50 production-heavy questions
+  Category 5 (Recognition-Only): 15 units → ~20-30 comprehension questions
+  Category 6 (Usage/Nuance): 5 units → ~15-20 mixed questions
+
+ESTIMATED TOTAL: ~210-225 questions
+  Comprehension: ~95-105 questions
+  Production: ~110-120 questions
+
+Comprehension vs Production ratio: ~45% comp / 55% prod
+(More production because grammar rules need testing all variations)
+
+
+================================================================================
+KEY IMPROVEMENTS OVER V6.3
+================================================================================
+
+1. COMPREHENSIVE GRAMMAR COVERAGE
+   - Unit 2 (Contractions): 4 questions test ALL forms (do/da/dos/das)
+   - Unit 3 (Articles): 4 questions test ALL forms (o/a/os/as)
+   - Unit 6 (Adjectives): 4 questions test ALL forms (alto/alta/altos/altas)
+   - No more artificial "comprehension" questions that don't test the principle
+
+2. VOCABULARY GETS PROPER COVERAGE
+   - Unit 30 (Question words): 5 comp + 1 prod (was 1C+1P)
+   - Unit 60 (Locations): 5 comp + 1 prod (was 1C+1P)
+   - Unit 63 (Frequency): 4 comp + 1 prod (was 1C+1P)
+   - Each vocabulary item actually tested, not just one example
+
+3. COMPLEX GRAMMAR GETS MORE PRODUCTION
+   - Unit 82 (Present Subjunctive): 1C + 4P (was 1C+1P)
+   - Unit 84 (Imperfect Subjunctive): 2C + 3P (was 1C+1P)
+   - Unit 36 (Ser/Ir Preterite): 2C + 3P (was 1C+1P)
+   - Properly tests conjugation patterns across persons
+
+4. ELIMINATES ARTIFICIAL QUESTIONS
+   - Unit 14 (Family): 4 comp only (no forced production)
+   - Unit 15 (Negation): 2 comp only (no forced production)
+   - Unit 90 (Synthesis): Eliminated entirely (redundant)
+   - Recognition-only units don't force meaningless production
+
+5. STRATEGIC DISTRACTORS REMAIN
+   - All comprehension: 6-7 strategic options
+   - All production: 8-10 strategic chips
+   - Maintains same difficulty calibration as v6.3
+
+
+================================================================================
+NEXT STEP: CREATE placement-test-questions-v7.0-pragmatic.json
+================================================================================
