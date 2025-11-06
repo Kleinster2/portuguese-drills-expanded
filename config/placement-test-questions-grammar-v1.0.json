@@ -1158,7 +1158,6 @@
       "chips": [
         "Minhas",
         "Meu",
-        "Minhas",
         "Meus",
         "Sua",
         "Seu",
@@ -1198,7 +1197,6 @@
       "chips": [
         "Suas",
         "Seu",
-        "Suas",
         "Seus",
         "Minha",
         "Meu",
@@ -1238,7 +1236,6 @@
       "chips": [
         "Nossas",
         "Nosso",
-        "Nossas",
         "Nossos",
         "Minha",
         "Meu",
@@ -1474,8 +1471,7 @@
         "vamos",
         "íamos",
         "iremos",
-        "iríamos",
-        "vamos"
+        "iríamos"
       ],
       "correct": "fomos"
     },
@@ -2472,7 +2468,6 @@
         "fomos",
         "íamos",
         "iremos",
-        "vamos",
         "fôssemos",
         "ir",
         "indo",
