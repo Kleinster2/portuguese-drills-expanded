@@ -3,10 +3,10 @@
     "version": "1.0.0",
     "title": "Portuguese Grammar Placement Test",
     "description": "Comprehensive diagnostic test focusing on Portuguese grammar structures, verb conjugations, and syntax",
-    "totalQuestions": 222,
+    "totalQuestions": 241,
     "questionTypes": {
-      "comprehension": 46,
-      "production": 176
+      "comprehension": 53,
+      "production": 188
     },
     "testType": "grammar"
   },
@@ -4838,6 +4838,408 @@
       ],
       "correct": "digam",
       "unitTopic": "Negative Imperatives"
+    },
+    {
+      "id": 229,
+      "unit": 73,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu acabei de chegar",
+      "question": "What does this mean?",
+      "correct": "I just arrived",
+      "options": [
+        "I just arrived",
+        "I have just arrived",
+        "I finished arriving",
+        "I will arrive",
+        "I am arriving",
+        "I arrived already"
+      ],
+      "unitTopic": "Acabar de"
+    },
+    {
+      "id": 230,
+      "unit": 73,
+      "phase": 3,
+      "type": "production",
+      "en": "I just ate",
+      "question": "Complete the sentence:",
+      "template": "Eu __ comer",
+      "chips": [
+        "acabei de",
+        "acabou de",
+        "acabo de",
+        "acabar de",
+        "acabava de",
+        "acabaria de",
+        "estou comendo",
+        "comi",
+        "comia",
+        "vou comer"
+      ],
+      "correct": "acabei de",
+      "unitTopic": "Acabar de"
+    },
+    {
+      "id": 231,
+      "unit": 73,
+      "phase": 3,
+      "type": "production",
+      "en": "She just left",
+      "question": "Complete the sentence:",
+      "template": "Ela __ sair",
+      "chips": [
+        "acabou de",
+        "acabei de",
+        "acaba de",
+        "acabar de",
+        "acabava de",
+        "acabaria de",
+        "está saindo",
+        "saiu",
+        "sai",
+        "vai sair"
+      ],
+      "correct": "acabou de",
+      "unitTopic": "Acabar de"
+    },
+    {
+      "id": 232,
+      "unit": 74,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Voltei a estudar português",
+      "question": "What does this mean?",
+      "correct": "I went back to studying Portuguese",
+      "options": [
+        "I went back to studying Portuguese",
+        "I started studying Portuguese again",
+        "I returned and studied Portuguese",
+        "I will study Portuguese again",
+        "I am studying Portuguese again",
+        "I came back to study Portuguese"
+      ],
+      "unitTopic": "Voltar a"
+    },
+    {
+      "id": 233,
+      "unit": 74,
+      "phase": 3,
+      "type": "production",
+      "en": "He started smoking again",
+      "question": "Complete the sentence:",
+      "template": "Ele __ fumar",
+      "chips": [
+        "voltou a",
+        "voltei a",
+        "volta a",
+        "voltar a",
+        "voltava a",
+        "voltaria a",
+        "começou a",
+        "está fumando",
+        "fuma",
+        "fumou"
+      ],
+      "correct": "voltou a",
+      "unitTopic": "Voltar a"
+    },
+    {
+      "id": 234,
+      "unit": 74,
+      "phase": 3,
+      "type": "production",
+      "en": "We started working again",
+      "question": "Complete the sentence:",
+      "template": "Nós __ trabalhar",
+      "chips": [
+        "voltamos a",
+        "voltou a",
+        "voltam a",
+        "voltar a",
+        "voltávamos a",
+        "voltaríamos a",
+        "começamos a",
+        "estamos trabalhando",
+        "trabalhamos",
+        "trabalharemos"
+      ],
+      "correct": "voltamos a",
+      "unitTopic": "Voltar a"
+    },
+    {
+      "id": 235,
+      "unit": 75,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Fiquei esperando uma hora",
+      "question": "What does this mean?",
+      "correct": "I kept waiting for an hour",
+      "options": [
+        "I kept waiting for an hour",
+        "I stayed waiting for an hour",
+        "I was waiting for an hour",
+        "I will wait for an hour",
+        "I am waiting for an hour",
+        "I remained an hour waiting"
+      ],
+      "unitTopic": "Ficar + gerúndio"
+    },
+    {
+      "id": 236,
+      "unit": 75,
+      "phase": 3,
+      "type": "production",
+      "en": "He kept talking",
+      "question": "Complete the sentence:",
+      "template": "Ele __",
+      "chips": [
+        "ficou falando",
+        "fica falando",
+        "ficar falando",
+        "ficava falando",
+        "ficaria falando",
+        "está falando",
+        "continuou falando",
+        "falou",
+        "fala",
+        "falava"
+      ],
+      "correct": "ficou falando",
+      "unitTopic": "Ficar + gerúndio"
+    },
+    {
+      "id": 237,
+      "unit": 75,
+      "phase": 3,
+      "type": "production",
+      "en": "I kept studying",
+      "question": "Complete the sentence:",
+      "template": "Eu __",
+      "chips": [
+        "fiquei estudando",
+        "ficou estudando",
+        "fico estudando",
+        "ficar estudando",
+        "ficava estudando",
+        "ficaria estudando",
+        "estou estudando",
+        "continuei estudando",
+        "estudei",
+        "estudava"
+      ],
+      "correct": "fiquei estudando",
+      "unitTopic": "Ficar + gerúndio"
+    },
+    {
+      "id": 238,
+      "unit": 78,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Comecei a trabalhar aqui",
+      "question": "What does this mean?",
+      "correct": "I started working here",
+      "options": [
+        "I started working here",
+        "I started to work here",
+        "I began working here",
+        "I will start working here",
+        "I am starting to work here",
+        "I work here from the start"
+      ],
+      "unitTopic": "Aspectual Verbs"
+    },
+    {
+      "id": 239,
+      "unit": 78,
+      "phase": 3,
+      "type": "production",
+      "en": "She started to study",
+      "question": "Complete the sentence:",
+      "template": "Ela __ estudar",
+      "chips": [
+        "começou a",
+        "comecei a",
+        "começa a",
+        "começar a",
+        "começava a",
+        "começaria a",
+        "está estudando",
+        "voltou a",
+        "estuda",
+        "estudou"
+      ],
+      "correct": "começou a",
+      "unitTopic": "Aspectual Verbs"
+    },
+    {
+      "id": 240,
+      "unit": 78,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Parei de fumar",
+      "question": "What does this mean?",
+      "correct": "I stopped smoking",
+      "options": [
+        "I stopped smoking",
+        "I quit smoking",
+        "I will stop smoking",
+        "I am stopping smoking",
+        "I used to stop smoking",
+        "I no longer smoke"
+      ],
+      "unitTopic": "Aspectual Verbs"
+    },
+    {
+      "id": 241,
+      "unit": 78,
+      "phase": 3,
+      "type": "production",
+      "en": "He stopped working",
+      "question": "Complete the sentence:",
+      "template": "Ele __ trabalhar",
+      "chips": [
+        "parou de",
+        "parei de",
+        "para de",
+        "parar de",
+        "parava de",
+        "pararia de",
+        "deixou de",
+        "começou a",
+        "trabalhou",
+        "trabalha"
+      ],
+      "correct": "parou de",
+      "unitTopic": "Aspectual Verbs"
+    },
+    {
+      "id": 242,
+      "unit": 78,
+      "phase": 3,
+      "type": "production",
+      "en": "I continue studying",
+      "question": "Complete the sentence:",
+      "template": "Eu __",
+      "chips": [
+        "continuo estudando",
+        "continuei estudando",
+        "continuar estudando",
+        "continuava estudando",
+        "continuaria estudando",
+        "estou estudando",
+        "fico estudando",
+        "estudo",
+        "estudei",
+        "estudava"
+      ],
+      "correct": "continuo estudando",
+      "unitTopic": "Aspectual Verbs"
+    },
+    {
+      "id": 243,
+      "unit": 90,
+      "phase": 4,
+      "type": "comprehension",
+      "pt": "Ando estudando muito",
+      "question": "What does this mean?",
+      "correct": "I have been studying a lot lately",
+      "options": [
+        "I have been studying a lot lately",
+        "I walk while studying a lot",
+        "I am studying a lot",
+        "I studied a lot",
+        "I will study a lot",
+        "I keep studying a lot"
+      ],
+      "unitTopic": "Progressive Periphrases"
+    },
+    {
+      "id": 244,
+      "unit": 90,
+      "phase": 4,
+      "type": "production",
+      "en": "I have been working a lot (lately)",
+      "question": "Complete the sentence:",
+      "template": "Eu __",
+      "chips": [
+        "ando trabalhando",
+        "andei trabalhando",
+        "andar trabalhando",
+        "andava trabalhando",
+        "andaria trabalhando",
+        "estou trabalhando",
+        "tenho trabalhado",
+        "trabalho",
+        "trabalhei",
+        "trabalhava"
+      ],
+      "correct": "ando trabalhando",
+      "unitTopic": "Progressive Periphrases"
+    },
+    {
+      "id": 245,
+      "unit": 90,
+      "phase": 4,
+      "type": "comprehension",
+      "pt": "Venho melhorando",
+      "question": "What does this mean?",
+      "correct": "I have been improving",
+      "options": [
+        "I have been improving",
+        "I have been getting better",
+        "I come improving",
+        "I am improving",
+        "I improved",
+        "I will improve"
+      ],
+      "unitTopic": "Progressive Periphrases"
+    },
+    {
+      "id": 246,
+      "unit": 90,
+      "phase": 4,
+      "type": "production",
+      "en": "Things have been getting better",
+      "question": "Complete the sentence:",
+      "template": "As coisas __",
+      "chips": [
+        "vêm melhorando",
+        "vim melhorando",
+        "vir melhorando",
+        "vinha melhorando",
+        "viria melhorando",
+        "estão melhorando",
+        "têm melhorado",
+        "melhoram",
+        "melhoraram",
+        "melhoravam"
+      ],
+      "correct": "vêm melhorando",
+      "unitTopic": "Progressive Periphrases"
+    },
+    {
+      "id": 247,
+      "unit": 90,
+      "phase": 4,
+      "type": "production",
+      "en": "I am gradually improving",
+      "question": "Complete the sentence:",
+      "template": "Eu __",
+      "chips": [
+        "vou melhorando",
+        "foi melhorando",
+        "ir melhorando",
+        "ia melhorando",
+        "iria melhorando",
+        "estou melhorando",
+        "venho melhorando",
+        "melhoro",
+        "melhorei",
+        "melhorava"
+      ],
+      "correct": "vou melhorando",
+      "unitTopic": "Progressive Periphrases"
     }
   ]
 }
