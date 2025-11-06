@@ -572,9 +572,9 @@
       "unit": 12,
       "phase": 1,
       "type": "production",
-      "en": "I am happy",
+      "en": "I am tired",
       "question": "Complete the sentence:",
-      "template": "Eu __ feliz",
+      "template": "Eu __ cansado",
       "chips": [
         "estou",
         "sou",
