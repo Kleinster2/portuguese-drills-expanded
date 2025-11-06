@@ -3,10 +3,10 @@
     "version": "1.0.0",
     "title": "Portuguese Grammar Placement Test",
     "description": "Comprehensive diagnostic test focusing on Portuguese grammar structures, verb conjugations, and syntax",
-    "totalQuestions": 212,
+    "totalQuestions": 222,
     "questionTypes": {
-      "comprehension": 44,
-      "production": 168
+      "comprehension": 46,
+      "production": 176
     },
     "testType": "grammar"
   },
@@ -4618,6 +4618,226 @@
       ],
       "correct": "Fala",
       "unitTopic": "SE Passive"
+    },
+    {
+      "id": 219,
+      "unit": 70,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Não fale assim",
+      "question": "What does this mean?",
+      "correct": "Do not speak like that",
+      "options": [
+        "Do not speak like that",
+        "Don't talk like that",
+        "You don't speak like that",
+        "He doesn't speak like that",
+        "You didn't speak like that",
+        "You won't speak like that"
+      ],
+      "unitTopic": "Negative Imperatives"
+    },
+    {
+      "id": 220,
+      "unit": 70,
+      "phase": 3,
+      "type": "production",
+      "en": "Don't go! (você)",
+      "question": "Complete the sentence:",
+      "template": "Não __!",
+      "chips": [
+        "vá",
+        "vai",
+        "fui",
+        "foi",
+        "ir",
+        "vão",
+        "vamos",
+        "ia",
+        "iria",
+        "fosse"
+      ],
+      "correct": "vá",
+      "unitTopic": "Negative Imperatives"
+    },
+    {
+      "id": 221,
+      "unit": 70,
+      "phase": 3,
+      "type": "production",
+      "en": "Don't eat that! (você)",
+      "question": "Complete the sentence:",
+      "template": "Não __ isso!",
+      "chips": [
+        "coma",
+        "come",
+        "comi",
+        "comeu",
+        "comer",
+        "comam",
+        "comemos",
+        "comia",
+        "comeria",
+        "comesse"
+      ],
+      "correct": "coma",
+      "unitTopic": "Negative Imperatives"
+    },
+    {
+      "id": 222,
+      "unit": 70,
+      "phase": 3,
+      "type": "production",
+      "en": "Don't speak! (você)",
+      "question": "Complete the sentence:",
+      "template": "Não __!",
+      "chips": [
+        "fale",
+        "fala",
+        "falei",
+        "falou",
+        "falar",
+        "falem",
+        "falamos",
+        "falava",
+        "falaria",
+        "falasse"
+      ],
+      "correct": "fale",
+      "unitTopic": "Negative Imperatives"
+    },
+    {
+      "id": 223,
+      "unit": 70,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Não façam isso",
+      "question": "What does this mean?",
+      "correct": "Don't do that (you all)",
+      "options": [
+        "Don't do that (you all)",
+        "You all don't do that",
+        "They don't do that",
+        "You all didn't do that",
+        "Don't make that (you all)",
+        "You all won't do that"
+      ],
+      "unitTopic": "Negative Imperatives"
+    },
+    {
+      "id": 224,
+      "unit": 70,
+      "phase": 3,
+      "type": "production",
+      "en": "Don't come here! (vocês)",
+      "question": "Complete the sentence:",
+      "template": "Não __ aqui!",
+      "chips": [
+        "venham",
+        "vêm",
+        "vieram",
+        "vinham",
+        "vir",
+        "venha",
+        "vim",
+        "vem",
+        "virão",
+        "viessem"
+      ],
+      "correct": "venham",
+      "unitTopic": "Negative Imperatives"
+    },
+    {
+      "id": 225,
+      "unit": 70,
+      "phase": 3,
+      "type": "production",
+      "en": "Don't leave! (vocês)",
+      "question": "Complete the sentence:",
+      "template": "Não __!",
+      "chips": [
+        "saiam",
+        "saem",
+        "saíram",
+        "saíam",
+        "sair",
+        "saia",
+        "saí",
+        "sai",
+        "sairão",
+        "saíssem"
+      ],
+      "correct": "saiam",
+      "unitTopic": "Negative Imperatives"
+    },
+    {
+      "id": 226,
+      "unit": 70,
+      "phase": 3,
+      "type": "production",
+      "en": "Don't open the door! (você)",
+      "question": "Complete the sentence:",
+      "template": "Não __ a porta!",
+      "chips": [
+        "abra",
+        "abre",
+        "abri",
+        "abriu",
+        "abrir",
+        "abram",
+        "abrimos",
+        "abria",
+        "abriria",
+        "abrisse"
+      ],
+      "correct": "abra",
+      "unitTopic": "Negative Imperatives"
+    },
+    {
+      "id": 227,
+      "unit": 70,
+      "phase": 3,
+      "type": "production",
+      "en": "Don't be late! (você)",
+      "question": "Complete the sentence:",
+      "template": "Não __ atrasado!",
+      "chips": [
+        "esteja",
+        "está",
+        "esteve",
+        "estava",
+        "estar",
+        "estejam",
+        "estamos",
+        "estaria",
+        "estivesse",
+        "seja"
+      ],
+      "correct": "esteja",
+      "unitTopic": "Negative Imperatives"
+    },
+    {
+      "id": 228,
+      "unit": 70,
+      "phase": 3,
+      "type": "production",
+      "en": "Don't tell anyone! (vocês)",
+      "question": "Complete the sentence:",
+      "template": "Não __ a ninguém!",
+      "chips": [
+        "digam",
+        "dizem",
+        "disseram",
+        "diziam",
+        "dizer",
+        "diga",
+        "disse",
+        "diz",
+        "dirão",
+        "dissessem"
+      ],
+      "correct": "digam",
+      "unitTopic": "Negative Imperatives"
     }
   ]
 }
