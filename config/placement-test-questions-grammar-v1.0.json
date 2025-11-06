@@ -3,10 +3,10 @@
     "version": "1.0.0",
     "title": "Portuguese Grammar Placement Test",
     "description": "Comprehensive diagnostic test focusing on Portuguese grammar structures, verb conjugations, and syntax",
-    "totalQuestions": 194,
+    "totalQuestions": 190,
     "questionTypes": {
       "comprehension": 36,
-      "production": 158
+      "production": 154
     },
     "testType": "grammar"
   },
@@ -3466,28 +3466,6 @@
       ]
     },
     {
-      "id": 169,
-      "unit": 56,
-      "phase": 3,
-      "type": "production",
-      "en": "It is important for us to study",
-      "question": "Complete the sentence:",
-      "template": "É importante para nós __",
-      "chips": [
-        "estudarmos",
-        "estudar",
-        "estudamos",
-        "estudaremos",
-        "estudássemos",
-        "estudemos",
-        "estudaríamos",
-        "estudo",
-        "estudam",
-        "estudaram"
-      ],
-      "correct": "estudarmos"
-    },
-    {
       "id": 170,
       "unit": 56,
       "phase": 3,
@@ -3820,50 +3798,6 @@
       ]
     },
     {
-      "id": 186,
-      "unit": 60,
-      "phase": 4,
-      "type": "production",
-      "en": "The woman whose daughter is here",
-      "question": "Complete the sentence:",
-      "template": "A mulher __ filha está aqui",
-      "chips": [
-        "cuja",
-        "cujo",
-        "cujas",
-        "cujos",
-        "que",
-        "de quem",
-        "qual",
-        "onde",
-        "quem",
-        "a qual"
-      ],
-      "correct": "cuja"
-    },
-    {
-      "id": 187,
-      "unit": 60,
-      "phase": 4,
-      "type": "production",
-      "en": "The man whose books I read",
-      "question": "Complete the sentence:",
-      "template": "O homem __ livros eu li",
-      "chips": [
-        "cujos",
-        "cujo",
-        "cuja",
-        "cujas",
-        "que",
-        "de quem",
-        "qual",
-        "onde",
-        "quem",
-        "os quais"
-      ],
-      "correct": "cujos"
-    },
-    {
       "id": 188,
       "unit": 60,
       "phase": 4,
@@ -3984,28 +3918,6 @@
         "quando"
       ],
       "correct": "em que"
-    },
-    {
-      "id": 194,
-      "unit": 62,
-      "phase": 4,
-      "type": "production",
-      "en": "The reason for which I came",
-      "question": "Complete the sentence:",
-      "template": "A razão __ vim",
-      "chips": [
-        "por que",
-        "pela qual",
-        "que",
-        "porque",
-        "qual",
-        "onde",
-        "cujo",
-        "quando",
-        "para que",
-        "o que"
-      ],
-      "correct": "por que"
     },
     {
       "id": 195,
