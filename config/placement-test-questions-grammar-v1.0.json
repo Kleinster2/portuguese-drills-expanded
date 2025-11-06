@@ -26,7 +26,8 @@
         "I work as a teacher",
         "I was a teacher",
         "I am the teacher"
-      ]
+      ],
+      "unitTopic": "Ser - Basic Identity"
     },
     {
       "id": 2,
@@ -48,7 +49,8 @@
         "fui",
         "seria"
       ],
-      "correct": "sou"
+      "correct": "sou",
+      "unitTopic": "Ser - Basic Identity"
     },
     {
       "id": 3,
@@ -69,7 +71,8 @@
         "somos",
         "são"
       ],
-      "correct": "sou"
+      "correct": "sou",
+      "unitTopic": "Ser - Basic Identity"
     },
     {
       "id": 4,
@@ -91,7 +94,8 @@
         "ao",
         "à"
       ],
-      "correct": "do"
+      "correct": "do",
+      "unitTopic": "Prepositions - de/do/da/das"
     },
     {
       "id": 5,
@@ -113,7 +117,8 @@
         "às",
         "aos"
       ],
-      "correct": "das"
+      "correct": "das",
+      "unitTopic": "Prepositions - de/do/da/das"
     },
     {
       "id": 6,
@@ -133,7 +138,8 @@
         "Uns",
         "Umas"
       ],
-      "correct": "O"
+      "correct": "O",
+      "unitTopic": "Definite Articles - o/a/os/as"
     },
     {
       "id": 7,
@@ -153,7 +159,8 @@
         "Uma",
         "Um"
       ],
-      "correct": "As"
+      "correct": "As",
+      "unitTopic": "Definite Articles - o/a/os/as"
     },
     {
       "id": 8,
@@ -173,7 +180,8 @@
         "os",
         "as"
       ],
-      "correct": "um"
+      "correct": "um",
+      "unitTopic": "Indefinite Articles - um/uma/uns/umas"
     },
     {
       "id": 9,
@@ -193,7 +201,8 @@
         "a",
         "o"
       ],
-      "correct": "umas"
+      "correct": "umas",
+      "unitTopic": "Indefinite Articles - um/uma/uns/umas"
     },
     {
       "id": 10,
@@ -213,7 +222,8 @@
         "o",
         "a"
       ],
-      "correct": "uns"
+      "correct": "uns",
+      "unitTopic": "Indefinite Articles - um/uma/uns/umas"
     },
     {
       "id": 11,
@@ -230,7 +240,8 @@
         "I work",
         "I was at work",
         "I go to work"
-      ]
+      ],
+      "unitTopic": "Estar - Location/State"
     },
     {
       "id": 12,
@@ -252,7 +263,8 @@
         "estaria",
         "seja"
       ],
-      "correct": "estou"
+      "correct": "estou",
+      "unitTopic": "Estar - Location/State"
     },
     {
       "id": 13,
@@ -274,7 +286,8 @@
         "estaria",
         "seja"
       ],
-      "correct": "estou"
+      "correct": "estou",
+      "unitTopic": "Estar - Location/State"
     },
     {
       "id": 14,
@@ -294,7 +307,8 @@
         "pequena",
         "grandes"
       ],
-      "correct": "alto"
+      "correct": "alto",
+      "unitTopic": "Adjective Agreement"
     },
     {
       "id": 15,
@@ -314,7 +328,8 @@
         "pequenos",
         "grande"
       ],
-      "correct": "altas"
+      "correct": "altas",
+      "unitTopic": "Adjective Agreement"
     },
     {
       "id": 16,
@@ -331,7 +346,8 @@
         "I am living in São Paulo",
         "I lived in São Paulo",
         "I will live in São Paulo"
-      ]
+      ],
+      "unitTopic": "Regular -ar Verbs (morar)"
     },
     {
       "id": 17,
@@ -353,7 +369,8 @@
         "more",
         "morasse"
       ],
-      "correct": "moro"
+      "correct": "moro",
+      "unitTopic": "Regular -ar Verbs (morar)"
     },
     {
       "id": 18,
@@ -370,7 +387,8 @@
         "I like Portuguese",
         "I am speaking Portuguese",
         "I spoke Portuguese"
-      ]
+      ],
+      "unitTopic": "Regular -ar Verbs (falar)"
     },
     {
       "id": 19,
@@ -392,7 +410,8 @@
         "fale",
         "falasse"
       ],
-      "correct": "falo"
+      "correct": "falo",
+      "unitTopic": "Regular -ar Verbs (falar)"
     },
     {
       "id": 20,
@@ -409,7 +428,8 @@
         "I study at the bank",
         "I am working at the bank",
         "I worked at the bank"
-      ]
+      ],
+      "unitTopic": "Prepositions - em/no/na"
     },
     {
       "id": 21,
@@ -431,7 +451,8 @@
         "a",
         "nos"
       ],
-      "correct": "no"
+      "correct": "no",
+      "unitTopic": "Prepositions - em/no/na"
     },
     {
       "id": 22,
@@ -448,7 +469,8 @@
         "I like Portuguese",
         "I am studying Portuguese",
         "I studied Portuguese"
-      ]
+      ],
+      "unitTopic": "Regular -ar Verbs (estudar)"
     },
     {
       "id": 23,
@@ -470,7 +492,8 @@
         "estude",
         "estudasse"
       ],
-      "correct": "estudo"
+      "correct": "estudo",
+      "unitTopic": "Regular -ar Verbs (estudar)"
     },
     {
       "id": 24,
@@ -492,7 +515,8 @@
         "fique",
         "estava"
       ],
-      "correct": "fica"
+      "correct": "fica",
+      "unitTopic": "Ficar - Location/State"
     },
     {
       "id": 25,
@@ -514,7 +538,8 @@
         "fique",
         "ficasse"
       ],
-      "correct": "fico"
+      "correct": "fico",
+      "unitTopic": "Ficar - Location/State"
     },
     {
       "id": 26,
@@ -531,7 +556,8 @@
         "I seem tired",
         "I stay tired",
         "I became tired"
-      ]
+      ],
+      "unitTopic": "Ser vs Estar"
     },
     {
       "id": 27,
@@ -553,7 +579,8 @@
         "seja",
         "esteja"
       ],
-      "correct": "estou"
+      "correct": "estou",
+      "unitTopic": "Ser vs Estar"
     },
     {
       "id": 28,
@@ -575,7 +602,8 @@
         "a",
         "nos"
       ],
-      "correct": "no"
+      "correct": "no",
+      "unitTopic": "Prepositions with Location"
     },
     {
       "id": 29,
@@ -597,7 +625,8 @@
         "tenha",
         "tivesse"
       ],
-      "correct": "tenho"
+      "correct": "tenho",
+      "unitTopic": "Ter - Possession"
     },
     {
       "id": 30,
@@ -619,7 +648,8 @@
         "tenha",
         "tivesse"
       ],
-      "correct": "tenho"
+      "correct": "tenho",
+      "unitTopic": "Ter - Possession"
     },
     {
       "id": 31,
@@ -641,7 +671,8 @@
         "com",
         "sem"
       ],
-      "correct": "de"
+      "correct": "de",
+      "unitTopic": "Prepositions - precisar de"
     },
     {
       "id": 32,
@@ -663,7 +694,8 @@
         "com",
         "te"
       ],
-      "correct": "de"
+      "correct": "de",
+      "unitTopic": "Prepositions - precisar de"
     },
     {
       "id": 33,
@@ -680,7 +712,8 @@
         "I want bread",
         "I am eating bread",
         "I ate bread"
-      ]
+      ],
+      "unitTopic": "Regular -er Verbs (comer)"
     },
     {
       "id": 34,
@@ -702,7 +735,8 @@
         "coma",
         "comesse"
       ],
-      "correct": "como"
+      "correct": "como",
+      "unitTopic": "Regular -er Verbs (comer)"
     },
     {
       "id": 35,
@@ -724,7 +758,8 @@
         "beba",
         "bebesse"
       ],
-      "correct": "bebo"
+      "correct": "bebo",
+      "unitTopic": "Regular -er Verbs (comer)"
     },
     {
       "id": 36,
@@ -746,7 +781,8 @@
         "falaria",
         "fale"
       ],
-      "correct": "fala"
+      "correct": "fala",
+      "unitTopic": "3rd Person Singular - ele/ela/você"
     },
     {
       "id": 37,
@@ -768,7 +804,8 @@
         "comeria",
         "coma"
       ],
-      "correct": "come"
+      "correct": "come",
+      "unitTopic": "3rd Person Singular - ele/ela/você"
     },
     {
       "id": 38,
@@ -790,7 +827,8 @@
         "moraria",
         "more"
       ],
-      "correct": "mora"
+      "correct": "mora",
+      "unitTopic": "3rd Person Singular - ele/ela/você"
     },
     {
       "id": 39,
@@ -812,7 +850,8 @@
         "falemos",
         "falássemos"
       ],
-      "correct": "falamos"
+      "correct": "falamos",
+      "unitTopic": "1st Person Plural - nós"
     },
     {
       "id": 40,
@@ -834,7 +873,8 @@
         "moremos",
         "morássemos"
       ],
-      "correct": "moramos"
+      "correct": "moramos",
+      "unitTopic": "1st Person Plural - nós"
     },
     {
       "id": 41,
@@ -856,7 +896,8 @@
         "bebamos",
         "bebêssemos"
       ],
-      "correct": "bebemos"
+      "correct": "bebemos",
+      "unitTopic": "1st Person Plural - nós"
     },
     {
       "id": 42,
@@ -878,7 +919,8 @@
         "com",
         "a"
       ],
-      "correct": "de"
+      "correct": "de",
+      "unitTopic": "Gostar de + Noun/Infinitive"
     },
     {
       "id": 43,
@@ -900,7 +942,8 @@
         "a",
         "com"
       ],
-      "correct": "de"
+      "correct": "de",
+      "unitTopic": "Gostar de + Noun/Infinitive"
     },
     {
       "id": 44,
@@ -922,7 +965,8 @@
         "abra",
         "abrisse"
       ],
-      "correct": "abro"
+      "correct": "abro",
+      "unitTopic": "Regular -ir Verbs (abrir/partir)"
     },
     {
       "id": 45,
@@ -944,7 +988,8 @@
         "parta",
         "partisse"
       ],
-      "correct": "parto"
+      "correct": "parto",
+      "unitTopic": "Regular -ir Verbs (abrir/partir)"
     },
     {
       "id": 46,
@@ -961,7 +1006,8 @@
         "I want to travel",
         "I like to travel",
         "I will travel"
-      ]
+      ],
+      "unitTopic": "Ir + Infinitive (Near Future)"
     },
     {
       "id": 47,
@@ -983,7 +1029,8 @@
         "estudando",
         "estudado"
       ],
-      "correct": "estudar"
+      "correct": "estudar",
+      "unitTopic": "Ir + Infinitive (Near Future)"
     },
     {
       "id": 48,
@@ -1005,7 +1052,8 @@
         "ficando",
         "ficado"
       ],
-      "correct": "ficar"
+      "correct": "ficar",
+      "unitTopic": "Ir + Infinitive (Near Future)"
     },
     {
       "id": 49,
@@ -1027,7 +1075,8 @@
         "falariam",
         "falem"
       ],
-      "correct": "falam"
+      "correct": "falam",
+      "unitTopic": "3rd Person Plural - eles/elas/vocês"
     },
     {
       "id": 50,
@@ -1049,7 +1098,8 @@
         "morariam",
         "morem"
       ],
-      "correct": "moram"
+      "correct": "moram",
+      "unitTopic": "3rd Person Plural - eles/elas/vocês"
     },
     {
       "id": 51,
@@ -1071,7 +1121,8 @@
         "beberiam",
         "bebam"
       ],
-      "correct": "bebem"
+      "correct": "bebem",
+      "unitTopic": "3rd Person Plural - eles/elas/vocês"
     },
     {
       "id": 52,
@@ -1091,7 +1142,8 @@
         "Qual",
         "Quanto"
       ],
-      "correct": "Onde"
+      "correct": "Onde",
+      "unitTopic": "Question Words - onde"
     },
     {
       "id": 53,
@@ -1111,7 +1163,8 @@
         "Nosso",
         "Nossa"
       ],
-      "correct": "Meu"
+      "correct": "Meu",
+      "unitTopic": "Possessives - meu/minha"
     },
     {
       "id": 54,
@@ -1130,7 +1183,8 @@
         "Nossa",
         "Nosso"
       ],
-      "correct": "Minhas"
+      "correct": "Minhas",
+      "unitTopic": "Possessives - meu/minha"
     },
     {
       "id": 55,
@@ -1150,7 +1204,8 @@
         "Nosso",
         "Nossa"
       ],
-      "correct": "Seu"
+      "correct": "Seu",
+      "unitTopic": "Possessives - seu/sua"
     },
     {
       "id": 56,
@@ -1169,7 +1224,8 @@
         "Nossa",
         "Nosso"
       ],
-      "correct": "Suas"
+      "correct": "Suas",
+      "unitTopic": "Possessives - seu/sua"
     },
     {
       "id": 57,
@@ -1189,7 +1245,8 @@
         "Seu",
         "Sua"
       ],
-      "correct": "Nosso"
+      "correct": "Nosso",
+      "unitTopic": "Possessives - nosso/nossa"
     },
     {
       "id": 58,
@@ -1208,7 +1265,8 @@
         "Sua",
         "Seu"
       ],
-      "correct": "Nossas"
+      "correct": "Nossas",
+      "unitTopic": "Possessives - nosso/nossa"
     },
     {
       "id": 59,
@@ -1230,7 +1288,8 @@
         "fale",
         "falasse"
       ],
-      "correct": "falei"
+      "correct": "falei",
+      "unitTopic": "Preterite -ar Verbs"
     },
     {
       "id": 60,
@@ -1252,7 +1311,8 @@
         "more",
         "morasse"
       ],
-      "correct": "morou"
+      "correct": "morou",
+      "unitTopic": "Preterite -ar Verbs"
     },
     {
       "id": 61,
@@ -1274,7 +1334,8 @@
         "viajemos",
         "viajássemos"
       ],
-      "correct": "viajamos"
+      "correct": "viajamos",
+      "unitTopic": "Preterite -ar Verbs"
     },
     {
       "id": 62,
@@ -1296,7 +1357,8 @@
         "beba",
         "bebesse"
       ],
-      "correct": "bebi"
+      "correct": "bebi",
+      "unitTopic": "Preterite -er/-ir Verbs"
     },
     {
       "id": 63,
@@ -1318,7 +1380,8 @@
         "abra",
         "abrisse"
       ],
-      "correct": "abri"
+      "correct": "abri",
+      "unitTopic": "Preterite -er/-ir Verbs"
     },
     {
       "id": 64,
@@ -1340,7 +1403,8 @@
         "vivamos",
         "vivêssemos"
       ],
-      "correct": "vivemos"
+      "correct": "vivemos",
+      "unitTopic": "Preterite -er/-ir Verbs"
     },
     {
       "id": 65,
@@ -1357,7 +1421,8 @@
         "I am going to Brazil",
         "I used to go to Brazil",
         "I would go to Brazil"
-      ]
+      ],
+      "unitTopic": "Irregular Preterite - ir/ser"
     },
     {
       "id": 66,
@@ -1374,7 +1439,8 @@
         "I used to be a teacher",
         "I would be a teacher",
         "I seem to be a teacher"
-      ]
+      ],
+      "unitTopic": "Irregular Preterite - ir/ser"
     },
     {
       "id": 67,
@@ -1396,7 +1462,8 @@
         "iria",
         "vá"
       ],
-      "correct": "fui"
+      "correct": "fui",
+      "unitTopic": "Irregular Preterite - ir/ser"
     },
     {
       "id": 68,
@@ -1418,7 +1485,8 @@
         "seria",
         "seja"
       ],
-      "correct": "foi"
+      "correct": "foi",
+      "unitTopic": "Irregular Preterite - ir/ser"
     },
     {
       "id": 69,
@@ -1439,7 +1507,8 @@
         "iremos",
         "iríamos"
       ],
-      "correct": "fomos"
+      "correct": "fomos",
+      "unitTopic": "Irregular Preterite - ir/ser"
     },
     {
       "id": 70,
@@ -1461,7 +1530,8 @@
         "era",
         "fui"
       ],
-      "correct": "estive"
+      "correct": "estive",
+      "unitTopic": "Irregular Preterite - estar/ter"
     },
     {
       "id": 71,
@@ -1483,7 +1553,8 @@
         "tem",
         "teríamos"
       ],
-      "correct": "tive"
+      "correct": "tive",
+      "unitTopic": "Irregular Preterite - estar/ter"
     },
     {
       "id": 72,
@@ -1505,7 +1576,8 @@
         "teríamos",
         "tenhamos"
       ],
-      "correct": "tivemos"
+      "correct": "tivemos",
+      "unitTopic": "Irregular Preterite - estar/ter"
     },
     {
       "id": 73,
@@ -1527,7 +1599,8 @@
         "dizemos",
         "dizem"
       ],
-      "correct": "disse"
+      "correct": "disse",
+      "unitTopic": "Irregular Preterite - dizer/trazer/fazer"
     },
     {
       "id": 74,
@@ -1549,7 +1622,8 @@
         "trazemos",
         "trazem"
       ],
-      "correct": "trouxe"
+      "correct": "trouxe",
+      "unitTopic": "Irregular Preterite - dizer/trazer/fazer"
     },
     {
       "id": 75,
@@ -1571,7 +1645,8 @@
         "faríamos",
         "façamos"
       ],
-      "correct": "fizemos"
+      "correct": "fizemos",
+      "unitTopic": "Irregular Preterite - dizer/trazer/fazer"
     },
     {
       "id": 76,
@@ -1593,7 +1668,8 @@
         "vimos",
         "vêm"
       ],
-      "correct": "vim"
+      "correct": "vim",
+      "unitTopic": "Irregular Preterite - vir/ver/dar"
     },
     {
       "id": 77,
@@ -1615,7 +1691,8 @@
         "vemos",
         "veem"
       ],
-      "correct": "vi"
+      "correct": "vi",
+      "unitTopic": "Irregular Preterite - vir/ver/dar"
     },
     {
       "id": 78,
@@ -1637,7 +1714,8 @@
         "damos",
         "dão"
       ],
-      "correct": "dei"
+      "correct": "dei",
+      "unitTopic": "Irregular Preterite - vir/ver/dar"
     },
     {
       "id": 79,
@@ -1659,7 +1737,8 @@
         "queremos",
         "querem"
       ],
-      "correct": "quis"
+      "correct": "quis",
+      "unitTopic": "Irregular Preterite - querer/saber/poder/pôr"
     },
     {
       "id": 80,
@@ -1681,7 +1760,8 @@
         "sabemos",
         "sabem"
       ],
-      "correct": "soube"
+      "correct": "soube",
+      "unitTopic": "Irregular Preterite - querer/saber/poder/pôr"
     },
     {
       "id": 81,
@@ -1703,7 +1783,8 @@
         "podemos",
         "podem"
       ],
-      "correct": "pude"
+      "correct": "pude",
+      "unitTopic": "Irregular Preterite - querer/saber/poder/pôr"
     },
     {
       "id": 82,
@@ -1725,7 +1806,8 @@
         "pomos",
         "põem"
       ],
-      "correct": "pus"
+      "correct": "pus",
+      "unitTopic": "Irregular Preterite - querer/saber/poder/pôr"
     },
     {
       "id": 83,
@@ -1747,7 +1829,8 @@
         "do",
         "da"
       ],
-      "correct": "ao"
+      "correct": "ao",
+      "unitTopic": "Preposition Contractions - a+o=ao, a+a=à"
     },
     {
       "id": 84,
@@ -1768,7 +1851,8 @@
         "da",
         "do"
       ],
-      "correct": "à"
+      "correct": "à",
+      "unitTopic": "Preposition Contractions - a+o=ao, a+a=à"
     },
     {
       "id": 85,
@@ -1790,7 +1874,8 @@
         "dos",
         "das"
       ],
-      "correct": "aos"
+      "correct": "aos",
+      "unitTopic": "Preposition Contractions - a+o=ao, a+a=à"
     },
     {
       "id": 86,
@@ -1812,7 +1897,8 @@
         "das",
         "dos"
       ],
-      "correct": "às"
+      "correct": "às",
+      "unitTopic": "Preposition Contractions - a+o=ao, a+a=à"
     },
     {
       "id": 87,
@@ -1834,7 +1920,8 @@
         "à",
         "ao"
       ],
-      "correct": "para"
+      "correct": "para",
+      "unitTopic": "Para vs Por"
     },
     {
       "id": 88,
@@ -1856,7 +1943,8 @@
         "ao",
         "a"
       ],
-      "correct": "pela"
+      "correct": "pela",
+      "unitTopic": "Para vs Por"
     },
     {
       "id": 89,
@@ -1878,7 +1966,8 @@
         "morasse",
         "morarei"
       ],
-      "correct": "morava"
+      "correct": "morava",
+      "unitTopic": "Imperfect -ar/-er/-ir Verbs"
     },
     {
       "id": 90,
@@ -1900,7 +1989,8 @@
         "comesse",
         "comerei"
       ],
-      "correct": "comia"
+      "correct": "comia",
+      "unitTopic": "Imperfect -ar/-er/-ir Verbs"
     },
     {
       "id": 91,
@@ -1922,7 +2012,8 @@
         "vivêssemos",
         "viveremos"
       ],
-      "correct": "vivíamos"
+      "correct": "vivíamos",
+      "unitTopic": "Imperfect -ar/-er/-ir Verbs"
     },
     {
       "id": 92,
@@ -1944,7 +2035,8 @@
         "tivesse",
         "terei"
       ],
-      "correct": "tinha"
+      "correct": "tinha",
+      "unitTopic": "Irregular Imperfect - ter/vir/ser"
     },
     {
       "id": 93,
@@ -1966,7 +2058,8 @@
         "viesse",
         "virei"
       ],
-      "correct": "vinha"
+      "correct": "vinha",
+      "unitTopic": "Irregular Imperfect - ter/vir/ser"
     },
     {
       "id": 94,
@@ -1988,7 +2081,8 @@
         "fosse",
         "serei"
       ],
-      "correct": "era"
+      "correct": "era",
+      "unitTopic": "Irregular Imperfect - ter/vir/ser"
     },
     {
       "id": 95,
@@ -2008,7 +2102,8 @@
         "muito...que",
         "pouco...que"
       ],
-      "correct": "mais...que"
+      "correct": "mais...que",
+      "unitTopic": "Comparatives - mais/menos/tão...que"
     },
     {
       "id": 96,
@@ -2028,7 +2123,8 @@
         "pouco...que",
         "muito...que"
       ],
-      "correct": "menos...que"
+      "correct": "menos...que",
+      "unitTopic": "Comparatives - mais/menos/tão...que"
     },
     {
       "id": 97,
@@ -2048,7 +2144,8 @@
         "mais...do que",
         "menos...do que"
       ],
-      "correct": "tão...quanto"
+      "correct": "tão...quanto",
+      "unitTopic": "Comparatives - mais/menos/tão...que"
     },
     {
       "id": 98,
@@ -2068,7 +2165,8 @@
         "Mais",
         "Menos"
       ],
-      "correct": "O"
+      "correct": "O",
+      "unitTopic": "Superlatives - o mais/menos"
     },
     {
       "id": 99,
@@ -2088,7 +2186,8 @@
         "Mais",
         "Menos"
       ],
-      "correct": "O"
+      "correct": "O",
+      "unitTopic": "Superlatives - o mais/menos"
     },
     {
       "id": 100,
@@ -2110,7 +2209,8 @@
         "As",
         "Os"
       ],
-      "correct": "Estas"
+      "correct": "Estas",
+      "unitTopic": "Demonstratives - este/esse/aquele"
     },
     {
       "id": 101,
@@ -2132,7 +2232,8 @@
         "As",
         "Os"
       ],
-      "correct": "Essas"
+      "correct": "Essas",
+      "unitTopic": "Demonstratives - este/esse/aquele"
     },
     {
       "id": 102,
@@ -2154,7 +2255,8 @@
         "As",
         "Os"
       ],
-      "correct": "Aquelas"
+      "correct": "Aquelas",
+      "unitTopic": "Demonstratives - este/esse/aquele"
     },
     {
       "id": 103,
@@ -2171,7 +2273,8 @@
         "It's 12:30",
         "It was noon",
         "It will be noon"
-      ]
+      ],
+      "unitTopic": "Demonstratives - este/esse/aquele"
     },
     {
       "id": 104,
@@ -2188,7 +2291,8 @@
         "It's half past three",
         "It was 2:30",
         "It will be 2:30"
-      ]
+      ],
+      "unitTopic": "Demonstratives - este/esse/aquele"
     },
     {
       "id": 105,
@@ -2208,7 +2312,8 @@
         "da manhã",
         "da tarde"
       ],
-      "correct": "horas"
+      "correct": "horas",
+      "unitTopic": "Demonstratives - este/esse/aquele"
     },
     {
       "id": 106,
@@ -2230,7 +2335,8 @@
         "Vá",
         "Vai"
       ],
-      "correct": "Venha"
+      "correct": "Venha",
+      "unitTopic": "Imperative - você/vocês"
     },
     {
       "id": 107,
@@ -2252,7 +2358,8 @@
         "Diga",
         "Diz"
       ],
-      "correct": "Fale"
+      "correct": "Fale",
+      "unitTopic": "Imperative - você/vocês"
     },
     {
       "id": 108,
@@ -2274,7 +2381,8 @@
         "Abrem",
         "Abre"
       ],
-      "correct": "Abram"
+      "correct": "Abram",
+      "unitTopic": "Imperative - você/vocês"
     },
     {
       "unit": 72,
@@ -2291,7 +2399,8 @@
         "The man is a teacher",
         "That man was a teacher"
       ],
-      "id": 109
+      "id": 109,
+      "unitTopic": "Demonstratives"
     },
     {
       "id": 110,
@@ -2313,7 +2422,8 @@
         "viajando",
         "viajado"
       ],
-      "correct": "viajarei"
+      "correct": "viajarei",
+      "unitTopic": "Simple Future - farei"
     },
     {
       "id": 111,
@@ -2335,7 +2445,8 @@
         "fomos",
         "estando"
       ],
-      "correct": "estaremos"
+      "correct": "estaremos",
+      "unitTopic": "Simple Future - farei"
     },
     {
       "id": 112,
@@ -2357,7 +2468,8 @@
         "fazendo",
         "feito"
       ],
-      "correct": "fará"
+      "correct": "fará",
+      "unitTopic": "Simple Future - farei"
     },
     {
       "id": 113,
@@ -2374,7 +2486,8 @@
         "I will like to travel",
         "I want to travel",
         "I am liking to travel"
-      ]
+      ],
+      "unitTopic": "Conditional - faria"
     },
     {
       "id": 114,
@@ -2396,7 +2509,8 @@
         "falando",
         "falado"
       ],
-      "correct": "falaria"
+      "correct": "falaria",
+      "unitTopic": "Conditional - faria"
     },
     {
       "id": 115,
@@ -2418,7 +2532,8 @@
         "fazendo",
         "feito"
       ],
-      "correct": "faria"
+      "correct": "faria",
+      "unitTopic": "Conditional - faria"
     },
     {
       "id": 116,
@@ -2439,7 +2554,8 @@
         "indo",
         "ido"
       ],
-      "correct": "iríamos"
+      "correct": "iríamos",
+      "unitTopic": "Conditional - faria"
     },
     {
       "id": 117,
@@ -2460,7 +2576,8 @@
         "pelo",
         "do"
       ],
-      "correct": "à"
+      "correct": "à",
+      "unitTopic": "Time Expressions with à/às"
     },
     {
       "id": 118,
@@ -2482,7 +2599,8 @@
         "aos",
         "os"
       ],
-      "correct": "às"
+      "correct": "às",
+      "unitTopic": "Time Expressions with à/às"
     },
     {
       "id": 119,
@@ -2499,7 +2617,8 @@
         "I study all",
         "The whole day I study",
         "I studied every day"
-      ]
+      ],
+      "unitTopic": "Todo vs Tudo"
     },
     {
       "id": 120,
@@ -2521,7 +2640,8 @@
         "Cada",
         "Qualquer"
       ],
-      "correct": "Todo"
+      "correct": "Todo",
+      "unitTopic": "Todo vs Tudo"
     },
     {
       "id": 121,
@@ -2538,7 +2658,8 @@
         "I want you come",
         "I know you come",
         "I hope you came"
-      ]
+      ],
+      "unitTopic": "Present Subjunctive - Trigger Expressions"
     },
     {
       "id": 122,
@@ -2555,7 +2676,8 @@
         "I will go",
         "I might go",
         "Maybe I'm going"
-      ]
+      ],
+      "unitTopic": "Present Subjunctive - Trigger Expressions"
     },
     {
       "id": 123,
@@ -2572,7 +2694,8 @@
         "I want you speak",
         "I know you speak",
         "I hope you spoke"
-      ]
+      ],
+      "unitTopic": "Present Subjunctive - -ar Verbs"
     },
     {
       "id": 124,
@@ -2594,7 +2717,8 @@
         "comesse",
         "comendo"
       ],
-      "correct": "coma"
+      "correct": "coma",
+      "unitTopic": "Present Subjunctive - -ar Verbs"
     },
     {
       "id": 126,
@@ -2616,7 +2740,8 @@
         "viaje",
         "viajando"
       ],
-      "correct": "viajemos"
+      "correct": "viajemos",
+      "unitTopic": "Present Subjunctive - -ar Verbs"
     },
     {
       "id": 127,
@@ -2638,7 +2763,8 @@
         "estivesse",
         "estando"
       ],
-      "correct": "esteja"
+      "correct": "esteja",
+      "unitTopic": "Present Subjunctive - Irregular Verbs"
     },
     {
       "id": 128,
@@ -2660,7 +2786,8 @@
         "fosse",
         "indo"
       ],
-      "correct": "vá"
+      "correct": "vá",
+      "unitTopic": "Present Subjunctive - Irregular Verbs"
     },
     {
       "id": 129,
@@ -2682,7 +2809,8 @@
         "tivesse",
         "tendo"
       ],
-      "correct": "tenha"
+      "correct": "tenha",
+      "unitTopic": "Present Subjunctive - Irregular Verbs"
     },
     {
       "id": 130,
@@ -2699,7 +2827,8 @@
         "I want you to be strong",
         "I know you are strong",
         "I expect you are strong"
-      ]
+      ],
+      "unitTopic": "Present Subjunctive - Irregular Verbs"
     },
     {
       "id": 131,
@@ -2721,7 +2850,8 @@
         "sendo",
         "sido"
       ],
-      "correct": "seja"
+      "correct": "seja",
+      "unitTopic": "Present Subjunctive - Irregular Verbs"
     },
     {
       "id": 132,
@@ -2738,7 +2868,8 @@
         "If I were rich, I travel",
         "When I was rich, I traveled",
         "If I were rich, I will travel"
-      ]
+      ],
+      "unitTopic": "Imperfect Subjunctive"
     },
     {
       "id": 133,
@@ -2755,7 +2886,8 @@
         "If I knew, I say",
         "When I knew, I said",
         "If I knew, I will say"
-      ]
+      ],
+      "unitTopic": "Imperfect Subjunctive"
     },
     {
       "id": 134,
@@ -2777,7 +2909,8 @@
         "tivemos",
         "tendo"
       ],
-      "correct": "tivesse"
+      "correct": "tivesse",
+      "unitTopic": "Imperfect Subjunctive"
     },
     {
       "id": 135,
@@ -2799,7 +2932,8 @@
         "estivemos",
         "estando"
       ],
-      "correct": "estivesse"
+      "correct": "estivesse",
+      "unitTopic": "Imperfect Subjunctive"
     },
     {
       "id": 136,
@@ -2821,7 +2955,8 @@
         "tivesse",
         "tendo"
       ],
-      "correct": "tivéssemos"
+      "correct": "tivéssemos",
+      "unitTopic": "Imperfect Subjunctive"
     },
     {
       "id": 137,
@@ -2838,7 +2973,8 @@
         "When I have time, I travel",
         "If I had time, I would travel",
         "When I will have time, I will travel"
-      ]
+      ],
+      "unitTopic": "Future Subjunctive"
     },
     {
       "id": 138,
@@ -2860,7 +2996,8 @@
         "chegando",
         "chegado"
       ],
-      "correct": "chegar"
+      "correct": "chegar",
+      "unitTopic": "Future Subjunctive"
     },
     {
       "id": 139,
@@ -2882,7 +3019,8 @@
         "ter",
         "tendo"
       ],
-      "correct": "tiver"
+      "correct": "tiver",
+      "unitTopic": "Future Subjunctive"
     },
     {
       "id": 140,
@@ -2904,7 +3042,8 @@
         "poder",
         "podendo"
       ],
-      "correct": "pudermos"
+      "correct": "pudermos",
+      "unitTopic": "Future Subjunctive"
     },
     {
       "id": 141,
@@ -2926,7 +3065,8 @@
         "é",
         "seja"
       ],
-      "correct": "tá"
+      "correct": "tá",
+      "unitTopic": "Colloquial Contractions"
     },
     {
       "id": 142,
@@ -2948,7 +3088,8 @@
         "Sobre",
         "Com"
       ],
-      "correct": "Para"
+      "correct": "Para",
+      "unitTopic": "Expressions with Para"
     },
     {
       "id": 143,
@@ -2965,7 +3106,8 @@
         "I saw him",
         "I will see him",
         "I am seeing him"
-      ]
+      ],
+      "unitTopic": "Direct Object Pronouns - o/a/os/as"
     },
     {
       "id": 144,
@@ -2987,7 +3129,8 @@
         "nos",
         "lo"
       ],
-      "correct": "o"
+      "correct": "o",
+      "unitTopic": "Direct Object Pronouns - o/a/os/as"
     },
     {
       "id": 145,
@@ -3009,7 +3152,8 @@
         "la",
         "lo"
       ],
-      "correct": "a"
+      "correct": "a",
+      "unitTopic": "Direct Object Pronouns - o/a/os/as"
     },
     {
       "id": 146,
@@ -3031,7 +3175,8 @@
         "te",
         "se"
       ],
-      "correct": "os"
+      "correct": "os",
+      "unitTopic": "Direct Object Pronouns - o/a/os/as"
     },
     {
       "id": 147,
@@ -3053,7 +3198,8 @@
         "te",
         "se"
       ],
-      "correct": "as"
+      "correct": "as",
+      "unitTopic": "Direct Object Pronouns - o/a/os/as"
     },
     {
       "id": 148,
@@ -3070,7 +3216,8 @@
         "I saw him tomorrow",
         "He is going to see me tomorrow",
         "I will see him tomorrow"
-      ]
+      ],
+      "unitTopic": "Pronouns after Infinitives - vê-lo/comprá-la"
     },
     {
       "id": 149,
@@ -3092,7 +3239,8 @@
         "vejo-o",
         "vejo-a"
       ],
-      "correct": "vê-lo"
+      "correct": "vê-lo",
+      "unitTopic": "Pronouns after Infinitives - vê-lo/comprá-la"
     },
     {
       "id": 150,
@@ -3114,7 +3262,8 @@
         "comprá-las",
         "comprá-los"
       ],
-      "correct": "comprá-la"
+      "correct": "comprá-la",
+      "unitTopic": "Pronouns after Infinitives - vê-lo/comprá-la"
     },
     {
       "id": 151,
@@ -3131,7 +3280,8 @@
         "I said the truth",
         "I will tell him the truth",
         "I tell the truth"
-      ]
+      ],
+      "unitTopic": "Indirect Object Pronouns - lhe/lhes"
     },
     {
       "id": 152,
@@ -3153,7 +3303,8 @@
         "os",
         "as"
       ],
-      "correct": "lhe"
+      "correct": "lhe",
+      "unitTopic": "Indirect Object Pronouns - lhe/lhes"
     },
     {
       "id": 153,
@@ -3175,7 +3326,8 @@
         "as",
         "lhes"
       ],
-      "correct": "me"
+      "correct": "me",
+      "unitTopic": "Direct Object Pronouns - o/a/os/as"
     },
     {
       "id": 154,
@@ -3197,7 +3349,8 @@
         "o",
         "a"
       ],
-      "correct": "lhes"
+      "correct": "lhes",
+      "unitTopic": "Indirect Object Pronouns - lhe/lhes"
     },
     {
       "id": 155,
@@ -3214,7 +3367,8 @@
         "He does not see me",
         "I did not see him",
         "I never see him"
-      ]
+      ],
+      "unitTopic": "Próclise with Negatives"
     },
     {
       "id": 156,
@@ -3236,7 +3390,8 @@
         "se",
         "nos"
       ],
-      "correct": "o"
+      "correct": "o",
+      "unitTopic": "Próclise with Negatives"
     },
     {
       "id": 157,
@@ -3258,7 +3413,8 @@
         "os",
         "as"
       ],
-      "correct": "lhe"
+      "correct": "lhe",
+      "unitTopic": "Indirect Object Pronouns - lhe/lhes"
     },
     {
       "id": 158,
@@ -3275,7 +3431,8 @@
         "He gets me up early",
         "I got up early",
         "I will get up early"
-      ]
+      ],
+      "unitTopic": "Reflexive Pronouns"
     },
     {
       "id": 159,
@@ -3297,7 +3454,8 @@
         "as",
         "lhes"
       ],
-      "correct": "me"
+      "correct": "me",
+      "unitTopic": "Reflexive Pronouns"
     },
     {
       "id": 160,
@@ -3319,7 +3477,8 @@
         "as",
         "lhes"
       ],
-      "correct": "se"
+      "correct": "se",
+      "unitTopic": "Reflexive Pronouns"
     },
     {
       "id": 161,
@@ -3341,7 +3500,8 @@
         "as",
         "lhes"
       ],
-      "correct": "nos"
+      "correct": "nos",
+      "unitTopic": "Reflexive Pronouns"
     },
     {
       "id": 162,
@@ -3363,7 +3523,8 @@
         "as",
         "lhes"
       ],
-      "correct": "se"
+      "correct": "se",
+      "unitTopic": "Reflexive Pronouns"
     },
     {
       "id": 163,
@@ -3385,7 +3546,8 @@
         "se",
         "nos"
       ],
-      "correct": "o"
+      "correct": "o",
+      "unitTopic": "Próclise with Adverbs"
     },
     {
       "id": 164,
@@ -3407,7 +3569,8 @@
         "os",
         "as"
       ],
-      "correct": "me"
+      "correct": "me",
+      "unitTopic": "Próclise with Adverbs"
     },
     {
       "id": 165,
@@ -3429,7 +3592,8 @@
         "Fala",
         "Conte"
       ],
-      "correct": "Diga"
+      "correct": "Diga",
+      "unitTopic": "Imperative - você/vocês"
     },
     {
       "id": 167,
@@ -3446,7 +3610,8 @@
         "It is important to speak Portuguese",
         "We are speaking Portuguese",
         "It was important for us to speak Portuguese"
-      ]
+      ],
+      "unitTopic": "Personal Infinitive"
     },
     {
       "id": 168,
@@ -3463,7 +3628,8 @@
         "Before leaving",
         "When you (all) leave",
         "Before you (all) go out"
-      ]
+      ],
+      "unitTopic": "Personal Infinitive"
     },
     {
       "id": 170,
@@ -3485,7 +3651,8 @@
         "chegavam",
         "chego"
       ],
-      "correct": "chegarem"
+      "correct": "chegarem",
+      "unitTopic": "Personal Infinitive"
     },
     {
       "id": 171,
@@ -3507,7 +3674,8 @@
         "irmos",
         "irem"
       ],
-      "correct": "ir"
+      "correct": "ir",
+      "unitTopic": "Personal Infinitive"
     },
     {
       "id": 172,
@@ -3529,7 +3697,8 @@
         "comem",
         "comeram"
       ],
-      "correct": "comermos"
+      "correct": "comermos",
+      "unitTopic": "Personal Infinitive"
     },
     {
       "id": 173,
@@ -3551,7 +3720,8 @@
         "veio",
         "vinha"
       ],
-      "correct": "virem"
+      "correct": "virem",
+      "unitTopic": "Personal Infinitive"
     },
     {
       "id": 174,
@@ -3573,7 +3743,8 @@
         "sabe",
         "souberam"
       ],
-      "correct": "saberem"
+      "correct": "saberem",
+      "unitTopic": "Personal Infinitive"
     },
     {
       "id": 175,
@@ -3590,7 +3761,8 @@
         "I read a very good book",
         "The book I will read is very good",
         "The book is very good to read"
-      ]
+      ],
+      "unitTopic": "Relative Pronoun - que"
     },
     {
       "id": 176,
@@ -3612,7 +3784,8 @@
         "se",
         "porque"
       ],
-      "correct": "que"
+      "correct": "que",
+      "unitTopic": "Relative Pronoun - que"
     },
     {
       "id": 177,
@@ -3634,7 +3807,8 @@
         "se",
         "porque"
       ],
-      "correct": "que"
+      "correct": "que",
+      "unitTopic": "Relative Pronoun - que"
     },
     {
       "id": 178,
@@ -3656,7 +3830,8 @@
         "se",
         "porque"
       ],
-      "correct": "que"
+      "correct": "que",
+      "unitTopic": "Relative Pronoun - que"
     },
     {
       "id": 179,
@@ -3673,7 +3848,8 @@
         "I was born in a small city",
         "The city where I live is small",
         "Where I was born the city is small"
-      ]
+      ],
+      "unitTopic": "Relative Pronoun - onde"
     },
     {
       "id": 180,
@@ -3695,7 +3871,8 @@
         "aonde",
         "porque"
       ],
-      "correct": "onde"
+      "correct": "onde",
+      "unitTopic": "Relative Pronoun - onde"
     },
     {
       "id": 181,
@@ -3717,7 +3894,8 @@
         "aonde",
         "porque"
       ],
-      "correct": "onde"
+      "correct": "onde",
+      "unitTopic": "Relative Pronoun - onde"
     },
     {
       "id": 182,
@@ -3734,7 +3912,8 @@
         "The person who talks",
         "I spoke about the person",
         "The person I will speak about"
-      ]
+      ],
+      "unitTopic": "Relative Pronoun - quem"
     },
     {
       "id": 183,
@@ -3756,7 +3935,8 @@
         "como",
         "se"
       ],
-      "correct": "quem"
+      "correct": "quem",
+      "unitTopic": "Relative Pronoun - quem"
     },
     {
       "id": 184,
@@ -3778,7 +3958,8 @@
         "se",
         "porque"
       ],
-      "correct": "quem"
+      "correct": "quem",
+      "unitTopic": "Relative Pronoun - quem"
     },
     {
       "id": 185,
@@ -3795,7 +3976,8 @@
         "The son whose father is a doctor",
         "The doctor whose father is a man",
         "The man with a doctor son"
-      ]
+      ],
+      "unitTopic": "Relative Pronoun - cujo/cuja"
     },
     {
       "id": 188,
@@ -3817,7 +3999,8 @@
         "as quais",
         "os quais"
       ],
-      "correct": "cujas"
+      "correct": "cujas",
+      "unitTopic": "Relative Pronoun - cujo/cuja"
     },
     {
       "id": 189,
@@ -3834,7 +4017,8 @@
         "What you say is true",
         "The thing you said is true",
         "You said something true"
-      ]
+      ],
+      "unitTopic": "Relative Pronoun - o que"
     },
     {
       "id": 190,
@@ -3856,7 +4040,8 @@
         "Aquilo que",
         "Isso que"
       ],
-      "correct": "O que"
+      "correct": "O que",
+      "unitTopic": "Relative Pronoun - o que"
     },
     {
       "id": 191,
@@ -3878,7 +4063,8 @@
         "Aquilo que",
         "Isso que"
       ],
-      "correct": "O que"
+      "correct": "O que",
+      "unitTopic": "Relative Pronoun - o que"
     },
     {
       "id": 192,
@@ -3895,7 +4081,8 @@
         "I live in a big house",
         "The house that I live is big",
         "In the house I live it is big"
-      ]
+      ],
+      "unitTopic": "Preposition + que"
     },
     {
       "id": 193,
@@ -3917,7 +4104,8 @@
         "sobre que",
         "quando"
       ],
-      "correct": "em que"
+      "correct": "em que",
+      "unitTopic": "Preposition + que"
     },
     {
       "id": 195,
@@ -3939,7 +4127,8 @@
         "porque",
         "o que"
       ],
-      "correct": "qual"
+      "correct": "qual",
+      "unitTopic": "Relative Pronoun - o qual/a qual"
     },
     {
       "id": 196,
@@ -3961,7 +4150,8 @@
         "porque",
         "o que"
       ],
-      "correct": "quais"
+      "correct": "quais",
+      "unitTopic": "Relative Pronoun - o qual/a qual"
     },
     {
       "id": 197,
@@ -3978,7 +4168,8 @@
         "He said he came",
         "He says he would come",
         "He said he wants to come"
-      ]
+      ],
+      "unitTopic": "Reported Speech"
     },
     {
       "id": 198,
@@ -3995,7 +4186,8 @@
         "She said she would be tired",
         "She was tired and said it",
         "She is tired she said"
-      ]
+      ],
+      "unitTopic": "Reported Speech"
     },
     {
       "id": 199,
@@ -4017,7 +4209,8 @@
         "iria viajar",
         "viajasse"
       ],
-      "correct": "viajaria"
+      "correct": "viajaria",
+      "unitTopic": "Reported Speech"
     },
     {
       "id": 200,
@@ -4039,7 +4232,8 @@
         "estudasse",
         "estivesse estudando"
       ],
-      "correct": "estava estudando"
+      "correct": "estava estudando",
+      "unitTopic": "Reported Speech"
     },
     {
       "id": 201,
@@ -4061,7 +4255,8 @@
         "chegassem",
         "chegavam"
       ],
-      "correct": "tinham chegado"
+      "correct": "tinham chegado",
+      "unitTopic": "Reported Speech"
     },
     {
       "id": 202,
@@ -4078,7 +4273,8 @@
         "I am going to travel but I will cancel",
         "I wanted to travel but I cancelled",
         "I used to travel but I cancelled"
-      ]
+      ],
+      "unitTopic": "Past Future - ia fazer"
     },
     {
       "id": 203,
@@ -4100,7 +4296,8 @@
         "quisemos",
         "queríamos"
       ],
-      "correct": "íamos"
+      "correct": "íamos",
+      "unitTopic": "Past Future - ia fazer"
     },
     {
       "id": 204,
@@ -4122,7 +4319,8 @@
         "ligava",
         "ligou"
       ],
-      "correct": "ia"
+      "correct": "ia",
+      "unitTopic": "Past Future - ia fazer"
     },
     {
       "id": 205,
@@ -4139,7 +4337,8 @@
         "The book will be written in 1900",
         "The book went to be written in 1900",
         "He wrote the book in 1900"
-      ]
+      ],
+      "unitTopic": "Passive Voice - foi escrito"
     },
     {
       "id": 206,
@@ -4156,7 +4355,8 @@
         "They built the house",
         "The house went to construction",
         "The house is being built"
-      ]
+      ],
+      "unitTopic": "Passive Voice - foi escrito"
     },
     {
       "id": 207,
@@ -4178,7 +4378,8 @@
         "enviará",
         "envia"
       ],
-      "correct": "foi enviada"
+      "correct": "foi enviada",
+      "unitTopic": "Passive Voice - foi escrito"
     },
     {
       "id": 208,
@@ -4200,7 +4401,8 @@
         "abrem",
         "abriu"
       ],
-      "correct": "foram abertas"
+      "correct": "foram abertas",
+      "unitTopic": "Passive Voice - foi escrito"
     },
     {
       "id": 209,
@@ -4222,7 +4424,8 @@
         "resolverá",
         "resolve"
       ],
-      "correct": "foi resolvido"
+      "correct": "foi resolvido",
+      "unitTopic": "Passive Voice - foi escrito"
     },
     {
       "id": 210,
@@ -4239,7 +4442,8 @@
         "The work was done",
         "They are doing the work",
         "The work is done"
-      ]
+      ],
+      "unitTopic": "Passive Progressive - está sendo feito"
     },
     {
       "id": 211,
@@ -4261,7 +4465,8 @@
         "construíam",
         "construirão"
       ],
-      "correct": "está sendo construída"
+      "correct": "está sendo construída",
+      "unitTopic": "Passive Progressive - está sendo feito"
     },
     {
       "id": 212,
@@ -4283,7 +4488,8 @@
         "revisavam",
         "revisarão"
       ],
-      "correct": "estão sendo revisados"
+      "correct": "estão sendo revisados",
+      "unitTopic": "Passive Progressive - está sendo feito"
     },
     {
       "id": 213,
@@ -4300,7 +4506,8 @@
         "They speak Portuguese in Brazil",
         "Portuguese is being spoken in Brazil",
         "Brazil speaks Portuguese"
-      ]
+      ],
+      "unitTopic": "Passive Habitual - é falado"
     },
     {
       "id": 214,
@@ -4322,7 +4529,8 @@
         "falavam",
         "falarão"
       ],
-      "correct": "é falado"
+      "correct": "é falado",
+      "unitTopic": "Passive Habitual - é falado"
     },
     {
       "id": 215,
@@ -4344,7 +4552,8 @@
         "fechava",
         "fechará"
       ],
-      "correct": "é fechada"
+      "correct": "é fechada",
+      "unitTopic": "Passive Habitual - é falado"
     },
     {
       "id": 216,
@@ -4361,7 +4570,8 @@
         "Portuguese was spoken here",
         "He speaks Portuguese here",
         "Portuguese will be spoken here"
-      ]
+      ],
+      "unitTopic": "SE Passive - fala-se"
     },
     {
       "id": 217,
@@ -4383,7 +4593,8 @@
         "Venda",
         "Vender"
       ],
-      "correct": "Vendem"
+      "correct": "Vendem",
+      "unitTopic": "SE Passive - fala-se"
     },
     {
       "id": 218,
@@ -4405,7 +4616,8 @@
         "Fale",
         "Falar"
       ],
-      "correct": "Fala"
+      "correct": "Fala",
+      "unitTopic": "SE Passive - fala-se"
     }
   ]
 }
