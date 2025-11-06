@@ -679,9 +679,9 @@
       "unit": 19,
       "phase": 1,
       "type": "production",
-      "en": "I need you",
+      "en": "She needs you",
       "question": "Complete the sentence:",
-      "template": "Eu preciso __ você",
+      "template": "Ela precisa __ voce",
       "chips": [
         "de",
         "do",
@@ -3164,9 +3164,9 @@
       "unit": 44,
       "phase": 2,
       "type": "production",
-      "en": "I bought them (masculine)",
+      "en": "She bought them (masculine)",
       "question": "Complete the sentence:",
-      "template": "Eu __ comprei",
+      "template": "Ela __ comprou",
       "chips": [
         "os",
         "as",
@@ -3187,9 +3187,9 @@
       "unit": 44,
       "phase": 2,
       "type": "production",
-      "en": "I saw them (feminine)",
+      "en": "She saw them (feminine)",
       "question": "Complete the sentence:",
-      "template": "Eu __ vi",
+      "template": "Ela __ viu",
       "chips": [
         "as",
         "os",
@@ -3402,9 +3402,9 @@
       "unit": 52,
       "phase": 3,
       "type": "production",
-      "en": "I never tell her",
+      "en": "She never tells her",
       "question": "Complete the sentence:",
-      "template": "Eu nunca __ digo",
+      "template": "Ela nunca __ diz",
       "chips": [
         "lhe",
         "digo-lhe",
@@ -5228,11 +5228,12 @@
       "unit": 90,
       "phase": 4,
       "type": "production",
-      "en": "I am gradually improving",
+      "en": "She is gradually improving",
       "question": "Complete the sentence:",
-      "template": "Eu __",
+      "template": "Ela __",
       "chips": [
         "vou melhorando",
+        "vai melhorando",
         "foi melhorando",
         "ir melhorando",
         "ia melhorando",
@@ -5243,7 +5244,7 @@
         "melhorei",
         "melhorava"
       ],
-      "correct": "vou melhorando",
+      "correct": "vai melhorando",
       "unitTopic": "Expressions with Para"
     },
     {
@@ -5356,9 +5357,9 @@
       "unit": 91,
       "phase": 3,
       "type": "production",
-      "en": "I told her the news",
+      "en": "She told her the news",
       "question": "Complete the sentence:",
-      "template": "Eu __ disse a notícia",
+      "template": "Ela __ disse a noticia",
       "chips": [
         "lhe",
         "me",
