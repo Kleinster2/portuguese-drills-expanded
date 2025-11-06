@@ -6090,6 +6090,159 @@
       ],
       "correct": "facilíssimo",
       "unitTopic": "Absolute Superlatives"
+    },
+    {
+      "id": 287,
+      "type": "production",
+      "phase": 2,
+      "unit": 26,
+      "en": "Someone has the key",
+      "template": "Alguem __ a chave",
+      "correct": "tem",
+      "chips": [
+        "tem",
+        "tenho",
+        "temos",
+        "ter",
+        "tinha"
+      ],
+      "topic": "Indefinite Pronouns - alguem"
+    },
+    {
+      "id": 288,
+      "type": "production",
+      "phase": 2,
+      "unit": 26,
+      "en": "No one has time",
+      "template": "Ninguem __ tempo",
+      "correct": "tem",
+      "chips": [
+        "tem",
+        "tenho",
+        "temos",
+        "ter",
+        "tinha"
+      ],
+      "topic": "Indefinite Pronouns - ninguem"
+    },
+    {
+      "id": 289,
+      "type": "production",
+      "phase": 2,
+      "unit": 27,
+      "en": "Everyone is here",
+      "template": "Todo mundo __ aqui",
+      "correct": "esta",
+      "chips": [
+        "esta",
+        "estou",
+        "estamos",
+        "estar",
+        "estava"
+      ],
+      "topic": "Indefinite Pronouns - todo mundo"
+    },
+    {
+      "id": 290,
+      "type": "production",
+      "phase": 2,
+      "unit": 27,
+      "en": "Someone knows the answer",
+      "template": "Alguem __ a resposta",
+      "correct": "sabe",
+      "chips": [
+        "sabe",
+        "sei",
+        "sabemos",
+        "saber",
+        "sabia"
+      ],
+      "topic": "Indefinite Pronouns - alguem"
+    },
+    {
+      "id": 291,
+      "type": "production",
+      "phase": 2,
+      "unit": 29,
+      "en": "No one knows",
+      "template": "Ninguem __",
+      "correct": "sabe",
+      "chips": [
+        "sabe",
+        "sei",
+        "sabemos",
+        "saber",
+        "sabia"
+      ],
+      "topic": "Indefinite Pronouns - ninguem"
+    },
+    {
+      "id": 292,
+      "type": "production",
+      "phase": 2,
+      "unit": 29,
+      "en": "Everyone wants to go",
+      "template": "Todo mundo __ ir",
+      "correct": "quer",
+      "chips": [
+        "quer",
+        "quero",
+        "queremos",
+        "querer",
+        "queria"
+      ],
+      "topic": "Indefinite Pronouns - todo mundo"
+    },
+    {
+      "id": 293,
+      "type": "production",
+      "phase": 2,
+      "unit": 29,
+      "en": "Someone is at home",
+      "template": "Alguem __ em casa",
+      "correct": "esta",
+      "chips": [
+        "esta",
+        "estou",
+        "estamos",
+        "estar",
+        "estava"
+      ],
+      "topic": "Indefinite Pronouns - alguem"
+    },
+    {
+      "id": 294,
+      "type": "production",
+      "phase": 2,
+      "unit": 30,
+      "en": "No one is here",
+      "template": "Ninguem __ aqui",
+      "correct": "esta",
+      "chips": [
+        "esta",
+        "estou",
+        "estamos",
+        "estar",
+        "estava"
+      ],
+      "topic": "Indefinite Pronouns - ninguem"
+    },
+    {
+      "id": 295,
+      "type": "production",
+      "phase": 2,
+      "unit": 30,
+      "en": "Everyone understands",
+      "template": "Todo mundo __",
+      "correct": "entende",
+      "chips": [
+        "entende",
+        "entendo",
+        "entendemos",
+        "entender",
+        "entendia"
+      ],
+      "topic": "Indefinite Pronouns - todo mundo"
     }
   ]
 }
