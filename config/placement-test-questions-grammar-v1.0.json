@@ -1584,9 +1584,9 @@
       "unit": 38,
       "phase": 2,
       "type": "production",
-      "en": "I said everything",
+      "en": "You said everything",
       "question": "Complete the sentence:",
-      "template": "Eu __ tudo",
+      "template": "Você __ tudo",
       "chips": [
         "disse",
         "digo",
@@ -1653,11 +1653,11 @@
       "unit": 39,
       "phase": 2,
       "type": "production",
-      "en": "I came here",
+      "en": "You came here",
       "question": "Complete the sentence:",
-      "template": "Eu __ aqui",
+      "template": "Você __ aqui",
       "chips": [
-        "vim",
+        "veio",
         "venho",
         "vinha",
         "virei",
@@ -1668,7 +1668,7 @@
         "vimos",
         "vêm"
       ],
-      "correct": "vim",
+      "correct": "veio",
       "unitTopic": "Preterite Irregular"
     },
     {
@@ -1951,9 +1951,9 @@
       "unit": 45,
       "phase": 3,
       "type": "production",
-      "en": "I used to live here",
+      "en": "You used to live here",
       "question": "Complete the sentence:",
-      "template": "Eu __ aqui",
+      "template": "Você __ aqui",
       "chips": [
         "morava",
         "moro",
@@ -2020,9 +2020,9 @@
       "unit": 46,
       "phase": 3,
       "type": "production",
-      "en": "I used to have time",
+      "en": "You used to have time",
       "question": "Complete the sentence:",
-      "template": "Eu __ tempo",
+      "template": "Você __ tempo",
       "chips": [
         "tinha",
         "tenho",
@@ -2407,11 +2407,11 @@
       "unit": 78,
       "phase": 4,
       "type": "production",
-      "en": "I will travel tomorrow",
+      "en": "You will travel tomorrow",
       "question": "Complete the sentence:",
-      "template": "Eu __ amanhã",
+      "template": "Você __ amanhã",
       "chips": [
-        "viajarei",
+        "viajará",
         "viajo",
         "viajei",
         "viajava",
@@ -2422,7 +2422,7 @@
         "viajando",
         "viajado"
       ],
-      "correct": "viajarei",
+      "correct": "viajará",
       "unitTopic": "Simple Future"
     },
     {
@@ -2494,9 +2494,9 @@
       "unit": 79,
       "phase": 4,
       "type": "production",
-      "en": "I would speak Portuguese",
+      "en": "You would speak Portuguese",
       "question": "Complete the sentence:",
-      "template": "Eu __ português",
+      "template": "Você __ português",
       "chips": [
         "falaria",
         "falo",
@@ -2562,9 +2562,9 @@
       "unit": 81,
       "phase": 4,
       "type": "production",
-      "en": "I'm heading to the beach",
+      "en": "You're heading to the beach",
       "question": "Complete the sentence:",
-      "template": "Eu vou __ praia",
+      "template": "Você vai __ praia",
       "chips": [
         "à",
         "a",
@@ -3114,9 +3114,9 @@
       "unit": 44,
       "phase": 2,
       "type": "production",
-      "en": "I see him",
+      "en": "You see him",
       "question": "Complete the sentence:",
-      "template": "Eu __ vejo",
+      "template": "Você __ vê",
       "chips": [
         "o",
         "a",
