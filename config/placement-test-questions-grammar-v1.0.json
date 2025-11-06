@@ -79,9 +79,9 @@
       "unit": 2,
       "phase": 1,
       "type": "production",
-      "en": "I am from Brazil",
+      "en": "You are from Brazil",
       "question": "Complete the sentence:",
-      "template": "Eu sou __ Brasil",
+      "template": "Você é __ Brasil",
       "chips": [
         "do",
         "da",
@@ -102,9 +102,9 @@
       "unit": 2,
       "phase": 1,
       "type": "production",
-      "en": "I am from the Philippines",
+      "en": "You are from the Philippines",
       "question": "Complete the sentence:",
-      "template": "Eu sou __ Filipinas",
+      "template": "Você é __ Filipinas",
       "chips": [
         "das",
         "dos",
@@ -167,9 +167,9 @@
       "unit": 4,
       "phase": 1,
       "type": "production",
-      "en": "I have a dog",
+      "en": "You have a dog",
       "question": "Complete the sentence:",
-      "template": "Eu tenho __ cachorro",
+      "template": "Você tem __ cachorro",
       "chips": [
         "um",
         "uma",
@@ -248,9 +248,9 @@
       "unit": 5,
       "phase": 1,
       "type": "production",
-      "en": "I am at home",
+      "en": "You are at home",
       "question": "Complete the sentence:",
-      "template": "Eu __ em casa",
+      "template": "Você __ em casa",
       "chips": [
         "estou",
         "sou",
@@ -263,7 +263,7 @@
         "estaria",
         "seja"
       ],
-      "correct": "estou",
+      "correct": "está",
       "unitTopic": "Estar"
     },
     {
@@ -271,11 +271,11 @@
       "unit": 5,
       "phase": 1,
       "type": "production",
-      "en": "I am in Brazil",
+      "en": "You are in Brazil",
       "question": "Complete the sentence:",
-      "template": "Eu __ no Brasil",
+      "template": "Você __ no Brasil",
       "chips": [
-        "estou",
+        "está",
         "sou",
         "moro",
         "fico",
@@ -286,7 +286,7 @@
         "estaria",
         "seja"
       ],
-      "correct": "estou",
+      "correct": "está",
       "unitTopic": "Estar"
     },
     {
@@ -354,9 +354,9 @@
       "unit": 7,
       "phase": 1,
       "type": "production",
-      "en": "I live in Rio",
+      "en": "You live in Rio",
       "question": "Complete the sentence:",
-      "template": "Eu __ no Rio",
+      "template": "Você __ no Rio",
       "chips": [
         "moro",
         "mora",
@@ -369,7 +369,7 @@
         "more",
         "morasse"
       ],
-      "correct": "moro",
+      "correct": "mora",
       "unitTopic": "Regular -ar Verbs"
     },
     {
@@ -395,9 +395,9 @@
       "unit": 8,
       "phase": 1,
       "type": "production",
-      "en": "I speak Spanish",
+      "en": "You speak Spanish",
       "question": "Complete the sentence:",
-      "template": "Eu __ espanhol",
+      "template": "Você __ espanhol",
       "chips": [
         "falo",
         "fala",
@@ -410,7 +410,7 @@
         "fale",
         "falasse"
       ],
-      "correct": "falo",
+      "correct": "fala",
       "unitTopic": "Regular -ar Verbs"
     },
     {
@@ -436,9 +436,9 @@
       "unit": 9,
       "phase": 1,
       "type": "production",
-      "en": "I work inside the hospital",
+      "en": "You work inside the hospital",
       "question": "Complete the sentence:",
-      "template": "Eu trabalho __ hospital",
+      "template": "Você trabalha __ hospital",
       "chips": [
         "no",
         "na",
@@ -477,9 +477,9 @@
       "unit": 10,
       "phase": 1,
       "type": "production",
-      "en": "I study English",
+      "en": "You study English",
       "question": "Complete the sentence:",
-      "template": "Eu __ inglês",
+      "template": "Você __ inglês",
       "chips": [
         "estudo",
         "estuda",
@@ -492,7 +492,7 @@
         "estude",
         "estudasse"
       ],
-      "correct": "estudo",
+      "correct": "estuda",
       "unitTopic": "Regular -ar Verbs"
     },
     {
@@ -523,9 +523,9 @@
       "unit": 11,
       "phase": 1,
       "type": "production",
-      "en": "I stay at home",
+      "en": "You stay at home",
       "question": "Complete the sentence:",
-      "template": "Eu __ em casa",
+      "template": "Você __ em casa",
       "chips": [
         "fico",
         "fica",
@@ -538,7 +538,7 @@
         "fique",
         "ficasse"
       ],
-      "correct": "fico",
+      "correct": "fica",
       "unitTopic": "Ficar"
     },
     {
