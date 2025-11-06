@@ -273,13 +273,21 @@ async function sendChatMessage(retryMessage = null) {
 
   let userMessageDiv = null;
 
+  // Randomly select drill FIRST (before storing any messages)
+  // This ensures we use consistent drill for: user message storage, history fetch, AI response storage
+  const selectedDrill = activeDrills.length > 0
+    ? activeDrills[Math.floor(Math.random() * activeDrills.length)]
+    : currentDrillId;
+
+  console.log('🎲 Randomly selected drill:', selectedDrill, 'from', activeDrills);
+
   // Only add user message if this is not a retry
   if (!retryMessage) {
     userMessageDiv = addMessageToChat('user', message);
 
-    // Store user message in session history
-    if (currentDrillId && drillSessions[currentDrillId]) {
-      drillSessions[currentDrillId].messages.push({ role: 'user', content: message });
+    // Store user message in the SELECTED drill's history (not currentDrillId!)
+    if (selectedDrill && drillSessions[selectedDrill]) {
+      drillSessions[selectedDrill].messages.push({ role: 'user', content: message });
     }
 
     // Clear input and disable while processing
@@ -293,19 +301,12 @@ async function sendChatMessage(retryMessage = null) {
   const typingIndicator = addMessageToChat('ai', '...');
 
   try {
-    // Randomly select a drill from activeDrills array
-    const selectedDrill = activeDrills.length > 0
-      ? activeDrills[Math.floor(Math.random() * activeDrills.length)]
-      : currentDrillId;
-
-    console.log('🎲 Randomly selected drill:', selectedDrill, 'from', activeDrills);
-
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 90000); // 90 second timeout for mobile
 
-    // Get current session messages for stateless mode
-    const sessionMessages = currentDrillId && drillSessions[currentDrillId]
-      ? drillSessions[currentDrillId].messages
+    // Get SELECTED drill's session messages (not currentDrillId!)
+    const sessionMessages = selectedDrill && drillSessions[selectedDrill]
+      ? drillSessions[selectedDrill].messages
       : [];
 
     const response = await fetch('/api/chat', {
@@ -335,9 +336,9 @@ async function sendChatMessage(retryMessage = null) {
     typingIndicator.remove();
     addMessageToChat('ai', data.response);
 
-    // Store AI response in session history
-    if (currentDrillId && drillSessions[currentDrillId]) {
-      drillSessions[currentDrillId].messages.push({ role: 'assistant', content: data.response });
+    // Store AI response in the SELECTED drill's history (not currentDrillId!)
+    if (selectedDrill && drillSessions[selectedDrill]) {
+      drillSessions[selectedDrill].messages.push({ role: 'assistant', content: data.response });
     }
 
   } catch (error) {
