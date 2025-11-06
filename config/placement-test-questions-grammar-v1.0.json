@@ -1758,7 +1758,6 @@
       "question": "Complete the sentence:",
       "template": "Eu vou __ escola",
       "chips": [
-        "para a",
         "à",
         "ao",
         "às",
@@ -1769,10 +1768,7 @@
         "da",
         "do"
       ],
-      "correct": [
-        "à",
-        "para a"
-      ]
+      "correct": "à"
     },
     {
       "id": 85,
@@ -1838,9 +1834,7 @@
         "à",
         "ao"
       ],
-      "correct": [
-        "para"
-      ]
+      "correct": "para"
     },
     {
       "id": 88,
@@ -2459,7 +2453,6 @@
         "à",
         "a",
         "na",
-        "para a",
         "pela",
         "da",
         "ao",
@@ -2467,10 +2460,7 @@
         "pelo",
         "do"
       ],
-      "correct": [
-        "à",
-        "para a"
-      ]
+      "correct": "à"
     },
     {
       "id": 118,
