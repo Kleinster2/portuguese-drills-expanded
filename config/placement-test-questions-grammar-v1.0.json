@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "title": "Portuguese Grammar Placement Test",
     "description": "Comprehensive diagnostic test focusing on Portuguese grammar structures, verb conjugations, and syntax",
-    "totalQuestions": 187,
+    "totalQuestions": 144,
     "questionTypes": {
       "comprehension": 71,
       "production": 121
@@ -593,23 +593,6 @@
       "id": 30,
       "unit": 13,
       "phase": 1,
-      "type": "comprehension",
-      "pt": "Eu estou em casa",
-      "question": "What does this mean?",
-      "correct": "I am at home",
-      "options": [
-        "I am at home",
-        "I am in the house",
-        "I go home",
-        "I work at home",
-        "I live at home",
-        "I stay at home"
-      ]
-    },
-    {
-      "id": 31,
-      "unit": 13,
-      "phase": 1,
       "type": "production",
       "en": "I am currently at work",
       "question": "Complete the sentence:",
@@ -629,58 +612,7 @@
       "correct": "no"
     },
     {
-      "id": 32,
-      "unit": 15,
-      "phase": 1,
-      "type": "comprehension",
-      "pt": "Eu não falo inglês",
-      "question": "What does this mean?",
-      "correct": "I don't speak English",
-      "options": [
-        "I don't speak English",
-        "I not speak English",
-        "I never speak English",
-        "I can't speak English",
-        "I didn't speak English",
-        "I won't speak English"
-      ]
-    },
-    {
-      "id": 33,
-      "unit": 15,
-      "phase": 1,
-      "type": "comprehension",
-      "pt": "Ele não mora aqui",
-      "question": "What does this mean?",
-      "correct": "He doesn't live here",
-      "options": [
-        "He doesn't live here",
-        "He not lives here",
-        "He never lives here",
-        "He can't live here",
-        "He didn't live here",
-        "He won't live here"
-      ]
-    },
-    {
-      "id": 34,
-      "unit": 16,
-      "phase": 1,
-      "type": "comprehension",
-      "pt": "Eu tenho um carro",
-      "question": "What does this mean?",
-      "correct": "I have a car",
-      "options": [
-        "I have a car",
-        "I had a car",
-        "I will have a car",
-        "I want a car",
-        "I like a car",
-        "I am a car"
-      ]
-    },
-    {
-      "id": 35,
+      "id": 31,
       "unit": 16,
       "phase": 1,
       "type": "production",
@@ -702,7 +634,7 @@
       "correct": "tenho"
     },
     {
-      "id": 36,
+      "id": 32,
       "unit": 16,
       "phase": 1,
       "type": "production",
@@ -724,75 +656,7 @@
       "correct": "tenho"
     },
     {
-      "id": 37,
-      "unit": 17,
-      "phase": 1,
-      "type": "comprehension",
-      "pt": "Eu tenho 25 anos",
-      "question": "What does this mean?",
-      "correct": "I am 25 years old",
-      "options": [
-        "I am 25 years old",
-        "I have 25 years",
-        "I was 25 years old",
-        "I will be 25 years old",
-        "I work for 25 years",
-        "I lived 25 years"
-      ]
-    },
-    {
-      "id": 38,
-      "unit": 18,
-      "phase": 1,
-      "type": "comprehension",
-      "pt": "Você fala português?",
-      "question": "What does this mean?",
-      "correct": "Do you speak Portuguese?",
-      "options": [
-        "Do you speak Portuguese?",
-        "You speak Portuguese",
-        "Are you speaking Portuguese?",
-        "Did you speak Portuguese?",
-        "Will you speak Portuguese?",
-        "Can you speak Portuguese?"
-      ]
-    },
-    {
-      "id": 39,
-      "unit": 18,
-      "phase": 1,
-      "type": "comprehension",
-      "pt": "Você mora aqui?",
-      "question": "What does this mean?",
-      "correct": "Do you live here?",
-      "options": [
-        "Do you live here?",
-        "You live here",
-        "Are you living here?",
-        "Did you live here?",
-        "Will you live here?",
-        "Can you live here?"
-      ]
-    },
-    {
-      "id": 40,
-      "unit": 19,
-      "phase": 1,
-      "type": "comprehension",
-      "pt": "Eu preciso de ajuda",
-      "question": "What does this mean?",
-      "correct": "I need help",
-      "options": [
-        "I need help",
-        "I want help",
-        "I like help",
-        "I have help",
-        "I give help",
-        "I ask for help"
-      ]
-    },
-    {
-      "id": 41,
+      "id": 33,
       "unit": 19,
       "phase": 1,
       "type": "production",
@@ -814,7 +678,7 @@
       "correct": "de"
     },
     {
-      "id": 42,
+      "id": 34,
       "unit": 19,
       "phase": 1,
       "type": "production",
@@ -836,7 +700,7 @@
       "correct": "de"
     },
     {
-      "id": 43,
+      "id": 35,
       "unit": 22,
       "phase": 2,
       "type": "comprehension",
@@ -853,7 +717,7 @@
       ]
     },
     {
-      "id": 44,
+      "id": 36,
       "unit": 22,
       "phase": 2,
       "type": "production",
@@ -875,7 +739,7 @@
       "correct": "como"
     },
     {
-      "id": 45,
+      "id": 37,
       "unit": 22,
       "phase": 2,
       "type": "production",
@@ -897,7 +761,7 @@
       "correct": "bebo"
     },
     {
-      "id": 46,
+      "id": 38,
       "unit": 23,
       "phase": 2,
       "type": "production",
@@ -919,7 +783,7 @@
       "correct": "fala"
     },
     {
-      "id": 47,
+      "id": 39,
       "unit": 23,
       "phase": 2,
       "type": "production",
@@ -941,7 +805,7 @@
       "correct": "come"
     },
     {
-      "id": 48,
+      "id": 40,
       "unit": 23,
       "phase": 2,
       "type": "production",
@@ -963,7 +827,7 @@
       "correct": "mora"
     },
     {
-      "id": 49,
+      "id": 41,
       "unit": 24,
       "phase": 2,
       "type": "production",
@@ -985,7 +849,7 @@
       "correct": "falamos"
     },
     {
-      "id": 50,
+      "id": 42,
       "unit": 24,
       "phase": 2,
       "type": "production",
@@ -1007,7 +871,7 @@
       "correct": "moramos"
     },
     {
-      "id": 51,
+      "id": 43,
       "unit": 24,
       "phase": 2,
       "type": "production",
@@ -1029,24 +893,7 @@
       "correct": "bebemos"
     },
     {
-      "id": 52,
-      "unit": 25,
-      "phase": 2,
-      "type": "comprehension",
-      "pt": "Eu gosto de café",
-      "question": "What does this mean?",
-      "correct": "I like coffee",
-      "options": [
-        "I like coffee",
-        "I want coffee",
-        "I drink coffee",
-        "I have coffee",
-        "I love coffee",
-        "I prefer coffee"
-      ]
-    },
-    {
-      "id": 53,
+      "id": 44,
       "unit": 25,
       "phase": 2,
       "type": "production",
@@ -1068,7 +915,7 @@
       "correct": "de"
     },
     {
-      "id": 54,
+      "id": 45,
       "unit": 25,
       "phase": 2,
       "type": "production",
@@ -1090,7 +937,7 @@
       "correct": "de"
     },
     {
-      "id": 55,
+      "id": 46,
       "unit": 26,
       "phase": 2,
       "type": "production",
@@ -1112,7 +959,7 @@
       "correct": "abro"
     },
     {
-      "id": 56,
+      "id": 47,
       "unit": 26,
       "phase": 2,
       "type": "production",
@@ -1134,7 +981,7 @@
       "correct": "parto"
     },
     {
-      "id": 57,
+      "id": 48,
       "unit": 27,
       "phase": 2,
       "type": "comprehension",
@@ -1151,7 +998,7 @@
       ]
     },
     {
-      "id": 58,
+      "id": 49,
       "unit": 27,
       "phase": 2,
       "type": "production",
@@ -1173,7 +1020,7 @@
       "correct": "estudar"
     },
     {
-      "id": 59,
+      "id": 50,
       "unit": 27,
       "phase": 2,
       "type": "production",
@@ -1195,7 +1042,7 @@
       "correct": "ficar"
     },
     {
-      "id": 60,
+      "id": 51,
       "unit": 28,
       "phase": 2,
       "type": "production",
@@ -1217,7 +1064,7 @@
       "correct": "falam"
     },
     {
-      "id": 61,
+      "id": 52,
       "unit": 28,
       "phase": 2,
       "type": "production",
@@ -1239,7 +1086,7 @@
       "correct": "moram"
     },
     {
-      "id": 62,
+      "id": 53,
       "unit": 28,
       "phase": 2,
       "type": "production",
@@ -1261,92 +1108,7 @@
       "correct": "bebem"
     },
     {
-      "id": 63,
-      "unit": 30,
-      "phase": 2,
-      "type": "comprehension",
-      "pt": "Onde você mora?",
-      "question": "What does this mean?",
-      "correct": "Where do you live?",
-      "options": [
-        "Where do you live?",
-        "When do you live?",
-        "How do you live?",
-        "Why do you live?",
-        "Who lives?",
-        "What do you live?"
-      ]
-    },
-    {
-      "id": 64,
-      "unit": 30,
-      "phase": 2,
-      "type": "comprehension",
-      "pt": "O que você faz?",
-      "question": "What does this mean?",
-      "correct": "What do you do?",
-      "options": [
-        "What do you do?",
-        "Where do you do?",
-        "How do you do?",
-        "When do you do?",
-        "Why do you do?",
-        "Who does?"
-      ]
-    },
-    {
-      "id": 65,
-      "unit": 30,
-      "phase": 2,
-      "type": "comprehension",
-      "pt": "Quando você trabalha?",
-      "question": "What does this mean?",
-      "correct": "When do you work?",
-      "options": [
-        "When do you work?",
-        "Where do you work?",
-        "What do you work?",
-        "How do you work?",
-        "Why do you work?",
-        "Who works?"
-      ]
-    },
-    {
-      "id": 66,
-      "unit": 30,
-      "phase": 2,
-      "type": "comprehension",
-      "pt": "Como você está?",
-      "question": "What does this mean?",
-      "correct": "How are you?",
-      "options": [
-        "How are you?",
-        "Where are you?",
-        "When are you?",
-        "What are you?",
-        "Why are you?",
-        "Who are you?"
-      ]
-    },
-    {
-      "id": 67,
-      "unit": 30,
-      "phase": 2,
-      "type": "comprehension",
-      "pt": "Por que você estuda?",
-      "question": "What does this mean?",
-      "correct": "Why do you study?",
-      "options": [
-        "Why do you study?",
-        "Where do you study?",
-        "When do you study?",
-        "How do you study?",
-        "What do you study?",
-        "Who studies?"
-      ]
-    },
-    {
-      "id": 68,
+      "id": 54,
       "unit": 30,
       "phase": 2,
       "type": "production",
@@ -1366,7 +1128,7 @@
       "correct": "Onde"
     },
     {
-      "id": 69,
+      "id": 55,
       "unit": 31,
       "phase": 2,
       "type": "production",
@@ -1386,7 +1148,7 @@
       "correct": "Meu"
     },
     {
-      "id": 70,
+      "id": 56,
       "unit": 31,
       "phase": 2,
       "type": "production",
@@ -1406,7 +1168,7 @@
       "correct": "Minhas"
     },
     {
-      "id": 71,
+      "id": 57,
       "unit": 32,
       "phase": 2,
       "type": "production",
@@ -1426,7 +1188,7 @@
       "correct": "Seu"
     },
     {
-      "id": 72,
+      "id": 58,
       "unit": 32,
       "phase": 2,
       "type": "production",
@@ -1446,7 +1208,7 @@
       "correct": "Suas"
     },
     {
-      "id": 73,
+      "id": 59,
       "unit": 33,
       "phase": 2,
       "type": "production",
@@ -1466,7 +1228,7 @@
       "correct": "Nosso"
     },
     {
-      "id": 74,
+      "id": 60,
       "unit": 33,
       "phase": 2,
       "type": "production",
@@ -1486,24 +1248,7 @@
       "correct": "Nossas"
     },
     {
-      "id": 75,
-      "unit": 34,
-      "phase": 2,
-      "type": "comprehension",
-      "pt": "Eu trabalhei ontem",
-      "question": "What does this mean?",
-      "correct": "I worked yesterday",
-      "options": [
-        "I worked yesterday",
-        "I work yesterday",
-        "I am working yesterday",
-        "I will work yesterday",
-        "I used to work yesterday",
-        "I would work yesterday"
-      ]
-    },
-    {
-      "id": 76,
+      "id": 61,
       "unit": 34,
       "phase": 2,
       "type": "production",
@@ -1525,7 +1270,7 @@
       "correct": "falei"
     },
     {
-      "id": 77,
+      "id": 62,
       "unit": 34,
       "phase": 2,
       "type": "production",
@@ -1547,7 +1292,7 @@
       "correct": "morou"
     },
     {
-      "id": 78,
+      "id": 63,
       "unit": 34,
       "phase": 2,
       "type": "production",
@@ -1569,24 +1314,7 @@
       "correct": "viajamos"
     },
     {
-      "id": 79,
-      "unit": 35,
-      "phase": 2,
-      "type": "comprehension",
-      "pt": "Eu comi pão",
-      "question": "What does this mean?",
-      "correct": "I ate bread",
-      "options": [
-        "I ate bread",
-        "I eat bread",
-        "I am eating bread",
-        "I will eat bread",
-        "I used to eat bread",
-        "I would eat bread"
-      ]
-    },
-    {
-      "id": 80,
+      "id": 64,
       "unit": 35,
       "phase": 2,
       "type": "production",
@@ -1608,7 +1336,7 @@
       "correct": "bebi"
     },
     {
-      "id": 81,
+      "id": 65,
       "unit": 35,
       "phase": 2,
       "type": "production",
@@ -1630,7 +1358,7 @@
       "correct": "abri"
     },
     {
-      "id": 82,
+      "id": 66,
       "unit": 35,
       "phase": 2,
       "type": "production",
@@ -1652,7 +1380,7 @@
       "correct": "vivemos"
     },
     {
-      "id": 83,
+      "id": 67,
       "unit": 36,
       "phase": 2,
       "type": "comprehension",
@@ -1669,7 +1397,7 @@
       ]
     },
     {
-      "id": 84,
+      "id": 68,
       "unit": 36,
       "phase": 2,
       "type": "comprehension",
@@ -1686,7 +1414,7 @@
       ]
     },
     {
-      "id": 85,
+      "id": 69,
       "unit": 36,
       "phase": 2,
       "type": "production",
@@ -1708,7 +1436,7 @@
       "correct": "fui"
     },
     {
-      "id": 86,
+      "id": 70,
       "unit": 36,
       "phase": 2,
       "type": "production",
@@ -1730,7 +1458,7 @@
       "correct": "foi"
     },
     {
-      "id": 87,
+      "id": 71,
       "unit": 36,
       "phase": 2,
       "type": "production",
@@ -1752,24 +1480,7 @@
       "correct": "fomos"
     },
     {
-      "id": 88,
-      "unit": 37,
-      "phase": 2,
-      "type": "comprehension",
-      "pt": "Eu tive uma reunião",
-      "question": "What does this mean?",
-      "correct": "I had a meeting",
-      "options": [
-        "I had a meeting",
-        "I have a meeting",
-        "I will have a meeting",
-        "I am having a meeting",
-        "I used to have a meeting",
-        "I would have a meeting"
-      ]
-    },
-    {
-      "id": 89,
+      "id": 72,
       "unit": 37,
       "phase": 2,
       "type": "production",
@@ -1791,7 +1502,7 @@
       "correct": "estive"
     },
     {
-      "id": 90,
+      "id": 73,
       "unit": 37,
       "phase": 2,
       "type": "production",
@@ -1813,7 +1524,7 @@
       "correct": "tive"
     },
     {
-      "id": 91,
+      "id": 74,
       "unit": 37,
       "phase": 2,
       "type": "production",
@@ -1835,24 +1546,7 @@
       "correct": "tivemos"
     },
     {
-      "id": 92,
-      "unit": 38,
-      "phase": 2,
-      "type": "comprehension",
-      "pt": "Eu fiz o trabalho",
-      "question": "What does this mean?",
-      "correct": "I did the work",
-      "options": [
-        "I did the work",
-        "I do the work",
-        "I will do the work",
-        "I am doing the work",
-        "I used to do the work",
-        "I would do the work"
-      ]
-    },
-    {
-      "id": 93,
+      "id": 75,
       "unit": 38,
       "phase": 2,
       "type": "production",
@@ -1874,7 +1568,7 @@
       "correct": "disse"
     },
     {
-      "id": 94,
+      "id": 76,
       "unit": 38,
       "phase": 2,
       "type": "production",
@@ -1896,7 +1590,7 @@
       "correct": "trouxe"
     },
     {
-      "id": 95,
+      "id": 77,
       "unit": 38,
       "phase": 2,
       "type": "production",
@@ -1918,24 +1612,7 @@
       "correct": "fizemos"
     },
     {
-      "id": 96,
-      "unit": 39,
-      "phase": 2,
-      "type": "comprehension",
-      "pt": "Eu vi o filme",
-      "question": "What does this mean?",
-      "correct": "I saw the movie",
-      "options": [
-        "I saw the movie",
-        "I see the movie",
-        "I will see the movie",
-        "I am seeing the movie",
-        "I used to see the movie",
-        "I would see the movie"
-      ]
-    },
-    {
-      "id": 97,
+      "id": 78,
       "unit": 39,
       "phase": 2,
       "type": "production",
@@ -1957,7 +1634,7 @@
       "correct": "vim"
     },
     {
-      "id": 98,
+      "id": 79,
       "unit": 39,
       "phase": 2,
       "type": "production",
@@ -1979,7 +1656,7 @@
       "correct": "vi"
     },
     {
-      "id": 99,
+      "id": 80,
       "unit": 39,
       "phase": 2,
       "type": "production",
@@ -2001,24 +1678,7 @@
       "correct": "dei"
     },
     {
-      "id": 100,
-      "unit": 40,
-      "phase": 2,
-      "type": "comprehension",
-      "pt": "Eu pude ir",
-      "question": "What does this mean?",
-      "correct": "I was able to go",
-      "options": [
-        "I was able to go",
-        "I can go",
-        "I will be able to go",
-        "I am able to go",
-        "I used to be able to go",
-        "I would be able to go"
-      ]
-    },
-    {
-      "id": 101,
+      "id": 81,
       "unit": 40,
       "phase": 2,
       "type": "production",
@@ -2040,7 +1700,7 @@
       "correct": "quis"
     },
     {
-      "id": 102,
+      "id": 82,
       "unit": 40,
       "phase": 2,
       "type": "production",
@@ -2062,7 +1722,7 @@
       "correct": "soube"
     },
     {
-      "id": 103,
+      "id": 83,
       "unit": 40,
       "phase": 2,
       "type": "production",
@@ -2084,7 +1744,7 @@
       "correct": "pude"
     },
     {
-      "id": 104,
+      "id": 84,
       "unit": 40,
       "phase": 2,
       "type": "production",
@@ -2106,7 +1766,7 @@
       "correct": "pus"
     },
     {
-      "id": 105,
+      "id": 85,
       "unit": 41,
       "phase": 2,
       "type": "production",
@@ -2128,7 +1788,7 @@
       "correct": "ao"
     },
     {
-      "id": 106,
+      "id": 86,
       "unit": 41,
       "phase": 2,
       "type": "production",
@@ -2149,7 +1809,7 @@
       "correct": "à"
     },
     {
-      "id": 107,
+      "id": 87,
       "unit": 41,
       "phase": 2,
       "type": "production",
@@ -2171,7 +1831,7 @@
       "correct": "aos"
     },
     {
-      "id": 108,
+      "id": 88,
       "unit": 41,
       "phase": 2,
       "type": "production",
@@ -2193,58 +1853,7 @@
       "correct": "às"
     },
     {
-      "id": 109,
-      "unit": 42,
-      "phase": 2,
-      "type": "comprehension",
-      "pt": "Eu vou para casa",
-      "question": "What does this mean?",
-      "correct": "I am going home",
-      "options": [
-        "I am going home",
-        "I pass through home",
-        "I go by home",
-        "I was going home",
-        "I will go home",
-        "I like home"
-      ]
-    },
-    {
-      "id": 110,
-      "unit": 42,
-      "phase": 2,
-      "type": "comprehension",
-      "pt": "Eu passo por aqui",
-      "question": "What does this mean?",
-      "correct": "I pass through here",
-      "options": [
-        "I pass through here",
-        "I go to here",
-        "I am here",
-        "I stay here",
-        "I come here",
-        "I leave here"
-      ]
-    },
-    {
-      "id": 111,
-      "unit": 42,
-      "phase": 2,
-      "type": "comprehension",
-      "pt": "Eu sempre faço isso para você",
-      "question": "What does this mean?",
-      "correct": "I always do this for you",
-      "options": [
-        "I always do this for you",
-        "I sometimes do this for you",
-        "I do this through you",
-        "I do this by you",
-        "I am doing this for you",
-        "I did this for you"
-      ]
-    },
-    {
-      "id": 112,
+      "id": 89,
       "unit": 42,
       "phase": 2,
       "type": "production",
@@ -2266,7 +1875,7 @@
       "correct": "para"
     },
     {
-      "id": 113,
+      "id": 90,
       "unit": 42,
       "phase": 2,
       "type": "production",
@@ -2288,41 +1897,7 @@
       "correct": "pela"
     },
     {
-      "id": 114,
-      "unit": 45,
-      "phase": 3,
-      "type": "comprehension",
-      "pt": "Eu morava em São Paulo",
-      "question": "What does this mean?",
-      "correct": "I used to live in São Paulo",
-      "options": [
-        "I used to live in São Paulo",
-        "I live in São Paulo",
-        "I lived in São Paulo",
-        "I will live in São Paulo",
-        "I am living in São Paulo",
-        "I would live in São Paulo"
-      ]
-    },
-    {
-      "id": 115,
-      "unit": 45,
-      "phase": 3,
-      "type": "comprehension",
-      "pt": "Eu falava português",
-      "question": "What does this mean?",
-      "correct": "I used to speak Portuguese",
-      "options": [
-        "I used to speak Portuguese",
-        "I speak Portuguese",
-        "I spoke Portuguese",
-        "I will speak Portuguese",
-        "I am speaking Portuguese",
-        "I would speak Portuguese"
-      ]
-    },
-    {
-      "id": 116,
+      "id": 91,
       "unit": 45,
       "phase": 3,
       "type": "production",
@@ -2344,7 +1919,7 @@
       "correct": "morava"
     },
     {
-      "id": 117,
+      "id": 92,
       "unit": 45,
       "phase": 3,
       "type": "production",
@@ -2366,7 +1941,7 @@
       "correct": "comia"
     },
     {
-      "id": 118,
+      "id": 93,
       "unit": 45,
       "phase": 3,
       "type": "production",
@@ -2388,24 +1963,7 @@
       "correct": "vivíamos"
     },
     {
-      "id": 119,
-      "unit": 46,
-      "phase": 3,
-      "type": "comprehension",
-      "pt": "Eu era professor",
-      "question": "What does this mean?",
-      "correct": "I used to be a teacher",
-      "options": [
-        "I used to be a teacher",
-        "I am a teacher",
-        "I was a teacher",
-        "I will be a teacher",
-        "I would be a teacher",
-        "I seem to be a teacher"
-      ]
-    },
-    {
-      "id": 120,
+      "id": 94,
       "unit": 46,
       "phase": 3,
       "type": "production",
@@ -2427,7 +1985,7 @@
       "correct": "era"
     },
     {
-      "id": 121,
+      "id": 95,
       "unit": 46,
       "phase": 3,
       "type": "production",
@@ -2449,7 +2007,7 @@
       "correct": "tinha"
     },
     {
-      "id": 122,
+      "id": 96,
       "unit": 46,
       "phase": 3,
       "type": "production",
@@ -2471,7 +2029,7 @@
       "correct": "vinha"
     },
     {
-      "id": 123,
+      "id": 97,
       "unit": 47,
       "phase": 3,
       "type": "production",
@@ -2491,7 +2049,7 @@
       "correct": "mais...que"
     },
     {
-      "id": 124,
+      "id": 98,
       "unit": 47,
       "phase": 3,
       "type": "production",
@@ -2511,7 +2069,7 @@
       "correct": "menos...que"
     },
     {
-      "id": 125,
+      "id": 99,
       "unit": 47,
       "phase": 3,
       "type": "production",
@@ -2531,7 +2089,7 @@
       "correct": "tão...quanto"
     },
     {
-      "id": 126,
+      "id": 100,
       "unit": 48,
       "phase": 3,
       "type": "production",
@@ -2551,7 +2109,7 @@
       "correct": "O"
     },
     {
-      "id": 127,
+      "id": 101,
       "unit": 48,
       "phase": 3,
       "type": "production",
@@ -2571,24 +2129,7 @@
       "correct": "O"
     },
     {
-      "id": 128,
-      "unit": 49,
-      "phase": 3,
-      "type": "comprehension",
-      "pt": "São três horas",
-      "question": "What does this mean?",
-      "correct": "It's 3 o'clock",
-      "options": [
-        "It's 3 o'clock",
-        "It's 13 o'clock",
-        "It's 3:30",
-        "It's 2 o'clock",
-        "It was 3 o'clock",
-        "It will be 3 o'clock"
-      ]
-    },
-    {
-      "id": 129,
+      "id": 102,
       "unit": 49,
       "phase": 3,
       "type": "comprehension",
@@ -2605,7 +2146,7 @@
       ]
     },
     {
-      "id": 130,
+      "id": 103,
       "unit": 49,
       "phase": 3,
       "type": "comprehension",
@@ -2622,7 +2163,7 @@
       ]
     },
     {
-      "id": 131,
+      "id": 104,
       "unit": 49,
       "phase": 3,
       "type": "production",
@@ -2642,24 +2183,7 @@
       "correct": "horas"
     },
     {
-      "id": 132,
-      "unit": 71,
-      "phase": 3,
-      "type": "comprehension",
-      "pt": "Fale português!",
-      "question": "What does this mean?",
-      "correct": "Speak Portuguese!",
-      "options": [
-        "Speak Portuguese!",
-        "You speak Portuguese!",
-        "Speaks Portuguese!",
-        "Speaking Portuguese!",
-        "Spoke Portuguese!",
-        "Will speak Portuguese!"
-      ]
-    },
-    {
-      "id": 133,
+      "id": 105,
       "unit": 71,
       "phase": 3,
       "type": "production",
@@ -2681,7 +2205,7 @@
       "correct": "Venha"
     },
     {
-      "id": 134,
+      "id": 106,
       "unit": 71,
       "phase": 3,
       "type": "production",
@@ -2703,7 +2227,7 @@
       "correct": "Fale"
     },
     {
-      "id": 135,
+      "id": 107,
       "unit": 71,
       "phase": 3,
       "type": "production",
@@ -2727,23 +2251,6 @@
     {
       "unit": 72,
       "phase": 3,
-      "type": "comprehension",
-      "pt": "Este livro é interessante",
-      "question": "What does 'Este livro é interessante' mean?",
-      "correct": "This book is interesting",
-      "options": [
-        "This book is interesting",
-        "That book is interesting",
-        "These books are interesting",
-        "Those books are interesting",
-        "The book is interesting",
-        "This book was interesting"
-      ],
-      "id": 136
-    },
-    {
-      "unit": 72,
-      "phase": 3,
       "type": "production",
       "en": "These houses are big",
       "question": "How do you say 'These houses are big'?",
@@ -2761,24 +2268,7 @@
         "estão",
         "casa"
       ],
-      "id": 137
-    },
-    {
-      "unit": 72,
-      "phase": 3,
-      "type": "comprehension",
-      "pt": "Esse carro é novo",
-      "question": "What does 'Esse carro é novo' mean?",
-      "correct": "That car is new",
-      "options": [
-        "That car is new",
-        "This car is new",
-        "Those cars are new",
-        "These cars are new",
-        "The car is new",
-        "That car was new"
-      ],
-      "id": 138
+      "id": 108
     },
     {
       "unit": 72,
@@ -2800,7 +2290,7 @@
         "estão",
         "menina"
       ],
-      "id": 139
+      "id": 109
     },
     {
       "unit": 72,
@@ -2817,7 +2307,7 @@
         "The man is a teacher",
         "That man was a teacher"
       ],
-      "id": 140
+      "id": 110
     },
     {
       "unit": 72,
@@ -2839,27 +2329,10 @@
         "estão",
         "flor"
       ],
-      "id": 141
+      "id": 111
     },
     {
-      "id": 142,
-      "unit": 76,
-      "phase": 4,
-      "type": "comprehension",
-      "pt": "Eu falarei português",
-      "question": "What does this mean?",
-      "correct": "I will speak Portuguese",
-      "options": [
-        "I will speak Portuguese",
-        "I speak Portuguese",
-        "I spoke Portuguese",
-        "I would speak Portuguese",
-        "I am speaking Portuguese",
-        "I used to speak Portuguese"
-      ]
-    },
-    {
-      "id": 143,
+      "id": 112,
       "unit": 76,
       "phase": 4,
       "type": "production",
@@ -2881,7 +2354,7 @@
       "correct": "viajarei"
     },
     {
-      "id": 144,
+      "id": 113,
       "unit": 76,
       "phase": 4,
       "type": "production",
@@ -2903,7 +2376,7 @@
       "correct": "estaremos"
     },
     {
-      "id": 145,
+      "id": 114,
       "unit": 76,
       "phase": 4,
       "type": "production",
@@ -2925,7 +2398,7 @@
       "correct": "fará"
     },
     {
-      "id": 146,
+      "id": 115,
       "unit": 77,
       "phase": 4,
       "type": "comprehension",
@@ -2942,7 +2415,7 @@
       ]
     },
     {
-      "id": 147,
+      "id": 116,
       "unit": 77,
       "phase": 4,
       "type": "production",
@@ -2964,7 +2437,7 @@
       "correct": "falaria"
     },
     {
-      "id": 148,
+      "id": 117,
       "unit": 77,
       "phase": 4,
       "type": "production",
@@ -2986,7 +2459,7 @@
       "correct": "faria"
     },
     {
-      "id": 149,
+      "id": 118,
       "unit": 77,
       "phase": 4,
       "type": "production",
@@ -3008,41 +2481,7 @@
       "correct": "iríamos"
     },
     {
-      "id": 150,
-      "unit": 78,
-      "phase": 4,
-      "type": "comprehension",
-      "pt": "Onde é que você mora?",
-      "question": "What does this mean?",
-      "correct": "Where do you live?",
-      "options": [
-        "Where do you live?",
-        "Where is that you live?",
-        "Where do you want to live?",
-        "Where did you live?",
-        "Where will you live?",
-        "Where are you living?"
-      ]
-    },
-    {
-      "id": 151,
-      "unit": 78,
-      "phase": 4,
-      "type": "comprehension",
-      "pt": "O que é que você faz?",
-      "question": "What does this mean?",
-      "correct": "What do you do?",
-      "options": [
-        "What do you do?",
-        "What is that you do?",
-        "What did you do?",
-        "What will you do?",
-        "What are you doing?",
-        "What can you do?"
-      ]
-    },
-    {
-      "id": 152,
+      "id": 119,
       "unit": 79,
       "phase": 4,
       "type": "production",
@@ -3064,7 +2503,7 @@
       "correct": "à"
     },
     {
-      "id": 153,
+      "id": 120,
       "unit": 79,
       "phase": 4,
       "type": "production",
@@ -3086,7 +2525,7 @@
       "correct": "às"
     },
     {
-      "id": 154,
+      "id": 121,
       "unit": 80,
       "phase": 4,
       "type": "comprehension",
@@ -3103,24 +2542,7 @@
       ]
     },
     {
-      "id": 155,
-      "unit": 80,
-      "phase": 4,
-      "type": "comprehension",
-      "pt": "Eu sei tudo",
-      "question": "What does this mean?",
-      "correct": "I know everything",
-      "options": [
-        "I know everything",
-        "I know all",
-        "I know every",
-        "I knew everything",
-        "I will know everything",
-        "I know it all"
-      ]
-    },
-    {
-      "id": 156,
+      "id": 122,
       "unit": 80,
       "phase": 4,
       "type": "production",
@@ -3142,7 +2564,7 @@
       "correct": "Todo"
     },
     {
-      "id": 157,
+      "id": 123,
       "unit": 81,
       "phase": 4,
       "type": "comprehension",
@@ -3159,7 +2581,7 @@
       ]
     },
     {
-      "id": 158,
+      "id": 124,
       "unit": 81,
       "phase": 4,
       "type": "comprehension",
@@ -3176,7 +2598,7 @@
       ]
     },
     {
-      "id": 159,
+      "id": 125,
       "unit": 82,
       "phase": 4,
       "type": "comprehension",
@@ -3193,7 +2615,7 @@
       ]
     },
     {
-      "id": 160,
+      "id": 126,
       "unit": 82,
       "phase": 4,
       "type": "production",
@@ -3215,7 +2637,7 @@
       "correct": "coma"
     },
     {
-      "id": 161,
+      "id": 127,
       "unit": 82,
       "phase": 4,
       "type": "production",
@@ -3237,7 +2659,7 @@
       "correct": "parta"
     },
     {
-      "id": 162,
+      "id": 128,
       "unit": 82,
       "phase": 4,
       "type": "production",
@@ -3259,7 +2681,7 @@
       "correct": "viajemos"
     },
     {
-      "id": 163,
+      "id": 129,
       "unit": 83,
       "phase": 4,
       "type": "comprehension",
@@ -3276,7 +2698,7 @@
       ]
     },
     {
-      "id": 164,
+      "id": 130,
       "unit": 83,
       "phase": 4,
       "type": "production",
@@ -3298,7 +2720,7 @@
       "correct": "seja"
     },
     {
-      "id": 165,
+      "id": 131,
       "unit": 83,
       "phase": 4,
       "type": "production",
@@ -3320,7 +2742,7 @@
       "correct": "esteja"
     },
     {
-      "id": 166,
+      "id": 132,
       "unit": 83,
       "phase": 4,
       "type": "production",
@@ -3342,7 +2764,7 @@
       "correct": "vá"
     },
     {
-      "id": 167,
+      "id": 133,
       "unit": 83,
       "phase": 4,
       "type": "production",
@@ -3364,7 +2786,7 @@
       "correct": "tenha"
     },
     {
-      "id": 168,
+      "id": 134,
       "unit": 84,
       "phase": 4,
       "type": "comprehension",
@@ -3381,7 +2803,7 @@
       ]
     },
     {
-      "id": 169,
+      "id": 135,
       "unit": 84,
       "phase": 4,
       "type": "comprehension",
@@ -3398,7 +2820,7 @@
       ]
     },
     {
-      "id": 170,
+      "id": 136,
       "unit": 84,
       "phase": 4,
       "type": "production",
@@ -3420,7 +2842,7 @@
       "correct": "tivesse"
     },
     {
-      "id": 171,
+      "id": 137,
       "unit": 84,
       "phase": 4,
       "type": "production",
@@ -3442,7 +2864,7 @@
       "correct": "estivesse"
     },
     {
-      "id": 172,
+      "id": 138,
       "unit": 84,
       "phase": 4,
       "type": "production",
@@ -3464,7 +2886,7 @@
       "correct": "tivéssemos"
     },
     {
-      "id": 173,
+      "id": 139,
       "unit": 85,
       "phase": 4,
       "type": "comprehension",
@@ -3481,7 +2903,7 @@
       ]
     },
     {
-      "id": 174,
+      "id": 140,
       "unit": 85,
       "phase": 4,
       "type": "production",
@@ -3503,7 +2925,7 @@
       "correct": "chegar"
     },
     {
-      "id": 175,
+      "id": 141,
       "unit": 85,
       "phase": 4,
       "type": "production",
@@ -3525,7 +2947,7 @@
       "correct": "tiver"
     },
     {
-      "id": 176,
+      "id": 142,
       "unit": 85,
       "phase": 4,
       "type": "production",
@@ -3547,41 +2969,7 @@
       "correct": "pudermos"
     },
     {
-      "id": 177,
-      "unit": 86,
-      "phase": 4,
-      "type": "comprehension",
-      "pt": "Cê tá indo pra casa?",
-      "question": "What is the formal version?",
-      "correct": "Você está indo para casa?",
-      "options": [
-        "Você está indo para casa?",
-        "Você vai para casa?",
-        "Você foi para casa?",
-        "Você quer ir para casa?",
-        "Você está em casa?",
-        "Você vem de casa?"
-      ]
-    },
-    {
-      "id": 178,
-      "unit": 86,
-      "phase": 4,
-      "type": "comprehension",
-      "pt": "Tô indo lá",
-      "question": "What does this mean?",
-      "correct": "I'm going there",
-      "options": [
-        "I'm going there",
-        "I went there",
-        "I will go there",
-        "I want to go there",
-        "I am there",
-        "I came from there"
-      ]
-    },
-    {
-      "id": 179,
+      "id": 143,
       "unit": 86,
       "phase": 4,
       "type": "production",
@@ -3603,126 +2991,7 @@
       "correct": "tá"
     },
     {
-      "id": 180,
-      "unit": 87,
-      "phase": 4,
-      "type": "comprehension",
-      "pt": "Esta semana",
-      "question": "What does this mean?",
-      "correct": "This week (current)",
-      "options": [
-        "This week (current)",
-        "That week",
-        "Last week",
-        "Next week",
-        "Every week",
-        "The week"
-      ]
-    },
-    {
-      "id": 181,
-      "unit": 87,
-      "phase": 4,
-      "type": "comprehension",
-      "pt": "Aquele ano",
-      "question": "What does this mean?",
-      "correct": "That year (distant past)",
-      "options": [
-        "That year (distant past)",
-        "This year",
-        "Last year",
-        "Next year",
-        "Every year",
-        "The year"
-      ]
-    },
-    {
-      "id": 182,
-      "unit": 88,
-      "phase": 4,
-      "type": "comprehension",
-      "pt": "Então, você vai?",
-      "question": "What does 'então' indicate here?",
-      "correct": "So/Well (discourse marker)",
-      "options": [
-        "So/Well (discourse marker)",
-        "Then (time)",
-        "Therefore (conclusion)",
-        "So that (purpose)",
-        "If so",
-        "When"
-      ]
-    },
-    {
-      "id": 183,
-      "unit": 88,
-      "phase": 4,
-      "type": "comprehension",
-      "pt": "Né? Você entende?",
-      "question": "What does 'né?' mean?",
-      "correct": "Right? (tag question)",
-      "options": [
-        "Right? (tag question)",
-        "No? (negative)",
-        "Yes? (positive)",
-        "Not? (negative)",
-        "Never? (frequency)",
-        "Not it?"
-      ]
-    },
-    {
-      "id": 184,
-      "unit": 89,
-      "phase": 4,
-      "type": "comprehension",
-      "pt": "Por enquanto",
-      "question": "What does this mean?",
-      "correct": "For now",
-      "options": [
-        "For now",
-        "Forever",
-        "By chance",
-        "For while",
-        "By now",
-        "For then"
-      ]
-    },
-    {
-      "id": 185,
-      "unit": 89,
-      "phase": 4,
-      "type": "comprehension",
-      "pt": "Para sempre",
-      "question": "What does this mean?",
-      "correct": "Forever",
-      "options": [
-        "Forever",
-        "For now",
-        "For always",
-        "By always",
-        "To always",
-        "For ever after"
-      ]
-    },
-    {
-      "id": 186,
-      "unit": 89,
-      "phase": 4,
-      "type": "comprehension",
-      "pt": "Por acaso",
-      "question": "What does this mean?",
-      "correct": "By chance",
-      "options": [
-        "By chance",
-        "For case",
-        "By case",
-        "For chance",
-        "By accident",
-        "For accident"
-      ]
-    },
-    {
-      "id": 187,
+      "id": 144,
       "unit": 89,
       "phase": 4,
       "type": "production",
