@@ -2952,8 +2952,8 @@
     },
     {
       "id": 143,
-      "unit": 50,
-      "phase": 3,
+      "unit": 44,
+      "phase": 2,
       "type": "comprehension",
       "pt": "Eu o vejo",
       "question": "What does this mean?",
@@ -2969,8 +2969,8 @@
     },
     {
       "id": 144,
-      "unit": 50,
-      "phase": 3,
+      "unit": 44,
+      "phase": 2,
       "type": "production",
       "en": "I see him",
       "question": "Complete the sentence:",
@@ -2991,8 +2991,8 @@
     },
     {
       "id": 145,
-      "unit": 50,
-      "phase": 3,
+      "unit": 44,
+      "phase": 2,
       "type": "production",
       "en": "I know her",
       "question": "Complete the sentence:",
@@ -3013,8 +3013,8 @@
     },
     {
       "id": 146,
-      "unit": 50,
-      "phase": 3,
+      "unit": 44,
+      "phase": 2,
       "type": "production",
       "en": "I bought them (masculine)",
       "question": "Complete the sentence:",
@@ -3035,8 +3035,8 @@
     },
     {
       "id": 147,
-      "unit": 50,
-      "phase": 3,
+      "unit": 44,
+      "phase": 2,
       "type": "production",
       "en": "I saw them (feminine)",
       "question": "Complete the sentence:",
@@ -3057,7 +3057,7 @@
     },
     {
       "id": 148,
-      "unit": 51,
+      "unit": 53,
       "phase": 3,
       "type": "comprehension",
       "pt": "Vou vê-lo amanhã",
@@ -3074,7 +3074,7 @@
     },
     {
       "id": 149,
-      "unit": 51,
+      "unit": 53,
       "phase": 3,
       "type": "production",
       "en": "I am going to see him",
@@ -3096,7 +3096,7 @@
     },
     {
       "id": 150,
-      "unit": 51,
+      "unit": 53,
       "phase": 3,
       "type": "production",
       "en": "I want to buy it (feminine)",
@@ -3118,7 +3118,7 @@
     },
     {
       "id": 151,
-      "unit": 52,
+      "unit": 50,
       "phase": 3,
       "type": "comprehension",
       "pt": "Eu lhe disse a verdade",
@@ -3135,7 +3135,7 @@
     },
     {
       "id": 152,
-      "unit": 52,
+      "unit": 50,
       "phase": 3,
       "type": "production",
       "en": "I told him/her",
@@ -3157,8 +3157,8 @@
     },
     {
       "id": 153,
-      "unit": 52,
-      "phase": 3,
+      "unit": 44,
+      "phase": 2,
       "type": "production",
       "en": "He gave me the book",
       "question": "Complete the sentence:",
@@ -3179,7 +3179,7 @@
     },
     {
       "id": 154,
-      "unit": 52,
+      "unit": 50,
       "phase": 3,
       "type": "production",
       "en": "We sent them a letter",
@@ -3201,7 +3201,7 @@
     },
     {
       "id": 155,
-      "unit": 53,
+      "unit": 51,
       "phase": 3,
       "type": "comprehension",
       "pt": "Eu não o vejo",
@@ -3218,7 +3218,7 @@
     },
     {
       "id": 156,
-      "unit": 53,
+      "unit": 51,
       "phase": 3,
       "type": "production",
       "en": "I do not see him",
@@ -3240,7 +3240,7 @@
     },
     {
       "id": 157,
-      "unit": 53,
+      "unit": 50,
       "phase": 3,
       "type": "production",
       "en": "I never tell her",
@@ -3262,8 +3262,8 @@
     },
     {
       "id": 158,
-      "unit": 54,
-      "phase": 3,
+      "unit": 43,
+      "phase": 2,
       "type": "comprehension",
       "pt": "Eu me levanto cedo",
       "question": "What does this mean?",
@@ -3279,8 +3279,8 @@
     },
     {
       "id": 159,
-      "unit": 54,
-      "phase": 3,
+      "unit": 43,
+      "phase": 2,
       "type": "production",
       "en": "I get up",
       "question": "Complete the sentence:",
@@ -3301,8 +3301,8 @@
     },
     {
       "id": 160,
-      "unit": 54,
-      "phase": 3,
+      "unit": 43,
+      "phase": 2,
       "type": "production",
       "en": "He gets dressed",
       "question": "Complete the sentence:",
@@ -3323,8 +3323,8 @@
     },
     {
       "id": 161,
-      "unit": 54,
-      "phase": 3,
+      "unit": 43,
+      "phase": 2,
       "type": "production",
       "en": "We sit down",
       "question": "Complete the sentence:",
@@ -3345,8 +3345,8 @@
     },
     {
       "id": 162,
-      "unit": 54,
-      "phase": 3,
+      "unit": 43,
+      "phase": 2,
       "type": "production",
       "en": "They are called",
       "question": "Complete the sentence:",
@@ -3367,7 +3367,7 @@
     },
     {
       "id": 163,
-      "unit": 55,
+      "unit": 52,
       "phase": 3,
       "type": "production",
       "en": "I always see him",
@@ -3389,7 +3389,7 @@
     },
     {
       "id": 164,
-      "unit": 55,
+      "unit": 52,
       "phase": 3,
       "type": "production",
       "en": "He already told me",
@@ -3411,7 +3411,7 @@
     },
     {
       "id": 165,
-      "unit": 55,
+      "unit": 71,
       "phase": 3,
       "type": "production",
       "en": "Tell me! (você)",
@@ -3433,7 +3433,7 @@
     },
     {
       "id": 166,
-      "unit": 55,
+      "unit": 71,
       "phase": 3,
       "type": "production",
       "en": "Give it to me! (você - masculine object)",
