@@ -3,10 +3,10 @@
     "version": "1.0.0",
     "title": "Portuguese Grammar Placement Test",
     "description": "Comprehensive diagnostic test focusing on Portuguese grammar structures, verb conjugations, and syntax",
-    "totalQuestions": 141,
+    "totalQuestions": 165,
     "questionTypes": {
-      "comprehension": 23,
-      "production": 118
+      "comprehension": 28,
+      "production": 137
     },
     "testType": "grammar"
   },
@@ -2949,6 +2949,509 @@
         "Com"
       ],
       "correct": "Para"
+    },
+    {
+      "id": 143,
+      "unit": 50,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu o vejo",
+      "question": "What does this mean?",
+      "correct": "I see him",
+      "options": [
+        "I see him",
+        "I see it",
+        "He sees me",
+        "I saw him",
+        "I will see him",
+        "I am seeing him"
+      ]
+    },
+    {
+      "id": 144,
+      "unit": 50,
+      "phase": 3,
+      "type": "production",
+      "en": "I see him",
+      "question": "Complete the sentence:",
+      "template": "Eu __ vejo",
+      "chips": [
+        "o",
+        "a",
+        "os",
+        "as",
+        "lhe",
+        "me",
+        "te",
+        "se",
+        "nos",
+        "lo"
+      ],
+      "correct": "o"
+    },
+    {
+      "id": 145,
+      "unit": 50,
+      "phase": 3,
+      "type": "production",
+      "en": "I know her",
+      "question": "Complete the sentence:",
+      "template": "Eu __ conheço",
+      "chips": [
+        "a",
+        "o",
+        "as",
+        "os",
+        "lhe",
+        "me",
+        "te",
+        "se",
+        "la",
+        "lo"
+      ],
+      "correct": "a"
+    },
+    {
+      "id": 146,
+      "unit": 50,
+      "phase": 3,
+      "type": "production",
+      "en": "I bought them (masculine)",
+      "question": "Complete the sentence:",
+      "template": "Eu __ comprei",
+      "chips": [
+        "os",
+        "as",
+        "o",
+        "a",
+        "lhes",
+        "me",
+        "nos",
+        "los",
+        "te",
+        "se"
+      ],
+      "correct": "os"
+    },
+    {
+      "id": 147,
+      "unit": 50,
+      "phase": 3,
+      "type": "production",
+      "en": "I saw them (feminine)",
+      "question": "Complete the sentence:",
+      "template": "Eu __ vi",
+      "chips": [
+        "as",
+        "os",
+        "a",
+        "o",
+        "lhes",
+        "me",
+        "nos",
+        "las",
+        "te",
+        "se"
+      ],
+      "correct": "as"
+    },
+    {
+      "id": 148,
+      "unit": 51,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Vou vê-lo amanhã",
+      "question": "What does this mean?",
+      "correct": "I am going to see him tomorrow",
+      "options": [
+        "I am going to see him tomorrow",
+        "I am going to see it tomorrow",
+        "I go to see him tomorrow",
+        "I saw him tomorrow",
+        "He is going to see me tomorrow",
+        "I will see him tomorrow"
+      ]
+    },
+    {
+      "id": 149,
+      "unit": 51,
+      "phase": 3,
+      "type": "production",
+      "en": "I am going to see him",
+      "question": "Complete the sentence:",
+      "template": "Vou __",
+      "chips": [
+        "vê-lo",
+        "vê-la",
+        "ver-o",
+        "ver-a",
+        "o ver",
+        "a ver",
+        "vê-los",
+        "vê-las",
+        "vejo-o",
+        "vejo-a"
+      ],
+      "correct": "vê-lo"
+    },
+    {
+      "id": 150,
+      "unit": 51,
+      "phase": 3,
+      "type": "production",
+      "en": "I want to buy it (feminine)",
+      "question": "Complete the sentence:",
+      "template": "Quero __",
+      "chips": [
+        "comprá-la",
+        "comprá-lo",
+        "comprar-a",
+        "comprar-o",
+        "a comprar",
+        "o comprar",
+        "compro-a",
+        "compro-o",
+        "comprá-las",
+        "comprá-los"
+      ],
+      "correct": "comprá-la"
+    },
+    {
+      "id": 151,
+      "unit": 52,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu lhe disse a verdade",
+      "question": "What does this mean?",
+      "correct": "I told him/her the truth",
+      "options": [
+        "I told him/her the truth",
+        "I told them the truth",
+        "He told me the truth",
+        "I said the truth",
+        "I will tell him the truth",
+        "I tell the truth"
+      ]
+    },
+    {
+      "id": 152,
+      "unit": 52,
+      "phase": 3,
+      "type": "production",
+      "en": "I told him/her",
+      "question": "Complete the sentence:",
+      "template": "Eu __ disse",
+      "chips": [
+        "lhe",
+        "o",
+        "a",
+        "me",
+        "te",
+        "nos",
+        "lhes",
+        "se",
+        "os",
+        "as"
+      ],
+      "correct": "lhe"
+    },
+    {
+      "id": 153,
+      "unit": 52,
+      "phase": 3,
+      "type": "production",
+      "en": "He gave me the book",
+      "question": "Complete the sentence:",
+      "template": "Ele __ deu o livro",
+      "chips": [
+        "me",
+        "lhe",
+        "te",
+        "nos",
+        "se",
+        "o",
+        "a",
+        "os",
+        "as",
+        "lhes"
+      ],
+      "correct": "me"
+    },
+    {
+      "id": 154,
+      "unit": 52,
+      "phase": 3,
+      "type": "production",
+      "en": "We sent them a letter",
+      "question": "Complete the sentence:",
+      "template": "Nós __ enviamos uma carta",
+      "chips": [
+        "lhes",
+        "lhe",
+        "os",
+        "as",
+        "me",
+        "te",
+        "nos",
+        "se",
+        "o",
+        "a"
+      ],
+      "correct": "lhes"
+    },
+    {
+      "id": 155,
+      "unit": 53,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu não o vejo",
+      "question": "What does this mean?",
+      "correct": "I do not see him",
+      "options": [
+        "I do not see him",
+        "I do not see it",
+        "I see him",
+        "He does not see me",
+        "I did not see him",
+        "I never see him"
+      ]
+    },
+    {
+      "id": 156,
+      "unit": 53,
+      "phase": 3,
+      "type": "production",
+      "en": "I do not see him",
+      "question": "Complete the sentence:",
+      "template": "Eu não __ vejo",
+      "chips": [
+        "o",
+        "vejo-o",
+        "a",
+        "lhe",
+        "me",
+        "os",
+        "as",
+        "te",
+        "se",
+        "nos"
+      ],
+      "correct": "o"
+    },
+    {
+      "id": 157,
+      "unit": 53,
+      "phase": 3,
+      "type": "production",
+      "en": "I never tell her",
+      "question": "Complete the sentence:",
+      "template": "Eu nunca __ digo",
+      "chips": [
+        "lhe",
+        "digo-lhe",
+        "o",
+        "a",
+        "me",
+        "te",
+        "nos",
+        "se",
+        "os",
+        "as"
+      ],
+      "correct": "lhe"
+    },
+    {
+      "id": 158,
+      "unit": 54,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu me levanto cedo",
+      "question": "What does this mean?",
+      "correct": "I get up early",
+      "options": [
+        "I get up early",
+        "I wake up early",
+        "I stand up early",
+        "He gets me up early",
+        "I got up early",
+        "I will get up early"
+      ]
+    },
+    {
+      "id": 159,
+      "unit": 54,
+      "phase": 3,
+      "type": "production",
+      "en": "I get up",
+      "question": "Complete the sentence:",
+      "template": "Eu __ levanto",
+      "chips": [
+        "me",
+        "te",
+        "se",
+        "nos",
+        "o",
+        "a",
+        "lhe",
+        "os",
+        "as",
+        "lhes"
+      ],
+      "correct": "me"
+    },
+    {
+      "id": 160,
+      "unit": 54,
+      "phase": 3,
+      "type": "production",
+      "en": "He gets dressed",
+      "question": "Complete the sentence:",
+      "template": "Ele __ veste",
+      "chips": [
+        "se",
+        "me",
+        "te",
+        "nos",
+        "o",
+        "a",
+        "lhe",
+        "os",
+        "as",
+        "lhes"
+      ],
+      "correct": "se"
+    },
+    {
+      "id": 161,
+      "unit": 54,
+      "phase": 3,
+      "type": "production",
+      "en": "We sit down",
+      "question": "Complete the sentence:",
+      "template": "Nós __ sentamos",
+      "chips": [
+        "nos",
+        "me",
+        "te",
+        "se",
+        "o",
+        "a",
+        "lhe",
+        "os",
+        "as",
+        "lhes"
+      ],
+      "correct": "nos"
+    },
+    {
+      "id": 162,
+      "unit": 54,
+      "phase": 3,
+      "type": "production",
+      "en": "They are called",
+      "question": "Complete the sentence:",
+      "template": "Eles __ chamam",
+      "chips": [
+        "se",
+        "me",
+        "te",
+        "nos",
+        "o",
+        "a",
+        "lhe",
+        "os",
+        "as",
+        "lhes"
+      ],
+      "correct": "se"
+    },
+    {
+      "id": 163,
+      "unit": 55,
+      "phase": 3,
+      "type": "production",
+      "en": "I always see him",
+      "question": "Complete the sentence:",
+      "template": "Eu sempre __ vejo",
+      "chips": [
+        "o",
+        "vejo-o",
+        "a",
+        "lhe",
+        "me",
+        "os",
+        "as",
+        "te",
+        "se",
+        "nos"
+      ],
+      "correct": "o"
+    },
+    {
+      "id": 164,
+      "unit": 55,
+      "phase": 3,
+      "type": "production",
+      "en": "He already told me",
+      "question": "Complete the sentence:",
+      "template": "Ele já __ disse",
+      "chips": [
+        "me",
+        "disse-me",
+        "lhe",
+        "te",
+        "nos",
+        "se",
+        "o",
+        "a",
+        "os",
+        "as"
+      ],
+      "correct": "me"
+    },
+    {
+      "id": 165,
+      "unit": 55,
+      "phase": 3,
+      "type": "production",
+      "en": "Tell me! (você)",
+      "question": "Complete the sentence:",
+      "template": "__-me!",
+      "chips": [
+        "Diga",
+        "Me diga",
+        "Diz",
+        "Disse",
+        "Digo",
+        "Direi",
+        "Diria",
+        "Fale",
+        "Fala",
+        "Conte"
+      ],
+      "correct": "Diga"
+    },
+    {
+      "id": 166,
+      "unit": 55,
+      "phase": 3,
+      "type": "production",
+      "en": "Give it to me! (você - masculine object)",
+      "question": "Complete the sentence:",
+      "template": "Dê-__!",
+      "chips": [
+        "mo",
+        "me-o",
+        "me o",
+        "o-me",
+        "lo",
+        "me",
+        "lhe",
+        "o",
+        "a",
+        "te"
+      ],
+      "correct": "mo"
     }
   ]
 }
