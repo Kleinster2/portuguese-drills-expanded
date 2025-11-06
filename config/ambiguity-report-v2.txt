@@ -1,0 +1,275 @@
+AMBIGUOUS QUESTION REPORT - v7.0 (REFINED ANALYSIS)
+================================================================================
+
+Total questions analyzed: 308
+Critical ambiguity issues: 19
+Minor ambiguity issues: 4
+
+================================================================================
+
+SUMMARY BY ISSUE TYPE
+================================================================================
+
+Present tense ambiguity (PT simple = EN simple OR continuous): 0
+Gender ambiguity (speaker gender unknown): 1
+Preposition variations: 3
+Formality variations (você/tu): 0
+Other: 18
+
+================================================================================
+
+CRITICAL ISSUES (Multiple clearly valid answers)
+================================================================================
+
+Q2 (Unit 1) [PROD]
+  English: I am Brazilian
+  Template: Eu __ brasileiro
+  Current correct: sou
+  Also valid: Template should be "__ brasileir__" with both chips
+  Issue: Gender assumed in template without context
+
+Q23 (Unit 7) [COMP]
+  Portuguese: Eu moro em São Paulo
+  Current correct: I live in São Paulo
+  Also valid: I am living
+  Issue: Present simple vs continuous - no temporal context
+
+Q25 (Unit 8) [COMP]
+  Portuguese: Eu falo português
+  Current correct: I speak Portuguese
+  Also valid: I am speaking
+  Issue: Present simple vs continuous - no temporal context
+
+Q27 (Unit 9) [COMP]
+  Portuguese: Eu trabalho no banco
+  Current correct: I work at the bank
+  Also valid: I am working
+  Issue: Present simple vs continuous - no temporal context
+
+Q30 (Unit 10) [COMP]
+  Portuguese: Eu estudo português
+  Current correct: I study Portuguese
+  Also valid: I am studying
+  Issue: Present simple vs continuous - no temporal context
+
+Q58 (Unit 20) [COMP]
+  Portuguese: Eu como arroz e feijão
+  Current correct: I eat rice and beans
+  Also valid: I am eating
+  Issue: Present simple vs continuous - no temporal context
+
+Q62 (Unit 21) [COMP]
+  Portuguese: Eu bebo água
+  Current correct: I drink water
+  Also valid: I am drinking
+  Issue: Present simple vs continuous - no temporal context
+
+Q65 (Unit 21) [COMP]
+  Portuguese: Eu bebo suco
+  Current correct: I drink juice
+  Also valid: I am drinking
+  Issue: Present simple vs continuous - no temporal context
+
+Q66 (Unit 22) [COMP]
+  Portuguese: Eu como pão
+  Current correct: I eat bread
+  Also valid: I am eating
+  Issue: Present simple vs continuous - no temporal context
+
+Q78 (Unit 26) [COMP]
+  Portuguese: Eu abro a porta
+  Current correct: I open the door
+  Also valid: I am opening
+  Issue: Present simple vs continuous - no temporal context
+
+Q139 (Unit 42) [COMP]
+  Portuguese: Eu faço isso para você
+  Current correct: I do this for you
+  Also valid: I am doing
+  Issue: Present simple vs continuous - no temporal context
+
+Q165 (Unit 50) [COMP]
+  Portuguese: Eu trabalho na segunda-feira
+  Current correct: I work on Monday
+  Also valid: I am working
+  Issue: Present simple vs continuous - no temporal context
+
+Q185 (Unit 56) [COMP]
+  Portuguese: Eu compro calças
+  Current correct: I buy pants
+  Also valid: I am buying
+  Issue: Present simple vs continuous - no temporal context
+
+Q221 (Unit 64) [COMP]
+  Portuguese: Eu como peixe
+  Current correct: I eat fish
+  Also valid: I am eating
+  Issue: Present simple vs continuous - no temporal context
+
+Q223 (Unit 64) [COMP]
+  Portuguese: Eu bebo leite
+  Current correct: I drink milk
+  Also valid: I am drinking
+  Issue: Present simple vs continuous - no temporal context
+
+Q229 (Unit 66) [COMP]
+  Portuguese: Eu leio livros
+  Current correct: I read books
+  Also valid: I am reading
+  Issue: Present simple vs continuous - no temporal context
+
+Q236 (Unit 68) [COMP]
+  Portuguese: Eu compro pão
+  Current correct: I buy bread
+  Also valid: I am buying
+  Issue: Present simple vs continuous - no temporal context
+
+Q259 (Unit 75) [COMP]
+  Portuguese: Eu estudo matemática
+  Current correct: I study math
+  Also valid: I am studying
+  Issue: Present simple vs continuous - no temporal context
+
+Q275 (Unit 80) [COMP]
+  Portuguese: Todo dia eu estudo
+  Current correct: Every day I study
+  Also valid: I am studying
+  Issue: Present simple vs continuous - no temporal context
+
+
+================================================================================
+
+MINOR ISSUES (Arguable edge cases)
+================================================================================
+
+Q16 (Unit 5) [COMP]
+  Portuguese: Eu estou no trabalho
+  Current correct: I am at work
+  Also valid: I am in work
+  Issue: Preposition: "at work" vs "in work" (at work is standard)
+
+Q39 (Unit 13) [COMP]
+  Portuguese: Eu estou em casa
+  Current correct: I am at home
+  Also valid: I am home
+  Issue: "at home" vs "home" (both acceptable in modern English)
+
+Q40 (Unit 13) [COMP]
+  Portuguese: Eu estou no trabalho
+  Current correct: I am at work
+  Also valid: I am in work
+  Issue: Preposition: "at work" vs "in work" (at work is standard)
+
+Q41 (Unit 13) [COMP]
+  Portuguese: Eu estou na escola
+  Current correct: I am at school
+  Also valid: I am in school
+  Issue: Preposition: "at school" vs "in school" (both acceptable)
+
+
+================================================================================
+
+TOP 10 MOST PROBLEMATIC QUESTIONS WITH SUGGESTED FIXES
+================================================================================
+
+Q2 [PROD] - CRITICAL
+  EN: "I am Brazilian"
+  Template: "Eu __ brasileiro"
+  Current correct: "sou"
+  Also valid: Template should be "__ brasileir__" with both chips
+  Problem: Gender assumed in template without context
+  FIX: Either:
+       1. Add context (name, photo) indicating speaker gender
+       2. Make template gender-neutral: 'Eu __ brasileir__' with both chips
+       3. Accept both masculine and feminine as correct
+
+Q23 [COMP] - CRITICAL
+  PT: "Eu moro em São Paulo"
+  Current correct: "I live in São Paulo"
+  Also valid: "I am living"
+  Problem: Present simple vs continuous - no temporal context
+  FIX: Add temporal adverb to Portuguese:
+       - For habitual: 'sempre', 'todos os dias', 'geralmente'
+       - For continuous: 'agora', 'neste momento', 'atualmente'
+       Example: "Eu moro em São Paulo" → "Eu sempre falo português"
+
+Q25 [COMP] - CRITICAL
+  PT: "Eu falo português"
+  Current correct: "I speak Portuguese"
+  Also valid: "I am speaking"
+  Problem: Present simple vs continuous - no temporal context
+  FIX: Add temporal adverb to Portuguese:
+       - For habitual: 'sempre', 'todos os dias', 'geralmente'
+       - For continuous: 'agora', 'neste momento', 'atualmente'
+       Example: "Eu falo português" → "Eu sempre falo português"
+
+Q27 [COMP] - CRITICAL
+  PT: "Eu trabalho no banco"
+  Current correct: "I work at the bank"
+  Also valid: "I am working"
+  Problem: Present simple vs continuous - no temporal context
+  FIX: Add temporal adverb to Portuguese:
+       - For habitual: 'sempre', 'todos os dias', 'geralmente'
+       - For continuous: 'agora', 'neste momento', 'atualmente'
+       Example: "Eu trabalho no banco" → "Eu sempre falo português"
+
+Q30 [COMP] - CRITICAL
+  PT: "Eu estudo português"
+  Current correct: "I study Portuguese"
+  Also valid: "I am studying"
+  Problem: Present simple vs continuous - no temporal context
+  FIX: Add temporal adverb to Portuguese:
+       - For habitual: 'sempre', 'todos os dias', 'geralmente'
+       - For continuous: 'agora', 'neste momento', 'atualmente'
+       Example: "Eu estudo português" → "Eu sempre falo português"
+
+Q58 [COMP] - CRITICAL
+  PT: "Eu como arroz e feijão"
+  Current correct: "I eat rice and beans"
+  Also valid: "I am eating"
+  Problem: Present simple vs continuous - no temporal context
+  FIX: Add temporal adverb to Portuguese:
+       - For habitual: 'sempre', 'todos os dias', 'geralmente'
+       - For continuous: 'agora', 'neste momento', 'atualmente'
+       Example: "Eu como arroz e feijão" → "Eu sempre falo português"
+
+Q62 [COMP] - CRITICAL
+  PT: "Eu bebo água"
+  Current correct: "I drink water"
+  Also valid: "I am drinking"
+  Problem: Present simple vs continuous - no temporal context
+  FIX: Add temporal adverb to Portuguese:
+       - For habitual: 'sempre', 'todos os dias', 'geralmente'
+       - For continuous: 'agora', 'neste momento', 'atualmente'
+       Example: "Eu bebo água" → "Eu sempre falo português"
+
+Q65 [COMP] - CRITICAL
+  PT: "Eu bebo suco"
+  Current correct: "I drink juice"
+  Also valid: "I am drinking"
+  Problem: Present simple vs continuous - no temporal context
+  FIX: Add temporal adverb to Portuguese:
+       - For habitual: 'sempre', 'todos os dias', 'geralmente'
+       - For continuous: 'agora', 'neste momento', 'atualmente'
+       Example: "Eu bebo suco" → "Eu sempre falo português"
+
+Q66 [COMP] - CRITICAL
+  PT: "Eu como pão"
+  Current correct: "I eat bread"
+  Also valid: "I am eating"
+  Problem: Present simple vs continuous - no temporal context
+  FIX: Add temporal adverb to Portuguese:
+       - For habitual: 'sempre', 'todos os dias', 'geralmente'
+       - For continuous: 'agora', 'neste momento', 'atualmente'
+       Example: "Eu como pão" → "Eu sempre falo português"
+
+Q78 [COMP] - CRITICAL
+  PT: "Eu abro a porta"
+  Current correct: "I open the door"
+  Also valid: "I am opening"
+  Problem: Present simple vs continuous - no temporal context
+  FIX: Add temporal adverb to Portuguese:
+       - For habitual: 'sempre', 'todos os dias', 'geralmente'
+       - For continuous: 'agora', 'neste momento', 'atualmente'
+       Example: "Eu abro a porta" → "Eu sempre falo português"
+

@@ -1,0 +1,294 @@
+================================================================================
+AMBIGUOUS QUESTION REPORT - v7.0 PLACEMENT TEST
+Final Comprehensive Analysis
+================================================================================
+
+Total questions analyzed: 308
+CRITICAL ambiguity issues: 19
+MINOR ambiguity issues: 4
+
+BREAKDOWN BY ISSUE TYPE:
+  Critical - Tense ambiguity: 18
+  Critical - Gender ambiguity: 1
+  Minor - Preposition variation: 4
+  Minor - Formality variation: 0
+  Other: 0
+
+================================================================================
+
+CRITICAL ISSUES (Multiple clearly valid answers)
+================================================================================
+
+1. Q2 (Unit 1: Identity Statements (Eu sou)) [PROD]
+   English: "I am Brazilian"
+   Template: "Eu __ brasileiro"
+   Current correct: "sou"
+   Also valid: Template should allow both brasileiro/brasileira
+   Issue: Gender assumption
+   Detail: Speaker gender unknown - template assumes masculine
+
+2. Q23 (Unit 7: Basic Verbs - Morar (to live)) [COMP]
+   Portuguese: "Eu moro em São Paulo"
+   Current correct: "I live in São Paulo"
+   Also valid: "I am living"
+   Issue: Tense ambiguity
+   Detail: Portuguese present can be English simple OR continuous
+
+3. Q25 (Unit 8: Basic Verbs - Falar (to speak)) [COMP]
+   Portuguese: "Eu falo português"
+   Current correct: "I speak Portuguese"
+   Also valid: "I am speaking"
+   Issue: Tense ambiguity
+   Detail: Portuguese present can be English simple OR continuous
+
+4. Q27 (Unit 9: Basic Verbs - Trabalhar (to work)) [COMP]
+   Portuguese: "Eu trabalho no banco"
+   Current correct: "I work at the bank"
+   Also valid: "I am working"
+   Issue: Tense ambiguity
+   Detail: Portuguese present can be English simple OR continuous
+
+5. Q30 (Unit 10: Basic Verbs - Estudar (to study)) [COMP]
+   Portuguese: "Eu estudo português"
+   Current correct: "I study Portuguese"
+   Also valid: "I am studying"
+   Issue: Tense ambiguity
+   Detail: Portuguese present can be English simple OR continuous
+
+6. Q58 (Unit 20: Basic Food Vocabulary) [COMP]
+   Portuguese: "Eu como arroz e feijão"
+   Current correct: "I eat rice and beans"
+   Also valid: "I am eating"
+   Issue: Tense ambiguity
+   Detail: Portuguese present can be English simple OR continuous
+
+7. Q62 (Unit 21: Drinks and Beverages) [COMP]
+   Portuguese: "Eu bebo água"
+   Current correct: "I drink water"
+   Also valid: "I am drinking"
+   Issue: Tense ambiguity
+   Detail: Portuguese present can be English simple OR continuous
+
+8. Q65 (Unit 21: Drinks and Beverages) [COMP]
+   Portuguese: "Eu bebo suco"
+   Current correct: "I drink juice"
+   Also valid: "I am drinking"
+   Issue: Tense ambiguity
+   Detail: Portuguese present can be English simple OR continuous
+
+9. Q66 (Unit 22: Regular -ER Verbs (Comer, Beber)) [COMP]
+   Portuguese: "Eu como pão"
+   Current correct: "I eat bread"
+   Also valid: "I am eating"
+   Issue: Tense ambiguity
+   Detail: Portuguese present can be English simple OR continuous
+
+10. Q78 (Unit 26: Regular -IR Verbs (Abrir, Partir)) [COMP]
+   Portuguese: "Eu abro a porta"
+   Current correct: "I open the door"
+   Also valid: "I am opening"
+   Issue: Tense ambiguity
+   Detail: Portuguese present can be English simple OR continuous
+
+11. Q139 (Unit 42: Prepositions Por and Para) [COMP]
+   Portuguese: "Eu faço isso para você"
+   Current correct: "I do this for you"
+   Also valid: "I am doing"
+   Issue: Tense ambiguity
+   Detail: Portuguese present can be English simple OR continuous
+
+12. Q165 (Unit 50: Days of the Week) [COMP]
+   Portuguese: "Eu trabalho na segunda-feira"
+   Current correct: "I work on Monday"
+   Also valid: "I am working"
+   Issue: Tense ambiguity
+   Detail: Portuguese present can be English simple OR continuous
+
+13. Q185 (Unit 56: Clothing Basics) [COMP]
+   Portuguese: "Eu compro calças"
+   Current correct: "I buy pants"
+   Also valid: "I am buying"
+   Issue: Tense ambiguity
+   Detail: Portuguese present can be English simple OR continuous
+
+14. Q221 (Unit 64: Food and Meals Expanded) [COMP]
+   Portuguese: "Eu como peixe"
+   Current correct: "I eat fish"
+   Also valid: "I am eating"
+   Issue: Tense ambiguity
+   Detail: Portuguese present can be English simple OR continuous
+
+15. Q223 (Unit 64: Food and Meals Expanded) [COMP]
+   Portuguese: "Eu bebo leite"
+   Current correct: "I drink milk"
+   Also valid: "I am drinking"
+   Issue: Tense ambiguity
+   Detail: Portuguese present can be English simple OR continuous
+
+16. Q229 (Unit 66: Hobbies and Leisure Activities) [COMP]
+   Portuguese: "Eu leio livros"
+   Current correct: "I read books"
+   Also valid: "I am reading"
+   Issue: Tense ambiguity
+   Detail: Portuguese present can be English simple OR continuous
+
+17. Q236 (Unit 68: Shopping and Money) [COMP]
+   Portuguese: "Eu compro pão"
+   Current correct: "I buy bread"
+   Also valid: "I am buying"
+   Issue: Tense ambiguity
+   Detail: Portuguese present can be English simple OR continuous
+
+18. Q259 (Unit 75: School and Education) [COMP]
+   Portuguese: "Eu estudo matemática"
+   Current correct: "I study math"
+   Also valid: "I am studying"
+   Issue: Tense ambiguity
+   Detail: Portuguese present can be English simple OR continuous
+
+19. Q275 (Unit 80: Todo vs Tudo) [COMP]
+   Portuguese: "Todo dia eu estudo"
+   Current correct: "Every day I study"
+   Also valid: "I am studying"
+   Issue: Tense ambiguity
+   Detail: Portuguese present can be English simple OR continuous
+
+================================================================================
+
+MINOR ISSUES (Arguable edge cases)
+================================================================================
+
+1. Q16 (Unit 5: Location with Estar) [COMP]
+   Portuguese: "Eu estou no trabalho"
+   Current correct: "I am at work"
+   Also valid: "in work"
+   Issue: Preposition variation
+   Detail: Both "at work" and "in work" acceptable
+
+2. Q39 (Unit 13: Location Prepositions (em casa, no trabalho)) [COMP]
+   Portuguese: "Eu estou em casa"
+   Current correct: "I am at home"
+   Also valid: "I am home"
+   Issue: Home preposition
+   Detail: "at home" vs "home" - both acceptable in English
+
+3. Q40 (Unit 13: Location Prepositions (em casa, no trabalho)) [COMP]
+   Portuguese: "Eu estou no trabalho"
+   Current correct: "I am at work"
+   Also valid: "in work"
+   Issue: Preposition variation
+   Detail: Both "at work" and "in work" acceptable
+
+4. Q41 (Unit 13: Location Prepositions (em casa, no trabalho)) [COMP]
+   Portuguese: "Eu estou na escola"
+   Current correct: "I am at school"
+   Also valid: "in school"
+   Issue: Preposition variation
+   Detail: Both "at school" and "in school" acceptable
+
+================================================================================
+
+TOP 10 MOST PROBLEMATIC QUESTIONS WITH SUGGESTED FIXES
+================================================================================
+
+1. Q2 [PROD] - CRITICAL
+   EN: "I am Brazilian"
+   Template: "Eu __ brasileiro"
+   Correct: "sou"
+   Also: Template should allow both brasileiro/brasileira
+   Problem: Speaker gender unknown - template assumes masculine
+   FIX: One of the following:
+        1. Add gender context (name, avatar, 'male'/'female' indicator)
+        2. Modify template to have 2 blanks: "Eu __ brasileir__"
+        3. Accept both masculine/feminine as correct answers
+
+2. Q23 [COMP] - CRITICAL
+   PT: "Eu moro em São Paulo"
+   Correct: "I live in São Paulo"
+   Also valid: "I am living"
+   Problem: Portuguese present can be English simple OR continuous
+   FIX: Add temporal context to Portuguese sentence:
+        - For habitual/general: add 'sempre', 'todos os dias', 'geralmente'
+        - For ongoing: add 'agora', 'neste momento', 'atualmente'
+        Example: "Eu moro em São Paulo" → "Eu sempre falo português" (habitual)
+
+3. Q25 [COMP] - CRITICAL
+   PT: "Eu falo português"
+   Correct: "I speak Portuguese"
+   Also valid: "I am speaking"
+   Problem: Portuguese present can be English simple OR continuous
+   FIX: Add temporal context to Portuguese sentence:
+        - For habitual/general: add 'sempre', 'todos os dias', 'geralmente'
+        - For ongoing: add 'agora', 'neste momento', 'atualmente'
+        Example: "Eu falo português" → "Eu sempre falo português" (habitual)
+
+4. Q27 [COMP] - CRITICAL
+   PT: "Eu trabalho no banco"
+   Correct: "I work at the bank"
+   Also valid: "I am working"
+   Problem: Portuguese present can be English simple OR continuous
+   FIX: Add temporal context to Portuguese sentence:
+        - For habitual/general: add 'sempre', 'todos os dias', 'geralmente'
+        - For ongoing: add 'agora', 'neste momento', 'atualmente'
+        Example: "Eu trabalho no banco" → "Eu sempre falo português" (habitual)
+
+5. Q30 [COMP] - CRITICAL
+   PT: "Eu estudo português"
+   Correct: "I study Portuguese"
+   Also valid: "I am studying"
+   Problem: Portuguese present can be English simple OR continuous
+   FIX: Add temporal context to Portuguese sentence:
+        - For habitual/general: add 'sempre', 'todos os dias', 'geralmente'
+        - For ongoing: add 'agora', 'neste momento', 'atualmente'
+        Example: "Eu estudo português" → "Eu sempre falo português" (habitual)
+
+6. Q58 [COMP] - CRITICAL
+   PT: "Eu como arroz e feijão"
+   Correct: "I eat rice and beans"
+   Also valid: "I am eating"
+   Problem: Portuguese present can be English simple OR continuous
+   FIX: Add temporal context to Portuguese sentence:
+        - For habitual/general: add 'sempre', 'todos os dias', 'geralmente'
+        - For ongoing: add 'agora', 'neste momento', 'atualmente'
+        Example: "Eu como arroz e feijão" → "Eu sempre falo português" (habitual)
+
+7. Q62 [COMP] - CRITICAL
+   PT: "Eu bebo água"
+   Correct: "I drink water"
+   Also valid: "I am drinking"
+   Problem: Portuguese present can be English simple OR continuous
+   FIX: Add temporal context to Portuguese sentence:
+        - For habitual/general: add 'sempre', 'todos os dias', 'geralmente'
+        - For ongoing: add 'agora', 'neste momento', 'atualmente'
+        Example: "Eu bebo água" → "Eu sempre falo português" (habitual)
+
+8. Q65 [COMP] - CRITICAL
+   PT: "Eu bebo suco"
+   Correct: "I drink juice"
+   Also valid: "I am drinking"
+   Problem: Portuguese present can be English simple OR continuous
+   FIX: Add temporal context to Portuguese sentence:
+        - For habitual/general: add 'sempre', 'todos os dias', 'geralmente'
+        - For ongoing: add 'agora', 'neste momento', 'atualmente'
+        Example: "Eu bebo suco" → "Eu sempre falo português" (habitual)
+
+9. Q66 [COMP] - CRITICAL
+   PT: "Eu como pão"
+   Correct: "I eat bread"
+   Also valid: "I am eating"
+   Problem: Portuguese present can be English simple OR continuous
+   FIX: Add temporal context to Portuguese sentence:
+        - For habitual/general: add 'sempre', 'todos os dias', 'geralmente'
+        - For ongoing: add 'agora', 'neste momento', 'atualmente'
+        Example: "Eu como pão" → "Eu sempre falo português" (habitual)
+
+10. Q78 [COMP] - CRITICAL
+   PT: "Eu abro a porta"
+   Correct: "I open the door"
+   Also valid: "I am opening"
+   Problem: Portuguese present can be English simple OR continuous
+   FIX: Add temporal context to Portuguese sentence:
+        - For habitual/general: add 'sempre', 'todos os dias', 'geralmente'
+        - For ongoing: add 'agora', 'neste momento', 'atualmente'
+        Example: "Eu abro a porta" → "Eu sempre falo português" (habitual)
+

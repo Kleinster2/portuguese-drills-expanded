@@ -1,0 +1,2031 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "title": "Portuguese Vocabulary Placement Test",
+    "description": "Comprehensive diagnostic test focusing on Portuguese vocabulary across everyday topics and contexts",
+    "totalQuestions": 111,
+    "questionTypes": {
+      "comprehension": 106,
+      "production": 5
+    },
+    "testType": "vocabulary"
+  },
+  "questions": [
+    {
+      "id": 35,
+      "unit": 14,
+      "unitName": "Family Members",
+      "phase": 1,
+      "type": "comprehension",
+      "pt": "Meu pai trabalha",
+      "question": "What does this mean?",
+      "correct": "My father works",
+      "options": [
+        "My father works",
+        "My brother works",
+        "My uncle works",
+        "Your father works",
+        "His father works",
+        "The father works"
+      ]
+    },
+    {
+      "id": 36,
+      "unit": 14,
+      "unitName": "Family Members",
+      "phase": 1,
+      "type": "comprehension",
+      "pt": "Minha mãe estuda",
+      "question": "What does this mean?",
+      "correct": "My mother studies",
+      "options": [
+        "My mother studies",
+        "My sister studies",
+        "Your mother studies",
+        "His mother studies",
+        "Her mother studies",
+        "The mother studies"
+      ]
+    },
+    {
+      "id": 37,
+      "unit": 14,
+      "unitName": "Family Members",
+      "phase": 1,
+      "type": "comprehension",
+      "pt": "Meu irmão mora aqui",
+      "question": "What does this mean?",
+      "correct": "My brother lives here",
+      "options": [
+        "My brother lives here",
+        "My father lives here",
+        "My uncle lives here",
+        "Your brother lives here",
+        "His brother lives here",
+        "My sister lives here"
+      ]
+    },
+    {
+      "id": 38,
+      "unit": 14,
+      "unitName": "Family Members",
+      "phase": 1,
+      "type": "comprehension",
+      "pt": "Minha irmã fala português",
+      "question": "What does this mean?",
+      "correct": "My sister speaks Portuguese",
+      "options": [
+        "My sister speaks Portuguese",
+        "My mother speaks Portuguese",
+        "My aunt speaks Portuguese",
+        "Your sister speaks Portuguese",
+        "Her sister speaks Portuguese",
+        "My brother speaks Portuguese"
+      ]
+    },
+    {
+      "id": 50,
+      "unit": 20,
+      "unitName": "Basic Food Vocabulary",
+      "phase": 1,
+      "type": "comprehension",
+      "pt": "Eu como arroz e feijão todos os dias",
+      "question": "What does this mean?",
+      "correct": "I eat rice and beans every day",
+      "options": [
+        "I eat rice and beans every day",
+        "I eat rice and beans sometimes",
+        "I like rice and beans",
+        "I cook rice and beans",
+        "I am eating rice and beans",
+        "I ate rice and beans"
+      ]
+    },
+    {
+      "id": 51,
+      "unit": 20,
+      "unitName": "Basic Food Vocabulary",
+      "phase": 1,
+      "type": "comprehension",
+      "pt": "Eu gosto de carne",
+      "question": "What does this mean?",
+      "correct": "I like meat",
+      "options": [
+        "I like meat",
+        "I eat meat",
+        "I want meat",
+        "I have meat",
+        "I cook meat",
+        "I buy meat"
+      ]
+    },
+    {
+      "id": 52,
+      "unit": 20,
+      "unitName": "Basic Food Vocabulary",
+      "phase": 1,
+      "type": "comprehension",
+      "pt": "Eu quero pão",
+      "question": "What does this mean?",
+      "correct": "I want bread",
+      "options": [
+        "I want bread",
+        "I eat bread",
+        "I like bread",
+        "I have bread",
+        "I buy bread",
+        "I make bread"
+      ]
+    },
+    {
+      "id": 53,
+      "unit": 20,
+      "unitName": "Basic Food Vocabulary",
+      "phase": 1,
+      "type": "comprehension",
+      "pt": "Eu tenho fruta",
+      "question": "What does this mean?",
+      "correct": "I have fruit",
+      "options": [
+        "I have fruit",
+        "I eat fruit",
+        "I like fruit",
+        "I want fruit",
+        "I buy fruit",
+        "I sell fruit"
+      ]
+    },
+    {
+      "id": 54,
+      "unit": 21,
+      "unitName": "Drinks and Beverages",
+      "phase": 1,
+      "type": "comprehension",
+      "pt": "Eu sempre bebo água",
+      "question": "What does this mean?",
+      "correct": "I always drink water",
+      "options": [
+        "I always drink water",
+        "I sometimes drink water",
+        "I want water",
+        "I like water",
+        "I am drinking water",
+        "I drank water"
+      ]
+    },
+    {
+      "id": 55,
+      "unit": 21,
+      "unitName": "Drinks and Beverages",
+      "phase": 1,
+      "type": "comprehension",
+      "pt": "Eu gosto de café",
+      "question": "What does this mean?",
+      "correct": "I like coffee",
+      "options": [
+        "I like coffee",
+        "I drink coffee",
+        "I want coffee",
+        "I have coffee",
+        "I make coffee",
+        "I buy coffee"
+      ]
+    },
+    {
+      "id": 56,
+      "unit": 21,
+      "unitName": "Drinks and Beverages",
+      "phase": 1,
+      "type": "comprehension",
+      "pt": "Eu quero chá",
+      "question": "What does this mean?",
+      "correct": "I want tea",
+      "options": [
+        "I want tea",
+        "I drink tea",
+        "I like tea",
+        "I have tea",
+        "I make tea",
+        "I buy tea"
+      ]
+    },
+    {
+      "id": 57,
+      "unit": 21,
+      "unitName": "Drinks and Beverages",
+      "phase": 1,
+      "type": "comprehension",
+      "pt": "Eu sempre bebo suco",
+      "question": "What does this mean?",
+      "correct": "I always drink juice",
+      "options": [
+        "I always drink juice",
+        "I sometimes drink juice",
+        "I want juice",
+        "I like juice",
+        "I am drinking juice",
+        "I drank juice"
+      ]
+    },
+    {
+      "id": 79,
+      "unit": 29,
+      "unitName": "Time Expressions",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Eu vou viajar amanhã",
+      "question": "What does this mean?",
+      "correct": "I will travel tomorrow",
+      "options": [
+        "I will travel tomorrow",
+        "I travel tomorrow",
+        "I traveled tomorrow",
+        "I want to travel tomorrow",
+        "I like to travel tomorrow",
+        "I am traveling tomorrow"
+      ]
+    },
+    {
+      "id": 80,
+      "unit": 29,
+      "unitName": "Time Expressions",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Eu trabalhei ontem",
+      "question": "What does this mean?",
+      "correct": "I worked yesterday",
+      "options": [
+        "I worked yesterday",
+        "I work yesterday",
+        "I will work yesterday",
+        "I am working yesterday",
+        "I used to work yesterday",
+        "I like to work yesterday"
+      ]
+    },
+    {
+      "id": 81,
+      "unit": 29,
+      "unitName": "Time Expressions",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Eu estudo hoje",
+      "question": "What does this mean?",
+      "correct": "I study today",
+      "options": [
+        "I study today",
+        "I studied today",
+        "I will study today",
+        "I am studying today",
+        "I like to study today",
+        "I want to study today"
+      ]
+    },
+    {
+      "id": 82,
+      "unit": 29,
+      "unitName": "Time Expressions",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Eu moro aqui agora",
+      "question": "What does this mean?",
+      "correct": "I live here now",
+      "options": [
+        "I live here now",
+        "I lived here now",
+        "I will live here now",
+        "I am living here now",
+        "I like here now",
+        "I want to live here now"
+      ]
+    },
+    {
+      "id": 134,
+      "unit": 43,
+      "unitName": "Numbers 0-100",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu tenho vinte anos",
+      "question": "What does this mean?",
+      "correct": "I am 20 years old",
+      "options": [
+        "I am 20 years old",
+        "I have 20 years",
+        "I am 12 years old",
+        "I am 22 years old",
+        "I will be 20 years old",
+        "I was 20 years old"
+      ]
+    },
+    {
+      "id": 135,
+      "unit": 43,
+      "unitName": "Numbers 0-100",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Custa cinquenta reais",
+      "question": "What does this mean?",
+      "correct": "It costs 50 reais",
+      "options": [
+        "It costs 50 reais",
+        "It costs 15 reais",
+        "It costs 60 reais",
+        "It costs 500 reais",
+        "It cost 50 reais",
+        "It will cost 50 reais"
+      ]
+    },
+    {
+      "id": 136,
+      "unit": 43,
+      "unitName": "Numbers 0-100",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "São oitenta pessoas",
+      "question": "What does this mean?",
+      "correct": "There are 80 people",
+      "options": [
+        "There are 80 people",
+        "There are 18 people",
+        "There are 8 people",
+        "There are 800 people",
+        "There were 80 people",
+        "There will be 80 people"
+      ]
+    },
+    {
+      "id": 137,
+      "unit": 44,
+      "unitName": "Numbers 100-1000 and Beyond",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Custa duzentos reais",
+      "question": "What does this mean?",
+      "correct": "It costs 200 reais",
+      "options": [
+        "It costs 200 reais",
+        "It costs 20 reais",
+        "It costs 2000 reais",
+        "It costs 2 reais",
+        "It cost 200 reais",
+        "It will cost 200 reais"
+      ]
+    },
+    {
+      "id": 138,
+      "unit": 44,
+      "unitName": "Numbers 100-1000 and Beyond",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Mil pessoas vieram",
+      "question": "What does this mean?",
+      "correct": "1000 people came",
+      "options": [
+        "1000 people came",
+        "100 people came",
+        "10000 people came",
+        "1 million people came",
+        "1000 people come",
+        "1000 people will come"
+      ]
+    },
+    {
+      "id": 157,
+      "unit": 50,
+      "unitName": "Days of the Week",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu trabalho na segunda-feira",
+      "question": "What does this mean?",
+      "correct": "I work on Monday",
+      "options": [
+        "I work on Monday",
+        "I work on Tuesday",
+        "I work on the second day",
+        "I worked on Monday",
+        "I am working on Monday",
+        "I will work on Monday"
+      ]
+    },
+    {
+      "id": 158,
+      "unit": 50,
+      "unitName": "Days of the Week",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Hoje é sexta-feira",
+      "question": "What does this mean?",
+      "correct": "Today is Friday",
+      "options": [
+        "Today is Friday",
+        "Today is Saturday",
+        "Today is the sixth day",
+        "Yesterday was Friday",
+        "Tomorrow is Friday",
+        "I like Friday"
+      ]
+    },
+    {
+      "id": 159,
+      "unit": 50,
+      "unitName": "Days of the Week",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu não trabalho no domingo",
+      "question": "What does this mean?",
+      "correct": "I don't work on Sunday",
+      "options": [
+        "I don't work on Sunday",
+        "I work on Sunday",
+        "I didn't work on Sunday",
+        "I won't work on Sunday",
+        "I never work",
+        "I like Sunday"
+      ]
+    },
+    {
+      "id": 160,
+      "unit": 51,
+      "unitName": "Months of the Year",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Meu aniversário é em janeiro",
+      "question": "What does this mean?",
+      "correct": "My birthday is in January",
+      "options": [
+        "My birthday is in January",
+        "My birthday is in June",
+        "My birthday was in January",
+        "My birthday will be in January",
+        "I was born in January",
+        "I like January"
+      ]
+    },
+    {
+      "id": 161,
+      "unit": 51,
+      "unitName": "Months of the Year",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu viajo em julho",
+      "question": "What does this mean?",
+      "correct": "I travel in July",
+      "options": [
+        "I travel in July",
+        "I travel in June",
+        "I traveled in July",
+        "I will travel in July",
+        "I like to travel in July",
+        "I want to travel in July"
+      ]
+    },
+    {
+      "id": 162,
+      "unit": 51,
+      "unitName": "Months of the Year",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Natal é em dezembro",
+      "question": "What does this mean?",
+      "correct": "Christmas is in December",
+      "options": [
+        "Christmas is in December",
+        "Christmas is in November",
+        "Christmas was in December",
+        "Christmas will be in December",
+        "I like Christmas",
+        "I celebrate Christmas"
+      ]
+    },
+    {
+      "id": 163,
+      "unit": 52,
+      "unitName": "Dates",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Hoje é 15 de março",
+      "question": "What does this mean?",
+      "correct": "Today is March 15th",
+      "options": [
+        "Today is March 15th",
+        "Today is May 15th",
+        "Today is the 15th",
+        "Yesterday was March 15th",
+        "Tomorrow is March 15th",
+        "It's 15 o'clock"
+      ]
+    },
+    {
+      "id": 164,
+      "unit": 52,
+      "unitName": "Dates",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Nasci em 10 de maio de 1990",
+      "question": "What does this mean?",
+      "correct": "I was born on May 10, 1990",
+      "options": [
+        "I was born on May 10, 1990",
+        "I was born on March 10, 1990",
+        "I was born in May 1990",
+        "I am born on May 10",
+        "My birthday is May 10",
+        "I will be born on May 10"
+      ]
+    },
+    {
+      "id": 165,
+      "unit": 53,
+      "unitName": "Ordinal Numbers",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "O primeiro dia",
+      "question": "What does this mean?",
+      "correct": "The first day",
+      "options": [
+        "The first day",
+        "The primary day",
+        "The one day",
+        "The day one",
+        "The number one day",
+        "The best day"
+      ]
+    },
+    {
+      "id": 166,
+      "unit": 53,
+      "unitName": "Ordinal Numbers",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "O segundo andar",
+      "question": "What does this mean?",
+      "correct": "The second floor",
+      "options": [
+        "The second floor",
+        "The two floor",
+        "The next floor",
+        "The other floor",
+        "The following floor",
+        "The floor two"
+      ]
+    },
+    {
+      "id": 167,
+      "unit": 53,
+      "unitName": "Ordinal Numbers",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "O terceiro lugar",
+      "question": "What does this mean?",
+      "correct": "The third place",
+      "options": [
+        "The third place",
+        "The three place",
+        "The next place",
+        "The last place",
+        "The bronze place",
+        "The place three"
+      ]
+    },
+    {
+      "id": 168,
+      "unit": 54,
+      "unitName": "Weather Expressions",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Está chovendo",
+      "question": "What does this mean?",
+      "correct": "It's raining",
+      "options": [
+        "It's raining",
+        "It rained",
+        "It will rain",
+        "It rains",
+        "It's snowing",
+        "It's cloudy"
+      ]
+    },
+    {
+      "id": 169,
+      "unit": 54,
+      "unitName": "Weather Expressions",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Faz calor",
+      "question": "What does this mean?",
+      "correct": "It's hot",
+      "options": [
+        "It's hot",
+        "It's cold",
+        "It's warm",
+        "It makes heat",
+        "It was hot",
+        "It will be hot"
+      ]
+    },
+    {
+      "id": 170,
+      "unit": 54,
+      "unitName": "Weather Expressions",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Faz frio",
+      "question": "What does this mean?",
+      "correct": "It's cold",
+      "options": [
+        "It's cold",
+        "It's hot",
+        "It's cool",
+        "It makes cold",
+        "It was cold",
+        "It will be cold"
+      ]
+    },
+    {
+      "id": 171,
+      "unit": 54,
+      "unitName": "Weather Expressions",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Está ensolarado",
+      "question": "What does this mean?",
+      "correct": "It's sunny",
+      "options": [
+        "It's sunny",
+        "It's cloudy",
+        "It's hot",
+        "It's bright",
+        "It was sunny",
+        "It will be sunny"
+      ]
+    },
+    {
+      "id": 172,
+      "unit": 55,
+      "unitName": "Colors",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "A casa é vermelha",
+      "question": "What does this mean?",
+      "correct": "The house is red",
+      "options": [
+        "The house is red",
+        "The house is green",
+        "The house is blue",
+        "The house is yellow",
+        "The red house",
+        "The house was red"
+      ]
+    },
+    {
+      "id": 173,
+      "unit": 55,
+      "unitName": "Colors",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "O carro é azul",
+      "question": "What does this mean?",
+      "correct": "The car is blue",
+      "options": [
+        "The car is blue",
+        "The car is red",
+        "The car is green",
+        "The car is black",
+        "The blue car",
+        "The car was blue"
+      ]
+    },
+    {
+      "id": 174,
+      "unit": 55,
+      "unitName": "Colors",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "A porta é verde",
+      "question": "What does this mean?",
+      "correct": "The door is green",
+      "options": [
+        "The door is green",
+        "The door is blue",
+        "The door is red",
+        "The door is yellow",
+        "The green door",
+        "The door was green"
+      ]
+    },
+    {
+      "id": 175,
+      "unit": 55,
+      "unitName": "Colors",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "O livro é amarelo",
+      "question": "What does this mean?",
+      "correct": "The book is yellow",
+      "options": [
+        "The book is yellow",
+        "The book is green",
+        "The book is blue",
+        "The book is red",
+        "The yellow book",
+        "The book was yellow"
+      ]
+    },
+    {
+      "id": 176,
+      "unit": 56,
+      "unitName": "Clothing Basics",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu visto uma camisa",
+      "question": "What does this mean?",
+      "correct": "I wear a shirt",
+      "options": [
+        "I wear a shirt",
+        "I buy a shirt",
+        "I have a shirt",
+        "I like a shirt",
+        "I see a shirt",
+        "I wore a shirt"
+      ]
+    },
+    {
+      "id": 177,
+      "unit": 56,
+      "unitName": "Clothing Basics",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu sempre compro calças",
+      "question": "What does this mean?",
+      "correct": "I always buy pants",
+      "options": [
+        "I always buy pants",
+        "I sometimes buy pants",
+        "I wear pants",
+        "I have pants",
+        "I like pants",
+        "I bought pants"
+      ]
+    },
+    {
+      "id": 178,
+      "unit": 56,
+      "unitName": "Clothing Basics",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu tenho sapatos novos",
+      "question": "What does this mean?",
+      "correct": "I have new shoes",
+      "options": [
+        "I have new shoes",
+        "I buy new shoes",
+        "I wear new shoes",
+        "I like new shoes",
+        "I had new shoes",
+        "I will have new shoes"
+      ]
+    },
+    {
+      "id": 179,
+      "unit": 56,
+      "unitName": "Clothing Basics",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu gosto deste vestido",
+      "question": "What does this mean?",
+      "correct": "I like this dress",
+      "options": [
+        "I like this dress",
+        "I have this dress",
+        "I buy this dress",
+        "I wear this dress",
+        "I liked this dress",
+        "I want this dress"
+      ]
+    },
+    {
+      "id": 180,
+      "unit": 57,
+      "unitName": "Body Parts",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Minha cabeça dói",
+      "question": "What does this mean?",
+      "correct": "My head hurts",
+      "options": [
+        "My head hurts",
+        "My head is big",
+        "I have a head",
+        "My head hurt",
+        "My head will hurt",
+        "I hurt my head"
+      ]
+    },
+    {
+      "id": 181,
+      "unit": 57,
+      "unitName": "Body Parts",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Meu braço está quebrado",
+      "question": "What does this mean?",
+      "correct": "My arm is broken",
+      "options": [
+        "My arm is broken",
+        "My arm hurts",
+        "I broke my arm",
+        "My arm was broken",
+        "My arm will be broken",
+        "I have an arm"
+      ]
+    },
+    {
+      "id": 182,
+      "unit": 57,
+      "unitName": "Body Parts",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Minha perna dói",
+      "question": "What does this mean?",
+      "correct": "My leg hurts",
+      "options": [
+        "My leg hurts",
+        "My leg is broken",
+        "I have a leg",
+        "My leg hurt",
+        "My leg will hurt",
+        "I hurt my leg"
+      ]
+    },
+    {
+      "id": 183,
+      "unit": 57,
+      "unitName": "Body Parts",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Meus olhos são azuis",
+      "question": "What does this mean?",
+      "correct": "My eyes are blue",
+      "options": [
+        "My eyes are blue",
+        "My eyes are green",
+        "I have blue eyes",
+        "My eye is blue",
+        "My eyes were blue",
+        "My eyes hurt"
+      ]
+    },
+    {
+      "id": 184,
+      "unit": 58,
+      "unitName": "Family Members Expanded",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Minha avó mora aqui",
+      "question": "What does this mean?",
+      "correct": "My grandmother lives here",
+      "options": [
+        "My grandmother lives here",
+        "My mother lives here",
+        "My aunt lives here",
+        "Your grandmother lives here",
+        "My grandmother lived here",
+        "My grandmother works here"
+      ]
+    },
+    {
+      "id": 185,
+      "unit": 58,
+      "unitName": "Family Members Expanded",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Meu tio trabalha lá",
+      "question": "What does this mean?",
+      "correct": "My uncle works there",
+      "options": [
+        "My uncle works there",
+        "My father works there",
+        "My brother works there",
+        "Your uncle works there",
+        "My uncle worked there",
+        "My uncle lives there"
+      ]
+    },
+    {
+      "id": 186,
+      "unit": 58,
+      "unitName": "Family Members Expanded",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Minha prima estuda",
+      "question": "What does this mean?",
+      "correct": "My cousin (f) studies",
+      "options": [
+        "My cousin (f) studies",
+        "My sister studies",
+        "My aunt studies",
+        "Your cousin studies",
+        "My cousin studied",
+        "My cousin will study"
+      ]
+    },
+    {
+      "id": 187,
+      "unit": 58,
+      "unitName": "Family Members Expanded",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Meu sobrinho tem 5 anos",
+      "question": "What does this mean?",
+      "correct": "My nephew is 5 years old",
+      "options": [
+        "My nephew is 5 years old",
+        "My son is 5 years old",
+        "My brother is 5 years old",
+        "Your nephew is 5 years old",
+        "My nephew was 5 years old",
+        "My nephew has 5 years"
+      ]
+    },
+    {
+      "id": 188,
+      "unit": 59,
+      "unitName": "Emotions and Feelings",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu estou feliz",
+      "question": "What does this mean?",
+      "correct": "I am happy",
+      "options": [
+        "I am happy",
+        "I was happy",
+        "I will be happy",
+        "I seem happy",
+        "I feel happy",
+        "I like happy"
+      ]
+    },
+    {
+      "id": 189,
+      "unit": 59,
+      "unitName": "Emotions and Feelings",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu estou triste",
+      "question": "What does this mean?",
+      "correct": "I am sad",
+      "options": [
+        "I am sad",
+        "I was sad",
+        "I will be sad",
+        "I seem sad",
+        "I feel sad",
+        "I like sad"
+      ]
+    },
+    {
+      "id": 190,
+      "unit": 59,
+      "unitName": "Emotions and Feelings",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu estou cansado",
+      "question": "What does this mean?",
+      "correct": "I am tired",
+      "options": [
+        "I am tired",
+        "I was tired",
+        "I will be tired",
+        "I seem tired",
+        "I feel tired",
+        "I like tired"
+      ]
+    },
+    {
+      "id": 191,
+      "unit": 59,
+      "unitName": "Emotions and Feelings",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu estou animado",
+      "question": "What does this mean?",
+      "correct": "I am excited",
+      "options": [
+        "I am excited",
+        "I am happy",
+        "I was excited",
+        "I will be excited",
+        "I seem excited",
+        "I feel excited"
+      ]
+    },
+    {
+      "id": 192,
+      "unit": 59,
+      "unitName": "Emotions and Feelings",
+      "phase": 3,
+      "type": "production",
+      "en": "I am happy",
+      "question": "Complete the sentence:",
+      "template": "Eu estou __",
+      "chips": [
+        "feliz",
+        "triste",
+        "cansado",
+        "animado"
+      ],
+      "correct": "feliz",
+      "hint": "temporary state"
+    },
+    {
+      "id": 193,
+      "unit": 60,
+      "unitName": "Locations and Directions",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Em cima de",
+      "question": "What does this mean?",
+      "correct": "on top of",
+      "options": [
+        "on top of",
+        "under",
+        "beside",
+        "inside",
+        "near",
+        "far from"
+      ]
+    },
+    {
+      "id": 194,
+      "unit": 60,
+      "unitName": "Locations and Directions",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Embaixo de",
+      "question": "What does this mean?",
+      "correct": "under",
+      "options": [
+        "under",
+        "on top of",
+        "beside",
+        "inside",
+        "near",
+        "far from"
+      ]
+    },
+    {
+      "id": 195,
+      "unit": 60,
+      "unitName": "Locations and Directions",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Ao lado de",
+      "question": "What does this mean?",
+      "correct": "beside",
+      "options": [
+        "beside",
+        "under",
+        "on top of",
+        "inside",
+        "near",
+        "far from"
+      ]
+    },
+    {
+      "id": 196,
+      "unit": 60,
+      "unitName": "Locations and Directions",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Dentro de",
+      "question": "What does this mean?",
+      "correct": "inside",
+      "options": [
+        "inside",
+        "outside",
+        "beside",
+        "under",
+        "on top of",
+        "near"
+      ]
+    },
+    {
+      "id": 197,
+      "unit": 60,
+      "unitName": "Locations and Directions",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Perto de",
+      "question": "What does this mean?",
+      "correct": "near",
+      "options": [
+        "near",
+        "far from",
+        "inside",
+        "outside",
+        "beside",
+        "under"
+      ]
+    },
+    {
+      "id": 198,
+      "unit": 60,
+      "unitName": "Locations and Directions",
+      "phase": 3,
+      "type": "production",
+      "en": "The book is under the table",
+      "question": "Complete the sentence:",
+      "template": "O livro está __ mesa",
+      "chips": [
+        "embaixo da",
+        "em cima da",
+        "ao lado da",
+        "dentro da",
+        "perto da",
+        "longe da",
+        "na",
+        "sobre a"
+      ],
+      "correct": "embaixo da",
+      "hint": "under = embaixo de"
+    },
+    {
+      "id": 199,
+      "unit": 61,
+      "unitName": "House and Rooms",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Minha casa tem três quartos",
+      "question": "What does this mean?",
+      "correct": "My house has 3 bedrooms",
+      "options": [
+        "My house has 3 bedrooms",
+        "My house has 3 rooms",
+        "My house has 4 bedrooms",
+        "My house had 3 bedrooms",
+        "I have 3 bedrooms",
+        "The house has 3 bedrooms"
+      ]
+    },
+    {
+      "id": 200,
+      "unit": 61,
+      "unitName": "House and Rooms",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "A cozinha é grande",
+      "question": "What does this mean?",
+      "correct": "The kitchen is big",
+      "options": [
+        "The kitchen is big",
+        "The kitchen is small",
+        "The kitchen was big",
+        "The dining room is big",
+        "My kitchen is big",
+        "A big kitchen"
+      ]
+    },
+    {
+      "id": 201,
+      "unit": 61,
+      "unitName": "House and Rooms",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "A sala está limpa",
+      "question": "What does this mean?",
+      "correct": "The living room is clean",
+      "options": [
+        "The living room is clean",
+        "The room is clean",
+        "The living room is dirty",
+        "The living room was clean",
+        "My living room is clean",
+        "A clean living room"
+      ]
+    },
+    {
+      "id": 202,
+      "unit": 61,
+      "unitName": "House and Rooms",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "O banheiro é pequeno",
+      "question": "What does this mean?",
+      "correct": "The bathroom is small",
+      "options": [
+        "The bathroom is small",
+        "The bathroom is big",
+        "The bathroom was small",
+        "My bathroom is small",
+        "A small bathroom",
+        "The bedroom is small"
+      ]
+    },
+    {
+      "id": 203,
+      "unit": 62,
+      "unitName": "Daily Activities Verbs",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu acordo às 7h",
+      "question": "What does this mean?",
+      "correct": "I wake up at 7am",
+      "options": [
+        "I wake up at 7am",
+        "I woke up at 7am",
+        "I will wake up at 7am",
+        "I sleep at 7am",
+        "I get up at 7am",
+        "I work at 7am"
+      ]
+    },
+    {
+      "id": 204,
+      "unit": 62,
+      "unitName": "Daily Activities Verbs",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu me deito às 10h",
+      "question": "What does this mean?",
+      "correct": "I go to bed at 10pm",
+      "options": [
+        "I go to bed at 10pm",
+        "I wake up at 10pm",
+        "I sleep at 10pm",
+        "I get up at 10pm",
+        "I went to bed at 10pm",
+        "I will go to bed at 10pm"
+      ]
+    },
+    {
+      "id": 205,
+      "unit": 62,
+      "unitName": "Daily Activities Verbs",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu me levanto cedo",
+      "question": "What does this mean?",
+      "correct": "I get up early",
+      "options": [
+        "I get up early",
+        "I wake up early",
+        "I sleep early",
+        "I go to bed early",
+        "I got up early",
+        "I will get up early"
+      ]
+    },
+    {
+      "id": 206,
+      "unit": 62,
+      "unitName": "Daily Activities Verbs",
+      "phase": 3,
+      "type": "production",
+      "en": "I go to bed at 10pm",
+      "question": "Complete the sentence:",
+      "template": "Eu me __ às 10h",
+      "chips": [
+        "deito",
+        "levanto",
+        "acordo",
+        "durmo",
+        "deitei",
+        "deitava",
+        "deitarei",
+        "deitaria",
+        "deite",
+        "deitasse"
+      ],
+      "correct": "deito",
+      "hint": "reflexive verb"
+    },
+    {
+      "id": 207,
+      "unit": 63,
+      "unitName": "Frequency Adverbs",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu sempre estudo",
+      "question": "What does this mean?",
+      "correct": "I always study",
+      "options": [
+        "I always study",
+        "I never study",
+        "I sometimes study",
+        "I rarely study",
+        "I studied always",
+        "I will always study"
+      ]
+    },
+    {
+      "id": 208,
+      "unit": 63,
+      "unitName": "Frequency Adverbs",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu nunca trabalho aos domingos",
+      "question": "What does this mean?",
+      "correct": "I never work on Sundays",
+      "options": [
+        "I never work on Sundays",
+        "I always work on Sundays",
+        "I sometimes work on Sundays",
+        "I don't work on Sundays",
+        "I didn't work on Sundays",
+        "I rarely work on Sundays"
+      ]
+    },
+    {
+      "id": 209,
+      "unit": 63,
+      "unitName": "Frequency Adverbs",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu às vezes como carne",
+      "question": "What does this mean?",
+      "correct": "I sometimes eat meat",
+      "options": [
+        "I sometimes eat meat",
+        "I always eat meat",
+        "I never eat meat",
+        "I rarely eat meat",
+        "I ate meat sometimes",
+        "I will sometimes eat meat"
+      ]
+    },
+    {
+      "id": 210,
+      "unit": 63,
+      "unitName": "Frequency Adverbs",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu raramente viajo",
+      "question": "What does this mean?",
+      "correct": "I rarely travel",
+      "options": [
+        "I rarely travel",
+        "I never travel",
+        "I always travel",
+        "I sometimes travel",
+        "I traveled rarely",
+        "I will rarely travel"
+      ]
+    },
+    {
+      "id": 211,
+      "unit": 63,
+      "unitName": "Frequency Adverbs",
+      "phase": 3,
+      "type": "production",
+      "en": "I sometimes eat meat",
+      "question": "Complete the sentence:",
+      "template": "Eu __ como carne",
+      "chips": [
+        "às vezes",
+        "sempre",
+        "nunca",
+        "raramente",
+        "frequentemente",
+        "geralmente",
+        "normalmente",
+        "quase sempre"
+      ],
+      "correct": "às vezes",
+      "hint": "sometimes"
+    },
+    {
+      "id": 212,
+      "unit": 64,
+      "unitName": "Food and Meals Expanded",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu gosto de frango",
+      "question": "What does this mean?",
+      "correct": "I like chicken",
+      "options": [
+        "I like chicken",
+        "I eat chicken",
+        "I want chicken",
+        "I have chicken",
+        "I cook chicken",
+        "I buy chicken"
+      ]
+    },
+    {
+      "id": 213,
+      "unit": 64,
+      "unitName": "Food and Meals Expanded",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu como peixe toda semana",
+      "question": "What does this mean?",
+      "correct": "I eat fish every week",
+      "options": [
+        "I eat fish every week",
+        "I eat fish sometimes",
+        "I like fish",
+        "I want fish",
+        "I cook fish",
+        "I buy fish"
+      ]
+    },
+    {
+      "id": 214,
+      "unit": 64,
+      "unitName": "Food and Meals Expanded",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu quero batata",
+      "question": "What does this mean?",
+      "correct": "I want potato",
+      "options": [
+        "I want potato",
+        "I eat potato",
+        "I like potato",
+        "I have potato",
+        "I cook potato",
+        "I buy potato"
+      ]
+    },
+    {
+      "id": 215,
+      "unit": 64,
+      "unitName": "Food and Meals Expanded",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu bebo leite todos os dias",
+      "question": "What does this mean?",
+      "correct": "I drink milk every day",
+      "options": [
+        "I drink milk every day",
+        "I drink milk sometimes",
+        "I like milk",
+        "I want milk",
+        "I buy milk",
+        "I need milk"
+      ]
+    },
+    {
+      "id": 216,
+      "unit": 65,
+      "unitName": "Transportation and Travel",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu vou de ônibus",
+      "question": "What does this mean?",
+      "correct": "I go by bus",
+      "options": [
+        "I go by bus",
+        "I take the bus",
+        "I like the bus",
+        "I went by bus",
+        "I will go by bus",
+        "I have a bus"
+      ]
+    },
+    {
+      "id": 217,
+      "unit": 65,
+      "unitName": "Transportation and Travel",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu viajo de avião",
+      "question": "What does this mean?",
+      "correct": "I travel by plane",
+      "options": [
+        "I travel by plane",
+        "I take the plane",
+        "I like planes",
+        "I traveled by plane",
+        "I will travel by plane",
+        "I have a plane"
+      ]
+    },
+    {
+      "id": 218,
+      "unit": 65,
+      "unitName": "Transportation and Travel",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu ando de carro",
+      "question": "What does this mean?",
+      "correct": "I go by car",
+      "options": [
+        "I go by car",
+        "I drive a car",
+        "I like cars",
+        "I went by car",
+        "I will go by car",
+        "I have a car"
+      ]
+    },
+    {
+      "id": 219,
+      "unit": 65,
+      "unitName": "Transportation and Travel",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu pego o metrô",
+      "question": "What does this mean?",
+      "correct": "I take the subway",
+      "options": [
+        "I take the subway",
+        "I go by subway",
+        "I like the subway",
+        "I took the subway",
+        "I will take the subway",
+        "I have a subway"
+      ]
+    },
+    {
+      "id": 220,
+      "unit": 66,
+      "unitName": "Hobbies and Leisure Activities",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu jogo futebol",
+      "question": "What does this mean?",
+      "correct": "I play soccer",
+      "options": [
+        "I play soccer",
+        "I like soccer",
+        "I watch soccer",
+        "I played soccer",
+        "I will play soccer",
+        "I want to play soccer"
+      ]
+    },
+    {
+      "id": 221,
+      "unit": 66,
+      "unitName": "Hobbies and Leisure Activities",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu leio livros toda semana",
+      "question": "What does this mean?",
+      "correct": "I read books every week",
+      "options": [
+        "I read books every week",
+        "I read books sometimes",
+        "I like books",
+        "I buy books",
+        "I will read books",
+        "I want to read books"
+      ]
+    },
+    {
+      "id": 222,
+      "unit": 66,
+      "unitName": "Hobbies and Leisure Activities",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu assisto TV",
+      "question": "What does this mean?",
+      "correct": "I watch TV",
+      "options": [
+        "I watch TV",
+        "I like TV",
+        "I watched TV",
+        "I will watch TV",
+        "I want to watch TV",
+        "I have a TV"
+      ]
+    },
+    {
+      "id": 223,
+      "unit": 66,
+      "unitName": "Hobbies and Leisure Activities",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu ouço música",
+      "question": "What does this mean?",
+      "correct": "I listen to music",
+      "options": [
+        "I listen to music",
+        "I like music",
+        "I play music",
+        "I listened to music",
+        "I will listen to music",
+        "I want music"
+      ]
+    },
+    {
+      "id": 224,
+      "unit": 67,
+      "unitName": "Technology and Communication",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu uso o computador",
+      "question": "What does this mean?",
+      "correct": "I use the computer",
+      "options": [
+        "I use the computer",
+        "I like the computer",
+        "I have a computer",
+        "I buy a computer",
+        "I used the computer",
+        "I will use the computer"
+      ]
+    },
+    {
+      "id": 225,
+      "unit": 67,
+      "unitName": "Technology and Communication",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu mando mensagem",
+      "question": "What does this mean?",
+      "correct": "I send a message",
+      "options": [
+        "I send a message",
+        "I sent a message",
+        "I will send a message",
+        "I receive a message",
+        "I like messages",
+        "I have a message"
+      ]
+    },
+    {
+      "id": 226,
+      "unit": 67,
+      "unitName": "Technology and Communication",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu navego na internet",
+      "question": "What does this mean?",
+      "correct": "I browse the internet",
+      "options": [
+        "I browse the internet",
+        "I use the internet",
+        "I like the internet",
+        "I have internet",
+        "I browsed the internet",
+        "I will browse the internet"
+      ]
+    },
+    {
+      "id": 227,
+      "unit": 68,
+      "unitName": "Shopping and Money",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Quanto custa?",
+      "question": "What does this mean?",
+      "correct": "How much does it cost?",
+      "options": [
+        "How much does it cost?",
+        "How much is it?",
+        "What does it cost?",
+        "How much did it cost?",
+        "How much will it cost?",
+        "How much costs?"
+      ]
+    },
+    {
+      "id": 228,
+      "unit": 68,
+      "unitName": "Shopping and Money",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu compro pão toda semana",
+      "question": "What does this mean?",
+      "correct": "I buy bread every week",
+      "options": [
+        "I buy bread every week",
+        "I buy bread sometimes",
+        "I want bread",
+        "I like bread",
+        "I have bread",
+        "I bought bread"
+      ]
+    },
+    {
+      "id": 229,
+      "unit": 68,
+      "unitName": "Shopping and Money",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu pago em dinheiro",
+      "question": "What does this mean?",
+      "correct": "I pay in cash",
+      "options": [
+        "I pay in cash",
+        "I paid in cash",
+        "I will pay in cash",
+        "I have cash",
+        "I want cash",
+        "I like cash"
+      ]
+    },
+    {
+      "id": 230,
+      "unit": 68,
+      "unitName": "Shopping and Money",
+      "phase": 3,
+      "type": "production",
+      "en": "How much does it cost?",
+      "question": "Complete the sentence:",
+      "template": "__ custa?",
+      "chips": [
+        "Quanto",
+        "Quando",
+        "Onde",
+        "Como",
+        "Por que",
+        "O que",
+        "Qual",
+        "Quem"
+      ],
+      "correct": "Quanto",
+      "hint": "How much = Quanto"
+    },
+    {
+      "id": 231,
+      "unit": 69,
+      "unitName": "Professions and Work",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu sou professor",
+      "question": "What does this mean?",
+      "correct": "I am a teacher",
+      "options": [
+        "I am a teacher",
+        "I was a teacher",
+        "I will be a teacher",
+        "I work as a teacher",
+        "I like teachers",
+        "I teach"
+      ]
+    },
+    {
+      "id": 232,
+      "unit": 69,
+      "unitName": "Professions and Work",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Ela é médica",
+      "question": "What does this mean?",
+      "correct": "She is a doctor",
+      "options": [
+        "She is a doctor",
+        "She was a doctor",
+        "She will be a doctor",
+        "She works as a doctor",
+        "She likes doctors",
+        "She treats"
+      ]
+    },
+    {
+      "id": 233,
+      "unit": 69,
+      "unitName": "Professions and Work",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Ele é engenheiro",
+      "question": "What does this mean?",
+      "correct": "He is an engineer",
+      "options": [
+        "He is an engineer",
+        "He was an engineer",
+        "He will be an engineer",
+        "He works as an engineer",
+        "He likes engineers",
+        "He designs"
+      ]
+    },
+    {
+      "id": 234,
+      "unit": 69,
+      "unitName": "Professions and Work",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu sou advogado",
+      "question": "What does this mean?",
+      "correct": "I am a lawyer",
+      "options": [
+        "I am a lawyer",
+        "I was a lawyer",
+        "I will be a lawyer",
+        "I work as a lawyer",
+        "I like lawyers",
+        "I practice law"
+      ]
+    },
+    {
+      "id": 235,
+      "unit": 70,
+      "unitName": "Health and Medical Basics",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu estou doente",
+      "question": "What does this mean?",
+      "correct": "I am sick",
+      "options": [
+        "I am sick",
+        "I was sick",
+        "I will be sick",
+        "I feel sick",
+        "I seem sick",
+        "I get sick"
+      ]
+    },
+    {
+      "id": 236,
+      "unit": 70,
+      "unitName": "Health and Medical Basics",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Minha cabeça dói",
+      "question": "What does this mean?",
+      "correct": "My head hurts",
+      "options": [
+        "My head hurts",
+        "My head hurt",
+        "My head will hurt",
+        "I have a headache",
+        "My head is hurting",
+        "I hurt my head"
+      ]
+    },
+    {
+      "id": 237,
+      "unit": 70,
+      "unitName": "Health and Medical Basics",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu preciso de remédio",
+      "question": "What does this mean?",
+      "correct": "I need medicine",
+      "options": [
+        "I need medicine",
+        "I want medicine",
+        "I have medicine",
+        "I take medicine",
+        "I needed medicine",
+        "I will need medicine"
+      ]
+    },
+    {
+      "id": 248,
+      "unit": 73,
+      "unitName": "Furniture and Household Items",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "A mesa está na sala",
+      "question": "What does this mean?",
+      "correct": "The table is in the living room",
+      "options": [
+        "The table is in the living room",
+        "The table was in the living room",
+        "The table is in the room",
+        "My table is in the living room",
+        "A table is in the living room",
+        "The desk is in the living room"
+      ]
+    },
+    {
+      "id": 249,
+      "unit": 73,
+      "unitName": "Furniture and Household Items",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "A cadeira é confortável",
+      "question": "What does this mean?",
+      "correct": "The chair is comfortable",
+      "options": [
+        "The chair is comfortable",
+        "The chair was comfortable",
+        "The chair is big",
+        "My chair is comfortable",
+        "A comfortable chair",
+        "The armchair is comfortable"
+      ]
+    },
+    {
+      "id": 250,
+      "unit": 73,
+      "unitName": "Furniture and Household Items",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "A cama é grande",
+      "question": "What does this mean?",
+      "correct": "The bed is big",
+      "options": [
+        "The bed is big",
+        "The bed is small",
+        "The bed was big",
+        "My bed is big",
+        "A big bed",
+        "The bedroom is big"
+      ]
+    },
+    {
+      "id": 251,
+      "unit": 74,
+      "unitName": "Nature and Animals",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "O cachorro late",
+      "question": "What does this mean?",
+      "correct": "The dog barks",
+      "options": [
+        "The dog barks",
+        "The dog barked",
+        "The dog will bark",
+        "The dog is barking",
+        "My dog barks",
+        "A dog barks"
+      ]
+    },
+    {
+      "id": 252,
+      "unit": 74,
+      "unitName": "Nature and Animals",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "O gato mia",
+      "question": "What does this mean?",
+      "correct": "The cat meows",
+      "options": [
+        "The cat meows",
+        "The cat meowed",
+        "The cat will meow",
+        "The cat is meowing",
+        "My cat meows",
+        "A cat meows"
+      ]
+    },
+    {
+      "id": 253,
+      "unit": 74,
+      "unitName": "Nature and Animals",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "A árvore é alta",
+      "question": "What does this mean?",
+      "correct": "The tree is tall",
+      "options": [
+        "The tree is tall",
+        "The tree is big",
+        "The tree was tall",
+        "My tree is tall",
+        "A tall tree",
+        "The forest is tall"
+      ]
+    },
+    {
+      "id": 254,
+      "unit": 75,
+      "unitName": "School and Education",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eu estudo matemática todos os dias",
+      "question": "What does this mean?",
+      "correct": "I study math every day",
+      "options": [
+        "I study math every day",
+        "I study math sometimes",
+        "I like math",
+        "I teach math",
+        "I learn math",
+        "I studied math"
+      ]
+    },
+    {
+      "id": 255,
+      "unit": 75,
+      "unitName": "School and Education",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "O professor ensina",
+      "question": "What does this mean?",
+      "correct": "The teacher teaches",
+      "options": [
+        "The teacher teaches",
+        "The teacher taught",
+        "The teacher will teach",
+        "The teacher is teaching",
+        "My teacher teaches",
+        "A teacher teaches"
+      ]
+    },
+    {
+      "id": 256,
+      "unit": 75,
+      "unitName": "School and Education",
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "A aula começa",
+      "question": "What does this mean?",
+      "correct": "The class begins",
+      "options": [
+        "The class begins",
+        "The class began",
+        "The class will begin",
+        "The class is beginning",
+        "My class begins",
+        "A class begins"
+      ]
+    }
+  ]
+}

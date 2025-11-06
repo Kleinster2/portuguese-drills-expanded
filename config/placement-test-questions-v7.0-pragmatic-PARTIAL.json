@@ -1,0 +1,327 @@
+{
+  "metadata": {
+    "version": "7.0.0",
+    "title": "Portuguese Placement Test - Pragmatic Allocation",
+    "description": "~215 strategically allocated questions based on unit needs. Grammar units get production-heavy testing, vocabulary units get comprehension-heavy testing.",
+    "variant": "pt-BR",
+    "totalQuestions": 11,
+    "estimatedMinutes": 70,
+    "structure": "Pragmatic allocation replaces rigid 2-per-unit rule",
+    "assessmentTypes": {
+      "comprehension": "90 questions (odd IDs 1-179) - Portuguese to English with 6-7 strategic distractors",
+      "production": "90 questions (even IDs 2-180) - English to Portuguese with 8-10 strategic distractors"
+    },
+    "changelog": "v7.0: Complete redesign - questions allocated by unit needs, not arbitrary quotas"
+  },
+  "phases": [
+    {
+      "num": 1,
+      "name": "Foundation (A1)",
+      "unitRange": [
+        1,
+        25
+      ],
+      "questionRange": [
+        1,
+        50
+      ],
+      "description": "Absolute beginner - basic identity, present tense"
+    },
+    {
+      "num": 2,
+      "name": "Elementary (A2)",
+      "unitRange": [
+        26,
+        50
+      ],
+      "questionRange": [
+        51,
+        100
+      ],
+      "description": "Elementary - past tenses, questions, comparisons"
+    },
+    {
+      "num": 3,
+      "name": "Intermediate (B1)",
+      "unitRange": [
+        51,
+        75
+      ],
+      "questionRange": [
+        101,
+        150
+      ],
+      "description": "Intermediate - complex tenses, vocabulary expansion"
+    },
+    {
+      "num": 4,
+      "name": "Upper-Intermediate (B2)",
+      "unitRange": [
+        76,
+        90
+      ],
+      "questionRange": [
+        151,
+        180
+      ],
+      "description": "Upper-intermediate - subjunctive, advanced grammar, colloquial speech"
+    }
+  ],
+  "scoring": {
+    "comprehensionOnly": "Can understand but not produce - needs speaking/writing practice",
+    "productionOnly": "Rare - production harder than comprehension",
+    "both": "True mastery - can understand AND produce",
+    "placementLogic": "Last unit where BOTH comprehension AND production passed"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "unit": 1,
+      "unitName": "Identity Statements (Eu sou)",
+      "phase": 1,
+      "pt": "Eu sou professor",
+      "question": "What does 'Eu sou professor' mean?",
+      "correct": "I am a teacher",
+      "options": [
+        "I am a teacher",
+        "I am a student",
+        "I have a teacher",
+        "I work as a teacher",
+        "I was a teacher",
+        "I am the teacher"
+      ]
+    },
+    {
+      "id": 2,
+      "unit": 1,
+      "unitName": "Identity Statements (Eu sou)",
+      "phase": 1,
+      "type": "production",
+      "en": "I am Brazilian",
+      "question": "Complete the sentence:",
+      "template": "Eu __ brasileiro",
+      "chips": [
+        "sou",
+        "é",
+        "és",
+        "somos",
+        "são",
+        "estou",
+        "está",
+        "era",
+        "fui",
+        "seria"
+      ],
+      "correct": "sou",
+      "hint": "Use 'ser' for identity"
+    },
+    {
+      "id": 3,
+      "unit": 1,
+      "unitName": "Identity Statements (Eu sou)",
+      "phase": 1,
+      "type": "production",
+      "en": "I am a doctor",
+      "question": "Complete the sentence:",
+      "template": "Eu __ médico",
+      "chips": [
+        "sou",
+        "sou um",
+        "é",
+        "estou",
+        "era",
+        "fui",
+        "seria",
+        "seja",
+        "somos",
+        "são"
+      ],
+      "correct": "sou",
+      "hint": "No article with professions"
+    },
+    {
+      "id": 4,
+      "unit": 2,
+      "unitName": "Origin with Contractions (de + article)",
+      "phase": 1,
+      "type": "production",
+      "en": "I am from Brazil",
+      "question": "Complete the sentence:",
+      "template": "Eu sou __ Brasil",
+      "chips": [
+        "do",
+        "da",
+        "dos",
+        "das",
+        "de",
+        "no",
+        "na",
+        "nos",
+        "nas",
+        "ao"
+      ],
+      "correct": "do",
+      "hint": "de + o = do"
+    },
+    {
+      "id": 5,
+      "unit": 2,
+      "unitName": "Origin with Contractions (de + article)",
+      "phase": 1,
+      "type": "production",
+      "en": "I am from Argentina",
+      "question": "Complete the sentence:",
+      "template": "Eu sou __ Argentina",
+      "chips": [
+        "da",
+        "do",
+        "dos",
+        "das",
+        "de",
+        "na",
+        "no",
+        "nas",
+        "nos",
+        "à"
+      ],
+      "correct": "da",
+      "hint": "de + a = da"
+    },
+    {
+      "id": 6,
+      "unit": 2,
+      "unitName": "Origin with Contractions (de + article)",
+      "phase": 1,
+      "type": "production",
+      "en": "I am from the United States",
+      "question": "Complete the sentence:",
+      "template": "Eu sou __ Estados Unidos",
+      "chips": [
+        "dos",
+        "do",
+        "da",
+        "das",
+        "de",
+        "nos",
+        "no",
+        "nas",
+        "na",
+        "aos"
+      ],
+      "correct": "dos",
+      "hint": "de + os = dos"
+    },
+    {
+      "id": 7,
+      "unit": 2,
+      "unitName": "Origin with Contractions (de + article)",
+      "phase": 1,
+      "type": "production",
+      "en": "I am from the Philippines",
+      "question": "Complete the sentence:",
+      "template": "Eu sou __ Filipinas",
+      "chips": [
+        "das",
+        "dos",
+        "do",
+        "da",
+        "de",
+        "nas",
+        "nos",
+        "no",
+        "na",
+        "às"
+      ],
+      "correct": "das",
+      "hint": "de + as = das"
+    },
+    {
+      "id": 8,
+      "unit": 3,
+      "unitName": "Definite Articles (o, a, os, as)",
+      "phase": 1,
+      "type": "production",
+      "en": "The boy is here",
+      "question": "Complete the sentence:",
+      "template": "__ menino está aqui",
+      "chips": [
+        "O",
+        "A",
+        "Os",
+        "As",
+        "Um",
+        "Uma",
+        "Uns",
+        "Umas"
+      ],
+      "correct": "O",
+      "hint": "Masculine singular"
+    },
+    {
+      "id": 9,
+      "unit": 3,
+      "unitName": "Definite Articles (o, a, os, as)",
+      "phase": 1,
+      "type": "production",
+      "en": "The girl is here",
+      "question": "Complete the sentence:",
+      "template": "__ menina está aqui",
+      "chips": [
+        "A",
+        "O",
+        "As",
+        "Os",
+        "Uma",
+        "Um",
+        "Umas",
+        "Uns"
+      ],
+      "correct": "A",
+      "hint": "Feminine singular"
+    },
+    {
+      "id": 10,
+      "unit": 3,
+      "unitName": "Definite Articles (o, a, os, as)",
+      "phase": 1,
+      "type": "production",
+      "en": "The boys are here",
+      "question": "Complete the sentence:",
+      "template": "__ meninos estão aqui",
+      "chips": [
+        "Os",
+        "As",
+        "O",
+        "A",
+        "Uns",
+        "Umas",
+        "Um",
+        "Uma"
+      ],
+      "correct": "Os",
+      "hint": "Masculine plural"
+    },
+    {
+      "id": 11,
+      "unit": 3,
+      "unitName": "Definite Articles (o, a, os, as)",
+      "phase": 1,
+      "type": "production",
+      "en": "The girls are here",
+      "question": "Complete the sentence:",
+      "template": "__ meninas estão aqui",
+      "chips": [
+        "As",
+        "Os",
+        "A",
+        "O",
+        "Umas",
+        "Uns",
+        "Uma",
+        "Um"
+      ],
+      "correct": "As",
+      "hint": "Feminine plural"
+    }
+  ]
+}

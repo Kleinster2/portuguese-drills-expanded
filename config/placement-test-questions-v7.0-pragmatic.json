@@ -1,0 +1,1013 @@
+{
+  "metadata": {
+    "version": "7.0.0",
+    "title": "Portuguese Placement Test - Pragmatic Allocation",
+    "description": "Pragmatically allocated questions. Grammar: production-heavy. Vocabulary: comprehension-heavy. Complex tenses: expanded. ~215 questions total.",
+    "variant": "pt-BR",
+    "totalQuestions": 45,
+    "estimatedMinutes": 70,
+    "structure": "Strategic allocation replaces rigid 2-per-unit rule",
+    "assessmentTypes": {
+      "comprehension": "90 questions (odd IDs 1-179) - Portuguese to English with 6-7 strategic distractors",
+      "production": "90 questions (even IDs 2-180) - English to Portuguese with 8-10 strategic distractors"
+    },
+    "changelog": "v7.0: Complete pragmatic redesign"
+  },
+  "phases": [
+    {
+      "num": 1,
+      "name": "Foundation (A1)",
+      "unitRange": [
+        1,
+        25
+      ],
+      "questionRange": [
+        1,
+        50
+      ],
+      "description": "Absolute beginner - basic identity, present tense"
+    },
+    {
+      "num": 2,
+      "name": "Elementary (A2)",
+      "unitRange": [
+        26,
+        50
+      ],
+      "questionRange": [
+        51,
+        100
+      ],
+      "description": "Elementary - past tenses, questions, comparisons"
+    },
+    {
+      "num": 3,
+      "name": "Intermediate (B1)",
+      "unitRange": [
+        51,
+        75
+      ],
+      "questionRange": [
+        101,
+        150
+      ],
+      "description": "Intermediate - complex tenses, vocabulary expansion"
+    },
+    {
+      "num": 4,
+      "name": "Upper-Intermediate (B2)",
+      "unitRange": [
+        76,
+        90
+      ],
+      "questionRange": [
+        151,
+        180
+      ],
+      "description": "Upper-intermediate - subjunctive, advanced grammar, colloquial speech"
+    }
+  ],
+  "scoring": {
+    "comprehensionOnly": "Can understand but not produce - needs speaking/writing practice",
+    "productionOnly": "Rare - production harder than comprehension",
+    "both": "True mastery - can understand AND produce",
+    "placementLogic": "Last unit where BOTH comprehension AND production passed"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "unit": 1,
+      "unitName": "Identity Statements (Eu sou)",
+      "phase": 1,
+      "pt": "Eu sou professor",
+      "question": "What does 'Eu sou professor' mean?",
+      "correct": "I am a teacher",
+      "options": [
+        "I am a teacher",
+        "I am a student",
+        "I have a teacher",
+        "I work as a teacher",
+        "I was a teacher",
+        "I am the teacher"
+      ]
+    },
+    {
+      "id": 2,
+      "unit": 1,
+      "unitName": "Identity Statements (Eu sou)",
+      "phase": 1,
+      "type": "production",
+      "en": "I am Brazilian",
+      "question": "Complete the sentence:",
+      "template": "Eu __ brasileiro",
+      "chips": [
+        "sou",
+        "é",
+        "és",
+        "somos",
+        "são",
+        "estou",
+        "está",
+        "era",
+        "fui",
+        "seria"
+      ],
+      "correct": "sou",
+      "hint": "ser for identity"
+    },
+    {
+      "id": 3,
+      "unit": 1,
+      "unitName": "Identity Statements (Eu sou)",
+      "phase": 1,
+      "type": "production",
+      "en": "I am a doctor",
+      "question": "Complete the sentence:",
+      "template": "Eu __ médico",
+      "chips": [
+        "sou",
+        "sou um",
+        "é",
+        "estou",
+        "era",
+        "fui",
+        "seria",
+        "seja",
+        "somos",
+        "são"
+      ],
+      "correct": "sou",
+      "hint": "No article"
+    },
+    {
+      "id": 4,
+      "unit": 2,
+      "unitName": "Origin with Contractions (de + article)",
+      "phase": 1,
+      "type": "production",
+      "en": "I am from Brazil",
+      "question": "Complete the sentence:",
+      "template": "Eu sou __ Brasil",
+      "chips": [
+        "do",
+        "da",
+        "dos",
+        "das",
+        "de",
+        "no",
+        "na",
+        "nos",
+        "ao",
+        "à"
+      ],
+      "correct": "do",
+      "hint": "de + o"
+    },
+    {
+      "id": 5,
+      "unit": 2,
+      "unitName": "Origin with Contractions (de + article)",
+      "phase": 1,
+      "type": "production",
+      "en": "I am from Argentina",
+      "question": "Complete the sentence:",
+      "template": "Eu sou __ Argentina",
+      "chips": [
+        "da",
+        "do",
+        "dos",
+        "das",
+        "de",
+        "na",
+        "no",
+        "nas",
+        "à",
+        "ao"
+      ],
+      "correct": "da",
+      "hint": "de + a"
+    },
+    {
+      "id": 6,
+      "unit": 2,
+      "unitName": "Origin with Contractions (de + article)",
+      "phase": 1,
+      "type": "production",
+      "en": "I am from the United States",
+      "question": "Complete the sentence:",
+      "template": "Eu sou __ Estados Unidos",
+      "chips": [
+        "dos",
+        "do",
+        "da",
+        "das",
+        "de",
+        "nos",
+        "no",
+        "nas",
+        "aos",
+        "às"
+      ],
+      "correct": "dos",
+      "hint": "de + os"
+    },
+    {
+      "id": 7,
+      "unit": 2,
+      "unitName": "Origin with Contractions (de + article)",
+      "phase": 1,
+      "type": "production",
+      "en": "I am from the Philippines",
+      "question": "Complete the sentence:",
+      "template": "Eu sou __ Filipinas",
+      "chips": [
+        "das",
+        "dos",
+        "do",
+        "da",
+        "de",
+        "nas",
+        "nos",
+        "nas",
+        "às",
+        "aos"
+      ],
+      "correct": "das",
+      "hint": "de + as"
+    },
+    {
+      "id": 8,
+      "unit": 3,
+      "unitName": "Definite Articles (o, a, os, as)",
+      "phase": 1,
+      "type": "production",
+      "en": "The boy is here",
+      "question": "Complete the sentence:",
+      "template": "__ menino está aqui",
+      "chips": [
+        "O",
+        "A",
+        "Os",
+        "As",
+        "Um",
+        "Uma",
+        "Uns",
+        "Umas"
+      ],
+      "correct": "O",
+      "hint": "Masc sing"
+    },
+    {
+      "id": 9,
+      "unit": 3,
+      "unitName": "Definite Articles (o, a, os, as)",
+      "phase": 1,
+      "type": "production",
+      "en": "The girl is here",
+      "question": "Complete the sentence:",
+      "template": "__ menina está aqui",
+      "chips": [
+        "A",
+        "O",
+        "As",
+        "Os",
+        "Uma",
+        "Um",
+        "Umas",
+        "Uns"
+      ],
+      "correct": "A",
+      "hint": "Fem sing"
+    },
+    {
+      "id": 10,
+      "unit": 3,
+      "unitName": "Definite Articles (o, a, os, as)",
+      "phase": 1,
+      "type": "production",
+      "en": "The boys are here",
+      "question": "Complete the sentence:",
+      "template": "__ meninos estão aqui",
+      "chips": [
+        "Os",
+        "As",
+        "O",
+        "A",
+        "Uns",
+        "Umas",
+        "Um",
+        "Uma"
+      ],
+      "correct": "Os",
+      "hint": "Masc pl"
+    },
+    {
+      "id": 11,
+      "unit": 3,
+      "unitName": "Definite Articles (o, a, os, as)",
+      "phase": 1,
+      "type": "production",
+      "en": "The girls are here",
+      "question": "Complete the sentence:",
+      "template": "__ meninas estão aqui",
+      "chips": [
+        "As",
+        "Os",
+        "A",
+        "O",
+        "Umas",
+        "Uns",
+        "Uma",
+        "Um"
+      ],
+      "correct": "As",
+      "hint": "Fem pl"
+    },
+    {
+      "id": 12,
+      "unit": 4,
+      "unitName": "Indefinite Articles (um, uma, uns, umas)",
+      "phase": 1,
+      "type": "production",
+      "en": "I have a dog",
+      "question": "Complete the sentence:",
+      "template": "Eu tenho __ cachorro",
+      "chips": [
+        "um",
+        "uma",
+        "uns",
+        "umas",
+        "o",
+        "a",
+        "os",
+        "as"
+      ],
+      "correct": "um",
+      "hint": "Masc sing"
+    },
+    {
+      "id": 13,
+      "unit": 4,
+      "unitName": "Indefinite Articles (um, uma, uns, umas)",
+      "phase": 1,
+      "type": "production",
+      "en": "I have a cat",
+      "question": "Complete the sentence:",
+      "template": "Eu tenho __ gata",
+      "chips": [
+        "uma",
+        "um",
+        "umas",
+        "uns",
+        "a",
+        "o",
+        "as",
+        "os"
+      ],
+      "correct": "uma",
+      "hint": "Fem sing"
+    },
+    {
+      "id": 14,
+      "unit": 4,
+      "unitName": "Indefinite Articles (um, uma, uns, umas)",
+      "phase": 1,
+      "type": "production",
+      "en": "I have some books",
+      "question": "Complete the sentence:",
+      "template": "Eu tenho __ livros",
+      "chips": [
+        "uns",
+        "umas",
+        "um",
+        "uma",
+        "os",
+        "as",
+        "o",
+        "a"
+      ],
+      "correct": "uns",
+      "hint": "Masc pl"
+    },
+    {
+      "id": 15,
+      "unit": 4,
+      "unitName": "Indefinite Articles (um, uma, uns, umas)",
+      "phase": 1,
+      "type": "production",
+      "en": "I have some pens",
+      "question": "Complete the sentence:",
+      "template": "Eu tenho __ canetas",
+      "chips": [
+        "umas",
+        "uns",
+        "uma",
+        "um",
+        "as",
+        "os",
+        "a",
+        "o"
+      ],
+      "correct": "umas",
+      "hint": "Fem pl"
+    },
+    {
+      "id": 16,
+      "unit": 6,
+      "unitName": "Adjective Agreement",
+      "phase": 1,
+      "type": "production",
+      "en": "The tall boy",
+      "question": "Complete the sentence:",
+      "template": "O menino __",
+      "chips": [
+        "alto",
+        "alta",
+        "altos",
+        "altas",
+        "grande",
+        "pequeno",
+        "pequena",
+        "grandes"
+      ],
+      "correct": "alto",
+      "hint": "Masc sing"
+    },
+    {
+      "id": 17,
+      "unit": 6,
+      "unitName": "Adjective Agreement",
+      "phase": 1,
+      "type": "production",
+      "en": "The tall girl",
+      "question": "Complete the sentence:",
+      "template": "A menina __",
+      "chips": [
+        "alta",
+        "alto",
+        "altas",
+        "altos",
+        "grande",
+        "pequena",
+        "pequeno",
+        "grandes"
+      ],
+      "correct": "alta",
+      "hint": "Fem sing"
+    },
+    {
+      "id": 18,
+      "unit": 6,
+      "unitName": "Adjective Agreement",
+      "phase": 1,
+      "type": "production",
+      "en": "The tall boys",
+      "question": "Complete the sentence:",
+      "template": "Os meninos __",
+      "chips": [
+        "altos",
+        "altas",
+        "alto",
+        "alta",
+        "grandes",
+        "pequenos",
+        "pequenas",
+        "grande"
+      ],
+      "correct": "altos",
+      "hint": "Masc pl"
+    },
+    {
+      "id": 19,
+      "unit": 6,
+      "unitName": "Adjective Agreement",
+      "phase": 1,
+      "type": "production",
+      "en": "The tall girls",
+      "question": "Complete the sentence:",
+      "template": "As meninas __",
+      "chips": [
+        "altas",
+        "altos",
+        "alta",
+        "alto",
+        "grandes",
+        "pequenas",
+        "pequenos",
+        "grande"
+      ],
+      "correct": "altas",
+      "hint": "Fem pl"
+    },
+    {
+      "id": 20,
+      "unit": 14,
+      "unitName": "Family Members",
+      "phase": 1,
+      "pt": "Meu pai trabalha",
+      "question": "What does this mean?",
+      "correct": "My father works",
+      "options": [
+        "My father works",
+        "My brother works",
+        "My uncle works",
+        "Your father works",
+        "His father works",
+        "The father works"
+      ]
+    },
+    {
+      "id": 21,
+      "unit": 14,
+      "unitName": "Family Members",
+      "phase": 1,
+      "pt": "Minha mãe estuda",
+      "question": "What does this mean?",
+      "correct": "My mother studies",
+      "options": [
+        "My mother studies",
+        "My sister studies",
+        "Your mother studies",
+        "His mother studies",
+        "Her mother studies",
+        "The mother studies"
+      ]
+    },
+    {
+      "id": 22,
+      "unit": 14,
+      "unitName": "Family Members",
+      "phase": 1,
+      "pt": "Meu irmão mora aqui",
+      "question": "What does this mean?",
+      "correct": "My brother lives here",
+      "options": [
+        "My brother lives here",
+        "My father lives here",
+        "My uncle lives here",
+        "Your brother lives here",
+        "His brother lives here",
+        "My sister lives here"
+      ]
+    },
+    {
+      "id": 23,
+      "unit": 14,
+      "unitName": "Family Members",
+      "phase": 1,
+      "pt": "Minha irmã fala português",
+      "question": "What does this mean?",
+      "correct": "My sister speaks Portuguese",
+      "options": [
+        "My sister speaks Portuguese",
+        "My mother speaks Portuguese",
+        "My aunt speaks Portuguese",
+        "Your sister speaks Portuguese",
+        "Her sister speaks Portuguese",
+        "My brother speaks Portuguese"
+      ]
+    },
+    {
+      "id": 24,
+      "unit": 30,
+      "unitName": "Common Question Words",
+      "phase": 2,
+      "pt": "Onde você mora?",
+      "question": "What does this mean?",
+      "correct": "Where do you live?",
+      "options": [
+        "Where do you live?",
+        "When do you live?",
+        "How do you live?",
+        "Why do you live?",
+        "Who lives?",
+        "What do you live?"
+      ]
+    },
+    {
+      "id": 25,
+      "unit": 30,
+      "unitName": "Common Question Words",
+      "phase": 2,
+      "pt": "O que você faz?",
+      "question": "What does this mean?",
+      "correct": "What do you do?",
+      "options": [
+        "What do you do?",
+        "Where do you do?",
+        "How do you do?",
+        "When do you do?",
+        "Why do you do?",
+        "Who does?"
+      ]
+    },
+    {
+      "id": 26,
+      "unit": 30,
+      "unitName": "Common Question Words",
+      "phase": 2,
+      "pt": "Quando você trabalha?",
+      "question": "What does this mean?",
+      "correct": "When do you work?",
+      "options": [
+        "When do you work?",
+        "Where do you work?",
+        "What do you work?",
+        "How do you work?",
+        "Why do you work?",
+        "Who works?"
+      ]
+    },
+    {
+      "id": 27,
+      "unit": 30,
+      "unitName": "Common Question Words",
+      "phase": 2,
+      "pt": "Como você está?",
+      "question": "What does this mean?",
+      "correct": "How are you?",
+      "options": [
+        "How are you?",
+        "Where are you?",
+        "When are you?",
+        "What are you?",
+        "Why are you?",
+        "Who are you?"
+      ]
+    },
+    {
+      "id": 28,
+      "unit": 30,
+      "unitName": "Common Question Words",
+      "phase": 2,
+      "pt": "Por que você estuda?",
+      "question": "What does this mean?",
+      "correct": "Why do you study?",
+      "options": [
+        "Why do you study?",
+        "Where do you study?",
+        "When do you study?",
+        "How do you study?",
+        "What do you study?",
+        "Who studies?"
+      ]
+    },
+    {
+      "id": 29,
+      "unit": 30,
+      "unitName": "Common Question Words",
+      "phase": 2,
+      "type": "production",
+      "en": "Where do you live?",
+      "question": "Complete the sentence:",
+      "template": "__ você mora?",
+      "chips": [
+        "Onde",
+        "Quando",
+        "Como",
+        "Por que",
+        "O que",
+        "Quem",
+        "Qual",
+        "Quanto"
+      ],
+      "correct": "Onde",
+      "hint": "Where = Onde"
+    },
+    {
+      "id": 30,
+      "unit": 5,
+      "unitName": "Location with Estar",
+      "phase": 1,
+      "pt": "Eu estou no trabalho",
+      "question": "What does this mean?",
+      "correct": "I am at work",
+      "options": [
+        "I am at work",
+        "I am a worker",
+        "I have work",
+        "I work",
+        "I was at work",
+        "I go to work"
+      ]
+    },
+    {
+      "id": 31,
+      "unit": 5,
+      "unitName": "Location with Estar",
+      "phase": 1,
+      "type": "production",
+      "en": "I am at home",
+      "question": "Complete the sentence:",
+      "template": "Eu __ em casa",
+      "chips": [
+        "estou",
+        "sou",
+        "está",
+        "fico",
+        "vou",
+        "era",
+        "estava",
+        "fui",
+        "estaria",
+        "seja"
+      ],
+      "correct": "estou",
+      "hint": "estar for location"
+    },
+    {
+      "id": 32,
+      "unit": 5,
+      "unitName": "Location with Estar",
+      "phase": 1,
+      "type": "production",
+      "en": "I am in Brazil",
+      "question": "Complete the sentence:",
+      "template": "Eu __ no Brasil",
+      "chips": [
+        "estou",
+        "sou",
+        "moro",
+        "fico",
+        "vou",
+        "era",
+        "fui",
+        "estava",
+        "estaria",
+        "seja"
+      ],
+      "correct": "estou",
+      "hint": "temporary location"
+    },
+    {
+      "id": 33,
+      "unit": 7,
+      "unitName": "Basic Verbs - Morar (to live)",
+      "phase": 1,
+      "pt": "Eu moro em São Paulo",
+      "question": "What does this mean?",
+      "correct": "I moro in São Paulo",
+      "options": [
+        "I moro in São Paulo",
+        "I studied Portuguese",
+        "I will study Portuguese",
+        "I like Portuguese",
+        "I teach Portuguese",
+        "I learn Portuguese"
+      ]
+    },
+    {
+      "id": 34,
+      "unit": 7,
+      "unitName": "Basic Verbs - Morar (to live)",
+      "phase": 1,
+      "type": "production",
+      "en": "I live in Rio",
+      "question": "Complete the sentence:",
+      "template": "Eu __ Rio",
+      "chips": [
+        "moro",
+        "mara",
+        "mamosramos",
+        "mamram",
+        "moror",
+        "meirei",
+        "miaria",
+        "mariararia",
+        "mere",
+        "masserasse"
+      ],
+      "correct": "moro",
+      "hint": "morar for eu"
+    },
+    {
+      "id": 35,
+      "unit": 8,
+      "unitName": "Basic Verbs - Falar (to speak)",
+      "phase": 1,
+      "pt": "Eu falo português",
+      "question": "What does this mean?",
+      "correct": "I falo Portuguese",
+      "options": [
+        "I falo Portuguese",
+        "I studied Portuguese",
+        "I will study Portuguese",
+        "I like Portuguese",
+        "I teach Portuguese",
+        "I learn Portuguese"
+      ]
+    },
+    {
+      "id": 36,
+      "unit": 8,
+      "unitName": "Basic Verbs - Falar (to speak)",
+      "phase": 1,
+      "type": "production",
+      "en": "I speak Spanish",
+      "question": "Complete the sentence:",
+      "template": "Eu __ Spanish",
+      "chips": [
+        "falo",
+        "fala",
+        "falamos",
+        "falam",
+        "falor",
+        "falei",
+        "falia",
+        "falaria",
+        "fale",
+        "falasse"
+      ],
+      "correct": "falo",
+      "hint": "falar for eu"
+    },
+    {
+      "id": 37,
+      "unit": 10,
+      "unitName": "Basic Verbs - Estudar (to study)",
+      "phase": 1,
+      "pt": "Eu estudo português",
+      "question": "What does this mean?",
+      "correct": "I estudo Portuguese",
+      "options": [
+        "I estudo Portuguese",
+        "I studied Portuguese",
+        "I will study Portuguese",
+        "I like Portuguese",
+        "I teach Portuguese",
+        "I learn Portuguese"
+      ]
+    },
+    {
+      "id": 38,
+      "unit": 10,
+      "unitName": "Basic Verbs - Estudar (to study)",
+      "phase": 1,
+      "type": "production",
+      "en": "I study English",
+      "question": "Complete the sentence:",
+      "template": "Eu __ English",
+      "chips": [
+        "estudo",
+        "estuda",
+        "estudamos",
+        "estudam",
+        "estudor",
+        "estudei",
+        "estudia",
+        "estudaria",
+        "estude",
+        "estudasse"
+      ],
+      "correct": "estudo",
+      "hint": "estudar for eu"
+    },
+    {
+      "id": 39,
+      "unit": 82,
+      "unitName": "Present Subjunctive - Regular Verbs",
+      "phase": 4,
+      "pt": "Espero que você fale",
+      "question": "What does this mean?",
+      "correct": "I hope you speak",
+      "options": [
+        "I hope you speak",
+        "I hope you will speak",
+        "I think you speak",
+        "I want you speak",
+        "I know you speak",
+        "I hope you spoke"
+      ]
+    },
+    {
+      "id": 40,
+      "unit": 82,
+      "unitName": "Present Subjunctive - Regular Verbs",
+      "phase": 4,
+      "type": "production",
+      "en": "I hope you speak",
+      "question": "Complete the sentence:",
+      "template": "Espero que você __",
+      "chips": [
+        "fale",
+        "fala",
+        "falar",
+        "falou",
+        "falava",
+        "falará",
+        "falaria",
+        "falei",
+        "falasse",
+        "falar"
+      ],
+      "correct": "fale",
+      "hint": "Present subjunctive"
+    },
+    {
+      "id": 41,
+      "unit": 82,
+      "unitName": "Present Subjunctive - Regular Verbs",
+      "phase": 4,
+      "type": "production",
+      "en": "I hope you eat",
+      "question": "Complete the sentence:",
+      "template": "Espero que você __",
+      "chips": [
+        "coma",
+        "come",
+        "comer",
+        "comeu",
+        "comia",
+        "comerá",
+        "comeria",
+        "comi",
+        "comesse",
+        "comer"
+      ],
+      "correct": "coma",
+      "hint": "Subjunctive -ER"
+    },
+    {
+      "id": 42,
+      "unit": 82,
+      "unitName": "Present Subjunctive - Regular Verbs",
+      "phase": 4,
+      "type": "production",
+      "en": "I hope you leave",
+      "question": "Complete the sentence:",
+      "template": "Espero que você __",
+      "chips": [
+        "parta",
+        "parte",
+        "partir",
+        "partiu",
+        "partia",
+        "partirá",
+        "partiria",
+        "parti",
+        "partisse",
+        "partir"
+      ],
+      "correct": "parta",
+      "hint": "Subjunctive -IR"
+    },
+    {
+      "id": 43,
+      "unit": 82,
+      "unitName": "Present Subjunctive - Regular Verbs",
+      "phase": 4,
+      "type": "production",
+      "en": "Maybe we travel",
+      "question": "Complete the sentence:",
+      "template": "Talvez nós __",
+      "chips": [
+        "viajemos",
+        "viajamos",
+        "viajar",
+        "viajaram",
+        "viajávamos",
+        "viajaremos",
+        "viajaríamos",
+        "viajássemos",
+        "viaje",
+        "viajar"
+      ],
+      "correct": "viajemos",
+      "hint": "Nós subjunctive"
+    },
+    {
+      "id": 44,
+      "unit": 15,
+      "unitName": "Negation with Não",
+      "phase": 1,
+      "pt": "Eu não falo inglês",
+      "question": "What does this mean?",
+      "correct": "I don't speak English",
+      "options": [
+        "I don't speak English",
+        "I not speak English",
+        "I never speak English",
+        "I can't speak English",
+        "I didn't speak English",
+        "I won't speak English"
+      ]
+    },
+    {
+      "id": 45,
+      "unit": 15,
+      "unitName": "Negation with Não",
+      "phase": 1,
+      "pt": "Ele não mora aqui",
+      "question": "What does this mean?",
+      "correct": "He doesn't live here",
+      "options": [
+        "He doesn't live here",
+        "He not lives here",
+        "He never lives here",
+        "He can't live here",
+        "He didn't live here",
+        "He won't live here"
+      ]
+    }
+  ]
+}

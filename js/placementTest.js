@@ -1,29 +1,38 @@
 /**
  * Placement Test Module - Incognito Mode (No Feedback)
- * 303-question streamlined diagnostic test (v8.0.0)
+ * Two independent diagnostic tests (v1.0.0):
+ *   - Grammar Test: 192 questions (71 comprehension + 121 production)
+ *   - Vocabulary Test: 111 questions (106 comprehension + 5 production)
  * Complete coverage: Units 1-89 (A1 Beginner → B2 Upper-Intermediate)
  * Assessment Types: Comprehension (PT→EN, 6-7 options) + Production (EN→PT, 8-10 chip options)
  * Features: Diagonal testing of 2×2 matrices, complete possessive/demonstrative coverage, "I don't know" skip
- * Enhancements: Streamlined redundant patterns, enhanced possessives with plurals, demonstratives with gender/number
  */
+
+// Detect test type from URL parameter (?test=grammar or ?test=vocabulary)
+const urlParams = new URLSearchParams(window.location.search);
+const testType = urlParams.get('test') || 'grammar'; // Default to grammar
 
 let questionBank = null;
 let currentQuestionIndex = 0;
 let testAnswers = [];
 
 /**
- * Load question bank from JSON file
+ * Load question bank from JSON file based on test type
  */
 async function loadQuestionBank() {
   try {
-    const response = await fetch('/config/placement-test-questions-v8.0-streamlined.json');
+    const fileName = testType === 'vocabulary'
+      ? '/config/placement-test-questions-vocabulary-v1.0.json'
+      : '/config/placement-test-questions-grammar-v1.0.json';
+
+    const response = await fetch(fileName);
     if (!response.ok) {
       throw new Error(`Failed to load questions: ${response.status}`);
     }
     questionBank = await response.json();
-    console.log(`✓ Loaded ${questionBank.questions.length} questions (v${questionBank.metadata.version})`);
-    console.log(`  - ${questionBank.metadata.assessmentTypes.comprehension}`);
-    console.log(`  - ${questionBank.metadata.assessmentTypes.production}`);
+    console.log(`✓ Loaded ${testType} test: ${questionBank.questions.length} questions (v${questionBank.metadata.version})`);
+    console.log(`  - Comprehension: ${questionBank.metadata.questionTypes.comprehension}`);
+    console.log(`  - Production: ${questionBank.metadata.questionTypes.production}`);
     return questionBank;
   } catch (error) {
     console.error('Error loading question bank:', error);
@@ -45,8 +54,11 @@ async function startPlacementTest() {
   currentQuestionIndex = 0;
   testAnswers = [];
 
-  // Update title
-  drillTitle.textContent = 'Portuguese Placement Test';
+  // Update title based on test type
+  const testTitle = testType === 'vocabulary'
+    ? 'Portuguese Vocabulary Placement Test'
+    : 'Portuguese Grammar Placement Test';
+  drillTitle.textContent = testTitle;
 
   // Show modal
   modal.classList.remove('hidden');
@@ -530,14 +542,16 @@ function showCompletionScreen() {
  */
 function generateHash() {
   const testData = {
-    v: "8.0.0",
+    v: "1.0.0",
+    type: testType,
     t: Math.floor(Date.now() / 1000),
     a: testAnswers
   };
 
   const json = JSON.stringify(testData);
   const compressed = LZString.compressToBase64(json);
-  return `PT-BR-${compressed}`;
+  const prefix = testType === 'vocabulary' ? 'PT-BR-V-' : 'PT-BR-G-';
+  return `${prefix}${compressed}`;
 }
 
 /**
