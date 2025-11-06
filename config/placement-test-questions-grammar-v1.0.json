@@ -2001,18 +2001,18 @@
       "question": "Complete the sentence:",
       "template": "Nós __ lá",
       "chips": [
-        "vivíamos",
-        "vivo",
-        "vivi",
-        "viver",
-        "vivemos",
-        "vivia",
-        "viveríamos",
-        "vivamos",
-        "vivêssemos",
-        "viveremos"
+        "morávamos",
+        "moro",
+        "morei",
+        "morar",
+        "moramos",
+        "morava",
+        "moraríamos",
+        "moremos",
+        "morássemos",
+        "moraremos"
       ],
-      "correct": "vivíamos",
+      "correct": "morávamos",
       "unitTopic": "Imperfect Regular"
     },
     {
