@@ -2069,9 +2069,9 @@
       "unit": 46,
       "phase": 3,
       "type": "production",
-      "en": "I used to be tired",
+      "en": "He used to be tired",
       "question": "Complete the sentence:",
-      "template": "Eu __ cansado",
+      "template": "Ele __ cansado",
       "chips": [
         "era",
         "sou",
