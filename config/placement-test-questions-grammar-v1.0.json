@@ -3,10 +3,10 @@
     "version": "1.0.0",
     "title": "Portuguese Grammar Placement Test",
     "description": "Comprehensive diagnostic test focusing on Portuguese grammar structures, verb conjugations, and syntax",
-    "totalQuestions": 241,
+    "totalQuestions": 260,
     "questionTypes": {
-      "comprehension": 53,
-      "production": 188
+      "comprehension": 58,
+      "production": 202
     },
     "testType": "grammar"
   },
@@ -5240,6 +5240,418 @@
       ],
       "correct": "vou melhorando",
       "unitTopic": "Progressive Periphrases"
+    },
+    {
+      "id": 248,
+      "unit": 91,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Ele me deu o livro",
+      "question": "What does this mean?",
+      "correct": "He gave me the book",
+      "options": [
+        "He gave me the book",
+        "He gives me the book",
+        "I gave him the book",
+        "He will give me the book",
+        "He is giving me the book",
+        "He gave the book to me"
+      ],
+      "unitTopic": "Pronoun + Verb Combinations"
+    },
+    {
+      "id": 249,
+      "unit": 91,
+      "phase": 3,
+      "type": "production",
+      "en": "She gave me money",
+      "question": "Complete the sentence:",
+      "template": "Ela __ deu dinheiro",
+      "chips": [
+        "me",
+        "lhe",
+        "te",
+        "nos",
+        "o",
+        "a",
+        "se",
+        "os",
+        "as",
+        "lhes"
+      ],
+      "correct": "me",
+      "unitTopic": "Pronoun + Verb Combinations"
+    },
+    {
+      "id": 250,
+      "unit": 91,
+      "phase": 3,
+      "type": "production",
+      "en": "I gave him the keys",
+      "question": "Complete the sentence:",
+      "template": "Eu __ dei as chaves",
+      "chips": [
+        "lhe",
+        "me",
+        "te",
+        "nos",
+        "o",
+        "a",
+        "se",
+        "os",
+        "as",
+        "lhes"
+      ],
+      "correct": "lhe",
+      "unitTopic": "Pronoun + Verb Combinations"
+    },
+    {
+      "id": 251,
+      "unit": 91,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Eles me disseram a verdade",
+      "question": "What does this mean?",
+      "correct": "They told me the truth",
+      "options": [
+        "They told me the truth",
+        "They tell me the truth",
+        "I told them the truth",
+        "They will tell me the truth",
+        "They are telling me the truth",
+        "They said the truth to me"
+      ],
+      "unitTopic": "Pronoun + Verb Combinations"
+    },
+    {
+      "id": 252,
+      "unit": 91,
+      "phase": 3,
+      "type": "production",
+      "en": "He told me everything",
+      "question": "Complete the sentence:",
+      "template": "Ele __ disse tudo",
+      "chips": [
+        "me",
+        "lhe",
+        "te",
+        "nos",
+        "o",
+        "a",
+        "se",
+        "os",
+        "as",
+        "lhes"
+      ],
+      "correct": "me",
+      "unitTopic": "Pronoun + Verb Combinations"
+    },
+    {
+      "id": 253,
+      "unit": 91,
+      "phase": 3,
+      "type": "production",
+      "en": "I told her the news",
+      "question": "Complete the sentence:",
+      "template": "Eu __ disse a notícia",
+      "chips": [
+        "lhe",
+        "me",
+        "te",
+        "nos",
+        "a",
+        "o",
+        "se",
+        "os",
+        "as",
+        "lhes"
+      ],
+      "correct": "lhe",
+      "unitTopic": "Pronoun + Verb Combinations"
+    },
+    {
+      "id": 254,
+      "unit": 91,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Pedi-lhe um favor",
+      "question": "What does this mean?",
+      "correct": "I asked him/her for a favor",
+      "options": [
+        "I asked him/her for a favor",
+        "I ask him/her for a favor",
+        "He asked me for a favor",
+        "I will ask for a favor",
+        "I am asking for a favor",
+        "I requested a favor from him"
+      ],
+      "unitTopic": "Pronoun + Verb Combinations"
+    },
+    {
+      "id": 255,
+      "unit": 91,
+      "phase": 3,
+      "type": "production",
+      "en": "She asked me for help",
+      "question": "Complete the sentence:",
+      "template": "Ela __ pediu ajuda",
+      "chips": [
+        "me",
+        "lhe",
+        "te",
+        "nos",
+        "o",
+        "a",
+        "se",
+        "os",
+        "as",
+        "lhes"
+      ],
+      "correct": "me",
+      "unitTopic": "Pronoun + Verb Combinations"
+    },
+    {
+      "id": 256,
+      "unit": 91,
+      "phase": 3,
+      "type": "production",
+      "en": "I explained it to her",
+      "question": "Complete the sentence:",
+      "template": "Eu __ expliquei",
+      "chips": [
+        "lhe",
+        "me",
+        "te",
+        "nos",
+        "a",
+        "o",
+        "se",
+        "os",
+        "as",
+        "lhes"
+      ],
+      "correct": "lhe",
+      "unitTopic": "Pronoun + Verb Combinations"
+    },
+    {
+      "id": 257,
+      "unit": 91,
+      "phase": 3,
+      "type": "production",
+      "en": "He explained to me",
+      "question": "Complete the sentence:",
+      "template": "Ele __ explicou",
+      "chips": [
+        "me",
+        "lhe",
+        "te",
+        "nos",
+        "o",
+        "a",
+        "se",
+        "os",
+        "as",
+        "lhes"
+      ],
+      "correct": "me",
+      "unitTopic": "Pronoun + Verb Combinations"
+    },
+    {
+      "id": 258,
+      "unit": 91,
+      "phase": 3,
+      "type": "production",
+      "en": "She showed me the photos",
+      "question": "Complete the sentence:",
+      "template": "Ela __ mostrou as fotos",
+      "chips": [
+        "me",
+        "lhe",
+        "te",
+        "nos",
+        "o",
+        "a",
+        "se",
+        "os",
+        "as",
+        "lhes"
+      ],
+      "correct": "me",
+      "unitTopic": "Pronoun + Verb Combinations"
+    },
+    {
+      "id": 259,
+      "unit": 92,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Ele me disse para esperar",
+      "question": "What does this mean?",
+      "correct": "He told me to wait",
+      "options": [
+        "He told me to wait",
+        "He tells me to wait",
+        "I told him to wait",
+        "He said for me to wait",
+        "He will tell me to wait",
+        "He is telling me to wait"
+      ],
+      "unitTopic": "Pronoun + disse/pediu para"
+    },
+    {
+      "id": 260,
+      "unit": 92,
+      "phase": 3,
+      "type": "production",
+      "en": "They told me to come",
+      "question": "Complete the sentence:",
+      "template": "Eles __ disseram para vir",
+      "chips": [
+        "me",
+        "lhe",
+        "te",
+        "nos",
+        "o",
+        "a",
+        "se",
+        "os",
+        "as",
+        "lhes"
+      ],
+      "correct": "me",
+      "unitTopic": "Pronoun + disse/pediu para"
+    },
+    {
+      "id": 261,
+      "unit": 92,
+      "phase": 3,
+      "type": "production",
+      "en": "I told him to leave",
+      "question": "Complete the sentence:",
+      "template": "Eu __ disse para sair",
+      "chips": [
+        "lhe",
+        "me",
+        "te",
+        "nos",
+        "o",
+        "a",
+        "se",
+        "os",
+        "as",
+        "lhes"
+      ],
+      "correct": "lhe",
+      "unitTopic": "Pronoun + disse/pediu para"
+    },
+    {
+      "id": 262,
+      "unit": 92,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Ela me pediu para ajudar",
+      "question": "What does this mean?",
+      "correct": "She asked me to help",
+      "options": [
+        "She asked me to help",
+        "She asks me to help",
+        "I asked her to help",
+        "She requested that I help",
+        "She will ask me to help",
+        "She is asking me to help"
+      ],
+      "unitTopic": "Pronoun + disse/pediu para"
+    },
+    {
+      "id": 263,
+      "unit": 92,
+      "phase": 3,
+      "type": "production",
+      "en": "He asked me to call",
+      "question": "Complete the sentence:",
+      "template": "Ele __ pediu para ligar",
+      "chips": [
+        "me",
+        "lhe",
+        "te",
+        "nos",
+        "o",
+        "a",
+        "se",
+        "os",
+        "as",
+        "lhes"
+      ],
+      "correct": "me",
+      "unitTopic": "Pronoun + disse/pediu para"
+    },
+    {
+      "id": 264,
+      "unit": 92,
+      "phase": 3,
+      "type": "production",
+      "en": "I asked her to wait",
+      "question": "Complete the sentence:",
+      "template": "Eu __ pedi para esperar",
+      "chips": [
+        "lhe",
+        "me",
+        "te",
+        "nos",
+        "a",
+        "o",
+        "se",
+        "os",
+        "as",
+        "lhes"
+      ],
+      "correct": "lhe",
+      "unitTopic": "Pronoun + disse/pediu para"
+    },
+    {
+      "id": 265,
+      "unit": 91,
+      "phase": 3,
+      "type": "production",
+      "en": "She taught me Portuguese",
+      "question": "Complete the sentence:",
+      "template": "Ela __ ensinou português",
+      "chips": [
+        "me",
+        "lhe",
+        "te",
+        "nos",
+        "o",
+        "a",
+        "se",
+        "os",
+        "as",
+        "lhes"
+      ],
+      "correct": "me",
+      "unitTopic": "Pronoun + Verb Combinations"
+    },
+    {
+      "id": 266,
+      "unit": 91,
+      "phase": 3,
+      "type": "production",
+      "en": "He told me a story",
+      "question": "Complete the sentence:",
+      "template": "Ele __ contou uma história",
+      "chips": [
+        "me",
+        "lhe",
+        "te",
+        "nos",
+        "o",
+        "a",
+        "se",
+        "os",
+        "as",
+        "lhes"
+      ],
+      "correct": "me",
+      "unitTopic": "Pronoun + Verb Combinations"
     }
   ]
 }
