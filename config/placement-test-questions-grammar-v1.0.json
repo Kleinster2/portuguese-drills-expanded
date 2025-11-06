@@ -881,9 +881,9 @@
       "unit": 24,
       "phase": 2,
       "type": "production",
-      "en": "We drink water",
+      "en": "I drink water",
       "question": "Complete the sentence:",
-      "template": "A gente __ agua",
+      "template": "Eu __ agua",
       "chips": [
         "bebemos",
         "bebo",
@@ -896,7 +896,7 @@
         "bebamos",
         "bebêssemos"
       ],
-      "correct": "bebe",
+      "correct": "bebo",
       "unitTopic": "1st Person Plural"
     },
     {
@@ -904,9 +904,9 @@
       "unit": 25,
       "phase": 2,
       "type": "production",
-      "en": "We like music",
+      "en": "I like music",
       "question": "Complete the sentence:",
-      "template": "A gente gosta __ musica",
+      "template": "Eu gosto __ musica",
       "chips": [
         "de",
         "do",
@@ -927,9 +927,9 @@
       "unit": 25,
       "phase": 2,
       "type": "production",
-      "en": "We like to study",
+      "en": "He likes to study",
       "question": "Complete the sentence:",
-      "template": "A gente gosta __ estudar",
+      "template": "Ele gosta __ estudar",
       "chips": [
         "de",
         "do",
@@ -973,9 +973,9 @@
       "unit": 26,
       "phase": 2,
       "type": "production",
-      "en": "We cut the bread",
+      "en": "He cuts the bread",
       "question": "Complete the sentence:",
-      "template": "A gente __ o pao",
+      "template": "Ele __ o pao",
       "chips": [
         "parto",
         "parte",
@@ -1014,9 +1014,9 @@
       "unit": 27,
       "phase": 2,
       "type": "production",
-      "en": "We are going to study Portuguese",
+      "en": "I am going to study Portuguese",
       "question": "Complete the sentence:",
-      "template": "A gente vai __ portugues",
+      "template": "Eu vou __ portugues",
       "chips": [
         "estudar",
         "estudo",
@@ -1037,9 +1037,9 @@
       "unit": 27,
       "phase": 2,
       "type": "production",
-      "en": "We are going to stay at home",
+      "en": "She is going to stay at home",
       "question": "Complete the sentence:",
-      "template": "A gente vai __ em casa",
+      "template": "Ela vai __ em casa",
       "chips": [
         "ficar",
         "fico",
