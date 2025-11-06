@@ -1863,9 +1863,9 @@
       "unit": 41,
       "phase": 2,
       "type": "production",
-      "en": "I go to the banks",
+      "en": "They go to the banks",
       "question": "Complete the sentence:",
-      "template": "Eu vou __ bancos",
+      "template": "Eles vao __ bancos",
       "chips": [
         "aos",
         "às",
@@ -1886,10 +1886,11 @@
       "unit": 41,
       "phase": 2,
       "type": "production",
-      "en": "I go to the schools",
+      "en": "They go to the schools",
       "question": "Complete the sentence:",
-      "template": "Eu vou __ escolas",
+      "template": "Elas vao __ escolas",
       "chips": [
+        "as",
         "às",
         "aos",
         "à",
@@ -1901,7 +1902,7 @@
         "das",
         "dos"
       ],
-      "correct": "às",
+      "correct": "as",
       "unitTopic": "Preposition Contractions"
     },
     {
@@ -5164,11 +5165,12 @@
       "unit": 90,
       "phase": 4,
       "type": "production",
-      "en": "I have been working a lot (lately)",
+      "en": "They have been working a lot",
       "question": "Complete the sentence:",
-      "template": "Eu __",
+      "template": "Eles __",
       "chips": [
         "ando trabalhando",
+        "andam trabalhando",
         "andei trabalhando",
         "andar trabalhando",
         "andava trabalhando",
@@ -5179,7 +5181,7 @@
         "trabalhei",
         "trabalhava"
       ],
-      "correct": "ando trabalhando",
+      "correct": "andam trabalhando",
       "unitTopic": "Expressions with Para"
     },
     {
@@ -5293,9 +5295,9 @@
       "unit": 91,
       "phase": 3,
       "type": "production",
-      "en": "I gave him the keys",
+      "en": "They gave him the keys",
       "question": "Complete the sentence:",
-      "template": "Eu __ dei as chaves",
+      "template": "Eles __ deram as chaves",
       "chips": [
         "lhe",
         "me",
@@ -5421,9 +5423,9 @@
       "unit": 91,
       "phase": 3,
       "type": "production",
-      "en": "I explained it to her",
+      "en": "They explained it to her",
       "question": "Complete the sentence:",
-      "template": "Eu __ expliquei",
+      "template": "Elas __ explicaram",
       "chips": [
         "lhe",
         "me",
