@@ -3,10 +3,10 @@
     "version": "1.0.0",
     "title": "Portuguese Grammar Placement Test",
     "description": "Comprehensive diagnostic test focusing on Portuguese grammar structures, verb conjugations, and syntax",
-    "totalQuestions": 142,
+    "totalQuestions": 141,
     "questionTypes": {
-      "comprehension": 71,
-      "production": 121
+      "comprehension": 23,
+      "production": 118
     },
     "testType": "grammar"
   },
@@ -2595,28 +2595,6 @@
         "comendo"
       ],
       "correct": "coma"
-    },
-    {
-      "id": 125,
-      "unit": 82,
-      "phase": 4,
-      "type": "production",
-      "en": "I hope you leave",
-      "question": "Complete the sentence:",
-      "template": "Espero que você __",
-      "chips": [
-        "parta",
-        "parte",
-        "partir",
-        "partiu",
-        "partia",
-        "partirá",
-        "partiria",
-        "parti",
-        "partisse",
-        "partindo"
-      ],
-      "correct": "parta"
     },
     {
       "id": 126,
