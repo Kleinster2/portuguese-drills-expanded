@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "title": "Portuguese Grammar Placement Test",
     "description": "Comprehensive diagnostic test focusing on Portuguese grammar structures, verb conjugations, and syntax",
-    "totalQuestions": 188,
+    "totalQuestions": 187,
     "questionTypes": {
       "comprehension": 71,
       "production": 121
@@ -416,7 +416,7 @@
       "unit": 9,
       "phase": 1,
       "type": "production",
-      "en": "I work at the hospital",
+      "en": "I work inside the hospital",
       "question": "Complete the sentence:",
       "template": "Eu trabalho __ hospital",
       "chips": [
@@ -611,7 +611,7 @@
       "unit": 13,
       "phase": 1,
       "type": "production",
-      "en": "I am at work",
+      "en": "I am currently at work",
       "question": "Complete the sentence:",
       "template": "Eu estou __ trabalho",
       "chips": [
@@ -2110,7 +2110,7 @@
       "unit": 41,
       "phase": 2,
       "type": "production",
-      "en": "I go to the park",
+      "en": "I'm heading to the park",
       "question": "Complete the sentence:",
       "template": "Eu vou __ parque",
       "chips": [
@@ -2132,7 +2132,7 @@
       "unit": 41,
       "phase": 2,
       "type": "production",
-      "en": "I go to school",
+      "en": "I'm heading to school",
       "question": "Complete the sentence:",
       "template": "Eu vou __ escola",
       "chips": [
@@ -2248,7 +2248,7 @@
       "unit": 42,
       "phase": 2,
       "type": "production",
-      "en": "I am going home",
+      "en": "I'm going home",
       "question": "Complete the sentence:",
       "template": "Eu vou __ casa",
       "chips": [
@@ -3046,7 +3046,7 @@
       "unit": 79,
       "phase": 4,
       "type": "production",
-      "en": "I go to the beach",
+      "en": "I'm heading to the beach",
       "question": "Complete the sentence:",
       "template": "Eu vou __ praia",
       "chips": [
@@ -3087,28 +3087,6 @@
     },
     {
       "id": 154,
-      "unit": 79,
-      "phase": 4,
-      "type": "production",
-      "en": "I go to school",
-      "question": "Complete the sentence:",
-      "template": "Eu vou __ escola",
-      "chips": [
-        "à",
-        "a",
-        "na",
-        "para a",
-        "pela",
-        "da",
-        "ao",
-        "no",
-        "pelo",
-        "do"
-      ],
-      "correct": "à"
-    },
-    {
-      "id": 155,
       "unit": 80,
       "phase": 4,
       "type": "comprehension",
@@ -3125,7 +3103,7 @@
       ]
     },
     {
-      "id": 156,
+      "id": 155,
       "unit": 80,
       "phase": 4,
       "type": "comprehension",
@@ -3142,7 +3120,7 @@
       ]
     },
     {
-      "id": 157,
+      "id": 156,
       "unit": 80,
       "phase": 4,
       "type": "production",
@@ -3164,7 +3142,7 @@
       "correct": "Todo"
     },
     {
-      "id": 158,
+      "id": 157,
       "unit": 81,
       "phase": 4,
       "type": "comprehension",
@@ -3181,7 +3159,7 @@
       ]
     },
     {
-      "id": 159,
+      "id": 158,
       "unit": 81,
       "phase": 4,
       "type": "comprehension",
@@ -3198,7 +3176,7 @@
       ]
     },
     {
-      "id": 160,
+      "id": 159,
       "unit": 82,
       "phase": 4,
       "type": "comprehension",
@@ -3215,7 +3193,7 @@
       ]
     },
     {
-      "id": 161,
+      "id": 160,
       "unit": 82,
       "phase": 4,
       "type": "production",
@@ -3237,7 +3215,7 @@
       "correct": "coma"
     },
     {
-      "id": 162,
+      "id": 161,
       "unit": 82,
       "phase": 4,
       "type": "production",
@@ -3259,7 +3237,7 @@
       "correct": "parta"
     },
     {
-      "id": 163,
+      "id": 162,
       "unit": 82,
       "phase": 4,
       "type": "production",
@@ -3281,7 +3259,7 @@
       "correct": "viajemos"
     },
     {
-      "id": 164,
+      "id": 163,
       "unit": 83,
       "phase": 4,
       "type": "comprehension",
@@ -3298,7 +3276,7 @@
       ]
     },
     {
-      "id": 165,
+      "id": 164,
       "unit": 83,
       "phase": 4,
       "type": "production",
@@ -3320,7 +3298,7 @@
       "correct": "seja"
     },
     {
-      "id": 166,
+      "id": 165,
       "unit": 83,
       "phase": 4,
       "type": "production",
@@ -3342,7 +3320,7 @@
       "correct": "esteja"
     },
     {
-      "id": 167,
+      "id": 166,
       "unit": 83,
       "phase": 4,
       "type": "production",
@@ -3364,7 +3342,7 @@
       "correct": "vá"
     },
     {
-      "id": 168,
+      "id": 167,
       "unit": 83,
       "phase": 4,
       "type": "production",
@@ -3386,7 +3364,7 @@
       "correct": "tenha"
     },
     {
-      "id": 169,
+      "id": 168,
       "unit": 84,
       "phase": 4,
       "type": "comprehension",
@@ -3403,7 +3381,7 @@
       ]
     },
     {
-      "id": 170,
+      "id": 169,
       "unit": 84,
       "phase": 4,
       "type": "comprehension",
@@ -3420,7 +3398,7 @@
       ]
     },
     {
-      "id": 171,
+      "id": 170,
       "unit": 84,
       "phase": 4,
       "type": "production",
@@ -3442,7 +3420,7 @@
       "correct": "tivesse"
     },
     {
-      "id": 172,
+      "id": 171,
       "unit": 84,
       "phase": 4,
       "type": "production",
@@ -3464,7 +3442,7 @@
       "correct": "estivesse"
     },
     {
-      "id": 173,
+      "id": 172,
       "unit": 84,
       "phase": 4,
       "type": "production",
@@ -3486,7 +3464,7 @@
       "correct": "tivéssemos"
     },
     {
-      "id": 174,
+      "id": 173,
       "unit": 85,
       "phase": 4,
       "type": "comprehension",
@@ -3503,7 +3481,7 @@
       ]
     },
     {
-      "id": 175,
+      "id": 174,
       "unit": 85,
       "phase": 4,
       "type": "production",
@@ -3525,7 +3503,7 @@
       "correct": "chegar"
     },
     {
-      "id": 176,
+      "id": 175,
       "unit": 85,
       "phase": 4,
       "type": "production",
@@ -3547,7 +3525,7 @@
       "correct": "tiver"
     },
     {
-      "id": 177,
+      "id": 176,
       "unit": 85,
       "phase": 4,
       "type": "production",
@@ -3569,7 +3547,7 @@
       "correct": "pudermos"
     },
     {
-      "id": 178,
+      "id": 177,
       "unit": 86,
       "phase": 4,
       "type": "comprehension",
@@ -3586,7 +3564,7 @@
       ]
     },
     {
-      "id": 179,
+      "id": 178,
       "unit": 86,
       "phase": 4,
       "type": "comprehension",
@@ -3603,7 +3581,7 @@
       ]
     },
     {
-      "id": 180,
+      "id": 179,
       "unit": 86,
       "phase": 4,
       "type": "production",
@@ -3625,7 +3603,7 @@
       "correct": "tá"
     },
     {
-      "id": 181,
+      "id": 180,
       "unit": 87,
       "phase": 4,
       "type": "comprehension",
@@ -3642,7 +3620,7 @@
       ]
     },
     {
-      "id": 182,
+      "id": 181,
       "unit": 87,
       "phase": 4,
       "type": "comprehension",
@@ -3659,7 +3637,7 @@
       ]
     },
     {
-      "id": 183,
+      "id": 182,
       "unit": 88,
       "phase": 4,
       "type": "comprehension",
@@ -3676,7 +3654,7 @@
       ]
     },
     {
-      "id": 184,
+      "id": 183,
       "unit": 88,
       "phase": 4,
       "type": "comprehension",
@@ -3693,7 +3671,7 @@
       ]
     },
     {
-      "id": 185,
+      "id": 184,
       "unit": 89,
       "phase": 4,
       "type": "comprehension",
@@ -3710,7 +3688,7 @@
       ]
     },
     {
-      "id": 186,
+      "id": 185,
       "unit": 89,
       "phase": 4,
       "type": "comprehension",
@@ -3727,7 +3705,7 @@
       ]
     },
     {
-      "id": 187,
+      "id": 186,
       "unit": 89,
       "phase": 4,
       "type": "comprehension",
@@ -3744,7 +3722,7 @@
       ]
     },
     {
-      "id": 188,
+      "id": 187,
       "unit": 89,
       "phase": 4,
       "type": "production",
