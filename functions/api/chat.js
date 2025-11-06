@@ -22,12 +22,8 @@ export async function onRequestOptions({ request }) {
   return new Response(null, { status: 204, headers: corsHeaders(request) });
 }
 
-// Simple in-memory session storage
-let sessions = new Map();
-
-function generateSessionId() {
-  return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-}
+// Stateless architecture - no server-side session storage
+// All conversation history is sent by the client with each request
 
 // Import the PromptManager
 import promptManager from '../../utils/promptManager.js';
@@ -595,146 +591,70 @@ async function callClaude(apiKey, messages, retryCount = 0, forbiddenWordRetryCo
 export async function onRequestPost({ request, env }) {
   const headers = corsHeaders(request);
 
-
   try {
     const body = await request.json().catch(() => ({}));
     const { sessionId, drillId, message, isNewSession, messages: clientMessages } = body;
-    
 
-    if (isNewSession || !sessionId) {
-      // Create new session and return welcome message
-      const newSessionId = generateSessionId();
-      const actualDrillId = drillId || 'regular-ar';
-
-      // Use provided message or random greeting to ensure variety
-      const greetings = [
-        'Hello, I\'m ready to start practicing!',
-        'Hi! Let\'s begin.',
-        'Ready to practice!',
-        'I\'m ready to learn.',
-        'Let\'s get started!',
-        'Hello! I\'m ready.',
-        'Ready when you are!',
-        'Let\'s practice!'
-      ];
-      const initialMessage = message || greetings[Math.floor(Math.random() * greetings.length)];
-
-      const session = {
-        sessionId: newSessionId,
-        drillId: actualDrillId,
-        messages: [
-          { role: 'system', content: getDrillPrompt(actualDrillId), timestamp: new Date() },
-          { role: 'user', content: initialMessage, timestamp: new Date() }
-        ],
-        createdAt: new Date(),
-        lastActivity: new Date(),
-        metadata: { dialect: 'BP' }
-      };
-      
-      sessions.set(newSessionId, session);
-      
-      // Get initial welcome message
-      // For local development, use fallback if env var not working
-      const apiKey = env.ANTHROPIC_API_KEY;
-      if (!apiKey) {
-        return new Response(JSON.stringify({ 
-          error: 'Anthropic API key not configured'
-        }), {
-          status: 500,
-          headers: { ...headers, 'Content-Type': 'application/json' }
-        });
-      }
-      const welcomeResponse = await callClaude(apiKey, session.messages);
-      session.messages.push({
-        role: 'assistant',
-        content: welcomeResponse,
-        timestamp: new Date()
-      });
-
-      return new Response(JSON.stringify({
-        sessionId: newSessionId,
-        response: welcomeResponse
-      }), {
-        status: 200,
-        headers: { ...headers, 'Content-Type': 'application/json' }
-      });
-    } else {
-      // Continue existing session
-      let session = sessions.get(sessionId);
-
-      // If session not found but client provided messages, use those (stateless mode)
-      if (!session && clientMessages && Array.isArray(clientMessages)) {
-        const actualDrillId = drillId || 'regular-ar';
-
-        // Reconstruct session with system message first
-        const systemMessage = { role: 'system', content: getDrillPrompt(actualDrillId), timestamp: new Date() };
-        const allMessages = [systemMessage, ...clientMessages];
-
-        session = {
-          sessionId: sessionId,
-          drillId: actualDrillId,
-          messages: allMessages,
-          createdAt: new Date(),
-          lastActivity: new Date(),
-          metadata: { dialect: 'BP' }
-        };
-        // Store it temporarily
-        sessions.set(sessionId, session);
-      }
-
-      if (!session) {
-        return new Response(JSON.stringify({ error: 'Session not found' }), {
-          status: 404,
-          headers: { ...headers, 'Content-Type': 'application/json' }
-        });
-      }
-
-      if (!message) {
-        return new Response(JSON.stringify({ error: 'Message required for existing session' }), {
-          status: 400,
-          headers: { ...headers, 'Content-Type': 'application/json' }
-        });
-      }
-
-      // Add user message
-      session.messages.push({
-        role: 'user',
-        content: message,
-        timestamp: new Date()
-      });
-
-      // Get AI response
-      const openaiMessages = session.messages.map(msg => ({
-        role: msg.role,
-        content: msg.content
-      }));
-      
-      // For local development, use fallback if env var not working
-      const apiKey = env.ANTHROPIC_API_KEY;
-      if (!apiKey) {
-        return new Response(JSON.stringify({ error: 'Anthropic API key not configured' }), {
-          status: 500,
-          headers: { ...headers, 'Content-Type': 'application/json' }
-        });
-      }
-      const aiResponse = await callClaude(apiKey, openaiMessages);
-      
-      session.messages.push({
-        role: 'assistant',
-        content: aiResponse,
-        timestamp: new Date()
-      });
-      
-      session.lastActivity = new Date();
-
-      return new Response(JSON.stringify({
-        sessionId: sessionId,
-        response: aiResponse
-      }), {
-        status: 200,
+    // Validate required fields
+    if (!drillId) {
+      return new Response(JSON.stringify({ error: 'drillId is required' }), {
+        status: 400,
         headers: { ...headers, 'Content-Type': 'application/json' }
       });
     }
+
+    if (!message) {
+      return new Response(JSON.stringify({ error: 'message is required' }), {
+        status: 400,
+        headers: { ...headers, 'Content-Type': 'application/json' }
+      });
+    }
+
+    // Check API key
+    const apiKey = env.ANTHROPIC_API_KEY;
+    if (!apiKey) {
+      return new Response(JSON.stringify({
+        error: 'Anthropic API key not configured'
+      }), {
+        status: 500,
+        headers: { ...headers, 'Content-Type': 'application/json' }
+      });
+    }
+
+    // STATELESS ARCHITECTURE:
+    // Rebuild conversation from client-sent messages every time
+    const systemMessage = { role: 'system', content: getDrillPrompt(drillId) };
+
+    let conversationMessages;
+    if (isNewSession || !clientMessages || !Array.isArray(clientMessages) || clientMessages.length === 0) {
+      // New session: system prompt + first user message
+      conversationMessages = [
+        systemMessage,
+        { role: 'user', content: message }
+      ];
+    } else {
+      // Existing session: system prompt + client history + new user message
+      conversationMessages = [
+        systemMessage,
+        ...clientMessages,
+        { role: 'user', content: message }
+      ];
+    }
+
+    // Get AI response
+    const aiResponse = await callClaude(apiKey, conversationMessages);
+
+    // Generate sessionId if this is a new session (for client tracking only)
+    const responseSessionId = sessionId || `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+
+    return new Response(JSON.stringify({
+      sessionId: responseSessionId,
+      response: aiResponse
+    }), {
+      status: 200,
+      headers: { ...headers, 'Content-Type': 'application/json' }
+    });
+
 
   } catch (err) {
     console.error('Chat API Error:', err);
