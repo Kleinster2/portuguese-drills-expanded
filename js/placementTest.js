@@ -124,9 +124,9 @@ function displayQuestion(index) {
   const question = questionBank.questions[index];
 
   // Unit info display
-  const unitInfo = question.unit && question.unitName ?
+  const unitInfo = question.unit && question.unitTopic ?
     `<div class="mb-2 pb-2 border-b border-slate-300">
-      <p class="text-xs font-semibold text-purple-600">Unit ${question.unit}: ${question.unitName}</p>
+      <p class="text-xs font-semibold text-purple-600">Unit ${question.unit}: ${question.unitTopic}</p>
     </div>` : '';
 
   // Check question type

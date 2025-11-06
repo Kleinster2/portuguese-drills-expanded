@@ -3089,7 +3089,7 @@
         "Com"
       ],
       "correct": "Para",
-      "unitTopic": "Expressions with Para"
+      "unitTopic": "Progressive Periphrases"
     },
     {
       "id": 143,
@@ -3611,7 +3611,7 @@
         "We are speaking Portuguese",
         "It was important for us to speak Portuguese"
       ],
-      "unitTopic": "Personal Infinitive"
+      "unitTopic": "Relative Pronoun onde"
     },
     {
       "id": 168,
@@ -3629,7 +3629,7 @@
         "When you (all) leave",
         "Before you (all) go out"
       ],
-      "unitTopic": "Personal Infinitive"
+      "unitTopic": "Relative Pronoun onde"
     },
     {
       "id": 170,
@@ -3652,7 +3652,7 @@
         "chego"
       ],
       "correct": "chegarem",
-      "unitTopic": "Personal Infinitive"
+      "unitTopic": "Relative Pronoun onde"
     },
     {
       "id": 171,
@@ -3675,7 +3675,7 @@
         "irem"
       ],
       "correct": "ir",
-      "unitTopic": "Personal Infinitive"
+      "unitTopic": "Relative Pronoun onde"
     },
     {
       "id": 172,
@@ -3698,7 +3698,7 @@
         "comeram"
       ],
       "correct": "comermos",
-      "unitTopic": "Personal Infinitive"
+      "unitTopic": "Relative Pronoun onde"
     },
     {
       "id": 173,
@@ -3721,7 +3721,7 @@
         "vinha"
       ],
       "correct": "virem",
-      "unitTopic": "Personal Infinitive"
+      "unitTopic": "Relative Pronoun onde"
     },
     {
       "id": 174,
@@ -3744,7 +3744,7 @@
         "souberam"
       ],
       "correct": "saberem",
-      "unitTopic": "Personal Infinitive"
+      "unitTopic": "Relative Pronoun onde"
     },
     {
       "id": 175,
@@ -3762,7 +3762,7 @@
         "The book I will read is very good",
         "The book is very good to read"
       ],
-      "unitTopic": "Relative Pronoun que"
+      "unitTopic": "Relative Pronoun quem"
     },
     {
       "id": 176,
@@ -3785,7 +3785,7 @@
         "porque"
       ],
       "correct": "que",
-      "unitTopic": "Relative Pronoun que"
+      "unitTopic": "Relative Pronoun quem"
     },
     {
       "id": 177,
@@ -3808,7 +3808,7 @@
         "porque"
       ],
       "correct": "que",
-      "unitTopic": "Relative Pronoun que"
+      "unitTopic": "Relative Pronoun quem"
     },
     {
       "id": 178,
@@ -3831,7 +3831,7 @@
         "porque"
       ],
       "correct": "que",
-      "unitTopic": "Relative Pronoun que"
+      "unitTopic": "Relative Pronoun quem"
     },
     {
       "id": 179,
@@ -3849,7 +3849,7 @@
         "The city where I live is small",
         "Where I was born the city is small"
       ],
-      "unitTopic": "Relative Pronoun onde"
+      "unitTopic": "Relative Pronoun cujo"
     },
     {
       "id": 180,
@@ -3872,7 +3872,7 @@
         "porque"
       ],
       "correct": "onde",
-      "unitTopic": "Relative Pronoun onde"
+      "unitTopic": "Relative Pronoun cujo"
     },
     {
       "id": 181,
@@ -3895,7 +3895,7 @@
         "porque"
       ],
       "correct": "onde",
-      "unitTopic": "Relative Pronoun onde"
+      "unitTopic": "Relative Pronoun cujo"
     },
     {
       "id": 182,
@@ -3913,7 +3913,7 @@
         "I spoke about the person",
         "The person I will speak about"
       ],
-      "unitTopic": "Relative Pronoun quem"
+      "unitTopic": "Relative Pronoun o que"
     },
     {
       "id": 183,
@@ -3936,7 +3936,7 @@
         "se"
       ],
       "correct": "quem",
-      "unitTopic": "Relative Pronoun quem"
+      "unitTopic": "Relative Pronoun o que"
     },
     {
       "id": 184,
@@ -3959,7 +3959,7 @@
         "porque"
       ],
       "correct": "quem",
-      "unitTopic": "Relative Pronoun quem"
+      "unitTopic": "Relative Pronoun o que"
     },
     {
       "id": 185,
@@ -3977,7 +3977,7 @@
         "The doctor whose father is a man",
         "The man with a doctor son"
       ],
-      "unitTopic": "Relative Pronoun cujo"
+      "unitTopic": "Preposition + que"
     },
     {
       "id": 188,
@@ -4000,7 +4000,7 @@
         "os quais"
       ],
       "correct": "cujas",
-      "unitTopic": "Relative Pronoun cujo"
+      "unitTopic": "Preposition + que"
     },
     {
       "id": 189,
@@ -4018,7 +4018,7 @@
         "The thing you said is true",
         "You said something true"
       ],
-      "unitTopic": "Relative Pronoun o que"
+      "unitTopic": "Relative Pronoun o qual"
     },
     {
       "id": 190,
@@ -4041,7 +4041,7 @@
         "Isso que"
       ],
       "correct": "O que",
-      "unitTopic": "Relative Pronoun o que"
+      "unitTopic": "Relative Pronoun o qual"
     },
     {
       "id": 191,
@@ -4064,7 +4064,7 @@
         "Isso que"
       ],
       "correct": "O que",
-      "unitTopic": "Relative Pronoun o que"
+      "unitTopic": "Relative Pronoun o qual"
     },
     {
       "id": 192,
@@ -4082,7 +4082,7 @@
         "The house that I live is big",
         "In the house I live it is big"
       ],
-      "unitTopic": "Preposition + que"
+      "unitTopic": "Reported Speech"
     },
     {
       "id": 193,
@@ -4105,7 +4105,7 @@
         "quando"
       ],
       "correct": "em que",
-      "unitTopic": "Preposition + que"
+      "unitTopic": "Reported Speech"
     },
     {
       "id": 195,
@@ -4128,7 +4128,7 @@
         "o que"
       ],
       "correct": "qual",
-      "unitTopic": "Relative Pronoun o qual"
+      "unitTopic": "Past Future"
     },
     {
       "id": 196,
@@ -4151,7 +4151,7 @@
         "o que"
       ],
       "correct": "quais",
-      "unitTopic": "Relative Pronoun o qual"
+      "unitTopic": "Past Future"
     },
     {
       "id": 197,
@@ -4169,7 +4169,7 @@
         "He says he would come",
         "He said he wants to come"
       ],
-      "unitTopic": "Reported Speech"
+      "unitTopic": "Passive Voice"
     },
     {
       "id": 198,
@@ -4187,7 +4187,7 @@
         "She was tired and said it",
         "She is tired she said"
       ],
-      "unitTopic": "Reported Speech"
+      "unitTopic": "Passive Voice"
     },
     {
       "id": 199,
@@ -4210,7 +4210,7 @@
         "viajasse"
       ],
       "correct": "viajaria",
-      "unitTopic": "Reported Speech"
+      "unitTopic": "Passive Voice"
     },
     {
       "id": 200,
@@ -4233,7 +4233,7 @@
         "estivesse estudando"
       ],
       "correct": "estava estudando",
-      "unitTopic": "Reported Speech"
+      "unitTopic": "Passive Voice"
     },
     {
       "id": 201,
@@ -4256,7 +4256,7 @@
         "chegavam"
       ],
       "correct": "tinham chegado",
-      "unitTopic": "Reported Speech"
+      "unitTopic": "Passive Voice"
     },
     {
       "id": 202,
@@ -4274,7 +4274,7 @@
         "I wanted to travel but I cancelled",
         "I used to travel but I cancelled"
       ],
-      "unitTopic": "Past Future"
+      "unitTopic": "Passive Progressive"
     },
     {
       "id": 203,
@@ -4297,7 +4297,7 @@
         "queríamos"
       ],
       "correct": "íamos",
-      "unitTopic": "Past Future"
+      "unitTopic": "Passive Progressive"
     },
     {
       "id": 204,
@@ -4320,7 +4320,7 @@
         "ligou"
       ],
       "correct": "ia",
-      "unitTopic": "Past Future"
+      "unitTopic": "Passive Progressive"
     },
     {
       "id": 205,
@@ -4338,7 +4338,7 @@
         "The book went to be written in 1900",
         "He wrote the book in 1900"
       ],
-      "unitTopic": "Passive Voice"
+      "unitTopic": "Passive Habitual"
     },
     {
       "id": 206,
@@ -4356,7 +4356,7 @@
         "The house went to construction",
         "The house is being built"
       ],
-      "unitTopic": "Passive Voice"
+      "unitTopic": "Passive Habitual"
     },
     {
       "id": 207,
@@ -4379,7 +4379,7 @@
         "envia"
       ],
       "correct": "foi enviada",
-      "unitTopic": "Passive Voice"
+      "unitTopic": "Passive Habitual"
     },
     {
       "id": 208,
@@ -4402,7 +4402,7 @@
         "abriu"
       ],
       "correct": "foram abertas",
-      "unitTopic": "Passive Voice"
+      "unitTopic": "Passive Habitual"
     },
     {
       "id": 209,
@@ -4425,7 +4425,7 @@
         "resolve"
       ],
       "correct": "foi resolvido",
-      "unitTopic": "Passive Voice"
+      "unitTopic": "Passive Habitual"
     },
     {
       "id": 210,
@@ -4443,7 +4443,7 @@
         "They are doing the work",
         "The work is done"
       ],
-      "unitTopic": "Passive Progressive"
+      "unitTopic": "SE Passive"
     },
     {
       "id": 211,
@@ -4466,7 +4466,7 @@
         "construirão"
       ],
       "correct": "está sendo construída",
-      "unitTopic": "Passive Progressive"
+      "unitTopic": "SE Passive"
     },
     {
       "id": 212,
@@ -4489,7 +4489,7 @@
         "revisarão"
       ],
       "correct": "estão sendo revisados",
-      "unitTopic": "Passive Progressive"
+      "unitTopic": "SE Passive"
     },
     {
       "id": 213,
@@ -4507,7 +4507,7 @@
         "Portuguese is being spoken in Brazil",
         "Brazil speaks Portuguese"
       ],
-      "unitTopic": "Passive Habitual"
+      "unitTopic": "Passive Voice"
     },
     {
       "id": 214,
@@ -4530,7 +4530,7 @@
         "falarão"
       ],
       "correct": "é falado",
-      "unitTopic": "Passive Habitual"
+      "unitTopic": "Passive Voice"
     },
     {
       "id": 215,
@@ -4553,7 +4553,7 @@
         "fechará"
       ],
       "correct": "é fechada",
-      "unitTopic": "Passive Habitual"
+      "unitTopic": "Passive Voice"
     },
     {
       "id": 216,
@@ -5152,7 +5152,7 @@
         "I will study a lot",
         "I keep studying a lot"
       ],
-      "unitTopic": "Progressive Periphrases"
+      "unitTopic": "Expressions with Para"
     },
     {
       "id": 244,
@@ -5175,7 +5175,7 @@
         "trabalhava"
       ],
       "correct": "ando trabalhando",
-      "unitTopic": "Progressive Periphrases"
+      "unitTopic": "Expressions with Para"
     },
     {
       "id": 245,
@@ -5193,7 +5193,7 @@
         "I improved",
         "I will improve"
       ],
-      "unitTopic": "Progressive Periphrases"
+      "unitTopic": "Expressions with Para"
     },
     {
       "id": 246,
@@ -5216,7 +5216,7 @@
         "melhoravam"
       ],
       "correct": "vêm melhorando",
-      "unitTopic": "Progressive Periphrases"
+      "unitTopic": "Expressions with Para"
     },
     {
       "id": 247,
@@ -5239,7 +5239,7 @@
         "melhorava"
       ],
       "correct": "vou melhorando",
-      "unitTopic": "Progressive Periphrases"
+      "unitTopic": "Expressions with Para"
     },
     {
       "id": 248,
@@ -5257,7 +5257,7 @@
         "He is giving me the book",
         "He gave the book to me"
       ],
-      "unitTopic": "Pronoun + Verb Combinations"
+      "unitTopic": "Progressive Periphrases"
     },
     {
       "id": 249,
@@ -5280,7 +5280,7 @@
         "lhes"
       ],
       "correct": "me",
-      "unitTopic": "Pronoun + Verb Combinations"
+      "unitTopic": "Progressive Periphrases"
     },
     {
       "id": 250,
@@ -5303,7 +5303,7 @@
         "lhes"
       ],
       "correct": "lhe",
-      "unitTopic": "Pronoun + Verb Combinations"
+      "unitTopic": "Progressive Periphrases"
     },
     {
       "id": 251,
@@ -5321,7 +5321,7 @@
         "They are telling me the truth",
         "They said the truth to me"
       ],
-      "unitTopic": "Pronoun + Verb Combinations"
+      "unitTopic": "Progressive Periphrases"
     },
     {
       "id": 252,
@@ -5344,7 +5344,7 @@
         "lhes"
       ],
       "correct": "me",
-      "unitTopic": "Pronoun + Verb Combinations"
+      "unitTopic": "Progressive Periphrases"
     },
     {
       "id": 253,
@@ -5367,7 +5367,7 @@
         "lhes"
       ],
       "correct": "lhe",
-      "unitTopic": "Pronoun + Verb Combinations"
+      "unitTopic": "Progressive Periphrases"
     },
     {
       "id": 254,
@@ -5385,7 +5385,7 @@
         "I am asking for a favor",
         "I requested a favor from him"
       ],
-      "unitTopic": "Pronoun + Verb Combinations"
+      "unitTopic": "Progressive Periphrases"
     },
     {
       "id": 255,
@@ -5408,7 +5408,7 @@
         "lhes"
       ],
       "correct": "me",
-      "unitTopic": "Pronoun + Verb Combinations"
+      "unitTopic": "Progressive Periphrases"
     },
     {
       "id": 256,
@@ -5431,7 +5431,7 @@
         "lhes"
       ],
       "correct": "lhe",
-      "unitTopic": "Pronoun + Verb Combinations"
+      "unitTopic": "Progressive Periphrases"
     },
     {
       "id": 257,
@@ -5454,7 +5454,7 @@
         "lhes"
       ],
       "correct": "me",
-      "unitTopic": "Pronoun + Verb Combinations"
+      "unitTopic": "Progressive Periphrases"
     },
     {
       "id": 258,
@@ -5477,7 +5477,7 @@
         "lhes"
       ],
       "correct": "me",
-      "unitTopic": "Pronoun + Verb Combinations"
+      "unitTopic": "Progressive Periphrases"
     },
     {
       "id": 259,
@@ -5495,7 +5495,7 @@
         "He will tell me to wait",
         "He is telling me to wait"
       ],
-      "unitTopic": "Pronoun + disse/pediu para"
+      "unitTopic": "Progressive Periphrases"
     },
     {
       "id": 260,
@@ -5518,7 +5518,7 @@
         "lhes"
       ],
       "correct": "me",
-      "unitTopic": "Pronoun + disse/pediu para"
+      "unitTopic": "Progressive Periphrases"
     },
     {
       "id": 261,
@@ -5541,7 +5541,7 @@
         "lhes"
       ],
       "correct": "lhe",
-      "unitTopic": "Pronoun + disse/pediu para"
+      "unitTopic": "Progressive Periphrases"
     },
     {
       "id": 262,
@@ -5559,7 +5559,7 @@
         "She will ask me to help",
         "She is asking me to help"
       ],
-      "unitTopic": "Pronoun + disse/pediu para"
+      "unitTopic": "Progressive Periphrases"
     },
     {
       "id": 263,
@@ -5582,7 +5582,7 @@
         "lhes"
       ],
       "correct": "me",
-      "unitTopic": "Pronoun + disse/pediu para"
+      "unitTopic": "Progressive Periphrases"
     },
     {
       "id": 264,
@@ -5605,7 +5605,7 @@
         "lhes"
       ],
       "correct": "lhe",
-      "unitTopic": "Pronoun + disse/pediu para"
+      "unitTopic": "Progressive Periphrases"
     },
     {
       "id": 265,
@@ -5628,7 +5628,7 @@
         "lhes"
       ],
       "correct": "me",
-      "unitTopic": "Pronoun + Verb Combinations"
+      "unitTopic": "Progressive Periphrases"
     },
     {
       "id": 266,
@@ -5651,7 +5651,7 @@
         "lhes"
       ],
       "correct": "me",
-      "unitTopic": "Pronoun + Verb Combinations"
+      "unitTopic": "Progressive Periphrases"
     },
     {
       "id": 267,
