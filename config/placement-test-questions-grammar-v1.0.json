@@ -1771,9 +1771,9 @@
       "unit": 40,
       "phase": 2,
       "type": "production",
-      "en": "I was able to travel",
+      "en": "We were able to travel",
       "question": "Complete the sentence:",
-      "template": "Eu __ viajar",
+      "template": "A gente __ viajar",
       "chips": [
         "pude",
         "posso",
@@ -1786,7 +1786,7 @@
         "podemos",
         "podem"
       ],
-      "correct": "pude",
+      "correct": "pode",
       "unitTopic": "Preterite Irregular"
     },
     {
@@ -1977,9 +1977,9 @@
       "unit": 45,
       "phase": 3,
       "type": "production",
-      "en": "I used to eat a lot",
+      "en": "We used to eat a lot",
       "question": "Complete the sentence:",
-      "template": "Eu __ muito",
+      "template": "A gente __ muito",
       "chips": [
         "comia",
         "como",
@@ -2046,9 +2046,9 @@
       "unit": 46,
       "phase": 3,
       "type": "production",
-      "en": "I used to come here always",
+      "en": "We used to come here always",
       "question": "Complete the sentence:",
-      "template": "Eu __ aqui sempre",
+      "template": "A gente __ aqui sempre",
       "chips": [
         "vinha",
         "venho",
@@ -3140,9 +3140,9 @@
       "unit": 44,
       "phase": 2,
       "type": "production",
-      "en": "I know her",
+      "en": "We know her",
       "question": "Complete the sentence:",
-      "template": "Eu __ conheço",
+      "template": "A gente __ conhece",
       "chips": [
         "a",
         "o",
@@ -4865,9 +4865,9 @@
       "unit": 75,
       "phase": 3,
       "type": "production",
-      "en": "I just ate",
+      "en": "We just ate",
       "question": "Complete the sentence:",
-      "template": "Eu __ comer",
+      "template": "A gente __ comer",
       "chips": [
         "acabei de",
         "acabou de",
@@ -4880,7 +4880,7 @@
         "comia",
         "vou comer"
       ],
-      "correct": "acabei de",
+      "correct": "acabou de",
       "unitTopic": "Acabar de"
     },
     {
@@ -5016,9 +5016,9 @@
       "unit": 77,
       "phase": 3,
       "type": "production",
-      "en": "I kept studying",
+      "en": "We kept studying",
       "question": "Complete the sentence:",
-      "template": "Eu __",
+      "template": "A gente __",
       "chips": [
         "fiquei estudando",
         "ficou estudando",
@@ -5031,7 +5031,7 @@
         "estudei",
         "estudava"
       ],
-      "correct": "fiquei estudando",
+      "correct": "ficou estudando",
       "unitTopic": "Ficar + gerúndio"
     },
     {
@@ -5121,11 +5121,12 @@
       "unit": 80,
       "phase": 3,
       "type": "production",
-      "en": "I continue studying",
+      "en": "We continue studying",
       "question": "Complete the sentence:",
-      "template": "Eu __",
+      "template": "A gente __",
       "chips": [
         "continuo estudando",
+        "continua estudando",
         "continuei estudando",
         "continuar estudando",
         "continuava estudando",
@@ -5136,7 +5137,7 @@
         "estudei",
         "estudava"
       ],
-      "correct": "continuo estudando",
+      "correct": "continua estudando",
       "unitTopic": "Aspectual Verbs"
     },
     {
