@@ -48,24 +48,24 @@
     },
     "Regular -ar Verbs": {
       "drills": [
-        "irregular-verbs"
+        "regular-ar"
       ],
-      "coverage": "partial",
-      "notes": "Note: drill ID suggests irregular but covers regular too"
+      "coverage": "full",
+      "notes": "Present and simple past tenses for -ar verbs"
     },
     "Regular -er Verbs": {
       "drills": [
-        "irregular-verbs"
+        "regular-er"
       ],
-      "coverage": "partial",
-      "notes": "Note: drill ID suggests irregular but covers regular too"
+      "coverage": "full",
+      "notes": "Present and simple past tenses for -er verbs"
     },
     "Regular -ir Verbs": {
       "drills": [
-        "irregular-verbs"
+        "regular-ir"
       ],
-      "coverage": "partial",
-      "notes": "Note: drill ID suggests irregular but covers regular too"
+      "coverage": "full",
+      "notes": "Present and simple past tenses for -ir verbs"
     },
     "3rd Person Singular": {
       "drills": [],
@@ -318,7 +318,7 @@
         "reflexive-verbs"
       ],
       "coverage": "full",
-      "notes": "me/se/nos with reflexive verbs"
+      "notes": "Drill covers pronoun selection AND reflexive/reciprocal/non-reflexive distinction (more than placement test)"
     },
     "Pronouns after Infinitives": {
       "drills": [],
