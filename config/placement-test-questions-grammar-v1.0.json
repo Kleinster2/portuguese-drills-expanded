@@ -14,7 +14,6 @@
     {
       "id": 1,
       "unit": 1,
-      "unitName": "Identity Statements",
       "phase": 1,
       "type": "comprehension",
       "pt": "Eu sou professor",
@@ -32,7 +31,6 @@
     {
       "id": 2,
       "unit": 1,
-      "unitName": "Identity Statements",
       "phase": 1,
       "type": "production",
       "en": "João says: I am Brazilian",
@@ -50,13 +48,11 @@
         "fui",
         "seria"
       ],
-      "correct": "sou",
-      "hint": "ser for identity"
+      "correct": "sou"
     },
     {
       "id": 3,
       "unit": 1,
-      "unitName": "Identity Statements",
       "phase": 1,
       "type": "production",
       "en": "I am a doctor",
@@ -73,13 +69,11 @@
         "somos",
         "são"
       ],
-      "correct": "sou",
-      "hint": "No article needed"
+      "correct": "sou"
     },
     {
       "id": 4,
       "unit": 2,
-      "unitName": "Origin with Contractions",
       "phase": 1,
       "type": "production",
       "en": "I am from Brazil",
@@ -97,13 +91,11 @@
         "ao",
         "à"
       ],
-      "correct": "do",
-      "hint": "de + o"
+      "correct": "do"
     },
     {
       "id": 5,
       "unit": 2,
-      "unitName": "Origin with Contractions",
       "phase": 1,
       "type": "production",
       "en": "I am from the Philippines",
@@ -121,13 +113,11 @@
         "às",
         "aos"
       ],
-      "correct": "das",
-      "hint": "de + as"
+      "correct": "das"
     },
     {
       "id": 6,
       "unit": 3,
-      "unitName": "Definite Articles",
       "phase": 1,
       "type": "production",
       "en": "The boy is here",
@@ -143,13 +133,11 @@
         "Uns",
         "Umas"
       ],
-      "correct": "O",
-      "hint": "Masc sing"
+      "correct": "O"
     },
     {
       "id": 7,
       "unit": 3,
-      "unitName": "Definite Articles",
       "phase": 1,
       "type": "production",
       "en": "The girls are here",
@@ -165,13 +153,11 @@
         "Uma",
         "Um"
       ],
-      "correct": "As",
-      "hint": "Fem pl"
+      "correct": "As"
     },
     {
       "id": 8,
       "unit": 4,
-      "unitName": "Indefinite Articles",
       "phase": 1,
       "type": "production",
       "en": "I have a dog",
@@ -187,13 +173,11 @@
         "os",
         "as"
       ],
-      "correct": "um",
-      "hint": "Masc sing"
+      "correct": "um"
     },
     {
       "id": 9,
       "unit": 4,
-      "unitName": "Indefinite Articles",
       "phase": 1,
       "type": "production",
       "en": "I have some pens",
@@ -209,13 +193,11 @@
         "a",
         "o"
       ],
-      "correct": "umas",
-      "hint": "Fem pl"
+      "correct": "umas"
     },
     {
       "id": 10,
       "unit": 4,
-      "unitName": "Indefinite Articles",
       "phase": 1,
       "type": "production",
       "en": "I have some books",
@@ -231,13 +213,11 @@
         "o",
         "a"
       ],
-      "correct": "uns",
-      "hint": "Masc pl"
+      "correct": "uns"
     },
     {
       "id": 11,
       "unit": 5,
-      "unitName": "Location with Estar",
       "phase": 1,
       "type": "comprehension",
       "pt": "Eu estou no trabalho",
@@ -255,7 +235,6 @@
     {
       "id": 12,
       "unit": 5,
-      "unitName": "Location with Estar",
       "phase": 1,
       "type": "production",
       "en": "I am at home",
@@ -273,13 +252,11 @@
         "estaria",
         "seja"
       ],
-      "correct": "estou",
-      "hint": "estar for location"
+      "correct": "estou"
     },
     {
       "id": 13,
       "unit": 5,
-      "unitName": "Location with Estar",
       "phase": 1,
       "type": "production",
       "en": "I am in Brazil",
@@ -297,13 +274,11 @@
         "estaria",
         "seja"
       ],
-      "correct": "estou",
-      "hint": "temporary location"
+      "correct": "estou"
     },
     {
       "id": 14,
       "unit": 6,
-      "unitName": "Adjective Agreement",
       "phase": 1,
       "type": "production",
       "en": "The tall boy",
@@ -319,13 +294,11 @@
         "pequena",
         "grandes"
       ],
-      "correct": "alto",
-      "hint": "Masc sing"
+      "correct": "alto"
     },
     {
       "id": 15,
       "unit": 6,
-      "unitName": "Adjective Agreement",
       "phase": 1,
       "type": "production",
       "en": "The tall girls",
@@ -341,13 +314,11 @@
         "pequenos",
         "grande"
       ],
-      "correct": "altas",
-      "hint": "Fem pl"
+      "correct": "altas"
     },
     {
       "id": 16,
       "unit": 7,
-      "unitName": "Basic Verbs - Morar",
       "phase": 1,
       "type": "comprehension",
       "pt": "Eu moro em São Paulo",
@@ -365,7 +336,6 @@
     {
       "id": 17,
       "unit": 7,
-      "unitName": "Basic Verbs - Morar",
       "phase": 1,
       "type": "production",
       "en": "I live in Rio",
@@ -383,13 +353,11 @@
         "more",
         "morasse"
       ],
-      "correct": "moro",
-      "hint": "morar, eu form"
+      "correct": "moro"
     },
     {
       "id": 18,
       "unit": 8,
-      "unitName": "Basic Verbs - Falar",
       "phase": 1,
       "type": "comprehension",
       "pt": "Eu sempre falo português",
@@ -407,7 +375,6 @@
     {
       "id": 19,
       "unit": 8,
-      "unitName": "Basic Verbs - Falar",
       "phase": 1,
       "type": "production",
       "en": "I speak Spanish",
@@ -425,13 +392,11 @@
         "fale",
         "falasse"
       ],
-      "correct": "falo",
-      "hint": "falar, eu form"
+      "correct": "falo"
     },
     {
       "id": 20,
       "unit": 9,
-      "unitName": "Basic Verbs - Trabalhar",
       "phase": 1,
       "type": "comprehension",
       "pt": "Eu trabalho no banco todos os dias",
@@ -449,7 +414,6 @@
     {
       "id": 21,
       "unit": 9,
-      "unitName": "Basic Verbs - Trabalhar",
       "phase": 1,
       "type": "production",
       "en": "I work at the hospital",
@@ -467,13 +431,11 @@
         "a",
         "nos"
       ],
-      "correct": "no",
-      "hint": "em + o"
+      "correct": "no"
     },
     {
       "id": 22,
       "unit": 10,
-      "unitName": "Basic Verbs - Estudar",
       "phase": 1,
       "type": "comprehension",
       "pt": "Eu estudo português todos os dias",
@@ -491,7 +453,6 @@
     {
       "id": 23,
       "unit": 10,
-      "unitName": "Basic Verbs - Estudar",
       "phase": 1,
       "type": "production",
       "en": "I study English",
@@ -509,13 +470,11 @@
         "estude",
         "estudasse"
       ],
-      "correct": "estudo",
-      "hint": "estudar, eu form"
+      "correct": "estudo"
     },
     {
       "id": 24,
       "unit": 11,
-      "unitName": "Verb Ficar",
       "phase": 1,
       "type": "comprehension",
       "pt": "A escola fica perto",
@@ -533,7 +492,6 @@
     {
       "id": 25,
       "unit": 11,
-      "unitName": "Verb Ficar",
       "phase": 1,
       "type": "comprehension",
       "pt": "Eu fico feliz",
@@ -551,7 +509,6 @@
     {
       "id": 26,
       "unit": 11,
-      "unitName": "Verb Ficar",
       "phase": 1,
       "type": "production",
       "en": "The house is located far",
@@ -569,13 +526,11 @@
         "fique",
         "estava"
       ],
-      "correct": "fica",
-      "hint": "location permanence"
+      "correct": "fica"
     },
     {
       "id": 27,
       "unit": 11,
-      "unitName": "Verb Ficar",
       "phase": 1,
       "type": "production",
       "en": "I stay at home",
@@ -593,13 +548,11 @@
         "fique",
         "ficasse"
       ],
-      "correct": "fico",
-      "hint": "staying/remaining"
+      "correct": "fico"
     },
     {
       "id": 28,
       "unit": 12,
-      "unitName": "Verb Estar",
       "phase": 1,
       "type": "comprehension",
       "pt": "Eu estou cansado",
@@ -617,7 +570,6 @@
     {
       "id": 29,
       "unit": 12,
-      "unitName": "Verb Estar",
       "phase": 1,
       "type": "production",
       "en": "I am happy",
@@ -635,13 +587,11 @@
         "seja",
         "esteja"
       ],
-      "correct": "estou",
-      "hint": "temporary state"
+      "correct": "estou"
     },
     {
       "id": 30,
       "unit": 12,
-      "unitName": "Verb Estar",
       "phase": 1,
       "type": "production",
       "en": "I am at home",
@@ -659,13 +609,11 @@
         "estaria",
         "esteja"
       ],
-      "correct": "estou",
-      "hint": "location"
+      "correct": "estou"
     },
     {
       "id": 31,
       "unit": 13,
-      "unitName": "Location Prepositions",
       "phase": 1,
       "type": "comprehension",
       "pt": "Eu estou em casa",
@@ -683,7 +631,6 @@
     {
       "id": 32,
       "unit": 13,
-      "unitName": "Location Prepositions",
       "phase": 1,
       "type": "comprehension",
       "pt": "Eu estou no trabalho",
@@ -701,7 +648,6 @@
     {
       "id": 33,
       "unit": 13,
-      "unitName": "Location Prepositions",
       "phase": 1,
       "type": "comprehension",
       "pt": "Eu estou na escola",
@@ -719,7 +665,6 @@
     {
       "id": 34,
       "unit": 13,
-      "unitName": "Location Prepositions",
       "phase": 1,
       "type": "production",
       "en": "I am at work",
@@ -737,13 +682,11 @@
         "a",
         "nos"
       ],
-      "correct": "no",
-      "hint": "em + o"
+      "correct": "no"
     },
     {
       "id": 39,
       "unit": 15,
-      "unitName": "Negation with Não",
       "phase": 1,
       "type": "comprehension",
       "pt": "Eu não falo inglês",
@@ -761,7 +704,6 @@
     {
       "id": 40,
       "unit": 15,
-      "unitName": "Negation with Não",
       "phase": 1,
       "type": "comprehension",
       "pt": "Ele não mora aqui",
@@ -779,7 +721,6 @@
     {
       "id": 41,
       "unit": 16,
-      "unitName": "Verb Ter",
       "phase": 1,
       "type": "comprehension",
       "pt": "Eu tenho um carro",
@@ -797,7 +738,6 @@
     {
       "id": 42,
       "unit": 16,
-      "unitName": "Verb Ter",
       "phase": 1,
       "type": "production",
       "en": "I have a house",
@@ -815,13 +755,11 @@
         "tenha",
         "tivesse"
       ],
-      "correct": "tenho",
-      "hint": "ter, eu form"
+      "correct": "tenho"
     },
     {
       "id": 43,
       "unit": 16,
-      "unitName": "Verb Ter",
       "phase": 1,
       "type": "production",
       "en": "I have two brothers",
@@ -839,13 +777,11 @@
         "tenha",
         "tivesse"
       ],
-      "correct": "tenho",
-      "hint": "ter, eu form"
+      "correct": "tenho"
     },
     {
       "id": 44,
       "unit": 17,
-      "unitName": "Age with Ter",
       "phase": 1,
       "type": "comprehension",
       "pt": "Eu tenho 25 anos",
@@ -863,7 +799,6 @@
     {
       "id": 45,
       "unit": 18,
-      "unitName": "Yes/No Questions",
       "phase": 1,
       "type": "comprehension",
       "pt": "Você fala português?",
@@ -881,7 +816,6 @@
     {
       "id": 46,
       "unit": 18,
-      "unitName": "Yes/No Questions",
       "phase": 1,
       "type": "comprehension",
       "pt": "Você mora aqui?",
@@ -899,7 +833,6 @@
     {
       "id": 47,
       "unit": 19,
-      "unitName": "Verb Precisar de",
       "phase": 1,
       "type": "comprehension",
       "pt": "Eu preciso de ajuda",
@@ -917,7 +850,6 @@
     {
       "id": 48,
       "unit": 19,
-      "unitName": "Verb Precisar de",
       "phase": 1,
       "type": "production",
       "en": "I need money",
@@ -935,13 +867,11 @@
         "com",
         "sem"
       ],
-      "correct": "de",
-      "hint": "precisar takes 'de'"
+      "correct": "de"
     },
     {
       "id": 49,
       "unit": 19,
-      "unitName": "Verb Precisar de",
       "phase": 1,
       "type": "production",
       "en": "I need you",
@@ -959,13 +889,11 @@
         "com",
         "te"
       ],
-      "correct": "de",
-      "hint": "precisar takes 'de'"
+      "correct": "de"
     },
     {
       "id": 58,
       "unit": 22,
-      "unitName": "Regular -ER Verbs",
       "phase": 2,
       "type": "comprehension",
       "pt": "Eu como pão todos os dias",
@@ -983,7 +911,6 @@
     {
       "id": 59,
       "unit": 22,
-      "unitName": "Regular -ER Verbs",
       "phase": 2,
       "type": "production",
       "en": "I eat fruit",
@@ -1001,13 +928,11 @@
         "coma",
         "comesse"
       ],
-      "correct": "como",
-      "hint": "comer, eu form"
+      "correct": "como"
     },
     {
       "id": 60,
       "unit": 22,
-      "unitName": "Regular -ER Verbs",
       "phase": 2,
       "type": "production",
       "en": "I drink water",
@@ -1025,13 +950,11 @@
         "beba",
         "bebesse"
       ],
-      "correct": "bebo",
-      "hint": "beber, eu form"
+      "correct": "bebo"
     },
     {
       "id": 61,
       "unit": 23,
-      "unitName": "Você/Ele/Ela Forms",
       "phase": 2,
       "type": "production",
       "en": "You speak Portuguese",
@@ -1049,13 +972,11 @@
         "falaria",
         "fale"
       ],
-      "correct": "fala",
-      "hint": "third person singular"
+      "correct": "fala"
     },
     {
       "id": 62,
       "unit": 23,
-      "unitName": "Você/Ele/Ela Forms",
       "phase": 2,
       "type": "production",
       "en": "He eats bread",
@@ -1073,13 +994,11 @@
         "comeria",
         "coma"
       ],
-      "correct": "come",
-      "hint": "third person singular"
+      "correct": "come"
     },
     {
       "id": 63,
       "unit": 23,
-      "unitName": "Você/Ele/Ela Forms",
       "phase": 2,
       "type": "production",
       "en": "She lives here",
@@ -1097,13 +1016,11 @@
         "moraria",
         "more"
       ],
-      "correct": "mora",
-      "hint": "third person singular"
+      "correct": "mora"
     },
     {
       "id": 64,
       "unit": 24,
-      "unitName": "Nós Forms",
       "phase": 2,
       "type": "production",
       "en": "We speak Portuguese",
@@ -1121,13 +1038,11 @@
         "falemos",
         "falássemos"
       ],
-      "correct": "falamos",
-      "hint": "first person plural"
+      "correct": "falamos"
     },
     {
       "id": 65,
       "unit": 24,
-      "unitName": "Nós Forms",
       "phase": 2,
       "type": "production",
       "en": "We live here",
@@ -1145,13 +1060,11 @@
         "moremos",
         "morássemos"
       ],
-      "correct": "moramos",
-      "hint": "first person plural"
+      "correct": "moramos"
     },
     {
       "id": 66,
       "unit": 24,
-      "unitName": "Nós Forms",
       "phase": 2,
       "type": "production",
       "en": "We drink water",
@@ -1169,13 +1082,11 @@
         "bebamos",
         "bebêssemos"
       ],
-      "correct": "bebemos",
-      "hint": "first person plural"
+      "correct": "bebemos"
     },
     {
       "id": 67,
       "unit": 25,
-      "unitName": "Verb Gostar de",
       "phase": 2,
       "type": "comprehension",
       "pt": "Eu gosto de café",
@@ -1193,7 +1104,6 @@
     {
       "id": 68,
       "unit": 25,
-      "unitName": "Verb Gostar de",
       "phase": 2,
       "type": "production",
       "en": "I like music",
@@ -1211,13 +1121,11 @@
         "com",
         "a"
       ],
-      "correct": "de",
-      "hint": "gostar takes 'de'"
+      "correct": "de"
     },
     {
       "id": 69,
       "unit": 25,
-      "unitName": "Verb Gostar de",
       "phase": 2,
       "type": "production",
       "en": "I like to study",
@@ -1235,13 +1143,11 @@
         "a",
         "com"
       ],
-      "correct": "de",
-      "hint": "gostar takes 'de'"
+      "correct": "de"
     },
     {
       "id": 70,
       "unit": 26,
-      "unitName": "Regular -IR Verbs",
       "phase": 2,
       "type": "comprehension",
       "pt": "Eu sempre abro a porta",
@@ -1259,7 +1165,6 @@
     {
       "id": 71,
       "unit": 26,
-      "unitName": "Regular -IR Verbs",
       "phase": 2,
       "type": "production",
       "en": "I open the window",
@@ -1277,13 +1182,11 @@
         "abra",
         "abrisse"
       ],
-      "correct": "abro",
-      "hint": "abrir, eu form"
+      "correct": "abro"
     },
     {
       "id": 72,
       "unit": 26,
-      "unitName": "Regular -IR Verbs",
       "phase": 2,
       "type": "production",
       "en": "I cut the bread",
@@ -1301,13 +1204,11 @@
         "parta",
         "partisse"
       ],
-      "correct": "parto",
-      "hint": "partir, eu form"
+      "correct": "parto"
     },
     {
       "id": 73,
       "unit": 27,
-      "unitName": "Future with Ir + Infinitive",
       "phase": 2,
       "type": "comprehension",
       "pt": "Eu vou viajar",
@@ -1325,7 +1226,6 @@
     {
       "id": 74,
       "unit": 27,
-      "unitName": "Future with Ir + Infinitive",
       "phase": 2,
       "type": "production",
       "en": "I am going to study Portuguese",
@@ -1343,13 +1243,11 @@
         "estudando",
         "estudado"
       ],
-      "correct": "estudar",
-      "hint": "infinitive after ir"
+      "correct": "estudar"
     },
     {
       "id": 75,
       "unit": 27,
-      "unitName": "Future with Ir + Infinitive",
       "phase": 2,
       "type": "production",
       "en": "I am going to stay at home",
@@ -1367,13 +1265,11 @@
         "ficando",
         "ficado"
       ],
-      "correct": "ficar",
-      "hint": "infinitive after ir"
+      "correct": "ficar"
     },
     {
       "id": 76,
       "unit": 28,
-      "unitName": "Vocês/Eles/Elas Forms",
       "phase": 2,
       "type": "production",
       "en": "You all speak Portuguese",
@@ -1391,13 +1287,11 @@
         "falariam",
         "falem"
       ],
-      "correct": "falam",
-      "hint": "third person plural"
+      "correct": "falam"
     },
     {
       "id": 77,
       "unit": 28,
-      "unitName": "Vocês/Eles/Elas Forms",
       "phase": 2,
       "type": "production",
       "en": "They live here",
@@ -1415,13 +1309,11 @@
         "morariam",
         "morem"
       ],
-      "correct": "moram",
-      "hint": "third person plural"
+      "correct": "moram"
     },
     {
       "id": 78,
       "unit": 28,
-      "unitName": "Vocês/Eles/Elas Forms",
       "phase": 2,
       "type": "production",
       "en": "They drink water",
@@ -1439,13 +1331,11 @@
         "beberiam",
         "bebam"
       ],
-      "correct": "bebem",
-      "hint": "third person plural"
+      "correct": "bebem"
     },
     {
       "id": 83,
       "unit": 30,
-      "unitName": "Common Question Words",
       "phase": 2,
       "type": "comprehension",
       "pt": "Onde você mora?",
@@ -1463,7 +1353,6 @@
     {
       "id": 84,
       "unit": 30,
-      "unitName": "Common Question Words",
       "phase": 2,
       "type": "comprehension",
       "pt": "O que você faz?",
@@ -1481,7 +1370,6 @@
     {
       "id": 85,
       "unit": 30,
-      "unitName": "Common Question Words",
       "phase": 2,
       "type": "comprehension",
       "pt": "Quando você trabalha?",
@@ -1499,7 +1387,6 @@
     {
       "id": 86,
       "unit": 30,
-      "unitName": "Common Question Words",
       "phase": 2,
       "type": "comprehension",
       "pt": "Como você está?",
@@ -1517,7 +1404,6 @@
     {
       "id": 87,
       "unit": 30,
-      "unitName": "Common Question Words",
       "phase": 2,
       "type": "comprehension",
       "pt": "Por que você estuda?",
@@ -1535,7 +1421,6 @@
     {
       "id": 88,
       "unit": 30,
-      "unitName": "Common Question Words",
       "phase": 2,
       "type": "production",
       "en": "Where do you live?",
@@ -1551,13 +1436,11 @@
         "Qual",
         "Quanto"
       ],
-      "correct": "Onde",
-      "hint": "Where = Onde"
+      "correct": "Onde"
     },
     {
       "id": 89,
       "unit": 31,
-      "unitName": "Possessive Adjectives - Meu/Minha",
       "phase": 2,
       "type": "production",
       "en": "My father works",
@@ -1573,13 +1456,11 @@
         "Nosso",
         "Nossa"
       ],
-      "correct": "Meu",
-      "hint": "masculine singular"
+      "correct": "Meu"
     },
     {
       "id": 90,
       "unit": 31,
-      "unitName": "Possessive Adjectives - Meu/Minha",
       "phase": 2,
       "type": "production",
       "en": "My mothers study",
@@ -1595,13 +1476,11 @@
         "Nossa",
         "Nosso"
       ],
-      "correct": "Minhas",
-      "hint": "feminine singular"
+      "correct": "Minhas"
     },
     {
       "id": 91,
       "unit": 32,
-      "unitName": "Possessive Adjectives - Seu/Sua",
       "phase": 2,
       "type": "production",
       "en": "Your car is new",
@@ -1617,13 +1496,11 @@
         "Nosso",
         "Nossa"
       ],
-      "correct": "Seu",
-      "hint": "masculine singular"
+      "correct": "Seu"
     },
     {
       "id": 92,
       "unit": 32,
-      "unitName": "Possessive Adjectives - Seu/Sua",
       "phase": 2,
       "type": "production",
       "en": "Your houses are big",
@@ -1639,13 +1516,11 @@
         "Nossa",
         "Nosso"
       ],
-      "correct": "Suas",
-      "hint": "feminine singular"
+      "correct": "Suas"
     },
     {
       "id": 93,
       "unit": 33,
-      "unitName": "Possessive Adjectives - Nosso/Nossa",
       "phase": 2,
       "type": "production",
       "en": "Our friend lives here",
@@ -1661,13 +1536,11 @@
         "Seu",
         "Sua"
       ],
-      "correct": "Nosso",
-      "hint": "masculine singular"
+      "correct": "Nosso"
     },
     {
       "id": 94,
       "unit": 33,
-      "unitName": "Possessive Adjectives - Nosso/Nossa",
       "phase": 2,
       "type": "production",
       "en": "Our friends work there",
@@ -1683,13 +1556,11 @@
         "Sua",
         "Seu"
       ],
-      "correct": "Nossas",
-      "hint": "feminine singular"
+      "correct": "Nossas"
     },
     {
       "id": 95,
       "unit": 34,
-      "unitName": "Preterite Tense - Regular -AR Verbs",
       "phase": 2,
       "type": "comprehension",
       "pt": "Eu trabalhei ontem",
@@ -1707,7 +1578,6 @@
     {
       "id": 96,
       "unit": 34,
-      "unitName": "Preterite Tense - Regular -AR Verbs",
       "phase": 2,
       "type": "production",
       "en": "I spoke Portuguese",
@@ -1725,13 +1595,11 @@
         "fale",
         "falasse"
       ],
-      "correct": "falei",
-      "hint": "preterite, eu form"
+      "correct": "falei"
     },
     {
       "id": 97,
       "unit": 34,
-      "unitName": "Preterite Tense - Regular -AR Verbs",
       "phase": 2,
       "type": "production",
       "en": "You lived here",
@@ -1749,13 +1617,11 @@
         "more",
         "morasse"
       ],
-      "correct": "morou",
-      "hint": "preterite, você form"
+      "correct": "morou"
     },
     {
       "id": 98,
       "unit": 34,
-      "unitName": "Preterite Tense - Regular -AR Verbs",
       "phase": 2,
       "type": "production",
       "en": "We traveled",
@@ -1773,13 +1639,11 @@
         "viajemos",
         "viajássemos"
       ],
-      "correct": "viajamos",
-      "hint": "preterite, nós form"
+      "correct": "viajamos"
     },
     {
       "id": 99,
       "unit": 35,
-      "unitName": "Preterite Tense - Regular -ER/-IR Verbs",
       "phase": 2,
       "type": "comprehension",
       "pt": "Eu comi pão",
@@ -1797,7 +1661,6 @@
     {
       "id": 100,
       "unit": 35,
-      "unitName": "Preterite Tense - Regular -ER/-IR Verbs",
       "phase": 2,
       "type": "production",
       "en": "I drank water",
@@ -1815,13 +1678,11 @@
         "beba",
         "bebesse"
       ],
-      "correct": "bebi",
-      "hint": "preterite -ER"
+      "correct": "bebi"
     },
     {
       "id": 101,
       "unit": 35,
-      "unitName": "Preterite Tense - Regular -ER/-IR Verbs",
       "phase": 2,
       "type": "production",
       "en": "I opened the door",
@@ -1839,13 +1700,11 @@
         "abra",
         "abrisse"
       ],
-      "correct": "abri",
-      "hint": "preterite -IR"
+      "correct": "abri"
     },
     {
       "id": 102,
       "unit": 35,
-      "unitName": "Preterite Tense - Regular -ER/-IR Verbs",
       "phase": 2,
       "type": "production",
       "en": "We lived here",
@@ -1863,13 +1722,11 @@
         "vivamos",
         "vivêssemos"
       ],
-      "correct": "vivemos",
-      "hint": "preterite -ER, nós"
+      "correct": "vivemos"
     },
     {
       "id": 103,
       "unit": 36,
-      "unitName": "Irregular Preterite - Ser/Ir",
       "phase": 2,
       "type": "comprehension",
       "pt": "Eu fui ao Brasil",
@@ -1887,7 +1744,6 @@
     {
       "id": 104,
       "unit": 36,
-      "unitName": "Irregular Preterite - Ser/Ir",
       "phase": 2,
       "type": "comprehension",
       "pt": "Eu fui professor",
@@ -1905,7 +1761,6 @@
     {
       "id": 105,
       "unit": 36,
-      "unitName": "Irregular Preterite - Ser/Ir",
       "phase": 2,
       "type": "production",
       "en": "I went to the park",
@@ -1923,13 +1778,11 @@
         "iria",
         "vá"
       ],
-      "correct": "fui",
-      "hint": "ir, preterite"
+      "correct": "fui"
     },
     {
       "id": 106,
       "unit": 36,
-      "unitName": "Irregular Preterite - Ser/Ir",
       "phase": 2,
       "type": "production",
       "en": "He was a doctor",
@@ -1947,13 +1800,11 @@
         "seria",
         "seja"
       ],
-      "correct": "foi",
-      "hint": "ser, preterite"
+      "correct": "foi"
     },
     {
       "id": 107,
       "unit": 36,
-      "unitName": "Irregular Preterite - Ser/Ir",
       "phase": 2,
       "type": "production",
       "en": "We went there",
@@ -1971,13 +1822,11 @@
         "iríamos",
         "vamos"
       ],
-      "correct": "fomos",
-      "hint": "ir/ser, preterite nós"
+      "correct": "fomos"
     },
     {
       "id": 108,
       "unit": 37,
-      "unitName": "Irregular Preterite - Ter/Estar",
       "phase": 2,
       "type": "comprehension",
       "pt": "Eu tive uma reunião",
@@ -1995,7 +1844,6 @@
     {
       "id": 109,
       "unit": 37,
-      "unitName": "Irregular Preterite - Ter/Estar",
       "phase": 2,
       "type": "production",
       "en": "I was at home",
@@ -2013,13 +1861,11 @@
         "era",
         "fui"
       ],
-      "correct": "estive",
-      "hint": "estar, preterite"
+      "correct": "estive"
     },
     {
       "id": 110,
       "unit": 37,
-      "unitName": "Irregular Preterite - Ter/Estar",
       "phase": 2,
       "type": "production",
       "en": "I had time",
@@ -2037,13 +1883,11 @@
         "tem",
         "teríamos"
       ],
-      "correct": "tive",
-      "hint": "ter, preterite"
+      "correct": "tive"
     },
     {
       "id": 111,
       "unit": 37,
-      "unitName": "Irregular Preterite - Ter/Estar",
       "phase": 2,
       "type": "production",
       "en": "We had luck",
@@ -2061,13 +1905,11 @@
         "teríamos",
         "tenhamos"
       ],
-      "correct": "tivemos",
-      "hint": "ter, preterite nós"
+      "correct": "tivemos"
     },
     {
       "id": 112,
       "unit": 38,
-      "unitName": "Irregular Preterite - Fazer/Dizer/Trazer",
       "phase": 2,
       "type": "comprehension",
       "pt": "Eu fiz o trabalho",
@@ -2085,7 +1927,6 @@
     {
       "id": 113,
       "unit": 38,
-      "unitName": "Irregular Preterite - Fazer/Dizer/Trazer",
       "phase": 2,
       "type": "production",
       "en": "I said everything",
@@ -2103,13 +1944,11 @@
         "dizemos",
         "dizem"
       ],
-      "correct": "disse",
-      "hint": "dizer, preterite"
+      "correct": "disse"
     },
     {
       "id": 114,
       "unit": 38,
-      "unitName": "Irregular Preterite - Fazer/Dizer/Trazer",
       "phase": 2,
       "type": "production",
       "en": "I brought the book",
@@ -2127,13 +1966,11 @@
         "trazemos",
         "trazem"
       ],
-      "correct": "trouxe",
-      "hint": "trazer, preterite"
+      "correct": "trouxe"
     },
     {
       "id": 115,
       "unit": 38,
-      "unitName": "Irregular Preterite - Fazer/Dizer/Trazer",
       "phase": 2,
       "type": "production",
       "en": "We did that",
@@ -2151,13 +1988,11 @@
         "faríamos",
         "façamos"
       ],
-      "correct": "fizemos",
-      "hint": "fazer, preterite nós"
+      "correct": "fizemos"
     },
     {
       "id": 116,
       "unit": 39,
-      "unitName": "Irregular Preterite - Ver/Vir/Dar",
       "phase": 2,
       "type": "comprehension",
       "pt": "Eu vi o filme",
@@ -2175,7 +2010,6 @@
     {
       "id": 117,
       "unit": 39,
-      "unitName": "Irregular Preterite - Ver/Vir/Dar",
       "phase": 2,
       "type": "production",
       "en": "I came here",
@@ -2193,13 +2027,11 @@
         "vimos",
         "vêm"
       ],
-      "correct": "vim",
-      "hint": "vir, preterite"
+      "correct": "vim"
     },
     {
       "id": 118,
       "unit": 39,
-      "unitName": "Irregular Preterite - Ver/Vir/Dar",
       "phase": 2,
       "type": "production",
       "en": "I saw that",
@@ -2217,13 +2049,11 @@
         "vemos",
         "veem"
       ],
-      "correct": "vi",
-      "hint": "ver, preterite"
+      "correct": "vi"
     },
     {
       "id": 119,
       "unit": 39,
-      "unitName": "Irregular Preterite - Ver/Vir/Dar",
       "phase": 2,
       "type": "production",
       "en": "I gave money",
@@ -2241,13 +2071,11 @@
         "damos",
         "dão"
       ],
-      "correct": "dei",
-      "hint": "dar, preterite"
+      "correct": "dei"
     },
     {
       "id": 120,
       "unit": 40,
-      "unitName": "Irregular Preterite - Poder/Pôr/Saber/Querer",
       "phase": 2,
       "type": "comprehension",
       "pt": "Eu pude ir",
@@ -2265,7 +2093,6 @@
     {
       "id": 121,
       "unit": 40,
-      "unitName": "Irregular Preterite - Poder/Pôr/Saber/Querer",
       "phase": 2,
       "type": "production",
       "en": "I wanted to go",
@@ -2283,13 +2110,11 @@
         "queremos",
         "querem"
       ],
-      "correct": "quis",
-      "hint": "querer, preterite"
+      "correct": "quis"
     },
     {
       "id": 122,
       "unit": 40,
-      "unitName": "Irregular Preterite - Poder/Pôr/Saber/Querer",
       "phase": 2,
       "type": "production",
       "en": "I found out about that",
@@ -2307,13 +2132,11 @@
         "sabemos",
         "sabem"
       ],
-      "correct": "soube",
-      "hint": "saber, preterite"
+      "correct": "soube"
     },
     {
       "id": 123,
       "unit": 40,
-      "unitName": "Irregular Preterite - Poder/Pôr/Saber/Querer",
       "phase": 2,
       "type": "production",
       "en": "I was able to travel",
@@ -2331,13 +2154,11 @@
         "podemos",
         "podem"
       ],
-      "correct": "pude",
-      "hint": "poder, preterite"
+      "correct": "pude"
     },
     {
       "id": 124,
       "unit": 40,
-      "unitName": "Irregular Preterite - Poder/Pôr/Saber/Querer",
       "phase": 2,
       "type": "production",
       "en": "I put the book there",
@@ -2355,13 +2176,11 @@
         "pomos",
         "põem"
       ],
-      "correct": "pus",
-      "hint": "pôr, preterite"
+      "correct": "pus"
     },
     {
       "id": 125,
       "unit": 41,
-      "unitName": "Contractions with Preposition A",
       "phase": 2,
       "type": "production",
       "en": "I go to the park",
@@ -2379,13 +2198,11 @@
         "do",
         "da"
       ],
-      "correct": "ao",
-      "hint": "a + o"
+      "correct": "ao"
     },
     {
       "id": 126,
       "unit": 41,
-      "unitName": "Contractions with Preposition A",
       "phase": 2,
       "type": "production",
       "en": "I go to school",
@@ -2402,13 +2219,11 @@
         "da",
         "do"
       ],
-      "correct": "à",
-      "hint": "a + a"
+      "correct": "à"
     },
     {
       "id": 127,
       "unit": 41,
-      "unitName": "Contractions with Preposition A",
       "phase": 2,
       "type": "production",
       "en": "I go to the banks",
@@ -2426,13 +2241,11 @@
         "dos",
         "das"
       ],
-      "correct": "aos",
-      "hint": "a + os"
+      "correct": "aos"
     },
     {
       "id": 128,
       "unit": 41,
-      "unitName": "Contractions with Preposition A",
       "phase": 2,
       "type": "production",
       "en": "I go to the schools",
@@ -2450,13 +2263,11 @@
         "das",
         "dos"
       ],
-      "correct": "às",
-      "hint": "a + as"
+      "correct": "às"
     },
     {
       "id": 129,
       "unit": 42,
-      "unitName": "Prepositions Por and Para",
       "phase": 2,
       "type": "comprehension",
       "pt": "Eu vou para casa",
@@ -2474,7 +2285,6 @@
     {
       "id": 130,
       "unit": 42,
-      "unitName": "Prepositions Por and Para",
       "phase": 2,
       "type": "comprehension",
       "pt": "Eu passo por aqui",
@@ -2492,7 +2302,6 @@
     {
       "id": 131,
       "unit": 42,
-      "unitName": "Prepositions Por and Para",
       "phase": 2,
       "type": "comprehension",
       "pt": "Eu sempre faço isso para você",
@@ -2510,7 +2319,6 @@
     {
       "id": 132,
       "unit": 42,
-      "unitName": "Prepositions Por and Para",
       "phase": 2,
       "type": "production",
       "en": "I am going home",
@@ -2528,13 +2336,11 @@
         "à",
         "ao"
       ],
-      "correct": "para",
-      "hint": "destination"
+      "correct": "para"
     },
     {
       "id": 133,
       "unit": 42,
-      "unitName": "Prepositions Por and Para",
       "phase": 2,
       "type": "production",
       "en": "I walk through the street",
@@ -2552,13 +2358,11 @@
         "ao",
         "a"
       ],
-      "correct": "pela",
-      "hint": "through = por + a"
+      "correct": "pela"
     },
     {
       "id": 139,
       "unit": 45,
-      "unitName": "Imperfect Tense - Regular Verbs",
       "phase": 3,
       "type": "comprehension",
       "pt": "Eu morava em São Paulo",
@@ -2576,7 +2380,6 @@
     {
       "id": 140,
       "unit": 45,
-      "unitName": "Imperfect Tense - Regular Verbs",
       "phase": 3,
       "type": "comprehension",
       "pt": "Eu falava português",
@@ -2594,7 +2397,6 @@
     {
       "id": 141,
       "unit": 45,
-      "unitName": "Imperfect Tense - Regular Verbs",
       "phase": 3,
       "type": "production",
       "en": "I used to live here",
@@ -2612,13 +2414,11 @@
         "morasse",
         "morarei"
       ],
-      "correct": "morava",
-      "hint": "imperfect -AR"
+      "correct": "morava"
     },
     {
       "id": 142,
       "unit": 45,
-      "unitName": "Imperfect Tense - Regular Verbs",
       "phase": 3,
       "type": "production",
       "en": "I used to eat a lot",
@@ -2636,13 +2436,11 @@
         "comesse",
         "comerei"
       ],
-      "correct": "comia",
-      "hint": "imperfect -ER"
+      "correct": "comia"
     },
     {
       "id": 143,
       "unit": 45,
-      "unitName": "Imperfect Tense - Regular Verbs",
       "phase": 3,
       "type": "production",
       "en": "We used to live there",
@@ -2660,13 +2458,11 @@
         "vivêssemos",
         "viveremos"
       ],
-      "correct": "vivíamos",
-      "hint": "imperfect -ER, nós"
+      "correct": "vivíamos"
     },
     {
       "id": 144,
       "unit": 46,
-      "unitName": "Imperfect Tense - Irregular Verbs",
       "phase": 3,
       "type": "comprehension",
       "pt": "Eu era professor",
@@ -2684,7 +2480,6 @@
     {
       "id": 145,
       "unit": 46,
-      "unitName": "Imperfect Tense - Irregular Verbs",
       "phase": 3,
       "type": "production",
       "en": "I used to be happy",
@@ -2702,13 +2497,11 @@
         "fosse",
         "serei"
       ],
-      "correct": "era",
-      "hint": "ser, imperfect"
+      "correct": "era"
     },
     {
       "id": 146,
       "unit": 46,
-      "unitName": "Imperfect Tense - Irregular Verbs",
       "phase": 3,
       "type": "production",
       "en": "I used to have time",
@@ -2726,13 +2519,11 @@
         "tivesse",
         "terei"
       ],
-      "correct": "tinha",
-      "hint": "ter, imperfect"
+      "correct": "tinha"
     },
     {
       "id": 147,
       "unit": 46,
-      "unitName": "Imperfect Tense - Irregular Verbs",
       "phase": 3,
       "type": "production",
       "en": "I used to come here always",
@@ -2750,13 +2541,11 @@
         "viesse",
         "virei"
       ],
-      "correct": "vinha",
-      "hint": "vir, imperfect"
+      "correct": "vinha"
     },
     {
       "id": 148,
       "unit": 47,
-      "unitName": "Comparatives",
       "phase": 3,
       "type": "production",
       "en": "John is taller than Mary",
@@ -2772,13 +2561,11 @@
         "muito...que",
         "pouco...que"
       ],
-      "correct": "mais...que",
-      "hint": "more than"
+      "correct": "mais...que"
     },
     {
       "id": 149,
       "unit": 47,
-      "unitName": "Comparatives",
       "phase": 3,
       "type": "production",
       "en": "Mary is less tall than John",
@@ -2794,13 +2581,11 @@
         "pouco...que",
         "muito...que"
       ],
-      "correct": "menos...que",
-      "hint": "less than"
+      "correct": "menos...que"
     },
     {
       "id": 150,
       "unit": 47,
-      "unitName": "Comparatives",
       "phase": 3,
       "type": "production",
       "en": "Mary is as smart as John",
@@ -2816,13 +2601,11 @@
         "mais...do que",
         "menos...do que"
       ],
-      "correct": "tão...quanto",
-      "hint": "as...as"
+      "correct": "tão...quanto"
     },
     {
       "id": 151,
       "unit": 48,
-      "unitName": "Superlatives",
       "phase": 3,
       "type": "production",
       "en": "The tallest",
@@ -2838,13 +2621,11 @@
         "Mais",
         "Menos"
       ],
-      "correct": "O",
-      "hint": "definite article needed"
+      "correct": "O"
     },
     {
       "id": 152,
       "unit": 48,
-      "unitName": "Superlatives",
       "phase": 3,
       "type": "production",
       "en": "The least tall",
@@ -2860,13 +2641,11 @@
         "Mais",
         "Menos"
       ],
-      "correct": "O",
-      "hint": "definite article needed"
+      "correct": "O"
     },
     {
       "id": 153,
       "unit": 49,
-      "unitName": "Telling Time",
       "phase": 3,
       "type": "comprehension",
       "pt": "São três horas",
@@ -2884,7 +2663,6 @@
     {
       "id": 154,
       "unit": 49,
-      "unitName": "Telling Time",
       "phase": 3,
       "type": "comprehension",
       "pt": "É meio-dia",
@@ -2902,7 +2680,6 @@
     {
       "id": 155,
       "unit": 49,
-      "unitName": "Telling Time",
       "phase": 3,
       "type": "comprehension",
       "pt": "São duas e meia",
@@ -2920,7 +2697,6 @@
     {
       "id": 156,
       "unit": 49,
-      "unitName": "Telling Time",
       "phase": 3,
       "type": "production",
       "en": "It's five o'clock",
@@ -2936,13 +2712,11 @@
         "da manhã",
         "da tarde"
       ],
-      "correct": "horas",
-      "hint": "plural for hours"
+      "correct": "horas"
     },
     {
       "id": 238,
       "unit": 71,
-      "unitName": "Commands/Imperative Mood",
       "phase": 3,
       "type": "comprehension",
       "pt": "Fale português!",
@@ -2960,7 +2734,6 @@
     {
       "id": 239,
       "unit": 71,
-      "unitName": "Commands/Imperative Mood",
       "phase": 3,
       "type": "production",
       "en": "Come here! (você)",
@@ -2978,13 +2751,11 @@
         "Vá",
         "Vai"
       ],
-      "correct": "Venha",
-      "hint": "imperative você form"
+      "correct": "Venha"
     },
     {
       "id": 240,
       "unit": 71,
-      "unitName": "Commands/Imperative Mood",
       "phase": 3,
       "type": "production",
       "en": "Speak Portuguese! (você)",
@@ -3002,13 +2773,11 @@
         "Diga",
         "Diz"
       ],
-      "correct": "Fale",
-      "hint": "imperative você form"
+      "correct": "Fale"
     },
     {
       "id": 241,
       "unit": 71,
-      "unitName": "Commands/Imperative Mood",
       "phase": 3,
       "type": "production",
       "en": "Open the door! (vocês)",
@@ -3026,12 +2795,10 @@
         "Abrem",
         "Abre"
       ],
-      "correct": "Abram",
-      "hint": "imperative vocês form"
+      "correct": "Abram"
     },
     {
       "unit": 72,
-      "unitName": "Demonstratives",
       "phase": 3,
       "type": "comprehension",
       "pt": "Este livro é interessante",
@@ -3049,7 +2816,6 @@
     },
     {
       "unit": 72,
-      "unitName": "Demonstratives",
       "phase": 3,
       "type": "production",
       "en": "These houses are big",
@@ -3072,7 +2838,6 @@
     },
     {
       "unit": 72,
-      "unitName": "Demonstratives",
       "phase": 3,
       "type": "comprehension",
       "pt": "Esse carro é novo",
@@ -3090,7 +2855,6 @@
     },
     {
       "unit": 72,
-      "unitName": "Demonstratives",
       "phase": 3,
       "type": "production",
       "en": "Those girls are friends",
@@ -3113,7 +2877,6 @@
     },
     {
       "unit": 72,
-      "unitName": "Demonstratives",
       "phase": 3,
       "type": "comprehension",
       "pt": "Aquele homem é professor",
@@ -3131,7 +2894,6 @@
     },
     {
       "unit": 72,
-      "unitName": "Demonstratives",
       "phase": 3,
       "type": "production",
       "en": "Those flowers are beautiful",
@@ -3155,7 +2917,6 @@
     {
       "id": 257,
       "unit": 76,
-      "unitName": "Future Tense",
       "phase": 4,
       "type": "comprehension",
       "pt": "Eu falarei português",
@@ -3173,7 +2934,6 @@
     {
       "id": 258,
       "unit": 76,
-      "unitName": "Future Tense",
       "phase": 4,
       "type": "production",
       "en": "I will travel tomorrow",
@@ -3191,13 +2951,11 @@
         "viajando",
         "viajado"
       ],
-      "correct": "viajarei",
-      "hint": "future tense"
+      "correct": "viajarei"
     },
     {
       "id": 259,
       "unit": 76,
-      "unitName": "Future Tense",
       "phase": 4,
       "type": "production",
       "en": "We will be there",
@@ -3215,13 +2973,11 @@
         "fomos",
         "estando"
       ],
-      "correct": "estaremos",
-      "hint": "future tense, nós"
+      "correct": "estaremos"
     },
     {
       "id": 260,
       "unit": 76,
-      "unitName": "Future Tense",
       "phase": 4,
       "type": "production",
       "en": "You will do that",
@@ -3239,13 +2995,11 @@
         "fazendo",
         "feito"
       ],
-      "correct": "fará",
-      "hint": "future tense"
+      "correct": "fará"
     },
     {
       "id": 261,
       "unit": 77,
-      "unitName": "Conditional Tense",
       "phase": 4,
       "type": "comprehension",
       "pt": "Eu gostaria de viajar",
@@ -3263,7 +3017,6 @@
     {
       "id": 262,
       "unit": 77,
-      "unitName": "Conditional Tense",
       "phase": 4,
       "type": "production",
       "en": "I would speak Portuguese",
@@ -3281,13 +3034,11 @@
         "falando",
         "falado"
       ],
-      "correct": "falaria",
-      "hint": "conditional"
+      "correct": "falaria"
     },
     {
       "id": 263,
       "unit": 77,
-      "unitName": "Conditional Tense",
       "phase": 4,
       "type": "production",
       "en": "I would do that",
@@ -3305,13 +3056,11 @@
         "fazendo",
         "feito"
       ],
-      "correct": "faria",
-      "hint": "conditional"
+      "correct": "faria"
     },
     {
       "id": 264,
       "unit": 77,
-      "unitName": "Conditional Tense",
       "phase": 4,
       "type": "production",
       "en": "We would go there",
@@ -3329,13 +3078,11 @@
         "indo",
         "ido"
       ],
-      "correct": "iríamos",
-      "hint": "conditional, nós"
+      "correct": "iríamos"
     },
     {
       "id": 265,
       "unit": 78,
-      "unitName": "É que - Emphatic Questions",
       "phase": 4,
       "type": "comprehension",
       "pt": "Onde é que você mora?",
@@ -3353,7 +3100,6 @@
     {
       "id": 266,
       "unit": 78,
-      "unitName": "É que - Emphatic Questions",
       "phase": 4,
       "type": "comprehension",
       "pt": "O que é que você faz?",
@@ -3371,7 +3117,6 @@
     {
       "id": 267,
       "unit": 79,
-      "unitName": "Crase",
       "phase": 4,
       "type": "production",
       "en": "I go to the beach",
@@ -3389,13 +3134,11 @@
         "pelo",
         "do"
       ],
-      "correct": "à",
-      "hint": "a + a"
+      "correct": "à"
     },
     {
       "id": 268,
       "unit": 79,
-      "unitName": "Crase",
       "phase": 4,
       "type": "production",
       "en": "I go at two o'clock",
@@ -3413,13 +3156,11 @@
         "aos",
         "os"
       ],
-      "correct": "às",
-      "hint": "a + as (time)"
+      "correct": "às"
     },
     {
       "id": 269,
       "unit": 79,
-      "unitName": "Crase",
       "phase": 4,
       "type": "production",
       "en": "I go to school",
@@ -3437,13 +3178,11 @@
         "pelo",
         "do"
       ],
-      "correct": "à",
-      "hint": "a + a"
+      "correct": "à"
     },
     {
       "id": 270,
       "unit": 80,
-      "unitName": "Todo vs Tudo",
       "phase": 4,
       "type": "comprehension",
       "pt": "Todo dia eu estudo",
@@ -3461,7 +3200,6 @@
     {
       "id": 271,
       "unit": 80,
-      "unitName": "Todo vs Tudo",
       "phase": 4,
       "type": "comprehension",
       "pt": "Eu sei tudo",
@@ -3479,7 +3217,6 @@
     {
       "id": 272,
       "unit": 80,
-      "unitName": "Todo vs Tudo",
       "phase": 4,
       "type": "production",
       "en": "Everyone came",
@@ -3497,13 +3234,11 @@
         "Cada",
         "Qualquer"
       ],
-      "correct": "Todo",
-      "hint": "every/all"
+      "correct": "Todo"
     },
     {
       "id": 273,
       "unit": 81,
-      "unitName": "Introduction to Subjunctive Mood",
       "phase": 4,
       "type": "comprehension",
       "pt": "Espero que você venha",
@@ -3521,7 +3256,6 @@
     {
       "id": 274,
       "unit": 81,
-      "unitName": "Introduction to Subjunctive Mood",
       "phase": 4,
       "type": "comprehension",
       "pt": "Talvez eu vá",
@@ -3539,7 +3273,6 @@
     {
       "id": 275,
       "unit": 82,
-      "unitName": "Present Subjunctive - Regular Verbs",
       "phase": 4,
       "type": "comprehension",
       "pt": "Espero que você fale",
@@ -3557,7 +3290,6 @@
     {
       "id": 276,
       "unit": 82,
-      "unitName": "Present Subjunctive - Regular Verbs",
       "phase": 4,
       "type": "production",
       "en": "I hope you eat",
@@ -3575,13 +3307,11 @@
         "comesse",
         "comendo"
       ],
-      "correct": "coma",
-      "hint": "subjunctive -ER"
+      "correct": "coma"
     },
     {
       "id": 277,
       "unit": 82,
-      "unitName": "Present Subjunctive - Regular Verbs",
       "phase": 4,
       "type": "production",
       "en": "I hope you leave",
@@ -3599,13 +3329,11 @@
         "partisse",
         "partindo"
       ],
-      "correct": "parta",
-      "hint": "subjunctive -IR"
+      "correct": "parta"
     },
     {
       "id": 278,
       "unit": 82,
-      "unitName": "Present Subjunctive - Regular Verbs",
       "phase": 4,
       "type": "production",
       "en": "Maybe we travel",
@@ -3623,13 +3351,11 @@
         "viaje",
         "viajando"
       ],
-      "correct": "viajemos",
-      "hint": "subjunctive nós"
+      "correct": "viajemos"
     },
     {
       "id": 279,
       "unit": 83,
-      "unitName": "Present Subjunctive - Irregular Verbs",
       "phase": 4,
       "type": "comprehension",
       "pt": "Espero que você seja feliz",
@@ -3647,7 +3373,6 @@
     {
       "id": 280,
       "unit": 83,
-      "unitName": "Present Subjunctive - Irregular Verbs",
       "phase": 4,
       "type": "production",
       "en": "I hope you are happy",
@@ -3665,13 +3390,11 @@
         "fosse",
         "sendo"
       ],
-      "correct": "seja",
-      "hint": "ser subjunctive"
+      "correct": "seja"
     },
     {
       "id": 281,
       "unit": 83,
-      "unitName": "Present Subjunctive - Irregular Verbs",
       "phase": 4,
       "type": "production",
       "en": "I hope you are here",
@@ -3689,13 +3412,11 @@
         "estivesse",
         "estando"
       ],
-      "correct": "esteja",
-      "hint": "estar subjunctive"
+      "correct": "esteja"
     },
     {
       "id": 282,
       "unit": 83,
-      "unitName": "Present Subjunctive - Irregular Verbs",
       "phase": 4,
       "type": "production",
       "en": "I hope you go",
@@ -3713,13 +3434,11 @@
         "fosse",
         "indo"
       ],
-      "correct": "vá",
-      "hint": "ir subjunctive"
+      "correct": "vá"
     },
     {
       "id": 283,
       "unit": 83,
-      "unitName": "Present Subjunctive - Irregular Verbs",
       "phase": 4,
       "type": "production",
       "en": "Maybe I have time",
@@ -3737,13 +3456,11 @@
         "tivesse",
         "tendo"
       ],
-      "correct": "tenha",
-      "hint": "ter subjunctive"
+      "correct": "tenha"
     },
     {
       "id": 284,
       "unit": 84,
-      "unitName": "Imperfect Subjunctive",
       "phase": 4,
       "type": "comprehension",
       "pt": "Se eu fosse rico, viajaria",
@@ -3761,7 +3478,6 @@
     {
       "id": 285,
       "unit": 84,
-      "unitName": "Imperfect Subjunctive",
       "phase": 4,
       "type": "comprehension",
       "pt": "Se eu soubesse, diria",
@@ -3779,7 +3495,6 @@
     {
       "id": 286,
       "unit": 84,
-      "unitName": "Imperfect Subjunctive",
       "phase": 4,
       "type": "production",
       "en": "If I had money",
@@ -3797,13 +3512,11 @@
         "tivemos",
         "tendo"
       ],
-      "correct": "tivesse",
-      "hint": "imperfect subjunctive"
+      "correct": "tivesse"
     },
     {
       "id": 287,
       "unit": 84,
-      "unitName": "Imperfect Subjunctive",
       "phase": 4,
       "type": "production",
       "en": "If I were there",
@@ -3821,13 +3534,11 @@
         "estivemos",
         "estando"
       ],
-      "correct": "estivesse",
-      "hint": "imperfect subjunctive"
+      "correct": "estivesse"
     },
     {
       "id": 288,
       "unit": 84,
-      "unitName": "Imperfect Subjunctive",
       "phase": 4,
       "type": "production",
       "en": "If we had time",
@@ -3845,13 +3556,11 @@
         "tivesse",
         "tendo"
       ],
-      "correct": "tivéssemos",
-      "hint": "imperfect subjunctive nós"
+      "correct": "tivéssemos"
     },
     {
       "id": 289,
       "unit": 85,
-      "unitName": "Future Subjunctive",
       "phase": 4,
       "type": "comprehension",
       "pt": "Quando eu tiver tempo, vou viajar",
@@ -3869,7 +3578,6 @@
     {
       "id": 290,
       "unit": 85,
-      "unitName": "Future Subjunctive",
       "phase": 4,
       "type": "production",
       "en": "When you arrive",
@@ -3887,13 +3595,11 @@
         "chegando",
         "chegado"
       ],
-      "correct": "chegar",
-      "hint": "future subjunctive"
+      "correct": "chegar"
     },
     {
       "id": 291,
       "unit": 85,
-      "unitName": "Future Subjunctive",
       "phase": 4,
       "type": "production",
       "en": "If you have time",
@@ -3911,13 +3617,11 @@
         "ter",
         "tendo"
       ],
-      "correct": "tiver",
-      "hint": "future subjunctive"
+      "correct": "tiver"
     },
     {
       "id": 292,
       "unit": 85,
-      "unitName": "Future Subjunctive",
       "phase": 4,
       "type": "production",
       "en": "When we can",
@@ -3935,13 +3639,11 @@
         "poder",
         "podendo"
       ],
-      "correct": "pudermos",
-      "hint": "future subjunctive nós"
+      "correct": "pudermos"
     },
     {
       "id": 293,
       "unit": 86,
-      "unitName": "Colloquial Brazilian Portuguese",
       "phase": 4,
       "type": "comprehension",
       "pt": "Cê tá indo pra casa?",
@@ -3959,7 +3661,6 @@
     {
       "id": 294,
       "unit": 86,
-      "unitName": "Colloquial Brazilian Portuguese",
       "phase": 4,
       "type": "comprehension",
       "pt": "Tô indo lá",
@@ -3977,7 +3678,6 @@
     {
       "id": 295,
       "unit": 86,
-      "unitName": "Colloquial Brazilian Portuguese",
       "phase": 4,
       "type": "production",
       "en": "You are going (colloquial)",
@@ -3995,13 +3695,11 @@
         "é",
         "seja"
       ],
-      "correct": "tá",
-      "hint": "colloquial form"
+      "correct": "tá"
     },
     {
       "id": 296,
       "unit": 87,
-      "unitName": "Advanced Demonstratives",
       "phase": 4,
       "type": "comprehension",
       "pt": "Esta semana",
@@ -4019,7 +3717,6 @@
     {
       "id": 297,
       "unit": 87,
-      "unitName": "Advanced Demonstratives",
       "phase": 4,
       "type": "comprehension",
       "pt": "Aquele ano",
@@ -4037,7 +3734,6 @@
     {
       "id": 298,
       "unit": 88,
-      "unitName": "Discourse Markers",
       "phase": 4,
       "type": "comprehension",
       "pt": "Então, você vai?",
@@ -4055,7 +3751,6 @@
     {
       "id": 299,
       "unit": 88,
-      "unitName": "Discourse Markers",
       "phase": 4,
       "type": "comprehension",
       "pt": "Né? Você entende?",
@@ -4073,7 +3768,6 @@
     {
       "id": 300,
       "unit": 89,
-      "unitName": "Advanced Por/Para & Idioms",
       "phase": 4,
       "type": "comprehension",
       "pt": "Por enquanto",
@@ -4091,7 +3785,6 @@
     {
       "id": 301,
       "unit": 89,
-      "unitName": "Advanced Por/Para & Idioms",
       "phase": 4,
       "type": "comprehension",
       "pt": "Para sempre",
@@ -4109,7 +3802,6 @@
     {
       "id": 302,
       "unit": 89,
-      "unitName": "Advanced Por/Para & Idioms",
       "phase": 4,
       "type": "comprehension",
       "pt": "Por acaso",
@@ -4127,7 +3819,6 @@
     {
       "id": 303,
       "unit": 89,
-      "unitName": "Advanced Por/Para & Idioms",
       "phase": 4,
       "type": "production",
       "en": "Forever",
@@ -4145,8 +3836,7 @@
         "Sobre",
         "Com"
       ],
-      "correct": "Para",
-      "hint": "destination/purpose"
+      "correct": "Para"
     }
   ]
 }
