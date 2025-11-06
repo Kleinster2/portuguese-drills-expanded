@@ -3,10 +3,10 @@
     "version": "1.0.0",
     "title": "Portuguese Grammar Placement Test",
     "description": "Comprehensive diagnostic test focusing on Portuguese grammar structures, verb conjugations, and syntax",
-    "totalQuestions": 260,
+    "totalQuestions": 280,
     "questionTypes": {
-      "comprehension": 58,
-      "production": 202
+      "comprehension": 64,
+      "production": 216
     },
     "testType": "grammar"
   },
@@ -5652,6 +5652,436 @@
       ],
       "correct": "me",
       "unitTopic": "Pronoun + Verb Combinations"
+    },
+    {
+      "id": 267,
+      "unit": 87,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Este livro é melhor que aquele",
+      "question": "What does this mean?",
+      "correct": "This book is better than that one",
+      "options": [
+        "This book is better than that one",
+        "This book is the best",
+        "This book is very good",
+        "This book is more good than that one",
+        "This book was better than that one",
+        "This is the better book"
+      ],
+      "unitTopic": "Irregular Comparatives"
+    },
+    {
+      "id": 268,
+      "unit": 87,
+      "phase": 3,
+      "type": "production",
+      "en": "Portuguese is better",
+      "question": "Complete the sentence:",
+      "template": "Português é __",
+      "chips": [
+        "melhor",
+        "mais bom",
+        "o melhor",
+        "muito bom",
+        "ótimo",
+        "bom",
+        "bem",
+        "mais bem",
+        "maior",
+        "menor"
+      ],
+      "correct": "melhor",
+      "unitTopic": "Irregular Comparatives"
+    },
+    {
+      "id": 269,
+      "unit": 87,
+      "phase": 3,
+      "type": "production",
+      "en": "This is the best",
+      "question": "Complete the sentence:",
+      "template": "Este é __",
+      "chips": [
+        "o melhor",
+        "melhor",
+        "mais bom",
+        "o mais bom",
+        "muito bom",
+        "ótimo",
+        "bem",
+        "bom",
+        "maior",
+        "menor"
+      ],
+      "correct": "o melhor",
+      "unitTopic": "Irregular Comparatives"
+    },
+    {
+      "id": 270,
+      "unit": 87,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Hoje está pior que ontem",
+      "question": "What does this mean?",
+      "correct": "Today is worse than yesterday",
+      "options": [
+        "Today is worse than yesterday",
+        "Today is the worst",
+        "Today is very bad",
+        "Today is more bad than yesterday",
+        "Today was worse than yesterday",
+        "Today it is worse"
+      ],
+      "unitTopic": "Irregular Comparatives"
+    },
+    {
+      "id": 271,
+      "unit": 87,
+      "phase": 3,
+      "type": "production",
+      "en": "This is worse",
+      "question": "Complete the sentence:",
+      "template": "Isto é __",
+      "chips": [
+        "pior",
+        "mais mau",
+        "o pior",
+        "muito mau",
+        "péssimo",
+        "mau",
+        "mal",
+        "mais mal",
+        "menor",
+        "maior"
+      ],
+      "correct": "pior",
+      "unitTopic": "Irregular Comparatives"
+    },
+    {
+      "id": 272,
+      "unit": 87,
+      "phase": 3,
+      "type": "production",
+      "en": "That was the worst",
+      "question": "Complete the sentence:",
+      "template": "Aquilo foi __",
+      "chips": [
+        "o pior",
+        "pior",
+        "mais mau",
+        "o mais mau",
+        "muito mau",
+        "péssimo",
+        "mal",
+        "mau",
+        "menor",
+        "maior"
+      ],
+      "correct": "o pior",
+      "unitTopic": "Irregular Comparatives"
+    },
+    {
+      "id": 273,
+      "unit": 87,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "São Paulo é maior que Brasília",
+      "question": "What does this mean?",
+      "correct": "São Paulo is bigger than Brasília",
+      "options": [
+        "São Paulo is bigger than Brasília",
+        "São Paulo is larger than Brasília",
+        "São Paulo is the biggest",
+        "São Paulo is very big",
+        "São Paulo is more grande than Brasília",
+        "São Paulo was bigger than Brasília"
+      ],
+      "unitTopic": "Irregular Comparatives"
+    },
+    {
+      "id": 274,
+      "unit": 87,
+      "phase": 3,
+      "type": "production",
+      "en": "The house is bigger",
+      "question": "Complete the sentence:",
+      "template": "A casa é __",
+      "chips": [
+        "maior",
+        "mais grande",
+        "a maior",
+        "muito grande",
+        "grandíssima",
+        "grande",
+        "bem grande",
+        "melhor",
+        "pior",
+        "menor"
+      ],
+      "correct": "maior",
+      "unitTopic": "Irregular Comparatives"
+    },
+    {
+      "id": 275,
+      "unit": 87,
+      "phase": 3,
+      "type": "production",
+      "en": "My room is smaller",
+      "question": "Complete the sentence:",
+      "template": "Meu quarto é __",
+      "chips": [
+        "menor",
+        "mais pequeno",
+        "o menor",
+        "muito pequeno",
+        "pequeníssimo",
+        "pequeno",
+        "bem pequeno",
+        "maior",
+        "melhor",
+        "pior"
+      ],
+      "correct": "menor",
+      "unitTopic": "Irregular Comparatives"
+    },
+    {
+      "id": 276,
+      "unit": 88,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Este filme é interessantíssimo",
+      "question": "What does this mean?",
+      "correct": "This movie is extremely interesting",
+      "options": [
+        "This movie is extremely interesting",
+        "This movie is very interesting",
+        "This movie is the most interesting",
+        "This movie is more interesting",
+        "This movie is quite interesting",
+        "This movie was very interesting"
+      ],
+      "unitTopic": "Absolute Superlatives"
+    },
+    {
+      "id": 277,
+      "unit": 88,
+      "phase": 3,
+      "type": "production",
+      "en": "She is extremely beautiful",
+      "question": "Complete the sentence:",
+      "template": "Ela é __",
+      "chips": [
+        "lindíssima",
+        "muito linda",
+        "a mais linda",
+        "mais linda",
+        "bem linda",
+        "linda",
+        "belíssima",
+        "bonita",
+        "boníssima",
+        "bela"
+      ],
+      "correct": "lindíssima",
+      "unitTopic": "Absolute Superlatives"
+    },
+    {
+      "id": 278,
+      "unit": 88,
+      "phase": 3,
+      "type": "production",
+      "en": "The house is extremely expensive",
+      "question": "Complete the sentence:",
+      "template": "A casa é __",
+      "chips": [
+        "caríssima",
+        "muito cara",
+        "a mais cara",
+        "mais cara",
+        "bem cara",
+        "cara",
+        "carísima",
+        "barata",
+        "baratíssima",
+        "custosa"
+      ],
+      "correct": "caríssima",
+      "unitTopic": "Absolute Superlatives"
+    },
+    {
+      "id": 279,
+      "unit": 88,
+      "phase": 3,
+      "type": "production",
+      "en": "I am extremely tired",
+      "question": "Complete the sentence:",
+      "template": "Eu estou __",
+      "chips": [
+        "cansadíssimo",
+        "muito cansado",
+        "o mais cansado",
+        "mais cansado",
+        "bem cansado",
+        "cansado",
+        "exausto",
+        "fatigado",
+        "esgotado",
+        "morto"
+      ],
+      "correct": "cansadíssimo",
+      "unitTopic": "Absolute Superlatives"
+    },
+    {
+      "id": 280,
+      "unit": 88,
+      "phase": 3,
+      "type": "production",
+      "en": "The food is extremely good",
+      "question": "Complete the sentence:",
+      "template": "A comida está __",
+      "chips": [
+        "gostosíssima",
+        "muito gostosa",
+        "a mais gostosa",
+        "mais gostosa",
+        "bem gostosa",
+        "gostosa",
+        "deliciosa",
+        "boa",
+        "ótima",
+        "saborosa"
+      ],
+      "correct": "gostosíssima",
+      "unitTopic": "Absolute Superlatives"
+    },
+    {
+      "id": 281,
+      "unit": 88,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "A comida está ótima",
+      "question": "What does this mean?",
+      "correct": "The food is excellent",
+      "options": [
+        "The food is excellent",
+        "The food is very good",
+        "The food is great",
+        "The food is the best",
+        "The food is good",
+        "The food was excellent"
+      ],
+      "unitTopic": "Absolute Superlatives"
+    },
+    {
+      "id": 282,
+      "unit": 88,
+      "phase": 3,
+      "type": "production",
+      "en": "The weather is excellent",
+      "question": "Complete the sentence:",
+      "template": "O tempo está __",
+      "chips": [
+        "ótimo",
+        "muito bom",
+        "o melhor",
+        "melhor",
+        "bom",
+        "bem",
+        "boníssimo",
+        "excelente",
+        "perfeito",
+        "maravilhoso"
+      ],
+      "correct": "ótimo",
+      "unitTopic": "Absolute Superlatives"
+    },
+    {
+      "id": 283,
+      "unit": 88,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "O serviço foi péssimo",
+      "question": "What does this mean?",
+      "correct": "The service was terrible",
+      "options": [
+        "The service was terrible",
+        "The service was very bad",
+        "The service was awful",
+        "The service was the worst",
+        "The service was bad",
+        "The service is terrible"
+      ],
+      "unitTopic": "Absolute Superlatives"
+    },
+    {
+      "id": 284,
+      "unit": 88,
+      "phase": 3,
+      "type": "production",
+      "en": "The movie was terrible",
+      "question": "Complete the sentence:",
+      "template": "O filme foi __",
+      "chips": [
+        "péssimo",
+        "muito mau",
+        "o pior",
+        "pior",
+        "mau",
+        "mal",
+        "mauzíssimo",
+        "ruim",
+        "horrível",
+        "terrível"
+      ],
+      "correct": "péssimo",
+      "unitTopic": "Absolute Superlatives"
+    },
+    {
+      "id": 285,
+      "unit": 88,
+      "phase": 3,
+      "type": "production",
+      "en": "It is extremely difficult",
+      "question": "Complete the sentence:",
+      "template": "É __",
+      "chips": [
+        "dificílimo",
+        "muito difícil",
+        "o mais difícil",
+        "mais difícil",
+        "bem difícil",
+        "difícil",
+        "dificilíssimo",
+        "complicado",
+        "dificiílimo",
+        "arduíssimo"
+      ],
+      "correct": "dificílimo",
+      "unitTopic": "Absolute Superlatives"
+    },
+    {
+      "id": 286,
+      "unit": 88,
+      "phase": 3,
+      "type": "production",
+      "en": "It is extremely easy",
+      "question": "Complete the sentence:",
+      "template": "É __",
+      "chips": [
+        "facilíssimo",
+        "muito fácil",
+        "o mais fácil",
+        "mais fácil",
+        "bem fácil",
+        "fácil",
+        "facílimo",
+        "simples",
+        "simplíssimo",
+        "elementar"
+      ],
+      "correct": "facilíssimo",
+      "unitTopic": "Absolute Superlatives"
     }
   ]
 }
