@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "title": "Portuguese Grammar Placement Test",
     "description": "Comprehensive diagnostic test focusing on Portuguese grammar structures, verb conjugations, and syntax",
-    "totalQuestions": 142,
+    "totalQuestions": 139,
     "questionTypes": {
       "comprehension": 71,
       "production": 121
@@ -2213,50 +2213,6 @@
     {
       "unit": 72,
       "phase": 3,
-      "type": "production",
-      "en": "These houses are big",
-      "question": "How do you say 'These houses are big'?",
-      "template": "__ casas são __",
-      "correct": "Estas casas são grandes",
-      "chips": [
-        "Estas",
-        "Estes",
-        "Esta",
-        "Este",
-        "casas",
-        "são",
-        "grandes",
-        "grande",
-        "estão",
-        "casa"
-      ],
-      "id": 106
-    },
-    {
-      "unit": 72,
-      "phase": 3,
-      "type": "production",
-      "en": "Those girls are friends",
-      "question": "How do you say 'Those girls are friends'?",
-      "template": "__ meninas são __",
-      "correct": "Essas meninas são amigas",
-      "chips": [
-        "Essas",
-        "Esses",
-        "Essa",
-        "Esse",
-        "meninas",
-        "são",
-        "amigas",
-        "amiga",
-        "estão",
-        "menina"
-      ],
-      "id": 107
-    },
-    {
-      "unit": 72,
-      "phase": 3,
       "type": "comprehension",
       "pt": "Aquele homem é professor",
       "question": "What does 'Aquele homem é professor' mean?",
@@ -2269,32 +2225,10 @@
         "The man is a teacher",
         "That man was a teacher"
       ],
-      "id": 108
+      "id": 106
     },
     {
-      "unit": 72,
-      "phase": 3,
-      "type": "production",
-      "en": "Those flowers are beautiful",
-      "question": "How do you say 'Those flowers are beautiful'?",
-      "template": "__ flores são __",
-      "correct": "Aquelas flores são bonitas",
-      "chips": [
-        "Aquelas",
-        "Aqueles",
-        "Aquela",
-        "Aquele",
-        "flores",
-        "são",
-        "bonitas",
-        "bonita",
-        "estão",
-        "flor"
-      ],
-      "id": 109
-    },
-    {
-      "id": 110,
+      "id": 107,
       "unit": 76,
       "phase": 4,
       "type": "production",
@@ -2316,7 +2250,7 @@
       "correct": "viajarei"
     },
     {
-      "id": 111,
+      "id": 108,
       "unit": 76,
       "phase": 4,
       "type": "production",
@@ -2338,7 +2272,7 @@
       "correct": "estaremos"
     },
     {
-      "id": 112,
+      "id": 109,
       "unit": 76,
       "phase": 4,
       "type": "production",
@@ -2360,7 +2294,7 @@
       "correct": "fará"
     },
     {
-      "id": 113,
+      "id": 110,
       "unit": 77,
       "phase": 4,
       "type": "comprehension",
@@ -2377,7 +2311,7 @@
       ]
     },
     {
-      "id": 114,
+      "id": 111,
       "unit": 77,
       "phase": 4,
       "type": "production",
@@ -2399,7 +2333,7 @@
       "correct": "falaria"
     },
     {
-      "id": 115,
+      "id": 112,
       "unit": 77,
       "phase": 4,
       "type": "production",
@@ -2421,7 +2355,7 @@
       "correct": "faria"
     },
     {
-      "id": 116,
+      "id": 113,
       "unit": 77,
       "phase": 4,
       "type": "production",
@@ -2442,7 +2376,7 @@
       "correct": "iríamos"
     },
     {
-      "id": 117,
+      "id": 114,
       "unit": 79,
       "phase": 4,
       "type": "production",
@@ -2464,7 +2398,7 @@
       "correct": "à"
     },
     {
-      "id": 118,
+      "id": 115,
       "unit": 79,
       "phase": 4,
       "type": "production",
@@ -2486,7 +2420,7 @@
       "correct": "às"
     },
     {
-      "id": 119,
+      "id": 116,
       "unit": 80,
       "phase": 4,
       "type": "comprehension",
@@ -2503,7 +2437,7 @@
       ]
     },
     {
-      "id": 120,
+      "id": 117,
       "unit": 80,
       "phase": 4,
       "type": "production",
@@ -2525,7 +2459,7 @@
       "correct": "Todo"
     },
     {
-      "id": 121,
+      "id": 118,
       "unit": 81,
       "phase": 4,
       "type": "comprehension",
@@ -2542,7 +2476,7 @@
       ]
     },
     {
-      "id": 122,
+      "id": 119,
       "unit": 81,
       "phase": 4,
       "type": "comprehension",
@@ -2559,7 +2493,7 @@
       ]
     },
     {
-      "id": 123,
+      "id": 120,
       "unit": 82,
       "phase": 4,
       "type": "comprehension",
@@ -2576,7 +2510,7 @@
       ]
     },
     {
-      "id": 124,
+      "id": 121,
       "unit": 82,
       "phase": 4,
       "type": "production",
@@ -2598,7 +2532,7 @@
       "correct": "coma"
     },
     {
-      "id": 125,
+      "id": 122,
       "unit": 82,
       "phase": 4,
       "type": "production",
@@ -2620,7 +2554,7 @@
       "correct": "parta"
     },
     {
-      "id": 126,
+      "id": 123,
       "unit": 82,
       "phase": 4,
       "type": "production",
@@ -2642,7 +2576,7 @@
       "correct": "viajemos"
     },
     {
-      "id": 127,
+      "id": 124,
       "unit": 83,
       "phase": 4,
       "type": "production",
@@ -2664,7 +2598,7 @@
       "correct": "esteja"
     },
     {
-      "id": 128,
+      "id": 125,
       "unit": 83,
       "phase": 4,
       "type": "production",
@@ -2686,7 +2620,7 @@
       "correct": "vá"
     },
     {
-      "id": 129,
+      "id": 126,
       "unit": 83,
       "phase": 4,
       "type": "production",
@@ -2708,7 +2642,7 @@
       "correct": "tenha"
     },
     {
-      "id": 130,
+      "id": 127,
       "unit": 83,
       "phase": 4,
       "type": "comprehension",
@@ -2725,7 +2659,7 @@
       ]
     },
     {
-      "id": 131,
+      "id": 128,
       "unit": 83,
       "phase": 4,
       "type": "production",
@@ -2747,7 +2681,7 @@
       "correct": "seja"
     },
     {
-      "id": 132,
+      "id": 129,
       "unit": 84,
       "phase": 4,
       "type": "comprehension",
@@ -2764,7 +2698,7 @@
       ]
     },
     {
-      "id": 133,
+      "id": 130,
       "unit": 84,
       "phase": 4,
       "type": "comprehension",
@@ -2781,7 +2715,7 @@
       ]
     },
     {
-      "id": 134,
+      "id": 131,
       "unit": 84,
       "phase": 4,
       "type": "production",
@@ -2803,7 +2737,7 @@
       "correct": "tivesse"
     },
     {
-      "id": 135,
+      "id": 132,
       "unit": 84,
       "phase": 4,
       "type": "production",
@@ -2825,7 +2759,7 @@
       "correct": "estivesse"
     },
     {
-      "id": 136,
+      "id": 133,
       "unit": 84,
       "phase": 4,
       "type": "production",
@@ -2847,7 +2781,7 @@
       "correct": "tivéssemos"
     },
     {
-      "id": 137,
+      "id": 134,
       "unit": 85,
       "phase": 4,
       "type": "comprehension",
@@ -2864,7 +2798,7 @@
       ]
     },
     {
-      "id": 138,
+      "id": 135,
       "unit": 85,
       "phase": 4,
       "type": "production",
@@ -2886,7 +2820,7 @@
       "correct": "chegar"
     },
     {
-      "id": 139,
+      "id": 136,
       "unit": 85,
       "phase": 4,
       "type": "production",
@@ -2908,7 +2842,7 @@
       "correct": "tiver"
     },
     {
-      "id": 140,
+      "id": 137,
       "unit": 85,
       "phase": 4,
       "type": "production",
@@ -2930,7 +2864,7 @@
       "correct": "pudermos"
     },
     {
-      "id": 141,
+      "id": 138,
       "unit": 86,
       "phase": 4,
       "type": "production",
@@ -2952,7 +2886,7 @@
       "correct": "tá"
     },
     {
-      "id": 142,
+      "id": 139,
       "unit": 89,
       "phase": 4,
       "type": "production",
