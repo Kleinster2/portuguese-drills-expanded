@@ -3,10 +3,10 @@
     "version": "1.0.0",
     "title": "Portuguese Grammar Placement Test",
     "description": "Comprehensive diagnostic test focusing on Portuguese grammar structures, verb conjugations, and syntax",
-    "totalQuestions": 165,
+    "totalQuestions": 172,
     "questionTypes": {
-      "comprehension": 28,
-      "production": 137
+      "comprehension": 30,
+      "production": 142
     },
     "testType": "grammar"
   },
@@ -3432,26 +3432,170 @@
       "correct": "Diga"
     },
     {
-      "id": 166,
-      "unit": 71,
+      "id": 167,
+      "unit": 56,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "É importante para nós falarmos português",
+      "question": "What does this mean?",
+      "correct": "It is important for us to speak Portuguese",
+      "options": [
+        "It is important for us to speak Portuguese",
+        "It is important that we speak Portuguese",
+        "We speak Portuguese importantly",
+        "It is important to speak Portuguese",
+        "We are speaking Portuguese",
+        "It was important for us to speak Portuguese"
+      ]
+    },
+    {
+      "id": 168,
+      "unit": 56,
+      "phase": 3,
+      "type": "comprehension",
+      "pt": "Antes de vocês saírem",
+      "question": "What does this mean?",
+      "correct": "Before you (all) leave",
+      "options": [
+        "Before you (all) leave",
+        "Before you (all) left",
+        "After you (all) leave",
+        "Before leaving",
+        "When you (all) leave",
+        "Before you (all) go out"
+      ]
+    },
+    {
+      "id": 169,
+      "unit": 56,
       "phase": 3,
       "type": "production",
-      "en": "Give it to me! (você - masculine object)",
+      "en": "It is important for us to study",
       "question": "Complete the sentence:",
-      "template": "Dê-__!",
+      "template": "É importante para nós __",
       "chips": [
-        "mo",
-        "me-o",
-        "me o",
-        "o-me",
-        "lo",
-        "me",
-        "lhe",
-        "o",
-        "a",
-        "te"
+        "estudarmos",
+        "estudar",
+        "estudamos",
+        "estudaremos",
+        "estudássemos",
+        "estudemos",
+        "estudaríamos",
+        "estudo",
+        "estudam",
+        "estudaram"
       ],
-      "correct": "mo"
+      "correct": "estudarmos"
+    },
+    {
+      "id": 170,
+      "unit": 56,
+      "phase": 3,
+      "type": "production",
+      "en": "Before they arrive",
+      "question": "Complete the sentence:",
+      "template": "Antes de eles __",
+      "chips": [
+        "chegarem",
+        "chegar",
+        "chegam",
+        "chegarão",
+        "chegassem",
+        "cheguem",
+        "chegariam",
+        "chegaram",
+        "chegavam",
+        "chego"
+      ],
+      "correct": "chegarem"
+    },
+    {
+      "id": 171,
+      "unit": 56,
+      "phase": 3,
+      "type": "production",
+      "en": "For me to go",
+      "question": "Complete the sentence:",
+      "template": "Para eu __",
+      "chips": [
+        "ir",
+        "vou",
+        "fui",
+        "ia",
+        "irei",
+        "iria",
+        "vá",
+        "fosse",
+        "irmos",
+        "irem"
+      ],
+      "correct": "ir"
+    },
+    {
+      "id": 172,
+      "unit": 56,
+      "phase": 3,
+      "type": "production",
+      "en": "After we eat",
+      "question": "Complete the sentence:",
+      "template": "Depois de nós __",
+      "chips": [
+        "comermos",
+        "comer",
+        "comemos",
+        "comeremos",
+        "comêssemos",
+        "comamos",
+        "comeríamos",
+        "como",
+        "comem",
+        "comeram"
+      ],
+      "correct": "comermos"
+    },
+    {
+      "id": 173,
+      "unit": 56,
+      "phase": 3,
+      "type": "production",
+      "en": "It is necessary for you (all) to come",
+      "question": "Complete the sentence:",
+      "template": "É necessário vocês __",
+      "chips": [
+        "virem",
+        "vir",
+        "vêm",
+        "virão",
+        "viessem",
+        "venham",
+        "viriam",
+        "vim",
+        "veio",
+        "vinha"
+      ],
+      "correct": "virem"
+    },
+    {
+      "id": 174,
+      "unit": 56,
+      "phase": 3,
+      "type": "production",
+      "en": "Without them knowing",
+      "question": "Complete the sentence:",
+      "template": "Sem eles __",
+      "chips": [
+        "saberem",
+        "saber",
+        "sabem",
+        "saberão",
+        "soubessem",
+        "saibam",
+        "saberiam",
+        "sei",
+        "sabe",
+        "souberam"
+      ],
+      "correct": "saberem"
     }
   ]
 }
