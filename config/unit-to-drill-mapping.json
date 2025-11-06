@@ -1,0 +1,506 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "description": "Maps placement test units and topics to practice drills",
+    "totalUnits": 0,
+    "totalTopics": 68,
+    "totalDrills": 43,
+    "coveragePercentage": 51.5
+  },
+  "topicToDrills": {
+    "Ser": {
+      "drills": [
+        "ser-estar"
+      ],
+      "coverage": "full",
+      "notes": "Covers ser conjugation and ser vs estar distinction"
+    },
+    "Estar": {
+      "drills": [
+        "ser-estar"
+      ],
+      "coverage": "full",
+      "notes": "Covers estar conjugation and ser vs estar distinction"
+    },
+    "Ser vs Estar": {
+      "drills": [
+        "ser-estar"
+      ],
+      "coverage": "full",
+      "notes": "Dedicated drill for this distinction"
+    },
+    "Ficar": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "No dedicated drill - could be added to irregular-verbs or create ficar-specific drill"
+    },
+    "Ter": {
+      "drills": [
+        "irregular-verbs"
+      ],
+      "coverage": "partial",
+      "notes": "Covered as part of irregular verbs"
+    },
+    "Gostar de": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "No dedicated drill - verb + preposition pattern"
+    },
+    "Regular -ar Verbs": {
+      "drills": [
+        "irregular-verbs"
+      ],
+      "coverage": "partial",
+      "notes": "Note: drill ID suggests irregular but covers regular too"
+    },
+    "Regular -er Verbs": {
+      "drills": [
+        "irregular-verbs"
+      ],
+      "coverage": "partial",
+      "notes": "Note: drill ID suggests irregular but covers regular too"
+    },
+    "Regular -ir Verbs": {
+      "drills": [
+        "irregular-verbs"
+      ],
+      "coverage": "partial",
+      "notes": "Note: drill ID suggests irregular but covers regular too"
+    },
+    "3rd Person Singular": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "Specific conjugation practice - could add to verb drills"
+    },
+    "3rd Person Plural": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "Specific conjugation practice - could add to verb drills"
+    },
+    "1st Person Plural": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "Specific conjugation practice - could add to verb drills"
+    },
+    "Preterite Regular": {
+      "drills": [
+        "preterite-tense"
+      ],
+      "coverage": "full",
+      "notes": "Dedicated preterite drill"
+    },
+    "Preterite Irregular": {
+      "drills": [
+        "preterite-tense"
+      ],
+      "coverage": "full",
+      "notes": "Dedicated preterite drill including irregulars"
+    },
+    "Imperfect Regular": {
+      "drills": [
+        "imperfect-tense"
+      ],
+      "coverage": "full",
+      "notes": "Dedicated imperfect drill"
+    },
+    "Imperfect Irregular": {
+      "drills": [
+        "imperfect-tense"
+      ],
+      "coverage": "full",
+      "notes": "Dedicated imperfect drill including irregulars"
+    },
+    "Near Future": {
+      "drills": [
+        "immediate-future"
+      ],
+      "coverage": "full",
+      "notes": "ir + infinitive construction"
+    },
+    "Simple Future": {
+      "drills": [
+        "future-tense"
+      ],
+      "coverage": "full",
+      "notes": "Dedicated future tense drill"
+    },
+    "Conditional": {
+      "drills": [
+        "conditional-tense"
+      ],
+      "coverage": "full",
+      "notes": "Dedicated conditional drill"
+    },
+    "Past Future": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "Future in the past - advanced topic"
+    },
+    "Present Subjunctive": {
+      "drills": [
+        "present-subjunctive"
+      ],
+      "coverage": "full",
+      "notes": "Dedicated present subjunctive drill"
+    },
+    "Imperfect Subjunctive": {
+      "drills": [
+        "imperfect-subjunctive"
+      ],
+      "coverage": "full",
+      "notes": "Dedicated imperfect subjunctive drill"
+    },
+    "Future Subjunctive": {
+      "drills": [
+        "future-subjunctive"
+      ],
+      "coverage": "full",
+      "notes": "Dedicated future subjunctive drill"
+    },
+    "Imperative": {
+      "drills": [
+        "imperative"
+      ],
+      "coverage": "full",
+      "notes": "Command forms"
+    },
+    "Negative Imperatives": {
+      "drills": [
+        "imperative"
+      ],
+      "coverage": "full",
+      "notes": "Negative command forms included in imperative drill"
+    },
+    "Acabar de": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "Just finished - periphrastic construction"
+    },
+    "Voltar a": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "To do again - periphrastic construction"
+    },
+    "Ficar + gerúndio": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "Progressive aspect with ficar"
+    },
+    "Aspectual Verbs": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "Various aspectual constructions"
+    },
+    "Progressive Periphrases": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "estar/andar/vir/continuar + gerúndio - 20 questions!"
+    },
+    "Definite Articles": {
+      "drills": [
+        "articles"
+      ],
+      "coverage": "full",
+      "notes": "o/a/os/as"
+    },
+    "Indefinite Articles": {
+      "drills": [
+        "articles"
+      ],
+      "coverage": "full",
+      "notes": "um/uma/uns/umas"
+    },
+    "Adjective Agreement": {
+      "drills": [
+        "adjective-agreement"
+      ],
+      "coverage": "full",
+      "notes": "Gender and number agreement"
+    },
+    "Possessives": {
+      "drills": [
+        "possessives"
+      ],
+      "coverage": "full",
+      "notes": "meu/seu/nosso etc."
+    },
+    "Demonstratives": {
+      "drills": [
+        "demonstratives",
+        "advanced-demonstratives"
+      ],
+      "coverage": "full",
+      "notes": "este/esse/aquele - basic and advanced"
+    },
+    "Question Words": {
+      "drills": [
+        "question-words",
+        "interrogatives"
+      ],
+      "coverage": "full",
+      "notes": "quem/o que/quando/onde etc."
+    },
+    "Todo vs Tudo": {
+      "drills": [
+        "todo-tudo"
+      ],
+      "coverage": "full",
+      "notes": "Dedicated drill for this distinction"
+    },
+    "Prepositions de/do/da/das": {
+      "drills": [
+        "contractions-articles"
+      ],
+      "coverage": "full",
+      "notes": "de + article contractions"
+    },
+    "Prepositions em/no/na": {
+      "drills": [
+        "contractions-articles"
+      ],
+      "coverage": "full",
+      "notes": "em + article contractions"
+    },
+    "Prepositions with Location": {
+      "drills": [
+        "common-prepositions"
+      ],
+      "coverage": "partial",
+      "notes": "General preposition usage"
+    },
+    "Prepositions with precisar": {
+      "drills": [
+        "common-prepositions"
+      ],
+      "coverage": "partial",
+      "notes": "Verb + preposition patterns"
+    },
+    "Preposition Contractions": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "General contractions - partially covered by contractions-articles"
+    },
+    "Preposition + que": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "Advanced preposition usage"
+    },
+    "Por vs Para": {
+      "drills": [
+        "por-vs-para"
+      ],
+      "coverage": "full",
+      "notes": "Dedicated drill for this distinction"
+    },
+    "Para vs Por": {
+      "drills": [
+        "por-vs-para"
+      ],
+      "coverage": "full",
+      "notes": "Same as Por vs Para"
+    },
+    "Expressions with Para": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "Idiomatic expressions with para"
+    },
+    "Direct Object Pronouns": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "o/a/os/as - major gap"
+    },
+    "Indirect Object Pronouns": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "lhe/lhes - major gap"
+    },
+    "Reflexive Pronouns": {
+      "drills": [
+        "reflexive-verbs"
+      ],
+      "coverage": "full",
+      "notes": "me/se/nos with reflexive verbs"
+    },
+    "Pronouns after Infinitives": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "Pronoun placement with infinitives"
+    },
+    "Próclise with Negatives": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "Pronoun placement with negation"
+    },
+    "Próclise with Adverbs": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "Pronoun placement with adverbs"
+    },
+    "Relative Pronoun onde": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "Where - 7 questions"
+    },
+    "Relative Pronoun quem": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "Who/whom - 4 questions"
+    },
+    "Relative Pronoun cujo": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "Whose - 3 questions"
+    },
+    "Relative Pronoun o qual": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "Which/who (formal) - 3 questions"
+    },
+    "Relative Pronoun o que": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "What/which - 3 questions"
+    },
+    "Passive Voice": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "ser + past participle - 8 questions"
+    },
+    "SE Passive": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "se passive construction - 6 questions"
+    },
+    "Passive Progressive": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "Progressive passive forms"
+    },
+    "Passive Habitual": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "Habitual passive forms"
+    },
+    "Comparatives": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "mais/menos...que - 3 questions"
+    },
+    "Superlatives": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "o mais/menos - 2 questions"
+    },
+    "Irregular Comparatives": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "melhor/pior/maior/menor - 9 questions"
+    },
+    "Absolute Superlatives": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "-íssimo forms - 11 questions"
+    },
+    "Time Expressions": {
+      "drills": [
+        "time-expressions"
+      ],
+      "coverage": "full",
+      "notes": "Telling time, days, months"
+    },
+    "Colloquial Contractions": {
+      "drills": [
+        "colloquial-speech"
+      ],
+      "coverage": "full",
+      "notes": "você→cê, está→tá etc."
+    },
+    "Reported Speech": {
+      "drills": [],
+      "coverage": "none",
+      "notes": "Indirect speech - advanced topic"
+    }
+  },
+  "drillsNotInPlacementTest": {
+    "conversational-answers": {
+      "reason": "Conversational skill, not grammar structure",
+      "recommendation": "Consider adding yes/no answer pattern questions"
+    },
+    "phonetics-br": {
+      "reason": "Pronunciation, not tested in written placement test",
+      "recommendation": "Keep separate - different skill"
+    },
+    "self-introduction": {
+      "reason": "Beginner conversation practice",
+      "recommendation": "Keep separate - practical speaking skill"
+    },
+    "syllable-stress": {
+      "reason": "Pronunciation/orthography",
+      "recommendation": "Keep separate - different skill"
+    },
+    "advanced-demonstratives": {
+      "reason": "Covered by basic demonstratives in test",
+      "recommendation": "Could add advanced demonstrative questions"
+    },
+    "e-que-questions": {
+      "reason": "Specific emphatic question pattern",
+      "recommendation": "Could add é que questions to placement test"
+    },
+    "muito": {
+      "reason": "Specific agreement topic",
+      "recommendation": "Could add muito agreement questions"
+    },
+    "subject-identification": {
+      "reason": "Reverse conjugation drill",
+      "recommendation": "Keep separate - different skill type"
+    },
+    "contractions-de": {
+      "reason": "Pronoun contractions (dele/dela) not articles",
+      "recommendation": "Could add pronoun contraction questions"
+    },
+    "contractions-em": {
+      "reason": "Pronoun contractions (nele/nela) not articles",
+      "recommendation": "Could add pronoun contraction questions"
+    },
+    "crase": {
+      "reason": "Specialized topic - à usage",
+      "recommendation": "Could add crase questions"
+    },
+    "ir-transportation": {
+      "reason": "Specific ir + transportation pattern",
+      "recommendation": "Could add to placement test"
+    },
+    "colors": {
+      "reason": "Vocabulary, not grammar",
+      "recommendation": "Keep separate or add vocabulary section"
+    },
+    "days-of-week": {
+      "reason": "Vocabulary, not grammar",
+      "recommendation": "Keep separate or add vocabulary section"
+    },
+    "noun-plurals": {
+      "reason": "Orthography/morphology",
+      "recommendation": "Could add noun plural questions"
+    },
+    "numbers": {
+      "reason": "Vocabulary, not grammar",
+      "recommendation": "Keep separate or add vocabulary section"
+    },
+    "grammar-for-spanish": {
+      "reason": "Targeted at Spanish speakers",
+      "recommendation": "Keep separate - specialized audience"
+    },
+    "portuguese-for-spanish": {
+      "reason": "Targeted at Spanish speakers",
+      "recommendation": "Keep separate - specialized audience"
+    },
+    "present-continuous": {
+      "reason": "Missing from placement test",
+      "recommendation": "ADD to placement test - estar + gerúndio"
+    },
+    "reflexive-verbs": {
+      "reason": "Covered as Reflexive Pronouns in test",
+      "recommendation": "Already covered"
+    }
+  }
+}
