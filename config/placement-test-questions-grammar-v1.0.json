@@ -560,14 +560,14 @@
       "chips": [
         "fica",
         "está",
-        "é",
         "fico",
         "ficam",
         "estão",
         "ficou",
         "ficava",
         "ficará",
-        "fique"
+        "fique",
+        "estava"
       ],
       "correct": "fica",
       "hint": "location permanence"
