@@ -1841,9 +1841,9 @@
       "unit": 41,
       "phase": 2,
       "type": "production",
-      "en": "I'm heading to school",
+      "en": "You all are heading to school",
       "question": "Complete the sentence:",
-      "template": "Eu vou __ escola",
+      "template": "Voces vao __ escola",
       "chips": [
         "à",
         "ao",
@@ -1855,7 +1855,7 @@
         "da",
         "do"
       ],
-      "correct": "à",
+      "correct": "a",
       "unitTopic": "Preposition Contractions"
     },
     {
@@ -2589,9 +2589,9 @@
       "unit": 81,
       "phase": 4,
       "type": "production",
-      "en": "I go at two o'clock",
+      "en": "You all go at two o clock",
       "question": "Complete the sentence:",
-      "template": "Eu vou __ duas horas",
+      "template": "Voces vao __ duas horas",
       "chips": [
         "às",
         "as",
@@ -2604,7 +2604,7 @@
         "aos",
         "os"
       ],
-      "correct": "às",
+      "correct": "as",
       "unitTopic": "Time Expressions"
     },
     {
@@ -3380,9 +3380,9 @@
       "unit": 53,
       "phase": 3,
       "type": "production",
-      "en": "I do not see him",
+      "en": "You all do not see him",
       "question": "Complete the sentence:",
-      "template": "Eu não __ vejo",
+      "template": "Voces nao __ veem",
       "chips": [
         "o",
         "vejo-o",
@@ -3444,9 +3444,9 @@
       "unit": 43,
       "phase": 2,
       "type": "production",
-      "en": "I get up",
+      "en": "You all get up",
       "question": "Complete the sentence:",
-      "template": "Eu __ levanto",
+      "template": "Voces __ levantam",
       "chips": [
         "me",
         "te",
@@ -3459,7 +3459,7 @@
         "as",
         "lhes"
       ],
-      "correct": "me",
+      "correct": "se",
       "unitTopic": "Reflexive Pronouns"
     },
     {
@@ -3536,9 +3536,9 @@
       "unit": 54,
       "phase": 3,
       "type": "production",
-      "en": "I always see him",
+      "en": "You all always see him",
       "question": "Complete the sentence:",
-      "template": "Eu sempre __ vejo",
+      "template": "Voces sempre __ veem",
       "chips": [
         "o",
         "vejo-o",
@@ -5533,9 +5533,9 @@
       "unit": 92,
       "phase": 3,
       "type": "production",
-      "en": "I told him to leave",
+      "en": "You all told him to leave",
       "question": "Complete the sentence:",
-      "template": "Eu __ disse para sair",
+      "template": "Voces __ disseram para sair",
       "chips": [
         "lhe",
         "me",
@@ -5597,9 +5597,9 @@
       "unit": 92,
       "phase": 3,
       "type": "production",
-      "en": "I asked her to wait",
+      "en": "You all asked her to wait",
       "question": "Complete the sentence:",
-      "template": "Eu __ pedi para esperar",
+      "template": "Voces __ pediram para esperar",
       "chips": [
         "lhe",
         "me",
