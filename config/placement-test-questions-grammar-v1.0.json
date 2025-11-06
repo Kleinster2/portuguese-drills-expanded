@@ -835,9 +835,9 @@
       "unit": 24,
       "phase": 2,
       "type": "production",
-      "en": "We speak Portuguese",
+      "en": "I speak Portuguese",
       "question": "Complete the sentence:",
-      "template": "Nós __ português",
+      "template": "Eu __ portugues",
       "chips": [
         "falamos",
         "falo",
@@ -850,7 +850,7 @@
         "falemos",
         "falássemos"
       ],
-      "correct": "falamos",
+      "correct": "falo",
       "unitTopic": "1st Person Plural"
     },
     {
@@ -858,9 +858,9 @@
       "unit": 24,
       "phase": 2,
       "type": "production",
-      "en": "We live here",
+      "en": "He lives here",
       "question": "Complete the sentence:",
-      "template": "Nós __ aqui",
+      "template": "Ele __ aqui",
       "chips": [
         "moramos",
         "moro",
@@ -873,7 +873,7 @@
         "moremos",
         "morássemos"
       ],
-      "correct": "moramos",
+      "correct": "mora",
       "unitTopic": "1st Person Plural"
     },
     {
@@ -883,7 +883,7 @@
       "type": "production",
       "en": "We drink water",
       "question": "Complete the sentence:",
-      "template": "Nós __ água",
+      "template": "A gente __ agua",
       "chips": [
         "bebemos",
         "bebo",
@@ -896,7 +896,7 @@
         "bebamos",
         "bebêssemos"
       ],
-      "correct": "bebemos",
+      "correct": "bebe",
       "unitTopic": "1st Person Plural"
     },
     {
@@ -1060,9 +1060,9 @@
       "unit": 28,
       "phase": 2,
       "type": "production",
-      "en": "You all speak Portuguese",
+      "en": "Someone speaks Portuguese",
       "question": "Complete the sentence:",
-      "template": "Vocês __ português",
+      "template": "Alguem __ portugues",
       "chips": [
         "falam",
         "falo",
@@ -1075,7 +1075,7 @@
         "falariam",
         "falem"
       ],
-      "correct": "falam",
+      "correct": "fala",
       "unitTopic": "3rd Person Plural"
     },
     {
@@ -1083,9 +1083,9 @@
       "unit": 28,
       "phase": 2,
       "type": "production",
-      "en": "They live here",
+      "en": "No one lives here",
       "question": "Complete the sentence:",
-      "template": "Eles __ aqui",
+      "template": "Ninguem __ aqui",
       "chips": [
         "moram",
         "moro",
@@ -1098,7 +1098,7 @@
         "morariam",
         "morem"
       ],
-      "correct": "moram",
+      "correct": "mora",
       "unitTopic": "3rd Person Plural"
     },
     {
@@ -1106,9 +1106,9 @@
       "unit": 28,
       "phase": 2,
       "type": "production",
-      "en": "They drink water",
+      "en": "Everyone drinks water",
       "question": "Complete the sentence:",
-      "template": "Elas __ água",
+      "template": "Todo mundo __ agua",
       "chips": [
         "bebem",
         "bebo",
@@ -1121,7 +1121,7 @@
         "beberiam",
         "bebam"
       ],
-      "correct": "bebem",
+      "correct": "bebe",
       "unitTopic": "3rd Person Plural"
     },
     {
