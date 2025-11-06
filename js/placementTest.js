@@ -16,7 +16,7 @@ let testAnswers = [];
  */
 async function loadQuestionBank() {
   try {
-    const response = await fetch('/config/placement-test-questions-v7.1-fixed.json');
+    const response = await fetch('/config/placement-test-questions-v7.1.1-fixed.json');
     if (!response.ok) {
       throw new Error(`Failed to load questions: ${response.status}`);
     }
