@@ -3,10 +3,10 @@
     "version": "1.0.0",
     "title": "Portuguese Grammar Placement Test",
     "description": "Comprehensive diagnostic test focusing on Portuguese grammar structures, verb conjugations, and syntax",
-    "totalQuestions": 190,
+    "totalQuestions": 212,
     "questionTypes": {
-      "comprehension": 36,
-      "production": 154
+      "comprehension": 44,
+      "production": 168
     },
     "testType": "grammar"
   },
@@ -3962,6 +3962,450 @@
         "o que"
       ],
       "correct": "quais"
+    },
+    {
+      "id": 197,
+      "unit": 64,
+      "phase": 4,
+      "type": "comprehension",
+      "pt": "Ele disse que viria",
+      "question": "What does this mean?",
+      "correct": "He said he would come",
+      "options": [
+        "He said he would come",
+        "He said he will come",
+        "He said he is coming",
+        "He said he came",
+        "He says he would come",
+        "He said he wants to come"
+      ]
+    },
+    {
+      "id": 198,
+      "unit": 64,
+      "phase": 4,
+      "type": "comprehension",
+      "pt": "Ela disse que estava cansada",
+      "question": "What does this mean?",
+      "correct": "She said she was tired",
+      "options": [
+        "She said she was tired",
+        "She said she is tired",
+        "She says she was tired",
+        "She said she would be tired",
+        "She was tired and said it",
+        "She is tired she said"
+      ]
+    },
+    {
+      "id": 199,
+      "unit": 64,
+      "phase": 4,
+      "type": "production",
+      "en": "He said he would travel",
+      "question": "Complete the sentence:",
+      "template": "Ele disse que __",
+      "chips": [
+        "viajaria",
+        "viajará",
+        "viaja",
+        "viajou",
+        "viajava",
+        "viaje",
+        "viajar",
+        "vai viajar",
+        "iria viajar",
+        "viajasse"
+      ],
+      "correct": "viajaria"
+    },
+    {
+      "id": 200,
+      "unit": 64,
+      "phase": 4,
+      "type": "production",
+      "en": "She said she was studying",
+      "question": "Complete the sentence:",
+      "template": "Ela disse que __",
+      "chips": [
+        "estava estudando",
+        "estará estudando",
+        "está estudando",
+        "estudava",
+        "estudou",
+        "estudaria",
+        "estuda",
+        "estudará",
+        "estudasse",
+        "estivesse estudando"
+      ],
+      "correct": "estava estudando"
+    },
+    {
+      "id": 201,
+      "unit": 64,
+      "phase": 4,
+      "type": "production",
+      "en": "They said they had arrived",
+      "question": "Complete the sentence:",
+      "template": "Eles disseram que __",
+      "chips": [
+        "tinham chegado",
+        "chegaram",
+        "haviam chegado",
+        "chegaram",
+        "chegarão",
+        "chegam",
+        "chegariam",
+        "chegar",
+        "chegassem",
+        "chegavam"
+      ],
+      "correct": "tinham chegado"
+    },
+    {
+      "id": 202,
+      "unit": 65,
+      "phase": 4,
+      "type": "comprehension",
+      "pt": "Eu ia viajar mas cancelei",
+      "question": "What does this mean?",
+      "correct": "I was going to travel but I cancelled",
+      "options": [
+        "I was going to travel but I cancelled",
+        "I will travel but I cancelled",
+        "I went to travel but I cancelled",
+        "I am going to travel but I will cancel",
+        "I wanted to travel but I cancelled",
+        "I used to travel but I cancelled"
+      ]
+    },
+    {
+      "id": 203,
+      "unit": 65,
+      "phase": 4,
+      "type": "production",
+      "en": "We were going to eat",
+      "question": "Complete the sentence:",
+      "template": "Nós __ comer",
+      "chips": [
+        "íamos",
+        "vamos",
+        "fomos",
+        "iríamos",
+        "iremos",
+        "iríamos a",
+        "vamos a",
+        "queremos",
+        "quisemos",
+        "queríamos"
+      ],
+      "correct": "íamos"
+    },
+    {
+      "id": 204,
+      "unit": 65,
+      "phase": 4,
+      "type": "production",
+      "en": "He was going to call",
+      "question": "Complete the sentence:",
+      "template": "Ele __ ligar",
+      "chips": [
+        "ia",
+        "vai",
+        "foi",
+        "iria",
+        "irá",
+        "quer",
+        "quis",
+        "queria",
+        "ligava",
+        "ligou"
+      ],
+      "correct": "ia"
+    },
+    {
+      "id": 205,
+      "unit": 66,
+      "phase": 4,
+      "type": "comprehension",
+      "pt": "O livro foi escrito em 1900",
+      "question": "What does this mean?",
+      "correct": "The book was written in 1900",
+      "options": [
+        "The book was written in 1900",
+        "The book is written in 1900",
+        "Someone wrote the book in 1900",
+        "The book will be written in 1900",
+        "The book went to be written in 1900",
+        "He wrote the book in 1900"
+      ]
+    },
+    {
+      "id": 206,
+      "unit": 66,
+      "phase": 4,
+      "type": "comprehension",
+      "pt": "A casa foi construída",
+      "question": "What does this mean?",
+      "correct": "The house was built",
+      "options": [
+        "The house was built",
+        "The house is built",
+        "The house will be built",
+        "They built the house",
+        "The house went to construction",
+        "The house is being built"
+      ]
+    },
+    {
+      "id": 207,
+      "unit": 66,
+      "phase": 4,
+      "type": "production",
+      "en": "The letter was sent",
+      "question": "Complete the sentence:",
+      "template": "A carta __",
+      "chips": [
+        "foi enviada",
+        "era enviada",
+        "será enviada",
+        "é enviada",
+        "está sendo enviada",
+        "enviou",
+        "enviaram",
+        "enviava",
+        "enviará",
+        "envia"
+      ],
+      "correct": "foi enviada"
+    },
+    {
+      "id": 208,
+      "unit": 66,
+      "phase": 4,
+      "type": "production",
+      "en": "The doors were opened",
+      "question": "Complete the sentence:",
+      "template": "As portas __",
+      "chips": [
+        "foram abertas",
+        "eram abertas",
+        "serão abertas",
+        "são abertas",
+        "estão sendo abertas",
+        "abriram",
+        "abriam",
+        "abrirão",
+        "abrem",
+        "abriu"
+      ],
+      "correct": "foram abertas"
+    },
+    {
+      "id": 209,
+      "unit": 66,
+      "phase": 4,
+      "type": "production",
+      "en": "The problem was solved",
+      "question": "Complete the sentence:",
+      "template": "O problema __",
+      "chips": [
+        "foi resolvido",
+        "era resolvido",
+        "será resolvido",
+        "é resolvido",
+        "está sendo resolvido",
+        "resolveu",
+        "resolveram",
+        "resolvia",
+        "resolverá",
+        "resolve"
+      ],
+      "correct": "foi resolvido"
+    },
+    {
+      "id": 210,
+      "unit": 67,
+      "phase": 4,
+      "type": "comprehension",
+      "pt": "O trabalho está sendo feito",
+      "question": "What does this mean?",
+      "correct": "The work is being done",
+      "options": [
+        "The work is being done",
+        "The work was being done",
+        "The work will be done",
+        "The work was done",
+        "They are doing the work",
+        "The work is done"
+      ]
+    },
+    {
+      "id": 211,
+      "unit": 67,
+      "phase": 4,
+      "type": "production",
+      "en": "The house is being built",
+      "question": "Complete the sentence:",
+      "template": "A casa __",
+      "chips": [
+        "está sendo construída",
+        "foi construída",
+        "era construída",
+        "será construída",
+        "é construída",
+        "constrói",
+        "constroem",
+        "construiu",
+        "construíam",
+        "construirão"
+      ],
+      "correct": "está sendo construída"
+    },
+    {
+      "id": 212,
+      "unit": 67,
+      "phase": 4,
+      "type": "production",
+      "en": "The documents are being reviewed",
+      "question": "Complete the sentence:",
+      "template": "Os documentos __",
+      "chips": [
+        "estão sendo revisados",
+        "foram revisados",
+        "eram revisados",
+        "serão revisados",
+        "são revisados",
+        "revisam",
+        "revisar",
+        "revisou",
+        "revisavam",
+        "revisarão"
+      ],
+      "correct": "estão sendo revisados"
+    },
+    {
+      "id": 213,
+      "unit": 68,
+      "phase": 4,
+      "type": "comprehension",
+      "pt": "O português é falado no Brasil",
+      "question": "What does this mean?",
+      "correct": "Portuguese is spoken in Brazil",
+      "options": [
+        "Portuguese is spoken in Brazil",
+        "Portuguese was spoken in Brazil",
+        "Portuguese will be spoken in Brazil",
+        "They speak Portuguese in Brazil",
+        "Portuguese is being spoken in Brazil",
+        "Brazil speaks Portuguese"
+      ]
+    },
+    {
+      "id": 214,
+      "unit": 68,
+      "phase": 4,
+      "type": "production",
+      "en": "Spanish is spoken here",
+      "question": "Complete the sentence:",
+      "template": "Espanhol __ aqui",
+      "chips": [
+        "é falado",
+        "foi falado",
+        "será falado",
+        "está sendo falado",
+        "era falado",
+        "falam",
+        "fala",
+        "falou",
+        "falavam",
+        "falarão"
+      ],
+      "correct": "é falado"
+    },
+    {
+      "id": 215,
+      "unit": 68,
+      "phase": 4,
+      "type": "production",
+      "en": "The store is closed on Sundays",
+      "question": "Complete the sentence:",
+      "template": "A loja __ aos domingos",
+      "chips": [
+        "é fechada",
+        "foi fechada",
+        "será fechada",
+        "está fechada",
+        "estava fechada",
+        "fecha",
+        "fecham",
+        "fechou",
+        "fechava",
+        "fechará"
+      ],
+      "correct": "é fechada"
+    },
+    {
+      "id": 216,
+      "unit": 69,
+      "phase": 4,
+      "type": "comprehension",
+      "pt": "Fala-se português aqui",
+      "question": "What does this mean?",
+      "correct": "Portuguese is spoken here",
+      "options": [
+        "Portuguese is spoken here",
+        "One speaks Portuguese here",
+        "They speak Portuguese here",
+        "Portuguese was spoken here",
+        "He speaks Portuguese here",
+        "Portuguese will be spoken here"
+      ]
+    },
+    {
+      "id": 217,
+      "unit": 69,
+      "phase": 4,
+      "type": "production",
+      "en": "Houses are sold here",
+      "question": "Complete the sentence:",
+      "template": "__-se casas aqui",
+      "chips": [
+        "Vendem",
+        "Vende",
+        "Vendeu",
+        "Venderam",
+        "Vendiam",
+        "Venderão",
+        "São vendidas",
+        "Foram vendidas",
+        "Venda",
+        "Vender"
+      ],
+      "correct": "Vendem"
+    },
+    {
+      "id": 218,
+      "unit": 69,
+      "phase": 4,
+      "type": "production",
+      "en": "English is spoken here",
+      "question": "Complete the sentence:",
+      "template": "__-se inglês aqui",
+      "chips": [
+        "Fala",
+        "Falam",
+        "Falou",
+        "Falaram",
+        "Falava",
+        "Falarão",
+        "É falado",
+        "Foi falado",
+        "Fale",
+        "Falar"
+      ],
+      "correct": "Fala"
     }
   ]
 }
