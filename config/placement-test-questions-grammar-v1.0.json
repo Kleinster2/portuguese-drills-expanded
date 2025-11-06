@@ -188,9 +188,9 @@
       "unit": 4,
       "phase": 1,
       "type": "production",
-      "en": "I have some pens",
+      "en": "We have some pens",
       "question": "Complete the sentence:",
-      "template": "Eu tenho __ canetas",
+      "template": "A gente tem __ canetas",
       "chips": [
         "umas",
         "uns",
@@ -209,9 +209,9 @@
       "unit": 4,
       "phase": 1,
       "type": "production",
-      "en": "I have some books",
+      "en": "We have some books",
       "question": "Complete the sentence:",
-      "template": "Eu tenho __ livros",
+      "template": "A gente tem __ livros",
       "chips": [
         "uns",
         "umas",
@@ -633,9 +633,9 @@
       "unit": 16,
       "phase": 1,
       "type": "production",
-      "en": "I have two brothers",
+      "en": "We have two brothers",
       "question": "Complete the sentence:",
-      "template": "Eu __ dois irmãos",
+      "template": "A gente __ dois irmaos",
       "chips": [
         "tenho",
         "tem",
@@ -648,7 +648,7 @@
         "tenha",
         "tivesse"
       ],
-      "correct": "tenho",
+      "correct": "tem",
       "unitTopic": "Ter"
     },
     {
@@ -904,9 +904,9 @@
       "unit": 25,
       "phase": 2,
       "type": "production",
-      "en": "I like music",
+      "en": "We like music",
       "question": "Complete the sentence:",
-      "template": "Eu gosto __ música",
+      "template": "A gente gosta __ musica",
       "chips": [
         "de",
         "do",
@@ -927,9 +927,9 @@
       "unit": 25,
       "phase": 2,
       "type": "production",
-      "en": "I like to study",
+      "en": "We like to study",
       "question": "Complete the sentence:",
-      "template": "Eu gosto __ estudar",
+      "template": "A gente gosta __ estudar",
       "chips": [
         "de",
         "do",
@@ -973,9 +973,9 @@
       "unit": 26,
       "phase": 2,
       "type": "production",
-      "en": "I cut the bread",
+      "en": "We cut the bread",
       "question": "Complete the sentence:",
-      "template": "Eu __ o pão",
+      "template": "A gente __ o pao",
       "chips": [
         "parto",
         "parte",
@@ -988,7 +988,7 @@
         "parta",
         "partisse"
       ],
-      "correct": "parto",
+      "correct": "parte",
       "unitTopic": "Regular -ir Verbs"
     },
     {
@@ -1014,9 +1014,9 @@
       "unit": 27,
       "phase": 2,
       "type": "production",
-      "en": "I am going to study Portuguese",
+      "en": "We are going to study Portuguese",
       "question": "Complete the sentence:",
-      "template": "Eu vou __ português",
+      "template": "A gente vai __ portugues",
       "chips": [
         "estudar",
         "estudo",
