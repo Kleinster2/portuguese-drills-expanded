@@ -226,11 +226,10 @@
     },
     "Demonstratives": {
       "drills": [
-        "demonstratives",
-        "advanced-demonstratives"
+        "demonstratives"
       ],
       "coverage": "full",
-      "notes": "este/esse/aquele - basic and advanced"
+      "notes": "Basic spatial demonstratives (este/esse/aquele). Advanced drill covers discourse/colloquial usage not in placement test."
     },
     "Question Words": {
       "drills": [
