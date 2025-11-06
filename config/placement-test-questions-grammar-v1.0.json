@@ -1037,9 +1037,9 @@
       "unit": 27,
       "phase": 2,
       "type": "production",
-      "en": "I am going to stay at home",
+      "en": "We are going to stay at home",
       "question": "Complete the sentence:",
-      "template": "Eu vou __ em casa",
+      "template": "A gente vai __ em casa",
       "chips": [
         "ficar",
         "fico",
@@ -1365,11 +1365,12 @@
       "unit": 35,
       "phase": 2,
       "type": "production",
-      "en": "I opened the door",
+      "en": "We opened the door",
       "question": "Complete the sentence:",
-      "template": "Eu __ a porta",
+      "template": "A gente __ a porta",
       "chips": [
         "abri",
+        "abriu",
         "abro",
         "abre",
         "abrimos",
@@ -1380,7 +1381,7 @@
         "abra",
         "abrisse"
       ],
-      "correct": "abri",
+      "correct": "abriu",
       "unitTopic": "Preterite Regular"
     },
     {
@@ -1607,9 +1608,9 @@
       "unit": 38,
       "phase": 2,
       "type": "production",
-      "en": "I brought the book",
+      "en": "We brought the book",
       "question": "Complete the sentence:",
-      "template": "Eu __ o livro",
+      "template": "A gente __ o livro",
       "chips": [
         "trouxe",
         "trago",
@@ -1676,11 +1677,12 @@
       "unit": 39,
       "phase": 2,
       "type": "production",
-      "en": "I saw that",
+      "en": "We saw that",
       "question": "Complete the sentence:",
-      "template": "Eu __ isso",
+      "template": "A gente __ isso",
       "chips": [
         "vi",
+        "viu",
         "vejo",
         "via",
         "verei",
@@ -1691,7 +1693,7 @@
         "vemos",
         "veem"
       ],
-      "correct": "vi",
+      "correct": "viu",
       "unitTopic": "Preterite Irregular"
     },
     {
@@ -1699,11 +1701,12 @@
       "unit": 39,
       "phase": 2,
       "type": "production",
-      "en": "I gave money",
+      "en": "We gave money",
       "question": "Complete the sentence:",
-      "template": "Eu __ dinheiro",
+      "template": "A gente __ dinheiro",
       "chips": [
         "dei",
+        "deu",
         "dou",
         "dava",
         "darei",
@@ -1714,7 +1717,7 @@
         "damos",
         "dão"
       ],
-      "correct": "dei",
+      "correct": "deu",
       "unitTopic": "Preterite Irregular"
     },
     {
@@ -1745,9 +1748,9 @@
       "unit": 40,
       "phase": 2,
       "type": "production",
-      "en": "I found out about that",
+      "en": "We found out about that",
       "question": "Complete the sentence:",
-      "template": "Eu __ disso",
+      "template": "A gente __ disso",
       "chips": [
         "soube",
         "sei",
@@ -1905,9 +1908,9 @@
       "unit": 42,
       "phase": 2,
       "type": "production",
-      "en": "I'm going home",
+      "en": "We're going home",
       "question": "Complete the sentence:",
-      "template": "Eu vou __ casa",
+      "template": "A gente vai __ casa",
       "chips": [
         "para",
         "por",
