@@ -1768,7 +1768,10 @@
         "da",
         "do"
       ],
-      "correct": "à"
+      "correct": [
+        "à",
+        "para a"
+      ]
     },
     {
       "id": 85,
@@ -1834,7 +1837,9 @@
         "à",
         "ao"
       ],
-      "correct": "para"
+      "correct": [
+        "para"
+      ]
     },
     {
       "id": 88,
@@ -2461,7 +2466,10 @@
         "pelo",
         "do"
       ],
-      "correct": "à"
+      "correct": [
+        "à",
+        "para a"
+      ]
     },
     {
       "id": 118,

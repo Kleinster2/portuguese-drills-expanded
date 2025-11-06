@@ -248,7 +248,9 @@ function displayQuestion(index) {
  */
 window.handlePlacementAnswer = function(questionId, selectedAnswer) {
   const question = questionBank.questions.find(q => q.id === questionId);
-  const isCorrect = selectedAnswer === question.correct;
+  // Support both single correct answer (string) and multiple correct answers (array)
+  const correctAnswers = Array.isArray(question.correct) ? question.correct : [question.correct];
+  const isCorrect = correctAnswers.includes(selectedAnswer);
 
   // 1. Visual acknowledgment only (no correctness indication)
   const optionsContainer = document.getElementById(`question-${questionId}-options`);
