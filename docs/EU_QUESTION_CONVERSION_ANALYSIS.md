@@ -86,7 +86,7 @@ These can all be converted without any modifications to the Portuguese template.
 - Q23: "You study English" → Você estuda inglês ✅
 - Q25: "You stay at home" → Você fica em casa ✅
 - Q29: "You have a house" → Você tem uma casa ✅
-- Q31: "You need money" → Você precisa de dinheiro ✅
+- Q42: "You need money" → Você precisa de dinheiro ✅
 - Q34: "You eat fruit" → Você come fruta ✅
 - Q35: "You drink water" → Você bebe água ✅
 - Q44: "You open the window" → Você abre a janela ✅
@@ -125,8 +125,8 @@ These can all be converted without any modifications to the Portuguese template.
 - Q9: "We have some pens" → A gente tem umas canetas ✅
 - Q10: "We have some books" → A gente tem uns livros ✅
 - Q30: "We have two brothers" → A gente tem dois irmãos ✅
-- Q42: "We like music" → A gente gosta de música ✅
-- Q43: "We like to study" → A gente gosta de estudar ✅
+- Q31: "We like music" → A gente gosta de música ✅
+- Q32: "We like to study" → A gente gosta de estudar ✅
 - Q45: "We cut the bread" → A gente parte o pão ✅
 - Q47: "We are going to study Portuguese" → A gente vai estudar português ✅
 - Q48: "We are going to stay at home" → A gente vai ficar em casa ✅
@@ -167,7 +167,7 @@ These can all be converted without any modifications to the Portuguese template.
 - Q152: "He told him/her" → Ele lhe disse ✅
 
 #### To "ELA" (feminine singular): ~6 questions
-- Q32: "She needs you" → Ela precisa de você ✅
+- Q43: "She needs you" → Ela precisa de você ✅
 - Q146: "She bought them (masculine)" → Ela os comprou ✅
 - Q147: "She saw them (feminine)" → Ela as viu ✅
 - Q157: "She never tells her" → Ela nunca lhe diz ✅
