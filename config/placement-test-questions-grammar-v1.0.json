@@ -188,9 +188,9 @@
       "unit": 4,
       "phase": 1,
       "type": "production",
-      "en": "We have some pens",
+      "en": "I have some pens",
       "question": "Complete the sentence:",
-      "template": "A gente tem __ canetas",
+      "template": "Eu tenho __ canetas",
       "chips": [
         "umas",
         "uns",
@@ -209,9 +209,9 @@
       "unit": 4,
       "phase": 1,
       "type": "production",
-      "en": "We have some books",
+      "en": "I have some books",
       "question": "Complete the sentence:",
-      "template": "A gente tem __ livros",
+      "template": "Eu tenho __ livros",
       "chips": [
         "uns",
         "umas",
@@ -633,9 +633,9 @@
       "unit": 16,
       "phase": 1,
       "type": "production",
-      "en": "We have two brothers",
+      "en": "I have two brothers",
       "question": "Complete the sentence:",
-      "template": "A gente __ dois irmaos",
+      "template": "Eu __ dois irmaos",
       "chips": [
         "tenho",
         "tem",
@@ -648,7 +648,7 @@
         "tenha",
         "tivesse"
       ],
-      "correct": "tem",
+      "correct": "tenho",
       "unitTopic": "Ter"
     },
     {
