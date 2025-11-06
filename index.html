@@ -50,36 +50,57 @@
                             <span class="bg-amber-200 text-amber-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Updated!</span>
                         </div>
                         <p class="text-slate-700 text-base mb-4">
-                            Two comprehensive diagnostic tests: <strong>Grammar Test</strong> (192 questions) and <strong>Vocabulary Test</strong> (111 questions). Take one or both to receive detailed placement results to send to your instructor.
+                            Comprehensive diagnostic tests to assess your Portuguese level. Choose by skill or CEFR level.
                         </p>
-                        <div class="flex flex-wrap items-center gap-3 mb-3">
-                            <button
-                                onclick="window.location.href='/placement-test?test=grammar'"
-                                class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow-md hover:shadow-lg flex items-center gap-2"
-                            >
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                                </svg>
-                                Grammar Test
-                            </button>
-                            <button
-                                onclick="window.location.href='/placement-test?test=vocabulary'"
-                                class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow-md hover:shadow-lg flex items-center gap-2"
-                            >
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                                </svg>
-                                Vocabulary Test
-                            </button>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
-                            <div class="flex items-center gap-2 text-slate-700">
-                                <span class="w-3 h-3 bg-green-500 rounded-full"></span>
-                                <span><strong>Grammar:</strong> 192 questions • 59 units • A1→B2</span>
+
+                        <div class="mb-4">
+                            <h3 class="text-sm font-semibold text-slate-600 mb-2">GRAMMAR TESTS</h3>
+                            <div class="flex flex-wrap items-center gap-3">
+                                <button
+                                    onclick="window.location.href='/placement-test?test=grammar-a'"
+                                    class="bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors shadow-md hover:shadow-lg text-sm"
+                                >
+                                    A-Levels (102 qs)
+                                </button>
+                                <button
+                                    onclick="window.location.href='/placement-test?test=grammar-b'"
+                                    class="bg-green-600 hover:bg-green-700 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors shadow-md hover:shadow-lg text-sm"
+                                >
+                                    B-Levels (178 qs)
+                                </button>
+                                <button
+                                    onclick="window.location.href='/placement-test?test=grammar'"
+                                    class="bg-green-700 hover:bg-green-800 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors shadow-md hover:shadow-lg text-sm"
+                                >
+                                    Full Test (280 qs)
+                                </button>
                             </div>
-                            <div class="flex items-center gap-2 text-slate-700">
-                                <span class="w-3 h-3 bg-blue-500 rounded-full"></span>
-                                <span><strong>Vocabulary:</strong> 111 questions • 30 units • A1→B1</span>
+                        </div>
+
+                        <div class="mb-3">
+                            <h3 class="text-sm font-semibold text-slate-600 mb-2">VOCABULARY TEST</h3>
+                            <div class="flex flex-wrap items-center gap-3">
+                                <button
+                                    onclick="window.location.href='/placement-test?test=vocabulary'"
+                                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors shadow-md hover:shadow-lg text-sm"
+                                >
+                                    Vocabulary (111 qs)
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs mt-4 pt-4 border-t border-amber-200">
+                            <div class="flex items-start gap-2 text-slate-600">
+                                <span class="w-2 h-2 bg-green-400 rounded-full mt-1 flex-shrink-0"></span>
+                                <span><strong>A-Levels:</strong> A1-A2 basics</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-slate-600">
+                                <span class="w-2 h-2 bg-green-600 rounded-full mt-1 flex-shrink-0"></span>
+                                <span><strong>B-Levels:</strong> B1-B2 intermediate</span>
+                            </div>
+                            <div class="flex items-start gap-2 text-slate-600">
+                                <span class="w-2 h-2 bg-blue-500 rounded-full mt-1 flex-shrink-0"></span>
+                                <span><strong>Vocabulary:</strong> A1-B1 words</span>
                             </div>
                         </div>
                     </div>

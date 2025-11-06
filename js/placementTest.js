@@ -21,9 +21,16 @@ let testAnswers = [];
  */
 async function loadQuestionBank() {
   try {
-    const fileName = testType === 'vocabulary'
-      ? '/config/placement-test-questions-vocabulary-v1.0.json'
-      : '/config/placement-test-questions-grammar-v1.0.json';
+    let fileName;
+    if (testType === 'vocabulary') {
+      fileName = '/config/placement-test-questions-vocabulary-v1.0.json';
+    } else if (testType === 'grammar-a') {
+      fileName = '/config/placement-test-questions-grammar-a-levels.json';
+    } else if (testType === 'grammar-b') {
+      fileName = '/config/placement-test-questions-grammar-b-levels.json';
+    } else {
+      fileName = '/config/placement-test-questions-grammar-v1.0.json';
+    }
 
     const response = await fetch(fileName);
     if (!response.ok) {
@@ -55,9 +62,16 @@ async function startPlacementTest() {
   testAnswers = [];
 
   // Update title based on test type
-  const testTitle = testType === 'vocabulary'
-    ? 'Portuguese Vocabulary Placement Test'
-    : 'Portuguese Grammar Placement Test';
+  let testTitle;
+  if (testType === 'vocabulary') {
+    testTitle = 'Portuguese Vocabulary Placement Test';
+  } else if (testType === 'grammar-a') {
+    testTitle = 'Portuguese Grammar Placement Test - A Levels (A1-A2)';
+  } else if (testType === 'grammar-b') {
+    testTitle = 'Portuguese Grammar Placement Test - B Levels (B1-B2)';
+  } else {
+    testTitle = 'Portuguese Grammar Placement Test';
+  }
   drillTitle.textContent = testTitle;
 
   // Show modal
