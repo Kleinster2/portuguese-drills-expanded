@@ -350,16 +350,16 @@
       "unitName": "Basic Verbs - Morar",
       "phase": 1,
       "type": "comprehension",
-      "pt": "Eu sempre moro em São Paulo",
+      "pt": "Eu moro em São Paulo",
       "question": "What does this mean?",
-      "correct": "I always live in São Paulo",
+      "correct": "I live in São Paulo",
       "options": [
-        "I always live in São Paulo",
-        "I sometimes live in São Paulo",
+        "I live in São Paulo",
         "I work in São Paulo",
         "I study in São Paulo",
         "I am living in São Paulo",
-        "I lived in São Paulo"
+        "I lived in São Paulo",
+        "I will live in São Paulo"
       ]
     },
     {
