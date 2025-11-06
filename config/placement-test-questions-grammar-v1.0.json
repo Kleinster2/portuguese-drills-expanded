@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "title": "Portuguese Grammar Placement Test",
     "description": "Comprehensive diagnostic test focusing on Portuguese grammar structures, verb conjugations, and syntax",
-    "totalQuestions": 192,
+    "totalQuestions": 190,
     "questionTypes": {
       "comprehension": 71,
       "production": 121
@@ -632,40 +632,6 @@
       "id": 32,
       "unit": 13,
       "phase": 1,
-      "type": "comprehension",
-      "pt": "Eu estou no trabalho",
-      "question": "What does this mean?",
-      "correct": "I am at work",
-      "options": [
-        "I am at work",
-        "I work",
-        "I go to work",
-        "I like work",
-        "I was at work",
-        "I will be at work"
-      ]
-    },
-    {
-      "id": 33,
-      "unit": 13,
-      "phase": 1,
-      "type": "comprehension",
-      "pt": "Eu estou na escola",
-      "question": "What does this mean?",
-      "correct": "I am at school",
-      "options": [
-        "I am at school",
-        "I study at school",
-        "I go to school",
-        "I work at school",
-        "I was at school",
-        "I like school"
-      ]
-    },
-    {
-      "id": 34,
-      "unit": 13,
-      "phase": 1,
       "type": "production",
       "en": "I am at work",
       "question": "Complete the sentence:",
@@ -685,7 +651,7 @@
       "correct": "no"
     },
     {
-      "id": 39,
+      "id": 33,
       "unit": 15,
       "phase": 1,
       "type": "comprehension",
@@ -702,7 +668,7 @@
       ]
     },
     {
-      "id": 40,
+      "id": 34,
       "unit": 15,
       "phase": 1,
       "type": "comprehension",
@@ -719,7 +685,7 @@
       ]
     },
     {
-      "id": 41,
+      "id": 35,
       "unit": 16,
       "phase": 1,
       "type": "comprehension",
@@ -736,7 +702,7 @@
       ]
     },
     {
-      "id": 42,
+      "id": 36,
       "unit": 16,
       "phase": 1,
       "type": "production",
@@ -758,7 +724,7 @@
       "correct": "tenho"
     },
     {
-      "id": 43,
+      "id": 37,
       "unit": 16,
       "phase": 1,
       "type": "production",
@@ -780,7 +746,7 @@
       "correct": "tenho"
     },
     {
-      "id": 44,
+      "id": 38,
       "unit": 17,
       "phase": 1,
       "type": "comprehension",
@@ -797,7 +763,7 @@
       ]
     },
     {
-      "id": 45,
+      "id": 39,
       "unit": 18,
       "phase": 1,
       "type": "comprehension",
@@ -814,7 +780,7 @@
       ]
     },
     {
-      "id": 46,
+      "id": 40,
       "unit": 18,
       "phase": 1,
       "type": "comprehension",
@@ -831,7 +797,7 @@
       ]
     },
     {
-      "id": 47,
+      "id": 41,
       "unit": 19,
       "phase": 1,
       "type": "comprehension",
@@ -848,7 +814,7 @@
       ]
     },
     {
-      "id": 48,
+      "id": 42,
       "unit": 19,
       "phase": 1,
       "type": "production",
@@ -870,7 +836,7 @@
       "correct": "de"
     },
     {
-      "id": 49,
+      "id": 43,
       "unit": 19,
       "phase": 1,
       "type": "production",
@@ -892,7 +858,7 @@
       "correct": "de"
     },
     {
-      "id": 58,
+      "id": 44,
       "unit": 22,
       "phase": 2,
       "type": "comprehension",
@@ -909,7 +875,7 @@
       ]
     },
     {
-      "id": 59,
+      "id": 45,
       "unit": 22,
       "phase": 2,
       "type": "production",
@@ -931,7 +897,7 @@
       "correct": "como"
     },
     {
-      "id": 60,
+      "id": 46,
       "unit": 22,
       "phase": 2,
       "type": "production",
@@ -953,7 +919,7 @@
       "correct": "bebo"
     },
     {
-      "id": 61,
+      "id": 47,
       "unit": 23,
       "phase": 2,
       "type": "production",
@@ -975,7 +941,7 @@
       "correct": "fala"
     },
     {
-      "id": 62,
+      "id": 48,
       "unit": 23,
       "phase": 2,
       "type": "production",
@@ -997,7 +963,7 @@
       "correct": "come"
     },
     {
-      "id": 63,
+      "id": 49,
       "unit": 23,
       "phase": 2,
       "type": "production",
@@ -1019,7 +985,7 @@
       "correct": "mora"
     },
     {
-      "id": 64,
+      "id": 50,
       "unit": 24,
       "phase": 2,
       "type": "production",
@@ -1041,7 +1007,7 @@
       "correct": "falamos"
     },
     {
-      "id": 65,
+      "id": 51,
       "unit": 24,
       "phase": 2,
       "type": "production",
@@ -1063,7 +1029,7 @@
       "correct": "moramos"
     },
     {
-      "id": 66,
+      "id": 52,
       "unit": 24,
       "phase": 2,
       "type": "production",
@@ -1085,7 +1051,7 @@
       "correct": "bebemos"
     },
     {
-      "id": 67,
+      "id": 53,
       "unit": 25,
       "phase": 2,
       "type": "comprehension",
@@ -1102,7 +1068,7 @@
       ]
     },
     {
-      "id": 68,
+      "id": 54,
       "unit": 25,
       "phase": 2,
       "type": "production",
@@ -1124,7 +1090,7 @@
       "correct": "de"
     },
     {
-      "id": 69,
+      "id": 55,
       "unit": 25,
       "phase": 2,
       "type": "production",
@@ -1146,7 +1112,7 @@
       "correct": "de"
     },
     {
-      "id": 70,
+      "id": 56,
       "unit": 26,
       "phase": 2,
       "type": "comprehension",
@@ -1163,7 +1129,7 @@
       ]
     },
     {
-      "id": 71,
+      "id": 57,
       "unit": 26,
       "phase": 2,
       "type": "production",
@@ -1185,7 +1151,7 @@
       "correct": "abro"
     },
     {
-      "id": 72,
+      "id": 58,
       "unit": 26,
       "phase": 2,
       "type": "production",
@@ -1207,7 +1173,7 @@
       "correct": "parto"
     },
     {
-      "id": 73,
+      "id": 59,
       "unit": 27,
       "phase": 2,
       "type": "comprehension",
@@ -1224,7 +1190,7 @@
       ]
     },
     {
-      "id": 74,
+      "id": 60,
       "unit": 27,
       "phase": 2,
       "type": "production",
@@ -1246,7 +1212,7 @@
       "correct": "estudar"
     },
     {
-      "id": 75,
+      "id": 61,
       "unit": 27,
       "phase": 2,
       "type": "production",
@@ -1268,7 +1234,7 @@
       "correct": "ficar"
     },
     {
-      "id": 76,
+      "id": 62,
       "unit": 28,
       "phase": 2,
       "type": "production",
@@ -1290,7 +1256,7 @@
       "correct": "falam"
     },
     {
-      "id": 77,
+      "id": 63,
       "unit": 28,
       "phase": 2,
       "type": "production",
@@ -1312,7 +1278,7 @@
       "correct": "moram"
     },
     {
-      "id": 78,
+      "id": 64,
       "unit": 28,
       "phase": 2,
       "type": "production",
@@ -1334,7 +1300,7 @@
       "correct": "bebem"
     },
     {
-      "id": 83,
+      "id": 65,
       "unit": 30,
       "phase": 2,
       "type": "comprehension",
@@ -1351,7 +1317,7 @@
       ]
     },
     {
-      "id": 84,
+      "id": 66,
       "unit": 30,
       "phase": 2,
       "type": "comprehension",
@@ -1368,7 +1334,7 @@
       ]
     },
     {
-      "id": 85,
+      "id": 67,
       "unit": 30,
       "phase": 2,
       "type": "comprehension",
@@ -1385,7 +1351,7 @@
       ]
     },
     {
-      "id": 86,
+      "id": 68,
       "unit": 30,
       "phase": 2,
       "type": "comprehension",
@@ -1402,7 +1368,7 @@
       ]
     },
     {
-      "id": 87,
+      "id": 69,
       "unit": 30,
       "phase": 2,
       "type": "comprehension",
@@ -1419,7 +1385,7 @@
       ]
     },
     {
-      "id": 88,
+      "id": 70,
       "unit": 30,
       "phase": 2,
       "type": "production",
@@ -1439,7 +1405,7 @@
       "correct": "Onde"
     },
     {
-      "id": 89,
+      "id": 71,
       "unit": 31,
       "phase": 2,
       "type": "production",
@@ -1459,7 +1425,7 @@
       "correct": "Meu"
     },
     {
-      "id": 90,
+      "id": 72,
       "unit": 31,
       "phase": 2,
       "type": "production",
@@ -1479,7 +1445,7 @@
       "correct": "Minhas"
     },
     {
-      "id": 91,
+      "id": 73,
       "unit": 32,
       "phase": 2,
       "type": "production",
@@ -1499,7 +1465,7 @@
       "correct": "Seu"
     },
     {
-      "id": 92,
+      "id": 74,
       "unit": 32,
       "phase": 2,
       "type": "production",
@@ -1519,7 +1485,7 @@
       "correct": "Suas"
     },
     {
-      "id": 93,
+      "id": 75,
       "unit": 33,
       "phase": 2,
       "type": "production",
@@ -1539,7 +1505,7 @@
       "correct": "Nosso"
     },
     {
-      "id": 94,
+      "id": 76,
       "unit": 33,
       "phase": 2,
       "type": "production",
@@ -1559,7 +1525,7 @@
       "correct": "Nossas"
     },
     {
-      "id": 95,
+      "id": 77,
       "unit": 34,
       "phase": 2,
       "type": "comprehension",
@@ -1576,7 +1542,7 @@
       ]
     },
     {
-      "id": 96,
+      "id": 78,
       "unit": 34,
       "phase": 2,
       "type": "production",
@@ -1598,7 +1564,7 @@
       "correct": "falei"
     },
     {
-      "id": 97,
+      "id": 79,
       "unit": 34,
       "phase": 2,
       "type": "production",
@@ -1620,7 +1586,7 @@
       "correct": "morou"
     },
     {
-      "id": 98,
+      "id": 80,
       "unit": 34,
       "phase": 2,
       "type": "production",
@@ -1642,7 +1608,7 @@
       "correct": "viajamos"
     },
     {
-      "id": 99,
+      "id": 81,
       "unit": 35,
       "phase": 2,
       "type": "comprehension",
@@ -1659,7 +1625,7 @@
       ]
     },
     {
-      "id": 100,
+      "id": 82,
       "unit": 35,
       "phase": 2,
       "type": "production",
@@ -1681,7 +1647,7 @@
       "correct": "bebi"
     },
     {
-      "id": 101,
+      "id": 83,
       "unit": 35,
       "phase": 2,
       "type": "production",
@@ -1703,7 +1669,7 @@
       "correct": "abri"
     },
     {
-      "id": 102,
+      "id": 84,
       "unit": 35,
       "phase": 2,
       "type": "production",
@@ -1725,7 +1691,7 @@
       "correct": "vivemos"
     },
     {
-      "id": 103,
+      "id": 85,
       "unit": 36,
       "phase": 2,
       "type": "comprehension",
@@ -1742,7 +1708,7 @@
       ]
     },
     {
-      "id": 104,
+      "id": 86,
       "unit": 36,
       "phase": 2,
       "type": "comprehension",
@@ -1759,7 +1725,7 @@
       ]
     },
     {
-      "id": 105,
+      "id": 87,
       "unit": 36,
       "phase": 2,
       "type": "production",
@@ -1781,7 +1747,7 @@
       "correct": "fui"
     },
     {
-      "id": 106,
+      "id": 88,
       "unit": 36,
       "phase": 2,
       "type": "production",
@@ -1803,7 +1769,7 @@
       "correct": "foi"
     },
     {
-      "id": 107,
+      "id": 89,
       "unit": 36,
       "phase": 2,
       "type": "production",
@@ -1825,7 +1791,7 @@
       "correct": "fomos"
     },
     {
-      "id": 108,
+      "id": 90,
       "unit": 37,
       "phase": 2,
       "type": "comprehension",
@@ -1842,7 +1808,7 @@
       ]
     },
     {
-      "id": 109,
+      "id": 91,
       "unit": 37,
       "phase": 2,
       "type": "production",
@@ -1864,7 +1830,7 @@
       "correct": "estive"
     },
     {
-      "id": 110,
+      "id": 92,
       "unit": 37,
       "phase": 2,
       "type": "production",
@@ -1886,7 +1852,7 @@
       "correct": "tive"
     },
     {
-      "id": 111,
+      "id": 93,
       "unit": 37,
       "phase": 2,
       "type": "production",
@@ -1908,7 +1874,7 @@
       "correct": "tivemos"
     },
     {
-      "id": 112,
+      "id": 94,
       "unit": 38,
       "phase": 2,
       "type": "comprehension",
@@ -1925,7 +1891,7 @@
       ]
     },
     {
-      "id": 113,
+      "id": 95,
       "unit": 38,
       "phase": 2,
       "type": "production",
@@ -1947,7 +1913,7 @@
       "correct": "disse"
     },
     {
-      "id": 114,
+      "id": 96,
       "unit": 38,
       "phase": 2,
       "type": "production",
@@ -1969,7 +1935,7 @@
       "correct": "trouxe"
     },
     {
-      "id": 115,
+      "id": 97,
       "unit": 38,
       "phase": 2,
       "type": "production",
@@ -1991,7 +1957,7 @@
       "correct": "fizemos"
     },
     {
-      "id": 116,
+      "id": 98,
       "unit": 39,
       "phase": 2,
       "type": "comprehension",
@@ -2008,7 +1974,7 @@
       ]
     },
     {
-      "id": 117,
+      "id": 99,
       "unit": 39,
       "phase": 2,
       "type": "production",
@@ -2030,7 +1996,7 @@
       "correct": "vim"
     },
     {
-      "id": 118,
+      "id": 100,
       "unit": 39,
       "phase": 2,
       "type": "production",
@@ -2052,7 +2018,7 @@
       "correct": "vi"
     },
     {
-      "id": 119,
+      "id": 101,
       "unit": 39,
       "phase": 2,
       "type": "production",
@@ -2074,7 +2040,7 @@
       "correct": "dei"
     },
     {
-      "id": 120,
+      "id": 102,
       "unit": 40,
       "phase": 2,
       "type": "comprehension",
@@ -2091,7 +2057,7 @@
       ]
     },
     {
-      "id": 121,
+      "id": 103,
       "unit": 40,
       "phase": 2,
       "type": "production",
@@ -2113,7 +2079,7 @@
       "correct": "quis"
     },
     {
-      "id": 122,
+      "id": 104,
       "unit": 40,
       "phase": 2,
       "type": "production",
@@ -2135,7 +2101,7 @@
       "correct": "soube"
     },
     {
-      "id": 123,
+      "id": 105,
       "unit": 40,
       "phase": 2,
       "type": "production",
@@ -2157,7 +2123,7 @@
       "correct": "pude"
     },
     {
-      "id": 124,
+      "id": 106,
       "unit": 40,
       "phase": 2,
       "type": "production",
@@ -2179,7 +2145,7 @@
       "correct": "pus"
     },
     {
-      "id": 125,
+      "id": 107,
       "unit": 41,
       "phase": 2,
       "type": "production",
@@ -2201,7 +2167,7 @@
       "correct": "ao"
     },
     {
-      "id": 126,
+      "id": 108,
       "unit": 41,
       "phase": 2,
       "type": "production",
@@ -2222,7 +2188,7 @@
       "correct": "à"
     },
     {
-      "id": 127,
+      "id": 109,
       "unit": 41,
       "phase": 2,
       "type": "production",
@@ -2244,7 +2210,7 @@
       "correct": "aos"
     },
     {
-      "id": 128,
+      "id": 110,
       "unit": 41,
       "phase": 2,
       "type": "production",
@@ -2266,7 +2232,7 @@
       "correct": "às"
     },
     {
-      "id": 129,
+      "id": 111,
       "unit": 42,
       "phase": 2,
       "type": "comprehension",
@@ -2283,7 +2249,7 @@
       ]
     },
     {
-      "id": 130,
+      "id": 112,
       "unit": 42,
       "phase": 2,
       "type": "comprehension",
@@ -2300,7 +2266,7 @@
       ]
     },
     {
-      "id": 131,
+      "id": 113,
       "unit": 42,
       "phase": 2,
       "type": "comprehension",
@@ -2317,7 +2283,7 @@
       ]
     },
     {
-      "id": 132,
+      "id": 114,
       "unit": 42,
       "phase": 2,
       "type": "production",
@@ -2339,7 +2305,7 @@
       "correct": "para"
     },
     {
-      "id": 133,
+      "id": 115,
       "unit": 42,
       "phase": 2,
       "type": "production",
@@ -2361,7 +2327,7 @@
       "correct": "pela"
     },
     {
-      "id": 139,
+      "id": 116,
       "unit": 45,
       "phase": 3,
       "type": "comprehension",
@@ -2378,7 +2344,7 @@
       ]
     },
     {
-      "id": 140,
+      "id": 117,
       "unit": 45,
       "phase": 3,
       "type": "comprehension",
@@ -2395,7 +2361,7 @@
       ]
     },
     {
-      "id": 141,
+      "id": 118,
       "unit": 45,
       "phase": 3,
       "type": "production",
@@ -2417,7 +2383,7 @@
       "correct": "morava"
     },
     {
-      "id": 142,
+      "id": 119,
       "unit": 45,
       "phase": 3,
       "type": "production",
@@ -2439,7 +2405,7 @@
       "correct": "comia"
     },
     {
-      "id": 143,
+      "id": 120,
       "unit": 45,
       "phase": 3,
       "type": "production",
@@ -2461,7 +2427,7 @@
       "correct": "vivíamos"
     },
     {
-      "id": 144,
+      "id": 121,
       "unit": 46,
       "phase": 3,
       "type": "comprehension",
@@ -2478,7 +2444,7 @@
       ]
     },
     {
-      "id": 145,
+      "id": 122,
       "unit": 46,
       "phase": 3,
       "type": "production",
@@ -2500,7 +2466,7 @@
       "correct": "era"
     },
     {
-      "id": 146,
+      "id": 123,
       "unit": 46,
       "phase": 3,
       "type": "production",
@@ -2522,7 +2488,7 @@
       "correct": "tinha"
     },
     {
-      "id": 147,
+      "id": 124,
       "unit": 46,
       "phase": 3,
       "type": "production",
@@ -2544,7 +2510,7 @@
       "correct": "vinha"
     },
     {
-      "id": 148,
+      "id": 125,
       "unit": 47,
       "phase": 3,
       "type": "production",
@@ -2564,7 +2530,7 @@
       "correct": "mais...que"
     },
     {
-      "id": 149,
+      "id": 126,
       "unit": 47,
       "phase": 3,
       "type": "production",
@@ -2584,7 +2550,7 @@
       "correct": "menos...que"
     },
     {
-      "id": 150,
+      "id": 127,
       "unit": 47,
       "phase": 3,
       "type": "production",
@@ -2604,7 +2570,7 @@
       "correct": "tão...quanto"
     },
     {
-      "id": 151,
+      "id": 128,
       "unit": 48,
       "phase": 3,
       "type": "production",
@@ -2624,7 +2590,7 @@
       "correct": "O"
     },
     {
-      "id": 152,
+      "id": 129,
       "unit": 48,
       "phase": 3,
       "type": "production",
@@ -2644,7 +2610,7 @@
       "correct": "O"
     },
     {
-      "id": 153,
+      "id": 130,
       "unit": 49,
       "phase": 3,
       "type": "comprehension",
@@ -2661,7 +2627,7 @@
       ]
     },
     {
-      "id": 154,
+      "id": 131,
       "unit": 49,
       "phase": 3,
       "type": "comprehension",
@@ -2678,7 +2644,7 @@
       ]
     },
     {
-      "id": 155,
+      "id": 132,
       "unit": 49,
       "phase": 3,
       "type": "comprehension",
@@ -2695,7 +2661,7 @@
       ]
     },
     {
-      "id": 156,
+      "id": 133,
       "unit": 49,
       "phase": 3,
       "type": "production",
@@ -2715,7 +2681,7 @@
       "correct": "horas"
     },
     {
-      "id": 238,
+      "id": 134,
       "unit": 71,
       "phase": 3,
       "type": "comprehension",
@@ -2732,7 +2698,7 @@
       ]
     },
     {
-      "id": 239,
+      "id": 135,
       "unit": 71,
       "phase": 3,
       "type": "production",
@@ -2754,7 +2720,7 @@
       "correct": "Venha"
     },
     {
-      "id": 240,
+      "id": 136,
       "unit": 71,
       "phase": 3,
       "type": "production",
@@ -2776,7 +2742,7 @@
       "correct": "Fale"
     },
     {
-      "id": 241,
+      "id": 137,
       "unit": 71,
       "phase": 3,
       "type": "production",
@@ -2812,7 +2778,7 @@
         "The book is interesting",
         "This book was interesting"
       ],
-      "id": 242
+      "id": 138
     },
     {
       "unit": 72,
@@ -2834,7 +2800,7 @@
         "estão",
         "casa"
       ],
-      "id": 243
+      "id": 139
     },
     {
       "unit": 72,
@@ -2851,7 +2817,7 @@
         "The car is new",
         "That car was new"
       ],
-      "id": 244
+      "id": 140
     },
     {
       "unit": 72,
@@ -2873,7 +2839,7 @@
         "estão",
         "menina"
       ],
-      "id": 245
+      "id": 141
     },
     {
       "unit": 72,
@@ -2890,7 +2856,7 @@
         "The man is a teacher",
         "That man was a teacher"
       ],
-      "id": 246
+      "id": 142
     },
     {
       "unit": 72,
@@ -2912,10 +2878,10 @@
         "estão",
         "flor"
       ],
-      "id": 247
+      "id": 143
     },
     {
-      "id": 257,
+      "id": 144,
       "unit": 76,
       "phase": 4,
       "type": "comprehension",
@@ -2932,7 +2898,7 @@
       ]
     },
     {
-      "id": 258,
+      "id": 145,
       "unit": 76,
       "phase": 4,
       "type": "production",
@@ -2954,7 +2920,7 @@
       "correct": "viajarei"
     },
     {
-      "id": 259,
+      "id": 146,
       "unit": 76,
       "phase": 4,
       "type": "production",
@@ -2976,7 +2942,7 @@
       "correct": "estaremos"
     },
     {
-      "id": 260,
+      "id": 147,
       "unit": 76,
       "phase": 4,
       "type": "production",
@@ -2998,7 +2964,7 @@
       "correct": "fará"
     },
     {
-      "id": 261,
+      "id": 148,
       "unit": 77,
       "phase": 4,
       "type": "comprehension",
@@ -3015,7 +2981,7 @@
       ]
     },
     {
-      "id": 262,
+      "id": 149,
       "unit": 77,
       "phase": 4,
       "type": "production",
@@ -3037,7 +3003,7 @@
       "correct": "falaria"
     },
     {
-      "id": 263,
+      "id": 150,
       "unit": 77,
       "phase": 4,
       "type": "production",
@@ -3059,7 +3025,7 @@
       "correct": "faria"
     },
     {
-      "id": 264,
+      "id": 151,
       "unit": 77,
       "phase": 4,
       "type": "production",
@@ -3081,7 +3047,7 @@
       "correct": "iríamos"
     },
     {
-      "id": 265,
+      "id": 152,
       "unit": 78,
       "phase": 4,
       "type": "comprehension",
@@ -3098,7 +3064,7 @@
       ]
     },
     {
-      "id": 266,
+      "id": 153,
       "unit": 78,
       "phase": 4,
       "type": "comprehension",
@@ -3115,7 +3081,7 @@
       ]
     },
     {
-      "id": 267,
+      "id": 154,
       "unit": 79,
       "phase": 4,
       "type": "production",
@@ -3137,7 +3103,7 @@
       "correct": "à"
     },
     {
-      "id": 268,
+      "id": 155,
       "unit": 79,
       "phase": 4,
       "type": "production",
@@ -3159,7 +3125,7 @@
       "correct": "às"
     },
     {
-      "id": 269,
+      "id": 156,
       "unit": 79,
       "phase": 4,
       "type": "production",
@@ -3181,7 +3147,7 @@
       "correct": "à"
     },
     {
-      "id": 270,
+      "id": 157,
       "unit": 80,
       "phase": 4,
       "type": "comprehension",
@@ -3198,7 +3164,7 @@
       ]
     },
     {
-      "id": 271,
+      "id": 158,
       "unit": 80,
       "phase": 4,
       "type": "comprehension",
@@ -3215,7 +3181,7 @@
       ]
     },
     {
-      "id": 272,
+      "id": 159,
       "unit": 80,
       "phase": 4,
       "type": "production",
@@ -3237,7 +3203,7 @@
       "correct": "Todo"
     },
     {
-      "id": 273,
+      "id": 160,
       "unit": 81,
       "phase": 4,
       "type": "comprehension",
@@ -3254,7 +3220,7 @@
       ]
     },
     {
-      "id": 274,
+      "id": 161,
       "unit": 81,
       "phase": 4,
       "type": "comprehension",
@@ -3271,7 +3237,7 @@
       ]
     },
     {
-      "id": 275,
+      "id": 162,
       "unit": 82,
       "phase": 4,
       "type": "comprehension",
@@ -3288,7 +3254,7 @@
       ]
     },
     {
-      "id": 276,
+      "id": 163,
       "unit": 82,
       "phase": 4,
       "type": "production",
@@ -3310,7 +3276,7 @@
       "correct": "coma"
     },
     {
-      "id": 277,
+      "id": 164,
       "unit": 82,
       "phase": 4,
       "type": "production",
@@ -3332,7 +3298,7 @@
       "correct": "parta"
     },
     {
-      "id": 278,
+      "id": 165,
       "unit": 82,
       "phase": 4,
       "type": "production",
@@ -3354,7 +3320,7 @@
       "correct": "viajemos"
     },
     {
-      "id": 279,
+      "id": 166,
       "unit": 83,
       "phase": 4,
       "type": "comprehension",
@@ -3371,7 +3337,7 @@
       ]
     },
     {
-      "id": 280,
+      "id": 167,
       "unit": 83,
       "phase": 4,
       "type": "production",
@@ -3393,7 +3359,7 @@
       "correct": "seja"
     },
     {
-      "id": 281,
+      "id": 168,
       "unit": 83,
       "phase": 4,
       "type": "production",
@@ -3415,7 +3381,7 @@
       "correct": "esteja"
     },
     {
-      "id": 282,
+      "id": 169,
       "unit": 83,
       "phase": 4,
       "type": "production",
@@ -3437,7 +3403,7 @@
       "correct": "vá"
     },
     {
-      "id": 283,
+      "id": 170,
       "unit": 83,
       "phase": 4,
       "type": "production",
@@ -3459,7 +3425,7 @@
       "correct": "tenha"
     },
     {
-      "id": 284,
+      "id": 171,
       "unit": 84,
       "phase": 4,
       "type": "comprehension",
@@ -3476,7 +3442,7 @@
       ]
     },
     {
-      "id": 285,
+      "id": 172,
       "unit": 84,
       "phase": 4,
       "type": "comprehension",
@@ -3493,7 +3459,7 @@
       ]
     },
     {
-      "id": 286,
+      "id": 173,
       "unit": 84,
       "phase": 4,
       "type": "production",
@@ -3515,7 +3481,7 @@
       "correct": "tivesse"
     },
     {
-      "id": 287,
+      "id": 174,
       "unit": 84,
       "phase": 4,
       "type": "production",
@@ -3537,7 +3503,7 @@
       "correct": "estivesse"
     },
     {
-      "id": 288,
+      "id": 175,
       "unit": 84,
       "phase": 4,
       "type": "production",
@@ -3559,7 +3525,7 @@
       "correct": "tivéssemos"
     },
     {
-      "id": 289,
+      "id": 176,
       "unit": 85,
       "phase": 4,
       "type": "comprehension",
@@ -3576,7 +3542,7 @@
       ]
     },
     {
-      "id": 290,
+      "id": 177,
       "unit": 85,
       "phase": 4,
       "type": "production",
@@ -3598,7 +3564,7 @@
       "correct": "chegar"
     },
     {
-      "id": 291,
+      "id": 178,
       "unit": 85,
       "phase": 4,
       "type": "production",
@@ -3620,7 +3586,7 @@
       "correct": "tiver"
     },
     {
-      "id": 292,
+      "id": 179,
       "unit": 85,
       "phase": 4,
       "type": "production",
@@ -3642,7 +3608,7 @@
       "correct": "pudermos"
     },
     {
-      "id": 293,
+      "id": 180,
       "unit": 86,
       "phase": 4,
       "type": "comprehension",
@@ -3659,7 +3625,7 @@
       ]
     },
     {
-      "id": 294,
+      "id": 181,
       "unit": 86,
       "phase": 4,
       "type": "comprehension",
@@ -3676,7 +3642,7 @@
       ]
     },
     {
-      "id": 295,
+      "id": 182,
       "unit": 86,
       "phase": 4,
       "type": "production",
@@ -3698,7 +3664,7 @@
       "correct": "tá"
     },
     {
-      "id": 296,
+      "id": 183,
       "unit": 87,
       "phase": 4,
       "type": "comprehension",
@@ -3715,7 +3681,7 @@
       ]
     },
     {
-      "id": 297,
+      "id": 184,
       "unit": 87,
       "phase": 4,
       "type": "comprehension",
@@ -3732,7 +3698,7 @@
       ]
     },
     {
-      "id": 298,
+      "id": 185,
       "unit": 88,
       "phase": 4,
       "type": "comprehension",
@@ -3749,7 +3715,7 @@
       ]
     },
     {
-      "id": 299,
+      "id": 186,
       "unit": 88,
       "phase": 4,
       "type": "comprehension",
@@ -3766,7 +3732,7 @@
       ]
     },
     {
-      "id": 300,
+      "id": 187,
       "unit": 89,
       "phase": 4,
       "type": "comprehension",
@@ -3783,7 +3749,7 @@
       ]
     },
     {
-      "id": 301,
+      "id": 188,
       "unit": 89,
       "phase": 4,
       "type": "comprehension",
@@ -3800,7 +3766,7 @@
       ]
     },
     {
-      "id": 302,
+      "id": 189,
       "unit": 89,
       "phase": 4,
       "type": "comprehension",
@@ -3817,7 +3783,7 @@
       ]
     },
     {
-      "id": 303,
+      "id": 190,
       "unit": 89,
       "phase": 4,
       "type": "production",
