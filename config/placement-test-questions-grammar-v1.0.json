@@ -610,9 +610,9 @@
       "unit": 16,
       "phase": 1,
       "type": "production",
-      "en": "I have a house",
+      "en": "You have a house",
       "question": "Complete the sentence:",
-      "template": "Eu __ uma casa",
+      "template": "Você __ uma casa",
       "chips": [
         "tenho",
         "tem",
@@ -625,7 +625,7 @@
         "tenha",
         "tivesse"
       ],
-      "correct": "tenho",
+      "correct": "tem",
       "unitTopic": "Ter"
     },
     {
@@ -656,9 +656,9 @@
       "unit": 19,
       "phase": 1,
       "type": "production",
-      "en": "I need money",
+      "en": "You need money",
       "question": "Complete the sentence:",
-      "template": "Eu preciso __ dinheiro",
+      "template": "Você precisa __ dinheiro",
       "chips": [
         "de",
         "do",
@@ -720,9 +720,9 @@
       "unit": 22,
       "phase": 2,
       "type": "production",
-      "en": "I eat fruit",
+      "en": "You eat fruit",
       "question": "Complete the sentence:",
-      "template": "Eu __ fruta",
+      "template": "Você __ fruta",
       "chips": [
         "como",
         "come",
@@ -735,7 +735,7 @@
         "coma",
         "comesse"
       ],
-      "correct": "como",
+      "correct": "come",
       "unitTopic": "Regular -er Verbs"
     },
     {
@@ -743,9 +743,9 @@
       "unit": 22,
       "phase": 2,
       "type": "production",
-      "en": "I drink water",
+      "en": "You drink water",
       "question": "Complete the sentence:",
-      "template": "Eu __ água",
+      "template": "Você __ água",
       "chips": [
         "bebo",
         "bebe",
@@ -758,7 +758,7 @@
         "beba",
         "bebesse"
       ],
-      "correct": "bebo",
+      "correct": "bebe",
       "unitTopic": "Regular -er Verbs"
     },
     {
@@ -950,9 +950,9 @@
       "unit": 26,
       "phase": 2,
       "type": "production",
-      "en": "I open the window",
+      "en": "You open the window",
       "question": "Complete the sentence:",
-      "template": "Eu __ a janela",
+      "template": "Você __ a janela",
       "chips": [
         "abro",
         "abre",
@@ -965,7 +965,7 @@
         "abra",
         "abrisse"
       ],
-      "correct": "abro",
+      "correct": "abre",
       "unitTopic": "Regular -ir Verbs"
     },
     {
@@ -1273,11 +1273,11 @@
       "unit": 34,
       "phase": 2,
       "type": "production",
-      "en": "I spoke Portuguese",
+      "en": "You spoke Portuguese",
       "question": "Complete the sentence:",
-      "template": "Eu __ português",
+      "template": "Você __ português",
       "chips": [
-        "falei",
+        "falou",
         "falo",
         "fala",
         "falamos",
@@ -1288,7 +1288,7 @@
         "fale",
         "falasse"
       ],
-      "correct": "falei",
+      "correct": "falou",
       "unitTopic": "Preterite Regular"
     },
     {
@@ -1342,11 +1342,11 @@
       "unit": 35,
       "phase": 2,
       "type": "production",
-      "en": "I drank water",
+      "en": "You drank water",
       "question": "Complete the sentence:",
-      "template": "Eu __ água",
+      "template": "Você __ água",
       "chips": [
-        "bebi",
+        "bebeu",
         "bebo",
         "bebe",
         "bebemos",
@@ -1357,7 +1357,7 @@
         "beba",
         "bebesse"
       ],
-      "correct": "bebi",
+      "correct": "bebeu",
       "unitTopic": "Preterite Regular"
     },
     {
@@ -1447,9 +1447,9 @@
       "unit": 36,
       "phase": 2,
       "type": "production",
-      "en": "I went to the park",
+      "en": "You went to the park",
       "question": "Complete the sentence:",
-      "template": "Eu __ ao parque",
+      "template": "Você __ ao parque",
       "chips": [
         "fui",
         "foi",
@@ -1462,7 +1462,7 @@
         "iria",
         "vá"
       ],
-      "correct": "fui",
+      "correct": "foi",
       "unitTopic": "Preterite Irregular"
     },
     {
@@ -1515,11 +1515,11 @@
       "unit": 37,
       "phase": 2,
       "type": "production",
-      "en": "I was at home",
+      "en": "You were at home",
       "question": "Complete the sentence:",
-      "template": "Eu __ em casa",
+      "template": "Você __ em casa",
       "chips": [
-        "estive",
+        "esteve",
         "estou",
         "estava",
         "estarei",
@@ -1530,7 +1530,7 @@
         "era",
         "fui"
       ],
-      "correct": "estive",
+      "correct": "esteve",
       "unitTopic": "Preterite Irregular"
     },
     {
@@ -1538,9 +1538,9 @@
       "unit": 37,
       "phase": 2,
       "type": "production",
-      "en": "I had time",
+      "en": "You had time",
       "question": "Complete the sentence:",
-      "template": "Eu __ tempo",
+      "template": "Você __ tempo",
       "chips": [
         "tive",
         "tenho",
@@ -1553,7 +1553,7 @@
         "tem",
         "teríamos"
       ],
-      "correct": "tive",
+      "correct": "teve",
       "unitTopic": "Preterite Irregular"
     },
     {
