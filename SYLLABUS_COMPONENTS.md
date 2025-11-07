@@ -20,10 +20,10 @@ The syllabus separates two fundamentally different types of phonetic changes:
 Write words as they appear in standard Portuguese, but use **compact notation** to show pronunciation:
 
 ```
-Eu sou de[dji] Miami.           ← [dji] shows only the sound change
-Eu tenho[u] um gato[u].          ← [u] shows final o→u change
-Eu gosto[u] de[dji] música.      ← Multiple annotations in one sentence
-Eu estou contente[tchi].         ← [tchi] shows te→tchi change
+Eu sou de[dji] Miami.                  ← [dji] shows only the sound change
+Eu tenho[u] um[ũm] gato[u].            ← [u] and [ũm] show pronunciation changes
+Eu gosto[u] de[dji] música.            ← Multiple annotations in one sentence
+Eu estou contente[tchi] em[eyn] casa.  ← [tchi] and [eyn] show changes
 ```
 
 **Compact notation format**: `word[sound]` - only the changed sound appears in brackets, not the whole word.
@@ -36,8 +36,9 @@ Write words as they're pronounced in maximum colloquial speech:
 
 ```
 Sô dji Miami.                    ← "dji" written directly
-Tenhu um gato.                   ← "tenhu" written directly
+Tenhu ũm gato.                   ← "tenhu" and "ũm" written directly
 Gostchi dji música.              ← "gostchi dji" written directly
+Tô eyn casa.                     ← "eyn" written directly
 ```
 
 **No brackets needed**: The spelling represents the pronunciation.
@@ -72,9 +73,23 @@ Gostchi dji música.              ← "gostchi dji" written directly
   - York (ends in -k) → Yor**ki** → York[i] (as in "Nova York[i]")
   - Whatsapp (ends in -p) → Whatsa**pi** → Whatsapp[i]
 
+✅ **Nasal vowel endings** (obligatory):
+- **-em → [eyn]**: em[eyn] (preposition "in"), também[eyn] (also)
+- **-am → [ãwn]**: falam[ãwn] (they speak), estavam[ãwn] (they were)
+- **-im → [ing]**: sim[ing] (yes), assim[ing] (thus)
+- **-om → [oun]**: com[oun] (with), som[oun] (sound)
+- **-um/uma → [ũm]/[ũma]**: um[ũm] (one/a - masculine), uma[ũma] (one/a - feminine)
+
+✅ **Syllable-final L → [u]** (obligatory):
+- **Simple words** (one L only): Brasil → Brasi~~l~~[u], futebol → futebo~~l~~[u], hotel → hote~~l~~[u], azul → azu~~l~~[u]
+- **Complex words** (multiple L's or mid-word): álcool → álcool[áucool], alto → alto[auto], calma → calma[cauma]
+- **Rationale**: Simple words use strikethrough; complex words use full repetition for clarity
+- **Note**: L at syllable start stays [l]: livro, legal, salada
+
 ❌ **NOT annotated** (per pedagogical decision):
 - Sibilant sounds (s → sh)
 - R-sound variations
+- Nasal vowels with tilde (são, irmãos) - tilde already indicates nasalization
 
 ### **Why This System Works**
 
