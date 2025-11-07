@@ -59,6 +59,16 @@ Gostchi dji música.              ← "gostchi dji" written directly
 - nome[i], fome[i] (examples for future use)
 - Plural: nomes[is] (future use)
 
+✅ **Epenthetic [i] on consonant-final words** (borrowed words):
+- Words ending in consonants add [i] in Portuguese pronunciation
+- **If creates ti/di → palatalization applies**:
+  - Internet (ends in -t) → Interne**ti** → Internet[chi] (palatalized)
+  - iPad (ends in -d) → iPa**di** → iPad[ji] (palatalized)
+- **Otherwise, just [i]**:
+  - Facebook (ends in -k) → Faceboo**ki** → Facebook[i]
+  - York (ends in -k) → Yor**ki** → York[i] (as in "Nova York[i]")
+  - Whatsapp (ends in -p) → Whatsa**pi** → Whatsapp[i]
+
 ❌ **NOT annotated** (per pedagogical decision):
 - Sibilant sounds (s → sh)
 - R-sound variations
