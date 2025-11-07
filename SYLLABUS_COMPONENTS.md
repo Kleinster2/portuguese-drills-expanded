@@ -45,18 +45,21 @@ Gostchi dji música.              ← "gostchi dji" written directly
 ### **What Gets Annotated (Using Compact Notation)**
 
 ✅ **Final unstressed o→u** (obligatory, ALL instances):
-- americano[u], brasileiro[u], casado[u], solteiro[u]
-- moro[u], trabalho[u], falo[u], gosto[u], tenho[u]
-- cachorro[u], gato[u], pouco[u], escritório[u]
-- como[u], São Paulo[u]
+- Adjectives: americano[u], brasileiro[u], casado[u], solteiro[u]
+- Verbs: moro[u], trabalho[u], falo[u], gosto[u], tenho[u]
+- Nouns: cachorro[u], gato[u], pouco[u], escritório[u], São Paulo[u]
+- Function words: como[u], **o[u]** (article), **do[u]** (de+o), **no[u]** (em+o)
+- Plural: **os[us]** (article), **dos[us]** (de+os), **nos[us]** (em+os)
 
 ✅ **Palatalization** (obligatory in Brazilian Portuguese):
 - `de` + /i/ sound → `de[dji]`: de[dji] Miami, de[dji] música, de[dji] espanhol
 - `te` + /i/ sound → `[tchi]`: contente[tchi]
 - Coalescence: de[djô]nibus (Carlos)
 
-✅ **Final unstressed e→i** (when applicable):
-- nome[i], fome[i] (examples for future use)
+✅ **Final unstressed e→i** (obligatory, ALL instances):
+- Nouns: nome[i], fome[i] (examples for future use)
+- Function words: **e[i]** (conjunction "and") - ALWAYS
+- Prepositions: **de[dji]** (includes e→i + palatalization) - ALWAYS
 - Plural: nomes[is] (future use)
 
 ✅ **Epenthetic [i] on consonant-final words** (borrowed words):
