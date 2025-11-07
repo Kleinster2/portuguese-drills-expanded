@@ -246,62 +246,60 @@ Students can confidently introduce themselves:
 ```
 Eu sou o John.                     (name)
 Eu sou americano.                  (nationality)
-Eu sou dos Estados Unidos.         (origin)
+Eu sou de Miami.                   (origin)
 Eu sou analista.                   (profession)
-Eu sou alto.                       (characteristic)
+Eu sou casado com a Sarah.         (marital status)
 
 Eu moro em Nova York.              (city)
 Eu moro na avenida das Américas.   (avenue)
 
 Eu trabalho em Nova York.          (work city)
-Eu trabalho na XYZ.                (workplace)
+Eu trabalho na Acme.               (workplace)
 Eu trabalho como analista.         (occupation)
 
-Eu falo inglês e português.        (languages)
+Eu falo inglês e um pouco de espanhol.  (languages)
 
 Eu gosto de música.                (preferences)
 Eu gosto de viajar.                (activities)
 
-Eu estou em Nova York agora.       (current location)
-Eu estou no escritório.            (location with article)
-Eu estou contente.                 (temporary state)
-Eu estou contente em falar português.  (emotion + infinitive)
-
 Eu vou de metrô para o trabalho.   (transportation)
 
-Eu tenho dois irmãos.              (counting family - dois with masculine)
-Eu tenho uma irmã.                 (counting family - uma with feminine)
+Eu tenho um cachorro e uma gata.   (pets - um/uma agreement)
+Eu tenho dois irmãos e duas irmãs. (family - dois/duas agreement)
+
+Eu estou em Nova York agora.       (current location)
+Eu estou em casa.                  (location)
+Eu estou contente em falar português.  (emotion + infinitive)
 ```
 
 **Example 2 - Feminine (Eu - Sarah):**
 ```
 Eu sou a Sarah.                    (name)
 Eu sou americana.                  (nationality)
-Eu sou dos Estados Unidos.         (origin)
+Eu sou de Miami.                   (origin)
 Eu sou analista.                   (profession)
-Eu sou alta.                       (characteristic)
+Eu sou casada com o John.          (marital status)
 
 Eu moro em Nova York.              (city)
 Eu moro na avenida das Américas.   (avenue)
 
 Eu trabalho em Nova York.          (work city)
-Eu trabalho na XYZ.                (workplace)
+Eu trabalho na Acme.               (workplace)
 Eu trabalho como analista.         (occupation)
 
-Eu falo inglês e português.        (languages)
+Eu falo inglês e um pouco de espanhol.  (languages)
 
 Eu gosto de música.                (preferences)
 Eu gosto de viajar.                (activities)
 
-Eu estou em Nova York agora.       (current location)
-Eu estou no escritório.            (location with article)
-Eu estou contente.                 (temporary state)
-Eu estou contente em falar português.  (emotion + infinitive)
-
 Eu vou de metrô para o trabalho.   (transportation)
 
-Eu tenho dois irmãos.              (counting family - dois with masculine)
-Eu tenho uma irmã.                 (counting family - uma with feminine)
+Eu tenho um cachorro e uma gata.   (pets - um/uma agreement)
+Eu tenho dois irmãos e duas irmãs. (family - dois/duas agreement)
+
+Eu estou em Nova York agora.       (current location)
+Eu estou em casa.                  (location)
+Eu estou contente em falar português.  (emotion + infinitive)
 ```
 
 ---
@@ -328,146 +326,154 @@ After mastering all 5 verbs with explicit "eu", students learn:
 ```
 Eu sou o John.
 Eu sou americano.
-Eu sou de Nova York.
+Eu sou de Miami.
 Eu sou analista.
+Eu sou casado com a Sarah.
 
 Eu moro em Nova York.
 Eu moro na avenida das Américas.
 
 Eu trabalho em Nova York.
-Eu trabalho na XYZ.
+Eu trabalho na Acme.
+Eu trabalho como analista.
 
-Eu falo inglês e português.
+Eu falo inglês e um pouco de espanhol.
 
 Eu gosto de música.
 Eu gosto de viajar.
 
-Eu estou em Nova York agora.
-Eu estou contente.
-Eu estou contente em falar português.
-
 Eu vou de metrô para o trabalho.
 
-Eu tenho dois irmãos.
-Eu tenho uma irmã.
+Eu tenho um cachorro e uma gata.
+Eu tenho dois irmãos e duas irmãs.
+
+Eu estou em Nova York agora.
+Eu estou em casa.
+Eu estou contente em falar português.
 ```
 
 **Phase 1 (Explicit "eu") - Sarah:**
 ```
 Eu sou a Sarah.
 Eu sou americana.
-Eu sou de Nova York.
+Eu sou de Miami.
 Eu sou analista.
+Eu sou casada com o John.
 
 Eu moro em Nova York.
 Eu moro na avenida das Américas.
 
 Eu trabalho em Nova York.
-Eu trabalho na XYZ.
+Eu trabalho na Acme.
+Eu trabalho como analista.
 
-Eu falo inglês e português.
+Eu falo inglês e um pouco de espanhol.
 
 Eu gosto de música.
 Eu gosto de viajar.
 
-Eu estou em Nova York agora.
-Eu estou contente.
-Eu estou contente em falar português.
-
 Eu vou de metrô para o trabalho.
 
-Eu tenho dois irmãos.
-Eu tenho uma irmã.
+Eu tenho um cachorro e uma gata.
+Eu tenho dois irmãos e duas irmãs.
+
+Eu estou em Nova York agora.
+Eu estou em casa.
+Eu estou contente em falar português.
 ```
 
 **Step 1 (Implicit subjects) - John:**
 ```
 Sou o John.
 Sou americano.
-Sou de Nova York.
+Sou de Miami.
 Sou analista.
+Sou casado com a Sarah.
 
 Moro em Nova York.
 Moro na avenida das Américas.
 
 Trabalho em Nova York.
-Trabalho na XYZ.
+Trabalho na Acme.
+Trabalho como analista.
 
-Falo inglês e português.
+Falo inglês e um pouco de espanhol.
 
 Gosto de música.
 Gosto de viajar.
 
-Estou em Nova York agora.
-Estou contente.
-Estou contente em falar português.
-
 Vou de metrô para o trabalho.
 
-Tenho dois irmãos.
-Tenho uma irmã.
+Tenho um cachorro e uma gata.
+Tenho dois irmãos e duas irmãs.
+
+Estou em Nova York agora.
+Estou em casa.
+Estou contente em falar português.
 ```
 
 **Step 1 (Implicit subjects) - Sarah:**
 ```
 Sou a Sarah.
 Sou americana.
-Sou de Nova York.
+Sou de Miami.
 Sou analista.
+Sou casada com o John.
 
 Moro em Nova York.
 Moro na avenida das Américas.
 
 Trabalho em Nova York.
-Trabalho na XYZ.
+Trabalho na Acme.
+Trabalho como analista.
 
-Falo inglês e português.
+Falo inglês e um pouco de espanhol.
 
 Gosto de música.
 Gosto de viajar.
 
-Estou em Nova York agora.
-Estou contente.
-Estou contente em falar português.
-
 Vou de metrô para o trabalho.
 
-Tenho dois irmãos.
-Tenho uma irmã.
+Tenho um cachorro e uma gata.
+Tenho dois irmãos e duas irmãs.
+
+Estou em Nova York agora.
+Estou em casa.
+Estou contente em falar português.
 ```
 
 **Step 2 (Concatenated - natural introduction) - John:**
 ```
-Sou o John. Sou americano, de Nova York. Sou analista.
+Sou o John. Sou americano, de Miami. Sou analista e sou casado com a Sarah.
 
-Moro em Nova York, na avenida das Américas. Trabalho na XYZ.
+Moro em Nova York, na avenida das Américas. Trabalho na Acme como analista.
 
 Vou de metrô para o trabalho.
 
-Falo inglês e português.
+Falo inglês e um pouco de espanhol.
 
 Gosto de música e de viajar.
 
-Estou em Nova York agora. Estou contente em falar português.
+Tenho um cachorro e uma gata. Tenho dois irmãos e duas irmãs.
 
-Tenho dois irmãos e uma irmã.
+Estou em Nova York agora. Estou em casa e estou contente em falar português.
 ```
 
 **Step 2 (Concatenated - natural introduction) - Sarah:**
 ```
-Sou a Sarah. Sou americana, de Nova York. Sou analista.
+Sou a Sarah. Sou americana, de Miami. Sou analista e sou casada com o John.
 
-Moro em Nova York, na avenida das Américas. Trabalho na XYZ.
+Moro em Nova York, na avenida das Américas. Trabalho na Acme como analista.
 
 Vou de metrô para o trabalho.
 
-Falo inglês e português.
+Falo inglês e um pouco de espanhol.
 
 Gosto de música e de viajar.
 
-Estou em Nova York agora. Estou contente em falar português.
+Tenho um cachorro e uma gata. Tenho dois irmãos e duas irmãs.
 
-Tenho dois irmãos e uma irmã.
+Estou em Nova York agora. Estou em casa e estou contente em falar português.
 ```
 
 - **Add connectors:** e (and), mas (but), também (also), comma for flow
@@ -1047,85 +1053,97 @@ This shows how Phase 1 (Eu) and Phase 3 (Você) work together in conversation:
 **John introduces himself (Phase 1 - Eu):**
 ```
 Eu sou o John.
-Eu sou americano, de Nova York.
+Eu sou americano, de Miami.
 Eu sou analista.
+Eu sou casado com a Sarah.
 
 Eu moro em Nova York, na avenida das Américas.
-Eu trabalho na XYZ.
+Eu trabalho na Acme.
 
 Eu vou de metrô para o trabalho.
 
-Eu falo inglês e português.
+Eu falo inglês e um pouco de espanhol.
 
 Eu gosto de música e de viajar.
 
-Eu estou em Nova York agora.
-Estou contente em falar português.
+Eu tenho um cachorro e uma gata.
+Eu tenho dois irmãos e duas irmãs.
 
-Eu tenho dois irmãos e uma irmã.
+Eu estou em Nova York agora.
+Eu estou em casa.
+Estou contente em falar português.
 ```
 
 **Someone reads back his introduction (Phase 3 - Você):**
 ```
 Você é o John.
-Você é americano, de Nova York.
+Você é americano, de Miami.
 Você é analista.
+Você é casado com a Sarah.
 
 Você mora em Nova York, na avenida das Américas.
-Você trabalha na XYZ.
+Você trabalha na Acme.
 
 Você vai de metrô para o trabalho.
 
-Você fala inglês e português.
+Você fala inglês e um pouco de espanhol.
 
 Você gosta de música e de viajar.
 
-Você está em Nova York agora.
-Está contente em falar português.
+Você tem um cachorro e uma gata.
+Você tem dois irmãos e duas irmãs.
 
-Você tem dois irmãos e uma irmã.
+Você está em Nova York agora.
+Você está em casa.
+Está contente em falar português.
 ```
 
 **Sarah introduces herself (Phase 1 - Eu):**
 ```
 Eu sou a Sarah.
-Eu sou americana, de Nova York.
+Eu sou americana, de Miami.
 Eu sou analista.
+Eu sou casada com o John.
 
 Eu moro em Nova York, na avenida das Américas.
-Eu trabalho na XYZ.
+Eu trabalho na Acme.
 
 Eu vou de metrô para o trabalho.
 
-Eu falo inglês e português.
+Eu falo inglês e um pouco de espanhol.
 
 Eu gosto de música e de viajar.
 
-Eu estou em Nova York agora.
-Estou contente em falar português.
+Eu tenho um cachorro e uma gata.
+Eu tenho dois irmãos e duas irmãs.
 
-Eu tenho dois irmãos e uma irmã.
+Eu estou em Nova York agora.
+Eu estou em casa.
+Estou contente em falar português.
 ```
 
 **Someone reads back her introduction (Phase 3 - Você):**
 ```
 Você é a Sarah.
-Você é americana, de Nova York.
+Você é americana, de Miami.
 Você é analista.
+Você é casada com o John.
 
 Você mora em Nova York, na avenida das Américas.
-Você trabalha na XYZ.
+Você trabalha na Acme.
 
 Você vai de metrô para o trabalho.
 
-Você fala inglês e português.
+Você fala inglês e um pouco de espanhol.
 
 Você gosta de música e de viajar.
 
-Você está em Nova York agora.
-Está contente em falar português.
+Você tem um cachorro e uma gata.
+Você tem dois irmãos e duas irmãs.
 
-Você tem dois irmãos e uma irmã.
+Você está em Nova York agora.
+Você está em casa.
+Está contente em falar português.
 ```
 
 **Pattern:**
