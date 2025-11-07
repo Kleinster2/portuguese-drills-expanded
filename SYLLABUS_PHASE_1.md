@@ -328,29 +328,29 @@ Estou em Nova York agora. Estou em casa e estou contente em falar português.
 **Step 1: With "eu" (explicit)**
 ```
 Eu sou a Sarah.
-Eu também sou americana.
+Eu sou americana também.
 Eu também sou de Miami.
-Eu também sou analista.
+Eu sou analista também.
 Eu sou casada com o John.
 
-Eu também moro em Nova York.
+Eu moro em Nova York também.
 Eu moro na avenida das Américas.
 
-Eu também trabalho em Nova York.
+Eu trabalho em Nova York também.
 Eu também trabalho na Acme.
 Eu trabalho como analista.
 
-Eu também falo inglês e um pouco de espanhol.
+Eu falo inglês e um pouco de espanhol também.
 
-Eu também gosto de música.
+Eu gosto de música também.
 Eu gosto de viajar.
 
-Eu também vou de metrô para o trabalho.
+Eu vou de metrô para o trabalho também.
 
 Eu tenho um cachorro e uma gata.
-Eu também tenho dois irmãos e duas irmãs.
+Eu tenho dois irmãos e duas irmãs também.
 
-Eu também estou em Nova York agora.
+Eu estou em Nova York agora também.
 Eu também estou em casa.
 Eu estou contente em falar português.
 ```
@@ -358,48 +358,48 @@ Eu estou contente em falar português.
 **Step 2: Without "eu" (implicit)**
 ```
 Sou a Sarah.
-Também sou americana.
+Sou americana também.
 Também sou de Miami.
-Também sou analista.
+Sou analista também.
 Sou casada com o John.
 
-Também moro em Nova York.
+Moro em Nova York também.
 Moro na avenida das Américas.
 
-Também trabalho em Nova York.
+Trabalho em Nova York também.
 Também trabalho na Acme.
 Trabalho como analista.
 
-Também falo inglês e um pouco de espanhol.
+Falo inglês e um pouco de espanhol também.
 
-Também gosto de música.
+Gosto de música também.
 Gosto de viajar.
 
-Também vou de metrô para o trabalho.
+Vou de metrô para o trabalho também.
 
 Tenho um cachorro e uma gata.
-Também tenho dois irmãos e duas irmãs.
+Tenho dois irmãos e duas irmãs também.
 
-Também estou em Nova York agora.
+Estou em Nova York agora também.
 Também estou em casa.
 Estou contente em falar português.
 ```
 
 **Step 3: Concatenated (natural flow)**
 ```
-Sou a Sarah. Também sou americana, de Miami. Também sou analista e sou casada com o John.
+Sou a Sarah. Sou americana também, de Miami. Também sou analista e sou casada com o John.
 
-Também moro em Nova York, na avenida das Américas. Também trabalho na Acme como analista.
+Moro em Nova York também, na avenida das Américas. Também trabalho na Acme como analista.
 
-Também vou de metrô para o trabalho.
+Vou de metrô para o trabalho também.
 
-Também falo inglês e um pouco de espanhol.
+Falo inglês e um pouco de espanhol também.
 
-Também gosto de música e de viajar.
+Gosto de música também e de viajar.
 
-Tenho um cachorro e uma gata. Também tenho dois irmãos e duas irmãs.
+Tenho um cachorro e uma gata. Tenho dois irmãos e duas irmãs também.
 
-Também estou em Nova York agora. Também estou em casa e estou contente em falar português.
+Estou em Nova York agora também. Também estou em casa e estou contente em falar português.
 ```
 
 ---
