@@ -404,6 +404,87 @@ Estou em Nova York agora. Estou em casa e estou contente em falar português.
 
 ---
 
+**NÓS - Complete Progression (John & Sarah together):**
+
+**Step 1: With "nós" (explicit)**
+```
+Nós somos o John e a Sarah.
+Nós somos americanos.
+Nós somos de Miami.
+Nós somos analistas.
+Nós somos casados.
+
+Nós moramos em Nova York.
+Nós moramos na avenida das Américas.
+
+Nós trabalhamos em Nova York.
+Nós trabalhamos na Acme.
+Nós trabalhamos como analistas.
+
+Nós falamos inglês e um pouco de espanhol.
+
+Nós gostamos de música.
+Nós gostamos de viajar.
+
+Nós vamos de metrô para o trabalho.
+
+Nós temos um cachorro e uma gata.
+Nós temos dois irmãos e duas irmãs cada.
+
+Nós estamos em Nova York agora.
+Nós estamos em casa.
+Nós estamos contentes em falar português.
+```
+
+**Step 2: Without "nós" (implicit)**
+```
+Somos o John e a Sarah.
+Somos americanos.
+Somos de Miami.
+Somos analistas.
+Somos casados.
+
+Moramos em Nova York.
+Moramos na avenida das Américas.
+
+Trabalhamos em Nova York.
+Trabalhamos na Acme.
+Trabalhamos como analistas.
+
+Falamos inglês e um pouco de espanhol.
+
+Gostamos de música.
+Gostamos de viajar.
+
+Vamos de metrô para o trabalho.
+
+Temos um cachorro e uma gata.
+Temos dois irmãos e duas irmãs cada.
+
+Estamos em Nova York agora.
+Estamos em casa.
+Estamos contentes em falar português.
+```
+
+**Step 3: Concatenated (natural flow)**
+```
+Somos o John e a Sarah. Somos americanos, de Miami. Somos analistas e somos casados.
+
+Moramos em Nova York, na avenida das Américas. Trabalhamos na Acme como analistas.
+
+Vamos de metrô para o trabalho.
+
+Falamos inglês e um pouco de espanhol.
+
+Gostamos de música e de viajar.
+
+Temos um cachorro e uma gata. Temos dois irmãos e duas irmãs cada.
+
+Estamos em Nova York agora. Estamos em casa e estamos contentes em falar português.
+```
+
+---
+
 ## Next Steps After Phase 1
 
 After mastering all 5 verbs with explicit "eu", students learn:
