@@ -173,7 +173,7 @@ Eu moro em Nova York.              (city)
 Eu moro na avenida Broadway.       (avenue)
 
 Eu trabalho em Nova York.          (work city)
-Eu trabalho no banco.              (workplace)
+Eu trabalho na XYZ.                (workplace)
 Eu trabalho como analista.         (occupation)
 
 Eu falo inglês e português.        (languages)
@@ -213,7 +213,7 @@ Eu moro em Nova York.
 Eu moro na avenida Broadway.
 
 Eu trabalho em Nova York.
-Eu trabalho no banco.
+Eu trabalho na XYZ.
 
 Eu falo inglês e português.
 
@@ -232,7 +232,7 @@ Moro em Nova York.
 Moro na avenida Broadway.
 
 Trabalho em Nova York.
-Trabalho no banco.
+Trabalho na XYZ.
 
 Falo inglês e português.
 
@@ -244,7 +244,7 @@ Gosto de viajar.
 ```
 Sou o John. Sou americano, de Nova York. Sou analista.
 
-Moro em Nova York, na avenida Broadway. Trabalho no banco.
+Moro em Nova York, na avenida Broadway. Trabalho na XYZ.
 
 Falo inglês e português.
 
