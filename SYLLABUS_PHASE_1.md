@@ -202,6 +202,15 @@ Students should be able to produce these statement patterns:
 - **Usage:** Near future - stating what you're going to do
 - **Example:** Eu vou estudar português (I'm going to study Portuguese)
 
+### Pattern 7.4: Eu vou de [transportation] para [place]
+- **Structure:** Eu vou de + means of transportation + para + destination
+- **Preposition:** de (by/with)
+- **Usage:** Stating how you get to places using transportation
+- **Examples:**
+  - Eu vou de carro para o trabalho (I go by car to work)
+  - Eu vou de ônibus para o escritório (I go by bus to the office)
+  - Eu vou de metrô para casa (I go by subway home)
+
 ---
 
 ## Summary
@@ -213,9 +222,9 @@ Students should be able to produce these statement patterns:
 4. ✅ **Eu falo** - Languages spoken (2 patterns)
 5. ✅ **Eu gosto** - Preferences and likes (3 patterns)
 6. ✅ **Eu estou** - Current location and temporary states (4 patterns)
-7. ✅ **Eu vou** - Movement and near future (3 patterns)
+7. ✅ **Eu vou** - Movement, transportation, and near future (4 patterns)
 
-### Total Patterns: 25
+### Total Patterns: 26
 
 ### Complete Self-Introduction After Phase 1:
 
@@ -247,6 +256,7 @@ Eu estou contente em falar português.  (emotion + infinitive)
 Eu vou para o Brasil.              (going to place)
 Eu vou ao escritório.              (going to place with article)
 Eu vou estudar português.          (near future)
+Eu vou de metrô para o trabalho.   (transportation)
 ```
 
 ---
@@ -294,6 +304,7 @@ Eu estou contente em falar português.
 Eu vou para o Brasil.
 Eu vou ao escritório.
 Eu vou estudar português.
+Eu vou de metrô para o trabalho.
 ```
 
 **Step 1 (Implicit subjects):**
@@ -321,6 +332,7 @@ Estou contente em falar português.
 Vou para o Brasil.
 Vou ao escritório.
 Vou estudar português.
+Vou de metrô para o trabalho.
 ```
 
 **Step 2 (Concatenated - natural introduction):**
@@ -328,6 +340,8 @@ Vou estudar português.
 Sou o John. Sou americano, de Nova York. Sou analista.
 
 Moro em Nova York, na avenida Broadway. Trabalho na XYZ.
+
+Vou de metrô para o trabalho.
 
 Falo inglês e português.
 
