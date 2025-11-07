@@ -638,6 +638,57 @@ Ele está em Nova York agora. Ele está em casa e ele está contente em falar po
 
 ---
 
+**ELA - Complete Progression (describing Sarah):**
+
+**Step 1: Full statements**
+```
+Ela é a Sarah.
+Ela é americana.
+Ela é de Miami.
+Ela é analista.
+Ela é casada com o John.
+
+Ela mora em Nova York.
+Ela mora na avenida das Américas.
+
+Ela trabalha em Nova York.
+Ela trabalha na Acme.
+Ela trabalha como analista.
+
+Ela fala inglês e um pouco de espanhol.
+
+Ela gosta de música.
+Ela gosta de viajar.
+
+Ela vai de metrô para o trabalho.
+
+Ela tem um cachorro e uma gata.
+Ela tem dois irmãos e duas irmãs.
+
+Ela está em Nova York agora.
+Ela está em casa.
+Ela está contente em falar português.
+```
+
+**Step 2: Concatenated (natural flow)**
+```
+Ela é a Sarah. Ela é americana, de Miami. Ela é analista e ela é casada com o John.
+
+Ela mora em Nova York, na avenida das Américas. Ela trabalha na Acme como analista.
+
+Ela vai de metrô para o trabalho.
+
+Ela fala inglês e um pouco de espanhol.
+
+Ela gosta de música e de viajar.
+
+Ela tem um cachorro e uma gata. Ela tem dois irmãos e duas irmãs.
+
+Ela está em Nova York agora. Ela está em casa e ela está contente em falar português.
+```
+
+---
+
 ## Next Steps After Phase 1
 
 After mastering all 5 verbs with explicit "eu", students learn:
