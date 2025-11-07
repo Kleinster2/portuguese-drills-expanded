@@ -197,12 +197,7 @@ Students should be able to produce these statement patterns:
 - **Usage:** Stating where you go (places with article: the gym, the bank, etc.)
 - **Example:** Eu vou ao escritório (I go to the office)
 
-### Pattern 7.3: Eu vou [infinitive verb]
-- **Structure:** Eu vou + verb infinitive
-- **Usage:** Near future - stating what you're going to do
-- **Example:** Eu vou estudar português (I'm going to study Portuguese)
-
-### Pattern 7.4: Eu vou de [transportation] para [place]
+### Pattern 7.3: Eu vou de [transportation] para [place]
 - **Structure:** Eu vou de + means of transportation + para + destination
 - **Preposition:** de (by/with)
 - **Usage:** Stating how you get to places using transportation
@@ -222,9 +217,9 @@ Students should be able to produce these statement patterns:
 4. ✅ **Eu falo** - Languages spoken (2 patterns)
 5. ✅ **Eu gosto** - Preferences and likes (3 patterns)
 6. ✅ **Eu estou** - Current location and temporary states (4 patterns)
-7. ✅ **Eu vou** - Movement, transportation, and near future (4 patterns)
+7. ✅ **Eu vou** - Movement and transportation (3 patterns)
 
-### Total Patterns: 26
+### Total Patterns: 25
 
 ### Complete Self-Introduction After Phase 1:
 
@@ -255,7 +250,6 @@ Eu estou contente em falar português.  (emotion + infinitive)
 
 Eu vou para o Brasil.              (going to place)
 Eu vou ao escritório.              (going to place with article)
-Eu vou estudar português.          (near future)
 Eu vou de metrô para o trabalho.   (transportation)
 ```
 
@@ -303,7 +297,6 @@ Eu estou contente em falar português.
 
 Eu vou para o Brasil.
 Eu vou ao escritório.
-Eu vou estudar português.
 Eu vou de metrô para o trabalho.
 ```
 
@@ -331,7 +324,6 @@ Estou contente em falar português.
 
 Vou para o Brasil.
 Vou ao escritório.
-Vou estudar português.
 Vou de metrô para o trabalho.
 ```
 
@@ -349,7 +341,7 @@ Gosto de música e de viajar.
 
 Estou em Nova York. Estou contente em falar português.
 
-Vou para o Brasil. Vou estudar português.
+Vou para o Brasil.
 ```
 
 - **Add connectors:** e (and), mas (but), também (also), comma for flow
