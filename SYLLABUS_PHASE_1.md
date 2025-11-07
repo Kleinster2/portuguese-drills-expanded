@@ -755,3 +755,259 @@ Ela tem dois irmãos e uma irmã.    (possession/family)
 - Nationalities: americano / americana
 - Professions: analista (same for both) - but many change (professor/professora, médico/médica)
 - Adjectives: contente (same for both) - but many change (alto/alta, cansado/cansada)
+
+---
+
+# Phase 3 Syllabus - We (Nós)
+
+**Goal:** Students can talk about "we" using first person plural (nós).
+
+**Method:** Same verb-by-verb exhaustion as Phase 1 and 2, now with nós conjugations.
+
+**Verb Sequence:**
+1. Nós somos
+2. Nós moramos
+3. Nós trabalhamos
+4. Nós falamos
+5. Nós gostamos
+6. Nós estamos
+7. Nós vamos
+8. Nós temos
+
+---
+
+## Verb 1: Nós somos (to be - permanent/identity)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 1.1: Nós somos os/as [names]
+- **Structure:** Nós somos + plural article + names
+- **Gender:** os (masculine/mixed) / as (feminine)
+- **Usage:** Introducing ourselves by names
+
+### Pattern 1.2: Nós somos [profession plural]
+- **Structure:** Nós somos + profession noun (plural)
+- **Gender agreement:** Profession changes for masculine/feminine plural
+- **Usage:** Stating our profession
+
+### Pattern 1.3: Nós somos [nationality plural]
+- **Structure:** Nós somos + nationality adjective (plural)
+- **Gender agreement:** Nationality changes for masculine/feminine plural
+- **Usage:** Stating our nationality
+
+### Pattern 1.4: Nós somos de [city]
+- **Structure:** Nós somos de + city name
+- **Preposition:** de (from)
+- **Usage:** Stating city of origin
+
+### Pattern 1.5: Nós somos do/da/dos/das [place]
+- **Structure:** Nós somos + de+article + place name
+- **Contractions:** do/da/dos/das
+- **Usage:** Stating country/region of origin (when place has article)
+
+### Pattern 1.6: Nós somos [characteristic plural]
+- **Structure:** Nós somos + adjective (plural)
+- **Gender agreement:** Adjective changes for masculine/feminine plural
+- **Usage:** Stating permanent characteristics
+
+---
+
+## Verb 2: Nós moramos (to live/reside)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 2.1: Nós moramos em [city]
+- **Structure:** Nós moramos em + city name
+- **Preposition:** em (in)
+- **Usage:** Stating where we live (city without article)
+
+### Pattern 2.2: Nós moramos no/na/nos/nas [place]
+- **Structure:** Nós moramos + em+article + place name
+- **Contractions:** no/na/nos/nas
+- **Usage:** Stating where we live (country/place with article)
+
+### Pattern 2.3: Nós moramos na rua [street]
+- **Structure:** Nós moramos na rua + street name
+- **Fixed:** "rua" is feminine, always "na rua"
+- **Usage:** Stating our street
+
+### Pattern 2.4: Nós moramos na avenida [avenue]
+- **Structure:** Nós moramos na avenida + avenue name
+- **Fixed:** "avenida" is feminine, always "na avenida"
+- **Usage:** Stating our avenue
+
+---
+
+## Verb 3: Nós trabalhamos (to work)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 3.1: Nós trabalhamos em [city]
+- **Structure:** Nós trabalhamos em + city name
+- **Preposition:** em (in)
+- **Usage:** Stating city where we work
+
+### Pattern 3.2: Nós trabalhamos no/na [workplace]
+- **Structure:** Nós trabalhamos + em+article + workplace noun
+- **Contractions:** no (masculine) / na (feminine)
+- **Usage:** Stating where we work (specific workplace)
+
+### Pattern 3.3: Nós trabalhamos como [profession plural]
+- **Structure:** Nós trabalhamos como + profession (plural)
+- **Preposition:** como (as)
+- **Usage:** Stating what we work as
+
+---
+
+## Verb 4: Nós falamos (to speak)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 4.1: Nós falamos [language]
+- **Structure:** Nós falamos + language name
+- **No article:** Languages don't take articles
+- **Usage:** Stating languages we speak
+
+### Pattern 4.2: Nós falamos [language] e [language]
+- **Structure:** Nós falamos + language + e + language
+- **Conjunction:** e (and)
+- **Usage:** Stating multiple languages
+
+---
+
+## Verb 5: Nós gostamos (to like)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 5.1: Nós gostamos de [thing]
+- **Structure:** Nós gostamos de + noun (no article)
+- **Fixed preposition:** de (of)
+- **Usage:** Stating things we like (generic/uncountable)
+
+### Pattern 5.2: Nós gostamos do/da/dos/das [thing]
+- **Structure:** Nós gostamos + de+article + specific noun
+- **Contractions:** do/da/dos/das
+- **Usage:** Stating specific things we like
+
+### Pattern 5.3: Nós gostamos de [infinitive]
+- **Structure:** Nós gostamos de + verb infinitive
+- **Fixed preposition:** de
+- **Usage:** Stating activities we like to do
+
+---
+
+## Verb 6: Nós estamos (to be - temporary/location)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 6.1: Nós estamos em [city]
+- **Structure:** Nós estamos em + city name
+- **Preposition:** em (in/at)
+- **Usage:** Stating current location (city)
+
+### Pattern 6.2: Nós estamos no/na [place]
+- **Structure:** Nós estamos + em+article + place name
+- **Contractions:** no (masculine) / na (feminine)
+- **Usage:** Stating current location (place with article)
+
+### Pattern 6.3: Nós estamos [adjective plural]
+- **Structure:** Nós estamos + adjective describing temporary state (plural)
+- **Gender agreement:** Adjective changes for masculine/feminine plural
+- **Usage:** Stating current state or emotion
+
+### Pattern 6.4: Nós estamos [adjective] em [infinitive]
+- **Structure:** Nós estamos + adjective + em + verb infinitive
+- **Preposition:** em (to/in)
+- **Usage:** Expressing emotion about doing something
+- **Example:** Nós estamos contentes em falar português
+
+---
+
+## Verb 7: Nós vamos (to go - transportation)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 7.1: Nós vamos de [transportation] para [place]
+- **Structure:** Nós vamos de + means of transportation + para + destination
+- **Preposition:** de (by/with)
+- **Usage:** Stating how we get to places using transportation
+- **Examples:**
+  - Nós vamos de carro para o trabalho
+  - Nós vamos de ônibus para o escritório
+  - Nós vamos de metrô para casa
+
+---
+
+## Verb 8: Nós temos (to have - possession)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 8.1: Nós temos um/uma [thing/person]
+- **Structure:** Nós temos + um/uma + singular noun
+- **Gender agreement:** um (masculine) / uma (feminine)
+- **Usage:** Stating we have one thing or person
+- **Examples:**
+  - Nós temos um carro
+  - Nós temos uma casa
+
+### Pattern 8.2: Nós temos dois/duas [things/people]
+- **Structure:** Nós temos + dois/duas + plural noun
+- **Gender agreement:** dois (masculine) / duas (feminine)
+- **Usage:** Stating we have two things or people
+- **Examples:**
+  - Nós temos dois carros
+  - Nós temos duas casas
+
+### Pattern 8.3: Nós temos três/quatro [things/people]
+- **Structure:** Nós temos + três/quatro + plural noun
+- **No gender agreement:** três and quatro stay the same
+- **Usage:** Stating we have three or four things or people
+
+---
+
+## Phase 3 Summary
+
+### Verbs Covered:
+1. ✅ **Nós somos** - Identity, profession, origin, characteristics (6 patterns)
+2. ✅ **Nós moramos** - Residence location (4 patterns)
+3. ✅ **Nós trabalhamos** - Work location and occupation (3 patterns)
+4. ✅ **Nós falamos** - Languages spoken (2 patterns)
+5. ✅ **Nós gostamos** - Preferences and likes (3 patterns)
+6. ✅ **Nós estamos** - Current location and temporary states (4 patterns)
+7. ✅ **Nós vamos** - Transportation (1 pattern)
+8. ✅ **Nós temos** - Possession and counting (3 patterns)
+
+### Total Patterns: 26 (same as Phase 1 and 2)
+
+### Complete Description After Phase 3:
+
+Students can confidently talk about "we":
+
+**Example - Nós (We):**
+```
+Nós somos americanos.              (nationality - plural)
+Nós somos de Nova York.            (origin)
+Nós somos analistas.               (profession - plural)
+Nós somos altos.                   (characteristic - plural)
+
+Nós moramos em Nova York.          (city)
+Nós moramos na avenida das Américas.  (avenue)
+
+Nós trabalhamos na XYZ.            (workplace)
+
+Nós vamos de metrô para o trabalho.  (transportation)
+
+Nós falamos inglês e português.    (languages)
+
+Nós gostamos de música e de viajar.  (preferences)
+
+Nós estamos em Nova York agora.    (current location)
+Estamos contentes em falar português.  (temporary state + emotion)
+
+Nós temos dois carros.             (possession)
+```
+
+**Plural Agreement Notes:**
+- Nationalities: americanos (masculine/mixed plural) / americanas (feminine plural)
+- Professions: analistas (same for both genders in plural)
+- Adjectives: altos (masculine/mixed) / altas (feminine), contentes (both genders)
