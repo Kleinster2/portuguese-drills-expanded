@@ -178,27 +178,11 @@ Students should be able to produce these statement patterns:
 
 ---
 
-## Verb 7: Eu vou (to go - movement/future)
+## Verb 7: Eu vou (to go - transportation)
 
 Students should be able to produce these statement patterns:
 
-### Pattern 7.1: Eu vou para [place without article]
-- **Structure:** Eu vou para + place name
-- **Preposition:** para (to/toward)
-- **Usage:** Stating where you go regularly (cities, countries without article)
-- **Example:** Eu vou para Nova York (I go to New York)
-
-### Pattern 7.2: Eu vou ao/à/aos/às [place with article]
-- **Structure:** Eu vou + a+article + place
-- **Contractions:**
-  - a + o = ao (masculine singular)
-  - a + a = à (feminine singular)
-  - a + os = aos (masculine plural)
-  - a + as = às (feminine plural)
-- **Usage:** Stating where you go (places with article: the gym, the bank, etc.)
-- **Example:** Eu vou ao escritório (I go to the office)
-
-### Pattern 7.3: Eu vou de [transportation] para [place]
+### Pattern 7.1: Eu vou de [transportation] para [place]
 - **Structure:** Eu vou de + means of transportation + para + destination
 - **Preposition:** de (by/with)
 - **Usage:** Stating how you get to places using transportation
@@ -249,10 +233,10 @@ Students should be able to produce these statement patterns:
 4. ✅ **Eu falo** - Languages spoken (2 patterns)
 5. ✅ **Eu gosto** - Preferences and likes (3 patterns)
 6. ✅ **Eu estou** - Current location and temporary states (4 patterns)
-7. ✅ **Eu vou** - Movement and transportation (3 patterns)
+7. ✅ **Eu vou** - Transportation (1 pattern)
 8. ✅ **Eu tenho** - Possession and counting (3 patterns)
 
-### Total Patterns: 28
+### Total Patterns: 26
 
 ### Complete Self-Introduction After Phase 1:
 
@@ -265,7 +249,7 @@ Eu sou analista.                   (profession)
 Eu sou alto.                       (characteristic)
 
 Eu moro em Nova York.              (city)
-Eu moro na avenida Broadway.       (avenue)
+Eu moro na avenida das Américas.   (avenue)
 
 Eu trabalho em Nova York.          (work city)
 Eu trabalho na XYZ.                (workplace)
@@ -276,13 +260,11 @@ Eu falo inglês e português.        (languages)
 Eu gosto de música.                (preferences)
 Eu gosto de viajar.                (activities)
 
-Eu estou em Nova York.             (current location)
+Eu estou em Nova York agora.       (current location)
 Eu estou no escritório.            (location with article)
 Eu estou contente.                 (temporary state)
 Eu estou contente em falar português.  (emotion + infinitive)
 
-Eu vou para o Brasil.              (going to place)
-Eu vou ao escritório.              (going to place with article)
 Eu vou de metrô para o trabalho.   (transportation)
 
 Eu tenho dois irmãos.              (counting family - dois with masculine)
@@ -317,7 +299,7 @@ Eu sou de Nova York.
 Eu sou analista.
 
 Eu moro em Nova York.
-Eu moro na avenida Broadway.
+Eu moro na avenida das Américas.
 
 Eu trabalho em Nova York.
 Eu trabalho na XYZ.
@@ -327,12 +309,10 @@ Eu falo inglês e português.
 Eu gosto de música.
 Eu gosto de viajar.
 
-Eu estou em Nova York.
+Eu estou em Nova York agora.
 Eu estou contente.
 Eu estou contente em falar português.
 
-Eu vou para o Brasil.
-Eu vou ao escritório.
 Eu vou de metrô para o trabalho.
 
 Eu tenho dois irmãos.
@@ -347,7 +327,7 @@ Sou de Nova York.
 Sou analista.
 
 Moro em Nova York.
-Moro na avenida Broadway.
+Moro na avenida das Américas.
 
 Trabalho em Nova York.
 Trabalho na XYZ.
@@ -357,12 +337,10 @@ Falo inglês e português.
 Gosto de música.
 Gosto de viajar.
 
-Estou em Nova York.
+Estou em Nova York agora.
 Estou contente.
 Estou contente em falar português.
 
-Vou para o Brasil.
-Vou ao escritório.
 Vou de metrô para o trabalho.
 
 Tenho dois irmãos.
@@ -373,7 +351,7 @@ Tenho uma irmã.
 ```
 Sou o John. Sou americano, de Nova York. Sou analista.
 
-Moro em Nova York, na avenida Broadway. Trabalho na XYZ.
+Moro em Nova York, na avenida das Américas. Trabalho na XYZ.
 
 Vou de metrô para o trabalho.
 
@@ -381,9 +359,7 @@ Falo inglês e português.
 
 Gosto de música e de viajar.
 
-Estou em Nova York. Estou contente em falar português.
-
-Vou para o Brasil.
+Estou em Nova York agora. Estou contente em falar português.
 
 Tenho dois irmãos e uma irmã.
 ```
