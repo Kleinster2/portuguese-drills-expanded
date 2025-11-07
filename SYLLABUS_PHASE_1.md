@@ -587,6 +587,57 @@ Vocês estão em Nova York agora. Vocês estão em casa e vocês estão contente
 
 ---
 
+**ELE - Complete Progression (describing John):**
+
+**Step 1: Full statements**
+```
+Ele é o John.
+Ele é americano.
+Ele é de Miami.
+Ele é analista.
+Ele é casado com a Sarah.
+
+Ele mora em Nova York.
+Ele mora na avenida das Américas.
+
+Ele trabalha em Nova York.
+Ele trabalha na Acme.
+Ele trabalha como analista.
+
+Ele fala inglês e um pouco de espanhol.
+
+Ele gosta de música.
+Ele gosta de viajar.
+
+Ele vai de metrô para o trabalho.
+
+Ele tem um cachorro e uma gata.
+Ele tem dois irmãos e duas irmãs.
+
+Ele está em Nova York agora.
+Ele está em casa.
+Ele está contente em falar português.
+```
+
+**Step 2: Concatenated (natural flow)**
+```
+Ele é o John. Ele é americano, de Miami. Ele é analista e ele é casado com a Sarah.
+
+Ele mora em Nova York, na avenida das Américas. Ele trabalha na Acme como analista.
+
+Ele vai de metrô para o trabalho.
+
+Ele fala inglês e um pouco de espanhol.
+
+Ele gosta de música e de viajar.
+
+Ele tem um cachorro e uma gata. Ele tem dois irmãos e duas irmãs.
+
+Ele está em Nova York agora. Ele está em casa e ele está contente em falar português.
+```
+
+---
+
 ## Next Steps After Phase 1
 
 After mastering all 5 verbs with explicit "eu", students learn:
