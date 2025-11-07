@@ -83,32 +83,24 @@ Students should be able to produce these statement patterns:
 - **Fixed:** "avenida" is feminine, always "na avenida"
 - **Usage:** Stating your avenue
 
-### Pattern 2.5: Eu moro [location adverb]
-- **Structure:** Eu moro + aqui/lá/longe/perto
-- **Usage:** Stating relative location (here/there/far/near)
-
 ---
 
 ## Verb 3: Eu trabalho (to work)
 
 Students should be able to produce these statement patterns:
 
-### Pattern 3.1: Eu trabalho no/na [workplace]
+### Pattern 3.1: Eu trabalho em [city]
+- **Structure:** Eu trabalho em + city name
+- **Preposition:** em (in)
+- **Usage:** Stating city where you work (city without article)
+
+### Pattern 3.2: Eu trabalho no/na [workplace]
 - **Structure:** Eu trabalho + em+article + workplace noun
 - **Contractions:** no (masculine) / na (feminine)
 - **Gender:** Workplace noun determines contraction
-- **Usage:** Stating where you work
+- **Usage:** Stating where you work (specific workplace)
 
-### Pattern 3.2: Eu trabalho em [workplace without article]
-- **Structure:** Eu trabalho em + workplace
-- **Preposition:** em (at/in)
-- **Usage:** When workplace doesn't take article
-
-### Pattern 3.3: Eu trabalho [location adverb]
-- **Structure:** Eu trabalho + aqui/lá
-- **Usage:** Stating relative work location (here/there)
-
-### Pattern 3.4: Eu trabalho como [profession]
+### Pattern 3.3: Eu trabalho como [profession]
 - **Structure:** Eu trabalho como + profession
 - **Preposition:** como (as)
 - **Usage:** Stating what you work as (alternative to "Eu sou [profession]")
@@ -170,12 +162,12 @@ Students should be able to produce these statement patterns:
 
 ### Verbs Covered:
 1. ✅ **Eu sou** - Identity, profession, origin, characteristics (6 patterns)
-2. ✅ **Eu moro** - Residence location (5 patterns)
-3. ✅ **Eu trabalho** - Work location and occupation (4 patterns)
+2. ✅ **Eu moro** - Residence location (4 patterns)
+3. ✅ **Eu trabalho** - Work location and occupation (3 patterns)
 4. ✅ **Eu falo** - Languages spoken (4 patterns)
 5. ✅ **Eu gosto** - Preferences and likes (3 patterns)
 
-### Total Patterns: 22
+### Total Patterns: 20
 
 ### Complete Self-Introduction After Phase 1:
 
@@ -190,6 +182,7 @@ Eu sou alta.                       (characteristic)
 Eu moro em São Paulo.              (city)
 Eu moro na rua Paulista.           (street)
 
+Eu trabalho em São Paulo.          (work city)
 Eu trabalho no hospital.           (workplace)
 Eu trabalho como médica.           (occupation)
 
@@ -201,6 +194,27 @@ Eu gosto de estudar.               (activities)
 
 ---
 
-## Next Phase
+## Next Steps After Phase 1
 
-**Phase 2:** After exhausting "eu", introduce **ele/ela** (he/she) to describe others.
+After mastering all 5 verbs with explicit "eu", students learn:
+
+### Step 1: Drop "eu" (Implicit Subjects)
+- **Teach:** Portuguese allows dropping subject pronouns when context is clear
+- **Practice:** Converting explicit to implicit
+  - "Eu sou a Maria" → "Sou a Maria"
+  - "Eu moro em São Paulo" → "Moro em São Paulo"
+  - "Eu trabalho no hospital" → "Trabalho no hospital"
+- **Rationale:** Students understand conjugation first, then learn natural spoken Portuguese
+
+### Step 2: Concatenate Introduction
+- **Teach:** Combining statements into flowing self-introduction
+- **Practice:** Putting it all together
+  - "Sou a Maria. Sou brasileira. Moro em São Paulo. Trabalho no hospital. Falo português e inglês. Gosto de música."
+- **Add connectors:** e (and), mas (but), também (also)
+- **Rationale:** Move from isolated statements to natural discourse
+
+### Step 3: Introduce ele/ela
+- **After:** Students master complete self-introduction (explicit + implicit + concatenated)
+- **Then:** Introduce **ele/ela** (he/she) to describe others
+- **Method:** Same verb-by-verb exhaustion with ele/ela
+- **Rationale:** Can now describe others' introductions
