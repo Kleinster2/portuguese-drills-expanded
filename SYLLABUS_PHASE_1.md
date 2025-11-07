@@ -247,95 +247,95 @@ Students can confidently introduce themselves:
 **Step 1: With "eu" (explicit)**
 ```
 Eu sou o John.
-Eu sou americano.
-Eu sou de [dji] Miami.
+Eu sou americano[u].
+Eu sou de[dji] Miami.
 Eu sou analista.
-Eu sou casado com a Sarah.
+Eu sou casado[u] com a Sarah.
 
-Eu moro em Nova York.
-Eu moro na avenida das Américas.
+Eu moro[u] em Nova York.
+Eu moro[u] na avenida das Américas.
 
-Eu trabalho em Nova York.
-Eu trabalho na Acme.
-Eu trabalho como analista.
+Eu trabalho[u] em Nova York.
+Eu trabalho[u] na Acme.
+Eu trabalho[u] como[u] analista.
 
-Eu falo inglês e um pouco [pocu] de [dji] espanhol.
+Eu falo[u] inglês e um pouco[u] de[dji] espanhol.
 
-Eu gosto de [dji] música.
-Eu gosto de [dji] viajar.
+Eu gosto[u] de[dji] música.
+Eu gosto[u] de[dji] viajar.
 
-Eu vou de [dji] metrô para o trabalho.
+Eu vou de[dji] metrô para o trabalho[u].
 
-Eu tenho [tenhu] um cachorro e uma gata.
-Eu tenho [tenhu] dois irmãos e duas irmãs.
+Eu tenho[u] um cachorro[u] e uma gata.
+Eu tenho[u] dois irmãos e duas irmãs.
 
 Eu estou em Nova York agora.
 Eu estou em casa.
-Eu estou contente [conten-tchi] em falar português.
+Eu estou contente[tchi] em falar português.
 ```
 
 **Step 2: Without "eu" (implicit)**
 ```
 Sou o John.
-Sou americano.
-Sou de [dji] Miami.
+Sou americano[u].
+Sou de[dji] Miami.
 Sou analista.
-Sou casado com a Sarah.
+Sou casado[u] com a Sarah.
 
-Moro em Nova York.
-Moro na avenida das Américas.
+Moro[u] em Nova York.
+Moro[u] na avenida das Américas.
 
-Trabalho em Nova York.
-Trabalho na Acme.
-Trabalho como analista.
+Trabalho[u] em Nova York.
+Trabalho[u] na Acme.
+Trabalho[u] como[u] analista.
 
-Falo inglês e um pouco [pocu] de [dji] espanhol.
+Falo[u] inglês e um pouco[u] de[dji] espanhol.
 
-Gosto de [dji] música.
-Gosto de [dji] viajar.
+Gosto[u] de[dji] música.
+Gosto[u] de[dji] viajar.
 
-Vou de [dji] metrô para o trabalho.
+Vou de[dji] metrô para o trabalho[u].
 
-Tenho [tenhu] um cachorro e uma gata.
-Tenho [tenhu] dois irmãos e duas irmãs.
+Tenho[u] um cachorro[u] e uma gata.
+Tenho[u] dois irmãos e duas irmãs.
 
 Estou em Nova York agora.
 Estou em casa.
-Estou contente [conten-tchi] em falar português.
+Estou contente[tchi] em falar português.
 ```
 
 **Step 3: Concatenated (natural flow)**
 ```
-Sou o John. Sou americano, de [dji] Miami. Sou analista e sou casado com a Sarah.
+Sou o John. Sou americano[u], de[dji] Miami. Sou analista e sou casado[u] com a Sarah.
 
-Moro em Nova York, na avenida das Américas. Trabalho na Acme como analista.
+Moro[u] em Nova York, na avenida das Américas. Trabalho[u] na Acme como[u] analista.
 
-Vou de [dji] metrô para o trabalho.
+Vou de[dji] metrô para o trabalho[u].
 
-Falo inglês e um pouco [pocu] de [dji] espanhol.
+Falo[u] inglês e um pouco[u] de[dji] espanhol.
 
-Gosto de [dji] música e de [dji] viajar.
+Gosto[u] de[dji] música e de[dji] viajar.
 
-Tenho [tenhu] um cachorro e uma gata. Tenho [tenhu] dois irmãos e duas irmãs.
+Tenho[u] um cachorro[u] e uma gata. Tenho[u] dois irmãos e duas irmãs.
 
-Estou em Nova York agora. Estou em casa e estou contente [conten-tchi] em falar português.
+Estou em Nova York agora. Estou em casa e estou contente[tchi] em falar português.
 ```
 
 **Step 4: Dropping/Elision (rule-based)**
 ```
-Sô o John. Sô americano, de [dji] Miami. Sô analista e sô casado com a Sarah.
+Sô o John. Sô americano[u], de[dji] Miami. Sô analista e sô casado[u] com a Sarah.
 
-Moro em Nova York, na avenida das Américas. Trabalho na Acme como analista.
+Moro[u] em Nova York, na avenida das Américas. Trabalho[u] na Acme como[u] analista.
 
-Vou de [dji] metrô pro trabalho.
+Vou de[dji] metrô pro trabalho[u].
 
-Falo inglês e um pouco [pocu] de [dji] espanhol.
+Falo[u] inglês e um pouco[u] de[dji] espanhol.
 
-Gosto de [dji] música e de [dji] viajá.
+Gosto[u] de[dji] música e de[dji] viajá.
 
-Tenho [tenhu] um cachorro e uma gata. Tenho [tenhu] dois irmãos e duas irmãs.
+Tenho[u] um cachorro[u] e uma gata. Tenho[u] dois irmãos e duas irmãs.
 
-Tô em Nova York agora. Tô em casa e tô contente [conten-tchi] em falá português.
+Tô em Nova York agora. Tô em casa e tô contente[tchi] em falá português.
 ```
 
 **Step 5: Full Colloquial Speech (all phonetic processes)**
@@ -363,94 +363,94 @@ Tô em Nova York agora. Tô em casa e tô contente em falá português.
 ```
 Eu sou a Sarah.
 Eu sou americana também.
-Eu também sou de [dji] Miami.
+Eu também sou de[dji] Miami.
 Eu sou analista também.
 Eu sou casada com o John.
 
-Eu moro em Nova York também.
-Eu moro na avenida das Américas.
+Eu moro[u] em Nova York também.
+Eu moro[u] na avenida das Américas.
 
-Eu trabalho em Nova York também.
-Eu também trabalho na Acme.
-Eu trabalho como analista.
+Eu trabalho[u] em Nova York também.
+Eu também trabalho[u] na Acme.
+Eu trabalho[u] como[u] analista.
 
-Eu falo inglês e um pouco [pocu] de [dji] espanhol também.
+Eu falo[u] inglês e um pouco[u] de[dji] espanhol também.
 
-Eu gosto de [dji] música também.
-Eu gosto de [dji] viajar.
+Eu gosto[u] de[dji] música também.
+Eu gosto[u] de[dji] viajar.
 
-Eu vou de [dji] metrô para o trabalho também.
+Eu vou de[dji] metrô para o trabalho[u] também.
 
-Eu tenho [tenhu] um cachorro e uma gata.
-Eu tenho [tenhu] dois irmãos e duas irmãs também.
+Eu tenho[u] um cachorro[u] e uma gata.
+Eu tenho[u] dois irmãos e duas irmãs também.
 
 Eu estou em Nova York agora também.
 Eu também estou em casa.
-Eu estou contente [conten-tchi] em falar português.
+Eu estou contente[tchi] em falar português.
 ```
 
 **Step 2: Without "eu" (implicit)**
 ```
 Sou a Sarah.
 Sou americana também.
-Também sou de [dji] Miami.
+Também sou de[dji] Miami.
 Sou analista também.
 Sou casada com o John.
 
-Moro em Nova York também.
-Moro na avenida das Américas.
+Moro[u] em Nova York também.
+Moro[u] na avenida das Américas.
 
-Trabalho em Nova York também.
-Também trabalho na Acme.
-Trabalho como analista.
+Trabalho[u] em Nova York também.
+Também trabalho[u] na Acme.
+Trabalho[u] como[u] analista.
 
-Falo inglês e um pouco [pocu] de [dji] espanhol também.
+Falo[u] inglês e um pouco[u] de[dji] espanhol também.
 
-Gosto de [dji] música também.
-Gosto de [dji] viajar.
+Gosto[u] de[dji] música também.
+Gosto[u] de[dji] viajar.
 
-Vou de [dji] metrô para o trabalho também.
+Vou de[dji] metrô para o trabalho[u] também.
 
-Tenho [tenhu] um cachorro e uma gata.
-Tenho [tenhu] dois irmãos e duas irmãs também.
+Tenho[u] um cachorro[u] e uma gata.
+Tenho[u] dois irmãos e duas irmãs também.
 
 Estou em Nova York agora também.
 Também estou em casa.
-Estou contente [conten-tchi] em falar português.
+Estou contente[tchi] em falar português.
 ```
 
 **Step 3: Concatenated (natural flow)**
 ```
-Sou a Sarah. Sou americana também, de [dji] Miami. Também sou analista e sou casada com o John.
+Sou a Sarah. Sou americana também, de[dji] Miami. Também sou analista e sou casada com o John.
 
-Moro em Nova York também, na avenida das Américas. Também trabalho na Acme como analista.
+Moro[u] em Nova York também, na avenida das Américas. Também trabalho[u] na Acme como[u] analista.
 
-Vou de [dji] metrô para o trabalho também.
+Vou de[dji] metrô para o trabalho[u] também.
 
-Falo inglês e um pouco [pocu] de [dji] espanhol também.
+Falo[u] inglês e um pouco[u] de[dji] espanhol também.
 
-Gosto de [dji] música também e de [dji] viajar.
+Gosto[u] de[dji] música também e de[dji] viajar.
 
-Tenho [tenhu] um cachorro e uma gata. Tenho [tenhu] dois irmãos e duas irmãs também.
+Tenho[u] um cachorro[u] e uma gata. Tenho[u] dois irmãos e duas irmãs também.
 
-Estou em Nova York agora também. Também estou em casa e estou contente [conten-tchi] em falar português.
+Estou em Nova York agora também. Também estou em casa e estou contente[tchi] em falar português.
 ```
 
 **Step 4: Dropping/Elision (rule-based)**
 ```
-Sô a Sarah. Sô americana também, de [dji] Miami. Também sô analista e sô casada com o John.
+Sô a Sarah. Sô americana também, de[dji] Miami. Também sô analista e sô casada com o John.
 
-Moro em Nova York também, na avenida das Américas. Também trabalho na Acme como analista.
+Moro[u] em Nova York também, na avenida das Américas. Também trabalho[u] na Acme como[u] analista.
 
-Vou de [dji] metrô pro trabalho também.
+Vou de[dji] metrô pro trabalho[u] também.
 
-Falo inglês e um pouco [pocu] de [dji] espanhol também.
+Falo[u] inglês e um pouco[u] de[dji] espanhol também.
 
-Gosto de [dji] música também e de [dji] viajá.
+Gosto[u] de[dji] música também e de[dji] viajá.
 
-Tenho [tenhu] um cachorro e uma gata. Tenho [tenhu] dois irmãos e duas irmãs também.
+Tenho[u] um cachorro[u] e uma gata. Tenho[u] dois irmãos e duas irmãs também.
 
-Tô em Nova York agora também. Também tô em casa e tô contente [conten-tchi] em falá português.
+Tô em Nova York agora também. Também tô em casa e tô contente[tchi] em falá português.
 ```
 
 **Step 5: Full Colloquial Speech (all phonetic processes)**
@@ -477,97 +477,97 @@ Tô em Nova York agora também. Também tô em casa e tô contente em falá port
 **Step 1: With "eu" (explicit)**
 ```
 Eu sou o Carlos.
-Eu sou brasileiro.
-Eu sou de [dji] São Paulo.
+Eu sou brasileiro[u].
+Eu sou de[dji] São Paulo[u].
 Eu sou analista.
-Eu sou solteiro.
+Eu sou solteiro[u].
 Eu sou colega do John e da Sarah.
 
-Eu moro em Nova York.
-Eu moro no Brooklyn.
+Eu moro[u] em Nova York.
+Eu moro[u] no Brooklyn.
 
-Eu trabalho em Nova York.
-Eu trabalho na Acme.
-Eu trabalho como analista.
+Eu trabalho[u] em Nova York.
+Eu trabalho[u] na Acme.
+Eu trabalho[u] como[u] analista.
 
-Eu falo português e inglês.
+Eu falo[u] português e inglês.
 
-Eu gosto de [dji] futebol.
-Eu gosto de [dji] café.
+Eu gosto[u] de[dji] futebol.
+Eu gosto[u] de[dji] café.
 
-Eu vou de [djô]nibus para o escritório.
+Eu vou de[djô]nibus para o escritório[u].
 
-Eu tenho [tenhu] um gato.
-Eu tenho [tenhu] uma irmã.
+Eu tenho[u] um gato[u].
+Eu tenho[u] uma irmã.
 
 Eu estou em Nova York agora.
-Eu estou no escritório.
-Eu estou contente [conten-tchi] em falar português com eles.
+Eu estou no escritório[u].
+Eu estou contente[tchi] em falar português com eles.
 ```
 
 **Step 2: Without "eu" (implicit)**
 ```
 Sou o Carlos.
-Sou brasileiro.
-Sou de [dji] São Paulo.
+Sou brasileiro[u].
+Sou de[dji] São Paulo[u].
 Sou analista.
-Sou solteiro.
+Sou solteiro[u].
 Sou colega do John e da Sarah.
 
-Moro em Nova York.
-Moro no Brooklyn.
+Moro[u] em Nova York.
+Moro[u] no Brooklyn.
 
-Trabalho em Nova York.
-Trabalho na Acme.
-Trabalho como analista.
+Trabalho[u] em Nova York.
+Trabalho[u] na Acme.
+Trabalho[u] como[u] analista.
 
-Falo português e inglês.
+Falo[u] português e inglês.
 
-Gosto de [dji] futebol.
-Gosto de [dji] café.
+Gosto[u] de[dji] futebol.
+Gosto[u] de[dji] café.
 
-Vou de [djô]nibus para o escritório.
+Vou de[djô]nibus para o escritório[u].
 
-Tenho [tenhu] um gato.
-Tenho [tenhu] uma irmã.
+Tenho[u] um gato[u].
+Tenho[u] uma irmã.
 
 Estou em Nova York agora.
-Estou no escritório.
-Estou contente [conten-tchi] em falar português com eles.
+Estou no escritório[u].
+Estou contente[tchi] em falar português com eles.
 ```
 
 **Step 3: Concatenated (natural flow)**
 ```
-Sou o Carlos. Sou brasileiro, de [dji] São Paulo. Sou analista e sou solteiro. Sou colega do John e da Sarah.
+Sou o Carlos. Sou brasileiro[u], de[dji] São Paulo[u]. Sou analista e sou solteiro[u]. Sou colega do John e da Sarah.
 
-Moro em Nova York, no Brooklyn. Trabalho na Acme como analista.
+Moro[u] em Nova York, no Brooklyn. Trabalho[u] na Acme como[u] analista.
 
-Vou de [djô]nibus para o escritório.
+Vou de[djô]nibus para o escritório[u].
 
-Falo português e inglês.
+Falo[u] português e inglês.
 
-Gosto de [dji] futebol e de [dji] café.
+Gosto[u] de[dji] futebol e de[dji] café.
 
-Tenho [tenhu] um gato. Tenho [tenhu] uma irmã.
+Tenho[u] um gato[u]. Tenho[u] uma irmã.
 
-Estou em Nova York agora. Estou no escritório e estou contente [conten-tchi] em falar português com eles.
+Estou em Nova York agora. Estou no escritório[u] e estou contente[tchi] em falar português com eles.
 ```
 
 **Step 4: Dropping/Elision (rule-based)**
 ```
-Sô o Carlos. Sô brasileiro, de [dji] São Paulo. Sô analista e sô solteiro. Sô colega do John e da Sarah.
+Sô o Carlos. Sô brasileiro[u], de[dji] São Paulo[u]. Sô analista e sô solteiro[u]. Sô colega do John e da Sarah.
 
-Moro em Nova York, no Brooklyn. Trabalho na Acme como analista.
+Moro[u] em Nova York, no Brooklyn. Trabalho[u] na Acme como[u] analista.
 
-Vou de [djô]nibus pro escritório.
+Vou de[djô]nibus pro escritório[u].
 
-Falo português e inglês.
+Falo[u] português e inglês.
 
-Gosto de [dji] futebol e de [dji] café.
+Gosto[u] de[dji] futebol e de[dji] café.
 
-Tenho [tenhu] um gato. Tenho [tenhu] uma irmã.
+Tenho[u] um gato[u]. Tenho[u] uma irmã.
 
-Tô em Nova York agora. Tô no escritório e tô contente [conten-tchi] em falá português com eles.
+Tô em Nova York agora. Tô no escritório[u] e tô contente[tchi] em falá português com eles.
 ```
 
 **Step 5: Full Colloquial Speech (all phonetic processes)**
