@@ -15,17 +15,20 @@ The syllabus separates two fundamentally different types of phonetic changes:
 | **PRONUNCIATION** | Always (all registers) | [brackets] in Steps 1-4 | de [dji] Miami |
 | **REDUCTION** | Optional (colloquial only) | No brackets, different spelling | sou → sô |
 
-### **Steps 1-4: Standard Orthography + [Bracketed] Pronunciation**
+### **Steps 1-4: Standard Orthography + [Compact] Pronunciation Notation**
 
-Write words as they appear in standard Portuguese, but annotate when pronunciation differs:
+Write words as they appear in standard Portuguese, but use **compact notation** to show pronunciation:
 
 ```
-Eu sou de [dji] Miami.          ← [dji] shows pronunciation
-Eu tenho [tenhu] um gato.        ← [tenhu] shows pronunciation
-Eu gosto de [dji] música.        ← [dji] shows pronunciation
+Eu sou de[dji] Miami.           ← [dji] shows only the sound change
+Eu tenho[u] um gato[u].          ← [u] shows final o→u change
+Eu gosto[u] de[dji] música.      ← Multiple annotations in one sentence
+Eu estou contente[tchi].         ← [tchi] shows te→tchi change
 ```
 
-**What the brackets mean**: "This word is written one way but ALWAYS pronounced differently."
+**Compact notation format**: `word[sound]` - only the changed sound appears in brackets, not the whole word.
+
+**What the brackets mean**: "This part of the word is pronounced differently than written."
 
 ### **Step 5: Phonetic Orthography (Brackets Removed)**
 
@@ -39,16 +42,22 @@ Gostchi dji música.              ← "gostchi dji" written directly
 
 **No brackets needed**: The spelling represents the pronunciation.
 
-### **What Gets Annotated**
+### **What Gets Annotated (Using Compact Notation)**
+
+✅ **Final unstressed o→u** (obligatory, ALL instances):
+- americano[u], brasileiro[u], casado[u], solteiro[u]
+- moro[u], trabalho[u], falo[u], gosto[u], tenho[u]
+- cachorro[u], gato[u], pouco[u], escritório[u]
+- como[u], São Paulo[u]
 
 ✅ **Palatalization** (obligatory in Brazilian Portuguese):
-- `de` + /i/ sound → `[dji]`: de [dji] Miami, de [dji] música
-- `te` + /i/ sound → `[tchi]`: contente [conten-tchi]
-- Coalescence: de [djô]nibus (Carlos)
+- `de` + /i/ sound → `de[dji]`: de[dji] Miami, de[dji] música, de[dji] espanhol
+- `te` + /i/ sound → `[tchi]`: contente[tchi]
+- Coalescence: de[djô]nibus (Carlos)
 
-✅ **Vowel quality changes** (obligatory in certain positions):
-- `tenho` → `[tenhu]` (final /o/ → /u/)
-- `pouco` → `[pocu]` (unstressed /o/ → /u/)
+✅ **Final unstressed e→i** (when applicable):
+- nome[i], fome[i] (examples for future use)
+- Plural: nomes[is] (future use)
 
 ❌ **NOT annotated** (per pedagogical decision):
 - Sibilant sounds (s → sh)
@@ -59,7 +68,10 @@ Gostchi dji música.              ← "gostchi dji" written directly
 1. **Linguistic accuracy**: Separates obligatory phonetics from optional reductions
 2. **Prevents fossilization**: Students learn correct pronunciation from Step 1
 3. **Clear progression**: Standard writing → Phonetic representation
-4. **Transparent**: [brackets] explicitly show "this sounds different than written"
+4. **Compact & readable**: word[sound] format doesn't clutter text
+5. **Systematic coverage**: Annotating ALL instances makes patterns visible
+6. **Pattern recognition**: Students see that o→u is obligatory everywhere
+7. **Transparent**: [brackets] explicitly show "this part sounds different"
 
 ---
 
