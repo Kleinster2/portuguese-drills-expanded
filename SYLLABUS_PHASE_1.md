@@ -485,6 +485,87 @@ Estamos em Nova York agora. Estamos em casa e estamos contentes em falar portugu
 
 ---
 
+**VOCÊ - Complete Progression (addressing Sarah):**
+
+**Step 1: With "você" (explicit)**
+```
+Você é a Sarah.
+Você é americana.
+Você é de Miami.
+Você é analista.
+Você é casada com o John.
+
+Você mora em Nova York.
+Você mora na avenida das Américas.
+
+Você trabalha em Nova York.
+Você trabalha na Acme.
+Você trabalha como analista.
+
+Você fala inglês e um pouco de espanhol.
+
+Você gosta de música.
+Você gosta de viajar.
+
+Você vai de metrô para o trabalho.
+
+Você tem um cachorro e uma gata.
+Você tem dois irmãos e duas irmãs.
+
+Você está em Nova York agora.
+Você está em casa.
+Você está contente em falar português.
+```
+
+**Step 2: Without "você" (implicit)**
+```
+É a Sarah.
+É americana.
+É de Miami.
+É analista.
+É casada com o John.
+
+Mora em Nova York.
+Mora na avenida das Américas.
+
+Trabalha em Nova York.
+Trabalha na Acme.
+Trabalha como analista.
+
+Fala inglês e um pouco de espanhol.
+
+Gosta de música.
+Gosta de viajar.
+
+Vai de metrô para o trabalho.
+
+Tem um cachorro e uma gata.
+Tem dois irmãos e duas irmãs.
+
+Está em Nova York agora.
+Está em casa.
+Está contente em falar português.
+```
+
+**Step 3: Concatenated (natural flow)**
+```
+É a Sarah. É americana, de Miami. É analista e é casada com o John.
+
+Mora em Nova York, na avenida das Américas. Trabalha na Acme como analista.
+
+Vai de metrô para o trabalho.
+
+Fala inglês e um pouco de espanhol.
+
+Gosta de música e de viajar.
+
+Tem um cachorro e uma gata. Tem dois irmãos e duas irmãs.
+
+Está em Nova York agora. Está em casa e está contente em falar português.
+```
+
+---
+
 ## Next Steps After Phase 1
 
 After mastering all 5 verbs with explicit "eu", students learn:
