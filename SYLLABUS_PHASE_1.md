@@ -1086,6 +1086,48 @@ Está contente em falar português.
 Você tem dois irmãos e uma irmã.
 ```
 
+**Maria introduces herself (Phase 1 - Eu):**
+```
+Eu sou a Maria.
+Eu sou americana, de Nova York.
+Eu sou analista.
+
+Eu moro em Nova York, na avenida das Américas.
+Eu trabalho na XYZ.
+
+Eu vou de metrô para o trabalho.
+
+Eu falo inglês e português.
+
+Eu gosto de música e de viajar.
+
+Eu estou em Nova York agora.
+Estou contente em falar português.
+
+Eu tenho dois irmãos e uma irmã.
+```
+
+**Someone reads back her introduction (Phase 3 - Você):**
+```
+Você é a Maria.
+Você é americana, de Nova York.
+Você é analista.
+
+Você mora em Nova York, na avenida das Américas.
+Você trabalha na XYZ.
+
+Você vai de metrô para o trabalho.
+
+Você fala inglês e português.
+
+Você gosta de música e de viajar.
+
+Você está em Nova York agora.
+Está contente em falar português.
+
+Você tem dois irmãos e uma irmã.
+```
+
 **Pattern:**
 - **Eu sou** → **Você é**
 - **Eu moro** → **Você mora**
@@ -1096,7 +1138,7 @@ Você tem dois irmãos e uma irmã.
 - **Eu estou** → **Você está**
 - **Eu tenho** → **Você tem**
 
-This pattern reinforces that the same information can be stated from two perspectives: "I am" (eu sou) becomes "You are" (você é). John says it about himself, someone else repeats it back to him.
+This pattern reinforces that the same information can be stated from two perspectives: "I am" (eu sou) becomes "You are" (você é). The person says it about themselves, someone else repeats it back to them using "você".
 
 ---
 
