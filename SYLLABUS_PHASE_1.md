@@ -12,6 +12,7 @@
 5. Eu gosto
 6. Eu estou
 7. Eu vou
+8. Eu tenho
 
 **After Phase 1:** Introduce ele/ela (describing others)
 
@@ -208,6 +209,37 @@ Students should be able to produce these statement patterns:
 
 ---
 
+## Verb 8: Eu tenho (to have - possession)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 8.1: Eu tenho um/uma [thing/person]
+- **Structure:** Eu tenho + um/uma + singular noun
+- **Gender agreement:** um (masculine) / uma (feminine)
+- **Usage:** Stating you have one thing or person
+- **Examples:**
+  - Eu tenho um irmão (I have one brother - masculine)
+  - Eu tenho uma irmã (I have one sister - feminine)
+  - Eu tenho um carro (I have a car)
+
+### Pattern 8.2: Eu tenho dois/duas [things/people]
+- **Structure:** Eu tenho + dois/duas + plural noun
+- **Gender agreement:** dois (masculine) / duas (feminine)
+- **Usage:** Stating you have two things or people
+- **Examples:**
+  - Eu tenho dois irmãos (I have two brothers)
+  - Eu tenho duas irmãs (I have two sisters)
+
+### Pattern 8.3: Eu tenho três/quatro [things/people]
+- **Structure:** Eu tenho + três/quatro + plural noun
+- **No gender agreement:** três and quatro stay the same for both genders
+- **Usage:** Stating you have three or four things or people
+- **Examples:**
+  - Eu tenho três irmãos (I have three brothers/siblings)
+  - Eu tenho quatro irmãs (I have four sisters)
+
+---
+
 ## Summary
 
 ### Verbs Covered:
@@ -218,8 +250,9 @@ Students should be able to produce these statement patterns:
 5. ✅ **Eu gosto** - Preferences and likes (3 patterns)
 6. ✅ **Eu estou** - Current location and temporary states (4 patterns)
 7. ✅ **Eu vou** - Movement and transportation (3 patterns)
+8. ✅ **Eu tenho** - Possession and counting (3 patterns)
 
-### Total Patterns: 25
+### Total Patterns: 28
 
 ### Complete Self-Introduction After Phase 1:
 
@@ -251,6 +284,9 @@ Eu estou contente em falar português.  (emotion + infinitive)
 Eu vou para o Brasil.              (going to place)
 Eu vou ao escritório.              (going to place with article)
 Eu vou de metrô para o trabalho.   (transportation)
+
+Eu tenho dois irmãos.              (counting family - dois with masculine)
+Eu tenho uma irmã.                 (counting family - uma with feminine)
 ```
 
 ---
@@ -298,6 +334,9 @@ Eu estou contente em falar português.
 Eu vou para o Brasil.
 Eu vou ao escritório.
 Eu vou de metrô para o trabalho.
+
+Eu tenho dois irmãos.
+Eu tenho uma irmã.
 ```
 
 **Step 1 (Implicit subjects):**
@@ -325,6 +364,9 @@ Estou contente em falar português.
 Vou para o Brasil.
 Vou ao escritório.
 Vou de metrô para o trabalho.
+
+Tenho dois irmãos.
+Tenho uma irmã.
 ```
 
 **Step 2 (Concatenated - natural introduction):**
@@ -342,6 +384,8 @@ Gosto de música e de viajar.
 Estou em Nova York. Estou contente em falar português.
 
 Vou para o Brasil.
+
+Tenho dois irmãos e uma irmã.
 ```
 
 - **Add connectors:** e (and), mas (but), também (also), comma for flow
