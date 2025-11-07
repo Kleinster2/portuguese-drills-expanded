@@ -689,6 +689,57 @@ Ela está em Nova York agora. Ela está em casa e ela está contente em falar po
 
 ---
 
+**A GENTE - Complete Progression (we - informal):**
+
+**Step 1: Full statements**
+```
+A gente é o John e a Sarah.
+A gente é americano.
+A gente é de Miami.
+A gente é analista.
+A gente é casado.
+
+A gente mora em Nova York.
+A gente mora na avenida das Américas.
+
+A gente trabalha em Nova York.
+A gente trabalha na Acme.
+A gente trabalha como analista.
+
+A gente fala inglês e um pouco de espanhol.
+
+A gente gosta de música.
+A gente gosta de viajar.
+
+A gente vai de metrô para o trabalho.
+
+A gente tem um cachorro e uma gata.
+A gente tem dois irmãos e duas irmãs cada.
+
+A gente está em Nova York agora.
+A gente está em casa.
+A gente está contente em falar português.
+```
+
+**Step 2: Concatenated (natural flow)**
+```
+A gente é o John e a Sarah. A gente é americano, de Miami. A gente é analista e a gente é casado.
+
+A gente mora em Nova York, na avenida das Américas. A gente trabalha na Acme como analista.
+
+A gente vai de metrô para o trabalho.
+
+A gente fala inglês e um pouco de espanhol.
+
+A gente gosta de música e de viajar.
+
+A gente tem um cachorro e uma gata. A gente tem dois irmãos e duas irmãs cada.
+
+A gente está em Nova York agora. A gente está em casa e a gente está contente em falar português.
+```
+
+---
+
 **ELES - Complete Progression (describing John & Sarah):**
 
 **Step 1: Full statements**
