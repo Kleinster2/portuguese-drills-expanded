@@ -84,6 +84,23 @@
 - **gosto de** (I like)
 - **trabalho como** (I work as)
 
+### Step 4: Dropping/Elision (rule-based)
+- **sou** → **sô** (vowel reduction)
+- **estou** → **tô** (vowel reduction)
+- **para o** → **pro** (preposition+article contraction)
+- **vou** → **vou** (no change, but prepares for Step 5)
+- Infinitive -r dropping: **falar** → **falá**, **viajar** → **viajá**
+
+### Step 5: Full Colloquial Speech (all phonetic processes)
+- **vou** → **vô** (diphthong reduction)
+- **tenho** → **tenhu** (nasal vowel + /o/ → /u/)
+- **de + word starting with /i/** → **dji**:
+  - **de Miami** → **dji Miami**
+  - **de espanhol** → **djispanhol**
+- **gosto de** → **gostchi** + **de** → **dji** (palatalization + coalescence)
+- **um pouco de** → **um pocu dji** (/o/ reduction, palatalization)
+- Article elision: **sou o John** → **sô John**
+
 ---
 
 ## 2. SARAH - eu + também (First Person Singular with Variation)
@@ -102,12 +119,21 @@
 - Shows "também" can appear at beginning OR end of sentence
 - Natural variation in Portuguese word order
 
-### NEW Step 4: Phonetic Reduction
+### Step 4: Dropping/Elision (rule-based)
+Same reductions as JOHN:
 - **sou** → **sô**
 - **estou** → **tô**
 - **para o** → **pro**
-- **viajar** → **viajá** (infinitive -r dropped)
-- **falar** → **falá** (infinitive -r dropped)
+- Infinitive -r dropping: **falar** → **falá**, **viajar** → **viajá**
+
+### Step 5: Full Colloquial Speech (all phonetic processes)
+Same phonetic processes as JOHN, with "também" variations:
+- **vou** → **vô**
+- **tenho** → **tenhu**
+- **de + /i/** → **dji** (de Miami → dji Miami, de espanhol → djispanhol)
+- **gosto de** → **gostchi dji**
+- **um pouco de** → **um pocu dji**
+- Article elision: **sou a Sarah** → **sô Sarah**
 
 ---
 
@@ -142,8 +168,21 @@
 - **Vou de ônibus** (I go by bus) - contrasts with John/Sarah's "vou de metrô"
 - **para o escritório** (to the office) - introduces "escritório" vs "trabalho"
 
-### NEW Step 4: Phonetic Reduction
-Same reductions as JOHN and SARAH
+### Step 4: Dropping/Elision (rule-based)
+Same reductions as JOHN and SARAH:
+- **sou** → **sô**
+- **estou** → **tô**
+- **para o** → **pro** (para o escritório → pro escritório)
+- Infinitive -r dropping: **falar** → **falá**
+
+### Step 5: Full Colloquial Speech (all phonetic processes)
+Same phonetic processes as JOHN and SARAH, with Carlos-specific vocabulary:
+- **vou** → **vô**
+- **tenho** → **tenhu**
+- **de ônibus** → **djônibus** (coalescence /de/ + /o/ → /djo/)
+- **gosto de** → **gostchi** + **de** → **dji**
+- **de São Paulo** → **dji São Paulo**
+- Article elision: **sou o Carlos** → **sô Carlos**
 
 ### Teaching Point
 - Third character creates trio dynamics
@@ -391,9 +430,9 @@ Same reductions as JOHN and SARAH
 
 ## Pedagogical Progression
 
-1. **JOHN**: Full foundation - all basic elements + phonetic reduction (Step 4)
-2. **SARAH**: Adds "também" variation (beginning/end positions) + phonetic reduction
-3. **CARLOS**: Brazilian colleague, introduces new nationality/context + phonetic reduction
+1. **JOHN**: Full foundation - all basic elements + phonetic reduction (Steps 4-5)
+2. **SARAH**: Adds "também" variation (beginning/end positions) + phonetic reduction (Steps 4-5)
+3. **CARLOS**: Brazilian colleague, introduces new nationality/context + phonetic reduction (Steps 4-5)
 4. **A GENTE**: Introduces singular conjugation for plural meaning
 5. **VOCÊ**: Reuses ele/ela conjugations in new context (addressing)
 6. **VOCÊS**: First plural conjugations
@@ -402,11 +441,20 @@ Same reductions as JOHN and SARAH
 9. **NÓS**: First person plural, can drop pronoun
 10. **ELES**: Third person plural (describing others)
 
-**Step 4: Phonetic Reduction (Colloquial Speech)**
+**Step 4: Dropping/Elision (Rule-Based Reductions)**
 - Introduced in JOHN, SARAH, and CARLOS progressions
-- **sou** → **sô**, **estou** → **tô**
-- **para o** → **pro**
+- **sou** → **sô**, **estou** → **tô** (vowel reduction)
+- **para o** → **pro** (preposition+article contraction)
 - Infinitive -r dropping: **falar** → **falá**, **viajar** → **viajá**
-- Teaches spoken Brazilian Portuguese patterns
+- Teaches systematic dropping/elision patterns
+
+**Step 5: Full Colloquial Speech (All Phonetic Processes)**
+- Introduced in JOHN, SARAH, and CARLOS progressions
+- All Step 4 reductions plus:
+- **vou** → **vô**, **tenho** → **tenhu** (vowel/diphthong reduction)
+- Palatalization: **gosto de** → **gostchi dji**, **de + /i/** → **dji**
+- Vowel coalescence: **de ônibus** → **djônibus**
+- Article elision: **sou o/a...** → **sô...**
+- Teaches natural spoken Brazilian Portuguese
 
 **Total New Elements Introduced:** ~110+ vocabulary items, 64 unique verb conjugations (8 verbs × 8 forms), phonetic reductions, multiple grammar patterns

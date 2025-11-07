@@ -321,7 +321,7 @@ Tenho um cachorro e uma gata. Tenho dois irmãos e duas irmãs.
 Estou em Nova York agora. Estou em casa e estou contente em falar português.
 ```
 
-**Step 4: Phonetic reduction (colloquial speech)**
+**Step 4: Dropping/Elision (rule-based)**
 ```
 Sô o John. Sô americano, de Miami. Sô analista e sô casado com a Sarah.
 
@@ -334,6 +334,23 @@ Falo inglês e um pouco de espanhol.
 Gosto de música e de viajá.
 
 Tenho um cachorro e uma gata. Tenho dois irmãos e duas irmãs.
+
+Tô em Nova York agora. Tô em casa e tô contente em falá português.
+```
+
+**Step 5: Full Colloquial Speech (all phonetic processes)**
+```
+Sô John. Sô americano, dji Miami. Sô analista e sô casado com a Sarah.
+
+Moro em Nova York, na avenida das Américas. Trabalho na Acme como analista.
+
+Vô dji metrô pro trabalho.
+
+Falo inglês e um pocu djispanhol.
+
+Gostchi música e dji viajá.
+
+Tenhu um cachorro e uma gata. Tenhu dois irmãos e duas irmãs.
 
 Tô em Nova York agora. Tô em casa e tô contente em falá português.
 ```
@@ -419,7 +436,7 @@ Tenho um cachorro e uma gata. Tenho dois irmãos e duas irmãs também.
 Estou em Nova York agora também. Também estou em casa e estou contente em falar português.
 ```
 
-**Step 4: Phonetic reduction (colloquial speech)**
+**Step 4: Dropping/Elision (rule-based)**
 ```
 Sô a Sarah. Sô americana também, de Miami. Também sô analista e sô casada com o John.
 
@@ -432,6 +449,23 @@ Falo inglês e um pouco de espanhol também.
 Gosto de música também e de viajá.
 
 Tenho um cachorro e uma gata. Tenho dois irmãos e duas irmãs também.
+
+Tô em Nova York agora também. Também tô em casa e tô contente em falá português.
+```
+
+**Step 5: Full Colloquial Speech (all phonetic processes)**
+```
+Sô Sarah. Sô americana também, dji Miami. Também sô analista e sô casada com o John.
+
+Moro em Nova York também, na avenida das Américas. Também trabalho na Acme como analista.
+
+Vô dji metrô pro trabalho também.
+
+Falo inglês e um pocu djispanhol também.
+
+Gostchi música também e dji viajá.
+
+Tenhu um cachorro e uma gata. Tenhu dois irmãos e duas irmãs também.
 
 Tô em Nova York agora também. Também tô em casa e tô contente em falá português.
 ```
@@ -519,7 +553,7 @@ Tenho um gato. Tenho uma irmã.
 Estou em Nova York agora. Estou no escritório e estou contente em falar português com eles.
 ```
 
-**Step 4: Phonetic reduction (colloquial speech)**
+**Step 4: Dropping/Elision (rule-based)**
 ```
 Sô o Carlos. Sô brasileiro, de São Paulo. Sô analista e sô solteiro. Sô colega do John e da Sarah.
 
@@ -532,6 +566,23 @@ Falo português e inglês.
 Gosto de futebol e de café.
 
 Tenho um gato. Tenho uma irmã.
+
+Tô em Nova York agora. Tô no escritório e tô contente em falá português com eles.
+```
+
+**Step 5: Full Colloquial Speech (all phonetic processes)**
+```
+Sô Carlos. Sô brasileiro, dji São Paulo. Sô analista e sô solteiro. Sô colega do John e da Sarah.
+
+Moro em Nova York, no Brooklyn. Trabalho na Acme como analista.
+
+Vô djônibus pro escritório.
+
+Falo português e inglês.
+
+Gostchi futebol e dji café.
+
+Tenhu um gato. Tenhu uma irmã.
 
 Tô em Nova York agora. Tô no escritório e tô contente em falá português com eles.
 ```
