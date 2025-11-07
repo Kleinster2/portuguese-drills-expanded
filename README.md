@@ -10,6 +10,14 @@ Designed to be dialect-neutral (PT-PT and PT-BR) with enhanced learning experien
 
 ## 📚 Documentation
 
+### Pedagogy & Design
+- **[PEDAGOGY.md](PEDAGOGY.md)** - ⭐ **Core pedagogical principles and design methodology**
+  - Self-introduction first ("eu" before all others)
+  - Conjugation-pattern pedagogy (singular before plural)
+  - The Self-Introduction Trinity (morar, falar, trabalhar)
+  - Grammar in service of communication
+  - **Use `/pedagogy` slash command to load these principles in Claude Code**
+
 ### For Users
 - **[A1 Curriculum Guide](docs/curriculum/A1-curriculum-primer.md)** - Detailed explanation of what each A1 drill teaches
 - **[Shareable Links Guide](docs/features/SHAREABLE_LINKS.md)** - How to share and bookmark specific drills
