@@ -16,7 +16,7 @@ Designed to be dialect-neutral (PT-PT and PT-BR) with enhanced learning experien
   - Conjugation-pattern pedagogy (singular before plural)
   - The Self-Introduction Trinity (morar, falar, trabalhar)
   - Grammar in service of communication
-  - **Use `/pedagogy` slash command to load these principles in Claude Code**
+  - **To use in Claude Code: Say "Read PEDAGOGY.md" at the start of your session**
 
 ### For Users
 - **[A1 Curriculum Guide](docs/curriculum/A1-curriculum-primer.md)** - Detailed explanation of what each A1 drill teaches

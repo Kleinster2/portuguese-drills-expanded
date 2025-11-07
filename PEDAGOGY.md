@@ -6,6 +6,24 @@
 
 ---
 
+## 🚀 Quick Start for Claude Code Sessions
+
+**To load this methodology at the start of any session, simply say:**
+
+```
+Read PEDAGOGY.md
+```
+
+Or:
+
+```
+Read and apply the principles from PEDAGOGY.md
+```
+
+I will then internalize all principles and be ready to apply them to any question design or restructuring tasks.
+
+---
+
 ## Core Pedagogical Principles
 
 ### 1. **Self-Introduction First ("eu" before all others)**
