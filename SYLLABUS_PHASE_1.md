@@ -163,23 +163,23 @@ Students should be able to produce these statement patterns:
 
 Students can confidently introduce themselves:
 ```
-Eu sou a Maria.                    (name)
-Eu sou brasileira.                 (nationality)
-Eu sou do Brasil.                  (origin)
-Eu sou professora.                 (profession)
-Eu sou alta.                       (characteristic)
+Eu sou o John.                     (name)
+Eu sou americano.                  (nationality)
+Eu sou dos Estados Unidos.         (origin)
+Eu sou professor.                  (profession)
+Eu sou alto.                       (characteristic)
 
-Eu moro em São Paulo.              (city)
-Eu moro na rua Paulista.           (street)
+Eu moro em Nova York.              (city)
+Eu moro na avenida Broadway.       (avenue)
 
-Eu trabalho em São Paulo.          (work city)
+Eu trabalho em Nova York.          (work city)
 Eu trabalho no hospital.           (workplace)
-Eu trabalho como médica.           (occupation)
+Eu trabalho como professor.        (occupation)
 
-Eu falo português e inglês.        (languages)
+Eu falo inglês e português.        (languages)
 
 Eu gosto de música.                (preferences)
-Eu gosto de estudar.               (activities)
+Eu gosto de viajar.                (activities)
 ```
 
 ---
@@ -204,18 +204,18 @@ After mastering all 5 verbs with explicit "eu", students learn:
 
 **Phase 1 (Explicit "eu"):**
 ```
-Eu sou a Maria.
-Eu sou brasileira.
-Eu sou de São Paulo.
-Eu sou professora.
+Eu sou o John.
+Eu sou americano.
+Eu sou de Nova York.
+Eu sou professor.
 
-Eu moro em São Paulo.
-Eu moro na rua Paulista.
+Eu moro em Nova York.
+Eu moro na avenida Broadway.
 
-Eu trabalho em São Paulo.
-Eu trabalho no hospital central.
+Eu trabalho em Nova York.
+Eu trabalho no hospital.
 
-Eu falo português e inglês.
+Eu falo inglês e português.
 
 Eu gosto de música.
 Eu gosto de viajar.
@@ -223,18 +223,18 @@ Eu gosto de viajar.
 
 **Step 1 (Implicit subjects):**
 ```
-Sou a Maria.
-Sou brasileira.
-Sou de São Paulo.
-Sou professora.
+Sou o John.
+Sou americano.
+Sou de Nova York.
+Sou professor.
 
-Moro em São Paulo.
-Moro na rua Paulista.
+Moro em Nova York.
+Moro na avenida Broadway.
 
-Trabalho em São Paulo.
-Trabalho no hospital central.
+Trabalho em Nova York.
+Trabalho no hospital.
 
-Falo português e inglês.
+Falo inglês e português.
 
 Gosto de música.
 Gosto de viajar.
@@ -242,11 +242,11 @@ Gosto de viajar.
 
 **Step 2 (Concatenated - natural introduction):**
 ```
-Sou a Maria. Sou brasileira, de São Paulo. Sou professora.
+Sou o John. Sou americano, de Nova York. Sou professor.
 
-Moro em São Paulo, na rua Paulista. Trabalho no hospital central.
+Moro em Nova York, na avenida Broadway. Trabalho no hospital.
 
-Falo português e inglês.
+Falo inglês e português.
 
 Gosto de música e de viajar.
 ```
