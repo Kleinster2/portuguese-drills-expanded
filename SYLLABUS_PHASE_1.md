@@ -758,11 +758,295 @@ Ela tem dois irmãos e uma irmã.    (possession/family)
 
 ---
 
-# Phase 3 Syllabus - We (Nós)
+# Phase 3 Syllabus - You (Você)
+
+**Goal:** Students can address others using "você" (formal you).
+
+**Method:** Same verb-by-verb exhaustion. **KEY: Você uses the same conjugations as ele/ela!**
+
+**Verb Sequence:**
+1. Você é
+2. Você mora
+3. Você trabalha
+4. Você fala
+5. Você gosta
+6. Você está
+7. Você vai
+8. Você tem
+
+**Important Note:** All verb forms are identical to Phase 2 (ele/ela). Only the context changes: from describing others → addressing others.
+
+---
+
+## Verb 1: Você é (to be - permanent/identity)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 1.1: Você é o/a [name]
+- **Structure:** Você é + definite article + name
+- **Gender:** o (masculine) / a (feminine)
+- **Usage:** Asking/stating someone's name (addressing them)
+- **Same form as:** Ele/Ela é
+
+### Pattern 1.2: Você é [profession]
+- **Structure:** Você é + profession noun
+- **Gender agreement:** Profession changes for masculine/feminine
+- **Usage:** Asking/stating someone's profession
+- **Same form as:** Ele/Ela é
+
+### Pattern 1.3: Você é [nationality]
+- **Structure:** Você é + nationality adjective
+- **Gender agreement:** Nationality changes for masculine/feminine
+- **Usage:** Asking/stating someone's nationality
+- **Same form as:** Ele/Ela é
+
+### Pattern 1.4: Você é de [city]
+- **Structure:** Você é de + city name
+- **Preposition:** de (from)
+- **Usage:** Asking/stating city of origin
+- **Same form as:** Ele/Ela é
+
+### Pattern 1.5: Você é do/da/dos/das [place]
+- **Structure:** Você é + de+article + place name
+- **Contractions:** do/da/dos/das
+- **Usage:** Asking/stating country/region of origin
+- **Same form as:** Ele/Ela é
+
+### Pattern 1.6: Você é [characteristic]
+- **Structure:** Você é + adjective
+- **Gender agreement:** Adjective changes for masculine/feminine
+- **Usage:** Stating characteristics (to the person)
+- **Same form as:** Ele/Ela é
+
+---
+
+## Verb 2: Você mora (to live/reside)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 2.1: Você mora em [city]
+- **Structure:** Você mora em + city name
+- **Preposition:** em (in)
+- **Usage:** Asking/stating where someone lives
+- **Same form as:** Ele/Ela mora
+
+### Pattern 2.2: Você mora no/na/nos/nas [place]
+- **Structure:** Você mora + em+article + place name
+- **Contractions:** no/na/nos/nas
+- **Usage:** Asking/stating where someone lives
+- **Same form as:** Ele/Ela mora
+
+### Pattern 2.3: Você mora na rua [street]
+- **Structure:** Você mora na rua + street name
+- **Fixed:** "rua" is feminine, always "na rua"
+- **Usage:** Asking/stating someone's street
+- **Same form as:** Ele/Ela mora
+
+### Pattern 2.4: Você mora na avenida [avenue]
+- **Structure:** Você mora na avenida + avenue name
+- **Fixed:** "avenida" is feminine, always "na avenida"
+- **Usage:** Asking/stating someone's avenue
+- **Same form as:** Ele/Ela mora
+
+---
+
+## Verb 3: Você trabalha (to work)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 3.1: Você trabalha em [city]
+- **Structure:** Você trabalha em + city name
+- **Preposition:** em (in)
+- **Usage:** Asking/stating where someone works
+- **Same form as:** Ele/Ela trabalha
+
+### Pattern 3.2: Você trabalha no/na [workplace]
+- **Structure:** Você trabalha + em+article + workplace noun
+- **Contractions:** no (masculine) / na (feminine)
+- **Usage:** Asking/stating where someone works
+- **Same form as:** Ele/Ela trabalha
+
+### Pattern 3.3: Você trabalha como [profession]
+- **Structure:** Você trabalha como + profession
+- **Preposition:** como (as)
+- **Usage:** Asking/stating what someone works as
+- **Same form as:** Ele/Ela trabalha
+
+---
+
+## Verb 4: Você fala (to speak)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 4.1: Você fala [language]
+- **Structure:** Você fala + language name
+- **No article:** Languages don't take articles
+- **Usage:** Asking/stating languages someone speaks
+- **Same form as:** Ele/Ela fala
+
+### Pattern 4.2: Você fala [language] e [language]
+- **Structure:** Você fala + language + e + language
+- **Conjunction:** e (and)
+- **Usage:** Asking/stating multiple languages
+- **Same form as:** Ele/Ela fala
+
+---
+
+## Verb 5: Você gosta (to like)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 5.1: Você gosta de [thing]
+- **Structure:** Você gosta de + noun (no article)
+- **Fixed preposition:** de (of)
+- **Usage:** Asking/stating things someone likes
+- **Same form as:** Ele/Ela gosta
+
+### Pattern 5.2: Você gosta do/da/dos/das [thing]
+- **Structure:** Você gosta + de+article + specific noun
+- **Contractions:** do/da/dos/das
+- **Usage:** Asking/stating specific things someone likes
+- **Same form as:** Ele/Ela gosta
+
+### Pattern 5.3: Você gosta de [infinitive]
+- **Structure:** Você gosta de + verb infinitive
+- **Fixed preposition:** de
+- **Usage:** Asking/stating activities someone likes
+- **Same form as:** Ele/Ela gosta
+
+---
+
+## Verb 6: Você está (to be - temporary/location)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 6.1: Você está em [city]
+- **Structure:** Você está em + city name
+- **Preposition:** em (in/at)
+- **Usage:** Asking/stating current location
+- **Same form as:** Ele/Ela está
+
+### Pattern 6.2: Você está no/na [place]
+- **Structure:** Você está + em+article + place name
+- **Contractions:** no (masculine) / na (feminine)
+- **Usage:** Asking/stating current location
+- **Same form as:** Ele/Ela está
+
+### Pattern 6.3: Você está [adjective]
+- **Structure:** Você está + adjective describing temporary state
+- **Gender agreement:** Adjective changes for masculine/feminine
+- **Usage:** Asking/stating current state or emotion
+- **Same form as:** Ele/Ela está
+
+### Pattern 6.4: Você está [adjective] em [infinitive]
+- **Structure:** Você está + adjective + em + verb infinitive
+- **Preposition:** em (to/in)
+- **Usage:** Expressing emotion about doing something
+- **Example:** Você está contente em falar português
+- **Same form as:** Ele/Ela está
+
+---
+
+## Verb 7: Você vai (to go - transportation)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 7.1: Você vai de [transportation] para [place]
+- **Structure:** Você vai de + means of transportation + para + destination
+- **Preposition:** de (by/with)
+- **Usage:** Asking/stating how someone gets to places
+- **Examples:**
+  - Você vai de carro para o trabalho
+  - Você vai de ônibus para o escritório
+  - Você vai de metrô para casa
+- **Same form as:** Ele/Ela vai
+
+---
+
+## Verb 8: Você tem (to have - possession)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 8.1: Você tem um/uma [thing/person]
+- **Structure:** Você tem + um/uma + singular noun
+- **Gender agreement:** um (masculine) / uma (feminine)
+- **Usage:** Asking/stating someone has one thing or person
+- **Examples:**
+  - Você tem um irmão
+  - Você tem uma irmã
+- **Same form as:** Ele/Ela tem
+
+### Pattern 8.2: Você tem dois/duas [things/people]
+- **Structure:** Você tem + dois/duas + plural noun
+- **Gender agreement:** dois (masculine) / duas (feminine)
+- **Usage:** Asking/stating someone has two things or people
+- **Examples:**
+  - Você tem dois irmãos
+  - Você tem duas irmãs
+- **Same form as:** Ele/Ela tem
+
+### Pattern 8.3: Você tem três/quatro [things/people]
+- **Structure:** Você tem + três/quatro + plural noun
+- **No gender agreement:** três and quatro stay the same
+- **Usage:** Asking/stating someone has three or four things or people
+- **Same form as:** Ele/Ela tem
+
+---
+
+## Phase 3 Summary
+
+### Verbs Covered:
+1. ✅ **Você é** - Identity, profession, origin, characteristics (6 patterns)
+2. ✅ **Você mora** - Residence location (4 patterns)
+3. ✅ **Você trabalha** - Work location and occupation (3 patterns)
+4. ✅ **Você fala** - Languages spoken (2 patterns)
+5. ✅ **Você gosta** - Preferences and likes (3 patterns)
+6. ✅ **Você está** - Current location and temporary states (4 patterns)
+7. ✅ **Você vai** - Transportation (1 pattern)
+8. ✅ **Você tem** - Possession and counting (3 patterns)
+
+### Total Patterns: 26 (same as Phases 1 and 2)
+
+### Complete Conversation After Phase 3:
+
+Students can address someone directly:
+
+**Example - Addressing someone (Você):**
+```
+Você é americano?                  (Are you American?)
+Você é de Nova York?               (Are you from New York?)
+Você é analista?                   (Are you an analyst?)
+
+Você mora em Nova York?            (Do you live in New York?)
+Você mora na avenida das Américas? (Do you live on Avenida das Américas?)
+
+Você trabalha na XYZ?              (Do you work at XYZ?)
+
+Você vai de metrô para o trabalho? (Do you go by subway to work?)
+
+Você fala inglês e português?      (Do you speak English and Portuguese?)
+
+Você gosta de música?              (Do you like music?)
+Você gosta de viajar?              (Do you like to travel?)
+
+Você está em Nova York agora?      (Are you in New York now?)
+Você está contente em falar português? (Are you happy to speak Portuguese?)
+
+Você tem dois irmãos?              (Do you have two brothers?)
+```
+
+**Key Learning Point:**
+- **Verb forms:** Identical to ele/ela (Phase 2)
+- **Context:** Changed from describing (ele/ela) to addressing (você)
+- **Usage:** Formal "you" in Brazilian Portuguese (most common form of address)
+
+---
+
+# Phase 4 Syllabus - We (Nós)
 
 **Goal:** Students can talk about "we" using first person plural (nós).
 
-**Method:** Same verb-by-verb exhaustion as Phase 1 and 2, now with nós conjugations.
+**Method:** Same verb-by-verb exhaustion as Phases 1, 2, and 3, now with nós conjugations.
 
 **Verb Sequence:**
 1. Nós somos
@@ -965,7 +1249,7 @@ Students should be able to produce these statement patterns:
 
 ---
 
-## Phase 3 Summary
+## Phase 4 Summary
 
 ### Verbs Covered:
 1. ✅ **Nós somos** - Identity, profession, origin, characteristics (6 patterns)
@@ -977,9 +1261,9 @@ Students should be able to produce these statement patterns:
 7. ✅ **Nós vamos** - Transportation (1 pattern)
 8. ✅ **Nós temos** - Possession and counting (3 patterns)
 
-### Total Patterns: 26 (same as Phase 1 and 2)
+### Total Patterns: 26 (same as Phases 1, 2, and 3)
 
-### Complete Description After Phase 3:
+### Complete Description After Phase 4:
 
 Students can confidently talk about "we":
 
