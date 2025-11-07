@@ -242,87 +242,9 @@ Students should be able to produce these statement patterns:
 
 Students can confidently introduce themselves:
 
-**Example 1 - Masculine (Eu - John):**
-```
-Eu sou o John.                     (name)
-Eu sou americano.                  (nationality)
-Eu sou de Miami.                   (origin)
-Eu sou analista.                   (profession)
-Eu sou casado com a Sarah.         (marital status)
+**JOHN - Complete Progression:**
 
-Eu moro em Nova York.              (city)
-Eu moro na avenida das Américas.   (avenue)
-
-Eu trabalho em Nova York.          (work city)
-Eu trabalho na Acme.               (workplace)
-Eu trabalho como analista.         (occupation)
-
-Eu falo inglês e um pouco de espanhol.  (languages)
-
-Eu gosto de música.                (preferences)
-Eu gosto de viajar.                (activities)
-
-Eu vou de metrô para o trabalho.   (transportation)
-
-Eu tenho um cachorro e uma gata.   (pets - um/uma agreement)
-Eu tenho dois irmãos e duas irmãs. (family - dois/duas agreement)
-
-Eu estou em Nova York agora.       (current location)
-Eu estou em casa.                  (location)
-Eu estou contente em falar português.  (emotion + infinitive)
-```
-
-**Example 2 - Feminine (Eu - Sarah):**
-```
-Eu sou a Sarah.                    (name)
-Eu sou americana.                  (nationality)
-Eu sou de Miami.                   (origin)
-Eu sou analista.                   (profession)
-Eu sou casada com o John.          (marital status)
-
-Eu moro em Nova York.              (city)
-Eu moro na avenida das Américas.   (avenue)
-
-Eu trabalho em Nova York.          (work city)
-Eu trabalho na Acme.               (workplace)
-Eu trabalho como analista.         (occupation)
-
-Eu falo inglês e um pouco de espanhol.  (languages)
-
-Eu gosto de música.                (preferences)
-Eu gosto de viajar.                (activities)
-
-Eu vou de metrô para o trabalho.   (transportation)
-
-Eu tenho um cachorro e uma gata.   (pets - um/uma agreement)
-Eu tenho dois irmãos e duas irmãs. (family - dois/duas agreement)
-
-Eu estou em Nova York agora.       (current location)
-Eu estou em casa.                  (location)
-Eu estou contente em falar português.  (emotion + infinitive)
-```
-
----
-
-## Next Steps After Phase 1
-
-After mastering all 5 verbs with explicit "eu", students learn:
-
-### Step 1: Drop "eu" (Implicit Subjects)
-- **Teach:** Portuguese allows dropping subject pronouns when context is clear
-- **Practice:** Converting explicit to implicit
-  - "Eu sou a Sarah" → "Sou a Sarah"
-  - "Eu moro em Nova York" → "Moro em Nova York"
-  - "Eu trabalho na XYZ" → "Trabalho na XYZ"
-- **Rationale:** Students understand conjugation first, then learn natural spoken Portuguese
-
-### Step 2: Concatenate Introduction
-- **Teach:** Combining statements into flowing self-introduction
-- **Practice:** Putting it all together
-
-**Example Progression:**
-
-**Phase 1 (Explicit "eu") - John:**
+**Step 1: With "eu" (explicit)**
 ```
 Eu sou o John.
 Eu sou americano.
@@ -352,37 +274,7 @@ Eu estou em casa.
 Eu estou contente em falar português.
 ```
 
-**Phase 1 (Explicit "eu") - Sarah:**
-```
-Eu sou a Sarah.
-Eu sou americana.
-Eu sou de Miami.
-Eu sou analista.
-Eu sou casada com o John.
-
-Eu moro em Nova York.
-Eu moro na avenida das Américas.
-
-Eu trabalho em Nova York.
-Eu trabalho na Acme.
-Eu trabalho como analista.
-
-Eu falo inglês e um pouco de espanhol.
-
-Eu gosto de música.
-Eu gosto de viajar.
-
-Eu vou de metrô para o trabalho.
-
-Eu tenho um cachorro e uma gata.
-Eu tenho dois irmãos e duas irmãs.
-
-Eu estou em Nova York agora.
-Eu estou em casa.
-Eu estou contente em falar português.
-```
-
-**Step 1 (Implicit subjects) - John:**
+**Step 2: Without "eu" (implicit)**
 ```
 Sou o John.
 Sou americano.
@@ -412,7 +304,58 @@ Estou em casa.
 Estou contente em falar português.
 ```
 
-**Step 1 (Implicit subjects) - Sarah:**
+**Step 3: Concatenated (natural flow)**
+```
+Sou o John. Sou americano, de Miami. Sou analista e sou casado com a Sarah.
+
+Moro em Nova York, na avenida das Américas. Trabalho na Acme como analista.
+
+Vou de metrô para o trabalho.
+
+Falo inglês e um pouco de espanhol.
+
+Gosto de música e de viajar.
+
+Tenho um cachorro e uma gata. Tenho dois irmãos e duas irmãs.
+
+Estou em Nova York agora. Estou em casa e estou contente em falar português.
+```
+
+---
+
+**SARAH - Complete Progression:**
+
+**Step 1: With "eu" (explicit)**
+```
+Eu sou a Sarah.
+Eu sou americana.
+Eu sou de Miami.
+Eu sou analista.
+Eu sou casada com o John.
+
+Eu moro em Nova York.
+Eu moro na avenida das Américas.
+
+Eu trabalho em Nova York.
+Eu trabalho na Acme.
+Eu trabalho como analista.
+
+Eu falo inglês e um pouco de espanhol.
+
+Eu gosto de música.
+Eu gosto de viajar.
+
+Eu vou de metrô para o trabalho.
+
+Eu tenho um cachorro e uma gata.
+Eu tenho dois irmãos e duas irmãs.
+
+Eu estou em Nova York agora.
+Eu estou em casa.
+Eu estou contente em falar português.
+```
+
+**Step 2: Without "eu" (implicit)**
 ```
 Sou a Sarah.
 Sou americana.
@@ -442,24 +385,7 @@ Estou em casa.
 Estou contente em falar português.
 ```
 
-**Step 2 (Concatenated - natural introduction) - John:**
-```
-Sou o John. Sou americano, de Miami. Sou analista e sou casado com a Sarah.
-
-Moro em Nova York, na avenida das Américas. Trabalho na Acme como analista.
-
-Vou de metrô para o trabalho.
-
-Falo inglês e um pouco de espanhol.
-
-Gosto de música e de viajar.
-
-Tenho um cachorro e uma gata. Tenho dois irmãos e duas irmãs.
-
-Estou em Nova York agora. Estou em casa e estou contente em falar português.
-```
-
-**Step 2 (Concatenated - natural introduction) - Sarah:**
+**Step 3: Concatenated (natural flow)**
 ```
 Sou a Sarah. Sou americana, de Miami. Sou analista e sou casada com o John.
 
@@ -476,8 +402,27 @@ Tenho um cachorro e uma gata. Tenho dois irmãos e duas irmãs.
 Estou em Nova York agora. Estou em casa e estou contente em falar português.
 ```
 
+---
+
+## Next Steps After Phase 1
+
+After mastering all 5 verbs with explicit "eu", students learn:
+
+### Step 1: Drop "eu" (Implicit Subjects)
+- **Teach:** Portuguese allows dropping subject pronouns when context is clear
+- **Practice:** Converting explicit to implicit
+  - "Eu sou a Sarah" → "Sou a Sarah"
+  - "Eu moro em Nova York" → "Moro em Nova York"
+  - "Eu trabalho na XYZ" → "Trabalho na XYZ"
+- **Rationale:** Students understand conjugation first, then learn natural spoken Portuguese
+
+### Step 2: Concatenate Introduction
+- **Teach:** Combining statements into flowing self-introduction
+- **Practice:** Putting it all together
 - **Add connectors:** e (and), mas (but), também (also), comma for flow
 - **Rationale:** Move from isolated statements to natural discourse
+
+*See complete progression examples above for John and Sarah.*
 
 ### Step 3: Introduce ele/ela
 - **After:** Students master complete self-introduction (explicit + implicit + concatenated)
