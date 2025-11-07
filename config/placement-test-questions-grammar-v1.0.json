@@ -125,20 +125,20 @@
       "unit": 3,
       "phase": 1,
       "type": "production",
-      "en": "The boy is here",
+      "en": "I have the dog",
       "question": "Complete the sentence:",
-      "template": "__ menino está aqui",
+      "template": "Eu tenho __ cachorro",
       "chips": [
-        "O",
-        "A",
-        "Os",
-        "As",
-        "Um",
-        "Uma",
-        "Uns",
-        "Umas"
+        "o",
+        "a",
+        "os",
+        "as",
+        "um",
+        "uma",
+        "uns",
+        "umas"
       ],
-      "correct": "O",
+      "correct": "o",
       "unitTopic": "Definite Articles"
     },
     {
@@ -146,20 +146,20 @@
       "unit": 3,
       "phase": 1,
       "type": "production",
-      "en": "The girls are here",
+      "en": "I have the books",
       "question": "Complete the sentence:",
-      "template": "__ meninas estão aqui",
+      "template": "Eu tenho __ livros",
       "chips": [
-        "As",
-        "Os",
-        "A",
-        "O",
-        "Umas",
-        "Uns",
-        "Uma",
-        "Um"
+        "os",
+        "as",
+        "o",
+        "a",
+        "uns",
+        "umas",
+        "um",
+        "uma"
       ],
-      "correct": "As",
+      "correct": "os",
       "unitTopic": "Definite Articles"
     },
     {
@@ -295,9 +295,9 @@
       "unit": 6,
       "phase": 1,
       "type": "production",
-      "en": "The tall boy",
+      "en": "I have a tall friend",
       "question": "Complete the sentence:",
-      "template": "O menino __",
+      "template": "Eu tenho um amigo __",
       "chips": [
         "alto",
         "alta",
@@ -316,9 +316,9 @@
       "unit": 6,
       "phase": 1,
       "type": "production",
-      "en": "The tall girls",
+      "en": "I have tall friends",
       "question": "Complete the sentence:",
-      "template": "As meninas __",
+      "template": "Eu tenho amigas __",
       "chips": [
         "altas",
         "altos",
@@ -501,32 +501,9 @@
       "unit": 11,
       "phase": 1,
       "type": "production",
-      "en": "The house is located far",
+      "en": "I stay at home",
       "question": "Complete the sentence:",
-      "template": "A casa __ longe",
-      "chips": [
-        "fica",
-        "está",
-        "fico",
-        "ficam",
-        "estão",
-        "ficou",
-        "ficava",
-        "ficará",
-        "fique",
-        "estava"
-      ],
-      "correct": "fica",
-      "unitTopic": "Ficar"
-    },
-    {
-      "id": 25,
-      "unit": 11,
-      "phase": 1,
-      "type": "production",
-      "en": "You stay at home",
-      "question": "Complete the sentence:",
-      "template": "Você __ em casa",
+      "template": "Eu __ em casa",
       "chips": [
         "fico",
         "fica",
@@ -539,7 +516,30 @@
         "fique",
         "ficasse"
       ],
-      "correct": "fica",
+      "correct": "fico",
+      "unitTopic": "Ficar"
+    },
+    {
+      "id": 25,
+      "unit": 11,
+      "phase": 1,
+      "type": "production",
+      "en": "I stay here",
+      "question": "Complete the sentence:",
+      "template": "Eu __ aqui",
+      "chips": [
+        "fico",
+        "fica",
+        "ficamos",
+        "ficam",
+        "ficar",
+        "fiquei",
+        "ficava",
+        "ficaria",
+        "fique",
+        "ficasse"
+      ],
+      "correct": "fico",
       "unitTopic": "Ficar"
     },
     {
@@ -588,9 +588,9 @@
       "unit": 13,
       "phase": 1,
       "type": "production",
-      "en": "He is currently at work",
+      "en": "I am at work",
       "question": "Complete the sentence:",
-      "template": "Ele esta __ trabalho",
+      "template": "Eu estou __ trabalho",
       "chips": [
         "no",
         "na",
@@ -611,9 +611,9 @@
       "unit": 16,
       "phase": 1,
       "type": "production",
-      "en": "You have a house",
+      "en": "I have a house",
       "question": "Complete the sentence:",
-      "template": "Você __ uma casa",
+      "template": "Eu __ uma casa",
       "chips": [
         "tenho",
         "tem",
@@ -626,7 +626,7 @@
         "tenha",
         "tivesse"
       ],
-      "correct": "tem",
+      "correct": "tenho",
       "unitTopic": "Ter"
     },
     {
@@ -928,9 +928,9 @@
       "unit": 19,
       "phase": 1,
       "type": "production",
-      "en": "He likes to study",
+      "en": "I like to study",
       "question": "Complete the sentence:",
-      "template": "Ele gosta __ estudar",
+      "template": "Eu gosto __ estudar",
       "chips": [
         "de",
         "do",
