@@ -273,9 +273,9 @@ Eu tenho dois irmãos.              (counting family - dois with masculine)
 Eu tenho uma irmã.                 (counting family - uma with feminine)
 ```
 
-**Example 2 - Feminine (Eu - Maria):**
+**Example 2 - Feminine (Eu - Sarah):**
 ```
-Eu sou a Maria.                    (name)
+Eu sou a Sarah.                    (name)
 Eu sou americana.                  (nationality)
 Eu sou dos Estados Unidos.         (origin)
 Eu sou analista.                   (profession)
@@ -313,9 +313,9 @@ After mastering all 5 verbs with explicit "eu", students learn:
 ### Step 1: Drop "eu" (Implicit Subjects)
 - **Teach:** Portuguese allows dropping subject pronouns when context is clear
 - **Practice:** Converting explicit to implicit
-  - "Eu sou a Maria" → "Sou a Maria"
-  - "Eu moro em São Paulo" → "Moro em São Paulo"
-  - "Eu trabalho no hospital" → "Trabalho no hospital"
+  - "Eu sou a Sarah" → "Sou a Sarah"
+  - "Eu moro em Nova York" → "Moro em Nova York"
+  - "Eu trabalho na XYZ" → "Trabalho na XYZ"
 - **Rationale:** Students understand conjugation first, then learn natural spoken Portuguese
 
 ### Step 2: Concatenate Introduction
@@ -352,9 +352,9 @@ Eu tenho dois irmãos.
 Eu tenho uma irmã.
 ```
 
-**Phase 1 (Explicit "eu") - Maria:**
+**Phase 1 (Explicit "eu") - Sarah:**
 ```
-Eu sou a Maria.
+Eu sou a Sarah.
 Eu sou americana.
 Eu sou de Nova York.
 Eu sou analista.
@@ -408,9 +408,9 @@ Tenho dois irmãos.
 Tenho uma irmã.
 ```
 
-**Step 1 (Implicit subjects) - Maria:**
+**Step 1 (Implicit subjects) - Sarah:**
 ```
-Sou a Maria.
+Sou a Sarah.
 Sou americana.
 Sou de Nova York.
 Sou analista.
@@ -453,9 +453,9 @@ Estou em Nova York agora. Estou contente em falar português.
 Tenho dois irmãos e uma irmã.
 ```
 
-**Step 2 (Concatenated - natural introduction) - Maria:**
+**Step 2 (Concatenated - natural introduction) - Sarah:**
 ```
-Sou a Maria. Sou americana, de Nova York. Sou analista.
+Sou a Sarah. Sou americana, de Nova York. Sou analista.
 
 Moro em Nova York, na avenida das Américas. Trabalho na XYZ.
 
@@ -730,7 +730,7 @@ Ele tem dois irmãos e uma irmã.    (possession/family)
 
 **Example 2 - Feminine (Ela):**
 ```
-Ela é a Maria.                     (name)
+Ela é a Sarah.                     (name)
 Ela é americana, de Nova York.     (nationality, origin)
 Ela é analista.                    (profession)
 
@@ -751,7 +751,7 @@ Ela tem dois irmãos e uma irmã.    (possession/family)
 ```
 
 **Gender Agreement Notes:**
-- Articles: o (masculine) / a (feminine)
+- Articles: o (masculine - o John) / a (feminine - a Sarah)
 - Nationalities: americano / americana
 - Professions: analista (same for both) - but many change (professor/professora, médico/médica)
 - Adjectives: contente (same for both) - but many change (alto/alta, cansado/cansada)
@@ -1086,9 +1086,9 @@ Está contente em falar português.
 Você tem dois irmãos e uma irmã.
 ```
 
-**Maria introduces herself (Phase 1 - Eu):**
+**Sarah introduces herself (Phase 1 - Eu):**
 ```
-Eu sou a Maria.
+Eu sou a Sarah.
 Eu sou americana, de Nova York.
 Eu sou analista.
 
@@ -1109,7 +1109,7 @@ Eu tenho dois irmãos e uma irmã.
 
 **Someone reads back her introduction (Phase 3 - Você):**
 ```
-Você é a Maria.
+Você é a Sarah.
 Você é americana, de Nova York.
 Você é analista.
 
