@@ -404,83 +404,53 @@ Estou em Nova York agora. Estou em casa e estou contente em falar português.
 
 ---
 
-**NÓS - Complete Progression (John & Sarah together):**
+**A GENTE - Complete Progression (we - informal):**
 
-**Step 1: With "nós" (explicit)**
+**Step 1: Full statements**
 ```
-Nós somos o John e a Sarah.
-Nós somos americanos.
-Nós somos de Miami.
-Nós somos analistas.
-Nós somos casados.
+A gente é o John e a Sarah.
+A gente é americano.
+A gente é de Miami.
+A gente é analista.
+A gente é casado.
 
-Nós moramos em Nova York.
-Nós moramos na avenida das Américas.
+A gente mora em Nova York.
+A gente mora na avenida das Américas.
 
-Nós trabalhamos em Nova York.
-Nós trabalhamos na Acme.
-Nós trabalhamos como analistas.
+A gente trabalha em Nova York.
+A gente trabalha na Acme.
+A gente trabalha como analista.
 
-Nós falamos inglês e um pouco de espanhol.
+A gente fala inglês e um pouco de espanhol.
 
-Nós gostamos de música.
-Nós gostamos de viajar.
+A gente gosta de música.
+A gente gosta de viajar.
 
-Nós vamos de metrô para o trabalho.
+A gente vai de metrô para o trabalho.
 
-Nós temos um cachorro e uma gata.
-Nós temos dois irmãos e duas irmãs cada.
+A gente tem um cachorro e uma gata.
+A gente tem dois irmãos e duas irmãs cada.
 
-Nós estamos em Nova York agora.
-Nós estamos em casa.
-Nós estamos contentes em falar português.
-```
-
-**Step 2: Without "nós" (implicit)**
-```
-Somos o John e a Sarah.
-Somos americanos.
-Somos de Miami.
-Somos analistas.
-Somos casados.
-
-Moramos em Nova York.
-Moramos na avenida das Américas.
-
-Trabalhamos em Nova York.
-Trabalhamos na Acme.
-Trabalhamos como analistas.
-
-Falamos inglês e um pouco de espanhol.
-
-Gostamos de música.
-Gostamos de viajar.
-
-Vamos de metrô para o trabalho.
-
-Temos um cachorro e uma gata.
-Temos dois irmãos e duas irmãs cada.
-
-Estamos em Nova York agora.
-Estamos em casa.
-Estamos contentes em falar português.
+A gente está em Nova York agora.
+A gente está em casa.
+A gente está contente em falar português.
 ```
 
-**Step 3: Concatenated (natural flow)**
+**Step 2: Concatenated (natural flow)**
 ```
-Somos o John e a Sarah. Somos americanos, de Miami. Somos analistas e somos casados.
+A gente é o John e a Sarah. A gente é americano, de Miami. A gente é analista e a gente é casado.
 
-Moramos em Nova York, na avenida das Américas. Trabalhamos na Acme como analistas.
+A gente mora em Nova York, na avenida das Américas. A gente trabalha na Acme como analista.
 
-Vamos de metrô para o trabalho.
+A gente vai de metrô para o trabalho.
 
-Falamos inglês e um pouco de espanhol.
+A gente fala inglês e um pouco de espanhol.
 
-Gostamos de música e de viajar.
+A gente gosta de música e de viajar.
 
-Temos um cachorro e uma gata. Temos dois irmãos e duas irmãs cada.
+A gente tem um cachorro e uma gata. A gente tem dois irmãos e duas irmãs cada.
 
-Estamos em Nova York agora. Estamos em casa e estamos contentes em falar português.
+A gente está em Nova York agora. A gente está em casa e a gente está contente em falar português.
 ```
 
 ---
@@ -689,53 +659,83 @@ Ela está em Nova York agora. Ela está em casa e ela está contente em falar po
 
 ---
 
-**A GENTE - Complete Progression (we - informal):**
+**NÓS - Complete Progression (John & Sarah together):**
 
-**Step 1: Full statements**
+**Step 1: With "nós" (explicit)**
 ```
-A gente é o John e a Sarah.
-A gente é americano.
-A gente é de Miami.
-A gente é analista.
-A gente é casado.
+Nós somos o John e a Sarah.
+Nós somos americanos.
+Nós somos de Miami.
+Nós somos analistas.
+Nós somos casados.
 
-A gente mora em Nova York.
-A gente mora na avenida das Américas.
+Nós moramos em Nova York.
+Nós moramos na avenida das Américas.
 
-A gente trabalha em Nova York.
-A gente trabalha na Acme.
-A gente trabalha como analista.
+Nós trabalhamos em Nova York.
+Nós trabalhamos na Acme.
+Nós trabalhamos como analistas.
 
-A gente fala inglês e um pouco de espanhol.
+Nós falamos inglês e um pouco de espanhol.
 
-A gente gosta de música.
-A gente gosta de viajar.
+Nós gostamos de música.
+Nós gostamos de viajar.
 
-A gente vai de metrô para o trabalho.
+Nós vamos de metrô para o trabalho.
 
-A gente tem um cachorro e uma gata.
-A gente tem dois irmãos e duas irmãs cada.
+Nós temos um cachorro e uma gata.
+Nós temos dois irmãos e duas irmãs cada.
 
-A gente está em Nova York agora.
-A gente está em casa.
-A gente está contente em falar português.
+Nós estamos em Nova York agora.
+Nós estamos em casa.
+Nós estamos contentes em falar português.
 ```
 
-**Step 2: Concatenated (natural flow)**
+**Step 2: Without "nós" (implicit)**
 ```
-A gente é o John e a Sarah. A gente é americano, de Miami. A gente é analista e a gente é casado.
+Somos o John e a Sarah.
+Somos americanos.
+Somos de Miami.
+Somos analistas.
+Somos casados.
 
-A gente mora em Nova York, na avenida das Américas. A gente trabalha na Acme como analista.
+Moramos em Nova York.
+Moramos na avenida das Américas.
 
-A gente vai de metrô para o trabalho.
+Trabalhamos em Nova York.
+Trabalhamos na Acme.
+Trabalhamos como analistas.
 
-A gente fala inglês e um pouco de espanhol.
+Falamos inglês e um pouco de espanhol.
 
-A gente gosta de música e de viajar.
+Gostamos de música.
+Gostamos de viajar.
 
-A gente tem um cachorro e uma gata. A gente tem dois irmãos e duas irmãs cada.
+Vamos de metrô para o trabalho.
 
-A gente está em Nova York agora. A gente está em casa e a gente está contente em falar português.
+Temos um cachorro e uma gata.
+Temos dois irmãos e duas irmãs cada.
+
+Estamos em Nova York agora.
+Estamos em casa.
+Estamos contentes em falar português.
+```
+
+**Step 3: Concatenated (natural flow)**
+```
+Somos o John e a Sarah. Somos americanos, de Miami. Somos analistas e somos casados.
+
+Moramos em Nova York, na avenida das Américas. Trabalhamos na Acme como analistas.
+
+Vamos de metrô para o trabalho.
+
+Falamos inglês e um pouco de espanhol.
+
+Gostamos de música e de viajar.
+
+Temos um cachorro e uma gata. Temos dois irmãos e duas irmãs cada.
+
+Estamos em Nova York agora. Estamos em casa e estamos contentes em falar português.
 ```
 
 ---
