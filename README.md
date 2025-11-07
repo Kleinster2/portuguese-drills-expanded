@@ -18,6 +18,13 @@ Designed to be dialect-neutral (PT-PT and PT-BR) with enhanced learning experien
   - Grammar in service of communication
   - **To use in Claude Code: Say "Read PEDAGOGY.md" at the start of your session**
 
+- **[PRONUNCIATION_RULES.md](PRONUNCIATION_RULES.md)** - ⭐ **Complete Brazilian Portuguese pronunciation rules**
+  - ALL obligatory pronunciation changes (o→u, e→i, palatalization, etc.)
+  - Notation system (compact bracket notation: word[sound])
+  - Distinction between pronunciation (obligatory) vs reduction (optional)
+  - Critical reference for understanding the syllabus annotation system
+  - **Essential for anyone working with syllabus content**
+
 ### For Users
 - **[A1 Curriculum Guide](docs/curriculum/A1-curriculum-primer.md)** - Detailed explanation of what each A1 drill teaches
 - **[Shareable Links Guide](docs/features/SHAREABLE_LINKS.md)** - How to share and bookmark specific drills
