@@ -10,6 +10,7 @@
 3. Eu trabalho
 4. Eu falo
 5. Eu gosto
+6. Eu estou
 
 **After Phase 1:** Introduce ele/ela (describing others)
 
@@ -148,6 +149,33 @@ Students should be able to produce these statement patterns:
 
 ---
 
+## Verb 6: Eu estou (to be - temporary/location)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 6.1: Eu estou em [city]
+- **Structure:** Eu estou em + city name
+- **Preposition:** em (in/at)
+- **Usage:** Stating current location (city)
+
+### Pattern 6.2: Eu estou no/na [place]
+- **Structure:** Eu estou + em+article + place name
+- **Contractions:** no (masculine) / na (feminine)
+- **Usage:** Stating current location (place with article)
+
+### Pattern 6.3: Eu estou [adjective]
+- **Structure:** Eu estou + adjective describing temporary state
+- **Gender agreement:** Adjective changes for masculine/feminine
+- **Usage:** Stating current state or emotion (happy, tired, sad, etc.)
+
+### Pattern 6.4: Eu estou [adjective] em [infinitive verb]
+- **Structure:** Eu estou + adjective + em + verb infinitive
+- **Preposition:** em (to/in)
+- **Usage:** Expressing emotion about doing something
+- **Example:** Estou contente em falar português (I am happy to speak Portuguese)
+
+---
+
 ## Summary
 
 ### Verbs Covered:
@@ -156,8 +184,9 @@ Students should be able to produce these statement patterns:
 3. ✅ **Eu trabalho** - Work location and occupation (3 patterns)
 4. ✅ **Eu falo** - Languages spoken (2 patterns)
 5. ✅ **Eu gosto** - Preferences and likes (3 patterns)
+6. ✅ **Eu estou** - Current location and temporary states (4 patterns)
 
-### Total Patterns: 18
+### Total Patterns: 22
 
 ### Complete Self-Introduction After Phase 1:
 
@@ -180,6 +209,11 @@ Eu falo inglês e português.        (languages)
 
 Eu gosto de música.                (preferences)
 Eu gosto de viajar.                (activities)
+
+Eu estou em Nova York.             (current location)
+Eu estou no escritório.            (location with article)
+Eu estou contente.                 (temporary state)
+Eu estou contente em falar português.  (emotion + infinitive)
 ```
 
 ---
@@ -219,6 +253,10 @@ Eu falo inglês e português.
 
 Eu gosto de música.
 Eu gosto de viajar.
+
+Eu estou em Nova York.
+Eu estou contente.
+Eu estou contente em falar português.
 ```
 
 **Step 1 (Implicit subjects):**
@@ -238,6 +276,10 @@ Falo inglês e português.
 
 Gosto de música.
 Gosto de viajar.
+
+Estou em Nova York.
+Estou contente.
+Estou contente em falar português.
 ```
 
 **Step 2 (Concatenated - natural introduction):**
@@ -249,6 +291,8 @@ Moro em Nova York, na avenida Broadway. Trabalho na XYZ.
 Falo inglês e português.
 
 Gosto de música e de viajar.
+
+Estou em Nova York. Estou contente em falar português.
 ```
 
 - **Add connectors:** e (and), mas (but), também (also), comma for flow
