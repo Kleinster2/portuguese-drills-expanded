@@ -1065,38 +1065,38 @@ Estou contente em falar português.
 Eu tenho dois irmãos e uma irmã.
 ```
 
-**Someone confirms/asks back (Phase 3 - Você):**
+**Someone reads back his introduction (Phase 3 - Você):**
 ```
-Você é o John?
-Você é americano, de Nova York?
-Você é analista?
+Você é o John.
+Você é americano, de Nova York.
+Você é analista.
 
-Você mora em Nova York, na avenida das Américas?
-Você trabalha na XYZ?
+Você mora em Nova York, na avenida das Américas.
+Você trabalha na XYZ.
 
-Você vai de metrô para o trabalho?
+Você vai de metrô para o trabalho.
 
-Você fala inglês e português?
+Você fala inglês e português.
 
-Você gosta de música e de viajar?
+Você gosta de música e de viajar.
 
-Você está em Nova York agora?
-Está contente em falar português?
+Você está em Nova York agora.
+Está contente em falar português.
 
-Você tem dois irmãos e uma irmã?
+Você tem dois irmãos e uma irmã.
 ```
 
 **Pattern:**
-- **Eu sou** → **Você é?**
-- **Eu moro** → **Você mora?**
-- **Eu trabalho** → **Você trabalha?**
-- **Eu vou** → **Você vai?**
-- **Eu falo** → **Você fala?**
-- **Eu gosto** → **Você gosta?**
-- **Eu estou** → **Você está?**
-- **Eu tenho** → **Você tem?**
+- **Eu sou** → **Você é**
+- **Eu moro** → **Você mora**
+- **Eu trabalho** → **Você trabalha**
+- **Eu vou** → **Você vai**
+- **Eu falo** → **Você fala**
+- **Eu gosto** → **Você gosta**
+- **Eu estou** → **Você está**
+- **Eu tenho** → **Você tem**
 
-This natural back-and-forth reinforces that students use "eu" for self-introduction, then hear the same information reflected back with "você" for confirmation.
+This pattern reinforces that the same information can be stated from two perspectives: "I am" (eu sou) becomes "You are" (você é). John says it about himself, someone else repeats it back to him.
 
 ---
 
