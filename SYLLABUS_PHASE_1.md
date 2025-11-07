@@ -566,6 +566,87 @@ Está em Nova York agora. Está em casa e está contente em falar português.
 
 ---
 
+**VOCÊS - Complete Progression (addressing John & Sarah):**
+
+**Step 1: With "vocês" (explicit)**
+```
+Vocês são o John e a Sarah.
+Vocês são americanos.
+Vocês são de Miami.
+Vocês são analistas.
+Vocês são casados.
+
+Vocês moram em Nova York.
+Vocês moram na avenida das Américas.
+
+Vocês trabalham em Nova York.
+Vocês trabalham na Acme.
+Vocês trabalham como analistas.
+
+Vocês falam inglês e um pouco de espanhol.
+
+Vocês gostam de música.
+Vocês gostam de viajar.
+
+Vocês vão de metrô para o trabalho.
+
+Vocês têm um cachorro e uma gata.
+Vocês têm dois irmãos e duas irmãs cada.
+
+Vocês estão em Nova York agora.
+Vocês estão em casa.
+Vocês estão contentes em falar português.
+```
+
+**Step 2: Without "vocês" (implicit)**
+```
+São o John e a Sarah.
+São americanos.
+São de Miami.
+São analistas.
+São casados.
+
+Moram em Nova York.
+Moram na avenida das Américas.
+
+Trabalham em Nova York.
+Trabalham na Acme.
+Trabalham como analistas.
+
+Falam inglês e um pouco de espanhol.
+
+Gostam de música.
+Gostam de viajar.
+
+Vão de metrô para o trabalho.
+
+Têm um cachorro e uma gata.
+Têm dois irmãos e duas irmãs cada.
+
+Estão em Nova York agora.
+Estão em casa.
+Estão contentes em falar português.
+```
+
+**Step 3: Concatenated (natural flow)**
+```
+São o John e a Sarah. São americanos, de Miami. São analistas e são casados.
+
+Moram em Nova York, na avenida das Américas. Trabalham na Acme como analistas.
+
+Vão de metrô para o trabalho.
+
+Falam inglês e um pouco de espanhol.
+
+Gostam de música e de viajar.
+
+Têm um cachorro e uma gata. Têm dois irmãos e duas irmãs cada.
+
+Estão em Nova York agora. Estão em casa e estão contentes em falar português.
+```
+
+---
+
 ## Next Steps After Phase 1
 
 After mastering all 5 verbs with explicit "eu", students learn:
