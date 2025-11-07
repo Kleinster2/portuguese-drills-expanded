@@ -100,6 +100,9 @@
 - **gosto de** → **gostchi** + **de** → **dji** (palatalization + coalescence)
 - **um pouco de** → **um pocu dji** (/o/ reduction, palatalization)
 - Article elision: **sou o John** → **sô John**
+- **Vowel sandhi (word boundary coalescence)**:
+  - **na avenida** → **navenida** (vowel merges across word boundary)
+  - **na Acme** → **nAcme** (identical vowels merge into one)
 
 ---
 
@@ -134,6 +137,7 @@ Same phonetic processes as JOHN, with "também" variations:
 - **gosto de** → **gostchi dji**
 - **um pouco de** → **um pocu dji**
 - Article elision: **sou a Sarah** → **sô Sarah**
+- **Vowel sandhi**: **na avenida** → **navenida**, **na Acme** → **nAcme**
 
 ---
 
@@ -183,6 +187,11 @@ Same phonetic processes as JOHN and SARAH, with Carlos-specific vocabulary:
 - **gosto de** → **gostchi** + **de** → **dji**
 - **de São Paulo** → **dji São Paulo**
 - Article elision: **sou o Carlos** → **sô Carlos**
+- **Vowel sandhi**:
+  - **na Acme** → **nAcme**
+  - **pro escritório** → **proscritório** (o+e coalescence)
+  - **no escritório** → **noscritório** (o+e coalescence)
+  - **uma irmã** → **umirmã** (a+i coalescence)
 
 ### Teaching Point
 - Third character creates trio dynamics
@@ -455,6 +464,10 @@ Same phonetic processes as JOHN and SARAH, with Carlos-specific vocabulary:
 - Palatalization: **gosto de** → **gostchi dji**, **de + /i/** → **dji**
 - Vowel coalescence: **de ônibus** → **djônibus**
 - Article elision: **sou o/a...** → **sô...**
+- **Vowel sandhi (word boundary coalescence)**:
+  - **na avenida** → **navenida**, **na Acme** → **nAcme**
+  - **no escritório** → **noscritório**, **pro escritório** → **proscritório**
+  - **uma irmã** → **umirmã**
 - Teaches natural spoken Brazilian Portuguese
 
 **Total New Elements Introduced:** ~110+ vocabulary items, 64 unique verb conjugations (8 verbs × 8 forms), phonetic reductions, multiple grammar patterns

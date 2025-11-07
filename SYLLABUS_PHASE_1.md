@@ -342,7 +342,7 @@ Tô em Nova York agora. Tô em casa e tô contente em falá português.
 ```
 Sô John. Sô americano, dji Miami. Sô analista e sô casado com a Sarah.
 
-Moro em Nova York, na avenida das Américas. Trabalho na Acme como analista.
+Moro em Nova York, navenida das Américas. Trabalho nAcme como analista.
 
 Vô dji metrô pro trabalho.
 
@@ -457,7 +457,7 @@ Tô em Nova York agora também. Também tô em casa e tô contente em falá port
 ```
 Sô Sarah. Sô americana também, dji Miami. Também sô analista e sô casada com o John.
 
-Moro em Nova York também, na avenida das Américas. Também trabalho na Acme como analista.
+Moro em Nova York também, navenida das Américas. Também trabalho nAcme como analista.
 
 Vô dji metrô pro trabalho também.
 
@@ -574,17 +574,17 @@ Tô em Nova York agora. Tô no escritório e tô contente em falá português co
 ```
 Sô Carlos. Sô brasileiro, dji São Paulo. Sô analista e sô solteiro. Sô colega do John e da Sarah.
 
-Moro em Nova York, no Brooklyn. Trabalho na Acme como analista.
+Moro em Nova York, no Brooklyn. Trabalho nAcme como analista.
 
-Vô djônibus pro escritório.
+Vô djônibus proscritório.
 
 Falo português e inglês.
 
 Gostchi futebol e dji café.
 
-Tenhu um gato. Tenhu uma irmã.
+Tenhu um gato. Tenhu umirmã.
 
-Tô em Nova York agora. Tô no escritório e tô contente em falá português com eles.
+Tô em Nova York agora. Tô noscritório e tô contente em falá português com eles.
 ```
 
 ---
