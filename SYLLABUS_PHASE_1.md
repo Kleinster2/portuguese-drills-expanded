@@ -328,78 +328,78 @@ Estou em Nova York agora. Estou em casa e estou contente em falar português.
 **Step 1: With "eu" (explicit)**
 ```
 Eu sou a Sarah.
-Eu sou americana.
-Eu sou de Miami.
-Eu sou analista.
+Eu também sou americana.
+Eu também sou de Miami.
+Eu também sou analista.
 Eu sou casada com o John.
 
-Eu moro em Nova York.
+Eu também moro em Nova York.
 Eu moro na avenida das Américas.
 
-Eu trabalho em Nova York.
-Eu trabalho na Acme.
+Eu também trabalho em Nova York.
+Eu também trabalho na Acme.
 Eu trabalho como analista.
 
-Eu falo inglês e um pouco de espanhol.
+Eu também falo inglês e um pouco de espanhol.
 
-Eu gosto de música.
+Eu também gosto de música.
 Eu gosto de viajar.
 
-Eu vou de metrô para o trabalho.
+Eu também vou de metrô para o trabalho.
 
 Eu tenho um cachorro e uma gata.
-Eu tenho dois irmãos e duas irmãs.
+Eu também tenho dois irmãos e duas irmãs.
 
-Eu estou em Nova York agora.
-Eu estou em casa.
+Eu também estou em Nova York agora.
+Eu também estou em casa.
 Eu estou contente em falar português.
 ```
 
 **Step 2: Without "eu" (implicit)**
 ```
 Sou a Sarah.
-Sou americana.
-Sou de Miami.
-Sou analista.
+Também sou americana.
+Também sou de Miami.
+Também sou analista.
 Sou casada com o John.
 
-Moro em Nova York.
+Também moro em Nova York.
 Moro na avenida das Américas.
 
-Trabalho em Nova York.
-Trabalho na Acme.
+Também trabalho em Nova York.
+Também trabalho na Acme.
 Trabalho como analista.
 
-Falo inglês e um pouco de espanhol.
+Também falo inglês e um pouco de espanhol.
 
-Gosto de música.
+Também gosto de música.
 Gosto de viajar.
 
-Vou de metrô para o trabalho.
+Também vou de metrô para o trabalho.
 
 Tenho um cachorro e uma gata.
-Tenho dois irmãos e duas irmãs.
+Também tenho dois irmãos e duas irmãs.
 
-Estou em Nova York agora.
-Estou em casa.
+Também estou em Nova York agora.
+Também estou em casa.
 Estou contente em falar português.
 ```
 
 **Step 3: Concatenated (natural flow)**
 ```
-Sou a Sarah. Sou americana, de Miami. Sou analista e sou casada com o John.
+Sou a Sarah. Também sou americana, de Miami. Também sou analista e sou casada com o John.
 
-Moro em Nova York, na avenida das Américas. Trabalho na Acme como analista.
+Também moro em Nova York, na avenida das Américas. Também trabalho na Acme como analista.
 
-Vou de metrô para o trabalho.
+Também vou de metrô para o trabalho.
 
-Falo inglês e um pouco de espanhol.
+Também falo inglês e um pouco de espanhol.
 
-Gosto de música e de viajar.
+Também gosto de música e de viajar.
 
-Tenho um cachorro e uma gata. Tenho dois irmãos e duas irmãs.
+Tenho um cachorro e uma gata. Também tenho dois irmãos e duas irmãs.
 
-Estou em Nova York agora. Estou em casa e estou contente em falar português.
+Também estou em Nova York agora. Também estou em casa e estou contente em falar português.
 ```
 
 ---
