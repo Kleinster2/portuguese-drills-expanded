@@ -11,6 +11,7 @@
 4. Eu falo
 5. Eu gosto
 6. Eu estou
+7. Eu vou
 
 **After Phase 1:** Introduce ele/ela (describing others)
 
@@ -176,6 +177,33 @@ Students should be able to produce these statement patterns:
 
 ---
 
+## Verb 7: Eu vou (to go - movement/future)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 7.1: Eu vou para [place without article]
+- **Structure:** Eu vou para + place name
+- **Preposition:** para (to/toward)
+- **Usage:** Stating where you go regularly (cities, countries without article)
+- **Example:** Eu vou para Nova York (I go to New York)
+
+### Pattern 7.2: Eu vou ao/à/aos/às [place with article]
+- **Structure:** Eu vou + a+article + place
+- **Contractions:**
+  - a + o = ao (masculine singular)
+  - a + a = à (feminine singular)
+  - a + os = aos (masculine plural)
+  - a + as = às (feminine plural)
+- **Usage:** Stating where you go (places with article: the gym, the bank, etc.)
+- **Example:** Eu vou ao escritório (I go to the office)
+
+### Pattern 7.3: Eu vou [infinitive verb]
+- **Structure:** Eu vou + verb infinitive
+- **Usage:** Near future - stating what you're going to do
+- **Example:** Eu vou estudar português (I'm going to study Portuguese)
+
+---
+
 ## Summary
 
 ### Verbs Covered:
@@ -185,8 +213,9 @@ Students should be able to produce these statement patterns:
 4. ✅ **Eu falo** - Languages spoken (2 patterns)
 5. ✅ **Eu gosto** - Preferences and likes (3 patterns)
 6. ✅ **Eu estou** - Current location and temporary states (4 patterns)
+7. ✅ **Eu vou** - Movement and near future (3 patterns)
 
-### Total Patterns: 22
+### Total Patterns: 25
 
 ### Complete Self-Introduction After Phase 1:
 
@@ -214,6 +243,10 @@ Eu estou em Nova York.             (current location)
 Eu estou no escritório.            (location with article)
 Eu estou contente.                 (temporary state)
 Eu estou contente em falar português.  (emotion + infinitive)
+
+Eu vou para o Brasil.              (going to place)
+Eu vou ao escritório.              (going to place with article)
+Eu vou estudar português.          (near future)
 ```
 
 ---
@@ -257,6 +290,10 @@ Eu gosto de viajar.
 Eu estou em Nova York.
 Eu estou contente.
 Eu estou contente em falar português.
+
+Eu vou para o Brasil.
+Eu vou ao escritório.
+Eu vou estudar português.
 ```
 
 **Step 1 (Implicit subjects):**
@@ -280,6 +317,10 @@ Gosto de viajar.
 Estou em Nova York.
 Estou contente.
 Estou contente em falar português.
+
+Vou para o Brasil.
+Vou ao escritório.
+Vou estudar português.
 ```
 
 **Step 2 (Concatenated - natural introduction):**
@@ -293,6 +334,8 @@ Falo inglês e português.
 Gosto de música e de viajar.
 
 Estou em Nova York. Estou contente em falar português.
+
+Vou para o Brasil. Vou estudar português.
 ```
 
 - **Add connectors:** e (and), mas (but), também (also), comma for flow
