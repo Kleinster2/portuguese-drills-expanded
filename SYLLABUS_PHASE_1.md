@@ -121,16 +121,6 @@ Students should be able to produce these statement patterns:
 - **Conjunction:** e (and)
 - **Usage:** Stating multiple languages
 
-### Pattern 4.3: Eu sempre falo [language]
-- **Structure:** Eu sempre falo + language
-- **Adverb:** sempre (always)
-- **Usage:** Emphasizing regular language use
-
-### Pattern 4.4: Eu falo [language] com [person]
-- **Structure:** Eu falo + language + com + person
-- **Preposition:** com (with)
-- **Usage:** Stating who you speak a language with
-
 ---
 
 ## Verb 5: Eu gosto (to like)
@@ -164,10 +154,10 @@ Students should be able to produce these statement patterns:
 1. ✅ **Eu sou** - Identity, profession, origin, characteristics (6 patterns)
 2. ✅ **Eu moro** - Residence location (4 patterns)
 3. ✅ **Eu trabalho** - Work location and occupation (3 patterns)
-4. ✅ **Eu falo** - Languages spoken (4 patterns)
+4. ✅ **Eu falo** - Languages spoken (2 patterns)
 5. ✅ **Eu gosto** - Preferences and likes (3 patterns)
 
-### Total Patterns: 20
+### Total Patterns: 18
 
 ### Complete Self-Introduction After Phase 1:
 
@@ -209,8 +199,59 @@ After mastering all 5 verbs with explicit "eu", students learn:
 ### Step 2: Concatenate Introduction
 - **Teach:** Combining statements into flowing self-introduction
 - **Practice:** Putting it all together
-  - "Sou a Maria. Sou brasileira. Moro em São Paulo. Trabalho no hospital. Falo português e inglês. Gosto de música."
-- **Add connectors:** e (and), mas (but), também (also)
+
+**Example Progression:**
+
+**Phase 1 (Explicit "eu"):**
+```
+Eu sou a Maria.
+Eu sou brasileira.
+Eu sou de São Paulo.
+Eu sou professora.
+
+Eu moro em São Paulo.
+Eu moro na rua Paulista.
+
+Eu trabalho em São Paulo.
+Eu trabalho no hospital central.
+
+Eu falo português e inglês.
+
+Eu gosto de música.
+Eu gosto de viajar.
+```
+
+**Step 1 (Implicit subjects):**
+```
+Sou a Maria.
+Sou brasileira.
+Sou de São Paulo.
+Sou professora.
+
+Moro em São Paulo.
+Moro na rua Paulista.
+
+Trabalho em São Paulo.
+Trabalho no hospital central.
+
+Falo português e inglês.
+
+Gosto de música.
+Gosto de viajar.
+```
+
+**Step 2 (Concatenated - natural introduction):**
+```
+Sou a Maria. Sou brasileira, de São Paulo. Sou professora.
+
+Moro em São Paulo, na rua Paulista. Trabalho no hospital central.
+
+Falo português e inglês.
+
+Gosto de música e de viajar.
+```
+
+- **Add connectors:** e (and), mas (but), também (also), comma for flow
 - **Rationale:** Move from isolated statements to natural discourse
 
 ### Step 3: Introduce ele/ela
