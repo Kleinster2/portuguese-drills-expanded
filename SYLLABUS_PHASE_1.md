@@ -241,12 +241,45 @@ Students should be able to produce these statement patterns:
 ### Complete Self-Introduction After Phase 1:
 
 Students can confidently introduce themselves:
+
+**Example 1 - Masculine (Eu - John):**
 ```
 Eu sou o John.                     (name)
 Eu sou americano.                  (nationality)
 Eu sou dos Estados Unidos.         (origin)
 Eu sou analista.                   (profession)
 Eu sou alto.                       (characteristic)
+
+Eu moro em Nova York.              (city)
+Eu moro na avenida das Américas.   (avenue)
+
+Eu trabalho em Nova York.          (work city)
+Eu trabalho na XYZ.                (workplace)
+Eu trabalho como analista.         (occupation)
+
+Eu falo inglês e português.        (languages)
+
+Eu gosto de música.                (preferences)
+Eu gosto de viajar.                (activities)
+
+Eu estou em Nova York agora.       (current location)
+Eu estou no escritório.            (location with article)
+Eu estou contente.                 (temporary state)
+Eu estou contente em falar português.  (emotion + infinitive)
+
+Eu vou de metrô para o trabalho.   (transportation)
+
+Eu tenho dois irmãos.              (counting family - dois with masculine)
+Eu tenho uma irmã.                 (counting family - uma with feminine)
+```
+
+**Example 2 - Feminine (Eu - Maria):**
+```
+Eu sou a Maria.                    (name)
+Eu sou americana.                  (nationality)
+Eu sou dos Estados Unidos.         (origin)
+Eu sou analista.                   (profession)
+Eu sou alta.                       (characteristic)
 
 Eu moro em Nova York.              (city)
 Eu moro na avenida das Américas.   (avenue)
@@ -291,7 +324,7 @@ After mastering all 5 verbs with explicit "eu", students learn:
 
 **Example Progression:**
 
-**Phase 1 (Explicit "eu"):**
+**Phase 1 (Explicit "eu") - John:**
 ```
 Eu sou o John.
 Eu sou americano.
@@ -319,7 +352,35 @@ Eu tenho dois irmãos.
 Eu tenho uma irmã.
 ```
 
-**Step 1 (Implicit subjects):**
+**Phase 1 (Explicit "eu") - Maria:**
+```
+Eu sou a Maria.
+Eu sou americana.
+Eu sou de Nova York.
+Eu sou analista.
+
+Eu moro em Nova York.
+Eu moro na avenida das Américas.
+
+Eu trabalho em Nova York.
+Eu trabalho na XYZ.
+
+Eu falo inglês e português.
+
+Eu gosto de música.
+Eu gosto de viajar.
+
+Eu estou em Nova York agora.
+Eu estou contente.
+Eu estou contente em falar português.
+
+Eu vou de metrô para o trabalho.
+
+Eu tenho dois irmãos.
+Eu tenho uma irmã.
+```
+
+**Step 1 (Implicit subjects) - John:**
 ```
 Sou o John.
 Sou americano.
@@ -347,9 +408,54 @@ Tenho dois irmãos.
 Tenho uma irmã.
 ```
 
-**Step 2 (Concatenated - natural introduction):**
+**Step 1 (Implicit subjects) - Maria:**
+```
+Sou a Maria.
+Sou americana.
+Sou de Nova York.
+Sou analista.
+
+Moro em Nova York.
+Moro na avenida das Américas.
+
+Trabalho em Nova York.
+Trabalho na XYZ.
+
+Falo inglês e português.
+
+Gosto de música.
+Gosto de viajar.
+
+Estou em Nova York agora.
+Estou contente.
+Estou contente em falar português.
+
+Vou de metrô para o trabalho.
+
+Tenho dois irmãos.
+Tenho uma irmã.
+```
+
+**Step 2 (Concatenated - natural introduction) - John:**
 ```
 Sou o John. Sou americano, de Nova York. Sou analista.
+
+Moro em Nova York, na avenida das Américas. Trabalho na XYZ.
+
+Vou de metrô para o trabalho.
+
+Falo inglês e português.
+
+Gosto de música e de viajar.
+
+Estou em Nova York agora. Estou contente em falar português.
+
+Tenho dois irmãos e uma irmã.
+```
+
+**Step 2 (Concatenated - natural introduction) - Maria:**
+```
+Sou a Maria. Sou americana, de Nova York. Sou analista.
 
 Moro em Nova York, na avenida das Américas. Trabalho na XYZ.
 
@@ -599,6 +705,8 @@ Students should be able to produce these statement patterns:
 ### Complete Description After Phase 2:
 
 Students can confidently describe someone else:
+
+**Example 1 - Masculine (Ele):**
 ```
 Ele é o John.                      (name)
 Ele é americano, de Nova York.     (nationality, origin)
@@ -620,4 +728,30 @@ E está contente em falar português. (temporary state + emotion)
 Ele tem dois irmãos e uma irmã.    (possession/family)
 ```
 
-**Note:** The same patterns work for **Ela** (she) with appropriate gender agreement on adjectives, professions, and nationalities.
+**Example 2 - Feminine (Ela):**
+```
+Ela é a Maria.                     (name)
+Ela é americana, de Nova York.     (nationality, origin)
+Ela é analista.                    (profession)
+
+Ela mora em Nova York, na avenida das Américas.  (residence)
+
+Ela trabalha na XYZ.               (workplace)
+
+Ela vai de metrô para o trabalho.  (transportation)
+
+Ela fala inglês e português.       (languages)
+
+Ela gosta de música e de viajar.   (preferences)
+
+Ela está em Nova York agora.       (current location)
+E está contente em falar português. (temporary state + emotion)
+
+Ela tem dois irmãos e uma irmã.    (possession/family)
+```
+
+**Gender Agreement Notes:**
+- Articles: o (masculine) / a (feminine)
+- Nationalities: americano / americana
+- Professions: analista (same for both) - but many change (professor/professora, médico/médica)
+- Adjectives: contente (same for both) - but many change (alto/alta, cansado/cansada)
