@@ -321,6 +321,23 @@ Tenho um cachorro e uma gata. Tenho dois irmãos e duas irmãs.
 Estou em Nova York agora. Estou em casa e estou contente em falar português.
 ```
 
+**Step 4: Phonetic reduction (colloquial speech)**
+```
+Sô o John. Sô americano, de Miami. Sô analista e sô casado com a Sarah.
+
+Moro em Nova York, na avenida das Américas. Trabalho na Acme como analista.
+
+Vou de metrô pro trabalho.
+
+Falo inglês e um pouco de espanhol.
+
+Gosto de música e de viajá.
+
+Tenho um cachorro e uma gata. Tenho dois irmãos e duas irmãs.
+
+Tô em Nova York agora. Tô em casa e tô contente em falá português.
+```
+
 ---
 
 **SARAH - Complete Progression:**
@@ -400,6 +417,123 @@ Gosto de música também e de viajar.
 Tenho um cachorro e uma gata. Tenho dois irmãos e duas irmãs também.
 
 Estou em Nova York agora também. Também estou em casa e estou contente em falar português.
+```
+
+**Step 4: Phonetic reduction (colloquial speech)**
+```
+Sô a Sarah. Sô americana também, de Miami. Também sô analista e sô casada com o John.
+
+Moro em Nova York também, na avenida das Américas. Também trabalho na Acme como analista.
+
+Vou de metrô pro trabalho também.
+
+Falo inglês e um pouco de espanhol também.
+
+Gosto de música também e de viajá.
+
+Tenho um cachorro e uma gata. Tenho dois irmãos e duas irmãs também.
+
+Tô em Nova York agora também. Também tô em casa e tô contente em falá português.
+```
+
+---
+
+**CARLOS - Complete Progression:**
+
+**Step 1: With "eu" (explicit)**
+```
+Eu sou o Carlos.
+Eu sou brasileiro.
+Eu sou de São Paulo.
+Eu sou analista.
+Eu sou solteiro.
+Eu sou colega do John e da Sarah.
+
+Eu moro em Nova York.
+Eu moro no Brooklyn.
+
+Eu trabalho em Nova York.
+Eu trabalho na Acme.
+Eu trabalho como analista.
+
+Eu falo português e inglês.
+
+Eu gosto de futebol.
+Eu gosto de café.
+
+Eu vou de ônibus para o escritório.
+
+Eu tenho um gato.
+Eu tenho uma irmã.
+
+Eu estou em Nova York agora.
+Eu estou no escritório.
+Eu estou contente em falar português com eles.
+```
+
+**Step 2: Without "eu" (implicit)**
+```
+Sou o Carlos.
+Sou brasileiro.
+Sou de São Paulo.
+Sou analista.
+Sou solteiro.
+Sou colega do John e da Sarah.
+
+Moro em Nova York.
+Moro no Brooklyn.
+
+Trabalho em Nova York.
+Trabalho na Acme.
+Trabalho como analista.
+
+Falo português e inglês.
+
+Gosto de futebol.
+Gosto de café.
+
+Vou de ônibus para o escritório.
+
+Tenho um gato.
+Tenho uma irmã.
+
+Estou em Nova York agora.
+Estou no escritório.
+Estou contente em falar português com eles.
+```
+
+**Step 3: Concatenated (natural flow)**
+```
+Sou o Carlos. Sou brasileiro, de São Paulo. Sou analista e sou solteiro. Sou colega do John e da Sarah.
+
+Moro em Nova York, no Brooklyn. Trabalho na Acme como analista.
+
+Vou de ônibus para o escritório.
+
+Falo português e inglês.
+
+Gosto de futebol e de café.
+
+Tenho um gato. Tenho uma irmã.
+
+Estou em Nova York agora. Estou no escritório e estou contente em falar português com eles.
+```
+
+**Step 4: Phonetic reduction (colloquial speech)**
+```
+Sô o Carlos. Sô brasileiro, de São Paulo. Sô analista e sô solteiro. Sô colega do John e da Sarah.
+
+Moro em Nova York, no Brooklyn. Trabalho na Acme como analista.
+
+Vou de ônibus pro escritório.
+
+Falo português e inglês.
+
+Gosto de futebol e de café.
+
+Tenho um gato. Tenho uma irmã.
+
+Tô em Nova York agora. Tô no escritório e tô contente em falá português com eles.
 ```
 
 ---
