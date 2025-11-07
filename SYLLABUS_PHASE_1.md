@@ -372,3 +372,252 @@ Tenho dois irmãos e uma irmã.
 - **Then:** Introduce **ele/ela** (he/she) to describe others
 - **Method:** Same verb-by-verb exhaustion with ele/ela
 - **Rationale:** Can now describe others' introductions
+
+---
+
+# Phase 2 Syllabus - Describing Others (Ele/Ela)
+
+**Goal:** Students can describe others using third person singular (ele/ela).
+
+**Method:** Same verb-by-verb exhaustion as Phase 1, now with ele/ela conjugations.
+
+**Verb Sequence:**
+1. Ele é
+2. Ele mora
+3. Ele trabalha
+4. Ele fala
+5. Ele gosta
+6. Ele está
+7. Ele vai
+8. Ele tem
+
+---
+
+## Verb 1: Ele é / Ela é (to be - permanent/identity)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 1.1: Ele é o [name] / Ela é a [name]
+- **Structure:** Ele/Ela é + definite article + name
+- **Gender:** o (masculine) / a (feminine)
+- **Usage:** Introducing someone else by name
+
+### Pattern 1.2: Ele é [profession] / Ela é [profession]
+- **Structure:** Ele/Ela é + profession noun
+- **Gender agreement:** Profession changes for masculine/feminine
+- **Usage:** Stating someone's profession
+
+### Pattern 1.3: Ele é [nationality] / Ela é [nationality]
+- **Structure:** Ele/Ela é + nationality adjective
+- **Gender agreement:** Nationality changes for masculine/feminine
+- **Usage:** Stating someone's nationality
+
+### Pattern 1.4: Ele é de [city] / Ela é de [city]
+- **Structure:** Ele/Ela é de + city name
+- **Preposition:** de (from)
+- **Usage:** Stating city of origin
+
+### Pattern 1.5: Ele é do/da/dos/das [place] / Ela é do/da/dos/das [place]
+- **Structure:** Ele/Ela é + de+article + place name
+- **Contractions:** do/da/dos/das
+- **Usage:** Stating country/region of origin (when place has article)
+
+### Pattern 1.6: Ele é [characteristic] / Ela é [characteristic]
+- **Structure:** Ele/Ela é + adjective
+- **Gender agreement:** Adjective changes for masculine/feminine
+- **Usage:** Stating permanent characteristics
+
+---
+
+## Verb 2: Ele mora / Ela mora (to live/reside)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 2.1: Ele mora em [city] / Ela mora em [city]
+- **Structure:** Ele/Ela mora em + city name
+- **Preposition:** em (in)
+- **Usage:** Stating where someone lives (city without article)
+
+### Pattern 2.2: Ele mora no/na/nos/nas [place] / Ela mora no/na/nos/nas [place]
+- **Structure:** Ele/Ela mora + em+article + place name
+- **Contractions:** no/na/nos/nas
+- **Usage:** Stating where someone lives (country/place with article)
+
+### Pattern 2.3: Ele mora na rua [street] / Ela mora na rua [street]
+- **Structure:** Ele/Ela mora na rua + street name
+- **Fixed:** "rua" is feminine, always "na rua"
+- **Usage:** Stating someone's street
+
+### Pattern 2.4: Ele mora na avenida [avenue] / Ela mora na avenida [avenue]
+- **Structure:** Ele/Ela mora na avenida + avenue name
+- **Fixed:** "avenida" is feminine, always "na avenida"
+- **Usage:** Stating someone's avenue
+
+---
+
+## Verb 3: Ele trabalha / Ela trabalha (to work)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 3.1: Ele trabalha em [city] / Ela trabalha em [city]
+- **Structure:** Ele/Ela trabalha em + city name
+- **Preposition:** em (in)
+- **Usage:** Stating city where someone works
+
+### Pattern 3.2: Ele trabalha no/na [workplace] / Ela trabalha no/na [workplace]
+- **Structure:** Ele/Ela trabalha + em+article + workplace noun
+- **Contractions:** no (masculine) / na (feminine)
+- **Usage:** Stating where someone works (specific workplace)
+
+### Pattern 3.3: Ele trabalha como [profession] / Ela trabalha como [profession]
+- **Structure:** Ele/Ela trabalha como + profession
+- **Preposition:** como (as)
+- **Usage:** Stating what someone works as
+
+---
+
+## Verb 4: Ele fala / Ela fala (to speak)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 4.1: Ele fala [language] / Ela fala [language]
+- **Structure:** Ele/Ela fala + language name
+- **No article:** Languages don't take articles
+- **Usage:** Stating languages someone speaks
+
+### Pattern 4.2: Ele fala [language] e [language] / Ela fala [language] e [language]
+- **Structure:** Ele/Ela fala + language + e + language
+- **Conjunction:** e (and)
+- **Usage:** Stating multiple languages
+
+---
+
+## Verb 5: Ele gosta / Ela gosta (to like)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 5.1: Ele gosta de [thing] / Ela gosta de [thing]
+- **Structure:** Ele/Ela gosta de + noun (no article)
+- **Fixed preposition:** de (of)
+- **Usage:** Stating things someone likes (generic/uncountable)
+
+### Pattern 5.2: Ele gosta do/da/dos/das [thing] / Ela gosta do/da/dos/das [thing]
+- **Structure:** Ele/Ela gosta + de+article + specific noun
+- **Contractions:** do/da/dos/das
+- **Usage:** Stating specific things someone likes
+
+### Pattern 5.3: Ele gosta de [infinitive] / Ela gosta de [infinitive]
+- **Structure:** Ele/Ela gosta de + verb infinitive
+- **Fixed preposition:** de
+- **Usage:** Stating activities someone likes to do
+
+---
+
+## Verb 6: Ele está / Ela está (to be - temporary/location)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 6.1: Ele está em [city] / Ela está em [city]
+- **Structure:** Ele/Ela está em + city name
+- **Preposition:** em (in/at)
+- **Usage:** Stating current location (city)
+
+### Pattern 6.2: Ele está no/na [place] / Ela está no/na [place]
+- **Structure:** Ele/Ela está + em+article + place name
+- **Contractions:** no (masculine) / na (feminine)
+- **Usage:** Stating current location (place with article)
+
+### Pattern 6.3: Ele está [adjective] / Ela está [adjective]
+- **Structure:** Ele/Ela está + adjective describing temporary state
+- **Gender agreement:** Adjective changes for masculine/feminine
+- **Usage:** Stating current state or emotion
+
+### Pattern 6.4: Ele está [adjective] em [infinitive] / Ela está [adjective] em [infinitive]
+- **Structure:** Ele/Ela está + adjective + em + verb infinitive
+- **Preposition:** em (to/in)
+- **Usage:** Expressing emotion about doing something
+- **Example:** Ele está contente em falar português
+
+---
+
+## Verb 7: Ele vai / Ela vai (to go - transportation)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 7.1: Ele vai de [transportation] para [place] / Ela vai de [transportation] para [place]
+- **Structure:** Ele/Ela vai de + means of transportation + para + destination
+- **Preposition:** de (by/with)
+- **Usage:** Stating how someone gets to places using transportation
+- **Examples:**
+  - Ele vai de carro para o trabalho
+  - Ela vai de ônibus para o escritório
+  - Ele vai de metrô para casa
+
+---
+
+## Verb 8: Ele tem / Ela tem (to have - possession)
+
+Students should be able to produce these statement patterns:
+
+### Pattern 8.1: Ele tem um/uma [thing/person] / Ela tem um/uma [thing/person]
+- **Structure:** Ele/Ela tem + um/uma + singular noun
+- **Gender agreement:** um (masculine) / uma (feminine)
+- **Usage:** Stating someone has one thing or person
+- **Examples:**
+  - Ele tem um irmão
+  - Ela tem uma irmã
+
+### Pattern 8.2: Ele tem dois/duas [things/people] / Ela tem dois/duas [things/people]
+- **Structure:** Ele/Ela tem + dois/duas + plural noun
+- **Gender agreement:** dois (masculine) / duas (feminine)
+- **Usage:** Stating someone has two things or people
+- **Examples:**
+  - Ele tem dois irmãos
+  - Ela tem duas irmãs
+
+### Pattern 8.3: Ele tem três/quatro [things/people] / Ela tem três/quatro [things/people]
+- **Structure:** Ele/Ela tem + três/quatro + plural noun
+- **No gender agreement:** três and quatro stay the same
+- **Usage:** Stating someone has three or four things or people
+
+---
+
+## Phase 2 Summary
+
+### Verbs Covered:
+1. ✅ **Ele é / Ela é** - Identity, profession, origin, characteristics (6 patterns)
+2. ✅ **Ele mora / Ela mora** - Residence location (4 patterns)
+3. ✅ **Ele trabalha / Ela trabalha** - Work location and occupation (3 patterns)
+4. ✅ **Ele fala / Ela fala** - Languages spoken (2 patterns)
+5. ✅ **Ele gosta / Ela gosta** - Preferences and likes (3 patterns)
+6. ✅ **Ele está / Ela está** - Current location and temporary states (4 patterns)
+7. ✅ **Ele vai / Ela vai** - Transportation (1 pattern)
+8. ✅ **Ele tem / Ela tem** - Possession and counting (3 patterns)
+
+### Total Patterns: 26 (same as Phase 1)
+
+### Complete Description After Phase 2:
+
+Students can confidently describe someone else:
+```
+Ele é o John.                      (name)
+Ele é americano, de Nova York.     (nationality, origin)
+Ele é analista.                    (profession)
+
+Ele mora em Nova York, na avenida Broadway.  (residence)
+
+Ele trabalha na XYZ.               (workplace)
+
+Ele vai de metrô para o trabalho.  (transportation)
+
+Ele fala inglês e português.       (languages)
+
+Ele gosta de música e de viajar.   (preferences)
+
+Ele está em Nova York.             (current location)
+E está contente em falar português. (temporary state + emotion)
+
+Ele tem dois irmãos e uma irmã.    (possession/family)
+```
+
+**Note:** The same patterns work for **Ela** (she) with appropriate gender agreement on adjectives, professions, and nationalities.
