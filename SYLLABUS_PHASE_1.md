@@ -166,15 +166,15 @@ Students can confidently introduce themselves:
 Eu sou o John.                     (name)
 Eu sou americano.                  (nationality)
 Eu sou dos Estados Unidos.         (origin)
-Eu sou professor.                  (profession)
+Eu sou analista.                   (profession)
 Eu sou alto.                       (characteristic)
 
 Eu moro em Nova York.              (city)
 Eu moro na avenida Broadway.       (avenue)
 
 Eu trabalho em Nova York.          (work city)
-Eu trabalho no hospital.           (workplace)
-Eu trabalho como professor.        (occupation)
+Eu trabalho no banco.              (workplace)
+Eu trabalho como analista.         (occupation)
 
 Eu falo inglês e português.        (languages)
 
@@ -207,13 +207,13 @@ After mastering all 5 verbs with explicit "eu", students learn:
 Eu sou o John.
 Eu sou americano.
 Eu sou de Nova York.
-Eu sou professor.
+Eu sou analista.
 
 Eu moro em Nova York.
 Eu moro na avenida Broadway.
 
 Eu trabalho em Nova York.
-Eu trabalho no hospital.
+Eu trabalho no banco.
 
 Eu falo inglês e português.
 
@@ -226,13 +226,13 @@ Eu gosto de viajar.
 Sou o John.
 Sou americano.
 Sou de Nova York.
-Sou professor.
+Sou analista.
 
 Moro em Nova York.
 Moro na avenida Broadway.
 
 Trabalho em Nova York.
-Trabalho no hospital.
+Trabalho no banco.
 
 Falo inglês e português.
 
@@ -242,9 +242,9 @@ Gosto de viajar.
 
 **Step 2 (Concatenated - natural introduction):**
 ```
-Sou o John. Sou americano, de Nova York. Sou professor.
+Sou o John. Sou americano, de Nova York. Sou analista.
 
-Moro em Nova York, na avenida Broadway. Trabalho no hospital.
+Moro em Nova York, na avenida Broadway. Trabalho no banco.
 
 Falo inglês e português.
 
