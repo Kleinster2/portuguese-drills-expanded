@@ -102,9 +102,60 @@
 - Shows "também" can appear at beginning OR end of sentence
 - Natural variation in Portuguese word order
 
+### NEW Step 4: Phonetic Reduction
+- **sou** → **sô**
+- **estou** → **tô**
+- **para o** → **pro**
+- **viajar** → **viajá** (infinitive -r dropped)
+- **falar** → **falá** (infinitive -r dropped)
+
 ---
 
-## 3. A GENTE - we informal (Singular Conjugation for Plural Meaning)
+## 3. CARLOS - eu (Brazilian Colleague)
+
+### NEW Character
+- **o Carlos** (Carlos)
+- Brazilian male colleague at Acme
+
+### NEW Adjectives (Masculine)
+- **brasileiro** (Brazilian)
+- **solteiro** (single/unmarried)
+
+### NEW Nouns (Masculine)
+- **o colega** (colleague)
+- **São Paulo** (city in Brazil)
+- **Brooklyn** (neighborhood in NYC)
+- **o futebol** (soccer/football)
+- **o gato** (cat - male)
+- **o ônibus** (bus)
+- **o escritório** (office)
+
+### NEW Nouns (Feminine)
+- **uma irmã** (one sister - singular)
+
+### NEW Expressions
+- **colega do John e da Sarah** (colleague of John and Sarah)
+- Reinforces **do** = de + o (masculine)
+- Reinforces **da** = de + a (feminine)
+
+### Transportation Variation
+- **Vou de ônibus** (I go by bus) - contrasts with John/Sarah's "vou de metrô"
+- **para o escritório** (to the office) - introduces "escritório" vs "trabalho"
+
+### NEW Step 4: Phonetic Reduction
+Same reductions as JOHN and SARAH
+
+### Teaching Point
+- Third character creates trio dynamics
+- Native Portuguese speaker (Brazilian)
+- Introduces Brazilian Portuguese context
+- Different marital status (solteiro vs casado/casada)
+- Different neighborhood (Brooklyn vs Manhattan implied)
+- Different transportation (ônibus vs metrô)
+
+---
+
+## 4. A GENTE - we informal (Singular Conjugation for Plural Meaning)
 
 ### NEW Pronouns
 - **a gente** (we - informal, literally "the people")
@@ -136,7 +187,7 @@
 
 ---
 
-## 4. VOCÊ - addressing someone (Second Person, Singular Conjugation)
+## 5. VOCÊ - addressing someone (Second Person, Singular Conjugation)
 
 ### NEW Pronouns
 - **você** (you - singular, formal)
@@ -163,7 +214,7 @@
 
 ---
 
-## 5. VOCÊS - addressing multiple people (Second Person Plural)
+## 6. VOCÊS - addressing multiple people (Second Person Plural)
 
 ### NEW Pronouns
 - **vocês** (you all, y'all - plural)
@@ -192,7 +243,7 @@
 
 ---
 
-## 6. ELE - describing a male (Third Person Singular Masculine)
+## 7. ELE - describing a male (Third Person Singular Masculine)
 
 ### NEW Pronouns
 - **ele** (he)
@@ -217,7 +268,7 @@
 
 ---
 
-## 7. ELA - describing a female (Third Person Singular Feminine)
+## 8. ELA - describing a female (Third Person Singular Feminine)
 
 ### NEW Pronouns
 - **ela** (she)
@@ -232,7 +283,7 @@
 
 ---
 
-## 8. NÓS - we formal (First Person Plural)
+## 9. NÓS - we formal (First Person Plural)
 
 ### NEW Pronouns
 - **nós** (we - formal/standard)
@@ -262,7 +313,7 @@
 
 ---
 
-## 9. ELES - describing multiple people (Third Person Plural)
+## 10. ELES - describing multiple people (Third Person Plural)
 
 ### NEW Pronouns
 - **eles** (they - masculine or mixed gender)
@@ -294,8 +345,8 @@
 
 ## Categories Introduced
 
-### 1. Pronouns (9 total)
-- eu, você, ele, ela, a gente, nós, vocês, eles, (elas implied)
+### 1. Pronouns (10 progressions total)
+- eu (3 characters: John, Sarah, Carlos), você, ele, ela, a gente, nós, vocês, eles, (elas implied)
 
 ### 2. Verbs (8 total, all conjugated forms)
 - ser, morar, trabalhar, falar, gostar, ir, ter, estar
@@ -340,14 +391,22 @@
 
 ## Pedagogical Progression
 
-1. **JOHN**: Full foundation - all basic elements
-2. **SARAH**: Adds "também" variation (beginning/end positions)
-3. **A GENTE**: Introduces singular conjugation for plural meaning
-4. **VOCÊ**: Reuses ele/ela conjugations in new context (addressing)
-5. **VOCÊS**: First plural conjugations
-6. **ELE**: Third person singular (describing others)
-7. **ELA**: Reinforces with feminine agreement
-8. **NÓS**: First person plural, can drop pronoun
-9. **ELES**: Third person plural (describing others)
+1. **JOHN**: Full foundation - all basic elements + phonetic reduction (Step 4)
+2. **SARAH**: Adds "também" variation (beginning/end positions) + phonetic reduction
+3. **CARLOS**: Brazilian colleague, introduces new nationality/context + phonetic reduction
+4. **A GENTE**: Introduces singular conjugation for plural meaning
+5. **VOCÊ**: Reuses ele/ela conjugations in new context (addressing)
+6. **VOCÊS**: First plural conjugations
+7. **ELE**: Third person singular (describing others)
+8. **ELA**: Reinforces with feminine agreement
+9. **NÓS**: First person plural, can drop pronoun
+10. **ELES**: Third person plural (describing others)
 
-**Total New Elements Introduced:** ~100+ vocabulary items, 64 unique verb conjugations (8 verbs × 8 forms), multiple grammar patterns
+**Step 4: Phonetic Reduction (Colloquial Speech)**
+- Introduced in JOHN, SARAH, and CARLOS progressions
+- **sou** → **sô**, **estou** → **tô**
+- **para o** → **pro**
+- Infinitive -r dropping: **falar** → **falá**, **viajar** → **viajá**
+- Teaches spoken Brazilian Portuguese patterns
+
+**Total New Elements Introduced:** ~110+ vocabulary items, 64 unique verb conjugations (8 verbs × 8 forms), phonetic reductions, multiple grammar patterns
