@@ -487,7 +487,7 @@ Estamos em Nova York agora. Estamos em casa e estamos contentes em falar portugu
 
 **VOCÊ - Complete Progression (addressing Sarah):**
 
-**Step 1: With "você" (explicit)**
+**Step 1: Full statements**
 ```
 Você é a Sarah.
 Você é americana.
@@ -517,58 +517,28 @@ Você está em casa.
 Você está contente em falar português.
 ```
 
-**Step 2: Without "você" (implicit)**
+**Step 2: Concatenated (natural flow)**
 ```
-É a Sarah.
-É americana.
-É de Miami.
-É analista.
-É casada com o John.
+Você é a Sarah. Você é americana, de Miami. Você é analista e você é casada com o John.
 
-Mora em Nova York.
-Mora na avenida das Américas.
+Você mora em Nova York, na avenida das Américas. Você trabalha na Acme como analista.
 
-Trabalha em Nova York.
-Trabalha na Acme.
-Trabalha como analista.
+Você vai de metrô para o trabalho.
 
-Fala inglês e um pouco de espanhol.
+Você fala inglês e um pouco de espanhol.
 
-Gosta de música.
-Gosta de viajar.
+Você gosta de música e de viajar.
 
-Vai de metrô para o trabalho.
+Você tem um cachorro e uma gata. Você tem dois irmãos e duas irmãs.
 
-Tem um cachorro e uma gata.
-Tem dois irmãos e duas irmãs.
-
-Está em Nova York agora.
-Está em casa.
-Está contente em falar português.
-```
-
-**Step 3: Concatenated (natural flow)**
-```
-É a Sarah. É americana, de Miami. É analista e é casada com o John.
-
-Mora em Nova York, na avenida das Américas. Trabalha na Acme como analista.
-
-Vai de metrô para o trabalho.
-
-Fala inglês e um pouco de espanhol.
-
-Gosta de música e de viajar.
-
-Tem um cachorro e uma gata. Tem dois irmãos e duas irmãs.
-
-Está em Nova York agora. Está em casa e está contente em falar português.
+Você está em Nova York agora. Você está em casa e você está contente em falar português.
 ```
 
 ---
 
 **VOCÊS - Complete Progression (addressing John & Sarah):**
 
-**Step 1: With "vocês" (explicit)**
+**Step 1: Full statements**
 ```
 Vocês são o John e a Sarah.
 Vocês são americanos.
@@ -598,51 +568,21 @@ Vocês estão em casa.
 Vocês estão contentes em falar português.
 ```
 
-**Step 2: Without "vocês" (implicit)**
+**Step 2: Concatenated (natural flow)**
 ```
-São o John e a Sarah.
-São americanos.
-São de Miami.
-São analistas.
-São casados.
+Vocês são o John e a Sarah. Vocês são americanos, de Miami. Vocês são analistas e vocês são casados.
 
-Moram em Nova York.
-Moram na avenida das Américas.
+Vocês moram em Nova York, na avenida das Américas. Vocês trabalham na Acme como analistas.
 
-Trabalham em Nova York.
-Trabalham na Acme.
-Trabalham como analistas.
+Vocês vão de metrô para o trabalho.
 
-Falam inglês e um pouco de espanhol.
+Vocês falam inglês e um pouco de espanhol.
 
-Gostam de música.
-Gostam de viajar.
+Vocês gostam de música e de viajar.
 
-Vão de metrô para o trabalho.
+Vocês têm um cachorro e uma gata. Vocês têm dois irmãos e duas irmãs cada.
 
-Têm um cachorro e uma gata.
-Têm dois irmãos e duas irmãs cada.
-
-Estão em Nova York agora.
-Estão em casa.
-Estão contentes em falar português.
-```
-
-**Step 3: Concatenated (natural flow)**
-```
-São o John e a Sarah. São americanos, de Miami. São analistas e são casados.
-
-Moram em Nova York, na avenida das Américas. Trabalham na Acme como analistas.
-
-Vão de metrô para o trabalho.
-
-Falam inglês e um pouco de espanhol.
-
-Gostam de música e de viajar.
-
-Têm um cachorro e uma gata. Têm dois irmãos e duas irmãs cada.
-
-Estão em Nova York agora. Estão em casa e estão contentes em falar português.
+Vocês estão em Nova York agora. Vocês estão em casa e vocês estão contentes em falar português.
 ```
 
 ---
