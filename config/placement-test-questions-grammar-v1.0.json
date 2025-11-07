@@ -437,22 +437,22 @@
       "unit": 9,
       "phase": 1,
       "type": "production",
-      "en": "I work inside the hospital",
+      "en": "I work at the hospital",
       "question": "Complete the sentence:",
-      "template": "Eu trabalho __ hospital",
+      "template": "Eu __ no hospital",
       "chips": [
-        "no",
-        "na",
-        "em",
-        "do",
-        "da",
-        "ao",
-        "à",
-        "o",
-        "a",
-        "nos"
+        "trabalho",
+        "trabalha",
+        "trabalhamos",
+        "trabalham",
+        "trabalhar",
+        "trabalhei",
+        "trabalhava",
+        "trabalharia",
+        "trabalhe",
+        "trabalhasse"
       ],
-      "correct": "no",
+      "correct": "trabalho",
       "unitTopic": "Prepositions em/no/na"
     },
     {
@@ -497,8 +497,8 @@
       "unitTopic": "Regular -ar Verbs"
     },
     {
-      "id": 24,
-      "unit": 11,
+      "id": 31,
+      "unit": 21,
       "phase": 1,
       "type": "production",
       "en": "I stay at home",
@@ -520,8 +520,8 @@
       "unitTopic": "Ficar"
     },
     {
-      "id": 25,
-      "unit": 11,
+      "id": 32,
+      "unit": 21,
       "phase": 1,
       "type": "production",
       "en": "I stay here",
@@ -543,7 +543,7 @@
       "unitTopic": "Ficar"
     },
     {
-      "id": 26,
+      "id": 24,
       "unit": 12,
       "phase": 1,
       "type": "comprehension",
@@ -561,7 +561,7 @@
       "unitTopic": "Ser vs Estar"
     },
     {
-      "id": 27,
+      "id": 25,
       "unit": 12,
       "phase": 1,
       "type": "production",
@@ -584,7 +584,7 @@
       "unitTopic": "Ser vs Estar"
     },
     {
-      "id": 28,
+      "id": 26,
       "unit": 13,
       "phase": 1,
       "type": "production",
@@ -607,7 +607,7 @@
       "unitTopic": "Prepositions with Location"
     },
     {
-      "id": 29,
+      "id": 27,
       "unit": 16,
       "phase": 1,
       "type": "production",
@@ -630,7 +630,7 @@
       "unitTopic": "Ter"
     },
     {
-      "id": 30,
+      "id": 28,
       "unit": 16,
       "phase": 1,
       "type": "production",
@@ -901,7 +901,7 @@
       "unitTopic": "1st Person Plural"
     },
     {
-      "id": 31,
+      "id": 29,
       "unit": 19,
       "phase": 1,
       "type": "production",
@@ -924,7 +924,7 @@
       "unitTopic": "Gostar de"
     },
     {
-      "id": 32,
+      "id": 30,
       "unit": 19,
       "phase": 1,
       "type": "production",
