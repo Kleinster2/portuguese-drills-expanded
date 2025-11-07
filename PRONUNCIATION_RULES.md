@@ -162,9 +162,19 @@ When epenthetic [i] doesn't create ti/di:
 ### **5a: -em → [eyn]**
 
 Final -em becomes nasal [e] + [y] glide + [n]:
-- em (preposition) → em[eyn]
+
+**Short words (show full syllable with consonant for clarity):**
+- em (preposition) → em[eyn] (no initial consonant)
+- bem → bem[beyn]
+- sem → sem[seyn]
+- tem → tem[teyn]
+- quem → quem[keyn]
+- cem → cem[seyn]
+
+**Long words (show ending only):**
 - também → também[eyn]
 - alguém → alguém[eyn]
+- ninguém → ninguém[eyn]
 
 ### **5b: -am → [ãwn]**
 
@@ -172,18 +182,30 @@ Final -am becomes nasal [a] + [w] glide + [n]:
 - falam → falam[ãwn]
 - estavam → estavam[ãwn]
 
+**Note**: This ending appears primarily in verb conjugations, so full syllable notation is typically not needed.
+
 ### **5c: -im → [ing]**
 
 Final -im becomes nasal [i] + velar nasal:
-- sim → sim[ing]
-- assim → assim[ing]
+
+**Short words (show full syllable with consonant for clarity):**
+- sim → sim[sing]
+- assim → assim[ssing]
+
+**Long words (show ending only):**
 - jardim → jardim[ing]
 
 ### **5d: -om → [oun]**
 
 Final -om becomes [o] + [u] glide + [n]:
-- com (preposition) → com[oun]
-- som → som[oun]
+
+**Short words (show full syllable with consonant for clarity):**
+- com (preposition) → com[coun]
+- som → som[soun]
+- bom → bom[boun]
+
+**Long words (show ending only):**
+- (rare in Portuguese)
 
 ### **5e: -um/uma → [ũm]/[ũma]**
 
@@ -263,10 +285,10 @@ Words with syllable-final L in the middle, or multiple syllable-final L's:
 | 3c | ti/di → [tchi]/[dji] | [tchi]/[dji] | notícia: no[tchi]cia |
 | 4a | Epenthetic + ti/di | [chi]/[ji] | Internet[chi], iPad[ji] |
 | 4b | Epenthetic + other | [i] | Facebook[i], York[i] |
-| 5a | Final -em → [eyn] | word[eyn] | em[eyn], também[eyn] |
+| 5a | Final -em → [eyn] | Short: word[Ceyn]<br>Long: word[eyn] | em[eyn], bem[beyn], sem[seyn]<br>também[eyn], alguém[eyn] |
 | 5b | Final -am → [ãwn] | word[ãwn] | falam[ãwn] |
-| 5c | Final -im → [ing] | word[ing] | sim[ing], assim[ing] |
-| 5d | Final -om → [oun] | word[oun] | com[oun], som[oun] |
+| 5c | Final -im → [ing] | Short: word[Cing]<br>Long: word[ing] | sim[sing], assim[ssing]<br>jardim[ing] |
+| 5d | Final -om → [oun] | Short: word[Coun]<br>Long: word[oun] | com[coun], som[soun], bom[boun] |
 | 5e | Final -um/uma → [ũm]/[ũma] | word[ũm]/word[ũma] | um[ũm], uma[ũma] |
 | 6a | Simple word-final l | word~~l~~[u] | Brasil → Brasi~~l~~[u], futebol → futebo~~l~~[u] |
 | 6b | Complex/multiple l's | word[fullword] | álcool → álcool[áucool], alto → alto[auto] |
@@ -310,9 +332,11 @@ Not annotated in Steps 1-4:
 Show obligatory pronunciation with compact notation:
 ```
 Eu sou o[u] John.
-Eu falo[u] inglês e[i] um[ũm] pouco[u] de[dji] espanhol.
+Eu falo[u] inglês e[i] um[ũm] pouco[u] de[dji] espanho~~l~~[u].
 Eu tenho[u] um[ũm] cachorro[u] e[i] uma[ũma] gata.
 Eu moro[u] em[eyn] Nova York[i].
+Eu estou bem[beyn] e[i] você também[eyn]?
+Eu gosto[u] muito[u] de[dji] futebo~~l~~[u] brasileiro[u].
 ```
 
 ### **Step 5: Phonetic Orthography**
@@ -343,11 +367,11 @@ Moro eyn Nova Yorki.
 Eu sou o[u] John.
 Eu sou americano[u].
 Eu sou de[dji] Miami.
-Eu sou casado[u] com[oun] a Sarah.
+Eu sou casado[u] com[coun] a Sarah.
 
 Eu moro[u] em[eyn] Nova York[i].
 Eu trabalho[u] como[u] analista.
-Eu falo[u] inglês e[i] um[ũm] pouco[u] de[dji] espanhol.
+Eu falo[u] inglês e[i] um[ũm] pouco[u] de[dji] espanho~~l~~[u].
 Eu gosto[u] de[dji] música.
 Eu vou de[dji] metrô para o[u] trabalho[u].
 Eu tenho[u] um[ũm] cachorro[u] e[i] uma[ũma] gata.
@@ -372,10 +396,17 @@ When adding new vocabulary, check for **6 obligatory rules** (Steps 1-4):
 8. ✅ **Rule 1**: Is it the article "o"? → Always o[u]
 9. ✅ **Rule 1**: Is it a contraction do/no? → Always do[u]/no[u]
 10. ✅ **Rule 4**: Is it a borrowed word ending in consonant? → Add epenthetic [i], check for ti/di
-11. ✅ **Rule 5**: Does it end in -em? → Add [eyn]
-12. ✅ **Rule 5**: Does it end in -am? → Add [ãwn]
-13. ✅ **Rule 5**: Does it end in -im? → Add [ing]
-14. ✅ **Rule 5**: Does it end in -om? → Add [oun]
+11. ✅ **Rule 5**: Does it end in -em?
+    - **Short words** (1 syllable with consonant): Show full syllable → bem[beyn], sem[seyn], tem[teyn]
+    - **Short words** (1 syllable, no consonant): Just ending → em[eyn]
+    - **Long words**: Just ending → também[eyn], alguém[eyn]
+12. ✅ **Rule 5**: Does it end in -am? → Add [ãwn] (falam[ãwn])
+13. ✅ **Rule 5**: Does it end in -im?
+    - **Short words**: Show full syllable → sim[sing], assim[ssing]
+    - **Long words**: Just ending → jardim[ing]
+14. ✅ **Rule 5**: Does it end in -om?
+    - **Short words**: Show full syllable → com[coun], som[soun], bom[boun]
+    - **Long words**: Just ending (rare)
 15. ✅ **Rule 5**: Does it end in -um/uma? → Add [ũm]/[ũma]
 16. ✅ **Rule 6**: Does it have syllable-final l?
     - **Simple (one L only)**: Strike through the final l and add [u] (Brasil → Brasi~~l~~[u], futebol → futebo~~l~~[u])

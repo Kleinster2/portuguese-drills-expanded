@@ -161,17 +161,28 @@ def apply_rule_7a(text: str) -> str:
     # Only match if not followed by annotation bracket
     return re.sub(r'\b\w+l\b(?!\[)', replace_final_l, text)
 
-def apply_rule_6(text: str) -> str:
-    """Rule 6: Nasal vowel endings."""
+def apply_rule_5(text: str) -> str:
+    """Rule 5: Nasal vowel endings."""
     # Don't annotate words with tilde
 
-    # Rule 6a: -em → [eyn] (not already annotated)
+    # Rule 5a: -em → [eyn]
+    # Short words (show full syllable with consonant for clarity)
+    text = re.sub(r'\b(bem)(?!\[)\b', r'bem[beyn]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(sem)(?!\[)\b', r'sem[seyn]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(tem)(?!\[)\b', r'tem[teyn]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(quem)(?!\[)\b', r'quem[keyn]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(cem)(?!\[)\b', r'cem[seyn]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(nem)(?!\[)\b', r'nem[neyn]', text, flags=re.IGNORECASE)
+
+    # em (no initial consonant, just ending)
+    text = re.sub(r'\b(em)(?!\[)\b', r'em[eyn]', text)
+
+    # Long words (show ending only)
     text = re.sub(r'\b(também)(?!\[)\b', r'\1[eyn]', text, flags=re.IGNORECASE)
     text = re.sub(r'\b(alguém)(?!\[)\b', r'\1[eyn]', text, flags=re.IGNORECASE)
     text = re.sub(r'\b(ninguém)(?!\[)\b', r'\1[eyn]', text, flags=re.IGNORECASE)
-    text = re.sub(r'\b(em)(?!\[)\b', r'em[eyn]', text)
 
-    # Rule 6b: -am → [ãwn] (verb endings, not already annotated)
+    # Rule 5b: -am → [ãwn] (verb endings, not already annotated)
     def annotate_am(match):
         word = match.group(0)
         if has_tilde(word) or '[' in word:
@@ -179,15 +190,21 @@ def apply_rule_6(text: str) -> str:
         return word + '[ãwn]'
     text = re.sub(r'\b(\w+am)\b(?!\[)', annotate_am, text)
 
-    # Rule 6c: -im → [ing]
-    text = re.sub(r'\b(sim)(?!\[)\b', r'sim[ing]', text, flags=re.IGNORECASE)
-    text = re.sub(r'\b(assim)(?!\[)\b', r'assim[ing]', text, flags=re.IGNORECASE)
+    # Rule 5c: -im → [ing]
+    # Short words (show full syllable with consonant for clarity)
+    text = re.sub(r'\b(sim)(?!\[)\b', r'sim[sing]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(assim)(?!\[)\b', r'assim[ssing]', text, flags=re.IGNORECASE)
 
-    # Rule 6d: -om → [oun]
-    text = re.sub(r'\b(com)(?!\[)\b', r'com[oun]', text)
-    text = re.sub(r'\b(som)(?!\[)\b', r'som[oun]', text, flags=re.IGNORECASE)
+    # Long words (show ending only)
+    text = re.sub(r'\b(jardim)(?!\[)\b', r'jardim[ing]', text, flags=re.IGNORECASE)
 
-    # Rule 6e: um/uma → [ũm]/[ũma]
+    # Rule 5d: -om → [oun]
+    # Short words (show full syllable with consonant for clarity)
+    text = re.sub(r'\b(com)(?!\[)\b', r'com[coun]', text)
+    text = re.sub(r'\b(som)(?!\[)\b', r'som[soun]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(bom)(?!\[)\b', r'bom[boun]', text, flags=re.IGNORECASE)
+
+    # Rule 5e: um/uma → [ũm]/[ũma]
     text = re.sub(r'\b(um)(?!\[)\b', r'um[ũm]', text)
     text = re.sub(r'\b(uma)(?!\[)\b', r'uma[ũma]', text)
     text = re.sub(r'\b(algum)(?!\[)\b', r'algum[ũm]', text, flags=re.IGNORECASE)
@@ -322,7 +339,7 @@ def annotate_pronunciation(text: str, skip_if_annotated: bool = True) -> str:
     text = apply_rule_7a(text)
 
     # Rule 5 (nasal vowels) - BEFORE Rule 1 to prevent "com" issues
-    text = apply_rule_6(text)
+    text = apply_rule_5(text)
 
     # Rule 4 (epenthetic)
     text = apply_rule_4(text)
