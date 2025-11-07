@@ -689,6 +689,57 @@ Ela está em Nova York agora. Ela está em casa e ela está contente em falar po
 
 ---
 
+**ELES - Complete Progression (describing John & Sarah):**
+
+**Step 1: Full statements**
+```
+Eles são o John e a Sarah.
+Eles são americanos.
+Eles são de Miami.
+Eles são analistas.
+Eles são casados.
+
+Eles moram em Nova York.
+Eles moram na avenida das Américas.
+
+Eles trabalham em Nova York.
+Eles trabalham na Acme.
+Eles trabalham como analistas.
+
+Eles falam inglês e um pouco de espanhol.
+
+Eles gostam de música.
+Eles gostam de viajar.
+
+Eles vão de metrô para o trabalho.
+
+Eles têm um cachorro e uma gata.
+Eles têm dois irmãos e duas irmãs cada.
+
+Eles estão em Nova York agora.
+Eles estão em casa.
+Eles estão contentes em falar português.
+```
+
+**Step 2: Concatenated (natural flow)**
+```
+Eles são o John e a Sarah. Eles são americanos, de Miami. Eles são analistas e eles são casados.
+
+Eles moram em Nova York, na avenida das Américas. Eles trabalham na Acme como analistas.
+
+Eles vão de metrô para o trabalho.
+
+Eles falam inglês e um pouco de espanhol.
+
+Eles gostam de música e de viajar.
+
+Eles têm um cachorro e uma gata. Eles têm dois irmãos e duas irmãs cada.
+
+Eles estão em Nova York agora. Eles estão em casa e eles estão contentes em falar português.
+```
+
+---
+
 ## Next Steps After Phase 1
 
 After mastering all 5 verbs with explicit "eu", students learn:
