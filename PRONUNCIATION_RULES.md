@@ -12,88 +12,88 @@ This document defines ALL obligatory pronunciation rules for Brazilian Portugues
 
 ---
 
-## Rule 1: Final Unstressed -o → [u]
+## Rule 1: Final Unstressed -o → [_u_]
 
-**Rule**: Every word ending in unstressed -o is pronounced [u].
+**Rule**: Every word ending in unstressed -o is pronounced [_u_].
 
 **Applies to**: ALL word types
-- Adjectives: americano[u], brasileiro[u], casado[u], solteiro[u]
-- Nouns: cachorro[u], gato[u], trabalho[u], escritório[u], São Paulo[u]
-- Verbs: moro[u], falo[u], gosto[u], tenho[u], trabalho[u]
-- Adverbs: como[u] (as), pouco[u] (a little)
-- **Articles**: o[u] (the)
-- **Contractions**: do[u] (de+o), no[u] (em+o), ao[u] (a+o)
+- Adjectives: americano[_u_], brasileiro[_u_], casado[_u_], solteiro[_u_]
+- Nouns: cachorro[_u_], gato[_u_], trabalho[_u_], escritório[_u_], São Paulo[_u_]
+- Verbs: moro[_u_], falo[_u_], gosto[_u_], tenho[_u_], trabalho[_u_]
+- Adverbs: como[_u_] (as), pouco[_u_] (a little)
+- **Articles**: o[_u_] (the)
+- **Contractions**: do[_u_] (de+o), no[_u_] (em+o), ao[_u_] (a+o)
 
 **Stressed -o stays [o]**:
 - metrô = [metro] (stressed, circumflex)
 - avô = [avo] (stressed)
 
-**Plural -os → [us]**:
-- os[us] (article "the" plural)
-- livros[us], amigos[us], gatos[us]
-- dos[us] (de+os), nos[us] (em+os), aos[us] (a+os)
+**Plural -os → [_us_]**:
+- os[_us_] (article "the" plural)
+- livros[_us_], amigos[_us_], gatos[_us_]
+- dos[_us_] (de+os), nos[_us_] (em+os), aos[_us_] (a+os)
 
-**Notation**: `word[u]` or `word[us]`
+**Notation**: `word[_u_]` or `word[_us_]`
 
 ---
 
-## Rule 2: Final Unstressed -e → [i]
+## Rule 2: Final Unstressed -e → [_i_]
 
-**Rule**: Every word ending in unstressed -e is pronounced [i].
+**Rule**: Every word ending in unstressed -e is pronounced [_i_].
 
 **Applies to**: ALL word types
-- Nouns: nome[i], fome[i], ponte[i], parte[i]
-- Adjectives: forte[i], grande[i], verde[i]
-- Adverbs: onde[i] (where)
-- **Conjunction**: e[i] (and) - ALWAYS
-- **Preposition**: de[i] → but becomes de[dji] due to palatalization (see Rule 3)
+- Nouns: nome[_i_], fome[_i_], ponte[_i_], parte[_i_]
+- Adjectives: forte[_i_], grande[_i_], verde[_i_]
+- Adverbs: onde[_i_] (where)
+- **Conjunction**: e[_i_] (and) - ALWAYS
+- **Preposition**: de[_i_] → but becomes de[_dji_] due to palatalization (see Rule 3)
 
 **Stressed -e stays [e]**:
 - café = [kafe] (stressed, accent)
 - você = [vose] (stressed final syllable)
 
-**Plural -es → [is]**:
-- nomes[is], fortes[is], verdes[is]
+**Plural -es → [_is_]**:
+- nomes[_is_], fortes[_is_], verdes[_is_]
 
-**Notation**: `word[i]` or `word[is]`
+**Notation**: `word[_i_]` or `word[_is_]`
 
 ---
 
-## Rule 3: Palatalization of d/t before [i]
+## Rule 3: Palatalization of d/t before [_i_]
 
-**Rule**: /d/ and /t/ become [dʒ] (dji) and [tʃ] (tchi) before [i] sounds.
+**Rule**: /d/ and /t/ become [dʒ] (dji) and [tʃ] (tchi) before [_i_] sounds.
 
-### **3a: de → de[dji] (ALWAYS)**
+### **3a: de → de[_dji_] (ALWAYS)**
 
 "de" ends in -e → becomes [di] by Rule 2 → d+i palatalization applies
 
-**Result**: de[dji] in ALL contexts, regardless of following word
+**Result**: de[_dji_] in ALL contexts, regardless of following word
 
 Examples:
-- de[dji] Miami (before /m/)
-- de[dji] São Paulo (before /s/)
-- de[dji] futebol (before /f/)
-- de[dji] café (before /k/)
+- de[_dji_] Miami (before /m/)
+- de[_dji_] São Paulo (before /s/)
+- de[_dji_] futebol (before /f/)
+- de[_dji_] café (before /k/)
 
-**Notation**: `de[dji]` - ALWAYS, no exceptions
+**Notation**: `de[_dji_]` - ALWAYS, no exceptions
 
-### **3b: te + i → [tchi]**
+### **3b: te + i → [_tchi_]**
 
-When "te" is followed by [i] sounds (usually within a word at morpheme boundaries):
-- contente[tchi] (conte + nte, final -e becomes [i])
-- parte[i] (no palatalization, just final -e → [i])
+When "te" is followed by [_i_] sounds (usually within a word at morpheme boundaries):
+- contente[_tchi_] (conte + nte, final -e becomes [_i_])
+- parte[_i_] (no palatalization, just final -e → [_i_])
 
-**Note**: This is less common than de[dji] because it requires specific morphological conditions.
+**Note**: This is less common than de[_dji_] because it requires specific morphological conditions.
 
-**Notation**: `contente[tchi]`
+**Notation**: `contente[_tchi_]`
 
 ### **3c: ti/di sequences**
 
 Within words, ti and di always palatalize:
-- notícia: no[tchi]cia
-- partida: par[tchi]da
-- dia: [dji]a
-- médico: mé[dji]co
+- notícia: no[_tchi_]cia
+- partida: par[_tchi_]da
+- dia: [_dji_]a
+- médico: mé[_dji_]co
 
 **Notation**: Mark the syllable where it occurs
 
@@ -109,7 +109,7 @@ Within words, ti and di always palatalize:
 
 **Steps 1-4 (Obligatory):**
 ```
-de[dji] ônibus
+de[_dji_] ônibus
 ```
 - "de" gets palatalization only
 - Two separate words
@@ -128,28 +128,28 @@ djônibus
 
 ---
 
-## Rule 4: Epenthetic [i] on Consonant-Final Words
+## Rule 4: Epenthetic [_i_] on Consonant-Final Words
 
-**Rule**: Portuguese phonotactics don't allow most consonant-final words. Borrowed words get epenthetic [i] added.
+**Rule**: Portuguese phonotactics don't allow most consonant-final words. Borrowed words get epenthetic [_i_] added.
 
 ### **4a: Creates ti/di → Palatalization applies**
 
-When epenthetic [i] creates ti or di sequences:
+When epenthetic [_i_] creates ti or di sequences:
 
-- **Internet** (ends -t) → Interneti → Interne[**ti**] → Internet[chi]
-- **iPad** (ends -d) → iPadi → iPa[**di**] → iPad[ji]
+- **Internet** (ends -t) → Interneti → Interne[**ti**] → Internet[_chi_]
+- **iPad** (ends -d) → iPadi → iPa[**di**] → iPad[_ji_]
 
-**Notation**: Use shorter forms [chi] and [ji] (not [tchi]/[dji]) to distinguish from internal palatalization
+**Notation**: Use shorter forms [_chi_] and [_ji_] (not [_tchi_]/[_dji_]) to distinguish from internal palatalization
 
-### **4b: Other consonants → Just [i]**
+### **4b: Other consonants → Just [_i_]**
 
-When epenthetic [i] doesn't create ti/di:
+When epenthetic [_i_] doesn't create ti/di:
 
-- **Facebook** (ends -k) → Facebooki → Facebook[i]
-- **York** (ends -k) → Yorki → York[i] → Nova York[i]
-- **Whatsapp** (ends -p) → Whatsappi → Whatsapp[i]
+- **Facebook** (ends -k) → Facebooki → Facebook[_i_]
+- **York** (ends -k) → Yorki → York[_i_] → Nova York[_i_]
+- **Whatsapp** (ends -p) → Whatsappi → Whatsapp[_i_]
 
-**Notation**: `word[i]`
+**Notation**: `word[_i_]`
 
 ---
 
@@ -159,106 +159,106 @@ When epenthetic [i] doesn't create ti/di:
 
 **Applies to**: Word-final syllables with m/n
 
-### **5a: -em → [eyn]**
+### **5a: -em → [_eyn_]**
 
 Final -em becomes nasal [e] + [y] glide + [n]:
 
 **Short words (show full syllable with consonant for clarity):**
-- em (preposition) → em[eyn] (no initial consonant)
-- bem → bem[beyn]
-- sem → sem[seyn]
-- tem → tem[teyn]
-- quem → quem[keyn]
-- cem → cem[seyn]
+- em (preposition) → em[_eyn_] (no initial consonant)
+- bem → bem[_beyn_]
+- sem → sem[_seyn_]
+- tem → tem[_teyn_]
+- quem → quem[_keyn_]
+- cem → cem[_seyn_]
 
 **Long words (show ending only):**
-- também → também[eyn]
-- alguém → alguém[eyn]
-- ninguém → ninguém[eyn]
+- também → também[_eyn_]
+- alguém → alguém[_eyn_]
+- ninguém → ninguém[_eyn_]
 
-### **5b: -am → [ãwn]**
+### **5b: -am → [_ãwn_]**
 
 Final -am becomes nasal [a] + [w] glide + [n]:
-- falam → falam[ãwn]
-- estavam → estavam[ãwn]
+- falam → falam[_ãwn_]
+- estavam → estavam[_ãwn_]
 
 **Note**: This ending appears primarily in verb conjugations, so full syllable notation is typically not needed.
 
-### **5c: -im → [ing]**
+### **5c: -im → [_ing_]**
 
-Final -im becomes nasal [i] + velar nasal:
+Final -im becomes nasal [_i_] + velar nasal:
 
 **Short words (show full syllable with consonant for clarity):**
-- sim → sim[sing]
-- assim → assim[ssing]
+- sim → sim[_sing_]
+- assim → assim[_ssing_]
 
 **Long words (show ending only):**
-- jardim → jardim[ing]
+- jardim → jardim[_ing_]
 
-### **5d: -om → [oun]**
+### **5d: -om → [_oun_]**
 
-Final -om becomes [o] + [u] glide + [n]:
+Final -om becomes [o] + [_u_] glide + [n]:
 
 **Short words (show full syllable with consonant for clarity):**
-- com (preposition) → com[coun]
-- som → som[soun]
-- bom → bom[boun]
+- com (preposition) → com[_coun_]
+- som → som[_soun_]
+- bom → bom[_boun_]
 
 **Long words (show ending only):**
 - (rare in Portuguese)
 
-### **5e: -um/uma → [ũm]/[ũma]**
+### **5e: -um/uma → [_ũm_]/[_ũma_]**
 
-Final -um/-uma preserve the nasal [u] + consonant:
-- um (article) → um[ũm]
-- uma (article) → uma[ũma]
-- algum → algum[ũm]
+Final -um/-uma preserve the nasal [_u_] + consonant:
+- um (article) → um[_ũm_]
+- uma (article) → uma[_ũma_]
+- algum → algum[_ũm_]
 
 **Note**: Words with tilde (ão, ões, ãe, etc.) already indicate nasalization in writing and are NOT annotated per pedagogical decision.
 
-**Notation**: `word[eyn]`, `word[ãwn]`, `word[ing]`, `word[oun]`, `word[ũm]`, `word[ũma]`
+**Notation**: `word[_eyn_]`, `word[_ãwn_]`, `word[_ing_]`, `word[_oun_]`, `word[_ũm_]`, `word[_ũma_]`
 
 ---
 
-## Rule 6: Syllable-Final L → [u]
+## Rule 6: Syllable-Final L → [_u_]
 
-**Rule**: The letter "l" at the end of a syllable (coda position) becomes [u].
+**Rule**: The letter "l" at the end of a syllable (coda position) becomes [_u_].
 
 **Applies to**: ALL words with syllable-final "l"
 
 ### **6a: Simple words ending in L (one transformation only)**
 
 Words with a single syllable-final L at the end:
-- Brasil → Brasi~~l~~[u]
-- futebol → futebo~~l~~[u]
-- hotel → hote~~l~~[u]
-- hospital → hospita~~l~~[u]
-- azul → azu~~l~~[u]
-- sol → so~~l~~[u]
-- mal → ma~~l~~[u]
-- mil → mi~~l~~[u]
-- sal → sa~~l~~[u]
-- mel → me~~l~~[u]
-- papel → pape~~l~~[u]
-- difícil → difíci~~l~~[u]
-- fácil → fáci~~l~~[u]
-- possível → possíve~~l~~[u]
+- Brasil → Brasi~~l~~[_u_]
+- futebol → futebo~~l~~[_u_]
+- hotel → hote~~l~~[_u_]
+- hospital → hospita~~l~~[_u_]
+- azul → azu~~l~~[_u_]
+- sol → so~~l~~[_u_]
+- mal → ma~~l~~[_u_]
+- mil → mi~~l~~[_u_]
+- sal → sa~~l~~[_u_]
+- mel → me~~l~~[_u_]
+- papel → pape~~l~~[_u_]
+- difícil → difíci~~l~~[_u_]
+- fácil → fáci~~l~~[_u_]
+- possível → possíve~~l~~[_u_]
 
-**Notation**: `word~~l~~[u]` - strikethrough the final L, add [u]
+**Notation**: `word~~l~~[_u_]` - strikethrough the final L, add [_u_]
 
 ### **6b: Complex words (multiple L's or mid-word L)**
 
 Words with syllable-final L in the middle, or multiple syllable-final L's:
 
 **Words ending in L (but with additional mid-word L)**:
-- álcool → álcool[áucool] (two L's: ál-cool, both become u)
+- álcool → álcool[_áucool_] (two L's: ál-cool, both become u)
 
 **Words NOT ending in L (mid-word L only)**:
-- alto → alto[auto]
-- calma → calma[cauma]
-- falso → falso[fauso]
-- volta → volta[vouta]
-- multa → multa[muuta]
+- alto → alto[_auto_]
+- calma → calma[_cauma_]
+- falso → falso[_fauso_]
+- volta → volta[_vouta_]
+- multa → multa[_muuta_]
 
 **Notation**: `word[fullword]` - full word repetition shows all transformations
 
@@ -276,22 +276,22 @@ Words with syllable-final L in the middle, or multiple syllable-final L's:
 
 | Rule | Pattern | Notation | Examples |
 |------|---------|----------|----------|
-| 1 | Final -o → [u] | word[u] | americano[u], o[u], como[u], do[u] |
-| 1 | Final -os → [us] | word[us] | os[us], livros[us], dos[us] |
-| 2 | Final -e → [i] | word[i] | nome[i], e[i] (and) |
-| 2 | Final -es → [is] | word[is] | nomes[is], fortes[is] |
-| 3a | de → de[dji] | de[dji] | de[dji] Miami (ALWAYS) |
-| 3b | te + i → [tchi] | [tchi] | contente[tchi] |
-| 3c | ti/di → [tchi]/[dji] | [tchi]/[dji] | notícia: no[tchi]cia |
-| 4a | Epenthetic + ti/di | [chi]/[ji] | Internet[chi], iPad[ji] |
-| 4b | Epenthetic + other | [i] | Facebook[i], York[i] |
-| 5a | Final -em → [eyn] | Short: word[Ceyn]<br>Long: word[eyn] | em[eyn], bem[beyn], sem[seyn]<br>também[eyn], alguém[eyn] |
-| 5b | Final -am → [ãwn] | word[ãwn] | falam[ãwn] |
-| 5c | Final -im → [ing] | Short: word[Cing]<br>Long: word[ing] | sim[sing], assim[ssing]<br>jardim[ing] |
-| 5d | Final -om → [oun] | Short: word[Coun]<br>Long: word[oun] | com[coun], som[soun], bom[boun] |
-| 5e | Final -um/uma → [ũm]/[ũma] | word[ũm]/word[ũma] | um[ũm], uma[ũma] |
-| 6a | Simple word-final l | word~~l~~[u] | Brasil → Brasi~~l~~[u], futebol → futebo~~l~~[u] |
-| 6b | Complex/multiple l's | word[fullword] | álcool → álcool[áucool], alto → alto[auto] |
+| 1 | Final -o → [_u_] | word[_u_] | americano[_u_], o[_u_], como[_u_], do[_u_] |
+| 1 | Final -os → [_us_] | word[_us_] | os[_us_], livros[_us_], dos[_us_] |
+| 2 | Final -e → [_i_] | word[_i_] | nome[_i_], e[_i_] (and) |
+| 2 | Final -es → [_is_] | word[_is_] | nomes[_is_], fortes[_is_] |
+| 3a | de → de[_dji_] | de[_dji_] | de[_dji_] Miami (ALWAYS) |
+| 3b | te + i → [_tchi_] | [_tchi_] | contente[_tchi_] |
+| 3c | ti/di → [_tchi_]/[_dji_] | [_tchi_]/[_dji_] | notícia: no[_tchi_]cia |
+| 4a | Epenthetic + ti/di | [_chi_]/[_ji_] | Internet[_chi_], iPad[_ji_] |
+| 4b | Epenthetic + other | [_i_] | Facebook[_i_], York[_i_] |
+| 5a | Final -em → [_eyn_] | Short: word[Ceyn]<br>Long: word[_eyn_] | em[_eyn_], bem[_beyn_], sem[_seyn_]<br>também[_eyn_], alguém[_eyn_] |
+| 5b | Final -am → [_ãwn_] | word[_ãwn_] | falam[_ãwn_] |
+| 5c | Final -im → [_ing_] | Short: word[Cing]<br>Long: word[_ing_] | sim[_sing_], assim[_ssing_]<br>jardim[_ing_] |
+| 5d | Final -om → [_oun_] | Short: word[Coun]<br>Long: word[_oun_] | com[_coun_], som[_soun_], bom[_boun_] |
+| 5e | Final -um/uma → [_ũm_]/[_ũma_] | word[_ũm_]/word[_ũma_] | um[_ũm_], uma[_ũma_] |
+| 6a | Simple word-final l | word~~l~~[_u_] | Brasil → Brasi~~l~~[_u_], futebol → futebo~~l~~[_u_] |
+| 6b | Complex/multiple l's | word[fullword] | álcool → álcool[_áucool_], alto → alto[_auto_] |
 
 ---
 
@@ -331,12 +331,12 @@ Not annotated in Steps 1-4:
 ### **Steps 1-4: Pronunciation Annotations**
 Show obligatory pronunciation with compact notation:
 ```
-Eu sou o[u] John.
-Eu falo[u] inglês e[i] um[ũm] pouco[u] de[dji] espanho~~l~~[u].
-Eu tenho[u] um[ũm] cachorro[u] e[i] uma[ũma] gata.
-Eu moro[u] em[eyn] Nova York[i].
-Eu estou bem[beyn] e[i] você também[eyn]?
-Eu gosto[u] muito[u] de[dji] futebo~~l~~[u] brasileiro[u].
+Eu sou o[_u_] John.
+Eu falo[_u_] inglês e[_i_] um[_ũm_] pouco[_u_] de[_dji_] espanho~~l~~[_u_].
+Eu tenho[_u_] um[_ũm_] cachorro[_u_] e[_i_] uma[_ũma_] gata.
+Eu moro[_u_] em[_eyn_] Nova York[_i_].
+Eu estou bem[_beyn_] e[_i_] você também[_eyn_]?
+Eu gosto[_u_] muito[_u_] de[_dji_] futebo~~l~~[_u_] brasileiro[_u_].
 ```
 
 ### **Step 5: Phonetic Orthography**
@@ -364,18 +364,18 @@ Moro eyn Nova Yorki.
 
 ### **JOHN's Introduction (Step 1)**
 ```
-Eu sou o[u] John.
-Eu sou americano[u].
-Eu sou de[dji] Miami.
-Eu sou casado[u] com[coun] a Sarah.
+Eu sou o[_u_] John.
+Eu sou americano[_u_].
+Eu sou de[_dji_] Miami.
+Eu sou casado[_u_] com[_coun_] a Sarah.
 
-Eu moro[u] em[eyn] Nova York[i].
-Eu trabalho[u] como[u] analista.
-Eu falo[u] inglês e[i] um[ũm] pouco[u] de[dji] espanho~~l~~[u].
-Eu gosto[u] de[dji] música.
-Eu vou de[dji] metrô para o[u] trabalho[u].
-Eu tenho[u] um[ũm] cachorro[u] e[i] uma[ũma] gata.
-Eu estou contente[tchi] em[eyn] falar português.
+Eu moro[_u_] em[_eyn_] Nova York[_i_].
+Eu trabalho[_u_] como[_u_] analista.
+Eu falo[_u_] inglês e[_i_] um[_ũm_] pouco[_u_] de[_dji_] espanho~~l~~[_u_].
+Eu gosto[_u_] de[_dji_] música.
+Eu vou de[_dji_] metrô para o[_u_] trabalho[_u_].
+Eu tenho[_u_] um[_ũm_] cachorro[_u_] e[_i_] uma[_ũma_] gata.
+Eu estou contente[_tchi_] em[_eyn_] falar português.
 ```
 
 Every annotation follows the 6 obligatory rules documented above.
@@ -386,34 +386,34 @@ Every annotation follows the 6 obligatory rules documented above.
 
 When adding new vocabulary, check for **6 obligatory rules** (Steps 1-4):
 
-1. ✅ **Rule 1**: Does it end in -o? → Add [u]
-2. ✅ **Rule 1**: Does it end in -os? → Add [us]
-3. ✅ **Rule 2**: Does it end in -e? → Add [i]
-4. ✅ **Rule 2**: Does it end in -es? → Add [is]
-5. ✅ **Rule 3**: Is it the word "de"? → Always de[dji]
-6. ✅ **Rule 3**: Is it the word "e" (and)? → Always e[i]
+1. ✅ **Rule 1**: Does it end in -o? → Add [_u_]
+2. ✅ **Rule 1**: Does it end in -os? → Add [_us_]
+3. ✅ **Rule 2**: Does it end in -e? → Add [_i_]
+4. ✅ **Rule 2**: Does it end in -es? → Add [_is_]
+5. ✅ **Rule 3**: Is it the word "de"? → Always de[_dji_]
+6. ✅ **Rule 3**: Is it the word "e" (and)? → Always e[_i_]
 7. ✅ **Rule 3**: Does it have ti/di sequences? → Check for palatalization
-8. ✅ **Rule 1**: Is it the article "o"? → Always o[u]
-9. ✅ **Rule 1**: Is it a contraction do/no? → Always do[u]/no[u]
-10. ✅ **Rule 4**: Is it a borrowed word ending in consonant? → Add epenthetic [i], check for ti/di
+8. ✅ **Rule 1**: Is it the article "o"? → Always o[_u_]
+9. ✅ **Rule 1**: Is it a contraction do/no? → Always do[_u_]/no[_u_]
+10. ✅ **Rule 4**: Is it a borrowed word ending in consonant? → Add epenthetic [_i_], check for ti/di
 11. ✅ **Rule 5**: Does it end in -em?
-    - **Short words** (1 syllable with consonant): Show full syllable → bem[beyn], sem[seyn], tem[teyn]
-    - **Short words** (1 syllable, no consonant): Just ending → em[eyn]
-    - **Long words**: Just ending → também[eyn], alguém[eyn]
-12. ✅ **Rule 5**: Does it end in -am? → Add [ãwn] (falam[ãwn])
+    - **Short words** (1 syllable with consonant): Show full syllable → bem[_beyn_], sem[_seyn_], tem[_teyn_]
+    - **Short words** (1 syllable, no consonant): Just ending → em[_eyn_]
+    - **Long words**: Just ending → também[_eyn_], alguém[_eyn_]
+12. ✅ **Rule 5**: Does it end in -am? → Add [_ãwn_] (falam[_ãwn_])
 13. ✅ **Rule 5**: Does it end in -im?
-    - **Short words**: Show full syllable → sim[sing], assim[ssing]
-    - **Long words**: Just ending → jardim[ing]
+    - **Short words**: Show full syllable → sim[_sing_], assim[_ssing_]
+    - **Long words**: Just ending → jardim[_ing_]
 14. ✅ **Rule 5**: Does it end in -om?
-    - **Short words**: Show full syllable → com[coun], som[soun], bom[boun]
+    - **Short words**: Show full syllable → com[_coun_], som[_soun_], bom[_boun_]
     - **Long words**: Just ending (rare)
-15. ✅ **Rule 5**: Does it end in -um/uma? → Add [ũm]/[ũma]
+15. ✅ **Rule 5**: Does it end in -um/uma? → Add [_ũm_]/[_ũma_]
 16. ✅ **Rule 6**: Does it have syllable-final l?
-    - **Simple (one L only)**: Strike through the final l and add [u] (Brasil → Brasi~~l~~[u], futebol → futebo~~l~~[u])
-    - **Complex (multiple L's or mid-word L)**: Use full word repetition (álcool → álcool[áucool], alto → alto[auto])
+    - **Simple (one L only)**: Strike through the final l and add [_u_] (Brasil → Brasi~~l~~[_u_], futebol → futebo~~l~~[_u_])
+    - **Complex (multiple L's or mid-word L)**: Use full word repetition (álcool → álcool[_áucool_], alto → alto[_auto_])
 
 **DO NOT annotate** (these are optional, Step 5 only):
-- ❌ Coalescence: de ônibus stays as `de[dji] ônibus` (not de[djô]nibus)
+- ❌ Coalescence: de ônibus stays as `de[_dji_] ônibus` (not de[djô]nibus)
 - ❌ Vowel sandhi: na avenida stays separate (not navenida)
 - ❌ Reductions: sou stays as `sou` (not sô)
 

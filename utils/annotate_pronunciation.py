@@ -138,11 +138,13 @@ def apply_rule_7b(text: str) -> str:
     for word, annotated in RULE_7B_WORDS.items():
         # Case-insensitive replacement, preserve original case for first letter
         pattern = r'\b' + word + r'\b'
-        text = re.sub(pattern, annotated, text, flags=re.IGNORECASE)
+        # Add italic formatting to bracket content
+        annotated_italic = re.sub(r'\[([^\]]+)\]', r'[_\1_]', annotated)
+        text = re.sub(pattern, annotated_italic, text, flags=re.IGNORECASE)
     return text
 
 def apply_rule_7a(text: str) -> str:
-    """Rule 7a: Word-final L → ~~l~~[u]."""
+    """Rule 7a: Word-final L → ~~l~~[_u_]."""
     # Match words ending in 'l' (but not already annotated)
     def replace_final_l(match):
         word = match.group(0)
@@ -153,10 +155,10 @@ def apply_rule_7a(text: str) -> str:
         if word[0].isupper() and word in PROPER_NOUNS:
             # Special case: Brasil gets annotated even though it's proper
             if word == 'Brasil':
-                return 'Brasi~~l~~[u]'
+                return 'Brasi~~l~~[_u_]'
             return word
-        # Apply: word ending in l → word~~l~~[u]
-        return word[:-1] + '~~l~~[u]'
+        # Apply: word ending in l → word~~l~~[_u_]
+        return word[:-1] + '~~l~~[_u_]'
 
     # Only match if not followed by annotation bracket
     return re.sub(r'\b\w+l\b(?!\[)', replace_final_l, text)
@@ -165,60 +167,62 @@ def apply_rule_5(text: str) -> str:
     """Rule 5: Nasal vowel endings."""
     # Don't annotate words with tilde
 
-    # Rule 5a: -em → [eyn]
+    # Rule 5a: -em → [_eyn_]
     # Short words (show full syllable with consonant for clarity)
-    text = re.sub(r'\b(bem)(?!\[)\b', r'bem[beyn]', text, flags=re.IGNORECASE)
-    text = re.sub(r'\b(sem)(?!\[)\b', r'sem[seyn]', text, flags=re.IGNORECASE)
-    text = re.sub(r'\b(tem)(?!\[)\b', r'tem[teyn]', text, flags=re.IGNORECASE)
-    text = re.sub(r'\b(quem)(?!\[)\b', r'quem[keyn]', text, flags=re.IGNORECASE)
-    text = re.sub(r'\b(cem)(?!\[)\b', r'cem[seyn]', text, flags=re.IGNORECASE)
-    text = re.sub(r'\b(nem)(?!\[)\b', r'nem[neyn]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(bem)(?!\[)\b', r'bem[_beyn_]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(sem)(?!\[)\b', r'sem[_seyn_]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(tem)(?!\[)\b', r'tem[_teyn_]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(quem)(?!\[)\b', r'quem[_keyn_]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(cem)(?!\[)\b', r'cem[_seyn_]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(nem)(?!\[)\b', r'nem[_neyn_]', text, flags=re.IGNORECASE)
 
     # em (no initial consonant, just ending)
-    text = re.sub(r'\b(em)(?!\[)\b', r'em[eyn]', text)
+    text = re.sub(r'\b(em)(?!\[)\b', r'em[_eyn_]', text)
 
     # Long words (show ending only)
-    text = re.sub(r'\b(também)(?!\[)\b', r'\1[eyn]', text, flags=re.IGNORECASE)
-    text = re.sub(r'\b(alguém)(?!\[)\b', r'\1[eyn]', text, flags=re.IGNORECASE)
-    text = re.sub(r'\b(ninguém)(?!\[)\b', r'\1[eyn]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(também)(?!\[)\b', r'\1[_eyn_]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(alguém)(?!\[)\b', r'\1[_eyn_]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(ninguém)(?!\[)\b', r'\1[_eyn_]', text, flags=re.IGNORECASE)
 
-    # Rule 5b: -am → [ãwn] (verb endings, not already annotated)
+    # Rule 5b: -am → [_ãwn_] (verb endings, not already annotated)
     def annotate_am(match):
         word = match.group(0)
         if has_tilde(word) or '[' in word:
             return word
-        return word + '[ãwn]'
+        return word + '[_ãwn_]'
     text = re.sub(r'\b(\w+am)\b(?!\[)', annotate_am, text)
 
-    # Rule 5c: -im → [ing]
+    # Rule 5c: -im → [_ing_]
     # Short words (show full syllable with consonant for clarity)
-    text = re.sub(r'\b(sim)(?!\[)\b', r'sim[sing]', text, flags=re.IGNORECASE)
-    text = re.sub(r'\b(assim)(?!\[)\b', r'assim[ssing]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(sim)(?!\[)\b', r'sim[_sing_]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(assim)(?!\[)\b', r'assim[_ssing_]', text, flags=re.IGNORECASE)
 
     # Long words (show ending only)
-    text = re.sub(r'\b(jardim)(?!\[)\b', r'jardim[ing]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(jardim)(?!\[)\b', r'jardim[_ing_]', text, flags=re.IGNORECASE)
 
-    # Rule 5d: -om → [oun]
+    # Rule 5d: -om → [_oun_]
     # Short words (show full syllable with consonant for clarity)
-    text = re.sub(r'\b(com)(?!\[)\b', r'com[coun]', text)
-    text = re.sub(r'\b(som)(?!\[)\b', r'som[soun]', text, flags=re.IGNORECASE)
-    text = re.sub(r'\b(bom)(?!\[)\b', r'bom[boun]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(com)(?!\[)\b', r'com[_coun_]', text)
+    text = re.sub(r'\b(som)(?!\[)\b', r'som[_soun_]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(bom)(?!\[)\b', r'bom[_boun_]', text, flags=re.IGNORECASE)
 
-    # Rule 5e: um/uma → [ũm]/[ũma]
-    text = re.sub(r'\b(um)(?!\[)\b', r'um[ũm]', text)
-    text = re.sub(r'\b(uma)(?!\[)\b', r'uma[ũma]', text)
-    text = re.sub(r'\b(algum)(?!\[)\b', r'algum[ũm]', text, flags=re.IGNORECASE)
-    text = re.sub(r'\b(alguma)(?!\[)\b', r'alguma[ũma]', text, flags=re.IGNORECASE)
-    text = re.sub(r'\b(nenhum)(?!\[)\b', r'nenhum[ũm]', text, flags=re.IGNORECASE)
-    text = re.sub(r'\b(nenhuma)(?!\[)\b', r'nenhuma[ũma]', text, flags=re.IGNORECASE)
+    # Rule 5e: um/uma → [_ũm_]/[_ũma_]
+    text = re.sub(r'\b(um)(?!\[)\b', r'um[_ũm_]', text)
+    text = re.sub(r'\b(uma)(?!\[)\b', r'uma[_ũma_]', text)
+    text = re.sub(r'\b(algum)(?!\[)\b', r'algum[_ũm_]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(alguma)(?!\[)\b', r'alguma[_ũma_]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(nenhum)(?!\[)\b', r'nenhum[_ũm_]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(nenhuma)(?!\[)\b', r'nenhuma[_ũma_]', text, flags=re.IGNORECASE)
 
     return text
 
 def apply_rule_4(text: str) -> str:
-    """Rule 4: Epenthetic [i] on consonant-final borrowed words."""
+    """Rule 4: Epenthetic [_i_] on consonant-final borrowed words."""
     for word, annotated in BORROWED_WORDS.items():
         pattern = r'\b' + word + r'\b'
-        text = re.sub(pattern, annotated, text)
+        # Add italic formatting to bracket content
+        annotated_italic = re.sub(r'\[([^\]]+)\]', r'[_\1_]', annotated)
+        text = re.sub(pattern, annotated_italic, text)
     return text
 
 # ============================================================================
@@ -232,16 +236,16 @@ def apply_rule_4(text: str) -> str:
 
 def apply_rule_3(text: str) -> str:
     """Rule 3: Palatalization."""
-    # Rule 3a: de → de[dji] (ALWAYS, but not if already annotated)
-    # Must happen BEFORE Rule 2 to prevent de[i] first
-    text = re.sub(r'\b(de)(?!\[)\b', r'de[dji]', text)
+    # Rule 3a: de → de[_dji_] (ALWAYS, but not if already annotated)
+    # Must happen BEFORE Rule 2 to prevent de[_i_] first
+    text = re.sub(r'\b(de)(?!\[)\b', r'de[_dji_]', text)
 
-    # Rule 3b: contente → contente[tchi] (not if already annotated)
+    # Rule 3b: contente → contente[_tchi_] (not if already annotated)
     def annotate_contente(match):
         word = match.group(0)
         if '[' in word:
             return word
-        return word + '[tchi]'
+        return word + '[_tchi_]'
     text = re.sub(r'\b(contente)s?(?!\[)\b', annotate_contente, text, flags=re.IGNORECASE)
 
     # Add more palatalization patterns as needed
@@ -249,9 +253,9 @@ def apply_rule_3(text: str) -> str:
     return text
 
 def apply_rule_2(text: str) -> str:
-    """Rule 2: Final unstressed -e → [i]."""
+    """Rule 2: Final unstressed -e → [_i_]."""
     # Conjunction 'e' (and) - but not 'de' (already handled by Rule 3)
-    text = re.sub(r'\b(e)(?!\[)\b', r'e[i]', text)
+    text = re.sub(r'\b(e)(?!\[)\b', r'e[_i_]', text)
 
     # Words ending in -e (but not stressed, not already annotated)
     def replace_final_e(match):
@@ -263,8 +267,8 @@ def apply_rule_2(text: str) -> str:
             return word
         if '[' in word or ']' in word:
             return word
-        # Apply: word ending in e → word[i]
-        return word + '[i]'
+        # Apply: word ending in e → word[_i_]
+        return word + '[_i_]'
 
     # Match words ending in 'e' followed by word boundary (not followed by [)
     text = re.sub(r'\b\w+e\b(?!\[)', replace_final_e, text)
@@ -272,38 +276,38 @@ def apply_rule_2(text: str) -> str:
     return text
 
 def apply_rule_1(text: str) -> str:
-    """Rule 1: Final unstressed -o → [u]."""
+    """Rule 1: Final unstressed -o → [_u_]."""
     # Protect existing brackets from nested annotation
     protected, replacements = protect_brackets(text)
 
     # Function words (specific patterns to avoid over-matching)
-    protected = re.sub(r'\bo\b', r'o[u]', protected)  # Article 'o'
-    protected = re.sub(r'\bdo\b', r'do[u]', protected)  # Contraction de+o
-    protected = re.sub(r'\bno\b', r'no[u]', protected)  # Contraction em+o
-    protected = re.sub(r'\bao\b', r'ao[u]', protected)  # Contraction a+o
-    protected = re.sub(r'\bcomo\b', r'como[u]', protected, flags=re.IGNORECASE)  # 'as/like'
+    protected = re.sub(r'\bo\b', r'o[_u_]', protected)  # Article 'o'
+    protected = re.sub(r'\bdo\b', r'do[_u_]', protected)  # Contraction de+o
+    protected = re.sub(r'\bno\b', r'no[_u_]', protected)  # Contraction em+o
+    protected = re.sub(r'\bao\b', r'ao[_u_]', protected)  # Contraction a+o
+    protected = re.sub(r'\bcomo\b', r'como[_u_]', protected, flags=re.IGNORECASE)  # 'as/like'
 
     # Plural forms
-    protected = re.sub(r'\bos\b', r'os[us]', protected)  # Article 'os'
-    protected = re.sub(r'\bdos\b', r'dos[us]', protected)  # Contraction de+os
-    protected = re.sub(r'\bnos\b', r'nos[us]', protected)  # Contraction em+os
-    protected = re.sub(r'\baos\b', r'aos[us]', protected)  # Contraction a+os
+    protected = re.sub(r'\bos\b', r'os[_us_]', protected)  # Article 'os'
+    protected = re.sub(r'\bdos\b', r'dos[_us_]', protected)  # Contraction de+os
+    protected = re.sub(r'\bnos\b', r'nos[_us_]', protected)  # Contraction em+os
+    protected = re.sub(r'\baos\b', r'aos[_us_]', protected)  # Contraction a+os
 
     # Words ending in -o (but not stressed, not already annotated, not followed by ~~)
     def replace_final_o(match):
         word = match.group(0)
         if is_stressed_final(word):
             return word
-        # Apply: word ending in o → word[u]
-        return word + '[u]'
+        # Apply: word ending in o → word[_u_]
+        return word + '[_u_]'
 
     # Match words ending in 'o' (not followed by ~~ or [)
     protected = re.sub(r'\b\w+o\b(?![~\[])', replace_final_o, protected)
 
-    # Words ending in -os → [us] (not already annotated or followed by ~~)
+    # Words ending in -os → [_us_] (not already annotated or followed by ~~)
     def replace_final_os(match):
         word = match.group(0)
-        return word + '[us]'
+        return word + '[_us_]'
 
     protected = re.sub(r'\b\w+os\b(?![~\[])', replace_final_os, protected)
 

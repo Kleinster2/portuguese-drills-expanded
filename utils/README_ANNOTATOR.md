@@ -21,7 +21,7 @@ from utils.annotate_pronunciation import annotate_pronunciation
 text = "Eu sou brasileiro de São Paulo."
 annotated = annotate_pronunciation(text)
 print(annotated)
-# Output: Eu sou brasileiro[u] de[dji] São[u] Paulo[u].
+# Output: Eu sou brasileiro[_u_] de[_dji_] São[_u_] Paulo[_u_].
 ```
 
 ### API
@@ -39,38 +39,38 @@ annotate_pronunciation(text: str, skip_if_annotated: bool = True) -> str
 
 ## Rules Applied
 
-### Rule 1: Final unstressed -o → [u]
-- `americano` → `americano[u]`
-- `o` (article) → `o[u]`
-- `do` (de+o) → `do[u]`
+### Rule 1: Final unstressed -o → [_u_]
+- `americano` → `americano[_u_]`
+- `o` (article) → `o[_u_]`
+- `do` (de+o) → `do[_u_]`
 
-### Rule 2: Final unstressed -e → [i]
-- `nome` → `nome[i]`
-- `e` (and) → `e[i]`
+### Rule 2: Final unstressed -e → [_i_]
+- `nome` → `nome[_i_]`
+- `e` (and) → `e[_i_]`
 
 ### Rule 3: Palatalization
-- `de` → `de[dji]` (ALWAYS)
-- `contente` → `contente[tchi]`
+- `de` → `de[_dji_]` (ALWAYS)
+- `contente` → `contente[_tchi_]`
 
-### Rule 4: Epenthetic [i]
-- `Facebook` → `Facebook[i]`
-- `Internet` → `Internet[chi]`
-- `iPad` → `iPad[ji]`
+### Rule 4: Epenthetic [_i_]
+- `Facebook` → `Facebook[_i_]`
+- `Internet` → `Internet[_chi_]`
+- `iPad` → `iPad[_ji_]`
 
 ### Rule 5: Nasal vowel endings
-- `em` → `em[eyn]`
-- `com` → `com[oun]`
-- `um/uma` → `um[ũm]`/`uma[ũma]`
-- `também` → `também[eyn]`
+- `em` → `em[_eyn_]`
+- `com` → `com[_oun_]`
+- `um/uma` → `um[_ũm_]`/`uma[_ũma_]`
+- `também` → `também[_eyn_]`
 
-### Rule 6: Syllable-final L → [u]
-- **6a (Simple)**: `futebol` → `futebo~~l~~[u]`
-- **6b (Complex)**: `alto` → `alto[auto]`
+### Rule 6: Syllable-final L → [_u_]
+- **6a (Simple)**: `futebol` → `futebo~~l~~[_u_]`
+- **6b (Complex)**: `alto` → `alto[_auto_]`
 
 ## NOT Applied (Optional - Step 5 Only)
 
 ### Coalescence
-- **NOT annotated in Steps 1-4**: `de ônibus` → `de[dji] ônibus` (two separate words)
+- **NOT annotated in Steps 1-4**: `de ônibus` → `de[_dji_] ônibus` (two separate words)
 - **Step 5 only**: `de ônibus` → `djônibus` (coalescence written directly)
 
 ## Exceptions
@@ -83,7 +83,7 @@ annotate_pronunciation(text: str, skip_if_annotated: bool = True) -> str
 
 ### Proper Nouns
 - Most proper nouns are not annotated
-- Exception: `Brasil` → `Brasi~~l~~[u]`
+- Exception: `Brasil` → `Brasi~~l~~[_u_]`
 
 ## Expandable Dictionaries
 
@@ -92,9 +92,9 @@ Add high-frequency words as needed:
 
 ```python
 RULE_7B_WORDS = {
-    'volta': 'volta[vouta]',
-    'voltar': 'voltar[voutar]',
-    'último': 'último[úutimu]',
+    'volta': 'volta[_vouta_]',
+    'voltar': 'voltar[_voutar_]',
+    'último': 'último[_úutimu_]',
     # Add more as encountered
 }
 ```
@@ -104,7 +104,7 @@ Add new borrowed words:
 
 ```python
 BORROWED_WORDS = {
-    'WhatsApp': 'WhatsApp[i]',
+    'WhatsApp': 'WhatsApp[_i_]',
     # Add more as needed
 }
 ```
@@ -120,10 +120,10 @@ python utils/annotate_pronunciation.py
 Expected output:
 ```
 Original:  Eu sou o John.
-Annotated: Eu sou o[u] John.
+Annotated: Eu sou o[_u_] John.
 
 Original:  Eu gosto de futebol.
-Annotated: Eu gosto[u] de[dji] futebo~~l~~[u].
+Annotated: Eu gosto[_u_] de[_dji_] futebo~~l~~[_u_].
 ```
 
 ## How It Works
@@ -131,12 +131,12 @@ Annotated: Eu gosto[u] de[dji] futebo~~l~~[u].
 ### Annotation Flow
 
 1. **Rule 6b** (dictionary): Mid-word L transformations
-2. **Rule 6a**: Word-final L → `~~l~~[u]`
+2. **Rule 6a**: Word-final L → `~~l~~[_u_]`
 3. **Rule 5**: Nasal vowels
 4. **Rule 4**: Epenthetic vowels on borrowed words
-5. **Rule 3**: Palatalization (de → de[dji])
-6. **Rule 2**: Final -e → [i]
-7. **Rule 1**: Final -o → [u]
+5. **Rule 3**: Palatalization (de → de[_dji_])
+6. **Rule 2**: Final -e → [_i_]
+7. **Rule 1**: Final -o → [_u_]
 
 **Note**: Coalescence (de ônibus → djônibus) is NOT applied in this script. It is an optional feature for Step 5 (phonetic orthography) only.
 
@@ -147,8 +147,8 @@ The script uses a bracket protection system to prevent nested annotations:
 - Rules are applied to unprotected text only
 - Protected content is restored at the end
 
-This prevents: `com` → `com[oun]` → `com[o[u]un]` ❌
-Correct result: `com` → `com[oun]` ✅
+This prevents: `com` → `com[_oun_]` → `com[o[_u_]un]` ❌
+Correct result: `com` → `com[_oun_]` ✅
 
 ## Limitations
 
