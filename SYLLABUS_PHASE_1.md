@@ -658,7 +658,7 @@ Eu falo[_u_] português e[_i_] inglês.
 Eu gosto[_u_] de[_dji_] futebo~~l~~[_u_].
 Eu gosto[_u_] de[_dji_] café.
 
-Eu vou de[djô]nibus para o[_u_] escritório[_u_].
+Eu vou de[_dji_] ônibus para o[_u_] escritório[_u_].
 
 Eu tenho[_u_] um[_ũm_] gato[_u_].
 Eu tenho[_u_] uma[_ũma_] irmã.
@@ -691,7 +691,7 @@ Falo[_u_] português e[_i_] inglês.
 Gosto[_u_] de[_dji_] futebo~~l~~[_u_].
 Gosto[_u_] de[_dji_] café.
 
-Vou de[djô]nibus para o[_u_] escritório[_u_].
+Vou de[_dji_] ônibus para o[_u_] escritório[_u_].
 
 Tenho[_u_] um[_ũm_] gato[_u_].
 Tenho[_u_] uma[_ũma_] irmã.
@@ -709,7 +709,7 @@ Sou o[_u_] Carlos[_us_]. Sou brasileiro[_u_], de[_dji_] São[_u_] Paulo[_u_]. So
 
 Moro[_u_] em[_eyn_] Nova York[_i_], no[_u_] Brooklyn. Trabalho[_u_] na Acme[_i_] como[_u_] analista.
 
-Vou de[djô]nibus para o[_u_] escritório[_u_].
+Vou de[_dji_] ônibus para o[_u_] escritório[_u_].
 
 Falo[_u_] português e[_i_] inglês.
 
@@ -728,7 +728,7 @@ _Sô_ o[_u_] Carlos[_us_]. _Sô_ brasileiro[_u_], de[_dji_] São[_u_] Paulo[_u_]
 
 Moro[_u_] em[_eyn_] Nova York[_i_], no[_u_] Brooklyn. Trabalho[_u_] na Acme[_i_] como[_u_] analista.
 
-_Vô_ de[djô]nibus _pro_[_u_] escritório[_u_].
+_Vô_ de[_dji_] ônibus _pro_[_u_] escritório[_u_].
 
 Falo[_u_] português e[_i_] inglês.
 
