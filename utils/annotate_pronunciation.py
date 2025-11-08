@@ -5,7 +5,7 @@ Brazilian Portuguese Pronunciation Annotator
 
 Applies 6 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4):
 1. Final unstressed -o → [u]
-2. Final unstressed -e → [i]
+2. Final unstressed -e → [i], plural -es → [is]
 3. Palatalization (de → de[dji], contente → contente[tchi])
 4. Epenthetic [i] on consonant-final borrowed words
 5. Nasal vowel endings (-em, -am, -im, -om, -um/uma)
@@ -14,7 +14,7 @@ Applies 6 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4):
 NOTE: Coalescence (de ônibus → djônibus) is NOT applied here.
       It is an OPTIONAL feature for Step 5 (phonetic orthography) only.
 
-Version: 1.1
+Version: 1.2
 Last Updated: 2025-01-07
 """
 
@@ -253,11 +253,29 @@ def apply_rule_3(text: str) -> str:
     return text
 
 def apply_rule_2(text: str) -> str:
-    """Rule 2: Final unstressed -e → [_i_]."""
+    """Rule 2: Final unstressed -e → [_i_], plural -es → [_is_]."""
     # Conjunction 'e' (and) - but not 'de' (already handled by Rule 3)
     text = re.sub(r'\b(e)(?!\[)\b', r'e[_i_]', text)
 
-    # Words ending in -e (but not stressed, not already annotated)
+    # Plural words ending in -es → [_is_] (must come before singular -e)
+    def replace_plural_es(match):
+        word = match.group(0)
+        # Skip if word is 'de' (handled by Rule 3)
+        if word.lower() == 'de':
+            return word
+        # Skip stressed words (like 'vocês', 'José')
+        if is_stressed_final(word):
+            return word
+        # Skip already annotated
+        if '[' in word or ']' in word:
+            return word
+        # Apply: word ending in es → word[_is_]
+        return word + '[_is_]'
+
+    # Match words ending in 'es' followed by word boundary (not followed by [)
+    text = re.sub(r'\b\w+es\b(?!\[)', replace_plural_es, text)
+
+    # Singular words ending in -e (but not stressed, not already annotated)
     def replace_final_e(match):
         word = match.group(0)
         # Skip if word is 'de' (handled by Rule 3)
