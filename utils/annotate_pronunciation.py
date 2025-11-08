@@ -14,7 +14,7 @@ Applies 6 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4):
 NOTE: Coalescence (de ônibus → djônibus) is NOT applied here.
       It is an OPTIONAL feature for Step 5 (phonetic orthography) only.
 
-Version: 1.4
+Version: 1.5
 Last Updated: 2025-01-07
 """
 
@@ -204,12 +204,13 @@ def apply_rule_5(text: str) -> str:
     text = re.sub(r'\b(bom)(?!\[)\b', r'bom[_boun_]', text, flags=re.IGNORECASE)
 
     # Rule 5e: um/uma → [_ũm_]/[_ũma_]
-    text = re.sub(r'\b(um)(?!\[)\b', r'um[_ũm_]', text)
-    text = re.sub(r'\b(uma)(?!\[)\b', r'uma[_ũma_]', text)
-    text = re.sub(r'\b(algum)(?!\[)\b', r'algum[_ũm_]', text, flags=re.IGNORECASE)
-    text = re.sub(r'\b(alguma)(?!\[)\b', r'alguma[_ũma_]', text, flags=re.IGNORECASE)
-    text = re.sub(r'\b(nenhum)(?!\[)\b', r'nenhum[_ũm_]', text, flags=re.IGNORECASE)
-    text = re.sub(r'\b(nenhuma)(?!\[)\b', r'nenhuma[_ũma_]', text, flags=re.IGNORECASE)
+    # Case-insensitive to handle sentence-initial capitalization (Um, Uma)
+    text = re.sub(r'\b(um)(?!\[)\b', r'\1[_ũm_]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(uma)(?!\[)\b', r'\1[_ũma_]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(algum)(?!\[)\b', r'\1[_ũm_]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(alguma)(?!\[)\b', r'\1[_ũma_]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(nenhum)(?!\[)\b', r'\1[_ũm_]', text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(nenhuma)(?!\[)\b', r'\1[_ũma_]', text, flags=re.IGNORECASE)
 
     return text
 
@@ -237,15 +238,22 @@ def apply_rule_3(text: str) -> str:
     # Must happen BEFORE Rule 2 to prevent de[_i_] first
     text = re.sub(r'\b(de)(?!\[)\b', r'de[_dji_]', text)
 
-    # Rule 3b: contente → contente[_tchi_] (not if already annotated)
-    def annotate_contente(match):
+    # Rule 3b: Words ending in -te → [_tchi_] (unstressed final -te palatalization)
+    # This must run BEFORE Rule 2 (final -e) to prevent -te words from getting [_i_]
+    def annotate_te(match):
         word = match.group(0)
+        # Skip if word is 'de' (already handled above)
+        if word.lower() == 'de':
+            return word
+        # Skip if already annotated
         if '[' in word:
             return word
+        # Skip if stressed final (though rare for -te words)
+        if is_stressed_final(word):
+            return word
+        # Apply: word ending in te → word[_tchi_]
         return word + '[_tchi_]'
-    text = re.sub(r'\b(contente)s?(?!\[)\b', annotate_contente, text, flags=re.IGNORECASE)
-
-    # Add more palatalization patterns as needed
+    text = re.sub(r'\b\w+te\b(?!\[)', annotate_te, text, flags=re.IGNORECASE)
 
     return text
 

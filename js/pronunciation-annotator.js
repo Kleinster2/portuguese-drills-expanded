@@ -12,7 +12,7 @@
  * NOTE: Coalescence (de ônibus → djônibus) is NOT applied here.
  *       It is an OPTIONAL feature for Step 5 (phonetic orthography) only.
  *
- * Version: 1.4 (JavaScript port)
+ * Version: 1.5 (JavaScript port)
  * Last Updated: 2025-01-07
  * Ported from: utils/annotate_pronunciation.py
  */
@@ -177,9 +177,9 @@ function applyRule5(text) {
     text = text.replace(/\b(som)(?!\[)\b/gi, (m, p1) => `${p1}[_soun_]`);
     text = text.replace(/\b(bom)(?!\[)\b/gi, (m, p1) => `${p1}[_boun_]`);
 
-    // Rule 5e: um/uma → [_ũm_]/[_ũma_]
-    text = text.replace(/\b(um)(?!\[)\b/g, 'um[_ũm_]');
-    text = text.replace(/\b(uma)(?!\[)\b/g, 'uma[_ũma_]');
+    // Rule 5e: um/uma → [_ũm_]/[_ũma_] (case-insensitive for sentence start)
+    text = text.replace(/\b(um)(?!\[)\b/gi, (m, p1) => `${p1}[_ũm_]`);
+    text = text.replace(/\b(uma)(?!\[)\b/gi, (m, p1) => `${p1}[_ũma_]`);
     text = text.replace(/\b(algum)(?!\[)\b/gi, (m, p1) => `${p1}[_ũm_]`);
     text = text.replace(/\b(alguma)(?!\[)\b/gi, (m, p1) => `${p1}[_ũma_]`);
     text = text.replace(/\b(nenhum)(?!\[)\b/gi, (m, p1) => `${p1}[_ũm_]`);
@@ -203,15 +203,26 @@ function applyRule3(text) {
     // Rule 3a: de → de[_dji_] (ALWAYS, but not if already annotated)
     text = text.replace(/\b(de)(?!\[)\b/g, 'de[_dji_]');
 
-    // Rule 3b: contente → contente[_tchi_] (not if already annotated)
-    const annotateContente = (match) => {
+    // Rule 3b: Words ending in -te → [_tchi_] (unstressed final -te palatalization)
+    // This must run BEFORE Rule 2 (final -e) to prevent -te words from getting [_i_]
+    const annotateTe = (match) => {
         const word = match;
+        // Skip if word is 'de' (already handled above)
+        if (word.toLowerCase() === 'de') {
+            return word;
+        }
+        // Skip if already annotated
         if (word.includes('[')) {
             return word;
         }
+        // Skip if stressed final (though rare for -te words)
+        if (isStressedFinal(word)) {
+            return word;
+        }
+        // Apply: word ending in te → word[_tchi_]
         return word + '[_tchi_]';
     };
-    text = text.replace(/\b(contente)s?(?!\[)\b/gi, annotateContente);
+    text = text.replace(/\b\w+te\b(?!\[)/gi, annotateTe);
 
     return text;
 }
