@@ -56,6 +56,39 @@ Students should be able to produce these statement patterns:
 - **Gender agreement:** Adjective changes for masculine/feminine
 - **Usage:** Stating permanent characteristics (tall, short, etc.)
 
+### Glossary - Unit 1: Eu sou
+
+#### Verbs
+- ser - to be (permanent)
+  - (eu) sou - I am
+
+#### Nationalities (Adjectives)
+- americano (m) / americana (f)
+- brasileiro (m) / brasileira (f)
+
+#### Professions (Nouns)
+- analista (m/f)
+
+#### Descriptive Adjectives
+- casado (m) / casada (f) - married
+- solteiro (m) / solteira (f) - single
+- alto (m) / alta (f) - tall
+- baixo (m) / baixa (f) - short
+
+#### Relationships (Nouns)
+- colega (m/f) - colleague
+
+#### Articles
+- o (m) / a (f) - the
+- um (m) / uma (f) - a, an
+
+#### Prepositions & Conjunctions
+- de - from, of
+- do (de + o) - from/of the (m)
+- da (de + a) - from/of the (f)
+- com - with
+- e - and
+
 ---
 
 ## Verb 2: Eu moro (to live/reside)
@@ -86,6 +119,21 @@ Students should be able to produce these statement patterns:
 - **Fixed:** "avenida" is feminine, always "na avenida"
 - **Usage:** Stating your avenue
 
+### Glossary - Unit 2: Eu moro
+
+#### Verbs
+- morar - to live, to reside
+  - (eu) moro - I live
+
+#### Places (Nouns)
+- rua (f) - street
+- avenida (f) - avenue
+
+#### Prepositions & Contractions
+- em - in, at, on
+- no (em + o) - in/at/on the (m)
+- na (em + a) - in/at/on the (f)
+
 ---
 
 ## Verb 3: Eu trabalho (to work)
@@ -108,6 +156,18 @@ Students should be able to produce these statement patterns:
 - **Preposition:** como (as)
 - **Usage:** Stating what you work as (alternative to "Eu sou [profession]")
 
+### Glossary - Unit 3: Eu trabalho
+
+#### Verbs
+- trabalhar - to work
+  - (eu) trabalho - I work
+
+#### Places (Nouns)
+- escritório (m) - office
+
+#### Prepositions
+- como - as
+
 ---
 
 ## Verb 4: Eu falo (to speak)
@@ -123,6 +183,21 @@ Students should be able to produce these statement patterns:
 - **Structure:** Eu falo + language + e + language
 - **Conjunction:** e (and)
 - **Usage:** Stating multiple languages
+
+### Glossary - Unit 4: Eu falo
+
+#### Verbs
+- falar - to speak
+  - (eu) falo - I speak
+
+#### Languages (Nouns)
+- português (m)
+- inglês (m)
+- espanhol (m)
+
+#### Quantifiers
+- um pouco de - a little (of)
+- pouco (m) / pouca (f) - little, few
 
 ---
 
@@ -148,6 +223,18 @@ Students should be able to produce these statement patterns:
 - **Structure:** Eu gosto de + verb infinitive
 - **Fixed preposition:** de
 - **Usage:** Stating activities you like to do
+
+### Glossary - Unit 5: Eu gosto
+
+#### Verbs
+- gostar (de) - to like
+  - (eu) gosto - I like
+- viajar - to travel
+
+#### Things & Activities (Nouns)
+- música (f) - music
+- futebol (m) - soccer, football
+- café (m) - coffee
 
 ---
 
@@ -176,6 +263,24 @@ Students should be able to produce these statement patterns:
 - **Usage:** Expressing emotion about doing something
 - **Example:** Estou contente em falar português (I am happy to speak Portuguese)
 
+### Glossary - Unit 6: Eu estou
+
+#### Verbs
+- estar - to be (temporary, location)
+  - (eu) estou - I am
+
+#### Descriptive Adjectives (Temporary States)
+- contente (m/f) - happy, content
+
+#### Places (Nouns)
+- casa (f) - house, home
+
+#### Time Expressions
+- agora - now
+
+#### Pronouns
+- eles (m) / elas (f) - they
+
 ---
 
 ## Verb 7: Eu vou (to go - transportation)
@@ -190,6 +295,24 @@ Students should be able to produce these statement patterns:
   - Eu vou de carro para o trabalho (I go by car to work)
   - Eu vou de ônibus para o escritório (I go by bus to the office)
   - Eu vou de metrô para casa (I go by subway home)
+
+### Glossary - Unit 7: Eu vou
+
+#### Verbs
+- ir - to go
+  - (eu) vou - I go
+
+#### Transportation (Nouns)
+- metrô (m) - subway, metro
+- ônibus (m) - bus
+- carro (m) - car
+
+#### Places (Nouns)
+- trabalho (m) - work
+
+#### Prepositions
+- para - to, for, toward
+- para o - to the (m)
 
 ---
 
@@ -221,6 +344,26 @@ Students should be able to produce these statement patterns:
 - **Examples:**
   - Eu tenho três irmãos (I have three brothers/siblings)
   - Eu tenho quatro irmãs (I have four sisters)
+
+### Glossary - Unit 8: Eu tenho
+
+#### Verbs
+- ter - to have
+  - (eu) tenho - I have
+
+#### Animals (Nouns)
+- cachorro (m) - dog
+- gata (f) - cat
+- gato (m) - cat
+
+#### Family (Nouns)
+- irmão (m) - brother
+- irmã (f) - sister
+
+#### Numbers
+- dois (m) / duas (f) - two
+- três - three
+- quatro - four
 
 ---
 
