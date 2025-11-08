@@ -32,6 +32,12 @@ Designed to be dialect-neutral (PT-PT and PT-BR) with enhanced learning experien
   - Pronunciation annotations using italic formatting
 
 ### Pronunciation System Documentation
+- **[Annotation Workflow](docs/ANNOTATION_WORKFLOW.md)** - ⭐ **Authoring guide (read this first!)**
+  - Two-file system: source (clean) → generated (annotated)
+  - Write clean Portuguese, get annotations automatically
+  - Zero annotation bugs, 100% consistency
+  - Complete workflow and best practices
+
 - **[Quick Reference Guide](docs/QUICK_REFERENCE.md)** - ⭐ **Fast lookup for rules, patterns, and scripts**
   - 6 obligatory pronunciation rules (one-page reference)
   - Visual formatting system (regular vs italic)
@@ -46,6 +52,7 @@ Designed to be dialect-neutral (PT-PT and PT-BR) with enhanced learning experien
   - Extension points and maintenance guide
 
 - **[Changelog](docs/CHANGELOG.md)** - Version history and feature log
+  - v2.0: Programmatic annotation system
   - v1.1: Italic formatting, short/long nasal distinction, glossaries
   - Complete commit history with rationale
   - Migration notes and breaking changes
