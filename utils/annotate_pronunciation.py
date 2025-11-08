@@ -14,7 +14,7 @@ Applies 6 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4):
 NOTE: Coalescence (de ônibus → djônibus) is NOT applied here.
       It is an OPTIONAL feature for Step 5 (phonetic orthography) only.
 
-Version: 1.3
+Version: 1.4
 Last Updated: 2025-01-07
 """
 
@@ -30,11 +30,8 @@ STRESSED_FINAL = {
     'café', 'você', 'metrô', 'avô', 'avó', 'sofá', 'José',
 }
 
-# Words with tilde (nasalization already marked, don't apply Rule 6)
-TILDE_WORDS = {
-    'são', 'irmão', 'irmãos', 'irmã', 'irmãs', 'mão', 'não',
-    'pão', 'alemão', 'alemães', 'pães',
-}
+# Words with tildes (ã, õ) are automatically detected and not annotated
+# No hardcoded list needed - the has_tilde() function checks for ã and õ
 
 # Proper nouns (handle carefully)
 PROPER_NOUNS = {
@@ -102,8 +99,8 @@ def is_stressed_final(word: str) -> bool:
     return word.lower() in STRESSED_FINAL
 
 def has_tilde(word: str) -> bool:
-    """Check if word has tilde (exception to Rule 6)."""
-    return any(c in word for c in 'ãõáéíóúâêôà') or word.lower() in TILDE_WORDS
+    """Check if word has nasal tilde (ã, õ) - don't annotate these words."""
+    return any(c in word for c in 'ãõ')
 
 def protect_brackets(text: str) -> tuple[str, dict]:
     """
@@ -266,6 +263,9 @@ def apply_rule_2(text: str) -> str:
         # Skip stressed words (like 'vocês', 'José')
         if is_stressed_final(word):
             return word
+        # Skip words with tildes (ãe, õe)
+        if has_tilde(word):
+            return word
         # Skip already annotated
         if '[' in word or ']' in word:
             return word
@@ -275,13 +275,15 @@ def apply_rule_2(text: str) -> str:
     # Match words ending in 'es' followed by word boundary (not followed by [)
     text = re.sub(r'\b\w+es\b(?!\[)', replace_plural_es, text)
 
-    # Singular words ending in -e (but not stressed, not already annotated)
+    # Singular words ending in -e (but not stressed, not tilde, not already annotated)
     def replace_final_e(match):
         word = match.group(0)
         # Skip if word is 'de' (handled by Rule 3)
         if word.lower() == 'de':
             return word
         if is_stressed_final(word):
+            return word
+        if has_tilde(word):
             return word
         if '[' in word or ']' in word:
             return word
@@ -312,10 +314,10 @@ def apply_rule_1(text: str) -> str:
     protected = re.sub(r'\b(nos)\b', r'\1[_us_]', protected, flags=re.IGNORECASE)  # Contraction em+os
     protected = re.sub(r'\b(aos)\b', r'\1[_us_]', protected, flags=re.IGNORECASE)  # Contraction a+os
 
-    # Words ending in -o (but not stressed, not already annotated, not followed by ~~)
+    # Words ending in -o (but not stressed, not tilde, not already annotated, not followed by ~~)
     def replace_final_o(match):
         word = match.group(0)
-        if is_stressed_final(word):
+        if is_stressed_final(word) or has_tilde(word):
             return word
         # Apply: word ending in o → word[_u_]
         return word + '[_u_]'
@@ -323,9 +325,11 @@ def apply_rule_1(text: str) -> str:
     # Match words ending in 'o' (not followed by ~~ or [)
     protected = re.sub(r'\b\w+o\b(?![~\[])', replace_final_o, protected)
 
-    # Words ending in -os → [_us_] (not already annotated or followed by ~~)
+    # Words ending in -os → [_us_] (not tilde, not already annotated or followed by ~~)
     def replace_final_os(match):
         word = match.group(0)
+        if has_tilde(word):
+            return word
         return word + '[_us_]'
 
     protected = re.sub(r'\b\w+os\b(?![~\[])', replace_final_os, protected)
