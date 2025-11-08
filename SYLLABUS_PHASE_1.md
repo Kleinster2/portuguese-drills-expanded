@@ -476,7 +476,7 @@ _Sô_ o[_u_] John. _Sô_ americano[_u_], de[_dji_] Miami. _Sô_ analista e[_i_] 
 
 Moro[_u_] em[_eyn_] Nova York[_i_], na avenida das Américas. Trabalho[_u_] na Acme[_i_] como[_u_] analista.
 
-Vou de[_dji_] metrô _pro_[_u_] trabalho[_u_].
+_Vô_ de[_dji_] metrô _pro_[_u_] trabalho[_u_].
 
 Falo[_u_] inglês e[_i_] um[_ũm_] pouco[_u_] de[_dji_] espanho~~l~~[_u_].
 
@@ -601,7 +601,7 @@ _Sô_ a Sarah. _Sô_ americana também[_eyn_], de[_dji_] Miami. Também[_eyn_] _
 
 Moro[_u_] em[_eyn_] Nova York[_i_] também[_eyn_], na avenida das Américas. Também[_eyn_] trabalho[_u_] na Acme[_i_] como[_u_] analista.
 
-Vou de[_dji_] metrô _pro_[_u_] trabalho[_u_] também[_eyn_].
+_Vô_ de[_dji_] metrô _pro_[_u_] trabalho[_u_] também[_eyn_].
 
 Falo[_u_] inglês e[_i_] um[_ũm_] pouco[_u_] de[_dji_] espanho~~l~~[_u_] também[_eyn_].
 
@@ -728,7 +728,7 @@ _Sô_ o[_u_] Carlos[_us_]. _Sô_ brasileiro[_u_], de[_dji_] São[_u_] Paulo[_u_]
 
 Moro[_u_] em[_eyn_] Nova York[_i_], no[_u_] Brooklyn. Trabalho[_u_] na Acme[_i_] como[_u_] analista.
 
-Vou de[djô]nibus _pro_[_u_] escritório[_u_].
+_Vô_ de[djô]nibus _pro_[_u_] escritório[_u_].
 
 Falo[_u_] português e[_i_] inglês.
 
