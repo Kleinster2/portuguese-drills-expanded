@@ -317,12 +317,15 @@ All rules above (1-6) are **obligatory** and happen in:
 
 ### **OPTIONAL (shown in Step 5 as reductions/colloquialisms)**
 Not annotated in Steps 1-4:
-- **Vowel reductions**: sou → sô, estou → tô
-- **Contractions**: para o → pro
-- **Infinitive dropping**: falar → falá
-- **Coalescence**: de ônibus → djônibus, de outro → djoutro
-- **Vowel sandhi**: na avenida → navenida
+- **Vowel reductions**: sou → _sô_, estou → _tô_, vou → _vô_
+- **Contractions**: para o → _pro_
+- **Infinitive dropping**: falar → _falá_, viajar → _viajá_
+- **Coalescence**: de ônibus → _djônibus_, de outro → _djoutro_, Gosto de → _Gostchi_
+- **Vowel sandhi**: na avenida → _navenida_, na Acme → _nAcme_
+- **L vocalization in phonetic spelling**: futebol → _futebou_
 - These are **register-dependent** (informal/colloquial only)
+
+**Visual principle**: All non-standard Portuguese spellings (phonetic orthography) are italicized to distinguish them from standard Portuguese grammar.
 
 ---
 
@@ -342,11 +345,13 @@ Eu gosto[_u_] muito[_u_] de[_dji_] futebo~~l~~[_u_] brasileiro[_u_].
 ### **Step 5: Phonetic Orthography**
 Write everything as pronounced (both obligatory and optional):
 ```
-Sô John.
-Falo inglês e ũm pocu djispanhol.
-Tenhu ũm cachorro e ũma gata.
-Moro eyn Nova Yorki.
+_Sô_ John.
+Falo[_u_] inglês e[_i_] um[_ũm_] _pocu_ _djispanhol_.
+_Tenhu_ um[_ũm_] cachorro[_u_] e[_i_] uma[_ũma_] gata.
+Moro[_u_] em[_eyn_] Nova York.
 ```
+
+**Note**: All non-standard spellings are italicized (_Sô_, _pocu_, _djispanhol_, _Tenhu_) to distinguish phonetic orthography from standard Portuguese.
 
 ---
 

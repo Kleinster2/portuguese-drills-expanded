@@ -329,38 +329,38 @@ Estou em[_eyn_] Nova York[_i_] agora. Estou em[_eyn_] casa e[_i_] estou contente
 
 **Step 4: Dropping/Elision (rule-based)**
 ```
-Sô o[_u_] John. Sô americano[_u_], de[_dji_] Miami. Sô analista e[_i_] sô casado[_u_] com[_coun_] a Sarah.
+_Sô_ o[_u_] John. _Sô_ americano[_u_], de[_dji_] Miami. _Sô_ analista e[_i_] _sô_ casado[_u_] com[_coun_] a Sarah.
 
 Moro[_u_] em[_eyn_] Nova York[_i_], na avenida das Américas. Trabalho[_u_] na Acme[_i_] como[_u_] analista.
 
-Vou de[_dji_] metrô pro[_u_] trabalho[_u_].
+Vou de[_dji_] metrô _pro_[_u_] trabalho[_u_].
 
 Falo[_u_] inglês e[_i_] um[_ũm_] pouco[_u_] de[_dji_] espanho~~l~~[_u_].
 
-Gosto[_u_] de[_dji_] música e[_i_] de[_dji_] viajá.
+Gosto[_u_] de[_dji_] música e[_i_] de[_dji_] _viajá_.
 
 Tenho[_u_] um[_ũm_] cachorro[_u_] e[_i_] uma[_ũma_] gata. Tenho[_u_] dois irmãos[_us_] e[_i_] duas irmãs.
 
-Tô em[_eyn_] Nova York[_i_] agora. Tô em[_eyn_] casa e[_i_] tô contente[_tchi_] em[_eyn_] falá português.
+_Tô_ em[_eyn_] Nova York[_i_] agora. _Tô_ em[_eyn_] casa e[_i_] _tô_ contente[_tchi_] em[_eyn_] _falá_ português.
 
 
 ```
 
 **Step 5: Full Colloquial Speech (all phonetic processes)**
 ```
-Sô John. Sô americano[_u_], dji Miami. Sô analista e[_i_] sô casado[_u_] com[_coun_] a Sarah.
+_Sô_ John. _Sô_ americano[_u_], _dji_ Miami. _Sô_ analista e[_i_] _sô_ casado[_u_] com[_coun_] a Sarah.
 
-Moro[_u_] em[_eyn_] Nova York, navenida das Américas. Trabalho[_u_] nAcme[_i_] como[_u_] analista.
+Moro[_u_] em[_eyn_] Nova York, _navenida_ das Américas. Trabalho[_u_] _nAcme_[_i_] como[_u_] analista.
 
-Vô dji metrô pro[_u_] trabalho[_u_].
+_Vô_ _dji_ metrô _pro_[_u_] trabalho[_u_].
 
-Falo[_u_] inglês e[_i_] um[_ũm_] pocu djispanho~~l~~[_u_].
+Falo[_u_] inglês e[_i_] um[_ũm_] _pocu_ _djispanho~~l~~[_u_].
 
-Gostchi música e[_i_] dji viajá.
+_Gostchi_ música e[_i_] _dji_ _viajá_.
 
-Tenhu um[_ũm_] cachorro[_u_] e[_i_] uma[_ũma_] gata. Tenhu dois irmãos[_us_] e[_i_] duas irmãs.
+_Tenhu_ um[_ũm_] cachorro[_u_] e[_i_] uma[_ũma_] gata. _Tenhu_ dois irmãos[_us_] e[_i_] duas irmãs.
 
-Tô em[_eyn_] Nova York agora. Tô em[_eyn_] casa e[_i_] tô contente[_tchi_] em[_eyn_] falá português.
+_Tô_ em[_eyn_] Nova York agora. _Tô_ em[_eyn_] casa e[_i_] _tô_ contente[_tchi_] em[_eyn_] _falá_ português.
 
 
 ```
@@ -454,38 +454,38 @@ Estou em[_eyn_] Nova York[_i_] agora também[_eyn_]. Também[_eyn_] estou em[_ey
 
 **Step 4: Dropping/Elision (rule-based)**
 ```
-Sô a Sarah. Sô americana também[_eyn_], de[_dji_] Miami. Também[_eyn_] sô analista e[_i_] sô casada com[_coun_] o[_u_] John.
+_Sô_ a Sarah. _Sô_ americana também[_eyn_], de[_dji_] Miami. Também[_eyn_] _sô_ analista e[_i_] _sô_ casada com[_coun_] o[_u_] John.
 
 Moro[_u_] em[_eyn_] Nova York[_i_] também[_eyn_], na avenida das Américas. Também[_eyn_] trabalho[_u_] na Acme[_i_] como[_u_] analista.
 
-Vou de[_dji_] metrô pro[_u_] trabalho[_u_] também[_eyn_].
+Vou de[_dji_] metrô _pro_[_u_] trabalho[_u_] também[_eyn_].
 
 Falo[_u_] inglês e[_i_] um[_ũm_] pouco[_u_] de[_dji_] espanho~~l~~[_u_] também[_eyn_].
 
-Gosto[_u_] de[_dji_] música também[_eyn_] e[_i_] de[_dji_] viajá.
+Gosto[_u_] de[_dji_] música também[_eyn_] e[_i_] de[_dji_] _viajá_.
 
 Tenho[_u_] um[_ũm_] cachorro[_u_] e[_i_] uma[_ũma_] gata. Tenho[_u_] dois irmãos[_us_] e[_i_] duas irmãs também[_eyn_].
 
-Tô em[_eyn_] Nova York[_i_] agora também[_eyn_]. Também[_eyn_] tô em[_eyn_] casa e[_i_] tô contente[_tchi_] em[_eyn_] falá português.
+_Tô_ em[_eyn_] Nova York[_i_] agora também[_eyn_]. Também[_eyn_] _tô_ em[_eyn_] casa e[_i_] _tô_ contente[_tchi_] em[_eyn_] _falá_ português.
 
 
 ```
 
 **Step 5: Full Colloquial Speech (all phonetic processes)**
 ```
-Sô Sarah. Sô americana também[_eyn_], dji Miami. Também[_eyn_] sô analista e[_i_] sô casada com[_coun_] o[_u_] John.
+_Sô_ Sarah. _Sô_ americana também[_eyn_], _dji_ Miami. Também[_eyn_] _sô_ analista e[_i_] _sô_ casada com[_coun_] o[_u_] John.
 
-Moro[_u_] em[_eyn_] Nova York também[_eyn_], navenida das Américas. Também[_eyn_] trabalho[_u_] nAcme[_i_] como[_u_] analista.
+Moro[_u_] em[_eyn_] Nova York também[_eyn_], _navenida_ das Américas. Também[_eyn_] trabalho[_u_] _nAcme_[_i_] como[_u_] analista.
 
-Vô dji metrô pro[_u_] trabalho[_u_] também[_eyn_].
+_Vô_ _dji_ metrô _pro_[_u_] trabalho[_u_] também[_eyn_].
 
-Falo[_u_] inglês e[_i_] um[_ũm_] pocu djispanho~~l~~[_u_] também[_eyn_].
+Falo[_u_] inglês e[_i_] um[_ũm_] _pocu_ _djispanho~~l~~[_u_] também[_eyn_].
 
-Gostchi música também[_eyn_] e[_i_] dji viajá.
+_Gostchi_ música também[_eyn_] e[_i_] _dji_ _viajá_.
 
-Tenhu um[_ũm_] cachorro[_u_] e[_i_] uma[_ũma_] gata. Tenhu dois irmãos[_us_] e[_i_] duas irmãs também[_eyn_].
+_Tenhu_ um[_ũm_] cachorro[_u_] e[_i_] uma[_ũma_] gata. _Tenhu_ dois irmãos[_us_] e[_i_] duas irmãs também[_eyn_].
 
-Tô em[_eyn_] Nova York agora também[_eyn_]. Também[_eyn_] tô em[_eyn_] casa e[_i_] tô contente[_tchi_] em[_eyn_] falá português.
+_Tô_ em[_eyn_] Nova York agora também[_eyn_]. Também[_eyn_] _tô_ em[_eyn_] casa e[_i_] _tô_ contente[_tchi_] em[_eyn_] _falá_ português.
 
 
 ```
@@ -581,11 +581,11 @@ Estou em[_eyn_] Nova York[_i_] agora. Estou no[_u_] escritório[_u_] e[_i_] esto
 
 **Step 4: Dropping/Elision (rule-based)**
 ```
-Sô o[_u_] Carlos[_us_]. Sô brasileiro[_u_], de[_dji_] São[_u_] Paulo[_u_]. Sô analista e[_i_] sô solteiro[_u_]. Sô colega do[_u_] John e[_i_] da Sarah.
+_Sô_ o[_u_] Carlos[_us_]. _Sô_ brasileiro[_u_], de[_dji_] São[_u_] Paulo[_u_]. _Sô_ analista e[_i_] _sô_ solteiro[_u_]. _Sô_ colega do[_u_] John e[_i_] da Sarah.
 
 Moro[_u_] em[_eyn_] Nova York[_i_], no[_u_] Brooklyn. Trabalho[_u_] na Acme[_i_] como[_u_] analista.
 
-Vou de[djô]nibus pro[_u_] escritório[_u_].
+Vou de[djô]nibus _pro_[_u_] escritório[_u_].
 
 Falo[_u_] português e[_i_] inglês.
 
@@ -593,26 +593,26 @@ Gosto[_u_] de[_dji_] futebo~~l~~[_u_] e[_i_] de[_dji_] café.
 
 Tenho[_u_] um[_ũm_] gato[_u_]. Tenho[_u_] uma[_ũma_] irmã.
 
-Tô em[_eyn_] Nova York[_i_] agora. Tô no[_u_] escritório[_u_] e[_i_] tô contente[_tchi_] em[_eyn_] falá português com[_coun_] eles.
+_Tô_ em[_eyn_] Nova York[_i_] agora. _Tô_ no[_u_] escritório[_u_] e[_i_] _tô_ contente[_tchi_] em[_eyn_] _falá_ português com[_coun_] eles.
 
 
 ```
 
 **Step 5: Full Colloquial Speech (all phonetic processes)**
 ```
-Sô Carlos[_us_]. Sô brasileiro[_u_], dji São[_u_] Paulo[_u_]. Sô analista e[_i_] sô solteiro[_u_]. Sô colega do[_u_] John e[_i_] da Sarah.
+_Sô_ Carlos[_us_]. _Sô_ brasileiro[_u_], _dji_ São[_u_] Paulo[_u_]. _Sô_ analista e[_i_] _sô_ solteiro[_u_]. _Sô_ colega do[_u_] John e[_i_] da Sarah.
 
-Moro[_u_] em[_eyn_] Nova York, no[_u_] Brooklyn. Trabalho[_u_] nAcme[_i_] como[_u_] analista.
+Moro[_u_] em[_eyn_] Nova York, no[_u_] Brooklyn. Trabalho[_u_] _nAcme_[_i_] como[_u_] analista.
 
-Vô djônibus proscritório[_u_].
+_Vô_ _djônibus_ _proscritório_[_u_].
 
 Falo[_u_] português e[_i_] inglês.
 
-Gostchi futebou e[_i_] dji café.
+_Gostchi_ _futebou_ e[_i_] _dji_ café.
 
-Tenhu um[_ũm_] gato[_u_]. Tenhu umirmã.
+_Tenhu_ um[_ũm_] gato[_u_]. _Tenhu_ _umirmã_.
 
-Tô em[_eyn_] Nova York agora. Tô noscritório[_u_] e[_i_] tô contente[_tchi_] em[_eyn_] falá português com[_coun_] eles.
+_Tô_ em[_eyn_] Nova York agora. _Tô_ _noscritório_[_u_] e[_i_] _tô_ contente[_tchi_] em[_eyn_] _falá_ português com[_coun_] eles.
 
 
 ```
