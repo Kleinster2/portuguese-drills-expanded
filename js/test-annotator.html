@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pronunciation Annotator Test</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-case {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+        }
+        .test-case.fail {
+            border-left-color: #f44336;
+        }
+        .input {
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .output {
+            color: #000;
+            font-weight: bold;
+        }
+        .expected {
+            color: #4CAF50;
+            margin-top: 5px;
+        }
+        .status {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .pass {
+            background: #4CAF50;
+            color: white;
+        }
+        .fail {
+            background: #f44336;
+            color: white;
+        }
+        h1 {
+            color: #333;
+        }
+        .summary {
+            background: #2196F3;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pronunciation Annotator Test Suite</h1>
+    <div id="summary" class="summary">
+        Running tests...
+    </div>
+    <div id="results"></div>
+
+    <script src="pronunciation-annotator.js"></script>
+    <script>
+        // Test cases from Python version
+        const testCases = [
+            {
+                name: "Simple self-introduction",
+                input: "Eu sou americana. Eu moro em São Paulo.",
+                expected: "Eu sou[_u_] americana. Eu moro[_u_] em[_eyn_] São Paulo[_u_]."
+            },
+            {
+                name: "Tilde words (should NOT annotate)",
+                input: "Eu tenho dois irmãos e três irmãs.",
+                expected: "Eu tenho[_u_] dois irmãos e[_i_] três irmãs."
+            },
+            {
+                name: "L vocalization",
+                input: "O Brasil é legal.",
+                expected: "O[_u_] Brasi~~l~~[_u_] é lega~~l~~[_u_]."
+            },
+            {
+                name: "Plural -es words",
+                input: "Os professores portugueses são diferentes.",
+                expected: "Os[_us_] professores[_is_] portugueses[_is_] são diferentes[_is_]."
+            },
+            {
+                name: "Verb -am ending",
+                input: "Eles falam português e cantam músicas.",
+                expected: "Eles falam[_ãwn_] português e[_i_] cantam[_ãwn_] músicas."
+            },
+            {
+                name: "Palatalization de",
+                input: "Eu sou de Lisboa.",
+                expected: "Eu sou[_u_] de[_dji_] Lisboa."
+            },
+            {
+                name: "Nasal words (com, também)",
+                input: "Eu também trabalho com computadores.",
+                expected: "Eu também[_eyn_] trabalho[_u_] com[_coun_] computadores[_is_]."
+            },
+            {
+                name: "Capitalized article Os",
+                input: "Os músicos tocam violões.",
+                expected: "Os[_us_] músicos[_us_] tocam[_ãwn_] violões."
+            },
+            {
+                name: "Mixed plural forms",
+                input: "Os motoristas dirigem ônibus amarelos pelas avenidas.",
+                expected: "Os[_us_] motoristas experientes[_is_] dirigem ônibus amarelos[_us_] pelas avenidas."
+            }
+        ];
+
+        let passed = 0;
+        let failed = 0;
+        const resultsDiv = document.getElementById('results');
+
+        testCases.forEach((test, index) => {
+            const actual = annotatePronunciation(test.input, false);
+            const success = actual === test.expected;
+
+            if (success) {
+                passed++;
+            } else {
+                failed++;
+            }
+
+            const testDiv = document.createElement('div');
+            testDiv.className = success ? 'test-case' : 'test-case fail';
+            testDiv.innerHTML = `
+                <strong>Test ${index + 1}: ${test.name}</strong>
+                <span class="status ${success ? 'pass' : 'fail'}">${success ? 'PASS' : 'FAIL'}</span>
+                <div class="input">Input: ${test.input}</div>
+                <div class="output">Output: ${actual}</div>
+                ${!success ? `<div class="expected">Expected: ${test.expected}</div>` : ''}
+            `;
+            resultsDiv.appendChild(testDiv);
+        });
+
+        // Update summary
+        document.getElementById('summary').innerHTML = `
+            <strong>Test Results:</strong> ${passed} passed, ${failed} failed out of ${testCases.length} total
+            ${failed === 0 ? ' 🎉' : ''}
+        `;
+    </script>
+</body>
+</html>
