@@ -25,6 +25,37 @@ Designed to be dialect-neutral (PT-PT and PT-BR) with enhanced learning experien
   - Critical reference for understanding the syllabus annotation system
   - **Essential for anyone working with syllabus content**
 
+- **[SYLLABUS_PHASE_1.md](SYLLABUS_PHASE_1.md)** - ⭐ **Complete Phase 1 curriculum (8 units)**
+  - Self-introduction focused ("eu" mastery)
+  - 5-step progressive disclosure (orthography → full colloquial speech)
+  - Comprehensive glossaries for all units
+  - Pronunciation annotations using italic formatting
+
+### Pronunciation System Documentation
+- **[Quick Reference Guide](docs/QUICK_REFERENCE.md)** - ⭐ **Fast lookup for rules, patterns, and scripts**
+  - 6 obligatory pronunciation rules (one-page reference)
+  - Visual formatting system (regular vs italic)
+  - Common patterns cheat sheet
+  - Script usage examples
+  - Perfect for daily development work
+
+- **[System Architecture](docs/SYSTEM_ARCHITECTURE.md)** - Complete technical documentation
+  - Rule processing pipeline and algorithms
+  - Pedagogical progression framework
+  - Annotation tooling ecosystem
+  - Extension points and maintenance guide
+
+- **[Changelog](docs/CHANGELOG.md)** - Version history and feature log
+  - v1.1: Italic formatting, short/long nasal distinction, glossaries
+  - Complete commit history with rationale
+  - Migration notes and breaking changes
+
+- **[Annotation Tool README](utils/README_ANNOTATOR.md)** - Script usage guide
+  - Command-line usage examples
+  - API reference
+  - Rule application details
+  - Testing instructions
+
 ### For Users
 - **[A1 Curriculum Guide](docs/curriculum/A1-curriculum-primer.md)** - Detailed explanation of what each A1 drill teaches
 - **[Shareable Links Guide](docs/features/SHAREABLE_LINKS.md)** - How to share and bookmark specific drills
