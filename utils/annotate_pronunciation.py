@@ -14,7 +14,7 @@ Applies 6 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4):
 NOTE: Coalescence (de ônibus → djônibus) is NOT applied here.
       It is an OPTIONAL feature for Step 5 (phonetic orthography) only.
 
-Version: 1.2
+Version: 1.3
 Last Updated: 2025-01-07
 """
 
@@ -299,17 +299,18 @@ def apply_rule_1(text: str) -> str:
     protected, replacements = protect_brackets(text)
 
     # Function words (specific patterns to avoid over-matching)
-    protected = re.sub(r'\bo\b', r'o[_u_]', protected)  # Article 'o'
-    protected = re.sub(r'\bdo\b', r'do[_u_]', protected)  # Contraction de+o
-    protected = re.sub(r'\bno\b', r'no[_u_]', protected)  # Contraction em+o
-    protected = re.sub(r'\bao\b', r'ao[_u_]', protected)  # Contraction a+o
-    protected = re.sub(r'\bcomo\b', r'como[_u_]', protected, flags=re.IGNORECASE)  # 'as/like'
+    # Use capture group to preserve case
+    protected = re.sub(r'\b(o)\b', r'\1[_u_]', protected, flags=re.IGNORECASE)  # Article 'o/O'
+    protected = re.sub(r'\b(do)\b', r'\1[_u_]', protected, flags=re.IGNORECASE)  # Contraction de+o
+    protected = re.sub(r'\b(no)\b', r'\1[_u_]', protected, flags=re.IGNORECASE)  # Contraction em+o
+    protected = re.sub(r'\b(ao)\b', r'\1[_u_]', protected, flags=re.IGNORECASE)  # Contraction a+o
+    protected = re.sub(r'\b(como)\b', r'\1[_u_]', protected, flags=re.IGNORECASE)  # 'as/like'
 
-    # Plural forms
-    protected = re.sub(r'\bos\b', r'os[_us_]', protected)  # Article 'os'
-    protected = re.sub(r'\bdos\b', r'dos[_us_]', protected)  # Contraction de+os
-    protected = re.sub(r'\bnos\b', r'nos[_us_]', protected)  # Contraction em+os
-    protected = re.sub(r'\baos\b', r'aos[_us_]', protected)  # Contraction a+os
+    # Plural forms (preserve case with capture group)
+    protected = re.sub(r'\b(os)\b', r'\1[_us_]', protected, flags=re.IGNORECASE)  # Article 'os/Os'
+    protected = re.sub(r'\b(dos)\b', r'\1[_us_]', protected, flags=re.IGNORECASE)  # Contraction de+os
+    protected = re.sub(r'\b(nos)\b', r'\1[_us_]', protected, flags=re.IGNORECASE)  # Contraction em+os
+    protected = re.sub(r'\b(aos)\b', r'\1[_us_]', protected, flags=re.IGNORECASE)  # Contraction a+os
 
     # Words ending in -o (but not stressed, not already annotated, not followed by ~~)
     def replace_final_o(match):
