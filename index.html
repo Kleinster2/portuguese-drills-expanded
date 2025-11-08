@@ -285,11 +285,15 @@
                         <ul class="space-y-1 text-sm text-slate-600">
                             <li class="flex items-start gap-2">
                                 <span class="text-green-600 mt-0.5">•</span>
-                                <span>Adds pronunciation guides like <code class="bg-slate-100 px-1 rounded">[_u_]</code>, <code class="bg-slate-100 px-1 rounded">[_i_]</code>, <code class="bg-slate-100 px-1 rounded">[_dji_]</code> to show how Brazilians actually pronounce words</span>
+                                <span>Adds pronunciation guides to show how Brazilians actually pronounce words</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <span class="text-green-600 mt-0.5">•</span>
-                                <span>Marks L vocalization with <code class="bg-slate-100 px-1 rounded">~~l~~[_u_]</code> (e.g., "Brasil" → "Brasi~~l~~[_u_]")</span>
+                                <span><strong>Visual display:</strong> Annotations shown in <i class="text-blue-600">[italics]</i> for easy reading</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-600 mt-0.5">•</span>
+                                <span><strong>Copy function:</strong> Preserves raw format <code class="bg-slate-100 px-1 rounded">[_u_]</code> for pasting into syllabus files</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <span class="text-green-600 mt-0.5">•</span>
@@ -1047,9 +1051,19 @@ function annotateText() {
   try {
     const annotated = annotatePronunciation(inputText, false);
 
-    // Display with line breaks preserved
-    const formatted = annotated.replace(/\n/g, '<br>');
+    // Format for visual display:
+    // 1. Convert [_notation_] to <i>[notation]</i> (remove underscores, add italics)
+    // 2. Convert ~~text~~ to <s>text</s> (strikethrough for L vocalization)
+    // 3. Preserve line breaks
+    let formatted = annotated
+      .replace(/\[_([^\]]+)_\]/g, '<i class="text-blue-600">[$1]</i>')  // Italic annotations (blue)
+      .replace(/~~([^~]+)~~/g, '<s class="text-gray-400">$1</s>')       // Strikethrough (gray)
+      .replace(/\n/g, '<br>');                                            // Line breaks
+
     output.innerHTML = `<div class="whitespace-pre-wrap">${formatted}</div>`;
+
+    // Store the raw annotated text for copying (with underscores)
+    output.dataset.rawText = annotated;
 
     // Show copy button
     copyBtn.classList.remove('hidden');
@@ -1061,9 +1075,12 @@ function annotateText() {
 
 function copyAnnotatedText() {
   const output = document.getElementById('annotator-output');
-  const textContent = output.textContent || output.innerText;
 
-  navigator.clipboard.writeText(textContent).then(() => {
+  // Copy the raw text with underscores (for pasting into syllabus files)
+  // Not the HTML-formatted version shown on screen
+  const textToCopy = output.dataset.rawText || output.textContent || output.innerText;
+
+  navigator.clipboard.writeText(textToCopy).then(() => {
     const copyBtn = document.getElementById('copy-annotated-btn');
     const originalText = copyBtn.textContent;
     copyBtn.textContent = 'Copied!';
