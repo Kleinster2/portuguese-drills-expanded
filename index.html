@@ -245,9 +245,20 @@
 
                         <!-- Output Section -->
                         <div>
-                            <label for="annotator-output" class="block text-sm font-semibold text-slate-700 mb-2">
-                                Annotated Text with Pronunciation
-                            </label>
+                            <div class="flex items-center justify-between mb-2">
+                                <label for="annotator-output" class="text-sm font-semibold text-slate-700">
+                                    Annotated Text with Pronunciation
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-slate-600 cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        id="substitution-mode"
+                                        onchange="toggleAnnotationMode()"
+                                        class="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                                    >
+                                    <span>Substitution Mode</span>
+                                </label>
+                            </div>
                             <div
                                 id="annotator-output"
                                 class="w-full h-48 px-4 py-3 text-slate-900 bg-white border border-slate-300 rounded-lg shadow-sm overflow-y-auto font-mono text-sm"
@@ -289,11 +300,15 @@
                             </li>
                             <li class="flex items-start gap-2">
                                 <span class="text-green-600 mt-0.5">•</span>
-                                <span><strong>Visual display:</strong> Annotations shown in <i class="text-blue-600">[italics]</i> for easy reading</span>
+                                <span><strong>Bracket Mode:</strong> Shows annotations like trabalho<i class="text-blue-600">[u]</i> de<i class="text-blue-600">[dji]</i></span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <span class="text-green-600 mt-0.5">•</span>
-                                <span><strong>Copy function:</strong> Preserves raw format <code class="bg-slate-100 px-1 rounded">[_u_]</code> for pasting into syllabus files</span>
+                                <span><strong>Substitution Mode:</strong> Shows phonetic spelling like trabalh<span class="text-blue-600 font-semibold">u</span> <span class="text-blue-600 font-semibold">dji</span></span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-600 mt-0.5">•</span>
+                                <span><strong>Copy function:</strong> Always preserves raw format <code class="bg-slate-100 px-1 rounded">[_u_]</code> for pasting into syllabus files</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <span class="text-green-600 mt-0.5">•</span>
@@ -1035,10 +1050,94 @@ function toggleAnnotator() {
   }
 }
 
+function formatBracketMode(annotated) {
+  // Bracket mode: Show annotations in brackets [notation]
+  return annotated
+    .replace(/\[_([^\]]+)_\]/g, '<i class="text-blue-600">[$1]</i>')  // Italic annotations (blue)
+    .replace(/~~([^~]+)~~/g, '<s class="text-gray-400">$1</s>')       // Strikethrough (gray)
+    .replace(/\n/g, '<br>');                                            // Line breaks
+}
+
+function formatSubstitutionMode(annotated) {
+  // Substitution mode: Replace original text with phonetic realization
+  let result = annotated;
+
+  // Handle different annotation types and perform substitutions
+
+  // Final -o → u
+  result = result.replace(/(\w+)o\[_u_\]/gi, (match, stem) => {
+    return stem + '<span class="text-blue-600 font-semibold">u</span>';
+  });
+
+  // Final -os → us
+  result = result.replace(/(\w+)os\[_us_\]/gi, (match, stem) => {
+    return stem + '<span class="text-blue-600 font-semibold">us</span>';
+  });
+
+  // Final -e → i
+  result = result.replace(/(\w+)e\[_i_\]/gi, (match, stem) => {
+    return stem + '<span class="text-blue-600 font-semibold">i</span>';
+  });
+
+  // Final -es → is
+  result = result.replace(/(\w+)es\[_is_\]/gi, (match, stem) => {
+    return stem + '<span class="text-blue-600 font-semibold">is</span>';
+  });
+
+  // Final -te → tchi
+  result = result.replace(/(\w+)te\[_tchi_\]/gi, (match, stem) => {
+    return stem + '<span class="text-blue-600 font-semibold">tchi</span>';
+  });
+
+  // Verb -am → ãwn
+  result = result.replace(/(\w+)am\[_ãwn_\]/gi, (match, stem) => {
+    return stem + '<span class="text-blue-600 font-semibold">ãwn</span>';
+  });
+
+  // de → dji (complete replacement)
+  result = result.replace(/\bde\[_dji_\]/gi, '<span class="text-blue-600 font-semibold">dji</span>');
+
+  // -em nasal patterns
+  result = result.replace(/\b(tem|quem|sem|bem|cem|nem|em)\[_(\w+)_\]/gi, (match, word, sound) => {
+    return `<span class="text-blue-600 font-semibold">${sound}</span>`;
+  });
+
+  // também, alguém, ninguém (show full word with ending highlighted)
+  result = result.replace(/(\w+ém)\[_eyn_\]/gi, (match, word) => {
+    const stem = word.slice(0, -2);
+    return stem + '<span class="text-blue-600 font-semibold">eyn</span>';
+  });
+
+  // Short nasal words: com, som, bom
+  result = result.replace(/\b(com|som|bom)\[_(\w+)_\]/gi, (match, word, sound) => {
+    return `<span class="text-blue-600 font-semibold">${sound}</span>`;
+  });
+
+  // um/uma → ũm/ũma
+  result = result.replace(/\b(um|uma|algum|alguma|nenhum|nenhuma)\[_([^_]+)_\]/gi, (match, word, sound) => {
+    return `<span class="text-blue-600 font-semibold">${sound}</span>`;
+  });
+
+  // L vocalization: ~~l~~[_u_] → u (replace the l)
+  result = result.replace(/(\w+)~~l~~\[_u_\]/gi, (match, stem) => {
+    return stem + '<span class="text-blue-600 font-semibold">u</span>';
+  });
+
+  // Clean up any remaining annotations (shouldn't happen, but just in case)
+  result = result.replace(/\[_([^\]]+)_\]/g, '<i class="text-blue-600">[$1]</i>');
+  result = result.replace(/~~([^~]+)~~/g, '$1');
+
+  // Line breaks
+  result = result.replace(/\n/g, '<br>');
+
+  return result;
+}
+
 function annotateText() {
   const input = document.getElementById('annotator-input');
   const output = document.getElementById('annotator-output');
   const copyBtn = document.getElementById('copy-annotated-btn');
+  const substitutionMode = document.getElementById('substitution-mode').checked;
 
   const inputText = input.value.trim();
 
@@ -1051,25 +1150,30 @@ function annotateText() {
   try {
     const annotated = annotatePronunciation(inputText, false);
 
-    // Format for visual display:
-    // 1. Convert [_notation_] to <i>[notation]</i> (remove underscores, add italics)
-    // 2. Convert ~~text~~ to <s>text</s> (strikethrough for L vocalization)
-    // 3. Preserve line breaks
-    let formatted = annotated
-      .replace(/\[_([^\]]+)_\]/g, '<i class="text-blue-600">[$1]</i>')  // Italic annotations (blue)
-      .replace(/~~([^~]+)~~/g, '<s class="text-gray-400">$1</s>')       // Strikethrough (gray)
-      .replace(/\n/g, '<br>');                                            // Line breaks
-
-    output.innerHTML = `<div class="whitespace-pre-wrap">${formatted}</div>`;
-
     // Store the raw annotated text for copying (with underscores)
     output.dataset.rawText = annotated;
+
+    // Format based on selected mode
+    const formatted = substitutionMode ? formatSubstitutionMode(annotated) : formatBracketMode(annotated);
+    output.innerHTML = `<div class="whitespace-pre-wrap">${formatted}</div>`;
 
     // Show copy button
     copyBtn.classList.remove('hidden');
   } catch (error) {
     console.error('Error annotating text:', error);
     output.innerHTML = `<div class="bg-red-50 border border-red-200 rounded-lg p-4"><p class="text-red-800 text-sm">Error annotating text. Please try again.</p></div>`;
+  }
+}
+
+function toggleAnnotationMode() {
+  // Re-render the output if we have annotated text
+  const output = document.getElementById('annotator-output');
+  const rawText = output.dataset.rawText;
+
+  if (rawText) {
+    const substitutionMode = document.getElementById('substitution-mode').checked;
+    const formatted = substitutionMode ? formatSubstitutionMode(rawText) : formatBracketMode(rawText);
+    output.innerHTML = `<div class="whitespace-pre-wrap">${formatted}</div>`;
   }
 }
 
