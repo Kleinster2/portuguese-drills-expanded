@@ -224,6 +224,27 @@ function applyRule3(text) {
     };
     text = text.replace(/\b\w+te\b(?!\[)/gi, annotateTe);
 
+    // Rule 3c: Words ending in -de → [_dji_] (unstressed final -de palatalization)
+    // This must run BEFORE Rule 2 (final -e) to prevent -de words from getting [_i_]
+    const annotateDe = (match) => {
+        const word = match;
+        // Skip if word is standalone 'de' (already handled above)
+        if (word.toLowerCase() === 'de') {
+            return word;
+        }
+        // Skip if already annotated
+        if (word.includes('[')) {
+            return word;
+        }
+        // Skip if stressed final
+        if (isStressedFinal(word)) {
+            return word;
+        }
+        // Apply: word ending in de → word[_dji_]
+        return word + '[_dji_]';
+    };
+    text = text.replace(/\b\w+de\b(?!\[)/gi, annotateDe);
+
     return text;
 }
 

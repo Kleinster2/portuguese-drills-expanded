@@ -1071,6 +1071,11 @@ function formatSubstitutionMode(annotated) {
     return stem + '<span class="text-blue-600 font-semibold">tchi</span>';
   });
 
+  // Final -de → dji (more specific than -e → i, but not standalone "de")
+  result = result.replace(/([^\s]+)de\[_dji_\]/gi, (match, stem) => {
+    return stem + '<span class="text-blue-600 font-semibold">dji</span>';
+  });
+
   // Verb -am → ãwn
   result = result.replace(/([^\s]+)am\[_ãwn_\]/gi, (match, stem) => {
     return stem + '<span class="text-blue-600 font-semibold">ãwn</span>';

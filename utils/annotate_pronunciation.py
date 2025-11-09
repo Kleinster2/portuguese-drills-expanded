@@ -255,6 +255,23 @@ def apply_rule_3(text: str) -> str:
         return word + '[_tchi_]'
     text = re.sub(r'\b\w+te\b(?!\[)', annotate_te, text, flags=re.IGNORECASE)
 
+    # Rule 3c: Words ending in -de → [_dji_] (unstressed final -de palatalization)
+    # This must run BEFORE Rule 2 (final -e) to prevent -de words from getting [_i_]
+    def annotate_de(match):
+        word = match.group(0)
+        # Skip if word is standalone 'de' (already handled above)
+        if word.lower() == 'de':
+            return word
+        # Skip if already annotated
+        if '[' in word:
+            return word
+        # Skip if stressed final
+        if is_stressed_final(word):
+            return word
+        # Apply: word ending in de → word[_dji_]
+        return word + '[_dji_]'
+    text = re.sub(r'\b\w+de\b(?!\[)', annotate_de, text, flags=re.IGNORECASE)
+
     return text
 
 def apply_rule_2(text: str) -> str:
