@@ -64,7 +64,7 @@ function showInstallBanner() {
     <div class="flex items-start gap-3">
       <div class="text-3xl">📱</div>
       <div class="flex-1">
-        <h3 class="font-bold text-lg mb-1">Install PT Drills</h3>
+        <h3 class="font-bold text-lg mb-1">Install PT Tutor</h3>
         <p class="text-sm opacity-90 mb-3">Add to your home screen for quick access and offline use!</p>
         <div class="flex gap-2">
           <button id="install-app-btn" class="bg-white text-sky-600 px-4 py-2 rounded font-semibold text-sm hover:bg-gray-100 transition">
@@ -123,7 +123,7 @@ window.addEventListener('appinstalled', () => {
   }
 
   // Show success message
-  showSuccessMessage('App installed! Look for PT Drills on your home screen.');
+  showSuccessMessage('App installed! Look for PT Tutor on your home screen.');
 });
 
 // Show success message
