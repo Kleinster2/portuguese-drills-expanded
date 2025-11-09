@@ -107,6 +107,7 @@ function showInstallBanner() {
 
   // Close button handler
   document.getElementById('close-banner-btn').addEventListener('click', () => {
+    localStorage.setItem('pwa-banner-dismissed', 'true');
     banner.remove();
   });
 }
