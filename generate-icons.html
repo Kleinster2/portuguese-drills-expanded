@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PWA Icon Generator</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #0ea5e9;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      color: #666;
+      margin-bottom: 30px;
+    }
+    .icon-preview {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+    .icon-item {
+      text-align: center;
+    }
+    canvas {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .size-label {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #666;
+    }
+    button {
+      background: #0ea5e9;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    button:hover {
+      background: #0284c7;
+    }
+    button.secondary {
+      background: #64748b;
+    }
+    button.secondary:hover {
+      background: #475569;
+    }
+    .instructions {
+      background: #f8fafc;
+      border-left: 4px solid #0ea5e9;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+    .instructions h3 {
+      margin-top: 0;
+      color: #0ea5e9;
+    }
+    .instructions ol {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    .instructions li {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Portuguese Drills - PWA Icon Generator</h1>
+    <p class="subtitle">Generate all required icon sizes for your Progressive Web App</p>
+
+    <div class="instructions">
+      <h3>How to Use:</h3>
+      <ol>
+        <li>Icons are automatically generated with the PT Drills branding</li>
+        <li>Click "Download All Icons" to save all sizes as a ZIP file</li>
+        <li>Or right-click individual icons to save them separately</li>
+        <li>Place icons in <code>/icons/</code> directory</li>
+        <li>Deploy and test installation on mobile devices</li>
+      </ol>
+    </div>
+
+    <div>
+      <button onclick="downloadAllIcons()">Download All Icons</button>
+      <button class="secondary" onclick="downloadIndividualIcons()">Download Individually</button>
+    </div>
+
+    <div class="icon-preview" id="iconPreview"></div>
+  </div>
+
+  <script>
+    const sizes = [72, 96, 128, 144, 152, 192, 384, 512];
+    const canvases = {};
+
+    function createIcon(size) {
+      const canvas = document.createElement('canvas');
+      canvas.width = size;
+      canvas.height = size;
+      const ctx = canvas.getContext('2d');
+
+      // Background gradient (sky blue)
+      const gradient = ctx.createLinearGradient(0, 0, size, size);
+      gradient.addColorStop(0, '#0ea5e9');
+      gradient.addColorStop(1, '#0284c7');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, size, size);
+
+      // White text
+      ctx.fillStyle = 'white';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+
+      // Draw "PT" at top
+      const ptSize = size * 0.35;
+      ctx.font = `bold ${ptSize}px system-ui, -apple-system, sans-serif`;
+      ctx.fillText('PT', size / 2, size * 0.35);
+
+      // Draw flag emoji or drill icon
+      const iconSize = size * 0.25;
+      ctx.font = `${iconSize}px system-ui`;
+      ctx.fillText('🇧🇷', size / 2, size * 0.65);
+
+      // Optional: Add subtle border
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+      ctx.lineWidth = size * 0.02;
+      ctx.strokeRect(0, 0, size, size);
+
+      return canvas;
+    }
+
+    function displayIcons() {
+      const preview = document.getElementById('iconPreview');
+      preview.innerHTML = '';
+
+      sizes.forEach(size => {
+        const canvas = createIcon(size);
+        canvases[size] = canvas;
+
+        const container = document.createElement('div');
+        container.className = 'icon-item';
+
+        const displayCanvas = canvas.cloneNode(true);
+        const ctx = displayCanvas.getContext('2d');
+        ctx.drawImage(canvas, 0, 0);
+
+        container.appendChild(displayCanvas);
+
+        const label = document.createElement('div');
+        label.className = 'size-label';
+        label.textContent = `${size}×${size}px`;
+        container.appendChild(label);
+
+        preview.appendChild(container);
+      });
+    }
+
+    function downloadCanvas(canvas, filename) {
+      canvas.toBlob(blob => {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        a.click();
+        URL.revokeObjectURL(url);
+      }, 'image/png');
+    }
+
+    function downloadAllIcons() {
+      // Since we can't create ZIP in browser without libraries,
+      // download them one by one with a small delay
+      sizes.forEach((size, index) => {
+        setTimeout(() => {
+          downloadCanvas(canvases[size], `icon-${size}.png`);
+        }, index * 300);
+      });
+
+      alert(`Downloading ${sizes.length} icon files. Please wait for all downloads to complete.\n\nSave them to: /icons/`);
+    }
+
+    function downloadIndividualIcons() {
+      alert('Right-click on any icon above and select "Save image as..." to download individual sizes.');
+    }
+
+    // Generate icons on page load
+    displayIcons();
+  </script>
+</body>
+</html>
