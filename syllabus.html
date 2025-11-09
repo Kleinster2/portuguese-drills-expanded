@@ -354,9 +354,24 @@
             return div;
         }
 
-        // Open unit details (placeholder for now)
+        // Open unit details
         function openUnit(unit) {
-            alert(`Unit ${unit.unit}: ${unit.title}\n\n(Full lesson content coming soon!)\n\nThis will open an interactive lesson with:\n• Vocabulary with audio\n• Grammar explanations\n• Example sentences\n• Practice exercises`);
+            // Check if lesson page exists - Unit 1 has a lesson page
+            if (unit.unit === 1) {
+                window.location.href = `/lessons/unit-${unit.unit}.html`;
+            } else {
+                // Other units show coming soon message
+                alert(`Unit ${unit.unit}: ${unit.title}
+
+(Full lesson content coming soon!)
+
+This will open an interactive lesson with:
+• Vocabulary with audio
+• Grammar explanations
+• Example sentences
+• Practice exercises`);
+            }
+        }: ${unit.title}\n\n(Full lesson content coming soon!)\n\nThis will open an interactive lesson with:\n• Vocabulary with audio\n• Grammar explanations\n• Example sentences\n• Practice exercises`);
         }
 
         // Filter by phase
