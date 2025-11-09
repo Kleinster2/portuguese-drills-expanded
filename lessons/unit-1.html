@@ -533,16 +533,20 @@
                 // Skip if already has speaker button
                 if (sentence.querySelector('.speaker-btn')) return;
                 
-                // Get the Portuguese text (first part before translation)
+                // Get the Portuguese text
                 let portugueseText = sentence.textContent.trim();
-                
-                // If there's a slash separator, take only the first part
+
+                // If there's a slash separator, read both parts in sequence
                 if (portugueseText.includes(' / ')) {
-                    portugueseText = portugueseText.split(' / ')[0].trim();
+                    const parts = portugueseText.split(' / ');
+                    // Clean each part and join with period for natural pause
+                    portugueseText = parts
+                        .map(part => part.replace(/\/[^\/]+\//g, '').trim())
+                        .join('. ');
+                } else {
+                    // Remove pronunciation annotations
+                    portugueseText = portugueseText.replace(/\/[^\/]+\//g, '').trim();
                 }
-                
-                // Remove pronunciation annotations in brackets
-                portugueseText = portugueseText.replace(/\/[^\/]+\//g, '').trim();
                 
                 // Create speaker button
                 const speakerBtn = document.createElement('button');
