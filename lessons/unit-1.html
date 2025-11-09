@@ -585,7 +585,16 @@
 
                 // Get text and remove pronunciation annotations
                 let portugueseText = item.textContent.trim();
-                portugueseText = portugueseText.replace(/\/[^\/]+\//g, '').trim();
+
+                // If there's a slash separator, read both parts in sequence
+                if (portugueseText.includes(' / ')) {
+                    const parts = portugueseText.split(' / ');
+                    portugueseText = parts
+                        .map(part => part.replace(/\/[^\/]+\//g, '').trim())
+                        .join('. ');
+                } else {
+                    portugueseText = portugueseText.replace(/\/[^\/]+\//g, '').trim();
+                }
                 
                 const speakerBtn = document.createElement('button');
                 speakerBtn.className = 'speaker-btn';
