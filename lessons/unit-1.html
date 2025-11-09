@@ -526,6 +526,28 @@
     <script>
         // Add speaker buttons to Portuguese sentences
         document.addEventListener('DOMContentLoaded', function() {
+            // Helper function to clean text for speech
+            function cleanTextForSpeech(text) {
+                // Helper to clean annotations from a single part
+                function cleanAnnotations(str) {
+                    // Remove anything between slashes: /m/, /f/, /u/, etc.
+                    str = str.replace(/\/[^\/]+\//g, '');
+                    // Remove leftover slash fragments: f/, m/, etc.
+                    str = str.replace(/[a-z]+\/|\/[a-z]+/gi, '');
+                    // Clean up spaces
+                    return str.replace(/\s+/g, ' ').trim();
+                }
+                
+                // If there's a slash separator, handle both parts
+                if (text.includes(' / ')) {
+                    const parts = text.split(' / ');
+                    const cleaned = parts.map(cleanAnnotations);
+                    // Use comma for longer pause (better for single letters like "o, a")
+                    return cleaned.join(', ');
+                } else {
+                    return cleanAnnotations(text);
+                }
+            }
             // Find all Portuguese sentence elements
             const sentences = document.querySelectorAll('.font-medium');
             
@@ -533,20 +555,8 @@
                 // Skip if already has speaker button
                 if (sentence.querySelector('.speaker-btn')) return;
                 
-                // Get the Portuguese text
-                let portugueseText = sentence.textContent.trim();
-
-                // If there's a slash separator, read both parts in sequence
-                if (portugueseText.includes(' / ')) {
-                    const parts = portugueseText.split(' / ');
-                    // Clean each part and join with period for natural pause
-                    portugueseText = parts
-                        .map(part => part.replace(/\/[^\/]+\//g, '').trim())
-                        .join('. ');
-                } else {
-                    // Remove pronunciation annotations
-                    portugueseText = portugueseText.replace(/\/[^\/]+\//g, '').trim();
-                }
+                // Get and clean the Portuguese text
+                const portugueseText = cleanTextForSpeech(sentence.textContent.trim());
                 
                 // Create speaker button
                 const speakerBtn = document.createElement('button');
@@ -583,18 +593,8 @@
             vocabItems.forEach(function(item) {
                 if (item.querySelector('.speaker-btn')) return;
 
-                // Get text and remove pronunciation annotations
-                let portugueseText = item.textContent.trim();
-
-                // If there's a slash separator, read both parts in sequence
-                if (portugueseText.includes(' / ')) {
-                    const parts = portugueseText.split(' / ');
-                    portugueseText = parts
-                        .map(part => part.replace(/\/[^\/]+\//g, '').trim())
-                        .join('. ');
-                } else {
-                    portugueseText = portugueseText.replace(/\/[^\/]+\//g, '').trim();
-                }
+                // Get and clean the vocabulary text
+                const portugueseText = cleanTextForSpeech(item.textContent.trim());
                 
                 const speakerBtn = document.createElement('button');
                 speakerBtn.className = 'speaker-btn';
