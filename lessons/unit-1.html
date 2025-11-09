@@ -582,8 +582,10 @@
             const vocabItems = document.querySelectorAll('.vocab-item .font-semibold');
             vocabItems.forEach(function(item) {
                 if (item.querySelector('.speaker-btn')) return;
-                
-                const portugueseText = item.textContent.trim();
+
+                // Get text and remove pronunciation annotations
+                let portugueseText = item.textContent.trim();
+                portugueseText = portugueseText.replace(/\/[^\/]+\//g, '').trim();
                 
                 const speakerBtn = document.createElement('button');
                 speakerBtn.className = 'speaker-btn';
