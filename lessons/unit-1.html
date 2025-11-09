@@ -48,6 +48,39 @@
             border-left: 3px solid #0ea5e9;
             padding-left: 13px;
         }
+
+        /* Speaker button styles */
+        .speaker-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            margin-left: 8px;
+            background: #0ea5e9;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            opacity: 0.8;
+        }
+        .speaker-btn:hover {
+            opacity: 1;
+            background: #0284c7;
+            transform: scale(1.1);
+        }
+        .speaker-btn:active {
+            transform: scale(0.95);
+        }
+        .speaker-btn.speaking {
+            background: #10b981;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
     </style>
 </head>
 <body class="bg-slate-50">
@@ -486,6 +519,89 @@
         </div>
     </footer>
 
+
+    <!-- Speech Utility -->
+    <script src="/speech.js"></script>
+
+    <script>
+        // Add speaker buttons to Portuguese sentences
+        document.addEventListener('DOMContentLoaded', function() {
+            // Find all Portuguese sentence elements
+            const sentences = document.querySelectorAll('.font-medium');
+            
+            sentences.forEach(function(sentence) {
+                // Skip if already has speaker button
+                if (sentence.querySelector('.speaker-btn')) return;
+                
+                // Get the Portuguese text (first part before translation)
+                let portugueseText = sentence.textContent.trim();
+                
+                // If there's a slash separator, take only the first part
+                if (portugueseText.includes(' / ')) {
+                    portugueseText = portugueseText.split(' / ')[0].trim();
+                }
+                
+                // Remove pronunciation annotations in brackets
+                portugueseText = portugueseText.replace(/\/[^\/]+\//g, '').trim();
+                
+                // Create speaker button
+                const speakerBtn = document.createElement('button');
+                speakerBtn.className = 'speaker-btn';
+                speakerBtn.setAttribute('aria-label', 'Speak this sentence');
+                speakerBtn.setAttribute('title', 'Click to hear pronunciation');
+                speakerBtn.innerHTML = '<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>';
+                
+                // Add click handler
+                speakerBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    // Add speaking class for visual feedback
+                    speakerBtn.classList.add('speaking');
+                    
+                    // Speak the text
+                    speak(portugueseText, {
+                        onEnd: function() {
+                            speakerBtn.classList.remove('speaking');
+                        },
+                        onError: function() {
+                            speakerBtn.classList.remove('speaking');
+                        }
+                    });
+                });
+                
+                // Add button after the sentence
+                sentence.appendChild(speakerBtn);
+            });
+            
+            // Also add to vocabulary items
+            const vocabItems = document.querySelectorAll('.vocab-item .font-semibold');
+            vocabItems.forEach(function(item) {
+                if (item.querySelector('.speaker-btn')) return;
+                
+                const portugueseText = item.textContent.trim();
+                
+                const speakerBtn = document.createElement('button');
+                speakerBtn.className = 'speaker-btn';
+                speakerBtn.setAttribute('aria-label', 'Speak this word');
+                speakerBtn.innerHTML = '<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>';
+                
+                speakerBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    speakerBtn.classList.add('speaking');
+                    speak(portugueseText, {
+                        onEnd: () => speakerBtn.classList.remove('speaking'),
+                        onError: () => speakerBtn.classList.remove('speaking')
+                    });
+                });
+                
+                item.appendChild(speakerBtn);
+            });
+            
+            console.log('[Unit 1] Speaker buttons initialized');
+        });
+    </script>
     <!-- PWA Setup -->
     <script src="/pwa-setup.js"></script>
 </body>
