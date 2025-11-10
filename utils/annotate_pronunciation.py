@@ -15,7 +15,7 @@ Applies 7 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4):
 NOTE: Coalescence (de ônibus → djônibus) is NOT applied here.
       It is an OPTIONAL feature for Step 5 (phonetic orthography) only.
 
-Version: 1.8
+Version: 1.9
 Last Updated: 2025-01-10
 """
 
@@ -148,14 +148,10 @@ def apply_rule_7a(text: str) -> str:
         # Don't annotate if already has annotation
         if '/' in word and re.search(r'/[^/\s]+/', word):
             return word
-        # Special case: Brasil gets annotated even though it's a proper noun
-        if word == 'Brasil':
-            return 'Brasil/u/'
-        # Don't annotate proper nouns (capitalized words)
-        if word[0].isupper():
-            return word
-        # Apply: word ending in l → word/u/
+        # Apply: word ending in l → word/u/ (final L sounds like u)
         return word + '/u/'
+        # Apply: word ending in l → word/u/ (final L sounds like u)
+        return word + "/u/"
 
     # Only match if not followed by annotation
     return re.sub(r'\b\w+l\b(?!/)', replace_final_l, text)
@@ -472,9 +468,6 @@ def format_substitution(annotated: str) -> str:
     # Verb -am → ãwn
     result = re.sub(r'(\S+)am/ãwn/', r'\1ãwn', result, flags=re.IGNORECASE)
 
-    # L vocalization: ~~l~~/u/ → u (replace the l with u)
-    result = re.sub(r'(\S+)~~l~~/u/', r'\1u', result, flags=re.IGNORECASE)
-
     # STEP 2: Handle nasal patterns
 
     # -em nasal patterns (tem, bem, etc.) - complete replacement
@@ -516,6 +509,9 @@ def format_substitution(annotated: str) -> str:
 
     # Final -or → oh
     result = re.sub(r'(\S+)or/oh/', r'\1oh', result, flags=re.IGNORECASE)
+
+    # Final -l → u (L vocalization - replace L with u)
+    result = re.sub(r'(\S+)l/u/', r'\1u', result, flags=re.IGNORECASE)
 
     # STEP 5: Clean up any remaining annotations (fallback)
     result = re.sub(r'/([^/]+)/', r'\1', result)
