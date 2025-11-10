@@ -1083,11 +1083,6 @@ function formatSubstitutionMode(annotated) {
     return stem + '<span class="text-blue-600 font-semibold">ãwn</span>';
   });
 
-  // L vocalization: ~~l~~/u/ → u (replace the l with u)
-  result = result.replace(/([^\s]+)~~l~~\/u\//gi, (match, stem) => {
-    return stem + '<span class="text-blue-600 font-semibold">u</span>';
-  });
-
   // STEP 2: Handle nasal patterns
 
   // -em nasal patterns (tem, bem, etc.)
@@ -1143,6 +1138,16 @@ function formatSubstitutionMode(annotated) {
 
   // Single letter 'e' (conjunction) - special case
   result = result.replace(/\be\/i\//gi, '<span class="text-blue-600 font-semibold">i</span>');
+
+  // Final -or → oh
+  result = result.replace(/([^\s]+)or\/oh\//gi, (match, stem) => {
+    return stem + '<span class="text-blue-600 font-semibold">oh</span>';
+  });
+
+  // Final -l → u (L vocalization - replace L with u)
+  result = result.replace(/([^\s]+)l\/u\//gi, (match, stem) => {
+    return stem + '<span class="text-blue-600 font-semibold">u</span>';
+  });
 
   // STEP 5: Clean up any remaining annotations (fallback)
   result = result.replace(/\/([^/]+)\//g, '<span class="text-blue-600 font-semibold">$1</span>');
