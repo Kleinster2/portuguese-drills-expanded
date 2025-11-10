@@ -1,19 +1,20 @@
 /**
  * Brazilian Portuguese Pronunciation Annotator (JavaScript Port)
  *
- * Applies 6 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4):
- * 1. Final unstressed -o → [u]
- * 2. Final unstressed -e → [i], plural -es → [is]
- * 3. Palatalization (de → de[dji], contente → contente[tchi])
- * 4. Epenthetic [i] on consonant-final borrowed words
+ * Applies 7 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4):
+ * 1. Final unstressed -o → /u/
+ * 1b. Final unstressed -or → /oh/ (important for English speakers)
+ * 2. Final unstressed -e → /i/, plural -es → /is/
+ * 3. Palatalization (de → de/dji/, contente → contente/tchi/)
+ * 4. Epenthetic /i/ on consonant-final borrowed words
  * 5. Nasal vowel endings (-em, -am, -im, -om, -um/uma)
- * 6. Syllable-final L → [u]
+ * 6. Syllable-final L → /u/
  *
  * NOTE: Coalescence (de ônibus → djônibus) is NOT applied here.
  *       It is an OPTIONAL feature for Step 5 (phonetic orthography) only.
  *
- * Version: 1.5 (JavaScript port)
- * Last Updated: 2025-01-07
+ * Version: 1.6 (JavaScript port)
+ * Last Updated: 2025-01-09
  * Ported from: utils/annotate_pronunciation.py
  */
 
@@ -27,7 +28,8 @@ const STRESSED_FINAL = new Set([
 
 const PROPER_NOUNS = new Set([
     'miami', 'john', 'sarah', 'carlos', 'brasil', 'brooklyn',
-    'york', 'acme', 'facebook', 'internet', 'ipad', 'whatsapp'
+    'york', 'acme', 'facebook', 'internet', 'ipad', 'whatsapp',
+    'daniel', 'sofia'
 ]);
 
 // ============================================================================
@@ -36,31 +38,31 @@ const PROPER_NOUNS = new Set([
 
 const RULE_7B_WORDS = {
     // voltar family
-    'volta': 'volta[_vouta_]',
-    'voltar': 'voltar[_voutar_]',
-    'volto': 'volto[_vouto_]',
-    'voltamos': 'voltamos[_voutamos_]',
-    'voltam': 'voltam[_voutam_]',
-    'voltei': 'voltei[_voutei_]',
-    'voltou': 'voltou[_voutou_]',
+    'volta': 'volta/vouta/',
+    'voltar': 'voltar/voutar/',
+    'volto': 'volto/vouto/',
+    'voltamos': 'voltamos/voutamos/',
+    'voltam': 'voltam/voutam/',
+    'voltei': 'voltei/voutei/',
+    'voltou': 'voltou/voutou/',
     // último family
-    'último': 'último[_úutimu_]',
-    'última': 'última[_úutima_]',
-    'últimos': 'últimos[_úutimus_]',
-    'últimas': 'últimas[_úutimas_]'
+    'último': 'último/úutimu/',
+    'última': 'última/úutima/',
+    'últimos': 'últimos/úutimus/',
+    'últimas': 'últimas/úutimas/'
 };
 
 // ============================================================================
-// RULE 4 DICTIONARY - Epenthetic [i] on borrowed words
+// RULE 4 DICTIONARY - Epenthetic /i/ on borrowed words
 // ============================================================================
 
 const BORROWED_WORDS = {
     // Epenthetic + palatalization (ends in -t or -d)
-    'internet': 'Internet[_chi_]',
-    'ipad': 'iPad[_ji_]',
+    'internet': 'Internet/chi/',
+    'ipad': 'iPad/ji/',
     // Epenthetic only (other consonants)
-    'facebook': 'Facebook[_i_]',
-    'whatsapp': 'Whatsapp[_i_]'
+    'facebook': 'Facebook/i/',
+    'whatsapp': 'Whatsapp/i/'
 };
 
 // ============================================================================
@@ -68,7 +70,8 @@ const BORROWED_WORDS = {
 // ============================================================================
 
 function isAlreadyAnnotated(text) {
-    return text.includes('[') && text.includes(']');
+    // Check for /text/ pattern (pronunciation annotations)
+    return /\/[^\/\s]+\//.test(text);
 }
 
 function isStressedFinal(word) {
@@ -80,12 +83,12 @@ function hasTilde(word) {
     return /[ãõ]/.test(word);
 }
 
-function protectBrackets(text) {
-    // Replace bracketed content with placeholders to prevent nested annotations
+function protectAnnotations(text) {
+    // Replace annotation content with placeholders to prevent nested annotations
     const replacements = {};
     let counter = 0;
 
-    const protected = text.replace(/\[[^\]]+\]/g, (match) => {
+    const protected = text.replace(/\/[^\/\s]+\//g, (match) => {
         const placeholder = `__PROTECTED_${counter}__`;
         replacements[placeholder] = match;
         counter++;
@@ -95,8 +98,8 @@ function protectBrackets(text) {
     return { protected, replacements };
 }
 
-function restoreBrackets(text, replacements) {
-    // Restore protected bracketed content
+function restoreAnnotations(text, replacements) {
+    // Restore protected annotation content
     let result = text;
     for (const [placeholder, original] of Object.entries(replacements)) {
         result = result.replace(placeholder, original);
@@ -118,19 +121,19 @@ function applyRule7b(text) {
 }
 
 function applyRule7a(text) {
-    // Rule 7a: Word-final L → ~~l~~[_u_]
+    // Rule 7a: Word-final L → /u/
     // Match words ending in 'l' (but not already annotated)
     const replaceFinalL = (match) => {
         const word = match;
-        if (hasTilde(word) || word.includes('[')) {
+        if (hasTilde(word) || word.includes('/')) {
             return word;
         }
-        // Replace final 'l' with ~~l~~[_u_]
-        return word.replace(/l$/i, '~~l~~[_u_]');
+        // Replace final 'l' with /u/
+        return word + '/u/';
     };
 
-    // Match words ending in 'l' (not followed by ~~ or [)
-    text = text.replace(/\b\w+l\b(?![~\[])/gi, replaceFinalL);
+    // Match words ending in 'l' (not followed by /)
+    text = text.replace(/\b\w+l\b(?!\/)/gi, replaceFinalL);
 
     return text;
 }
@@ -138,58 +141,58 @@ function applyRule7a(text) {
 function applyRule5(text) {
     // Rule 5: Nasal vowel endings
 
-    // Rule 5a: -em → [_eyn_]
+    // Rule 5a: -em → /eyn/
     // Short words (show full syllable)
-    text = text.replace(/\b(tem)(?!\[)\b/gi, (m, p1) => `${p1}[_teyn_]`);
-    text = text.replace(/\b(quem)(?!\[)\b/gi, (m, p1) => `${p1}[_keyn_]`);
-    text = text.replace(/\b(sem)(?!\[)\b/gi, (m, p1) => `${p1}[_seyn_]`);
-    text = text.replace(/\b(bem)(?!\[)\b/gi, (m, p1) => `${p1}[_beyn_]`);
-    text = text.replace(/\b(cem)(?!\[)\b/gi, (m, p1) => `${p1}[_seyn_]`);
-    text = text.replace(/\b(nem)(?!\[)\b/gi, (m, p1) => `${p1}[_neyn_]`);
+    text = text.replace(/\b(tem)(?!\/)\b/gi, (m, p1) => `${p1}/teyn/`);
+    text = text.replace(/\b(quem)(?!\/)\b/gi, (m, p1) => `${p1}/keyn/`);
+    text = text.replace(/\b(sem)(?!\/)\b/gi, (m, p1) => `${p1}/seyn/`);
+    text = text.replace(/\b(bem)(?!\/)\b/gi, (m, p1) => `${p1}/beyn/`);
+    text = text.replace(/\b(cem)(?!\/)\b/gi, (m, p1) => `${p1}/seyn/`);
+    text = text.replace(/\b(nem)(?!\/)\b/gi, (m, p1) => `${p1}/neyn/`);
 
     // Generic -em (not already annotated)
-    text = text.replace(/\b(em)(?!\[)\b/g, 'em[_eyn_]');
+    text = text.replace(/\b(em)(?!\/)\b/g, 'em/eyn/');
 
     // Long words (show ending only)
-    text = text.replace(/\b(também)(?!\[)\b/gi, (m, p1) => `${p1}[_eyn_]`);
-    text = text.replace(/\b(alguém)(?!\[)\b/gi, (m, p1) => `${p1}[_eyn_]`);
-    text = text.replace(/\b(ninguém)(?!\[)\b/gi, (m, p1) => `${p1}[_eyn_]`);
+    text = text.replace(/\b(também)(?!\/)\b/gi, (m, p1) => `${p1}/eyn/`);
+    text = text.replace(/\b(alguém)(?!\/)\b/gi, (m, p1) => `${p1}/eyn/`);
+    text = text.replace(/\b(ninguém)(?!\/)\b/gi, (m, p1) => `${p1}/eyn/`);
 
-    // Rule 5b: -am → [_ãwn_] (verb endings, not already annotated)
+    // Rule 5b: -am → /ãwn/ (verb endings, not already annotated)
     const annotateAm = (match) => {
         const word = match;
-        if (hasTilde(word) || word.includes('[')) {
+        if (hasTilde(word) || word.includes('/')) {
             return word;
         }
-        return word + '[_ãwn_]';
+        return word + '/ãwn/';
     };
-    text = text.replace(/\b(\w+am)\b(?!\[)/g, annotateAm);
+    text = text.replace(/\b(\w+am)\b(?!\/)/g, annotateAm);
 
-    // Rule 5c: -im → [_ing_]
+    // Rule 5c: -im → /ing/
     // Short words
-    text = text.replace(/\b(sim)(?!\[)\b/gi, (m, p1) => `${p1}[_sing_]`);
-    text = text.replace(/\b(assim)(?!\[)\b/gi, (m, p1) => `${p1}[_ssing_]`);
+    text = text.replace(/\b(sim)(?!\/)\b/gi, (m, p1) => `${p1}/sing/`);
+    text = text.replace(/\b(assim)(?!\/)\b/gi, (m, p1) => `${p1}/ssing/`);
     // Long words
-    text = text.replace(/\b(jardim)(?!\[)\b/gi, (m, p1) => `${p1}[_ing_]`);
+    text = text.replace(/\b(jardim)(?!\/)\b/gi, (m, p1) => `${p1}/ing/`);
 
-    // Rule 5d: -om → [_oun_]
-    text = text.replace(/\b(com)(?!\[)\b/g, 'com[_coun_]');
-    text = text.replace(/\b(som)(?!\[)\b/gi, (m, p1) => `${p1}[_soun_]`);
-    text = text.replace(/\b(bom)(?!\[)\b/gi, (m, p1) => `${p1}[_boun_]`);
+    // Rule 5d: -om → /oun/
+    text = text.replace(/\b(com)(?!\/)\b/g, 'com/coun/');
+    text = text.replace(/\b(som)(?!\/)\b/gi, (m, p1) => `${p1}/soun/`);
+    text = text.replace(/\b(bom)(?!\/)\b/gi, (m, p1) => `${p1}/boun/`);
 
-    // Rule 5e: um/uma → [_ũm_]/[_ũma_] (case-insensitive for sentence start)
-    text = text.replace(/\b(um)(?!\[)\b/gi, (m, p1) => `${p1}[_ũm_]`);
-    text = text.replace(/\b(uma)(?!\[)\b/gi, (m, p1) => `${p1}[_ũma_]`);
-    text = text.replace(/\b(algum)(?!\[)\b/gi, (m, p1) => `${p1}[_ũm_]`);
-    text = text.replace(/\b(alguma)(?!\[)\b/gi, (m, p1) => `${p1}[_ũma_]`);
-    text = text.replace(/\b(nenhum)(?!\[)\b/gi, (m, p1) => `${p1}[_ũm_]`);
-    text = text.replace(/\b(nenhuma)(?!\[)\b/gi, (m, p1) => `${p1}[_ũma_]`);
+    // Rule 5e: um/uma → /ũm///ũma/ (case-insensitive for sentence start)
+    text = text.replace(/\b(um)(?!\/)\b/gi, (m, p1) => `${p1}/ũm/`);
+    text = text.replace(/\b(uma)(?!\/)\b/gi, (m, p1) => `${p1}/ũma/`);
+    text = text.replace(/\b(algum)(?!\/)\b/gi, (m, p1) => `${p1}/ũm/`);
+    text = text.replace(/\b(alguma)(?!\/)\b/gi, (m, p1) => `${p1}/ũma/`);
+    text = text.replace(/\b(nenhum)(?!\/)\b/gi, (m, p1) => `${p1}/ũm/`);
+    text = text.replace(/\b(nenhuma)(?!\/)\b/gi, (m, p1) => `${p1}/ũma/`);
 
     return text;
 }
 
 function applyRule4(text) {
-    // Rule 4: Epenthetic [_i_] on consonant-final borrowed words
+    // Rule 4: Epenthetic /i/ on consonant-final borrowed words
     for (const [word, annotated] of Object.entries(BORROWED_WORDS)) {
         const pattern = new RegExp(`\\b${word}\\b`, 'gi');
         text = text.replace(pattern, annotated);
@@ -200,11 +203,11 @@ function applyRule4(text) {
 function applyRule3(text) {
     // Rule 3: Palatalization
 
-    // Rule 3a: de → de[_dji_] (ALWAYS, but not if already annotated)
-    text = text.replace(/\b(de)(?!\[)\b/g, 'de[_dji_]');
+    // Rule 3a: de → de/dji/ (ALWAYS, but not if already annotated)
+    text = text.replace(/\b(de)(?!\/)\b/g, 'de/dji/');
 
-    // Rule 3b: Words ending in -te → [_tchi_] (unstressed final -te palatalization)
-    // This must run BEFORE Rule 2 (final -e) to prevent -te words from getting [_i_]
+    // Rule 3b: Words ending in -te → /tchi/ (unstressed final -te palatalization)
+    // This must run BEFORE Rule 2 (final -e) to prevent -te words from getting /i/
     const annotateTe = (match) => {
         const word = match;
         // Skip if word is 'de' (already handled above)
@@ -212,20 +215,20 @@ function applyRule3(text) {
             return word;
         }
         // Skip if already annotated
-        if (word.includes('[')) {
+        if (word.includes('/')) {
             return word;
         }
         // Skip if stressed final (though rare for -te words)
         if (isStressedFinal(word)) {
             return word;
         }
-        // Apply: word ending in te → word[_tchi_]
-        return word + '[_tchi_]';
+        // Apply: word ending in te → word/tchi/
+        return word + '/tchi/';
     };
-    text = text.replace(/\b\w+te\b(?!\[)/gi, annotateTe);
+    text = text.replace(/\b\w+te\b(?!\/)/gi, annotateTe);
 
-    // Rule 3c: Words ending in -de → [_dji_] (unstressed final -de palatalization)
-    // This must run BEFORE Rule 2 (final -e) to prevent -de words from getting [_i_]
+    // Rule 3c: Words ending in -de → /dji/ (unstressed final -de palatalization)
+    // This must run BEFORE Rule 2 (final -e) to prevent -de words from getting /i/
     const annotateDe = (match) => {
         const word = match;
         // Skip if word is standalone 'de' (already handled above)
@@ -233,28 +236,28 @@ function applyRule3(text) {
             return word;
         }
         // Skip if already annotated
-        if (word.includes('[')) {
+        if (word.includes('/')) {
             return word;
         }
         // Skip if stressed final
         if (isStressedFinal(word)) {
             return word;
         }
-        // Apply: word ending in de → word[_dji_]
-        return word + '[_dji_]';
+        // Apply: word ending in de → word/dji/
+        return word + '/dji/';
     };
-    text = text.replace(/\b\w+de\b(?!\[)/gi, annotateDe);
+    text = text.replace(/\b\w+de\b(?!\/)/gi, annotateDe);
 
     return text;
 }
 
 function applyRule2(text) {
-    // Rule 2: Final unstressed -e → [_i_], plural -es → [_is_]
+    // Rule 2: Final unstressed -e → /i/, plural -es → /is/
 
     // Conjunction 'e' (and) - but not 'de' (already handled by Rule 3)
-    text = text.replace(/\b(e)(?!\[)\b/g, 'e[_i_]');
+    text = text.replace(/\b(e)(?!\/)\b/g, 'e/i/');
 
-    // Plural words ending in -es → [_is_] (must come before singular -e)
+    // Plural words ending in -es → /is/ (must come before singular -e)
     const replacePluralEs = (match) => {
         const word = match;
         // Skip if word is 'de' (handled by Rule 3)
@@ -270,15 +273,15 @@ function applyRule2(text) {
             return word;
         }
         // Skip already annotated
-        if (word.includes('[') || word.includes(']')) {
+        if (word.includes('/')) {
             return word;
         }
-        // Apply: word ending in es → word[_is_]
-        return word + '[_is_]';
+        // Apply: word ending in es → word/is/
+        return word + '/is/';
     };
 
-    // Match words ending in 'es' followed by word boundary (not followed by [)
-    text = text.replace(/\b\w+es\b(?!\[)/g, replacePluralEs);
+    // Match words ending in 'es' followed by word boundary (not followed by /)
+    text = text.replace(/\b\w+es\b(?!\/)/g, replacePluralEs);
 
     // Singular words ending in -e (but not stressed, not tilde, not already annotated)
     const replaceFinalE = (match) => {
@@ -293,66 +296,95 @@ function applyRule2(text) {
         if (hasTilde(word)) {
             return word;
         }
-        if (word.includes('[') || word.includes(']')) {
+        if (word.includes('/')) {
             return word;
         }
-        // Apply: word ending in e → word[_i_]
-        return word + '[_i_]';
+        // Apply: word ending in e → word/i/
+        return word + '/i/';
     };
 
-    // Match words ending in 'e' followed by word boundary (not followed by [)
-    text = text.replace(/\b\w+e\b(?!\[)/g, replaceFinalE);
+    // Match words ending in 'e' followed by word boundary (not followed by /)
+    text = text.replace(/\b\w+e\b(?!\/)/g, replaceFinalE);
 
     return text;
 }
 
-function applyRule1(text) {
-    // Rule 1: Final unstressed -o → [_u_]
+function applyRule1b(text) {
+    // Rule 1b: Final unstressed -or → /oh/ (important for English speakers)
+    // English speakers tend to pronounce -or like English "or"
+    // In Brazilian Portuguese, final -or sounds like /oh/ (like "oh!" in English)
+    // Examples: professor → /professoh/, doutor → /doutoh/, melhor → /melyoh/
 
-    // Protect existing brackets from nested annotation
-    const { protected, replacements } = protectBrackets(text);
+    const replaceFinalOr = (match) => {
+        const word = match;
+        // Skip if already annotated
+        if (word.includes('/')) {
+            return word;
+        }
+        // Skip if word has tilde (rare but possible)
+        if (hasTilde(word)) {
+            return word;
+        }
+        // Skip stressed words (rare for -or endings but check anyway)
+        if (isStressedFinal(word)) {
+            return word;
+        }
+        // Apply: word ending in or → word/oh/
+        return word + '/oh/';
+    };
+
+    // Match words ending in 'or' (not followed by /)
+    text = text.replace(/\b\w+or\b(?!\/)/gi, replaceFinalOr);
+    return text;
+}
+
+function applyRule1(text) {
+    // Rule 1: Final unstressed -o → /u/
+
+    // Protect existing annotations from nested annotation
+    const { protected, replacements } = protectAnnotations(text);
     let result = protected;
 
     // Function words (specific patterns to avoid over-matching)
     // Use capture group to preserve case
-    result = result.replace(/\b(o)\b/gi, '$1[_u_]');  // Article 'o/O'
-    result = result.replace(/\b(do)\b/gi, '$1[_u_]');  // Contraction de+o
-    result = result.replace(/\b(no)\b/gi, '$1[_u_]');  // Contraction em+o
-    result = result.replace(/\b(ao)\b/gi, '$1[_u_]');  // Contraction a+o
-    result = result.replace(/\b(como)\b/gi, '$1[_u_]');  // 'as/like'
+    result = result.replace(/\b(o)\b/gi, '$1/u/');  // Article 'o/O'
+    result = result.replace(/\b(do)\b/gi, '$1/u/');  // Contraction de+o
+    result = result.replace(/\b(no)\b/gi, '$1/u/');  // Contraction em+o
+    result = result.replace(/\b(ao)\b/gi, '$1/u/');  // Contraction a+o
+    result = result.replace(/\b(como)\b/gi, '$1/u/');  // 'as/like'
 
     // Plural forms (preserve case with capture group)
-    result = result.replace(/\b(os)\b/gi, '$1[_us_]');  // Article 'os/Os'
-    result = result.replace(/\b(dos)\b/gi, '$1[_us_]');  // Contraction de+os
-    result = result.replace(/\b(nos)\b/gi, '$1[_us_]');  // Contraction em+os
-    result = result.replace(/\b(aos)\b/gi, '$1[_us_]');  // Contraction a+os
+    result = result.replace(/\b(os)\b/gi, '$1/us/');  // Article 'os/Os'
+    result = result.replace(/\b(dos)\b/gi, '$1/us/');  // Contraction de+os
+    result = result.replace(/\b(nos)\b/gi, '$1/us/');  // Contraction em+os
+    result = result.replace(/\b(aos)\b/gi, '$1/us/');  // Contraction a+os
 
-    // Words ending in -o (but not stressed, not tilde, not already annotated, not followed by ~~)
+    // Words ending in -o (but not stressed, not tilde, not already annotated)
     const replaceFinalO = (match) => {
         const word = match;
         if (isStressedFinal(word) || hasTilde(word)) {
             return word;
         }
-        // Apply: word ending in o → word[_u_]
-        return word + '[_u_]';
+        // Apply: word ending in o → word/u/
+        return word + '/u/';
     };
 
-    // Match words ending in 'o' (not followed by ~~ or [)
-    result = result.replace(/\b\w+o\b(?![~\[])/gi, replaceFinalO);
+    // Match words ending in 'o' (not followed by /)
+    result = result.replace(/\b\w+o\b(?!\/)/gi, replaceFinalO);
 
-    // Words ending in -os → [_us_] (not tilde, not already annotated or followed by ~~)
+    // Words ending in -os → /us/ (not tilde, not already annotated)
     const replaceFinalOs = (match) => {
         const word = match;
         if (hasTilde(word)) {
             return word;
         }
-        return word + '[_us_]';
+        return word + '/us/';
     };
 
-    result = result.replace(/\b\w+os\b(?![~\[])/gi, replaceFinalOs);
+    result = result.replace(/\b\w+os\b(?!\/)/gi, replaceFinalOs);
 
     // Restore protected content
-    return restoreBrackets(result, replacements);
+    return restoreAnnotations(result, replacements);
 }
 
 // ============================================================================
@@ -361,7 +393,7 @@ function applyRule1(text) {
 
 function annotatePronunciation(text, skipIfAnnotated = true) {
     /**
-     * Apply all 6 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4).
+     * Apply all 7 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4).
      *
      * @param {string} text - Portuguese text to annotate
      * @param {boolean} skipIfAnnotated - If true, skip text that already has annotations
@@ -374,11 +406,11 @@ function annotatePronunciation(text, skipIfAnnotated = true) {
     // Apply rules in order
     // Note: Order matters! Some rules depend on others not having been applied yet
 
-    // Rule 6 FIRST - prevents -ol words from getting double annotation
-    // Rule 6b first (dictionary) - before 6a to avoid conflicts
+    // Rule 7 FIRST - prevents -ol words from getting double annotation
+    // Rule 7b first (dictionary) - before 7a to avoid conflicts
     text = applyRule7b(text);
 
-    // Rule 6a (word-final L) - BEFORE Rule 1 to handle -ol, -el, -al endings
+    // Rule 7a (word-final L) - BEFORE Rule 1 to handle -ol, -el, -al endings
     text = applyRule7a(text);
 
     // Rule 5 (nasal vowels) - BEFORE Rule 1 to prevent "com" issues
@@ -388,7 +420,7 @@ function annotatePronunciation(text, skipIfAnnotated = true) {
     text = applyRule4(text);
 
     // REMOVED: Coalescence (was old Rule 4) - optional, Step 5 only
-    // In Steps 1-4: de[dji] ônibus (two separate words)
+    // In Steps 1-4: de/dji/ ônibus (two separate words)
     // In Step 5: djônibus (coalescence written directly)
 
     // Rule 3 (palatalization) - BEFORE Rule 2 to handle 'de' before final -e
@@ -397,7 +429,10 @@ function annotatePronunciation(text, skipIfAnnotated = true) {
     // Rule 2 (final -e)
     text = applyRule2(text);
 
-    // Rule 1 (final -o) - LAST, after L and nasals are handled
+    // Rule 1b (final -or) - MUST be before Rule 1 because -or also ends in -o
+    text = applyRule1b(text);
+
+    // Rule 1 (final -o) - LAST, after L and nasals and -or are handled
     text = applyRule1(text);
 
     return text;
