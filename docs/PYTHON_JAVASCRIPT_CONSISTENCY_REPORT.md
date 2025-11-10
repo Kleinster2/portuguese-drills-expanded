@@ -28,9 +28,9 @@ After updating both implementations, **Python and JavaScript are now fully consi
 ### 📝 Version 2.0 Changes
 
 **Rule 1b (-or → /oh/) has been removed from both implementations:**
-- Words like "professor" now follow the standard final -o rule: professor → professor/u/ → professu
+- Words ending in -or (like "professor") now trigger NO rules
 - Previously: professor → professor/oh/ → professoh (Rule 1b)
-- Now: professor → professor/u/ → professu (Rule 1)
+- Now: professor → professor (no annotation - ends in -r, not -o)
 
 ---
 
@@ -77,7 +77,7 @@ result = re.sub(r'(\S+)l/u/', r'\1u', result, flags=re.IGNORECASE)
 - professor/oh/ → professoh
 
 **New Behavior (v2.0):**
-- professor/u/ → professu (follows standard final -o rule)
+- professor → professor (no annotation - ends in -r, not -o)
 
 ---
 
@@ -110,7 +110,7 @@ Key validations (updated for v2.0):
 ```
 Daniel/u/ → Danieu ✓
 Brasil/u/ → Brasiu ✓
-professor/u/ → professu ✓ (changed from /oh/ in v1.9)
+professor → professor ✓ (no annotation - removed Rule 1b)
 sou/u/ → su ✓
 ```
 
@@ -126,9 +126,9 @@ hospital/u/ → hospitau ✓
 papel/u/ → papeu ✓
 ```
 
-**Final -o (including -or endings):**
+**Words ending in -or:**
 ```
-professor/u/ → professu ✓ (no longer special-cased with /oh/)
+professor → professor ✓ (no annotation - ends in -r, not -o)
 ```
 
 ---
@@ -222,7 +222,7 @@ result = result.replace(/([^\s]+)l\/u\//gi, (match, stem) => {
 **Change:**
 - Removed `applyRule1b()` function from both Python and JavaScript
 - Removed `-or → oh` pattern from substitution mode
-- Words ending in -or now follow standard Rule 1 (final -o → /u/)
+- Words ending in -or now trigger NO rules (they end in -r, not -o)
 
 **Status:** ✅ COMPLETED
 
@@ -259,9 +259,9 @@ Both should produce **identical output**.
 **Severity:** LOW (improvement)
 
 **Changed Behavior:**
-- Words ending in -or (like "professor") now follow the standard -o → u rule
-- Before: professor → professor/oh/ → professoh
-- After: professor → professor/u/ → professu
+- Words ending in -or (like "professor") no longer get annotated
+- Before: professor → professor/oh/ → professoh (Rule 1b)
+- After: professor → professor (no rule applies - ends in -r)
 
 **Benefits:**
 - Simpler rule system (6 rules instead of 7)

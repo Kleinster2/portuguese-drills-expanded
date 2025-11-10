@@ -6,10 +6,10 @@ This document shows all Unit 1 sentences in **Substitution Mode**, demonstrating
 
 | Original | Annotated | Substituted |
 |----------|-----------|-------------|
-| Eu sou o Daniel. | Eu sou o/u/ Daniel/u/. | Eu sou u Danielu. |
+| Eu sou o Daniel. | Eu sou o/u/ Daniel/u/. | Eu sou u Danieu. |
 | Eu sou a Sofia. | Eu sou a Sofia. | Eu sou a Sofia. |
 
-**Key change:** `o` → `u` (article and name ending)
+**Key change:** `o` → `u` (article), `l` → `u` (final L in Daniel)
 
 ---
 
@@ -18,11 +18,11 @@ This document shows all Unit 1 sentences in **Substitution Mode**, demonstrating
 | Original | Annotated | Substituted |
 |----------|-----------|-------------|
 | Eu sou analista. | Eu sou analista. | Eu sou analista. |
-| Eu sou professor. | Eu sou professor/u/. | Eu sou professu. |
+| Eu sou professor. | Eu sou professor. | Eu sou professor. |
 | Eu sou professora. | Eu sou professora. | Eu sou professora. |
 
 **Key changes:**
-- `-o` → `u` (masculine profession)
+- Words ending in -or (professor) don't trigger any rule
 - Feminine forms ending in `-a` stay the same
 - `-ista` (gender-neutral) stays the same
 
@@ -100,7 +100,8 @@ This document shows all Unit 1 sentences in **Substitution Mode**, demonstrating
 ## Pronunciation Key
 
 ### Changes that occur:
-- **o → u**: Daniel → Danielu, do → du, casado → casadu, alto → altu, professor → professu
+- **o → u**: Final -o sounds like u (do → du, casado → casadu, alto → altu)
+- **l → u**: Final -L sounds like u (Daniel → Danieu, Brasil → Brasiu)
 - **de → dji**: de → dji (standalone word)
 - **com → coun**: com → coun (nasal vowel)
 
@@ -114,8 +115,8 @@ This document shows all Unit 1 sentences in **Substitution Mode**, demonstrating
 
 | Masculine | Substituted | Feminine | Substituted |
 |-----------|-------------|----------|-------------|
-| o Daniel | u Danielu | a Sofia | a Sofia |
-| professor | professu | professora | professora |
+| o Daniel | u Danieu | a Sofia | a Sofia |
+| professor | professor | professora | professora |
 | americano | americanu | americana | americana |
 | brasileiro | brasileiru | brasileira | brasileira |
 | casado | casadu | casada | casada |

@@ -9,15 +9,15 @@ The pronunciation annotator now supports **Substitution Mode** in both Python an
 ### 1. Annotation Mode (Default)
 Shows phonetic guides using forward slash notation:
 ```
-Input:  Eu sou professor.
-Output: Eu sou professor/u/.
+Input:  Eu sou o Daniel.
+Output: Eu sou o/u/ Daniel/u/.
 ```
 
 ### 2. Substitution Mode
 Replaces original text with phonetic realization:
 ```
-Input:  Eu sou professor.
-Output: Eu sou professu.
+Input:  Eu sou o Daniel.
+Output: Eu sou u Danieu.
 ```
 
 ## Usage
@@ -28,13 +28,13 @@ Output: Eu sou professu.
 from annotate_pronunciation import annotate_pronunciation, format_substitution
 
 # Step 1: Annotate the text
-text = "Eu sou professor."
+text = "Eu sou o Daniel."
 annotated = annotate_pronunciation(text)
-# Result: "Eu sou professor/u/."
+# Result: "Eu sou o/u/ Daniel/u/."
 
 # Step 2: Format with substitution
 phonetic = format_substitution(annotated)
-# Result: "Eu sou professu."
+# Result: "Eu sou u Danieu."
 ```
 
 ### JavaScript (Web-based tool)
@@ -80,9 +80,9 @@ Substituted: Eu tenhu ũm cachorru.
 
 ### Example 4: Combined transformations
 ```
-Original:    Eu sou professor de português com a Sofia.
-Annotated:   Eu sou professor/u/ de/dji/ português com/coun/ a Sofia.
-Substituted: Eu sou professu dji português coun a Sofia.
+Original:    Eu sou brasileiro de São Paulo.
+Annotated:   Eu sou brasileiro/u/ de/dji/ São Paulo/u/.
+Substituted: Eu sou brasileiru dji São Paulu.
 ```
 
 ## Demonstration
