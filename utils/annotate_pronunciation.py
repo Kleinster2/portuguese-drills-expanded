@@ -15,8 +15,8 @@ Applies 7 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4):
 NOTE: Coalescence (de ônibus → djônibus) is NOT applied here.
       It is an OPTIONAL feature for Step 5 (phonetic orthography) only.
 
-Version: 1.6
-Last Updated: 2025-01-09
+Version: 1.7
+Last Updated: 2025-01-10
 """
 
 import re
@@ -435,6 +435,94 @@ def annotate_pronunciation(text: str, skip_if_annotated: bool = True) -> str:
     text = apply_rule_1(text)
 
     return text
+
+# ============================================================================
+# FORMATTING FUNCTIONS
+# ============================================================================
+
+def format_substitution(annotated: str) -> str:
+    """
+    Format annotated text in substitution mode: replace original with phonetic.
+
+    Mirrors the JavaScript formatSubstitutionMode() function.
+
+    Args:
+        annotated (str): Text with pronunciation annotations like "sou/u/"
+
+    Returns:
+        str: Text with phonetic substitutions applied
+
+    Examples:
+        >>> format_substitution("Eu sou/u/ professor/oh/.")
+        'Eu su professoh.'
+
+        >>> format_substitution("De/dji/ manhã eu falo/u/ português.")
+        'Dji manhã eu falu português.'
+    """
+    result = annotated
+
+    # STEP 1: Handle compound transformations first (most specific patterns)
+
+    # Final -te → tchi (more specific than -e → i)
+    result = re.sub(r'(\S+)te/tchi/', r'\1tchi', result, flags=re.IGNORECASE)
+
+    # Final -de → dji (more specific than -e → i, but not standalone "de")
+    result = re.sub(r'(\S+)de/dji/', r'\1dji', result, flags=re.IGNORECASE)
+
+    # Verb -am → ãwn
+    result = re.sub(r'(\S+)am/ãwn/', r'\1ãwn', result, flags=re.IGNORECASE)
+
+    # L vocalization: ~~l~~/u/ → u (replace the l with u)
+    result = re.sub(r'(\S+)~~l~~/u/', r'\1u', result, flags=re.IGNORECASE)
+
+    # STEP 2: Handle nasal patterns
+
+    # -em nasal patterns (tem, bem, etc.) - complete replacement
+    result = re.sub(r'\b(tem|quem|sem|bem|cem|nem|em)/([^/]+)/', r'\2', result, flags=re.IGNORECASE)
+
+    # também, alguém, ninguém (show full word with ending highlighted)
+    result = re.sub(r'(\S+ém)/eyn/', lambda m: m.group(1)[:-2] + 'eyn', result, flags=re.IGNORECASE)
+
+    # Short nasal words: com, som, bom - complete replacement
+    result = re.sub(r'\b(com|som|bom)/([^/]+)/', r'\2', result, flags=re.IGNORECASE)
+
+    # um/uma → ũm/ũma - complete replacement
+    result = re.sub(r'\b(um|uma|algum|alguma|nenhum|nenhuma)/([^/]+)/', r'\2', result, flags=re.IGNORECASE)
+
+    # STEP 3: Handle palatalization
+
+    # de → dji (complete replacement)
+    result = re.sub(r'\bde/dji/', 'dji', result, flags=re.IGNORECASE)
+
+    # STEP 4: Handle final vowel changes (must be after compound patterns)
+
+    # Final -os → us (before -o to avoid conflicts)
+    result = re.sub(r'(\S+)os/us/', r'\1us', result, flags=re.IGNORECASE)
+
+    # Final -o → u (includes words with special chars like "ção")
+    result = re.sub(r'(\S+)o/u/', r'\1u', result, flags=re.IGNORECASE)
+
+    # Single letter 'o' (article) - special case
+    result = re.sub(r'\bo/u/', 'u', result, flags=re.IGNORECASE)
+
+    # Final -es → is (before -e to avoid conflicts)
+    result = re.sub(r'(\S+)es/is/', r'\1is', result, flags=re.IGNORECASE)
+
+    # Final -e → i (includes words with special chars)
+    result = re.sub(r'(\S+)e/i/', r'\1i', result, flags=re.IGNORECASE)
+
+    # Single letter 'e' (conjunction) - special case
+    result = re.sub(r'\be/i/', 'i', result, flags=re.IGNORECASE)
+
+    # Final -or → oh
+    result = re.sub(r'(\S+)or/oh/', r'\1oh', result, flags=re.IGNORECASE)
+
+    # STEP 5: Clean up any remaining annotations (fallback)
+    result = re.sub(r'/([^/]+)/', r'\1', result)
+    result = re.sub(r'~~([^~]+)~~', r'\1', result)
+
+    return result
+
 
 # ============================================================================
 # COMMAND LINE INTERFACE
