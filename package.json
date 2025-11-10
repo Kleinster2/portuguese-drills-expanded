@@ -7,7 +7,10 @@
     "build": "node scripts/build-prompts.js",
     "dev": "wrangler pages dev . --compatibility-date=2024-01-01 --local",
     "deploy": "npm run build && wrangler pages deploy . --project-name=portuguese-drills-expanded",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test:python && npm run test:js",
+    "test:python": "python utils/test_consistency.py",
+    "test:js": "node utils/test-js.mjs",
+    "test:install": "playwright install chromium"
   },
   "repository": {
     "type": "git",
@@ -23,5 +26,8 @@
   "homepage": "https://github.com/Kleinster2/portuguese-drills-expanded#readme",
   "dependencies": {
     "wrangler": "^4.45.2"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.0"
   }
 }

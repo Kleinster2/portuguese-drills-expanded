@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Cross-Platform Consistency Test
+Cross-Platform Consistency Test - v2.0
 
 Tests that Python and JavaScript implementations produce identical output.
+
+v2.0 Changes:
+- Rule 1b removed: Words ending in -or should NOT be annotated
+- Words ending in -u (like "sou") should NOT be annotated
+- 6 pronunciation rules total (down from 7)
 """
 
 import sys
@@ -73,13 +78,15 @@ def main():
         if 'hospital/u/' in annotated and 'hospital' in substituted and 'hospitau' not in substituted:
             issues.append("L vocalization not working: hospital/u/ should → hospitau")
 
-        # Check -or in substitution
-        if 'professor/oh/' in annotated and 'professor' in substituted and 'professoh' not in substituted:
-            issues.append("-or vocalization not working: professor/oh/ should → professoh")
+        # Check that -or words don't get annotated (v2.0: Rule 1b removed)
+        if 'professor/oh/' in annotated:
+            issues.append("Unexpected annotation: professor should NOT be annotated (ends in -r, not -o)")
+        if 'doutor/oh/' in annotated:
+            issues.append("Unexpected annotation: doutor should NOT be annotated (ends in -r, not -o)")
 
-        # Check -o vocalization
-        if 'sou/u/' in annotated and 'sou' in substituted and 'su' not in substituted:
-            issues.append("-o vocalization not working: sou/u/ should → su")
+        # Check that "sou" doesn't get annotated (ends in -u, not -o)
+        if 'sou/u/' in annotated:
+            issues.append("Unexpected annotation: sou should NOT be annotated (ends in -u, not -o)")
 
         if issues:
             all_passed = False
