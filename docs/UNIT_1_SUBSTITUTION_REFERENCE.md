@@ -2,6 +2,8 @@
 
 This document shows all Unit 1 sentences in **Substitution Mode**, demonstrating how they sound when pronounced.
 
+**Note:** The Unit 1 lesson uses the three-step format (Original → Annotated → Substituted) only for examples where pronunciation changes occur. Examples with no changes (like feminine forms ending in -a, or words ending in -or/-ar/-er) are shown as simple vocabulary lists. This reference document shows the complete substitution output for all forms.
+
 ## Pattern 1.1 - Names (Eu sou [o/a] [name])
 
 | Original | Annotated | Substituted |
