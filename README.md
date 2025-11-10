@@ -74,6 +74,15 @@ Designed to be dialect-neutral (PT-PT and PT-BR) with enhanced learning experien
 
 ## Key Features
 
+### 📖 Interactive Pronunciation Lessons
+- **Structured Curriculum**: Progressive units teaching Brazilian Portuguese pronunciation
+- **5-Step Format**: Original → Annotated → Substituted → Without "eu" → Natural Flow
+- **Character-Based Learning**: Follow Daniel's self-introduction through Unit 1
+- **Audio Playback**: Speaker buttons for all Portuguese text
+- **Visual Annotations**: Color-coded pronunciation guides (/u/, /dji/, etc.)
+- **Programmatic System**: v2.0 annotation engine ensures 100% consistency
+- **Pedagogical Focus**: Self-introduction first, grammar in service of communication
+
 ### 🎯 Multi-Drill Sessions
 - **Start Empty Session**: Begin with no drills and add only what you want to practice
 - **Add Multiple Drills**: Combine multiple drills in a single chat session
@@ -112,6 +121,16 @@ Designed to be dialect-neutral (PT-PT and PT-BR) with enhanced learning experien
 - **Learning Paths**: Structured progression from A1 to B2
 
 ## Recent Updates
+
+### Latest Enhancements (January 2025)
+
+**Pronunciation Lessons v2.0 - NEW:**
+- ✅ **Unit 1 Restructured** - "Meet Daniel" hero section shows complete introduction first
+- ✅ **Simplified Rule System** - Reduced from 7 to 6 rules (removed Rule 1b: -or → /oh/)
+- ✅ **Cleaner Lesson Format** - Three-step format only used where pronunciation actually changes
+- ✅ **Programmatic Annotations** - Python & JavaScript v2.0 engines ensure cross-platform consistency
+- ✅ **Audio Integration** - Speaker buttons for all Portuguese text including full introduction
+- ✅ **Pedagogical Alignment** - Self-introduction first, grammar in service of communication
 
 ### Latest Enhancements (December 2024)
 
@@ -224,14 +243,29 @@ Set in Cloudflare Pages → Settings → Environment Variables:
 
 ### Project Structure
 ```
-├── index.html              # Main application file
+├── index.html                      # Main application file (drills)
+├── syllabus.html                   # Pronunciation lessons syllabus
+├── lessons/
+│   ├── unit-1.html                # Unit 1: Identity Statements (Eu sou)
+│   └── unit-2.html                # Unit 2: Location (Morar)
 ├── config/
-│   └── prompts/           # Drill prompt configurations (JSON)
+│   ├── prompts/                   # Drill prompt configurations (JSON)
+│   └── placement-test-questions-grammar-v1.0.json
 ├── utils/
-│   └── promptManager.js   # Prompt loading and management
+│   ├── promptManager.js           # Prompt loading and management
+│   ├── annotate_pronunciation.py  # Python v2.0 annotation engine
+│   └── README_ANNOTATOR.md        # Annotation tool documentation
+├── js/
+│   └── pronunciation-annotator.js # JavaScript v2.0 annotation engine
+├── docs/
+│   ├── CHANGELOG_v2.0.md          # v2.0 changes (Rule 1b removal)
+│   ├── NEXT_TASK_RESTRUCTURE_UNIT1.md
+│   ├── PYTHON_JAVASCRIPT_CONSISTENCY_REPORT.md
+│   ├── SUBSTITUTION_MODE.md       # Pronunciation substitution reference
+│   └── UNIT_1_SUBSTITUTION_REFERENCE.md
 └── functions/
     └── api/
-        └── chat.ts        # Cloudflare Pages Function for chat API
+        └── chat.ts                # Cloudflare Pages Function for chat API
 ```
 
 ### API Endpoint
