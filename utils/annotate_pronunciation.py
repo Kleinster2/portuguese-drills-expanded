@@ -3,8 +3,9 @@
 """
 Brazilian Portuguese Pronunciation Annotator
 
-Applies 6 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4):
+Applies 7 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4):
 1. Final unstressed -o → [u]
+1b. Final unstressed -or → [oh] (important for English speakers)
 2. Final unstressed -e → [i], plural -es → [is]
 3. Palatalization (de → de[dji], contente → contente[tchi])
 4. Epenthetic [i] on consonant-final borrowed words
@@ -14,8 +15,8 @@ Applies 6 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4):
 NOTE: Coalescence (de ônibus → djônibus) is NOT applied here.
       It is an OPTIONAL feature for Step 5 (phonetic orthography) only.
 
-Version: 1.5
-Last Updated: 2025-01-07
+Version: 1.6
+Last Updated: 2025-01-09
 """
 
 import re
@@ -320,6 +321,30 @@ def apply_rule_2(text: str) -> str:
 
     return text
 
+def apply_rule_1b(text: str) -> str:
+    """Rule 1b: Final unstressed -or → [_oh_] (important for English speakers)."""
+    # English speakers tend to pronounce -or like English "or"
+    # In Brazilian Portuguese, final -or sounds like /oh/ (like "oh!" in English)
+    # Examples: professor → /professoh/, doutor → /doutoh/, melhor → /melyoh/
+
+    def replace_final_or(match):
+        word = match.group(0)
+        # Skip if already annotated
+        if '[' in word or ']' in word:
+            return word
+        # Skip if word has tilde (rare but possible)
+        if has_tilde(word):
+            return word
+        # Skip stressed words (rare for -or endings but check anyway)
+        if is_stressed_final(word):
+            return word
+        # Apply: word ending in or → word[_oh_]
+        return word + '[_oh_]'
+
+    # Match words ending in 'or' (not followed by [ or ~~)
+    text = re.sub(r'\b\w+or\b(?![~\[])', replace_final_or, text)
+    return text
+
 def apply_rule_1(text: str) -> str:
     """Rule 1: Final unstressed -o → [_u_]."""
     # Protect existing brackets from nested annotation
@@ -368,7 +393,7 @@ def apply_rule_1(text: str) -> str:
 
 def annotate_pronunciation(text: str, skip_if_annotated: bool = True) -> str:
     """
-    Apply all 6 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4).
+    Apply all 7 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4).
 
     Args:
         text: Portuguese text to annotate
@@ -406,7 +431,10 @@ def annotate_pronunciation(text: str, skip_if_annotated: bool = True) -> str:
     # Rule 2 (final -e)
     text = apply_rule_2(text)
 
-    # Rule 1 (final -o) - LAST, after L and nasals are handled
+    # Rule 1b (final -or) - MUST be before Rule 1 because -or also ends in -o
+    text = apply_rule_1b(text)
+
+    # Rule 1 (final -o) - LAST, after L and nasals and -or are handled
     text = apply_rule_1(text)
 
     return text
@@ -441,6 +469,11 @@ def main():
         "Eu sou brasileiro.",
         "Sou de São Paulo.",
         "Também sou analista.",
+        # Test cases for Rule 1b: -or → [oh]
+        "Eu sou professor.",
+        "Ele é doutor.",
+        "Qual é o melhor?",
+        "O senhor é professor?",
     ]
 
     print("Brazilian Portuguese Pronunciation Annotator")
