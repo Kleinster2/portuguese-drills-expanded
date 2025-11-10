@@ -1055,7 +1055,7 @@ function toggleAnnotator() {
 function formatBracketMode(annotated) {
   // Bracket mode: Show annotations in brackets [notation]
   return annotated
-    .replace(/\[_([^\]]+)_\]/g, '<i class="text-blue-600">[$1]</i>')  // Italic annotations (blue)
+    .replace(/\/([^/]+)\//g, '<i class="text-blue-600">[$1]</i>')  // Italic annotations (blue)
     .replace(/~~([^~]+)~~/g, '<s class="text-gray-400">$1</s>')       // Strikethrough (gray)
     .replace(/\n/g, '<br>');                                            // Line breaks
 }
@@ -1069,83 +1069,83 @@ function formatSubstitutionMode(annotated) {
   // STEP 1: Handle compound transformations first (most specific patterns)
 
   // Final -te → tchi (more specific than -e → i)
-  result = result.replace(/([^\s]+)te\[_tchi_\]/gi, (match, stem) => {
+  result = result.replace(/([^\s]+)te\/tchi\//gi, (match, stem) => {
     return stem + '<span class="text-blue-600 font-semibold">tchi</span>';
   });
 
   // Final -de → dji (more specific than -e → i, but not standalone "de")
-  result = result.replace(/([^\s]+)de\[_dji_\]/gi, (match, stem) => {
+  result = result.replace(/([^\s]+)de\/dji\//gi, (match, stem) => {
     return stem + '<span class="text-blue-600 font-semibold">dji</span>';
   });
 
   // Verb -am → ãwn
-  result = result.replace(/([^\s]+)am\[_ãwn_\]/gi, (match, stem) => {
+  result = result.replace(/([^\s]+)am\/ãwn\//gi, (match, stem) => {
     return stem + '<span class="text-blue-600 font-semibold">ãwn</span>';
   });
 
-  // L vocalization: ~~l~~[_u_] → u (replace the l with u)
-  result = result.replace(/([^\s]+)~~l~~\[_u_\]/gi, (match, stem) => {
+  // L vocalization: ~~l~~/u/ → u (replace the l with u)
+  result = result.replace(/([^\s]+)~~l~~\/u\//gi, (match, stem) => {
     return stem + '<span class="text-blue-600 font-semibold">u</span>';
   });
 
   // STEP 2: Handle nasal patterns
 
   // -em nasal patterns (tem, bem, etc.)
-  result = result.replace(/\b(tem|quem|sem|bem|cem|nem|em)\[_([^_]+)_\]/gi, (match, word, sound) => {
+  result = result.replace(/\b(tem|quem|sem|bem|cem|nem|em)\/([^/]+)\//gi, (match, word, sound) => {
     return `<span class="text-blue-600 font-semibold">${sound}</span>`;
   });
 
   // também, alguém, ninguém (show full word with ending highlighted)
-  result = result.replace(/([^\s]+ém)\[_eyn_\]/gi, (match, word) => {
+  result = result.replace(/([^\s]+ém)\/eyn\//gi, (match, word) => {
     const stem = word.slice(0, -2);
     return stem + '<span class="text-blue-600 font-semibold">eyn</span>';
   });
 
   // Short nasal words: com, som, bom
-  result = result.replace(/\b(com|som|bom)\[_([^_]+)_\]/gi, (match, word, sound) => {
+  result = result.replace(/\b(com|som|bom)\/([^/]+)\//gi, (match, word, sound) => {
     return `<span class="text-blue-600 font-semibold">${sound}</span>`;
   });
 
   // um/uma → ũm/ũma
-  result = result.replace(/\b(um|uma|algum|alguma|nenhum|nenhuma)\[_([^_]+)_\]/gi, (match, word, sound) => {
+  result = result.replace(/\b(um|uma|algum|alguma|nenhum|nenhuma)\/([^/]+)\//gi, (match, word, sound) => {
     return `<span class="text-blue-600 font-semibold">${sound}</span>`;
   });
 
   // STEP 3: Handle palatalization
 
   // de → dji (complete replacement)
-  result = result.replace(/\bde\[_dji_\]/gi, '<span class="text-blue-600 font-semibold">dji</span>');
+  result = result.replace(/\bde\/dji\//gi, '<span class="text-blue-600 font-semibold">dji</span>');
 
   // STEP 4: Handle final vowel changes (must be after compound patterns)
 
   // Final -os → us (before -o to avoid conflicts)
-  result = result.replace(/([^\s]+)os\[_us_\]/gi, (match, stem) => {
+  result = result.replace(/([^\s]+)os\/us\//gi, (match, stem) => {
     return stem + '<span class="text-blue-600 font-semibold">us</span>';
   });
 
   // Final -o → u (includes words with special chars like "ção")
-  result = result.replace(/([^\s]+)o\[_u_\]/gi, (match, stem) => {
+  result = result.replace(/([^\s]+)o\/u\//gi, (match, stem) => {
     return stem + '<span class="text-blue-600 font-semibold">u</span>';
   });
 
   // Single letter 'o' (article) - special case
-  result = result.replace(/\bo\[_u_\]/gi, '<span class="text-blue-600 font-semibold">u</span>');
+  result = result.replace(/\bo\/u\//gi, '<span class="text-blue-600 font-semibold">u</span>');
 
   // Final -es → is (before -e to avoid conflicts)
-  result = result.replace(/([^\s]+)es\[_is_\]/gi, (match, stem) => {
+  result = result.replace(/([^\s]+)es\/is\//gi, (match, stem) => {
     return stem + '<span class="text-blue-600 font-semibold">is</span>';
   });
 
   // Final -e → i (includes words with special chars)
-  result = result.replace(/([^\s]+)e\[_i_\]/gi, (match, stem) => {
+  result = result.replace(/([^\s]+)e\/i\//gi, (match, stem) => {
     return stem + '<span class="text-blue-600 font-semibold">i</span>';
   });
 
   // Single letter 'e' (conjunction) - special case
-  result = result.replace(/\be\[_i_\]/gi, '<span class="text-blue-600 font-semibold">i</span>');
+  result = result.replace(/\be\/i\//gi, '<span class="text-blue-600 font-semibold">i</span>');
 
   // STEP 5: Clean up any remaining annotations (fallback)
-  result = result.replace(/\[_([^\]]+)_\]/g, '<span class="text-blue-600 font-semibold">$1</span>');
+  result = result.replace(/\/([^/]+)\//g, '<span class="text-blue-600 font-semibold">$1</span>');
   result = result.replace(/~~([^~]+)~~/g, '$1');
 
   // Line breaks
