@@ -1,9 +1,8 @@
 /**
  * Brazilian Portuguese Pronunciation Annotator (JavaScript Port)
  *
- * Applies 7 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4):
+ * Applies 6 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4):
  * 1. Final unstressed -o → /u/
- * 1b. Final unstressed -or → /oh/ (important for English speakers)
  * 2. Final unstressed -e → /i/, plural -es → /is/
  * 3. Palatalization (de → de/dji/, contente → contente/tchi/)
  * 4. Epenthetic /i/ on consonant-final borrowed words
@@ -13,8 +12,8 @@
  * NOTE: Coalescence (de ônibus → djônibus) is NOT applied here.
  *       It is an OPTIONAL feature for Step 5 (phonetic orthography) only.
  *
- * Version: 1.6 (JavaScript port)
- * Last Updated: 2025-01-09
+ * Version: 2.0 (JavaScript port)
+ * Last Updated: 2025-01-10
  * Ported from: utils/annotate_pronunciation.py
  */
 
@@ -309,35 +308,6 @@ function applyRule2(text) {
     return text;
 }
 
-function applyRule1b(text) {
-    // Rule 1b: Final unstressed -or → /oh/ (important for English speakers)
-    // English speakers tend to pronounce -or like English "or"
-    // In Brazilian Portuguese, final -or sounds like /oh/ (like "oh!" in English)
-    // Examples: professor → /professoh/, doutor → /doutoh/, melhor → /melyoh/
-
-    const replaceFinalOr = (match) => {
-        const word = match;
-        // Skip if already annotated
-        if (word.includes('/')) {
-            return word;
-        }
-        // Skip if word has tilde (rare but possible)
-        if (hasTilde(word)) {
-            return word;
-        }
-        // Skip stressed words (rare for -or endings but check anyway)
-        if (isStressedFinal(word)) {
-            return word;
-        }
-        // Apply: word ending in or → word/oh/
-        return word + '/oh/';
-    };
-
-    // Match words ending in 'or' (not followed by /)
-    text = text.replace(/\b\w+or\b(?!\/)/gi, replaceFinalOr);
-    return text;
-}
-
 function applyRule1(text) {
     // Rule 1: Final unstressed -o → /u/
 
@@ -393,7 +363,7 @@ function applyRule1(text) {
 
 function annotatePronunciation(text, skipIfAnnotated = true) {
     /**
-     * Apply all 7 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4).
+     * Apply all 6 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4).
      *
      * @param {string} text - Portuguese text to annotate
      * @param {boolean} skipIfAnnotated - If true, skip text that already has annotations
@@ -429,10 +399,7 @@ function annotatePronunciation(text, skipIfAnnotated = true) {
     // Rule 2 (final -e)
     text = applyRule2(text);
 
-    // Rule 1b (final -or) - MUST be before Rule 1 because -or also ends in -o
-    text = applyRule1b(text);
-
-    // Rule 1 (final -o) - LAST, after L and nasals and -or are handled
+    // Rule 1 (final -o) - LAST, after L and nasals are handled
     text = applyRule1(text);
 
     return text;

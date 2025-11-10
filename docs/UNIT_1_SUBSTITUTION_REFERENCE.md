@@ -18,11 +18,11 @@ This document shows all Unit 1 sentences in **Substitution Mode**, demonstrating
 | Original | Annotated | Substituted |
 |----------|-----------|-------------|
 | Eu sou analista. | Eu sou analista. | Eu sou analista. |
-| Eu sou professor. | Eu sou professor/oh/. | Eu sou professoh. |
+| Eu sou professor. | Eu sou professor/u/. | Eu sou professu. |
 | Eu sou professora. | Eu sou professora. | Eu sou professora. |
 
 **Key changes:**
-- `-or` → `oh` (masculine profession)
+- `-o` → `u` (masculine profession)
 - Feminine forms ending in `-a` stay the same
 - `-ista` (gender-neutral) stays the same
 
@@ -100,8 +100,7 @@ This document shows all Unit 1 sentences in **Substitution Mode**, demonstrating
 ## Pronunciation Key
 
 ### Changes that occur:
-- **o → u**: Daniel → Danielu, do → du, casado → casadu, alto → altu
-- **or → oh**: professor → professoh
+- **o → u**: Daniel → Danielu, do → du, casado → casadu, alto → altu, professor → professu
 - **de → dji**: de → dji (standalone word)
 - **com → coun**: com → coun (nasal vowel)
 
@@ -116,7 +115,7 @@ This document shows all Unit 1 sentences in **Substitution Mode**, demonstrating
 | Masculine | Substituted | Feminine | Substituted |
 |-----------|-------------|----------|-------------|
 | o Daniel | u Danielu | a Sofia | a Sofia |
-| professor | professoh | professora | professora |
+| professor | professu | professora | professora |
 | americano | americanu | americana | americana |
 | brasileiro | brasileiru | brasileira | brasileira |
 | casado | casadu | casada | casada |

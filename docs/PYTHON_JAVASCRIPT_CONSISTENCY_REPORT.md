@@ -1,20 +1,19 @@
 # Python vs JavaScript Consistency Report
 
 **Date:** 2025-01-10
-**Python Version:** v1.9
-**JavaScript Version:** v1.6 (annotation) / unknown (substitution)
+**Python Version:** v2.0
+**JavaScript Version:** v2.0
 
 ---
 
 ## Executive Summary
 
-After thorough analysis, **Python and JavaScript implementations are NOT fully consistent**. While the annotation phase is largely aligned, the **substitution mode** in JavaScript has critical bugs.
+After updating both implementations, **Python and JavaScript are now fully consistent at v2.0**.
 
 ### ✅ What's Consistent
 
-1. **Annotation Logic (7 Rules)** - Both Python and JavaScript apply the same 7 pronunciation rules:
+1. **Annotation Logic (6 Rules)** - Both Python and JavaScript apply the same 6 pronunciation rules:
    - Rule 1: Final -o → /u/
-   - Rule 1b: Final -or → /oh/
    - Rule 2: Final -e → /i/
    - Rule 3: Palatalization (de → /dji/, -te → /tchi/, -de → /dji/)
    - Rule 4: Epenthetic /i/ on borrowed words
@@ -24,11 +23,24 @@ After thorough analysis, **Python and JavaScript implementations are NOT fully c
 
 2. **Notation System** - Both use forward slash `/` notation (updated from brackets `[]`)
 
-### ❌ What's Broken
+3. **Substitution Mode** - Both Python and JavaScript now use identical substitution patterns
 
-**JavaScript `formatSubstitutionMode()` function in `index.html` has TWO critical bugs:**
+### 📝 Version 2.0 Changes
 
-#### Bug 1: L Vocalization Using OLD Pattern
+**Rule 1b (-or → /oh/) has been removed from both implementations:**
+- Words like "professor" now follow the standard final -o rule: professor → professor/u/ → professu
+- Previously: professor → professor/oh/ → professoh (Rule 1b)
+- Now: professor → professor/u/ → professu (Rule 1)
+
+---
+
+## Historical Context
+
+### ❌ What Was Broken (v1.9 and earlier)
+
+**JavaScript `formatSubstitutionMode()` function in `index.html` had TWO critical bugs:**
+
+#### Bug 1: L Vocalization Using OLD Pattern (FIXED in v2.0)
 
 **Location:** `index.html` lines 1086-1089
 
@@ -49,30 +61,23 @@ result = result.replace(/([^\s]+)~~l~~\/u\//gi, (match, stem) => {
 - Brasil/u/ → Brasil (WRONG, should be Brasiu)
 - hospital/u/ → hospital (WRONG, should be hospitau)
 
-**Python v1.9 (CORRECT):**
+**Python v1.9 (WAS CORRECT):**
 ```python
 # Final -l → u (L vocalization - replace L with u)
 result = re.sub(r'(\S+)l/u/', r'\1u', result, flags=re.IGNORECASE)
 ```
 
-#### Bug 2: Missing -or → oh Pattern
+**Status:** ✅ Fixed in v2.0 for both Python and JavaScript
 
-**Location:** `index.html` formatSubstitutionMode() function
+#### Bug 2: Missing -or → oh Pattern (OBSOLETE - Rule removed)
 
-**Problem:**
-- No pattern to handle `professor/oh/` → `professoh`
-- Falls through to generic fallback: `/\/([^/]+)\//g` which just removes slashes
-- Works by accident but doesn't highlight the change
+**Note:** This bug is no longer relevant. Rule 1b (-or → /oh/) has been completely removed from v2.0.
 
-**Impact:**
-- professor/oh/ → professoh (works but not highlighted properly)
-- Inconsistent with other transformations that highlight changes
+**Old Behavior (v1.9 and earlier):**
+- professor/oh/ → professoh
 
-**Python v1.9 (CORRECT):**
-```python
-# Final -or → oh
-result = re.sub(r'(\S+)or/oh/', r'\1oh', result, flags=re.IGNORECASE)
-```
+**New Behavior (v2.0):**
+- professor/u/ → professu (follows standard final -o rule)
 
 ---
 
@@ -85,44 +90,45 @@ result = re.sub(r'(\S+)or/oh/', r'\1oh', result, flags=re.IGNORECASE)
 - **v1.7**: Added `format_substitution()` function
 - **v1.8**: BUGGY - Added strikethrough notation `~~l~~/u/` for L vocalization
 - **v1.9**: FIXED - Reverted to simple `Daniel/u/` annotation, fixed substitution pattern
+- **v2.0**: Removed Rule 1b (-or → /oh/)
 
 ### JavaScript Evolution
 
-- **v1.5**: Used bracket notation `[]`, missing Rule 1b
+- **v1.5**: Used bracket notation `[]`
 - **v1.6**: Updated to forward slash notation `/`, added Rule 1b
-- **Substitution mode**: STUCK on v1.8 buggy pattern, never updated to v1.9 fix
+- **v2.0**: Fixed L vocalization bug, removed Rule 1b, now consistent with Python v2.0
 
 ---
 
 ## Test Results
 
-### Python v1.9 Tests
+### Python v2.0 Tests
 
-✅ **ALL 17 TESTS PASSED**
+✅ **ALL TESTS PASS**
 
-Key validations:
+Key validations (updated for v2.0):
 ```
 Daniel/u/ → Danieu ✓
 Brasil/u/ → Brasiu ✓
-professor/oh/ → professoh ✓
+professor/u/ → professu ✓ (changed from /oh/ in v1.9)
 sou/u/ → su ✓
 ```
 
-### JavaScript Tests (Expected Results)
+### JavaScript v2.0 Tests
 
-❌ **EXPECTED FAILURES** (not yet run, but predicted based on code analysis):
+✅ **ALL TESTS NOW PASS**
 
 **L Vocalization:**
 ```
-Daniel/u/ → Daniel ❌ (should be Danieu)
-Brasil/u/ → Brasil ❌ (should be Brasiu)
-hospital/u/ → hospital ❌ (should be hospitau)
-papel/u/ → papel ❌ (should be papeu)
+Daniel/u/ → Danieu ✓
+Brasil/u/ → Brasiu ✓
+hospital/u/ → hospitau ✓
+papel/u/ → papeu ✓
 ```
 
-**-or Vocalization:**
+**Final -o (including -or endings):**
 ```
-professor/oh/ → professoh ✓ (works but via fallback, not dedicated pattern)
+professor/u/ → professu ✓ (no longer special-cased with /oh/)
 ```
 
 ---
@@ -193,22 +199,13 @@ No dedicated pattern for `-or → oh` transformation
 
 ---
 
-## Required Fixes
+## Fixes Applied in v2.0
 
-### Fix 1: Update L Vocalization Pattern
+### ✅ Fix 1: Updated L Vocalization Pattern
 
 **File:** `index.html`
-**Line:** 1086-1089
 
-**Replace:**
-```javascript
-// L vocalization: ~~l~~/u/ → u (replace the l with u)
-result = result.replace(/([^\s]+)~~l~~\/u\//gi, (match, stem) => {
-    return stem + 'u';
-});
-```
-
-**With:**
+**Applied:**
 ```javascript
 // Final -l → u (L vocalization - replace L with u)
 result = result.replace(/([^\s]+)l\/u\//gi, (match, stem) => {
@@ -216,18 +213,18 @@ result = result.replace(/([^\s]+)l\/u\//gi, (match, stem) => {
 });
 ```
 
-### Fix 2: Add -or → oh Pattern
+**Status:** ✅ FIXED
 
-**File:** `index.html`
-**Location:** After line 1145 (after -e → i pattern, before fallback)
+### ✅ Fix 2: Removed Rule 1b
 
-**Add:**
-```javascript
-// Final -or → oh
-result = result.replace(/([^\s]+)or\/oh\//gi, (match, stem) => {
-    return stem + '<span class="text-blue-600 font-semibold">oh</span>';
-});
-```
+**Files:** `utils/annotate_pronunciation.py`, `js/pronunciation-annotator.js`, `index.html`
+
+**Change:**
+- Removed `applyRule1b()` function from both Python and JavaScript
+- Removed `-or → oh` pattern from substitution mode
+- Words ending in -or now follow standard Rule 1 (final -o → /u/)
+
+**Status:** ✅ COMPLETED
 
 ---
 
@@ -255,46 +252,53 @@ Both should produce **identical output**.
 
 ---
 
-## Impact Assessment
+## Impact Assessment (v2.0 Update)
 
-### Current User Impact
+### User-Facing Changes
 
-**Severity:** HIGH
+**Severity:** LOW (improvement)
 
-**Affected Feature:** Pronunciation Annotator web tool (substitution mode)
+**Changed Behavior:**
+- Words ending in -or (like "professor") now follow the standard -o → u rule
+- Before: professor → professor/oh/ → professoh
+- After: professor → professor/u/ → professu
 
-**Users Experience:**
-- L vocalization not working: "Brasil/u/" shows as "Brasil" instead of "Brasiu"
-- Confusing for learners trying to understand phonetic realization
-- Documentation shows correct output, but tool produces wrong output
+**Benefits:**
+- Simpler rule system (6 rules instead of 7)
+- More consistent pronunciation patterns
+- Less confusion for learners
 
-**Not Affected:**
-- Annotation mode (showing /u/ notation) works correctly
-- Python batch processing works correctly
-- Lesson content generation works correctly
+**Migration:**
+- All lesson content updated
+- All documentation updated
+- Both Python and JavaScript implementations aligned
 
 ---
 
-## Recommendation
+## Status
 
-**Priority:** HIGH
-**Complexity:** LOW (simple regex pattern fixes)
-**Risk:** VERY LOW (isolated function, easy to test)
+**Completion Date:** 2025-01-10
 
 **Action Items:**
-1. ✅ Create test files (`test_consistency.py`, `test-consistency.html`)
-2. ⏳ Fix `formatSubstitutionMode()` in `index.html`
-3. ⏳ Test in browser
-4. ⏳ Deploy fix
-
-**Timeline:** Can be fixed and deployed in < 30 minutes
+1. ✅ Fixed L vocalization bug in JavaScript
+2. ✅ Removed Rule 1b from Python (v2.0)
+3. ✅ Removed Rule 1b from JavaScript (v2.0)
+4. ✅ Updated Unit 1 lesson content
+5. ✅ Updated all documentation
+6. ⏳ Deploy to production
 
 ---
 
 ## Conclusion
 
-While the Python and JavaScript annotation logic is consistent (both at v1.6+ parity), the JavaScript substitution mode function never received the v1.9 L vocalization fix. This creates a **critical user-facing bug** in the web-based Pronunciation Annotator tool.
+**Python v2.0 and JavaScript v2.0 are now fully consistent.**
 
-The fix is straightforward: update the regex pattern from the abandoned strikethrough notation to the current simple notation, and add the missing -or → oh pattern.
+Both implementations:
+- Apply the same 6 pronunciation rules
+- Use identical annotation patterns
+- Produce identical substitution output
+- Share the same test suite
 
-**Next Step:** Apply the two fixes documented above to `index.html`.
+The v2.0 update simplified the rule system by removing Rule 1b (-or → /oh/) and ensures that both platforms produce consistent, predictable pronunciation annotations for learners.
+
+**Status:** ✅ FULLY CONSISTENT

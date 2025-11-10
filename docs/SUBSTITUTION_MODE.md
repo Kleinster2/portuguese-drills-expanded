@@ -10,14 +10,14 @@ The pronunciation annotator now supports **Substitution Mode** in both Python an
 Shows phonetic guides using forward slash notation:
 ```
 Input:  Eu sou professor.
-Output: Eu sou professor/oh/.
+Output: Eu sou professor/u/.
 ```
 
 ### 2. Substitution Mode
 Replaces original text with phonetic realization:
 ```
 Input:  Eu sou professor.
-Output: Eu sou professoh.
+Output: Eu sou professu.
 ```
 
 ## Usage
@@ -30,11 +30,11 @@ from annotate_pronunciation import annotate_pronunciation, format_substitution
 # Step 1: Annotate the text
 text = "Eu sou professor."
 annotated = annotate_pronunciation(text)
-# Result: "Eu sou professor/oh/."
+# Result: "Eu sou professor/u/."
 
 # Step 2: Format with substitution
 phonetic = format_substitution(annotated)
-# Result: "Eu sou professoh."
+# Result: "Eu sou professu."
 ```
 
 ### JavaScript (Web-based tool)
@@ -48,7 +48,6 @@ The web-based Pronunciation Annotator (index.html) includes a "Substitution Mode
 | Rule | Pattern | Example | Substitution |
 |------|---------|---------|--------------|
 | Final -o | o → u | sou → sou/u/ | su |
-| Final -or | or → oh | professor → professor/oh/ | professoh |
 | Final -e | e → i | de → de/i/ | di |
 | Palatalization | de → dji | de → de/dji/ | dji |
 | Final -te | te → tchi | contente → contente/tchi/ | contentchi |
@@ -82,8 +81,8 @@ Substituted: Eu tenhu ũm cachorru.
 ### Example 4: Combined transformations
 ```
 Original:    Eu sou professor de português com a Sofia.
-Annotated:   Eu sou professor/oh/ de/dji/ português com/coun/ a Sofia.
-Substituted: Eu sou professoh dji português coun a Sofia.
+Annotated:   Eu sou professor/u/ de/dji/ português com/coun/ a Sofia.
+Substituted: Eu sou professu dji português coun a Sofia.
 ```
 
 ## Demonstration
@@ -114,14 +113,14 @@ Output shows:
 
 ## Version History
 
+- **v2.0** (2025-01-10): Removed Rule 1b (-or → /oh/)
 - **v1.7** (2025-01-10): Added `format_substitution()` function to Python script
 - **v1.6** (2025-01-09): Updated to forward slash notation `/notation/`
-- **v1.5** (earlier): Added Rule 1b for -or → /oh/
 
 ## Files
 
-- **Python**: `utils/annotate_pronunciation.py` (v1.7)
-- **JavaScript**: `js/pronunciation-annotator.js` (v1.6)
+- **Python**: `utils/annotate_pronunciation.py` (v2.0)
+- **JavaScript**: `js/pronunciation-annotator.js` (v2.0)
 - **Web tool**: `index.html` (Pronunciation Annotator section)
 - **Demo**: `utils/demo_substitution.py`
 

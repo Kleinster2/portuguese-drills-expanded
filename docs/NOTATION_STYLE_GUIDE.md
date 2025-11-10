@@ -107,14 +107,12 @@ casado /u/ com /coun/ a Sofia
 **Common pronunciation patterns:**
 ```
 -o /u/                          ← Final "o" sounds like "oo": sou, o, do
--or /oh/                        ← Final "-or" sounds like "oh": professor/oh/
 -e /i/                          ← Final "e" sounds like "ee": de
 de /dji/                        ← "de" sounds like "jee"
 com /coun/                      ← Nasal "com" with nasal vowel
 ```
 
 **Pattern-specific annotations:**
-- Words ending in **-or**: Annotate as `-or/oh/` (e.g., `professor/oh/`)
 - Words ending in **-o**: Annotate as `/u/` (e.g., `sou/u/`, `o/u/`)
 - Words ending in **-e**: Annotate as `/i/` (e.g., `de/i/`)
 - **de** specifically: Annotate as `/dji/` (sounds like "jee")

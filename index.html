@@ -1139,11 +1139,6 @@ function formatSubstitutionMode(annotated) {
   // Single letter 'e' (conjunction) - special case
   result = result.replace(/\be\/i\//gi, '<span class="text-blue-600 font-semibold">i</span>');
 
-  // Final -or → oh
-  result = result.replace(/([^\s]+)or\/oh\//gi, (match, stem) => {
-    return stem + '<span class="text-blue-600 font-semibold">oh</span>';
-  });
-
   // Final -l → u (L vocalization - replace L with u)
   result = result.replace(/([^\s]+)l\/u\//gi, (match, stem) => {
     return stem + '<span class="text-blue-600 font-semibold">u</span>';
