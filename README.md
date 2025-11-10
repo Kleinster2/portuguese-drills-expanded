@@ -289,6 +289,48 @@ Response:
 }
 ```
 
+### Testing
+
+**Automated CI/CD Pipeline:**
+- All tests run automatically on push and pull requests via GitHub Actions
+- Tests must pass before merge is allowed
+- View results in the "Actions" tab on GitHub
+
+**Running Tests Locally:**
+
+```bash
+# Run all tests (Python + JavaScript)
+npm test
+
+# Run Python tests only
+python utils/test_consistency.py
+
+# Run JavaScript tests only (requires Playwright)
+npm run test:js
+
+# Install Playwright browsers (first time only)
+npm run test:install
+```
+
+**What the Tests Validate:**
+- ✅ Python annotation engine (v2.0) - 17 test cases
+- ✅ JavaScript annotation engine (v2.0) - 17 test cases
+- ✅ Cross-platform consistency (Python === JavaScript)
+- ✅ All 6 pronunciation rules working correctly
+- ✅ No Rule 1b regressions (words ending in -or should NOT be annotated)
+
+**Test Files:**
+- `utils/test_consistency.py` - Python test suite
+- `test-consistency.html` - JavaScript test suite (browser-based)
+- `utils/test-js.mjs` - Node.js test runner (headless Playwright)
+- `.github/workflows/test-pronunciation.yml` - CI/CD configuration
+
+**Before Submitting a Pull Request:**
+1. Run `npm test` locally
+2. Ensure all tests pass
+3. Add tests for any new pronunciation rules
+4. Update test expectations if changing annotation behavior
+
 ## Deployment
 
 Deployed automatically via Cloudflare Pages:
