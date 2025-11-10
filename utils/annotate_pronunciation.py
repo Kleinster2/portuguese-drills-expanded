@@ -15,7 +15,7 @@ Applies 7 OBLIGATORY pronunciation rules to Portuguese text (Steps 1-4):
 NOTE: Coalescence (de ônibus → djônibus) is NOT applied here.
       It is an OPTIONAL feature for Step 5 (phonetic orthography) only.
 
-Version: 1.7
+Version: 1.8
 Last Updated: 2025-01-10
 """
 
@@ -148,11 +148,11 @@ def apply_rule_7a(text: str) -> str:
         # Don't annotate if already has annotation
         if '/' in word and re.search(r'/[^/\s]+/', word):
             return word
-        # Don't annotate proper nouns starting with capital
-        if word[0].isupper() and word in PROPER_NOUNS:
-            # Special case: Brasil gets annotated even though it's proper
-            if word == 'Brasil':
-                return 'Brasil/u/'
+        # Special case: Brasil gets annotated even though it's a proper noun
+        if word == 'Brasil':
+            return 'Brasil/u/'
+        # Don't annotate proper nouns (capitalized words)
+        if word[0].isupper():
             return word
         # Apply: word ending in l → word/u/
         return word + '/u/'
