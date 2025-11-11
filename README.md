@@ -237,6 +237,34 @@ open index.html
 npx wrangler pages dev .
 ```
 
+### Pronunciation Annotations
+
+**IMPORTANT:** Always use the automated annotator tool - never add annotations manually!
+
+```bash
+# Test a sentence
+python -c "from utils.annotate_pronunciation import annotate_pronunciation; print(annotate_pronunciation('Eu sou brasileiro.'))"
+
+# Output: Eu sou brasileiro/u/.
+```
+
+**Why use the annotator:**
+- Ensures consistency across all lessons
+- Automatically applies all 6 pronunciation rules
+- Prevents human error and missed annotations
+- Maintains accuracy as rules evolve
+
+**Where to find rules:**
+- `PRONUNCIATION_RULES.md` - Complete rule reference
+- `utils/README_ANNOTATOR.md` - Tool documentation
+- `utils/annotate_pronunciation.py` - Python implementation
+
+**When creating/editing lessons:**
+1. Write Portuguese text without annotations
+2. Run through annotator tool
+3. Copy annotated output to HTML
+4. Never add `/u/`, `/dji/`, etc. by hand!
+
 ### Environment Variables
 Set in Cloudflare Pages → Settings → Environment Variables:
 - `ANTHROPIC_API_KEY` - Your Anthropic API key for Claude
