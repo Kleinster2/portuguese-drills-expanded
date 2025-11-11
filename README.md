@@ -263,7 +263,28 @@ python -c "from utils.annotate_pronunciation import annotate_pronunciation; prin
 1. Write Portuguese text without annotations
 2. Run through annotator tool
 3. Copy annotated output to HTML
-4. Never add `/u/`, `/dji/`, etc. by hand!
+4. **Add title attributes to all annotations** - Explain which rule applies
+5. Never add `/u/`, `/dji/`, etc. by hand!
+
+**Adding rule explanations:**
+Every pronunciation annotation should include a `title` attribute explaining which rule applies:
+
+```html
+<!-- Good: Educational annotation with rule explanation -->
+<span class="pronunciation" title="Rule 1: Final -o → /u/">/u/</span>
+
+<!-- Bad: Annotation without explanation -->
+<span class="pronunciation">/u/</span>
+```
+
+Common title formats:
+- `title="Rule 1: Final -o → /u/"` - Final unstressed -o
+- `title="Rule 2: Final -e → /i/"` - Final unstressed -e
+- `title="Rule 3a: de → /dji/ (always)"` - Palatalization of "de"
+- `title="Rule 5d: Final -om → /oun/"` - Nasal -om
+- `title="Rule 6: Syllable-final -l → /u/"` - L vocalization
+
+This creates a self-guided learning experience where students can hover over any annotation to understand why the pronunciation changes.
 
 ### Environment Variables
 Set in Cloudflare Pages → Settings → Environment Variables:
