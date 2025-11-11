@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Test - Portuguese Drills</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold text-gray-900 mb-6">🔊 Available Portuguese Voices</h1>
+
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Test Sentence</h2>
+            <p class="text-lg mb-4">"Eu sou o Daniel. Eu sou americano. Eu sou de Miami."</p>
+            <button id="loadVoices" class="bg-blue-500 hover:bg-blue-600 text-white font-bold px-6 py-3 rounded-lg">
+                Load Voices
+            </button>
+        </div>
+
+        <div id="voiceList" class="space-y-4"></div>
+    </div>
+
+    <script>
+        const testSentence = "Eu sou o Daniel. Eu sou americano. Eu sou de Miami.";
+
+        function loadVoices() {
+            const voices = window.speechSynthesis.getVoices();
+            const voiceList = document.getElementById('voiceList');
+            voiceList.innerHTML = '';
+
+            // Filter Portuguese voices
+            const ptVoices = voices.filter(voice =>
+                voice.lang.startsWith('pt') || voice.lang.includes('Portuguese')
+            );
+
+            // Also show all voices for reference
+            const allVoicesCount = voices.length;
+            const ptVoicesCount = ptVoices.length;
+
+            // Summary card
+            const summary = document.createElement('div');
+            summary.className = 'bg-green-50 border-l-4 border-green-500 p-4 rounded-lg';
+            summary.innerHTML = `
+                <h3 class="font-bold text-green-900 mb-2">Summary</h3>
+                <p class="text-green-800">Found <strong>${ptVoicesCount}</strong> Portuguese voices out of <strong>${allVoicesCount}</strong> total voices</p>
+            `;
+            voiceList.appendChild(summary);
+
+            if (ptVoices.length === 0) {
+                const noVoices = document.createElement('div');
+                noVoices.className = 'bg-red-50 border-l-4 border-red-500 p-4 rounded-lg';
+                noVoices.innerHTML = `
+                    <h3 class="font-bold text-red-900 mb-2">⚠️ No Portuguese Voices Found</h3>
+                    <p class="text-red-800">Your browser doesn't have Portuguese voices installed. The browser will use its default voice.</p>
+                `;
+                voiceList.appendChild(noVoices);
+                return;
+            }
+
+            // Display each Portuguese voice
+            ptVoices.forEach((voice, index) => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-500';
+
+                const isDefault = voice.default ? ' <span class="bg-green-500 text-white text-xs px-2 py-1 rounded">DEFAULT</span>' : '';
+
+                card.innerHTML = `
+                    <div class="flex items-start justify-between mb-3">
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900">${index + 1}. ${voice.name}${isDefault}</h3>
+                            <p class="text-sm text-gray-600">Language: <strong>${voice.lang}</strong></p>
+                            <p class="text-sm text-gray-600">Local: ${voice.localService ? 'Yes' : 'No (Online)'}</p>
+                        </div>
+                        <button
+                            class="test-voice bg-blue-500 hover:bg-blue-600 text-white font-bold px-4 py-2 rounded"
+                            data-voice-index="${index}">
+                            🔊 Test
+                        </button>
+                    </div>
+                `;
+
+                voiceList.appendChild(card);
+            });
+
+            // Add event listeners to test buttons
+            document.querySelectorAll('.test-voice').forEach(button => {
+                button.addEventListener('click', function() {
+                    const voiceIndex = parseInt(this.getAttribute('data-voice-index'));
+                    const voice = ptVoices[voiceIndex];
+
+                    // Speak test sentence
+                    const utterance = new SpeechSynthesisUtterance(testSentence);
+                    utterance.voice = voice;
+                    utterance.lang = voice.lang;
+                    utterance.rate = 0.85; // Slightly slower for learning
+
+                    // Visual feedback
+                    this.textContent = '🔊 Playing...';
+                    this.disabled = true;
+
+                    utterance.onend = () => {
+                        this.textContent = '🔊 Test';
+                        this.disabled = false;
+                    };
+
+                    utterance.onerror = () => {
+                        this.textContent = '❌ Error';
+                        setTimeout(() => {
+                            this.textContent = '🔊 Test';
+                            this.disabled = false;
+                        }, 2000);
+                    };
+
+                    window.speechSynthesis.cancel(); // Stop any ongoing speech
+                    window.speechSynthesis.speak(utterance);
+                });
+            });
+        }
+
+        // Load voices button
+        document.getElementById('loadVoices').addEventListener('click', loadVoices);
+
+        // Also try to load voices automatically
+        if (window.speechSynthesis.onvoiceschanged !== undefined) {
+            window.speechSynthesis.onvoiceschanged = loadVoices;
+        }
+
+        // Try loading immediately
+        setTimeout(loadVoices, 100);
+    </script>
+</body>
+</html>
