@@ -1027,7 +1027,70 @@
                 item.appendChild(speakerBtn);
             });
             
-            console.log('[Unit 1] Speaker buttons initialized');
+            // Make pronunciation annotations tappable on mobile
+            const pronunciations = document.querySelectorAll('.pronunciation[title]');
+            pronunciations.forEach(function(annotation) {
+                // Make tappable/clickable
+                annotation.style.cursor = 'help';
+                annotation.style.position = 'relative';
+
+                annotation.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    // Remove any existing tooltips
+                    document.querySelectorAll('.mobile-tooltip').forEach(t => t.remove());
+
+                    // Create tooltip
+                    const tooltip = document.createElement('div');
+                    tooltip.className = 'mobile-tooltip';
+                    tooltip.textContent = this.getAttribute('title');
+                    tooltip.style.cssText = `
+                        position: absolute;
+                        bottom: 100%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: #1f2937;
+                        color: white;
+                        padding: 8px 12px;
+                        border-radius: 6px;
+                        font-size: 12px;
+                        white-space: nowrap;
+                        z-index: 1000;
+                        margin-bottom: 5px;
+                        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+                    `;
+
+                    // Add arrow
+                    const arrow = document.createElement('div');
+                    arrow.style.cssText = `
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 0;
+                        height: 0;
+                        border-left: 6px solid transparent;
+                        border-right: 6px solid transparent;
+                        border-top: 6px solid #1f2937;
+                    `;
+                    tooltip.appendChild(arrow);
+
+                    this.appendChild(tooltip);
+
+                    // Remove after 3 seconds
+                    setTimeout(() => tooltip.remove(), 3000);
+                });
+            });
+
+            // Close tooltips when tapping elsewhere
+            document.addEventListener('click', function(e) {
+                if (!e.target.classList.contains('pronunciation')) {
+                    document.querySelectorAll('.mobile-tooltip').forEach(t => t.remove());
+                }
+            });
+
+            console.log('[Unit 1] Speaker buttons and mobile tooltips initialized');
         });
     </script>
     <!-- PWA Setup -->
