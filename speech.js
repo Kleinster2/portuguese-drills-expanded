@@ -41,15 +41,37 @@ class PortugueseSpeech {
   }
 
   // Get best available Portuguese voice
-  getBestVoice() {
-    // Prefer Brazilian Portuguese voices
+  getBestVoice(preferFemale = false) {
+    // First preference: Microsoft Natural voices
+    if (preferFemale) {
+      // Female: Microsoft ThalitaMultilingual Online (Natural)
+      const thalita = this.voices.find(voice =>
+        voice.name.includes('ThalitaMultilingual') && voice.name.includes('Natural')
+      );
+      if (thalita) return thalita;
+    } else {
+      // Male: Microsoft Antonio Online (Natural)
+      const antonio = this.voices.find(voice =>
+        voice.name.includes('Antonio') && voice.name.includes('Natural')
+      );
+      if (antonio) return antonio;
+    }
+
+    // Second preference: Any Microsoft Natural BR voice
+    const msNatural = this.voices.find(voice =>
+      voice.name.includes('Microsoft') &&
+      voice.name.includes('Natural') &&
+      (voice.lang === 'pt-BR' || voice.lang === 'pt_BR')
+    );
+    if (msNatural) return msNatural;
+
+    // Third preference: Any Brazilian Portuguese voice
     const ptBR = this.voices.find(voice =>
       voice.lang === 'pt-BR' || voice.lang === 'pt_BR'
     );
-
     if (ptBR) return ptBR;
 
-    // Fallback to any Portuguese voice
+    // Fourth preference: Any Portuguese voice
     const pt = this.voices.find(voice => voice.lang.startsWith('pt'));
     if (pt) return pt;
 
@@ -76,10 +98,11 @@ class PortugueseSpeech {
     utterance.pitch = options.pitch || this.defaultPitch;
     utterance.volume = options.volume || 1.0;
 
-    // Set voice
-    const voice = this.getBestVoice();
+    // Set voice (preferFemale option can be passed in options)
+    const voice = this.getBestVoice(options.preferFemale || false);
     if (voice) {
       utterance.voice = voice;
+      console.log('[Speech] Using voice:', voice.name);
     }
 
     // Event handlers
