@@ -280,7 +280,7 @@ Every pronunciation annotation should include a `title` attribute explaining whi
 Common title formats:
 - `title="Rule 1: Final -o → /u/"` - Final unstressed -o
 - `title="Rule 2: Final -e → /i/"` - Final unstressed -e
-- `title="Rule 3a: de → /dji/ (always)"` - Palatalization of "de"
+- `title="Rule 3a: Final de → /dji/ (always)"` - Palatalization of "de"
 - `title="Rule 5d: Final -om → /oun/"` - Nasal -om
 - `title="Rule 6: Syllable-final -l → /u/"` - L vocalization
 
