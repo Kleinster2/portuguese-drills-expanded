@@ -264,7 +264,8 @@ python -c "from utils.annotate_pronunciation import annotate_pronunciation; prin
 2. Run through annotator tool
 3. Copy annotated output to HTML
 4. **Add title attributes to all annotations** - Explain which rule applies
-5. Never add `/u/`, `/dji/`, etc. by hand!
+5. **Add substitution mode after every annotated sentence** - Show phonetic spelling
+6. Never add `/u/`, `/dji/`, etc. by hand!
 
 **Adding rule explanations:**
 Every pronunciation annotation should include a `title` attribute explaining which rule applies:
@@ -285,6 +286,26 @@ Common title formats:
 - `title="Rule 6: Syllable-final -l → /u/"` - L vocalization
 
 This creates a self-guided learning experience where students can hover over any annotation to understand why the pronunciation changes.
+
+**Adding substitution mode:**
+Every annotated sentence must be followed by its substitution mode version (phonetic spelling):
+
+```html
+<!-- Annotated version -->
+<div>Eu sou americano<span class="pronunciation" title="Rule 1: Final -o → /u/">/u/</span>.</div>
+
+<!-- Substitution mode (REQUIRED) -->
+<div class="font-mono text-blue-600">Eu sou americanu.</div>
+```
+
+Examples of annotation → substitution pairs:
+- `americano/u/ → americanu` (Rule 1: Final -o)
+- `Daniel/u/ → Danieu` (Rule 6: Syllable-final -l)
+- `de/dji/ Miami → dji Miami` (Rule 3a: Final de)
+- `e/i/ sou → i sou` (Rule 2: Final -e)
+- `com/coun/ a Sofia → coun a Sofia` (Rule 5d: Final -om)
+
+**Important:** Only include words that actually undergo pronunciation changes. Do NOT annotate words that are already spelled with the target sound (e.g., "sou" is already spelled "ou", so it doesn't need annotation for Rule 1).
 
 ### Environment Variables
 Set in Cloudflare Pages → Settings → Environment Variables:
