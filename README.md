@@ -271,19 +271,19 @@ python -c "from utils.annotate_pronunciation import annotate_pronunciation; prin
 Every pronunciation annotation should include a `title` attribute explaining which rule applies:
 
 ```html
-<!-- Good: Educational annotation with rule explanation -->
-<span class="pronunciation" title="Rule 1: Final -o → /u/">/u/</span>
+<!-- Good: Educational annotation with explanation -->
+<span class="pronunciation" title="Final -o → /u/">/u/</span>
 
 <!-- Bad: Annotation without explanation -->
 <span class="pronunciation">/u/</span>
 ```
 
 Common title formats:
-- `title="Rule 1: Final -o → /u/"` - Final unstressed -o
-- `title="Rule 2: Final -e → /i/"` - Final unstressed -e
-- `title="Rule 3a: Final de → /dji/ (always)"` - Palatalization of "de"
-- `title="Rule 5d: Final -om → /oun/"` - Nasal -om
-- `title="Rule 6: Syllable-final -l → /u/"` - L vocalization
+- `title="Final -o → /u/"` - Final unstressed -o
+- `title="Final -e → /i/"` - Final unstressed -e
+- `title="Final de → /dji/ (always)"` - Palatalization of "de"
+- `title="Final -om → /oun/"` - Nasal -om
+- `title="Syllable-final -l → /u/"` - L vocalization
 
 This creates a self-guided learning experience where students can hover over any annotation to understand why the pronunciation changes.
 
@@ -299,13 +299,13 @@ Every annotated sentence must be followed by its substitution mode version (phon
 ```
 
 Examples of annotation → substitution pairs:
-- `americano/u/ → americanu` (Rule 1: Final -o)
-- `Daniel/u/ → Danieu` (Rule 6: Syllable-final -l)
-- `de/dji/ Miami → dji Miami` (Rule 3a: Final de)
-- `e/i/ sou → i sou` (Rule 2: Final -e)
-- `com/coun/ a Sofia → coun a Sofia` (Rule 5d: Final -om)
+- `americano/u/ → americanu` (Final -o)
+- `Daniel/u/ → Danieu` (Syllable-final -l)
+- `de/dji/ Miami → dji Miami` (Final de)
+- `e/i/ sou → i sou` (Final -e)
+- `com/coun/ a Sofia → coun a Sofia` (Final -om)
 
-**Important:** Only include words that actually undergo pronunciation changes. Do NOT annotate words that are already spelled with the target sound (e.g., "sou" is already spelled "ou", so it doesn't need annotation for Rule 1).
+**Important:** Only include words that actually undergo pronunciation changes. Do NOT annotate words that are already spelled with the target sound (e.g., "sou" is already spelled "ou", so it doesn't need annotation).
 
 ### Environment Variables
 Set in Cloudflare Pages → Settings → Environment Variables:
