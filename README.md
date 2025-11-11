@@ -271,19 +271,23 @@ python -c "from utils.annotate_pronunciation import annotate_pronunciation; prin
 Every pronunciation annotation should include a `title` attribute explaining which rule applies:
 
 ```html
-<!-- Good: Educational annotation with explanation -->
-<span class="pronunciation" title="Final -o → /u/">/u/</span>
+<!-- Good: Word-specific annotation with explanation -->
+<span class="pronunciation" title="'americano' → /u/ (final -o)">/u/</span>
 
 <!-- Bad: Annotation without explanation -->
 <span class="pronunciation">/u/</span>
 ```
 
-Common title formats:
-- `title="Final -o → /u/"` - Final unstressed -o
-- `title="Final -e → /i/"` - Final unstressed -e
-- `title="Final de → /dji/ (always)"` - Palatalization of "de"
-- `title="Final -om → /oun/"` - Nasal -om
-- `title="Syllable-final -l → /u/"` - L vocalization
+Common title formats (always include the specific word):
+- `title="'americano' → /u/ (final -o)"` - Final unstressed -o
+- `title="'e' → /i/ (final -e)"` - Final unstressed -e
+- `title="'de' → /dji/ (always)"` - Palatalization of "de"
+- `title="'com' → /oun/ (final -om)"` - Nasal -om
+- `title="'Daniel' → /u/ (syllable-final -l)"` - L vocalization
+
+**Format pattern:** `'<word>' → /<sound>/ (<transformation>)`
+
+This word-specific format is essential when multiple transformations occur in the same sentence. Example: "Eu sou o/u/ Daniel/u/." has two different transformations - hovering clarifies which word undergoes which change.
 
 This creates a self-guided learning experience where students can hover over any annotation to understand why the pronunciation changes.
 
