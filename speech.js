@@ -49,6 +49,12 @@ class PortugueseSpeech {
         voice.name.includes('ThalitaMultilingual') && voice.name.includes('Natural')
       );
       if (thalita) return thalita;
+
+      // Alternative: Microsoft Francisca (pt-BR)
+      const francisca = this.voices.find(voice =>
+        voice.name.includes('Francisca') && (voice.lang === 'pt-BR' || voice.lang === 'pt_BR')
+      );
+      if (francisca) return francisca;
     } else {
       // Male: Microsoft Antonio Online (Natural)
       const antonio = this.voices.find(voice =>
@@ -65,17 +71,14 @@ class PortugueseSpeech {
     );
     if (msNatural) return msNatural;
 
-    // Third preference: Any Brazilian Portuguese voice
+    // Third preference: Any Brazilian Portuguese voice (MUST be pt-BR)
     const ptBR = this.voices.find(voice =>
-      voice.lang === 'pt-BR' || voice.lang === 'pt_BR'
+      (voice.lang === 'pt-BR' || voice.lang === 'pt_BR')
     );
     if (ptBR) return ptBR;
 
-    // Fourth preference: Any Portuguese voice
-    const pt = this.voices.find(voice => voice.lang.startsWith('pt'));
-    if (pt) return pt;
-
-    // Let browser choose default
+    // DO NOT fall back to European Portuguese - warn instead
+    console.warn('[Speech] No Brazilian Portuguese (pt-BR) voices available. Please install Brazilian Portuguese voices.');
     return null;
   }
 
