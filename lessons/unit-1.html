@@ -917,16 +917,26 @@
                 item.appendChild(speakerBtn);
             });
             
-            // Make pronunciation annotations tappable on mobile
+            // Make pronunciation annotations clickable to hear the sound
             const pronunciations = document.querySelectorAll('.pronunciation[title]');
             pronunciations.forEach(function(annotation) {
                 // Make tappable/clickable
-                annotation.style.cursor = 'help';
+                annotation.style.cursor = 'pointer';
                 annotation.style.position = 'relative';
 
                 annotation.addEventListener('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
+
+                    // Get the phonetic sound (text between slashes, e.g., /u/ -> u)
+                    const phoneticText = this.textContent.replace(/\//g, '').trim();
+
+                    // Speak the sound
+                    if (phoneticText) {
+                        speak(phoneticText, {
+                            rate: 0.7  // Slower for clarity
+                        });
+                    }
 
                     // Remove any existing tooltips
                     document.querySelectorAll('.mobile-tooltip').forEach(t => t.remove());
