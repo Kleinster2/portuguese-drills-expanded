@@ -405,7 +405,10 @@ function annotatePronunciation(text, skipIfAnnotated = true) {
     return text;
 }
 
-// Export for use in browser
-if (typeof window !== 'undefined') {
+// Export for use in Node.js and browser environments
+// For Node.js, it's a direct export. For browsers, it's attached to window for compatibility
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { annotatePronunciation };
+} else if (typeof window !== 'undefined') {
     window.annotatePronunciation = annotatePronunciation;
 }

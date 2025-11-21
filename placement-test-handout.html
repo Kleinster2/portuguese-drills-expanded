@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portuguese Placement Test Handout (A1-A2)</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    @page {
+      size: letter;
+      margin: 0.5in;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #000;
+      background: white;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #333;
+    }
+
+    .header h1 {
+      font-size: 18pt;
+      margin-bottom: 3px;
+    }
+
+    .header p {
+      font-size: 10pt;
+      color: #555;
+    }
+
+    .student-info {
+      margin-bottom: 15px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+    }
+
+    .student-info span {
+      display: inline-block;
+      margin-right: 30px;
+    }
+
+    .question {
+      margin-bottom: 14px;
+      page-break-inside: avoid;
+    }
+
+    .question-header {
+      font-weight: 600;
+      margin-bottom: 4px;
+      font-size: 10pt;
+    }
+
+    .question-number {
+      display: inline-block;
+      width: 25px;
+      font-weight: bold;
+    }
+
+    .question-type {
+      display: inline-block;
+      font-size: 8pt;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+
+    .type-comp {
+      background: #e3f2fd;
+      color: #1565c0;
+    }
+
+    .type-prod {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    .pt-text {
+      font-style: italic;
+      color: #1565c0;
+      margin-bottom: 3px;
+    }
+
+    .en-text {
+      color: #2e7d32;
+      margin-bottom: 3px;
+    }
+
+    .question-prompt {
+      margin-bottom: 5px;
+      font-size: 10pt;
+    }
+
+    .template {
+      font-family: 'Courier New', monospace;
+      background: #f5f5f5;
+      padding: 6px 10px;
+      border-radius: 4px;
+      margin-bottom: 5px;
+      font-size: 11pt;
+    }
+
+    .blank {
+      display: inline-block;
+      min-width: 60px;
+      border-bottom: 1px solid #333;
+      text-align: center;
+    }
+
+    .options {
+      margin-top: 4px;
+      padding-left: 15px;
+    }
+
+    .option {
+      display: block;
+      margin: 2px 0;
+      font-size: 10pt;
+    }
+
+    .option input[type="radio"] {
+      margin-right: 6px;
+    }
+
+    .chips {
+      margin-top: 4px;
+      padding: 6px;
+      background: #fafafa;
+      border: 1px dashed #999;
+      border-radius: 4px;
+      font-size: 9pt;
+    }
+
+    .chips-label {
+      font-weight: 600;
+      margin-bottom: 3px;
+      font-size: 9pt;
+    }
+
+    .chip {
+      display: inline-block;
+      padding: 2px 8px;
+      margin: 2px;
+      border: 1px solid #999;
+      border-radius: 3px;
+      background: white;
+      font-family: 'Courier New', monospace;
+    }
+
+    .section-break {
+      margin: 20px 0;
+      border-top: 1px solid #ddd;
+      page-break-after: avoid;
+    }
+
+    @media print {
+      body {
+        font-size: 10pt;
+      }
+
+      .question {
+        margin-bottom: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Portuguese Placement Test</h1>
+    <p>Level: A1-A2 (Beginner to Elementary)</p>
+  </div>
+
+  <div class="student-info">
+    <span>Name: _______________________________</span>
+    <span>Date: _____________</span>
+  </div>
+
+  <div id="questions-container">
+    <!-- Questions will be inserted here by JavaScript -->
+  </div>
+
+  <script>
+    // Embedded questions (no fetch required)
+    const questions = [
+      {
+        "id": 1,
+        "unit": 1,
+        "type": "comprehension",
+        "pt": "Eu sou professor",
+        "question": "What does 'Eu sou professor' mean?",
+        "options": [
+          "I am a teacher",
+          "I am a student",
+          "I have a teacher",
+          "I work as a teacher",
+          "I was a teacher",
+          "I am the teacher"
+        ]
+      },
+      {
+        "id": 2,
+        "unit": 1,
+        "type": "production",
+        "en": "João says: I am Brazilian",
+        "question": "Complete the sentence:",
+        "template": "Eu __ brasileiro",
+        "chips": ["sou", "é", "és", "somos", "são", "estou", "está", "era", "fui", "seria"]
+      },
+      {
+        "id": 4,
+        "unit": 2,
+        "type": "production",
+        "en": "I am from Brazil",
+        "question": "Complete the sentence:",
+        "template": "Eu sou __ Brasil",
+        "chips": ["do", "da", "dos", "das", "de", "no", "na", "nos", "ao", "à"]
+      },
+      {
+        "id": 6,
+        "unit": 3,
+        "type": "production",
+        "en": "The boy is here",
+        "question": "Complete the sentence:",
+        "template": "__ menino está aqui",
+        "chips": ["O", "A", "Os", "As", "Um", "Uma", "Uns", "Umas"]
+      },
+      {
+        "id": 8,
+        "unit": 4,
+        "type": "production",
+        "en": "I have a dog",
+        "question": "Complete the sentence:",
+        "template": "Eu tenho __ cachorro",
+        "chips": ["um", "uma", "uns", "umas", "o", "a", "os", "as"]
+      },
+      {
+        "id": 11,
+        "unit": 5,
+        "type": "comprehension",
+        "pt": "Eu estou no trabalho",
+        "question": "What does this mean?",
+        "options": [
+          "I am at work",
+          "I am a worker",
+          "I have work",
+          "I work",
+          "I was at work",
+          "I go to work"
+        ]
+      },
+      {
+        "id": 12,
+        "unit": 5,
+        "type": "production",
+        "en": "I am at home",
+        "question": "Complete the sentence:",
+        "template": "Eu __ em casa",
+        "chips": ["estou", "sou", "está", "fico", "vou", "era", "estava", "fui", "estaria", "seja"]
+      },
+      {
+        "id": 14,
+        "unit": 6,
+        "type": "production",
+        "en": "The tall boy",
+        "question": "Complete the sentence:",
+        "template": "O menino __",
+        "chips": ["alto", "alta", "altos", "altas", "grande", "pequeno", "pequena", "grandes"]
+      },
+      {
+        "id": 16,
+        "unit": 7,
+        "type": "comprehension",
+        "pt": "Eu moro em São Paulo",
+        "question": "What does this mean?",
+        "options": [
+          "I live in São Paulo",
+          "I work in São Paulo",
+          "I study in São Paulo",
+          "I am living in São Paulo",
+          "I lived in São Paulo",
+          "I will live in São Paulo"
+        ]
+      },
+      {
+        "id": 17,
+        "unit": 7,
+        "type": "production",
+        "en": "I live in Rio",
+        "question": "Complete the sentence:",
+        "template": "Eu __ no Rio",
+        "chips": ["moro", "mora", "moramos", "moram", "morar", "morei", "morava", "moraria", "more", "morasse"]
+      },
+      {
+        "id": 18,
+        "unit": 8,
+        "type": "comprehension",
+        "pt": "Eu sempre falo português",
+        "question": "What does this mean?",
+        "options": [
+          "I always speak Portuguese",
+          "I sometimes speak Portuguese",
+          "I study Portuguese",
+          "I like Portuguese",
+          "I am speaking Portuguese",
+          "I spoke Portuguese"
+        ]
+      },
+      {
+        "id": 19,
+        "unit": 8,
+        "type": "production",
+        "en": "I speak Spanish",
+        "question": "Complete the sentence:",
+        "template": "Eu __ espanhol",
+        "chips": ["falo", "fala", "falamos", "falam", "falar", "falei", "falava", "falaria", "fale", "falasse"]
+      },
+      {
+        "id": 20,
+        "unit": 9,
+        "type": "comprehension",
+        "pt": "Eu trabalho no banco todos os dias",
+        "question": "What does this mean?",
+        "options": [
+          "I work at the bank every day",
+          "I work at the bank sometimes",
+          "I go to the bank",
+          "I study at the bank",
+          "I am working at the bank",
+          "I worked at the bank"
+        ]
+      },
+      {
+        "id": 21,
+        "unit": 9,
+        "type": "production",
+        "en": "I work inside the hospital",
+        "question": "Complete the sentence:",
+        "template": "Eu trabalho __ hospital",
+        "chips": ["no", "na", "em", "do", "da", "ao", "à", "o", "a", "nos"]
+      },
+      {
+        "id": 24,
+        "unit": 11,
+        "type": "production",
+        "en": "The house is located far",
+        "question": "Complete the sentence:",
+        "template": "A casa __ longe",
+        "chips": ["fica", "está", "fico", "ficam", "estão", "ficou", "ficava", "ficará", "fique", "estava"]
+      },
+      {
+        "id": 26,
+        "unit": 12,
+        "type": "comprehension",
+        "pt": "Eu estou cansado",
+        "question": "What does this mean?",
+        "options": [
+          "I am tired",
+          "I was tired",
+          "I will be tired",
+          "I seem tired",
+          "I stay tired",
+          "I became tired"
+        ]
+      },
+      {
+        "id": 27,
+        "unit": 12,
+        "type": "production",
+        "en": "I am tired",
+        "question": "Complete the sentence:",
+        "template": "Eu __ cansado",
+        "chips": ["estou", "sou", "fico", "está", "era", "fui", "estava", "estaria", "seja", "esteja"]
+      },
+      {
+        "id": 29,
+        "unit": 16,
+        "type": "production",
+        "en": "I have a house",
+        "question": "Complete the sentence:",
+        "template": "Eu __ uma casa",
+        "chips": ["tenho", "tem", "temos", "têm", "ter", "tive", "tinha", "teria", "tenha", "tivesse"]
+      },
+      {
+        "id": 31,
+        "unit": 19,
+        "type": "production",
+        "en": "I need money",
+        "question": "Complete the sentence:",
+        "template": "Eu preciso __ dinheiro",
+        "chips": ["de", "do", "da", "em", "no", "na", "para", "por", "com", "sem"]
+      },
+      {
+        "id": 33,
+        "unit": 22,
+        "type": "comprehension",
+        "pt": "Eu como pão todos os dias",
+        "question": "What does this mean?",
+        "options": [
+          "I eat bread every day",
+          "I eat bread sometimes",
+          "I like bread",
+          "I want bread",
+          "I am eating bread",
+          "I ate bread"
+        ]
+      },
+      {
+        "id": 34,
+        "unit": 22,
+        "type": "production",
+        "en": "I eat fruit",
+        "question": "Complete the sentence:",
+        "template": "Eu __ fruta",
+        "chips": ["como", "come", "comemos", "comem", "comer", "comi", "comia", "comeria", "coma", "comesse"]
+      },
+      {
+        "id": 36,
+        "unit": 23,
+        "type": "production",
+        "en": "You speak Portuguese",
+        "question": "Complete the sentence:",
+        "template": "Você __ português",
+        "chips": ["fala", "falo", "falamos", "falam", "falar", "falou", "falava", "falará", "falaria", "fale"]
+      }
+    ];
+
+    // Fisher-Yates shuffle algorithm
+    function shuffleArray(array) {
+      const shuffled = [...array];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
+
+    function displayQuestions() {
+      const container = document.getElementById('questions-container');
+      let html = '';
+
+      questions.forEach((q, index) => {
+        const qNum = index + 1;
+        const isComp = q.type === 'comprehension';
+
+        // Add section break after question 11 (page break for ~2 pages)
+        if (qNum === 12) {
+          html += '<div class="section-break"></div>';
+        }
+
+        html += `<div class="question">`;
+        html += `<div class="question-header">`;
+        html += `<span class="question-number">${qNum}.</span>`;
+        html += `<span class="question-type ${isComp ? 'type-comp' : 'type-prod'}">`;
+        html += isComp ? 'Comprehension' : 'Production';
+        html += `</span>`;
+        html += `</div>`;
+
+        if (isComp) {
+          // Comprehension: PT → EN
+          html += `<div class="pt-text">${q.pt}</div>`;
+          html += `<div class="question-prompt">${q.question}</div>`;
+          html += `<div class="options">`;
+
+          // Shuffle options for randomization
+          const shuffledOptions = shuffleArray(q.options);
+          shuffledOptions.forEach((opt, i) => {
+            const letter = String.fromCharCode(65 + i); // A, B, C...
+            html += `<label class="option">`;
+            html += `<input type="radio" name="q${qNum}" value="${opt}">`;
+            html += `${letter}) ${opt}`;
+            html += `</label>`;
+          });
+          html += `</div>`;
+
+        } else {
+          // Production: EN → PT with chips
+          if (q.en) {
+            html += `<div class="en-text">${q.en}</div>`;
+          }
+          html += `<div class="question-prompt">${q.question}</div>`;
+
+          // Show template with blank
+          const templateParts = q.template.split('__');
+          html += `<div class="template">`;
+          for (let i = 0; i < templateParts.length; i++) {
+            html += templateParts[i];
+            if (i < templateParts.length - 1) {
+              html += `<span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>`;
+            }
+          }
+          html += `</div>`;
+
+          // Show chips (randomized)
+          html += `<div class="chips">`;
+          html += `<div class="chips-label">Choose from:</div>`;
+
+          // Shuffle chips for randomization
+          const shuffledChips = shuffleArray(q.chips);
+          shuffledChips.forEach(chip => {
+            html += `<span class="chip">${chip}</span>`;
+          });
+          html += `</div>`;
+        }
+
+        html += `</div>`;
+      });
+
+      container.innerHTML = html;
+    }
+
+    // Display questions when page loads
+    window.addEventListener('DOMContentLoaded', displayQuestions);
+  </script>
+</body>
+</html>

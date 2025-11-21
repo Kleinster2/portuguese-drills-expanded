@@ -7,9 +7,10 @@
     "build": "node scripts/build-prompts.js",
     "dev": "wrangler pages dev . --compatibility-date=2024-01-01 --local",
     "deploy": "npm run build && wrangler pages deploy . --project-name=portuguese-drills-expanded",
-    "test": "npm run test:python && npm run test:js",
+    "test": "npm run test:python && npm run test:js && npm run test:consistency",
     "test:python": "python utils/test_consistency.py",
     "test:js": "node utils/test-js.mjs",
+    "test:consistency": "node utils/test_python_js_consistency.mjs",
     "test:install": "playwright install chromium"
   },
   "repository": {

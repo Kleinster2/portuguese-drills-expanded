@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portuguese Placement Test Handout (B1-B2 Advanced)</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    @page {
+      size: letter;
+      margin: 0.5in;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 11pt;
+      line-height: 1.4;
+      color: #000;
+      background: white;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #333;
+    }
+
+    .header h1 {
+      font-size: 18pt;
+      margin-bottom: 3px;
+    }
+
+    .header p {
+      font-size: 10pt;
+      color: #555;
+    }
+
+    .student-info {
+      margin-bottom: 15px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+    }
+
+    .student-info span {
+      display: inline-block;
+      margin-right: 30px;
+    }
+
+    .question {
+      margin-bottom: 14px;
+      page-break-inside: avoid;
+    }
+
+    .question-header {
+      font-weight: 600;
+      margin-bottom: 4px;
+      font-size: 10pt;
+    }
+
+    .question-number {
+      display: inline-block;
+      width: 25px;
+      font-weight: bold;
+    }
+
+    .question-type {
+      display: inline-block;
+      font-size: 8pt;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+
+    .type-comp {
+      background: #e3f2fd;
+      color: #1565c0;
+    }
+
+    .type-prod {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    .pt-text {
+      font-style: italic;
+      color: #1565c0;
+      margin-bottom: 3px;
+    }
+
+    .en-text {
+      color: #2e7d32;
+      margin-bottom: 3px;
+    }
+
+    .question-prompt {
+      margin-bottom: 5px;
+      font-size: 10pt;
+    }
+
+    .template {
+      font-family: 'Courier New', monospace;
+      background: #f5f5f5;
+      padding: 6px 10px;
+      border-radius: 4px;
+      margin-bottom: 5px;
+      font-size: 11pt;
+    }
+
+    .blank {
+      display: inline-block;
+      min-width: 60px;
+      border-bottom: 1px solid #333;
+      text-align: center;
+    }
+
+    .options {
+      margin-top: 4px;
+      padding-left: 15px;
+    }
+
+    .option {
+      display: block;
+      margin: 2px 0;
+      font-size: 10pt;
+    }
+
+    .option input[type="radio"] {
+      margin-right: 6px;
+    }
+
+    .chips {
+      margin-top: 4px;
+      padding: 6px;
+      background: #fafafa;
+      border: 1px dashed #999;
+      border-radius: 4px;
+      font-size: 9pt;
+    }
+
+    .chips-label {
+      font-weight: 600;
+      margin-bottom: 3px;
+      font-size: 9pt;
+    }
+
+    .chip {
+      display: inline-block;
+      padding: 2px 8px;
+      margin: 2px;
+      border: 1px solid #999;
+      border-radius: 3px;
+      background: white;
+      font-family: 'Courier New', monospace;
+    }
+
+    .section-break {
+      margin: 20px 0;
+      border-top: 1px solid #ddd;
+      page-break-after: avoid;
+    }
+
+    @media print {
+      body {
+        font-size: 10pt;
+      }
+
+      .question {
+        margin-bottom: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Portuguese Placement Test</h1>
+    <p>Level: B1-B2 (Intermediate to Upper-Intermediate)</p>
+  </div>
+
+  <div class="student-info">
+    <span>Name: _______________________________</span>
+    <span>Date: _____________</span>
+  </div>
+
+  <div id="questions-container">
+    <!-- Questions will be inserted here by JavaScript -->
+  </div>
+
+  <script>
+    // Embedded B1-B2 level questions (no fetch required)
+    const questions = [
+      {
+        "id": 89,
+        "unit": 45,
+        "type": "production",
+        "en": "I used to live here",
+        "question": "Complete the sentence:",
+        "template": "Eu __ aqui",
+        "chips": ["morava", "moro", "morei", "morar", "moramos", "morávamos", "moraria", "more", "morasse", "morarei"]
+      },
+      {
+        "id": 90,
+        "unit": 45,
+        "type": "production",
+        "en": "I used to eat a lot",
+        "question": "Complete the sentence:",
+        "template": "Eu __ muito",
+        "chips": ["comia", "como", "comi", "comer", "comemos", "comíamos", "comeria", "coma", "comesse", "comerei"]
+      },
+      {
+        "id": 91,
+        "unit": 45,
+        "type": "production",
+        "en": "We used to live there",
+        "question": "Complete the sentence:",
+        "template": "Nós __ lá",
+        "chips": ["morávamos", "moro", "morei", "morar", "moramos", "morava", "moraríamos", "moremos", "morássemos", "moraremos"]
+      },
+      {
+        "id": 92,
+        "unit": 46,
+        "type": "production",
+        "en": "I used to have time",
+        "question": "Complete the sentence:",
+        "template": "Eu __ tempo",
+        "chips": ["tinha", "tenho", "tive", "ter", "temos", "tínhamos", "teria", "tenha", "tivesse", "terei"]
+      },
+      {
+        "id": 93,
+        "unit": 46,
+        "type": "production",
+        "en": "I used to come here always",
+        "question": "Complete the sentence:",
+        "template": "Eu __ aqui sempre",
+        "chips": ["vinha", "venho", "vim", "vir", "vimos", "vínhamos", "viria", "venha", "viesse", "virei"]
+      },
+      {
+        "id": 94,
+        "unit": 46,
+        "type": "production",
+        "en": "I used to be tired",
+        "question": "Complete the sentence:",
+        "template": "Eu __ cansado",
+        "chips": ["era", "sou", "fui", "ser", "somos", "éramos", "seria", "seja", "fosse", "serei"]
+      },
+      {
+        "id": 95,
+        "unit": 47,
+        "type": "production",
+        "en": "John is taller than Mary",
+        "question": "Complete the sentence:",
+        "template": "João é __ alto __ Maria",
+        "chips": ["mais...que", "menos...que", "tão...quanto", "mais...do que", "menos...do que", "tão...como", "muito...que", "pouco...que"]
+      },
+      {
+        "id": 96,
+        "unit": 47,
+        "type": "production",
+        "en": "Mary is less tall than John",
+        "question": "Complete the sentence:",
+        "template": "Maria é __ alta __ João",
+        "chips": ["menos...que", "mais...que", "tão...quanto", "menos...do que", "mais...do que", "tão...como", "pouco...que", "muito...que"]
+      },
+      {
+        "id": 97,
+        "unit": 47,
+        "type": "production",
+        "en": "Mary is as smart as John",
+        "question": "Complete the sentence:",
+        "template": "Maria é __ inteligente __ João",
+        "chips": ["tão...quanto", "mais...que", "menos...que", "tão...como", "muito...quanto", "pouco...quanto", "mais...do que", "menos...do que"]
+      },
+      {
+        "id": 98,
+        "unit": 48,
+        "type": "production",
+        "en": "The tallest",
+        "question": "Complete the phrase:",
+        "template": "__ mais alto",
+        "chips": ["O", "A", "Os", "As", "Um", "Uma", "Mais", "Menos"]
+      },
+      {
+        "id": 103,
+        "unit": 51,
+        "type": "comprehension",
+        "pt": "É meio-dia",
+        "question": "What does this mean?",
+        "options": [
+          "It's noon",
+          "It's midnight",
+          "It's 1 o'clock",
+          "It's 12:30",
+          "It was noon",
+          "It will be noon"
+        ]
+      },
+      {
+        "id": 104,
+        "unit": 51,
+        "type": "comprehension",
+        "pt": "São duas e meia",
+        "question": "What does this mean?",
+        "options": [
+          "It's 2:30",
+          "It's 2 o'clock",
+          "It's 3:30",
+          "It's half past three",
+          "It was 2:30",
+          "It will be 2:30"
+        ]
+      },
+      {
+        "id": 105,
+        "unit": 51,
+        "type": "production",
+        "en": "It's five o'clock",
+        "question": "Complete the sentence:",
+        "template": "São cinco __",
+        "chips": ["horas", "hora", "minutos", "minuto", "e meia", "em ponto", "da manhã", "da tarde"]
+      },
+      {
+        "id": 106,
+        "unit": 72,
+        "type": "production",
+        "en": "Come here! (você)",
+        "question": "Complete the sentence:",
+        "template": "__ aqui!",
+        "chips": ["Venha", "Vem", "Vir", "Vindo", "Vim", "Vinha", "Virei", "Viria", "Vá", "Vai"]
+      },
+      {
+        "id": 107,
+        "unit": 72,
+        "type": "production",
+        "en": "Speak Portuguese! (você)",
+        "question": "Complete the sentence:",
+        "template": "__ português!",
+        "chips": ["Fale", "Fala", "Falar", "Falando", "Falei", "Falava", "Falarei", "Falaria", "Diga", "Diz"]
+      },
+      {
+        "id": 108,
+        "unit": 72,
+        "type": "production",
+        "en": "Open the door! (vocês)",
+        "question": "Complete the sentence:",
+        "template": "__ a porta!",
+        "chips": ["Abram", "Abra", "Abrir", "Abrindo", "Abri", "Abria", "Abrirei", "Abriria", "Abrem", "Abre"]
+      },
+      {
+        "id": 109,
+        "unit": 74,
+        "type": "comprehension",
+        "pt": "Aquele homem é professor",
+        "question": "What does 'Aquele homem é professor' mean?",
+        "options": [
+          "That man is a teacher",
+          "This man is a teacher",
+          "Those men are teachers",
+          "These men are teachers",
+          "The man is a teacher",
+          "That man was a teacher"
+        ]
+      },
+      {
+        "id": 110,
+        "unit": 78,
+        "type": "production",
+        "en": "I will travel tomorrow",
+        "question": "Complete the sentence:",
+        "template": "Eu __ amanhã",
+        "chips": ["viajarei", "viajo", "viajei", "viajava", "viajaria", "viaje", "viajasse", "vou viajar", "viajando", "viajado"]
+      },
+      {
+        "id": 111,
+        "unit": 78,
+        "type": "production",
+        "en": "We will be there",
+        "question": "Complete the sentence:",
+        "template": "Nós __ lá",
+        "chips": ["estaremos", "estamos", "estivemos", "estávamos", "estaríamos", "estejamos", "estivéssemos", "vamos estar", "fomos", "estando"]
+      },
+      {
+        "id": 112,
+        "unit": 78,
+        "type": "production",
+        "en": "You will do that",
+        "question": "Complete the sentence:",
+        "template": "Você __ isso",
+        "chips": ["fará", "faz", "fez", "fazia", "faria", "faça", "fizesse", "vai fazer", "fazendo", "feito"]
+      },
+      {
+        "id": 113,
+        "unit": 79,
+        "type": "comprehension",
+        "pt": "Eu gostaria de viajar",
+        "question": "What does this mean?",
+        "options": [
+          "I would like to travel",
+          "I like to travel",
+          "I liked to travel",
+          "I will like to travel",
+          "I want to travel",
+          "I am liking to travel"
+        ]
+      },
+      {
+        "id": 114,
+        "unit": 79,
+        "type": "production",
+        "en": "I would speak Portuguese",
+        "question": "Complete the sentence:",
+        "template": "Eu __ português",
+        "chips": ["falaria", "falo", "falei", "falava", "falarei", "fale", "falasse", "vou falar", "falando", "falado"]
+      }
+    ];
+
+    // Fisher-Yates shuffle algorithm
+    function shuffleArray(array) {
+      const shuffled = [...array];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
+
+    function displayQuestions() {
+      const container = document.getElementById('questions-container');
+      let html = '';
+
+      questions.forEach((q, index) => {
+        const qNum = index + 1;
+        const isComp = q.type === 'comprehension';
+
+        // Add section break after question 11 (page break for ~2 pages)
+        if (qNum === 12) {
+          html += '<div class="section-break"></div>';
+        }
+
+        html += `<div class="question">`;
+        html += `<div class="question-header">`;
+        html += `<span class="question-number">${qNum}.</span>`;
+        html += `<span class="question-type ${isComp ? 'type-comp' : 'type-prod'}">`;
+        html += isComp ? 'Comprehension' : 'Production';
+        html += `</span>`;
+        html += `</div>`;
+
+        if (isComp) {
+          // Comprehension: PT → EN
+          html += `<div class="pt-text">${q.pt}</div>`;
+          html += `<div class="question-prompt">${q.question}</div>`;
+          html += `<div class="options">`;
+
+          // Shuffle options for randomization
+          const shuffledOptions = shuffleArray(q.options);
+          shuffledOptions.forEach((opt, i) => {
+            const letter = String.fromCharCode(65 + i); // A, B, C...
+            html += `<label class="option">`;
+            html += `<input type="radio" name="q${qNum}" value="${opt}">`;
+            html += `${letter}) ${opt}`;
+            html += `</label>`;
+          });
+          html += `</div>`;
+
+        } else {
+          // Production: EN → PT with chips
+          if (q.en) {
+            html += `<div class="en-text">${q.en}</div>`;
+          }
+          html += `<div class="question-prompt">${q.question}</div>`;
+
+          // Show template with blank(s)
+          const templateParts = q.template.split('__');
+          html += `<div class="template">`;
+          for (let i = 0; i < templateParts.length; i++) {
+            html += templateParts[i];
+            if (i < templateParts.length - 1) {
+              html += `<span class="blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>`;
+            }
+          }
+          html += `</div>`;
+
+          // Show chips (randomized)
+          html += `<div class="chips">`;
+          html += `<div class="chips-label">Choose from:</div>`;
+
+          // Shuffle chips for randomization
+          const shuffledChips = shuffleArray(q.chips);
+          shuffledChips.forEach(chip => {
+            html += `<span class="chip">${chip}</span>`;
+          });
+          html += `</div>`;
+        }
+
+        html += `</div>`;
+      });
+
+      container.innerHTML = html;
+    }
+
+    // Display questions when page loads
+    window.addEventListener('DOMContentLoaded', displayQuestions);
+  </script>
+</body>
+</html>
