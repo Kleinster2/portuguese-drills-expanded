@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,12 +19,15 @@
         body {
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
         }
+
         .unit-card {
             transition: all 0.2s;
         }
+
         .unit-card:hover {
             transform: translateY(-2px);
         }
+
         .phase-header {
             position: sticky;
             top: 0;
@@ -32,6 +36,7 @@
         }
     </style>
 </head>
+
 <body class="bg-slate-50">
 
     <!-- Header -->
@@ -83,19 +88,24 @@
     <div class="bg-white border-b shadow-sm">
         <div class="container mx-auto max-w-7xl px-4 py-4">
             <div class="flex flex-wrap gap-2">
-                <button onclick="filterByPhase('all')" class="filter-btn active px-4 py-2 rounded-full bg-sky-500 text-white font-medium text-sm hover:bg-sky-600 transition">
+                <button onclick="filterByPhase('all')"
+                    class="filter-btn active px-4 py-2 rounded-full bg-sky-500 text-white font-medium text-sm hover:bg-sky-600 transition">
                     All Units
                 </button>
-                <button onclick="filterByPhase('A1')" class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium text-sm hover:bg-gray-300 transition">
+                <button onclick="filterByPhase('A1')"
+                    class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium text-sm hover:bg-gray-300 transition">
                     A1 (Beginner)
                 </button>
-                <button onclick="filterByPhase('A2')" class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium text-sm hover:bg-gray-300 transition">
+                <button onclick="filterByPhase('A2')"
+                    class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium text-sm hover:bg-gray-300 transition">
                     A2 (Elementary)
                 </button>
-                <button onclick="filterByPhase('B1')" class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium text-sm hover:bg-gray-300 transition">
+                <button onclick="filterByPhase('B1')"
+                    class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium text-sm hover:bg-gray-300 transition">
                     B1 (Intermediate)
                 </button>
-                <button onclick="filterByPhase('B2')" class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium text-sm hover:bg-gray-300 transition">
+                <button onclick="filterByPhase('B2')"
+                    class="filter-btn px-4 py-2 rounded-full bg-gray-200 text-gray-700 font-medium text-sm hover:bg-gray-300 transition">
                     B2 (Upper-Intermediate)
                 </button>
             </div>
@@ -357,15 +367,8 @@
 
         // Open unit details
         function openUnit(unit) {
-            if (unit.drillId) {
-                // Redirect to main page with drill parameter
-                window.location.href = `/?drill=${unit.drillId}`;
-            } else if (unit.unit === 1) {
-                window.location.href = `/lessons/unit-${unit.unit}.html`;
-            } else {
-                // Fallback
-                alert(`Unit ${unit.unit}: ${unit.title}\n\nDrill coming soon!`);
-            }
+            // Redirect to lesson page for the unit
+            window.location.href = `/lessons/unit-${unit.unit}.html`;
         }
 
         // Filter by phase
@@ -403,4 +406,5 @@
     <!-- PWA Setup -->
     <script src="/pwa-setup.js"></script>
 </body>
+
 </html>

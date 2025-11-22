@@ -71,7 +71,7 @@ These drills cover core grammar structures essential for Portuguese communicatio
 
 **Key Teaching Points:**
 - Months are lowercase: janeiro (not Janeiro)
-- All months are masculine: o janeiro, o mês de janeiro
+- All months are male: o janeiro, o mês de janeiro
 - Use "em" for "in": em dezembro
 - Pronunciation: 'j' = 'zh' sound, 'lh' = 'ly' sound
 - Brazil: summer in dezembro-março (opposite Northern Hemisphere)

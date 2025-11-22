@@ -24,17 +24,17 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 1.1: Eu sou o/a [name]
 - **Structure:** Eu sou + definite article + name
-- **Gender:** o (masculine) / a (feminine)
+- **Gender:** o (male) / a (female)
 - **Usage:** Introducing yourself by name
 
 ### Pattern 1.2: Eu sou [profession]
 - **Structure:** Eu sou + profession noun
-- **Gender agreement:** Profession changes for masculine/feminine
+- **Gender agreement:** Profession changes for male/female
 - **Usage:** Stating your profession
 
 ### Pattern 1.3: Eu sou [nationality]
 - **Structure:** Eu sou + nationality adjective
-- **Gender agreement:** Nationality changes for masculine/feminine
+- **Gender agreement:** Nationality changes for male/female
 - **Usage:** Stating your nationality
 
 ### Pattern 1.4: Eu sou de [city]
@@ -45,15 +45,15 @@ Students should be able to produce these statement patterns:
 ### Pattern 1.5: Eu sou do/da/dos/das [place]
 - **Structure:** Eu sou + de+article + place name
 - **Contractions:**
-  - de + o = do (masculine singular)
-  - de + a = da (feminine singular)
-  - de + os = dos (masculine plural)
-  - de + as = das (feminine plural)
+  - de + o = do (male singular)
+  - de + a = da (female singular)
+  - de + os = dos (male plural)
+  - de + as = das (female plural)
 - **Usage:** Stating country/region of origin (when place has article)
 
 ### Pattern 1.6: Eu sou [characteristic]
 - **Structure:** Eu sou + adjective
-- **Gender agreement:** Adjective changes for masculine/feminine
+- **Gender agreement:** Adjective changes for male/female
 - **Usage:** Stating permanent characteristics (tall, short, etc.)
 
 ### Glossary - Unit 1: Eu sou
@@ -103,20 +103,20 @@ Students should be able to produce these statement patterns:
 ### Pattern 2.2: Eu moro no/na/nos/nas [place]
 - **Structure:** Eu moro + em+article + place name
 - **Contractions:**
-  - em + o = no (masculine singular)
-  - em + a = na (feminine singular)
-  - em + os = nos (masculine plural)
-  - em + as = nas (feminine plural)
+  - em + o = no (male singular)
+  - em + a = na (female singular)
+  - em + os = nos (male plural)
+  - em + as = nas (female plural)
 - **Usage:** Stating where you live (country/place with article)
 
 ### Pattern 2.3: Eu moro na rua [street name]
 - **Structure:** Eu moro na rua + street name
-- **Fixed:** "rua" is feminine, always "na rua"
+- **Fixed:** "rua" is female, always "na rua"
 - **Usage:** Stating your street
 
 ### Pattern 2.4: Eu moro na avenida [avenue name]
 - **Structure:** Eu moro na avenida + avenue name
-- **Fixed:** "avenida" is feminine, always "na avenida"
+- **Fixed:** "avenida" is female, always "na avenida"
 - **Usage:** Stating your avenue
 
 ### Glossary - Unit 2: Eu moro
@@ -147,7 +147,7 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 3.2: Eu trabalho no/na [workplace]
 - **Structure:** Eu trabalho + em+article + workplace noun
-- **Contractions:** no (masculine) / na (feminine)
+- **Contractions:** no (male) / na (female)
 - **Gender:** Workplace noun determines contraction
 - **Usage:** Stating where you work (specific workplace)
 
@@ -213,10 +213,10 @@ Students should be able to produce these statement patterns:
 ### Pattern 5.2: Eu gosto do/da/dos/das [thing]
 - **Structure:** Eu gosto + de+article + specific noun
 - **Contractions:**
-  - de + o = do (masculine singular)
-  - de + a = da (feminine singular)
-  - de + os = dos (masculine plural)
-  - de + as = das (feminine plural)
+  - de + o = do (male singular)
+  - de + a = da (female singular)
+  - de + os = dos (male plural)
+  - de + as = das (female plural)
 - **Usage:** Stating specific things you like (with article)
 
 ### Pattern 5.3: Eu gosto de [infinitive verb]
@@ -249,12 +249,12 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 6.2: Eu estou no/na [place]
 - **Structure:** Eu estou + em+article + place name
-- **Contractions:** no (masculine) / na (feminine)
+- **Contractions:** no (male) / na (female)
 - **Usage:** Stating current location (place with article)
 
 ### Pattern 6.3: Eu estou [adjective]
 - **Structure:** Eu estou + adjective describing temporary state
-- **Gender agreement:** Adjective changes for masculine/feminine
+- **Gender agreement:** Adjective changes for male/female
 - **Usage:** Stating current state or emotion (happy, tired, sad, etc.)
 
 ### Pattern 6.4: Eu estou [adjective] em [infinitive verb]
@@ -322,16 +322,16 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 8.1: Eu tenho um/uma [thing/person]
 - **Structure:** Eu tenho + um/uma + singular noun
-- **Gender agreement:** um (masculine) / uma (feminine)
+- **Gender agreement:** um (male) / uma (female)
 - **Usage:** Stating you have one thing or person
 - **Examples:**
-  - Eu tenho um irmão (I have one brother - masculine)
-  - Eu tenho uma irmã (I have one sister - feminine)
+  - Eu tenho um irmão (I have one brother - male)
+  - Eu tenho uma irmã (I have one sister - female)
   - Eu tenho um carro (I have a car)
 
 ### Pattern 8.2: Eu tenho dois/duas [things/people]
 - **Structure:** Eu tenho + dois/duas + plural noun
-- **Gender agreement:** dois (masculine) / duas (feminine)
+- **Gender agreement:** dois (male) / duas (female)
 - **Usage:** Stating you have two things or people
 - **Examples:**
   - Eu tenho dois irmãos (I have two brothers)
@@ -1201,17 +1201,17 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 1.1: Ele é o [name] / Ela é a [name]
 - **Structure:** Ele/Ela é + definite article + name
-- **Gender:** o (masculine) / a (feminine)
+- **Gender:** o (male) / a (female)
 - **Usage:** Introducing someone else by name
 
 ### Pattern 1.2: Ele é [profession] / Ela é [profession]
 - **Structure:** Ele/Ela é + profession noun
-- **Gender agreement:** Profession changes for masculine/feminine
+- **Gender agreement:** Profession changes for male/female
 - **Usage:** Stating someone's profession
 
 ### Pattern 1.3: Ele é [nationality] / Ela é [nationality]
 - **Structure:** Ele/Ela é + nationality adjective
-- **Gender agreement:** Nationality changes for masculine/feminine
+- **Gender agreement:** Nationality changes for male/female
 - **Usage:** Stating someone's nationality
 
 ### Pattern 1.4: Ele é de [city] / Ela é de [city]
@@ -1226,7 +1226,7 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 1.6: Ele é [characteristic] / Ela é [characteristic]
 - **Structure:** Ele/Ela é + adjective
-- **Gender agreement:** Adjective changes for masculine/feminine
+- **Gender agreement:** Adjective changes for male/female
 - **Usage:** Stating permanent characteristics
 
 ---
@@ -1247,12 +1247,12 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 2.3: Ele mora na rua [street] / Ela mora na rua [street]
 - **Structure:** Ele/Ela mora na rua + street name
-- **Fixed:** "rua" is feminine, always "na rua"
+- **Fixed:** "rua" is female, always "na rua"
 - **Usage:** Stating someone's street
 
 ### Pattern 2.4: Ele mora na avenida [avenue] / Ela mora na avenida [avenue]
 - **Structure:** Ele/Ela mora na avenida + avenue name
-- **Fixed:** "avenida" is feminine, always "na avenida"
+- **Fixed:** "avenida" is female, always "na avenida"
 - **Usage:** Stating someone's avenue
 
 ---
@@ -1268,7 +1268,7 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 3.2: Ele trabalha no/na [workplace] / Ela trabalha no/na [workplace]
 - **Structure:** Ele/Ela trabalha + em+article + workplace noun
-- **Contractions:** no (masculine) / na (feminine)
+- **Contractions:** no (male) / na (female)
 - **Usage:** Stating where someone works (specific workplace)
 
 ### Pattern 3.3: Ele trabalha como [profession] / Ela trabalha como [profession]
@@ -1326,12 +1326,12 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 6.2: Ele está no/na [place] / Ela está no/na [place]
 - **Structure:** Ele/Ela está + em+article + place name
-- **Contractions:** no (masculine) / na (feminine)
+- **Contractions:** no (male) / na (female)
 - **Usage:** Stating current location (place with article)
 
 ### Pattern 6.3: Ele está [adjective] / Ela está [adjective]
 - **Structure:** Ele/Ela está + adjective describing temporary state
-- **Gender agreement:** Adjective changes for masculine/feminine
+- **Gender agreement:** Adjective changes for male/female
 - **Usage:** Stating current state or emotion
 
 ### Pattern 6.4: Ele está [adjective] em [infinitive] / Ela está [adjective] em [infinitive]
@@ -1363,7 +1363,7 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 8.1: Ele tem um/uma [thing/person] / Ela tem um/uma [thing/person]
 - **Structure:** Ele/Ela tem + um/uma + singular noun
-- **Gender agreement:** um (masculine) / uma (feminine)
+- **Gender agreement:** um (male) / uma (female)
 - **Usage:** Stating someone has one thing or person
 - **Examples:**
   - Ele tem um irmão
@@ -1371,7 +1371,7 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 8.2: Ele tem dois/duas [things/people] / Ela tem dois/duas [things/people]
 - **Structure:** Ele/Ela tem + dois/duas + plural noun
-- **Gender agreement:** dois (masculine) / duas (feminine)
+- **Gender agreement:** dois (male) / duas (female)
 - **Usage:** Stating someone has two things or people
 - **Examples:**
   - Ele tem dois irmãos
@@ -1447,7 +1447,7 @@ Ela tem dois irmãos e uma irmã.    (possession/family)
 ```
 
 **Gender Agreement Notes:**
-- Articles: o (masculine - o John) / a (feminine - a Sarah)
+- Articles: o (male - o John) / a (female - a Sarah)
 - Nationalities: americano / americana
 - Professions: analista (same for both) - but many change (professor/professora, médico/médica)
 - Adjectives: contente (same for both) - but many change (alto/alta, cansado/cansada)
@@ -1480,19 +1480,19 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 1.1: Você é o/a [name]
 - **Structure:** Você é + definite article + name
-- **Gender:** o (masculine) / a (feminine)
+- **Gender:** o (male) / a (female)
 - **Usage:** Asking/stating someone's name (addressing them)
 - **Same form as:** Ele/Ela é
 
 ### Pattern 1.2: Você é [profession]
 - **Structure:** Você é + profession noun
-- **Gender agreement:** Profession changes for masculine/feminine
+- **Gender agreement:** Profession changes for male/female
 - **Usage:** Asking/stating someone's profession
 - **Same form as:** Ele/Ela é
 
 ### Pattern 1.3: Você é [nationality]
 - **Structure:** Você é + nationality adjective
-- **Gender agreement:** Nationality changes for masculine/feminine
+- **Gender agreement:** Nationality changes for male/female
 - **Usage:** Asking/stating someone's nationality
 - **Same form as:** Ele/Ela é
 
@@ -1510,7 +1510,7 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 1.6: Você é [characteristic]
 - **Structure:** Você é + adjective
-- **Gender agreement:** Adjective changes for masculine/feminine
+- **Gender agreement:** Adjective changes for male/female
 - **Usage:** Stating characteristics (to the person)
 - **Same form as:** Ele/Ela é
 
@@ -1534,13 +1534,13 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 2.3: Você mora na rua [street]
 - **Structure:** Você mora na rua + street name
-- **Fixed:** "rua" is feminine, always "na rua"
+- **Fixed:** "rua" is female, always "na rua"
 - **Usage:** Asking/stating someone's street
 - **Same form as:** Ele/Ela mora
 
 ### Pattern 2.4: Você mora na avenida [avenue]
 - **Structure:** Você mora na avenida + avenue name
-- **Fixed:** "avenida" is feminine, always "na avenida"
+- **Fixed:** "avenida" is female, always "na avenida"
 - **Usage:** Asking/stating someone's avenue
 - **Same form as:** Ele/Ela mora
 
@@ -1558,7 +1558,7 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 3.2: Você trabalha no/na [workplace]
 - **Structure:** Você trabalha + em+article + workplace noun
-- **Contractions:** no (masculine) / na (feminine)
+- **Contractions:** no (male) / na (female)
 - **Usage:** Asking/stating where someone works
 - **Same form as:** Ele/Ela trabalha
 
@@ -1624,13 +1624,13 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 6.2: Você está no/na [place]
 - **Structure:** Você está + em+article + place name
-- **Contractions:** no (masculine) / na (feminine)
+- **Contractions:** no (male) / na (female)
 - **Usage:** Asking/stating current location
 - **Same form as:** Ele/Ela está
 
 ### Pattern 6.3: Você está [adjective]
 - **Structure:** Você está + adjective describing temporary state
-- **Gender agreement:** Adjective changes for masculine/feminine
+- **Gender agreement:** Adjective changes for male/female
 - **Usage:** Asking/stating current state or emotion
 - **Same form as:** Ele/Ela está
 
@@ -1665,7 +1665,7 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 8.1: Você tem um/uma [thing/person]
 - **Structure:** Você tem + um/uma + singular noun
-- **Gender agreement:** um (masculine) / uma (feminine)
+- **Gender agreement:** um (male) / uma (female)
 - **Usage:** Asking/stating someone has one thing or person
 - **Examples:**
   - Você tem um irmão
@@ -1674,7 +1674,7 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 8.2: Você tem dois/duas [things/people]
 - **Structure:** Você tem + dois/duas + plural noun
-- **Gender agreement:** dois (masculine) / duas (feminine)
+- **Gender agreement:** dois (male) / duas (female)
 - **Usage:** Asking/stating someone has two things or people
 - **Examples:**
   - Você tem dois irmãos
@@ -1878,17 +1878,17 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 1.1: Nós somos os/as [names]
 - **Structure:** Nós somos + plural article + names
-- **Gender:** os (masculine/mixed) / as (feminine)
+- **Gender:** os (male/mixed) / as (female)
 - **Usage:** Introducing ourselves by names
 
 ### Pattern 1.2: Nós somos [profession plural]
 - **Structure:** Nós somos + profession noun (plural)
-- **Gender agreement:** Profession changes for masculine/feminine plural
+- **Gender agreement:** Profession changes for male/female plural
 - **Usage:** Stating our profession
 
 ### Pattern 1.3: Nós somos [nationality plural]
 - **Structure:** Nós somos + nationality adjective (plural)
-- **Gender agreement:** Nationality changes for masculine/feminine plural
+- **Gender agreement:** Nationality changes for male/female plural
 - **Usage:** Stating our nationality
 
 ### Pattern 1.4: Nós somos de [city]
@@ -1903,7 +1903,7 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 1.6: Nós somos [characteristic plural]
 - **Structure:** Nós somos + adjective (plural)
-- **Gender agreement:** Adjective changes for masculine/feminine plural
+- **Gender agreement:** Adjective changes for male/female plural
 - **Usage:** Stating permanent characteristics
 
 ---
@@ -1924,12 +1924,12 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 2.3: Nós moramos na rua [street]
 - **Structure:** Nós moramos na rua + street name
-- **Fixed:** "rua" is feminine, always "na rua"
+- **Fixed:** "rua" is female, always "na rua"
 - **Usage:** Stating our street
 
 ### Pattern 2.4: Nós moramos na avenida [avenue]
 - **Structure:** Nós moramos na avenida + avenue name
-- **Fixed:** "avenida" is feminine, always "na avenida"
+- **Fixed:** "avenida" is female, always "na avenida"
 - **Usage:** Stating our avenue
 
 ---
@@ -1945,7 +1945,7 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 3.2: Nós trabalhamos no/na [workplace]
 - **Structure:** Nós trabalhamos + em+article + workplace noun
-- **Contractions:** no (masculine) / na (feminine)
+- **Contractions:** no (male) / na (female)
 - **Usage:** Stating where we work (specific workplace)
 
 ### Pattern 3.3: Nós trabalhamos como [profession plural]
@@ -2003,12 +2003,12 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 6.2: Nós estamos no/na [place]
 - **Structure:** Nós estamos + em+article + place name
-- **Contractions:** no (masculine) / na (feminine)
+- **Contractions:** no (male) / na (female)
 - **Usage:** Stating current location (place with article)
 
 ### Pattern 6.3: Nós estamos [adjective plural]
 - **Structure:** Nós estamos + adjective describing temporary state (plural)
-- **Gender agreement:** Adjective changes for masculine/feminine plural
+- **Gender agreement:** Adjective changes for male/female plural
 - **Usage:** Stating current state or emotion
 
 ### Pattern 6.4: Nós estamos [adjective] em [infinitive]
@@ -2040,7 +2040,7 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 8.1: Nós temos um/uma [thing/person]
 - **Structure:** Nós temos + um/uma + singular noun
-- **Gender agreement:** um (masculine) / uma (feminine)
+- **Gender agreement:** um (male) / uma (female)
 - **Usage:** Stating we have one thing or person
 - **Examples:**
   - Nós temos um carro
@@ -2048,7 +2048,7 @@ Students should be able to produce these statement patterns:
 
 ### Pattern 8.2: Nós temos dois/duas [things/people]
 - **Structure:** Nós temos + dois/duas + plural noun
-- **Gender agreement:** dois (masculine) / duas (feminine)
+- **Gender agreement:** dois (male) / duas (female)
 - **Usage:** Stating we have two things or people
 - **Examples:**
   - Nós temos dois carros
@@ -2104,6 +2104,6 @@ Nós temos dois carros.             (possession)
 ```
 
 **Plural Agreement Notes:**
-- Nationalities: americanos (masculine/mixed plural) / americanas (feminine plural)
+- Nationalities: americanos (male/mixed plural) / americanas (female plural)
 - Professions: analistas (same for both genders in plural)
-- Adjectives: altos (masculine/mixed) / altas (feminine), contentes (both genders)
+- Adjectives: altos (male/mixed) / altas (female), contentes (both genders)

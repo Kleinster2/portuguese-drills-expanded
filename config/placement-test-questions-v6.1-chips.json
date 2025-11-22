@@ -92,7 +92,7 @@
       "template": "__ meninas estão aqui",
       "chips": ["As", "Os", "A", "O"],
       "correct": "As",
-      "hint": "Remember: 'meninas' is feminine plural"
+      "hint": "Remember: 'meninas' is female plural"
     },
     {
       "id": 7,
@@ -116,7 +116,7 @@
       "chips": ["um", "uma", "uns", "umas"],
       "correct": ["um", "um"],
       "correctSequence": true,
-      "hint": "Both 'cachorro' and 'gato' are masculine"
+      "hint": "Both 'cachorro' and 'gato' are male"
     },
     {
       "id": 9,
@@ -161,7 +161,7 @@
       "template": "Os livros __",
       "chips": ["pequenos", "pequeno", "pequenas", "pequena"],
       "correct": "pequenos",
-      "hint": "Adjective must match masculine plural"
+      "hint": "Adjective must match male plural"
     },
     {
       "id": 13,
@@ -230,7 +230,7 @@
       "template": "Eu trabalho __ hospital",
       "chips": ["no", "na", "em", "o"],
       "correct": "no",
-      "hint": "Use the contraction 'em + o' for 'at the' (masculine)"
+      "hint": "Use the contraction 'em + o' for 'at the' (male)"
     },
     {
       "id": 19,
@@ -322,7 +322,7 @@
       "template": "Estou __ escola",
       "chips": ["na", "no", "em", "a"],
       "correct": "na",
-      "hint": "Use 'em + a' because 'escola' is feminine"
+      "hint": "Use 'em + a' because 'escola' is female"
     },
     {
       "id": 27,
@@ -346,7 +346,7 @@
       "chips": ["Meu", "Minha", "Seu", "Sua"],
       "correct": ["Meu", "minha"],
       "correctSequence": true,
-      "hint": "'irmão' is masculine, 'irmã' is feminine"
+      "hint": "'irmão' is male, 'irmã' is female"
     },
     {
       "id": 29,
@@ -392,7 +392,7 @@
       "template": "Eu tenho __ casa",
       "chips": ["uma", "um", "a", "o"],
       "correct": "uma",
-      "hint": "Use 'uma' because 'casa' is feminine"
+      "hint": "Use 'uma' because 'casa' is female"
     },
     {
       "id": 33,
@@ -723,8 +723,8 @@
       "phase": 2,
       "pt": "Meu carro, minha casa",
       "question": "Why is it 'meu carro' but 'minha casa'?",
-      "correct": "Carro is masculine, casa is feminine",
-      "options": ["Carro is masculine, casa is feminine", "Carro is singular, casa is plural", "Carro is mine, casa is yours", "Carro is new, casa is old"]
+      "correct": "Carro is male, casa is female",
+      "options": ["Carro is male, casa is female", "Carro is singular, casa is plural", "Carro is mine, casa is yours", "Carro is new, casa is old"]
     },
     {
       "id": 62,
@@ -738,7 +738,7 @@
       "chips": ["Meu", "Minha", "Meus", "Minhas"],
       "correct": ["Meu", "minha"],
       "correctSequence": true,
-      "hint": "'livro' is masculine, 'caneta' is feminine"
+      "hint": "'livro' is male, 'caneta' is female"
     },
     {
       "id": 63,
@@ -761,7 +761,7 @@
       "template": "__ carro",
       "chips": ["Seu", "Sua", "Meu", "Nosso"],
       "correct": "Seu",
-      "hint": "Use 'seu' because 'carro' is masculine"
+      "hint": "Use 'seu' because 'carro' is male"
     },
     {
       "id": 65,
@@ -784,7 +784,7 @@
       "template": "__ carro",
       "chips": ["Nosso", "Nossa", "Seu", "Meu"],
       "correct": "Nosso",
-      "hint": "Use 'nosso' because 'carro' is masculine"
+      "hint": "Use 'nosso' because 'carro' is male"
     },
     {
       "id": 67,
@@ -968,7 +968,7 @@
       "template": "Vou __ parque",
       "chips": ["ao", "à", "a", "o"],
       "correct": "ao",
-      "hint": "Use contraction 'a + o' because 'parque' is masculine"
+      "hint": "Use contraction 'a + o' because 'parque' is male"
     },
     {
       "id": 83,
@@ -1037,7 +1037,7 @@
       "template": "Custa __ reais",
       "chips": ["duzentos", "duzenta", "duzentas", "cem"],
       "correct": "duzentos",
-      "hint": "Two hundred = duzentos (agrees with masculine 'reais')"
+      "hint": "Two hundred = duzentos (agrees with male 'reais')"
     },
     {
       "id": 89,
@@ -1129,7 +1129,7 @@
       "template": "Ela é __ mais inteligente da classe",
       "chips": ["a", "o", "as", "os"],
       "correct": "a",
-      "hint": "Use feminine article 'a' because the subject is feminine"
+      "hint": "Use female article 'a' because the subject is female"
     },
     {
       "id": 97,
@@ -1300,7 +1300,7 @@
       "pt": "Eu uso uma camisa branca",
       "question": "What is notable about 'calça' (pants) in Portuguese?",
       "correct": "It's singular, not plural like English",
-      "options": ["It's singular, not plural like English", "It's always plural", "It's masculine", "It requires 'um' not 'uma'"]
+      "options": ["It's singular, not plural like English", "It's always plural", "It's male", "It requires 'um' not 'uma'"]
     },
     {
       "id": 112,
@@ -1313,7 +1313,7 @@
       "template": "Eu uso __ calça preta",
       "chips": ["uma", "um", "umas", "uns"],
       "correct": "uma",
-      "hint": "Remember: 'calça' is singular and feminine in Portuguese"
+      "hint": "Remember: 'calça' is singular and female in Portuguese"
     },
     {
       "id": 113,
@@ -1428,7 +1428,7 @@
       "template": "Minha casa tem __ banheiros",
       "chips": ["dois", "duas", "um", "três"],
       "correct": "dois",
-      "hint": "Bathroom = banheiro (masculine)"
+      "hint": "Bathroom = banheiro (male)"
     },
     {
       "id": 123,
@@ -1566,7 +1566,7 @@
       "template": "Eu mando __ mensagem",
       "chips": ["uma", "um", "a", "o"],
       "correct": "uma",
-      "hint": "Message = mensagem (feminine)"
+      "hint": "Message = mensagem (female)"
     },
     {
       "id": 135,
@@ -1727,7 +1727,7 @@
       "template": "Eu tenho __ gato",
       "chips": ["um", "uma", "o", "a"],
       "correct": "um",
-      "hint": "Cat = gato (masculine)"
+      "hint": "Cat = gato (male)"
     },
     {
       "id": 149,
@@ -1843,7 +1843,7 @@
       "chips": ["à", "às", "a", "as"],
       "correct": ["à", "às"],
       "correctSequence": true,
-      "hint": "Use crase: à (a + a) before feminine nouns, às before time"
+      "hint": "Use crase: à (a + a) before female nouns, às before time"
     },
     {
       "id": 159,
@@ -1866,7 +1866,7 @@
       "template": "__ semana eu estudo",
       "chips": ["Toda", "Todo", "Tudo", "Todas"],
       "correct": "Toda",
-      "hint": "Use 'toda' (feminine) with 'semana', not 'tudo'"
+      "hint": "Use 'toda' (female) with 'semana', not 'tudo'"
     },
     {
       "id": 161,

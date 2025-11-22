@@ -193,7 +193,7 @@
         "Umas"
       ],
       "correct": "As",
-      "hint": "Remember: 'meninas' is feminine plural"
+      "hint": "Remember: 'meninas' is female plural"
     },
     {
       "id": 7,
@@ -236,7 +236,7 @@
         "um"
       ],
       "correctSequence": true,
-      "hint": "Both 'cachorro' and 'gato' are masculine"
+      "hint": "Both 'cachorro' and 'gato' are male"
     },
     {
       "id": 9,
@@ -315,7 +315,7 @@
         "pequenha"
       ],
       "correct": "pequenos",
-      "hint": "Adjective must match masculine plural"
+      "hint": "Adjective must match male plural"
     },
     {
       "id": 13,
@@ -438,7 +438,7 @@
         "ao"
       ],
       "correct": "no",
-      "hint": "Use the contraction 'em + o' for 'at the' (masculine)"
+      "hint": "Use the contraction 'em + o' for 'at the' (male)"
     },
     {
       "id": 19,
@@ -602,7 +602,7 @@
         "à"
       ],
       "correct": "na",
-      "hint": "Use 'em + a' because 'escola' is feminine"
+      "hint": "Use 'em + a' because 'escola' is female"
     },
     {
       "id": 27,
@@ -645,7 +645,7 @@
         "minha"
       ],
       "correctSequence": true,
-      "hint": "'irmão' is masculine, 'irmã' is feminine"
+      "hint": "'irmão' is male, 'irmã' is female"
     },
     {
       "id": 29,
@@ -723,7 +723,7 @@
         "os"
       ],
       "correct": "uma",
-      "hint": "Use 'uma' because 'casa' is feminine"
+      "hint": "Use 'uma' because 'casa' is female"
     },
     {
       "id": 33,
@@ -1306,14 +1306,14 @@
       "phase": 2,
       "pt": "Meu carro, minha casa",
       "question": "Why is it 'meu carro' but 'minha casa'?",
-      "correct": "Carro is masculine, casa is feminine",
+      "correct": "Carro is male, casa is female",
       "options": [
-        "Carro is masculine, casa is feminine",
+        "Carro is male, casa is female",
         "Carro is singular, casa is plural",
         "Carro is mine, casa is yours",
         "Carro is new, casa is old",
-        "Both are masculine",
-        "Both are feminine"
+        "Both are male",
+        "Both are female"
       ]
     },
     {
@@ -1340,7 +1340,7 @@
         "minha"
       ],
       "correctSequence": true,
-      "hint": "'livro' is masculine, 'caneta' is feminine"
+      "hint": "'livro' is male, 'caneta' is female"
     },
     {
       "id": 63,
@@ -1381,7 +1381,7 @@
         "A"
       ],
       "correct": "Seu",
-      "hint": "Use 'seu' because 'carro' is masculine"
+      "hint": "Use 'seu' because 'carro' is male"
     },
     {
       "id": 65,
@@ -1422,7 +1422,7 @@
         "Um"
       ],
       "correct": "Nosso",
-      "hint": "Use 'nosso' because 'carro' is masculine"
+      "hint": "Use 'nosso' because 'carro' is male"
     },
     {
       "id": 67,
@@ -1750,7 +1750,7 @@
         "da"
       ],
       "correct": "ao",
-      "hint": "Use contraction 'a + o' because 'parque' is masculine"
+      "hint": "Use contraction 'a + o' because 'parque' is male"
     },
     {
       "id": 83,
@@ -1871,7 +1871,7 @@
         "dozentos"
       ],
       "correct": "duzentos",
-      "hint": "Two hundred = duzentos (agrees with masculine 'reais')"
+      "hint": "Two hundred = duzentos (agrees with male 'reais')"
     },
     {
       "id": 89,
@@ -2035,7 +2035,7 @@
         "ao"
       ],
       "correct": "a",
-      "hint": "Use feminine article 'a' because the subject is feminine"
+      "hint": "Use female article 'a' because the subject is female"
     },
     {
       "id": 97,
@@ -2338,10 +2338,10 @@
       "options": [
         "It's singular, not plural like English",
         "It's always plural",
-        "It's masculine",
+        "It's male",
         "It requires 'um' not 'uma'",
         "It's singular, plural like English",
-        "It's always feminine",
+        "It's always female",
         "It takes plural verb"
       ]
     },
@@ -2367,7 +2367,7 @@
         "calçes"
       ],
       "correct": "uma",
-      "hint": "Remember: 'calça' is singular and feminine in Portuguese"
+      "hint": "Remember: 'calça' is singular and female in Portuguese"
     },
     {
       "id": 113,
@@ -2577,7 +2577,7 @@
         "dous"
       ],
       "correct": "dois",
-      "hint": "Bathroom = banheiro (masculine)"
+      "hint": "Bathroom = banheiro (male)"
     },
     {
       "id": 123,
@@ -2829,7 +2829,7 @@
         "mensage"
       ],
       "correct": "uma",
-      "hint": "Message = mensagem (feminine)"
+      "hint": "Message = mensagem (female)"
     },
     {
       "id": 135,
@@ -3123,7 +3123,7 @@
         "gata"
       ],
       "correct": "um",
-      "hint": "Cat = gato (masculine)"
+      "hint": "Cat = gato (male)"
     },
     {
       "id": 149,
@@ -3337,7 +3337,7 @@
         "às"
       ],
       "correctSequence": true,
-      "hint": "Use crase: à (a + a) before feminine nouns, às before time"
+      "hint": "Use crase: à (a + a) before female nouns, às before time"
     },
     {
       "id": 159,
@@ -3379,7 +3379,7 @@
         "Todo o"
       ],
       "correct": "Toda",
-      "hint": "Use 'toda' (feminine) with 'semana', not 'tudo'"
+      "hint": "Use 'toda' (female) with 'semana', not 'tudo'"
     },
     {
       "id": 161,

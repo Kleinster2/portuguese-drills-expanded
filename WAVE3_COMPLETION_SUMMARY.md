@@ -55,10 +55,10 @@ These units complete the tense system and add critical grammar structures:
 - **Drill:** crase.json
 - **What it is:** Contraction of a (preposition) + a (article) = à
 - **When used:**
-  - With feminine nouns: Vou à praia (I'm going to the beach)
+  - With female nouns: Vou à praia (I'm going to the beach)
   - With hours: às 3 horas (at 3 o'clock)
   - Fixed expressions: à noite, à esquerda, à direita, às vezes
-- **When NOT used:** masculine nouns (ao), before verbs, indefinite articles
+- **When NOT used:** male nouns (ao), before verbs, indefinite articles
 - **Key:** Notoriously difficult, even native speakers struggle
 
 #### **Unit 80: Todo vs Tudo**
