@@ -138,7 +138,7 @@
                     <div class="mb-6 bg-white rounded-lg p-4 border border-slate-200">
                         <label class="block text-sm font-semibold text-slate-700 mb-3">Select Simplification Level:</label>
                         <div class="flex flex-col sm:flex-row gap-3">
-                            <label class="flex items-center cursor-pointer bg-slate-50 hover:bg-slate-100 rounded-lg p-3 border-2 border-transparent has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50 transition-all flex-1">
+                            <label class="flex items-center cursor-pointer bg-slate-50 hover:bg-slate-100 rounded-lg p-3 border-2 border-transparent has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50 transition-all flex-1 relative">
                                 <input
                                     type="radio"
                                     name="simplifier-level"
@@ -151,8 +151,17 @@
                                     <div class="font-semibold text-slate-900">A1 (Beginner)</div>
                                     <div class="text-xs text-slate-600 mt-1">Present, simple past, basic vocab, short sentences</div>
                                 </div>
+                                <button
+                                    onclick="event.preventDefault(); copySimplifierLink('a1')"
+                                    class="absolute top-2 right-2 p-1.5 text-slate-400 hover:text-blue-600 hover:bg-blue-100 rounded transition-colors"
+                                    title="Copy direct link to A1 simplifier"
+                                >
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
+                                    </svg>
+                                </button>
                             </label>
-                            <label class="flex items-center cursor-pointer bg-slate-50 hover:bg-slate-100 rounded-lg p-3 border-2 border-transparent has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50 transition-all flex-1">
+                            <label class="flex items-center cursor-pointer bg-slate-50 hover:bg-slate-100 rounded-lg p-3 border-2 border-transparent has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50 transition-all flex-1 relative">
                                 <input
                                     type="radio"
                                     name="simplifier-level"
@@ -164,6 +173,15 @@
                                     <div class="font-semibold text-slate-900">A2 (Elementary)</div>
                                     <div class="text-xs text-slate-600 mt-1">Past tenses, present continuous, expanded vocab</div>
                                 </div>
+                                <button
+                                    onclick="event.preventDefault(); copySimplifierLink('a2')"
+                                    class="absolute top-2 right-2 p-1.5 text-slate-400 hover:text-blue-600 hover:bg-blue-100 rounded transition-colors"
+                                    title="Copy direct link to A2 simplifier"
+                                >
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
+                                    </svg>
+                                </button>
                             </label>
                         </div>
 
@@ -1128,6 +1146,29 @@ function updateSimplifierLabels() {
       </div>
     `;
   }
+}
+
+function copySimplifierLink(level) {
+  const baseUrl = window.location.origin + window.location.pathname;
+  const fullUrl = `${baseUrl}?simplifier=${level}`;
+
+  navigator.clipboard.writeText(fullUrl).then(() => {
+    // Show temporary success feedback
+    const button = event.target.closest('button');
+    const originalTitle = button.title;
+    const originalHTML = button.innerHTML;
+
+    button.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+    button.title = 'Link copied!';
+
+    setTimeout(() => {
+      button.innerHTML = originalHTML;
+      button.title = originalTitle;
+    }, 2000);
+  }).catch(err => {
+    console.error('Failed to copy link:', err);
+    alert('Failed to copy link to clipboard');
+  });
 }
 
 function copySimplifiedText() {
