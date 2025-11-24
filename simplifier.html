@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portuguese Text Simplifier - A1/A2 Level</title>
+    <meta name="description" content="Simplify Portuguese text to A1 or A2 CEFR level. Translate and adapt any text to beginner-friendly Portuguese.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="container mx-auto max-w-5xl px-4 sm:px-6 py-8 sm:py-12">
+
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <div class="py-8 px-4 bg-gradient-to-br from-white to-slate-100 rounded-2xl shadow-sm">
+                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">Portuguese Text Simplifier</h1>
+                <p class="mt-3 max-w-2xl mx-auto text-base text-slate-600">
+                    Translate and simplify any text to beginner-level Portuguese (A1/A2 CEFR)
+                </p>
+                <div class="mt-4">
+                    <a href="/" class="text-sm text-blue-600 hover:text-blue-700 hover:underline">
+                        ← Back to All Drills
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Simplifier Interface -->
+        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl shadow-lg p-6 sm:p-8">
+
+            <!-- Level Selector -->
+            <div class="mb-6 bg-white rounded-lg p-4 border border-slate-200">
+                <label class="block text-sm font-semibold text-slate-700 mb-3">Select Simplification Level:</label>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <label class="flex items-center cursor-pointer bg-slate-50 hover:bg-slate-100 rounded-lg p-3 border-2 border-transparent has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50 transition-all flex-1 relative">
+                        <input
+                            type="radio"
+                            name="simplifier-level"
+                            value="a1"
+                            checked
+                            onchange="updateSimplifierLabels()"
+                            class="mr-3 w-4 h-4 text-blue-600 focus:ring-blue-500"
+                        >
+                        <div class="flex-1">
+                            <div class="font-semibold text-slate-900">A1 (Beginner)</div>
+                            <div class="text-xs text-slate-600 mt-1">Present, simple past, basic vocab, short sentences</div>
+                        </div>
+                        <button
+                            onclick="copySimplifierLink(event, 'a1')"
+                            class="absolute top-2 right-2 p-1.5 text-slate-400 hover:text-blue-600 hover:bg-blue-100 rounded transition-colors"
+                            title="Copy direct link to A1 simplifier"
+                        >
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
+                            </svg>
+                        </button>
+                    </label>
+                    <label class="flex items-center cursor-pointer bg-slate-50 hover:bg-slate-100 rounded-lg p-3 border-2 border-transparent has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50 transition-all flex-1 relative">
+                        <input
+                            type="radio"
+                            name="simplifier-level"
+                            value="a2"
+                            onchange="updateSimplifierLabels()"
+                            class="mr-3 w-4 h-4 text-blue-600 focus:ring-blue-500"
+                        >
+                        <div class="flex-1">
+                            <div class="font-semibold text-slate-900">A2 (Elementary)</div>
+                            <div class="text-xs text-slate-600 mt-1">Past tenses, present continuous, expanded vocab</div>
+                        </div>
+                        <button
+                            onclick="copySimplifierLink(event, 'a2')"
+                            class="absolute top-2 right-2 p-1.5 text-slate-400 hover:text-blue-600 hover:bg-blue-100 rounded transition-colors"
+                            title="Copy direct link to A2 simplifier"
+                        >
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
+                            </svg>
+                        </button>
+                    </label>
+                </div>
+
+                <!-- Feature Info Box -->
+                <div id="simplifier-features" class="mt-3 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                    <div class="text-xs text-blue-900 space-y-1">
+                        <div class="font-semibold mb-1">A1 Features:</div>
+                        <div>✓ Present tense (presente)</div>
+                        <div>✓ Simple past (pretérito perfeito)</div>
+                        <div>✓ Immediate future (ir + infinitive)</div>
+                        <div>✓ Basic vocabulary only</div>
+                        <div>✓ Short, clear sentences (max 10-12 words)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Input Section -->
+                <div>
+                    <label for="simplifier-input" class="block text-sm font-semibold text-slate-700 mb-2">
+                        Original Text (any language)
+                    </label>
+                    <textarea
+                        id="simplifier-input"
+                        rows="10"
+                        class="w-full px-4 py-3 text-slate-900 bg-white border border-slate-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                        placeholder="Paste or type text in any language here..."
+                    ></textarea>
+                    <div class="mt-3 flex items-center justify-between">
+                        <span class="text-xs text-slate-500">Supports text in any language</span>
+                        <button
+                            onclick="simplifyText()"
+                            id="simplify-btn"
+                            class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition-colors shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                            Simplify to A1
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Output Section -->
+                <div>
+                    <label id="simplifier-output-label" for="simplifier-output" class="block text-sm font-semibold text-slate-700 mb-2">
+                        Simplified A1-Level Portuguese
+                    </label>
+                    <div
+                        id="simplifier-output"
+                        class="w-full h-64 px-4 py-3 text-slate-900 bg-white border border-slate-300 rounded-lg shadow-sm overflow-y-auto"
+                    >
+                        <div class="flex items-center justify-center h-full text-slate-400">
+                            <div class="text-center">
+                                <svg class="w-16 h-16 mx-auto mb-3 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                                <p class="text-sm">Simplified text will appear here</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 flex justify-end gap-2">
+                        <button
+                            onclick="copySimplifiedText()"
+                            id="copy-btn"
+                            class="hidden bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium px-4 py-2 rounded-lg transition-colors text-sm"
+                        >
+                            Copy Text
+                        </button>
+                        <button
+                            onclick="clearSimplifier()"
+                            class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium px-4 py-2 rounded-lg transition-colors text-sm"
+                        >
+                            Clear
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-8 text-center text-sm text-slate-500">
+            <p>Part of <a href="/" class="text-blue-600 hover:text-blue-700 hover:underline">Portuguese Language Tutor</a></p>
+        </footer>
+
+    </div>
+
+    <script>
+// Helper function to escape HTML
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+async function simplifyText() {
+  const input = document.getElementById('simplifier-input');
+  const output = document.getElementById('simplifier-output');
+  const simplifyBtn = document.getElementById('simplify-btn');
+  const copyBtn = document.getElementById('copy-btn');
+
+  const inputText = input.value.trim();
+
+  if (!inputText) {
+    output.innerHTML = '<div class="text-red-600 p-4">Please enter some text to simplify.</div>';
+    return;
+  }
+
+  // Get selected level
+  const selectedLevel = document.querySelector('input[name="simplifier-level"]:checked').value;
+  const levelUpper = selectedLevel.toUpperCase();
+  const drillId = selectedLevel === 'a1' ? 'a1-simplifier' : 'a2-simplifier';
+
+  // Disable button and show loading
+  simplifyBtn.disabled = true;
+  const originalButtonText = simplifyBtn.textContent;
+  simplifyBtn.textContent = 'Simplifying...';
+  copyBtn.classList.add('hidden');
+
+  output.innerHTML = `<div class="flex items-center justify-center h-full"><div class="text-center"><div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-3"></div><p class="text-slate-600">Simplifying text to ${levelUpper} level...</p></div></div>`;
+
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 90000); // 90 second timeout
+
+    const response = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        sessionId: null,
+        drillId: drillId,
+        message: inputText,
+        isNewSession: true
+      }),
+      signal: controller.signal
+    });
+
+    clearTimeout(timeoutId);
+
+    if (!response.ok) {
+      throw new Error(`Server error: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    // Display the simplified text
+    output.innerHTML = `<div class="prose prose-slate max-w-none whitespace-pre-wrap">${escapeHtml(data.response)}</div>`;
+
+    // Show copy button
+    copyBtn.classList.remove('hidden');
+
+  } catch (error) {
+    console.error('Error simplifying text:', error);
+
+    let errorMessage = 'Connection error. ';
+    if (error.name === 'AbortError') {
+      errorMessage = 'Request timed out. ';
+    } else if (error.message.includes('Failed to fetch')) {
+      errorMessage = 'Network error. Check your connection. ';
+    } else if (error.message.includes('Server error')) {
+      errorMessage = error.message + ' ';
+    }
+
+    output.innerHTML = `<div class="bg-red-50 border border-red-200 rounded-lg p-4"><p class="text-red-800 text-sm mb-3">${errorMessage}</p><button onclick="simplifyText()" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded-lg transition-colors text-sm">Retry</button></div>`;
+
+  } finally {
+    simplifyBtn.disabled = false;
+    simplifyBtn.textContent = originalButtonText;
+  }
+}
+
+function updateSimplifierLabels() {
+  const selectedLevel = document.querySelector('input[name="simplifier-level"]:checked').value;
+  const levelUpper = selectedLevel.toUpperCase();
+
+  // Update button text
+  const simplifyBtn = document.getElementById('simplify-btn');
+  simplifyBtn.textContent = `Simplify to ${levelUpper}`;
+
+  // Update output label
+  const outputLabel = document.getElementById('simplifier-output-label');
+  outputLabel.textContent = `Simplified ${levelUpper}-Level Portuguese`;
+
+  // Update feature info box
+  const featuresBox = document.getElementById('simplifier-features');
+  if (selectedLevel === 'a1') {
+    featuresBox.innerHTML = `
+      <div class="text-xs text-blue-900 space-y-1">
+        <div class="font-semibold mb-1">A1 Features:</div>
+        <div>✓ Present tense (presente)</div>
+        <div>✓ Simple past (pretérito perfeito)</div>
+        <div>✓ Immediate future (ir + infinitive)</div>
+        <div>✓ Basic vocabulary only</div>
+        <div>✓ Short, clear sentences (max 10-12 words)</div>
+      </div>
+    `;
+  } else {
+    featuresBox.innerHTML = `
+      <div class="text-xs text-blue-900 space-y-1">
+        <div class="font-semibold mb-1">A2 Features:</div>
+        <div>✓ Past tenses (Perfeito & Imperfeito)</div>
+        <div>✓ Present Continuous (estar + gerúndio)</div>
+        <div>✓ Immediate future (ir + infinitive)</div>
+        <div>✓ Expanded vocabulary & cognates</div>
+        <div>✓ Longer sentences (up to 15-20 words)</div>
+        <div>✓ Relative clauses with 'que'</div>
+      </div>
+    `;
+  }
+}
+
+function copySimplifierLink(event, level) {
+  event.preventDefault();
+  event.stopPropagation();
+
+  const baseUrl = window.location.origin + '/simplifier.html';
+  const fullUrl = `${baseUrl}?level=${level}`;
+
+  navigator.clipboard.writeText(fullUrl).then(() => {
+    // Show temporary success feedback
+    const button = event.target.closest('button');
+    const originalTitle = button.title;
+    const originalHTML = button.innerHTML;
+
+    button.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+    button.title = 'Link copied!';
+
+    setTimeout(() => {
+      button.innerHTML = originalHTML;
+      button.title = originalTitle;
+    }, 2000);
+  }).catch(err => {
+    console.error('Failed to copy link:', err);
+    alert('Failed to copy link to clipboard');
+  });
+}
+
+function copySimplifiedText() {
+  const output = document.getElementById('simplifier-output');
+  const textContent = output.textContent.trim();
+
+  if (textContent) {
+    navigator.clipboard.writeText(textContent).then(() => {
+      const copyBtn = document.getElementById('copy-btn');
+      const originalText = copyBtn.textContent;
+      copyBtn.textContent = 'Copied!';
+      setTimeout(() => {
+        copyBtn.textContent = originalText;
+      }, 2000);
+    }).catch(err => {
+      console.error('Failed to copy text:', err);
+      alert('Failed to copy text to clipboard');
+    });
+  }
+}
+
+function clearSimplifier() {
+  const input = document.getElementById('simplifier-input');
+  const output = document.getElementById('simplifier-output');
+  const copyBtn = document.getElementById('copy-btn');
+
+  input.value = '';
+  copyBtn.classList.add('hidden');
+
+  output.innerHTML = '<div class="flex items-center justify-center h-full text-slate-400"><div class="text-center"><svg class="w-16 h-16 mx-auto mb-3 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg><p class="text-sm">Simplified text will appear here</p></div></div>';
+}
+
+// Check for level URL parameter on page load
+document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const levelParam = urlParams.get('level');
+
+  if (levelParam && (levelParam === 'a1' || levelParam === 'a2')) {
+    const radioButton = document.querySelector(`input[name="simplifier-level"][value="${levelParam}"]`);
+    if (radioButton) {
+      radioButton.checked = true;
+      updateSimplifierLabels();
+    }
+  }
+});
+    </script>
+
+</body>
+</html>
