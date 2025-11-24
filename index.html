@@ -110,7 +110,7 @@
             </div>
         </section>
 
-        <!-- A1 Text Simplifier Section -->
+        <!-- Text Simplifier Section (A1 & A2) -->
         <section class="mb-12">
             <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl shadow-lg p-6 sm:p-8">
                 <button
@@ -124,8 +124,8 @@
                             </svg>
                         </div>
                         <div>
-                            <h2 class="text-2xl font-bold text-slate-900">A1 Text Simplifier</h2>
-                            <p class="text-slate-600 text-sm mt-1">Convert any Portuguese text to A1 beginner level</p>
+                            <h2 class="text-2xl font-bold text-slate-900">Text Simplifier</h2>
+                            <p class="text-slate-600 text-sm mt-1">Convert any text to beginner-level Portuguese (A1/A2)</p>
                         </div>
                     </div>
                     <svg id="simplifier-chevron" class="w-6 h-6 text-slate-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -134,11 +134,57 @@
                 </button>
 
                 <div id="simplifier-content" class="hidden mt-6">
+                    <!-- Level Selector -->
+                    <div class="mb-6 bg-white rounded-lg p-4 border border-slate-200">
+                        <label class="block text-sm font-semibold text-slate-700 mb-3">Select Simplification Level:</label>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <label class="flex items-center cursor-pointer bg-slate-50 hover:bg-slate-100 rounded-lg p-3 border-2 border-transparent has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50 transition-all flex-1">
+                                <input
+                                    type="radio"
+                                    name="simplifier-level"
+                                    value="a1"
+                                    checked
+                                    onchange="updateSimplifierLabels()"
+                                    class="mr-3 w-4 h-4 text-blue-600 focus:ring-blue-500"
+                                >
+                                <div class="flex-1">
+                                    <div class="font-semibold text-slate-900">A1 (Beginner)</div>
+                                    <div class="text-xs text-slate-600 mt-1">Present, simple past, basic vocab, short sentences</div>
+                                </div>
+                            </label>
+                            <label class="flex items-center cursor-pointer bg-slate-50 hover:bg-slate-100 rounded-lg p-3 border-2 border-transparent has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50 transition-all flex-1">
+                                <input
+                                    type="radio"
+                                    name="simplifier-level"
+                                    value="a2"
+                                    onchange="updateSimplifierLabels()"
+                                    class="mr-3 w-4 h-4 text-blue-600 focus:ring-blue-500"
+                                >
+                                <div class="flex-1">
+                                    <div class="font-semibold text-slate-900">A2 (Elementary)</div>
+                                    <div class="text-xs text-slate-600 mt-1">Past tenses, present continuous, expanded vocab</div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Feature Info Box -->
+                        <div id="simplifier-features" class="mt-3 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                            <div class="text-xs text-blue-900 space-y-1">
+                                <div class="font-semibold mb-1">A1 Features:</div>
+                                <div>✓ Present tense (presente)</div>
+                                <div>✓ Simple past (pretérito perfeito)</div>
+                                <div>✓ Immediate future (ir + infinitive)</div>
+                                <div>✓ Basic vocabulary only</div>
+                                <div>✓ Short, clear sentences (max 10-12 words)</div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         <!-- Input Section -->
                         <div>
                             <label for="simplifier-input" class="block text-sm font-semibold text-slate-700 mb-2">
-                                Original Portuguese Text
+                                Original Text (any language)
                             </label>
                             <textarea
                                 id="simplifier-input"
@@ -147,7 +193,7 @@
                                 placeholder="Paste or type text in any language here..."
                             ></textarea>
                             <div class="mt-3 flex items-center justify-between">
-                                <span class="text-xs text-slate-500">Paste any Portuguese text you want to simplify</span>
+                                <span class="text-xs text-slate-500">Supports text in any language</span>
                                 <button
                                     onclick="simplifyText()"
                                     id="simplify-btn"
@@ -160,7 +206,7 @@
 
                         <!-- Output Section -->
                         <div>
-                            <label for="simplifier-output" class="block text-sm font-semibold text-slate-700 mb-2">
+                            <label id="simplifier-output-label" for="simplifier-output" class="block text-sm font-semibold text-slate-700 mb-2">
                                 Simplified A1-Level Portuguese
                             </label>
                             <div
@@ -946,16 +992,22 @@ async function simplifyText() {
   const inputText = input.value.trim();
 
   if (!inputText) {
-    output.innerHTML = '<div class="text-red-600 p-4">Please enter some Portuguese text to simplify.</div>';
+    output.innerHTML = '<div class="text-red-600 p-4">Please enter some text to simplify.</div>';
     return;
   }
 
+  // Get selected level
+  const selectedLevel = document.querySelector('input[name="simplifier-level"]:checked').value;
+  const levelUpper = selectedLevel.toUpperCase();
+  const drillId = selectedLevel === 'a1' ? 'a1-simplifier' : 'a2-simplifier';
+
   // Disable button and show loading
   simplifyBtn.disabled = true;
+  const originalButtonText = simplifyBtn.textContent;
   simplifyBtn.textContent = 'Simplifying...';
   copyBtn.classList.add('hidden');
 
-  output.innerHTML = '<div class="flex items-center justify-center h-full"><div class="text-center"><div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-3"></div><p class="text-slate-600">Simplifying text to A1 level...</p></div></div>';
+  output.innerHTML = `<div class="flex items-center justify-center h-full"><div class="text-center"><div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-3"></div><p class="text-slate-600">Simplifying text to ${levelUpper} level...</p></div></div>`;
 
   try {
     const controller = new AbortController();
@@ -966,7 +1018,7 @@ async function simplifyText() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         sessionId: null,
-        drillId: 'a1-simplifier',
+        drillId: drillId,
         message: inputText,
         isNewSession: true
       }),
@@ -1004,7 +1056,48 @@ async function simplifyText() {
 
   } finally {
     simplifyBtn.disabled = false;
-    simplifyBtn.textContent = 'Simplify to A1';
+    simplifyBtn.textContent = originalButtonText;
+  }
+}
+
+function updateSimplifierLabels() {
+  const selectedLevel = document.querySelector('input[name="simplifier-level"]:checked').value;
+  const levelUpper = selectedLevel.toUpperCase();
+  const levelName = selectedLevel === 'a1' ? 'A1 (Beginner)' : 'A2 (Elementary)';
+
+  // Update button text
+  const simplifyBtn = document.getElementById('simplify-btn');
+  simplifyBtn.textContent = `Simplify to ${levelUpper}`;
+
+  // Update output label
+  const outputLabel = document.getElementById('simplifier-output-label');
+  outputLabel.textContent = `Simplified ${levelUpper}-Level Portuguese`;
+
+  // Update feature info box
+  const featuresBox = document.getElementById('simplifier-features');
+  if (selectedLevel === 'a1') {
+    featuresBox.innerHTML = `
+      <div class="text-xs text-blue-900 space-y-1">
+        <div class="font-semibold mb-1">A1 Features:</div>
+        <div>✓ Present tense (presente)</div>
+        <div>✓ Simple past (pretérito perfeito)</div>
+        <div>✓ Immediate future (ir + infinitive)</div>
+        <div>✓ Basic vocabulary only</div>
+        <div>✓ Short, clear sentences (max 10-12 words)</div>
+      </div>
+    `;
+  } else {
+    featuresBox.innerHTML = `
+      <div class="text-xs text-blue-900 space-y-1">
+        <div class="font-semibold mb-1">A2 Features:</div>
+        <div>✓ Past tenses (Perfeito & Imperfeito)</div>
+        <div>✓ Present Continuous (estar + gerúndio)</div>
+        <div>✓ Immediate future (ir + infinitive)</div>
+        <div>✓ Expanded vocabulary & cognates</div>
+        <div>✓ Longer sentences (up to 15-20 words)</div>
+        <div>✓ Relative clauses with 'que'</div>
+      </div>
+    `;
   }
 }
 
