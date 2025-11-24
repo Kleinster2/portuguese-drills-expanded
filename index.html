@@ -152,7 +152,7 @@
                                     <div class="text-xs text-slate-600 mt-1">Present, simple past, basic vocab, short sentences</div>
                                 </div>
                                 <button
-                                    onclick="event.preventDefault(); copySimplifierLink('a1')"
+                                    onclick="copySimplifierLink(event, 'a1')"
                                     class="absolute top-2 right-2 p-1.5 text-slate-400 hover:text-blue-600 hover:bg-blue-100 rounded transition-colors"
                                     title="Copy direct link to A1 simplifier"
                                 >
@@ -174,7 +174,7 @@
                                     <div class="text-xs text-slate-600 mt-1">Past tenses, present continuous, expanded vocab</div>
                                 </div>
                                 <button
-                                    onclick="event.preventDefault(); copySimplifierLink('a2')"
+                                    onclick="copySimplifierLink(event, 'a2')"
                                     class="absolute top-2 right-2 p-1.5 text-slate-400 hover:text-blue-600 hover:bg-blue-100 rounded transition-colors"
                                     title="Copy direct link to A2 simplifier"
                                 >
@@ -1148,7 +1148,10 @@ function updateSimplifierLabels() {
   }
 }
 
-function copySimplifierLink(level) {
+function copySimplifierLink(event, level) {
+  event.preventDefault();
+  event.stopPropagation();
+
   const baseUrl = window.location.origin + window.location.pathname;
   const fullUrl = `${baseUrl}?simplifier=${level}`;
 
