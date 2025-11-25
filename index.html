@@ -137,8 +137,8 @@
                     <!-- Level Selector -->
                     <div class="mb-6 bg-white rounded-lg p-4 border border-slate-200">
                         <label class="block text-sm font-semibold text-slate-700 mb-3">Select Simplification Level:</label>
-                        <div class="flex flex-col sm:flex-row gap-3">
-                            <label class="flex items-center cursor-pointer bg-slate-50 hover:bg-slate-100 rounded-lg p-3 border-2 border-transparent has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50 transition-all flex-1 relative">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <label class="flex items-center cursor-pointer bg-slate-50 hover:bg-slate-100 rounded-lg p-3 border-2 border-transparent has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50 transition-all relative">
                                 <input
                                     type="radio"
                                     name="simplifier-level"
@@ -149,7 +149,7 @@
                                 >
                                 <div class="flex-1">
                                     <div class="font-semibold text-slate-900">A1 (Beginner)</div>
-                                    <div class="text-xs text-slate-600 mt-1">Present, simple past, basic vocab, short sentences</div>
+                                    <div class="text-xs text-slate-600 mt-1">Present, simple past, basic vocab</div>
                                 </div>
                                 <button
                                     onclick="openSimplifierPage(event, 'a1')"
@@ -161,7 +161,7 @@
                                     </svg>
                                 </button>
                             </label>
-                            <label class="flex items-center cursor-pointer bg-slate-50 hover:bg-slate-100 rounded-lg p-3 border-2 border-transparent has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50 transition-all flex-1 relative">
+                            <label class="flex items-center cursor-pointer bg-slate-50 hover:bg-slate-100 rounded-lg p-3 border-2 border-transparent has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50 transition-all relative">
                                 <input
                                     type="radio"
                                     name="simplifier-level"
@@ -171,12 +171,56 @@
                                 >
                                 <div class="flex-1">
                                     <div class="font-semibold text-slate-900">A2 (Elementary)</div>
-                                    <div class="text-xs text-slate-600 mt-1">Past tenses, present continuous, expanded vocab</div>
+                                    <div class="text-xs text-slate-600 mt-1">Past tenses, present continuous</div>
                                 </div>
                                 <button
                                     onclick="openSimplifierPage(event, 'a2')"
                                     class="absolute top-2 right-2 p-1.5 text-slate-400 hover:text-blue-600 hover:bg-blue-100 rounded transition-colors"
                                     title="Open A2 simplifier in new tab"
+                                >
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </button>
+                            </label>
+                            <label class="flex items-center cursor-pointer bg-slate-50 hover:bg-slate-100 rounded-lg p-3 border-2 border-transparent has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50 transition-all relative">
+                                <input
+                                    type="radio"
+                                    name="simplifier-level"
+                                    value="b1"
+                                    onchange="updateSimplifierLabels()"
+                                    class="mr-3 w-4 h-4 text-blue-600 focus:ring-blue-500"
+                                >
+                                <div class="flex-1">
+                                    <div class="font-semibold text-slate-900">B1 (Intermediate)</div>
+                                    <div class="text-xs text-slate-600 mt-1">Future, conditional, subjunctive</div>
+                                </div>
+                                <button
+                                    onclick="openSimplifierPage(event, 'b1')"
+                                    class="absolute top-2 right-2 p-1.5 text-slate-400 hover:text-blue-600 hover:bg-blue-100 rounded transition-colors"
+                                    title="Open B1 simplifier in new tab"
+                                >
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </button>
+                            </label>
+                            <label class="flex items-center cursor-pointer bg-slate-50 hover:bg-slate-100 rounded-lg p-3 border-2 border-transparent has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50 transition-all relative">
+                                <input
+                                    type="radio"
+                                    name="simplifier-level"
+                                    value="b2"
+                                    onchange="updateSimplifierLabels()"
+                                    class="mr-3 w-4 h-4 text-blue-600 focus:ring-blue-500"
+                                >
+                                <div class="flex-1">
+                                    <div class="font-semibold text-slate-900">B2 (Upper Intermediate)</div>
+                                    <div class="text-xs text-slate-600 mt-1">All tenses, complex structures</div>
+                                </div>
+                                <button
+                                    onclick="openSimplifierPage(event, 'b2')"
+                                    class="absolute top-2 right-2 p-1.5 text-slate-400 hover:text-blue-600 hover:bg-blue-100 rounded transition-colors"
+                                    title="Open B2 simplifier in new tab"
                                 >
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
@@ -835,7 +879,7 @@
             }
 
             // Check for simplifier URL parameter
-            if (simplifierParam && (simplifierParam === 'a1' || simplifierParam === 'a2')) {
+            if (simplifierParam && ['a1', 'a2', 'b1', 'b2'].includes(simplifierParam)) {
                 setTimeout(() => {
                     // Open simplifier section if it's closed
                     const content = document.getElementById('simplifier-content');
@@ -1046,7 +1090,7 @@ async function simplifyText() {
   // Get selected level
   const selectedLevel = document.querySelector('input[name="simplifier-level"]:checked').value;
   const levelUpper = selectedLevel.toUpperCase();
-  const drillId = selectedLevel === 'a1' ? 'a1-simplifier' : 'a2-simplifier';
+  const drillId = `${selectedLevel}-simplifier`;
 
   // Disable button and show loading
   simplifyBtn.disabled = true;
@@ -1110,7 +1154,6 @@ async function simplifyText() {
 function updateSimplifierLabels() {
   const selectedLevel = document.querySelector('input[name="simplifier-level"]:checked').value;
   const levelUpper = selectedLevel.toUpperCase();
-  const levelName = selectedLevel === 'a1' ? 'A1 (Beginner)' : 'A2 (Elementary)';
 
   // Update button text
   const simplifyBtn = document.getElementById('simplify-btn');
@@ -1133,7 +1176,7 @@ function updateSimplifierLabels() {
         <div>✓ Short, clear sentences (max 10-12 words)</div>
       </div>
     `;
-  } else {
+  } else if (selectedLevel === 'a2') {
     featuresBox.innerHTML = `
       <div class="text-xs text-blue-900 space-y-1">
         <div class="font-semibold mb-1">A2 Features:</div>
@@ -1143,6 +1186,30 @@ function updateSimplifierLabels() {
         <div>✓ Expanded vocabulary & cognates</div>
         <div>✓ Longer sentences (up to 15-20 words)</div>
         <div>✓ Relative clauses with 'que'</div>
+      </div>
+    `;
+  } else if (selectedLevel === 'b1') {
+    featuresBox.innerHTML = `
+      <div class="text-xs text-blue-900 space-y-1">
+        <div class="font-semibold mb-1">B1 Features:</div>
+        <div>✓ Future tense (simple future)</div>
+        <div>✓ Conditional tense</div>
+        <div>✓ Present subjunctive (basic use)</div>
+        <div>✓ Passive voice constructions</div>
+        <div>✓ More complex sentence structures</div>
+        <div>✓ Expanded vocabulary</div>
+      </div>
+    `;
+  } else if (selectedLevel === 'b2') {
+    featuresBox.innerHTML = `
+      <div class="text-xs text-blue-900 space-y-1">
+        <div class="font-semibold mb-1">B2 Features:</div>
+        <div>✓ All verb tenses including subjunctive</div>
+        <div>✓ Compound tenses (perfect, pluperfect)</div>
+        <div>✓ Sophisticated vocabulary</div>
+        <div>✓ Complex sentence structures</div>
+        <div>✓ Idiomatic expressions</div>
+        <div>✓ Passive voice</div>
       </div>
     `;
   }

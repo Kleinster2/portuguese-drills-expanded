@@ -49,6 +49,8 @@ class PromptManager {
       const portugueseForSpanishPrompt = this.loadPromptConfig('./config/prompts/portuguese-for-spanish.json');
       const a1SimplifierPrompt = this.loadPromptConfig('./config/prompts/a1-simplifier.json');
       const a2SimplifierPrompt = this.loadPromptConfig('./config/prompts/a2-simplifier.json');
+      const b1SimplifierPrompt = this.loadPromptConfig('./config/prompts/b1-simplifier.json');
+      const b2SimplifierPrompt = this.loadPromptConfig('./config/prompts/b2-simplifier.json');
       const interrogativesPrompt = this.loadPromptConfig('./config/prompts/interrogatives.json');
       const eQueQuestionsPrompt = this.loadPromptConfig('./config/prompts/e-que-questions.json');
       const numbersPrompt = this.loadPromptConfig('./config/prompts/numbers.json');
@@ -227,6 +229,16 @@ class PromptManager {
       if (a2SimplifierPrompt) {
         this.prompts.set(a2SimplifierPrompt.id, a2SimplifierPrompt);
         console.log(`✓ Loaded prompt configuration: ${a2SimplifierPrompt.id} (${a2SimplifierPrompt.name})`);
+      }
+
+      if (b1SimplifierPrompt) {
+        this.prompts.set(b1SimplifierPrompt.id, b1SimplifierPrompt);
+        console.log(`✓ Loaded prompt configuration: ${b1SimplifierPrompt.id} (${b1SimplifierPrompt.name})`);
+      }
+
+      if (b2SimplifierPrompt) {
+        this.prompts.set(b2SimplifierPrompt.id, b2SimplifierPrompt);
+        console.log(`✓ Loaded prompt configuration: ${b2SimplifierPrompt.id} (${b2SimplifierPrompt.name})`);
       }
 
       if (interrogativesPrompt) {
