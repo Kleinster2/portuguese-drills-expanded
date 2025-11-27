@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "version": "1.0.0",
+    "version": "1.1.0",
     "title": "Portuguese Vocabulary Placement Test",
     "description": "Comprehensive diagnostic test focusing on Portuguese vocabulary across everyday topics and contexts",
-    "totalQuestions": 111,
+    "totalQuestions": 139,
     "questionTypes": {
-      "comprehension": 106,
+      "comprehension": 134,
       "production": 5
     },
     "testType": "vocabulary"
@@ -297,6 +297,510 @@
         "I am living here now",
         "I like here now",
         "I want to live here now"
+      ]
+    },
+    {
+      "id": 83,
+      "unit": 30,
+      "unitName": "Basic Colors A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Vermelho",
+      "question": "What does this mean?",
+      "correct": "Red",
+      "options": [
+        "Red",
+        "Blue",
+        "Green",
+        "Yellow",
+        "Black",
+        "White"
+      ]
+    },
+    {
+      "id": 84,
+      "unit": 30,
+      "unitName": "Basic Colors A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Azul",
+      "question": "What does this mean?",
+      "correct": "Blue",
+      "options": [
+        "Blue",
+        "Red",
+        "Green",
+        "Yellow",
+        "Black",
+        "White"
+      ]
+    },
+    {
+      "id": 85,
+      "unit": 30,
+      "unitName": "Basic Colors A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Branco",
+      "question": "What does this mean?",
+      "correct": "White",
+      "options": [
+        "White",
+        "Black",
+        "Red",
+        "Blue",
+        "Green",
+        "Yellow"
+      ]
+    },
+    {
+      "id": 86,
+      "unit": 30,
+      "unitName": "Basic Colors A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Preto",
+      "question": "What does this mean?",
+      "correct": "Black",
+      "options": [
+        "Black",
+        "White",
+        "Red",
+        "Blue",
+        "Green",
+        "Brown"
+      ]
+    },
+    {
+      "id": 87,
+      "unit": 31,
+      "unitName": "Basic Clothing A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Camisa",
+      "question": "What does this mean?",
+      "correct": "Shirt",
+      "options": [
+        "Shirt",
+        "Pants",
+        "Shoes",
+        "Dress",
+        "Hat",
+        "Jacket"
+      ]
+    },
+    {
+      "id": 88,
+      "unit": 31,
+      "unitName": "Basic Clothing A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Calça",
+      "question": "What does this mean?",
+      "correct": "Pants",
+      "options": [
+        "Pants",
+        "Shirt",
+        "Shoes",
+        "Dress",
+        "Skirt",
+        "Jacket"
+      ]
+    },
+    {
+      "id": 89,
+      "unit": 31,
+      "unitName": "Basic Clothing A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Sapato",
+      "question": "What does this mean?",
+      "correct": "Shoe",
+      "options": [
+        "Shoe",
+        "Shirt",
+        "Pants",
+        "Sock",
+        "Hat",
+        "Sandal"
+      ]
+    },
+    {
+      "id": 90,
+      "unit": 31,
+      "unitName": "Basic Clothing A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Vestido",
+      "question": "What does this mean?",
+      "correct": "Dress",
+      "options": [
+        "Dress",
+        "Shirt",
+        "Skirt",
+        "Pants",
+        "Blouse",
+        "Jacket"
+      ]
+    },
+    {
+      "id": 91,
+      "unit": 32,
+      "unitName": "Basic Body Parts A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Cabeça",
+      "question": "What does this mean?",
+      "correct": "Head",
+      "options": [
+        "Head",
+        "Hand",
+        "Arm",
+        "Leg",
+        "Foot",
+        "Neck"
+      ]
+    },
+    {
+      "id": 92,
+      "unit": 32,
+      "unitName": "Basic Body Parts A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Mão",
+      "question": "What does this mean?",
+      "correct": "Hand",
+      "options": [
+        "Hand",
+        "Head",
+        "Arm",
+        "Foot",
+        "Finger",
+        "Leg"
+      ]
+    },
+    {
+      "id": 93,
+      "unit": 32,
+      "unitName": "Basic Body Parts A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Olho",
+      "question": "What does this mean?",
+      "correct": "Eye",
+      "options": [
+        "Eye",
+        "Ear",
+        "Nose",
+        "Mouth",
+        "Face",
+        "Head"
+      ]
+    },
+    {
+      "id": 94,
+      "unit": 32,
+      "unitName": "Basic Body Parts A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Boca",
+      "question": "What does this mean?",
+      "correct": "Mouth",
+      "options": [
+        "Mouth",
+        "Nose",
+        "Eye",
+        "Ear",
+        "Face",
+        "Teeth"
+      ]
+    },
+    {
+      "id": 95,
+      "unit": 33,
+      "unitName": "Basic House A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Casa",
+      "question": "What does this mean?",
+      "correct": "House",
+      "options": [
+        "House",
+        "Room",
+        "Kitchen",
+        "Bathroom",
+        "Bedroom",
+        "Building"
+      ]
+    },
+    {
+      "id": 96,
+      "unit": 33,
+      "unitName": "Basic House A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Quarto",
+      "question": "What does this mean?",
+      "correct": "Bedroom",
+      "options": [
+        "Bedroom",
+        "Room",
+        "Bathroom",
+        "Kitchen",
+        "Living room",
+        "House"
+      ]
+    },
+    {
+      "id": 97,
+      "unit": 33,
+      "unitName": "Basic House A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Cozinha",
+      "question": "What does this mean?",
+      "correct": "Kitchen",
+      "options": [
+        "Kitchen",
+        "Bathroom",
+        "Bedroom",
+        "Living room",
+        "Dining room",
+        "House"
+      ]
+    },
+    {
+      "id": 98,
+      "unit": 33,
+      "unitName": "Basic House A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Banheiro",
+      "question": "What does this mean?",
+      "correct": "Bathroom",
+      "options": [
+        "Bathroom",
+        "Kitchen",
+        "Bedroom",
+        "Living room",
+        "Room",
+        "Shower"
+      ]
+    },
+    {
+      "id": 99,
+      "unit": 34,
+      "unitName": "Basic Weather A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Sol",
+      "question": "What does this mean?",
+      "correct": "Sun",
+      "options": [
+        "Sun",
+        "Rain",
+        "Cloud",
+        "Wind",
+        "Hot",
+        "Cold"
+      ]
+    },
+    {
+      "id": 100,
+      "unit": 34,
+      "unitName": "Basic Weather A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Chuva",
+      "question": "What does this mean?",
+      "correct": "Rain",
+      "options": [
+        "Rain",
+        "Sun",
+        "Cloud",
+        "Wind",
+        "Snow",
+        "Storm"
+      ]
+    },
+    {
+      "id": 101,
+      "unit": 34,
+      "unitName": "Basic Weather A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Quente",
+      "question": "What does this mean?",
+      "correct": "Hot",
+      "options": [
+        "Hot",
+        "Cold",
+        "Warm",
+        "Cool",
+        "Sun",
+        "Rain"
+      ]
+    },
+    {
+      "id": 102,
+      "unit": 34,
+      "unitName": "Basic Weather A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Frio",
+      "question": "What does this mean?",
+      "correct": "Cold",
+      "options": [
+        "Cold",
+        "Hot",
+        "Cool",
+        "Warm",
+        "Snow",
+        "Wind"
+      ]
+    },
+    {
+      "id": 103,
+      "unit": 35,
+      "unitName": "Basic Emotions A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Feliz",
+      "question": "What does this mean?",
+      "correct": "Happy",
+      "options": [
+        "Happy",
+        "Sad",
+        "Angry",
+        "Tired",
+        "Scared",
+        "Excited"
+      ]
+    },
+    {
+      "id": 104,
+      "unit": 35,
+      "unitName": "Basic Emotions A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Triste",
+      "question": "What does this mean?",
+      "correct": "Sad",
+      "options": [
+        "Sad",
+        "Happy",
+        "Angry",
+        "Tired",
+        "Scared",
+        "Worried"
+      ]
+    },
+    {
+      "id": 105,
+      "unit": 35,
+      "unitName": "Basic Emotions A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Cansado",
+      "question": "What does this mean?",
+      "correct": "Tired",
+      "options": [
+        "Tired",
+        "Happy",
+        "Sad",
+        "Angry",
+        "Sleepy",
+        "Bored"
+      ]
+    },
+    {
+      "id": 106,
+      "unit": 35,
+      "unitName": "Basic Emotions A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Com fome",
+      "question": "What does this mean?",
+      "correct": "Hungry",
+      "options": [
+        "Hungry",
+        "Thirsty",
+        "Tired",
+        "Full",
+        "Happy",
+        "Sad"
+      ]
+    },
+    {
+      "id": 107,
+      "unit": 36,
+      "unitName": "Question Words A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Onde?",
+      "question": "What does this mean?",
+      "correct": "Where?",
+      "options": [
+        "Where?",
+        "When?",
+        "What?",
+        "Who?",
+        "Why?",
+        "How?"
+      ]
+    },
+    {
+      "id": 108,
+      "unit": 36,
+      "unitName": "Question Words A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Quando?",
+      "question": "What does this mean?",
+      "correct": "When?",
+      "options": [
+        "When?",
+        "Where?",
+        "What?",
+        "Who?",
+        "Why?",
+        "How?"
+      ]
+    },
+    {
+      "id": 109,
+      "unit": 36,
+      "unitName": "Question Words A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Por que?",
+      "question": "What does this mean?",
+      "correct": "Why?",
+      "options": [
+        "Why?",
+        "Where?",
+        "When?",
+        "What?",
+        "Who?",
+        "How?"
+      ]
+    },
+    {
+      "id": 110,
+      "unit": 36,
+      "unitName": "Question Words A2",
+      "phase": 2,
+      "type": "comprehension",
+      "pt": "Como?",
+      "question": "What does this mean?",
+      "correct": "How?",
+      "options": [
+        "How?",
+        "What?",
+        "Where?",
+        "When?",
+        "Why?",
+        "Who?"
       ]
     },
     {

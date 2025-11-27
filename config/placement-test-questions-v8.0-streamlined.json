@@ -19,11 +19,11 @@
       "name": "Foundation (A1)",
       "unitRange": [
         1,
-        25
+        23
       ],
       "questionRange": [
         1,
-        65
+        62
       ],
       "description": "Absolute beginner - basic identity, present tense, articles, simple verbs"
     },
@@ -31,12 +31,12 @@
       "num": 2,
       "name": "Elementary (A2)",
       "unitRange": [
-        26,
-        50
+        24,
+        44
       ],
       "questionRange": [
-        66,
-        141
+        63,
+        138
       ],
       "description": "Elementary - past tenses, questions, comparisons, irregular verbs"
     },
@@ -44,12 +44,12 @@
       "num": 3,
       "name": "Intermediate (B1)",
       "unitRange": [
-        51,
-        75
+        45,
+        74
       ],
       "questionRange": [
-        142,
-        261
+        139,
+        252
       ],
       "description": "Intermediate - vocabulary expansion, imperative, demonstratives"
     },
@@ -57,11 +57,11 @@
       "num": 4,
       "name": "Upper-Intermediate (B2)",
       "unitRange": [
-        76,
+        75,
         89
       ],
       "questionRange": [
-        262,
+        253,
         303
       ],
       "description": "Upper-intermediate - future tense, conditional, subjunctive moods, advanced usage"
@@ -998,6 +998,96 @@
     {
       "id": 45,
       "unit": 18,
+      "unitName": "Numbers 0-100",
+      "phase": 1,
+      "type": "comprehension",
+      "pt": "Eu tenho vinte anos",
+      "question": "What does this mean?",
+      "correct": "I am 20 years old",
+      "options": [
+        "I am 20 years old",
+        "I have 20 years",
+        "I am 12 years old",
+        "I am 22 years old",
+        "I will be 20 years old",
+        "I was 20 years old"
+      ]
+    },
+    {
+      "id": 46,
+      "unit": 18,
+      "unitName": "Numbers 0-100",
+      "phase": 1,
+      "type": "comprehension",
+      "pt": "Custa cinquenta reais",
+      "question": "What does this mean?",
+      "correct": "It costs 50 reais",
+      "options": [
+        "It costs 50 reais",
+        "It costs 15 reais",
+        "It costs 60 reais",
+        "It costs 500 reais",
+        "It cost 50 reais",
+        "It will cost 50 reais"
+      ]
+    },
+    {
+      "id": 47,
+      "unit": 18,
+      "unitName": "Numbers 0-100",
+      "phase": 1,
+      "type": "comprehension",
+      "pt": "São oitenta pessoas",
+      "question": "What does this mean?",
+      "correct": "There are 80 people",
+      "options": [
+        "There are 80 people",
+        "There are 18 people",
+        "There are 8 people",
+        "There are 800 people",
+        "There were 80 people",
+        "There will be 80 people"
+      ]
+    },
+    {
+      "id": 48,
+      "unit": 19,
+      "unitName": "Numbers 100-1000 and Beyond",
+      "phase": 1,
+      "type": "comprehension",
+      "pt": "Custa duzentos reais",
+      "question": "What does this mean?",
+      "correct": "It costs 200 reais",
+      "options": [
+        "It costs 200 reais",
+        "It costs 20 reais",
+        "It costs 2000 reais",
+        "It costs 2 reais",
+        "It cost 200 reais",
+        "It will cost 200 reais"
+      ]
+    },
+    {
+      "id": 49,
+      "unit": 19,
+      "unitName": "Numbers 100-1000 and Beyond",
+      "phase": 1,
+      "type": "comprehension",
+      "pt": "Mil pessoas vieram",
+      "question": "What does this mean?",
+      "correct": "1000 people came",
+      "options": [
+        "1000 people came",
+        "100 people came",
+        "10000 people came",
+        "1 million people came",
+        "1000 people come",
+        "1000 people will come"
+      ]
+    },
+    {
+      "id": 50,
+      "unit": 20,
       "unitName": "Yes/No Questions",
       "phase": 1,
       "type": "comprehension",
@@ -1014,8 +1104,8 @@
       ]
     },
     {
-      "id": 46,
-      "unit": 18,
+      "id": 51,
+      "unit": 20,
       "unitName": "Yes/No Questions",
       "phase": 1,
       "type": "comprehension",
@@ -1032,8 +1122,8 @@
       ]
     },
     {
-      "id": 47,
-      "unit": 19,
+      "id": 52,
+      "unit": 21,
       "unitName": "Verb Precisar de",
       "phase": 1,
       "type": "comprehension",
@@ -1050,8 +1140,8 @@
       ]
     },
     {
-      "id": 48,
-      "unit": 19,
+      "id": 53,
+      "unit": 21,
       "unitName": "Verb Precisar de",
       "phase": 1,
       "type": "production",
@@ -1074,8 +1164,8 @@
       "hint": "precisar takes 'de'"
     },
     {
-      "id": 49,
-      "unit": 19,
+      "id": 54,
+      "unit": 21,
       "unitName": "Verb Precisar de",
       "phase": 1,
       "type": "production",
@@ -1098,8 +1188,8 @@
       "hint": "precisar takes 'de'"
     },
     {
-      "id": 50,
-      "unit": 20,
+      "id": 55,
+      "unit": 22,
       "unitName": "Basic Food Vocabulary",
       "phase": 1,
       "type": "comprehension",
@@ -1116,8 +1206,8 @@
       ]
     },
     {
-      "id": 51,
-      "unit": 20,
+      "id": 56,
+      "unit": 22,
       "unitName": "Basic Food Vocabulary",
       "phase": 1,
       "type": "comprehension",
@@ -1134,8 +1224,8 @@
       ]
     },
     {
-      "id": 52,
-      "unit": 20,
+      "id": 57,
+      "unit": 22,
       "unitName": "Basic Food Vocabulary",
       "phase": 1,
       "type": "comprehension",
@@ -1152,8 +1242,8 @@
       ]
     },
     {
-      "id": 53,
-      "unit": 20,
+      "id": 58,
+      "unit": 22,
       "unitName": "Basic Food Vocabulary",
       "phase": 1,
       "type": "comprehension",
@@ -1170,8 +1260,8 @@
       ]
     },
     {
-      "id": 54,
-      "unit": 21,
+      "id": 59,
+      "unit": 23,
       "unitName": "Drinks and Beverages",
       "phase": 1,
       "type": "comprehension",
@@ -1188,8 +1278,8 @@
       ]
     },
     {
-      "id": 55,
-      "unit": 21,
+      "id": 60,
+      "unit": 23,
       "unitName": "Drinks and Beverages",
       "phase": 1,
       "type": "comprehension",
@@ -1206,8 +1296,8 @@
       ]
     },
     {
-      "id": 56,
-      "unit": 21,
+      "id": 61,
+      "unit": 23,
       "unitName": "Drinks and Beverages",
       "phase": 1,
       "type": "comprehension",
@@ -1224,8 +1314,8 @@
       ]
     },
     {
-      "id": 57,
-      "unit": 21,
+      "id": 62,
+      "unit": 23,
       "unitName": "Drinks and Beverages",
       "phase": 1,
       "type": "comprehension",
@@ -1242,8 +1332,8 @@
       ]
     },
     {
-      "id": 58,
-      "unit": 22,
+      "id": 63,
+      "unit": 24,
       "unitName": "Regular -ER Verbs",
       "phase": 2,
       "type": "comprehension",
@@ -1260,8 +1350,8 @@
       ]
     },
     {
-      "id": 59,
-      "unit": 22,
+      "id": 64,
+      "unit": 24,
       "unitName": "Regular -ER Verbs",
       "phase": 2,
       "type": "production",
@@ -1284,8 +1374,8 @@
       "hint": "comer, eu form"
     },
     {
-      "id": 60,
-      "unit": 22,
+      "id": 65,
+      "unit": 24,
       "unitName": "Regular -ER Verbs",
       "phase": 2,
       "type": "production",
@@ -1308,8 +1398,8 @@
       "hint": "beber, eu form"
     },
     {
-      "id": 61,
-      "unit": 23,
+      "id": 66,
+      "unit": 25,
       "unitName": "Você/Ele/Ela Forms",
       "phase": 2,
       "type": "production",
@@ -1332,8 +1422,8 @@
       "hint": "third person singular"
     },
     {
-      "id": 62,
-      "unit": 23,
+      "id": 67,
+      "unit": 25,
       "unitName": "Você/Ele/Ela Forms",
       "phase": 2,
       "type": "production",
@@ -1356,8 +1446,8 @@
       "hint": "third person singular"
     },
     {
-      "id": 63,
-      "unit": 23,
+      "id": 68,
+      "unit": 25,
       "unitName": "Você/Ele/Ela Forms",
       "phase": 2,
       "type": "production",
@@ -1380,8 +1470,8 @@
       "hint": "third person singular"
     },
     {
-      "id": 64,
-      "unit": 24,
+      "id": 69,
+      "unit": 26,
       "unitName": "Nós Forms",
       "phase": 2,
       "type": "production",
@@ -1404,8 +1494,8 @@
       "hint": "first person plural"
     },
     {
-      "id": 65,
-      "unit": 24,
+      "id": 70,
+      "unit": 26,
       "unitName": "Nós Forms",
       "phase": 2,
       "type": "production",
@@ -1428,8 +1518,8 @@
       "hint": "first person plural"
     },
     {
-      "id": 66,
-      "unit": 24,
+      "id": 71,
+      "unit": 26,
       "unitName": "Nós Forms",
       "phase": 2,
       "type": "production",
@@ -1452,8 +1542,8 @@
       "hint": "first person plural"
     },
     {
-      "id": 67,
-      "unit": 25,
+      "id": 72,
+      "unit": 27,
       "unitName": "Verb Gostar de",
       "phase": 2,
       "type": "comprehension",
@@ -1470,8 +1560,8 @@
       ]
     },
     {
-      "id": 68,
-      "unit": 25,
+      "id": 73,
+      "unit": 27,
       "unitName": "Verb Gostar de",
       "phase": 2,
       "type": "production",
@@ -1494,8 +1584,8 @@
       "hint": "gostar takes 'de'"
     },
     {
-      "id": 69,
-      "unit": 25,
+      "id": 74,
+      "unit": 27,
       "unitName": "Verb Gostar de",
       "phase": 2,
       "type": "production",
@@ -1518,8 +1608,8 @@
       "hint": "gostar takes 'de'"
     },
     {
-      "id": 70,
-      "unit": 26,
+      "id": 75,
+      "unit": 28,
       "unitName": "Regular -IR Verbs",
       "phase": 2,
       "type": "comprehension",
@@ -1536,8 +1626,8 @@
       ]
     },
     {
-      "id": 71,
-      "unit": 26,
+      "id": 76,
+      "unit": 28,
       "unitName": "Regular -IR Verbs",
       "phase": 2,
       "type": "production",
@@ -1560,8 +1650,8 @@
       "hint": "abrir, eu form"
     },
     {
-      "id": 72,
-      "unit": 26,
+      "id": 77,
+      "unit": 28,
       "unitName": "Regular -IR Verbs",
       "phase": 2,
       "type": "production",
@@ -1584,8 +1674,8 @@
       "hint": "partir, eu form"
     },
     {
-      "id": 73,
-      "unit": 27,
+      "id": 78,
+      "unit": 29,
       "unitName": "Future with Ir + Infinitive",
       "phase": 2,
       "type": "comprehension",
@@ -1602,8 +1692,8 @@
       ]
     },
     {
-      "id": 74,
-      "unit": 27,
+      "id": 79,
+      "unit": 29,
       "unitName": "Future with Ir + Infinitive",
       "phase": 2,
       "type": "production",
@@ -1626,8 +1716,8 @@
       "hint": "infinitive after ir"
     },
     {
-      "id": 75,
-      "unit": 27,
+      "id": 80,
+      "unit": 29,
       "unitName": "Future with Ir + Infinitive",
       "phase": 2,
       "type": "production",
@@ -1650,8 +1740,8 @@
       "hint": "infinitive after ir"
     },
     {
-      "id": 76,
-      "unit": 28,
+      "id": 81,
+      "unit": 30,
       "unitName": "Vocês/Eles/Elas Forms",
       "phase": 2,
       "type": "production",
@@ -1674,8 +1764,8 @@
       "hint": "third person plural"
     },
     {
-      "id": 77,
-      "unit": 28,
+      "id": 82,
+      "unit": 30,
       "unitName": "Vocês/Eles/Elas Forms",
       "phase": 2,
       "type": "production",
@@ -1698,8 +1788,8 @@
       "hint": "third person plural"
     },
     {
-      "id": 78,
-      "unit": 28,
+      "id": 83,
+      "unit": 30,
       "unitName": "Vocês/Eles/Elas Forms",
       "phase": 2,
       "type": "production",
@@ -1722,8 +1812,8 @@
       "hint": "third person plural"
     },
     {
-      "id": 79,
-      "unit": 29,
+      "id": 84,
+      "unit": 31,
       "unitName": "Time Expressions",
       "phase": 2,
       "type": "comprehension",
@@ -1740,8 +1830,8 @@
       ]
     },
     {
-      "id": 80,
-      "unit": 29,
+      "id": 85,
+      "unit": 31,
       "unitName": "Time Expressions",
       "phase": 2,
       "type": "comprehension",
@@ -1758,8 +1848,8 @@
       ]
     },
     {
-      "id": 81,
-      "unit": 29,
+      "id": 86,
+      "unit": 31,
       "unitName": "Time Expressions",
       "phase": 2,
       "type": "comprehension",
@@ -1776,8 +1866,8 @@
       ]
     },
     {
-      "id": 82,
-      "unit": 29,
+      "id": 87,
+      "unit": 31,
       "unitName": "Time Expressions",
       "phase": 2,
       "type": "comprehension",
@@ -1794,8 +1884,8 @@
       ]
     },
     {
-      "id": 83,
-      "unit": 30,
+      "id": 88,
+      "unit": 32,
       "unitName": "Common Question Words",
       "phase": 2,
       "type": "comprehension",
@@ -1812,8 +1902,8 @@
       ]
     },
     {
-      "id": 84,
-      "unit": 30,
+      "id": 89,
+      "unit": 32,
       "unitName": "Common Question Words",
       "phase": 2,
       "type": "comprehension",
@@ -1830,8 +1920,8 @@
       ]
     },
     {
-      "id": 85,
-      "unit": 30,
+      "id": 90,
+      "unit": 32,
       "unitName": "Common Question Words",
       "phase": 2,
       "type": "comprehension",
@@ -1848,8 +1938,8 @@
       ]
     },
     {
-      "id": 86,
-      "unit": 30,
+      "id": 91,
+      "unit": 32,
       "unitName": "Common Question Words",
       "phase": 2,
       "type": "comprehension",
@@ -1866,8 +1956,8 @@
       ]
     },
     {
-      "id": 87,
-      "unit": 30,
+      "id": 92,
+      "unit": 32,
       "unitName": "Common Question Words",
       "phase": 2,
       "type": "comprehension",
@@ -1884,8 +1974,8 @@
       ]
     },
     {
-      "id": 88,
-      "unit": 30,
+      "id": 93,
+      "unit": 32,
       "unitName": "Common Question Words",
       "phase": 2,
       "type": "production",
@@ -1906,8 +1996,8 @@
       "hint": "Where = Onde"
     },
     {
-      "id": 89,
-      "unit": 31,
+      "id": 94,
+      "unit": 33,
       "unitName": "Possessive Adjectives - Meu/Minha",
       "phase": 2,
       "type": "production",
@@ -1928,14 +2018,14 @@
       "hint": "masculine singular"
     },
     {
-      "id": 90,
-      "unit": 31,
+      "id": 95,
+      "unit": 33,
       "unitName": "Possessive Adjectives - Meu/Minha",
       "phase": 2,
       "type": "production",
       "en": "My mothers study",
       "question": "Complete the sentence:",
-      "template": "__ mães estuda",
+      "template": "__ mães estudam",
       "chips": [
         "Minhas",
         "Meu",
@@ -1947,11 +2037,11 @@
         "Nosso"
       ],
       "correct": "Minhas",
-      "hint": "feminine singular"
+      "hint": "feminine plural"
     },
     {
-      "id": 91,
-      "unit": 32,
+      "id": 96,
+      "unit": 34,
       "unitName": "Possessive Adjectives - Seu/Sua",
       "phase": 2,
       "type": "production",
@@ -1972,14 +2062,14 @@
       "hint": "masculine singular"
     },
     {
-      "id": 92,
-      "unit": 32,
+      "id": 97,
+      "unit": 34,
       "unitName": "Possessive Adjectives - Seu/Sua",
       "phase": 2,
       "type": "production",
       "en": "Your houses are big",
       "question": "Complete the sentence:",
-      "template": "__ casas é grande",
+      "template": "__ casas são grandes",
       "chips": [
         "Suas",
         "Seu",
@@ -1991,11 +2081,11 @@
         "Nosso"
       ],
       "correct": "Suas",
-      "hint": "feminine singular"
+      "hint": "feminine plural"
     },
     {
-      "id": 93,
-      "unit": 33,
+      "id": 98,
+      "unit": 35,
       "unitName": "Possessive Adjectives - Nosso/Nossa",
       "phase": 2,
       "type": "production",
@@ -2016,14 +2106,14 @@
       "hint": "masculine singular"
     },
     {
-      "id": 94,
-      "unit": 33,
+      "id": 99,
+      "unit": 35,
       "unitName": "Possessive Adjectives - Nosso/Nossa",
       "phase": 2,
       "type": "production",
       "en": "Our friends work there",
       "question": "Complete the sentence:",
-      "template": "__ amigas trabalha lá",
+      "template": "__ amigas trabalham lá",
       "chips": [
         "Nossas",
         "Nosso",
@@ -2035,11 +2125,11 @@
         "Seu"
       ],
       "correct": "Nossas",
-      "hint": "feminine singular"
+      "hint": "feminine plural"
     },
     {
-      "id": 95,
-      "unit": 34,
+      "id": 100,
+      "unit": 36,
       "unitName": "Preterite Tense - Regular -AR Verbs",
       "phase": 2,
       "type": "comprehension",
@@ -2056,8 +2146,8 @@
       ]
     },
     {
-      "id": 96,
-      "unit": 34,
+      "id": 101,
+      "unit": 36,
       "unitName": "Preterite Tense - Regular -AR Verbs",
       "phase": 2,
       "type": "production",
@@ -2080,8 +2170,8 @@
       "hint": "preterite, eu form"
     },
     {
-      "id": 97,
-      "unit": 34,
+      "id": 102,
+      "unit": 36,
       "unitName": "Preterite Tense - Regular -AR Verbs",
       "phase": 2,
       "type": "production",
@@ -2104,8 +2194,8 @@
       "hint": "preterite, você form"
     },
     {
-      "id": 98,
-      "unit": 34,
+      "id": 103,
+      "unit": 36,
       "unitName": "Preterite Tense - Regular -AR Verbs",
       "phase": 2,
       "type": "production",
@@ -2128,8 +2218,8 @@
       "hint": "preterite, nós form"
     },
     {
-      "id": 99,
-      "unit": 35,
+      "id": 104,
+      "unit": 37,
       "unitName": "Preterite Tense - Regular -ER/-IR Verbs",
       "phase": 2,
       "type": "comprehension",
@@ -2146,8 +2236,8 @@
       ]
     },
     {
-      "id": 100,
-      "unit": 35,
+      "id": 105,
+      "unit": 37,
       "unitName": "Preterite Tense - Regular -ER/-IR Verbs",
       "phase": 2,
       "type": "production",
@@ -2170,8 +2260,8 @@
       "hint": "preterite -ER"
     },
     {
-      "id": 101,
-      "unit": 35,
+      "id": 106,
+      "unit": 37,
       "unitName": "Preterite Tense - Regular -ER/-IR Verbs",
       "phase": 2,
       "type": "production",
@@ -2194,8 +2284,8 @@
       "hint": "preterite -IR"
     },
     {
-      "id": 102,
-      "unit": 35,
+      "id": 107,
+      "unit": 37,
       "unitName": "Preterite Tense - Regular -ER/-IR Verbs",
       "phase": 2,
       "type": "production",
@@ -2218,8 +2308,8 @@
       "hint": "preterite -ER, nós"
     },
     {
-      "id": 103,
-      "unit": 36,
+      "id": 108,
+      "unit": 38,
       "unitName": "Irregular Preterite - Ser/Ir",
       "phase": 2,
       "type": "comprehension",
@@ -2236,8 +2326,8 @@
       ]
     },
     {
-      "id": 104,
-      "unit": 36,
+      "id": 109,
+      "unit": 38,
       "unitName": "Irregular Preterite - Ser/Ir",
       "phase": 2,
       "type": "comprehension",
@@ -2254,8 +2344,8 @@
       ]
     },
     {
-      "id": 105,
-      "unit": 36,
+      "id": 110,
+      "unit": 38,
       "unitName": "Irregular Preterite - Ser/Ir",
       "phase": 2,
       "type": "production",
@@ -2278,8 +2368,8 @@
       "hint": "ir, preterite"
     },
     {
-      "id": 106,
-      "unit": 36,
+      "id": 111,
+      "unit": 38,
       "unitName": "Irregular Preterite - Ser/Ir",
       "phase": 2,
       "type": "production",
@@ -2302,8 +2392,8 @@
       "hint": "ser, preterite"
     },
     {
-      "id": 107,
-      "unit": 36,
+      "id": 112,
+      "unit": 38,
       "unitName": "Irregular Preterite - Ser/Ir",
       "phase": 2,
       "type": "production",
@@ -2326,8 +2416,8 @@
       "hint": "ir/ser, preterite nós"
     },
     {
-      "id": 108,
-      "unit": 37,
+      "id": 113,
+      "unit": 39,
       "unitName": "Irregular Preterite - Ter/Estar",
       "phase": 2,
       "type": "comprehension",
@@ -2344,8 +2434,8 @@
       ]
     },
     {
-      "id": 109,
-      "unit": 37,
+      "id": 114,
+      "unit": 39,
       "unitName": "Irregular Preterite - Ter/Estar",
       "phase": 2,
       "type": "production",
@@ -2368,8 +2458,8 @@
       "hint": "estar, preterite"
     },
     {
-      "id": 110,
-      "unit": 37,
+      "id": 115,
+      "unit": 39,
       "unitName": "Irregular Preterite - Ter/Estar",
       "phase": 2,
       "type": "production",
@@ -2392,8 +2482,8 @@
       "hint": "ter, preterite"
     },
     {
-      "id": 111,
-      "unit": 37,
+      "id": 116,
+      "unit": 39,
       "unitName": "Irregular Preterite - Ter/Estar",
       "phase": 2,
       "type": "production",
@@ -2416,8 +2506,8 @@
       "hint": "ter, preterite nós"
     },
     {
-      "id": 112,
-      "unit": 38,
+      "id": 117,
+      "unit": 40,
       "unitName": "Irregular Preterite - Fazer/Dizer/Trazer",
       "phase": 2,
       "type": "comprehension",
@@ -2434,8 +2524,8 @@
       ]
     },
     {
-      "id": 113,
-      "unit": 38,
+      "id": 118,
+      "unit": 40,
       "unitName": "Irregular Preterite - Fazer/Dizer/Trazer",
       "phase": 2,
       "type": "production",
@@ -2458,8 +2548,8 @@
       "hint": "dizer, preterite"
     },
     {
-      "id": 114,
-      "unit": 38,
+      "id": 119,
+      "unit": 40,
       "unitName": "Irregular Preterite - Fazer/Dizer/Trazer",
       "phase": 2,
       "type": "production",
@@ -2482,8 +2572,8 @@
       "hint": "trazer, preterite"
     },
     {
-      "id": 115,
-      "unit": 38,
+      "id": 120,
+      "unit": 40,
       "unitName": "Irregular Preterite - Fazer/Dizer/Trazer",
       "phase": 2,
       "type": "production",
@@ -2506,8 +2596,8 @@
       "hint": "fazer, preterite nós"
     },
     {
-      "id": 116,
-      "unit": 39,
+      "id": 121,
+      "unit": 41,
       "unitName": "Irregular Preterite - Ver/Vir/Dar",
       "phase": 2,
       "type": "comprehension",
@@ -2524,8 +2614,8 @@
       ]
     },
     {
-      "id": 117,
-      "unit": 39,
+      "id": 122,
+      "unit": 41,
       "unitName": "Irregular Preterite - Ver/Vir/Dar",
       "phase": 2,
       "type": "production",
@@ -2548,8 +2638,8 @@
       "hint": "vir, preterite"
     },
     {
-      "id": 118,
-      "unit": 39,
+      "id": 123,
+      "unit": 41,
       "unitName": "Irregular Preterite - Ver/Vir/Dar",
       "phase": 2,
       "type": "production",
@@ -2572,8 +2662,8 @@
       "hint": "ver, preterite"
     },
     {
-      "id": 119,
-      "unit": 39,
+      "id": 124,
+      "unit": 41,
       "unitName": "Irregular Preterite - Ver/Vir/Dar",
       "phase": 2,
       "type": "production",
@@ -2596,8 +2686,8 @@
       "hint": "dar, preterite"
     },
     {
-      "id": 120,
-      "unit": 40,
+      "id": 125,
+      "unit": 42,
       "unitName": "Irregular Preterite - Poder/Pôr/Saber/Querer",
       "phase": 2,
       "type": "comprehension",
@@ -2614,8 +2704,8 @@
       ]
     },
     {
-      "id": 121,
-      "unit": 40,
+      "id": 126,
+      "unit": 42,
       "unitName": "Irregular Preterite - Poder/Pôr/Saber/Querer",
       "phase": 2,
       "type": "production",
@@ -2638,8 +2728,8 @@
       "hint": "querer, preterite"
     },
     {
-      "id": 122,
-      "unit": 40,
+      "id": 127,
+      "unit": 42,
       "unitName": "Irregular Preterite - Poder/Pôr/Saber/Querer",
       "phase": 2,
       "type": "production",
@@ -2662,8 +2752,8 @@
       "hint": "saber, preterite"
     },
     {
-      "id": 123,
-      "unit": 40,
+      "id": 128,
+      "unit": 42,
       "unitName": "Irregular Preterite - Poder/Pôr/Saber/Querer",
       "phase": 2,
       "type": "production",
@@ -2686,8 +2776,8 @@
       "hint": "poder, preterite"
     },
     {
-      "id": 124,
-      "unit": 40,
+      "id": 129,
+      "unit": 42,
       "unitName": "Irregular Preterite - Poder/Pôr/Saber/Querer",
       "phase": 2,
       "type": "production",
@@ -2710,8 +2800,8 @@
       "hint": "pôr, preterite"
     },
     {
-      "id": 125,
-      "unit": 41,
+      "id": 130,
+      "unit": 43,
       "unitName": "Contractions with Preposition A",
       "phase": 2,
       "type": "production",
@@ -2734,8 +2824,8 @@
       "hint": "a + o"
     },
     {
-      "id": 126,
-      "unit": 41,
+      "id": 131,
+      "unit": 43,
       "unitName": "Contractions with Preposition A",
       "phase": 2,
       "type": "production",
@@ -2757,8 +2847,8 @@
       "hint": "a + a"
     },
     {
-      "id": 127,
-      "unit": 41,
+      "id": 132,
+      "unit": 43,
       "unitName": "Contractions with Preposition A",
       "phase": 2,
       "type": "production",
@@ -2781,8 +2871,8 @@
       "hint": "a + os"
     },
     {
-      "id": 128,
-      "unit": 41,
+      "id": 133,
+      "unit": 43,
       "unitName": "Contractions with Preposition A",
       "phase": 2,
       "type": "production",
@@ -2805,8 +2895,8 @@
       "hint": "a + as"
     },
     {
-      "id": 129,
-      "unit": 42,
+      "id": 134,
+      "unit": 44,
       "unitName": "Prepositions Por and Para",
       "phase": 2,
       "type": "comprehension",
@@ -2823,8 +2913,8 @@
       ]
     },
     {
-      "id": 130,
-      "unit": 42,
+      "id": 135,
+      "unit": 44,
       "unitName": "Prepositions Por and Para",
       "phase": 2,
       "type": "comprehension",
@@ -2841,8 +2931,8 @@
       ]
     },
     {
-      "id": 131,
-      "unit": 42,
+      "id": 136,
+      "unit": 44,
       "unitName": "Prepositions Por and Para",
       "phase": 2,
       "type": "comprehension",
@@ -2859,8 +2949,8 @@
       ]
     },
     {
-      "id": 132,
-      "unit": 42,
+      "id": 137,
+      "unit": 44,
       "unitName": "Prepositions Por and Para",
       "phase": 2,
       "type": "production",
@@ -2883,8 +2973,8 @@
       "hint": "destination"
     },
     {
-      "id": 133,
-      "unit": 42,
+      "id": 138,
+      "unit": 44,
       "unitName": "Prepositions Por and Para",
       "phase": 2,
       "type": "production",
@@ -2905,96 +2995,6 @@
       ],
       "correct": "pela",
       "hint": "through = por + a"
-    },
-    {
-      "id": 134,
-      "unit": 43,
-      "unitName": "Numbers 0-100",
-      "phase": 3,
-      "type": "comprehension",
-      "pt": "Eu tenho vinte anos",
-      "question": "What does this mean?",
-      "correct": "I am 20 years old",
-      "options": [
-        "I am 20 years old",
-        "I have 20 years",
-        "I am 12 years old",
-        "I am 22 years old",
-        "I will be 20 years old",
-        "I was 20 years old"
-      ]
-    },
-    {
-      "id": 135,
-      "unit": 43,
-      "unitName": "Numbers 0-100",
-      "phase": 3,
-      "type": "comprehension",
-      "pt": "Custa cinquenta reais",
-      "question": "What does this mean?",
-      "correct": "It costs 50 reais",
-      "options": [
-        "It costs 50 reais",
-        "It costs 15 reais",
-        "It costs 60 reais",
-        "It costs 500 reais",
-        "It cost 50 reais",
-        "It will cost 50 reais"
-      ]
-    },
-    {
-      "id": 136,
-      "unit": 43,
-      "unitName": "Numbers 0-100",
-      "phase": 3,
-      "type": "comprehension",
-      "pt": "São oitenta pessoas",
-      "question": "What does this mean?",
-      "correct": "There are 80 people",
-      "options": [
-        "There are 80 people",
-        "There are 18 people",
-        "There are 8 people",
-        "There are 800 people",
-        "There were 80 people",
-        "There will be 80 people"
-      ]
-    },
-    {
-      "id": 137,
-      "unit": 44,
-      "unitName": "Numbers 100-1000 and Beyond",
-      "phase": 3,
-      "type": "comprehension",
-      "pt": "Custa duzentos reais",
-      "question": "What does this mean?",
-      "correct": "It costs 200 reais",
-      "options": [
-        "It costs 200 reais",
-        "It costs 20 reais",
-        "It costs 2000 reais",
-        "It costs 2 reais",
-        "It cost 200 reais",
-        "It will cost 200 reais"
-      ]
-    },
-    {
-      "id": 138,
-      "unit": 44,
-      "unitName": "Numbers 100-1000 and Beyond",
-      "phase": 3,
-      "type": "comprehension",
-      "pt": "Mil pessoas vieram",
-      "question": "What does this mean?",
-      "correct": "1000 people came",
-      "options": [
-        "1000 people came",
-        "100 people came",
-        "10000 people came",
-        "1 million people came",
-        "1000 people come",
-        "1000 people will come"
-      ]
     },
     {
       "id": 139,
@@ -4857,97 +4857,7 @@
       ]
     },
     {
-      "id": 238,
       "unit": 71,
-      "unitName": "Commands/Imperative Mood",
-      "phase": 3,
-      "type": "comprehension",
-      "pt": "Fale português!",
-      "question": "What does this mean?",
-      "correct": "Speak Portuguese!",
-      "options": [
-        "Speak Portuguese!",
-        "You speak Portuguese!",
-        "Speaks Portuguese!",
-        "Speaking Portuguese!",
-        "Spoke Portuguese!",
-        "Will speak Portuguese!"
-      ]
-    },
-    {
-      "id": 239,
-      "unit": 71,
-      "unitName": "Commands/Imperative Mood",
-      "phase": 3,
-      "type": "production",
-      "en": "Come here! (você)",
-      "question": "Complete the sentence:",
-      "template": "__ aqui!",
-      "chips": [
-        "Venha",
-        "Vem",
-        "Vir",
-        "Vindo",
-        "Vim",
-        "Vinha",
-        "Virei",
-        "Viria",
-        "Vá",
-        "Vai"
-      ],
-      "correct": "Venha",
-      "hint": "imperative você form"
-    },
-    {
-      "id": 240,
-      "unit": 71,
-      "unitName": "Commands/Imperative Mood",
-      "phase": 3,
-      "type": "production",
-      "en": "Speak Portuguese! (você)",
-      "question": "Complete the sentence:",
-      "template": "__ português!",
-      "chips": [
-        "Fale",
-        "Fala",
-        "Falar",
-        "Falando",
-        "Falei",
-        "Falava",
-        "Falarei",
-        "Falaria",
-        "Diga",
-        "Diz"
-      ],
-      "correct": "Fale",
-      "hint": "imperative você form"
-    },
-    {
-      "id": 241,
-      "unit": 71,
-      "unitName": "Commands/Imperative Mood",
-      "phase": 3,
-      "type": "production",
-      "en": "Open the door! (vocês)",
-      "question": "Complete the sentence:",
-      "template": "__ a porta!",
-      "chips": [
-        "Abram",
-        "Abra",
-        "Abrir",
-        "Abrindo",
-        "Abri",
-        "Abria",
-        "Abrirei",
-        "Abriria",
-        "Abrem",
-        "Abre"
-      ],
-      "correct": "Abram",
-      "hint": "imperative vocês form"
-    },
-    {
-      "unit": 72,
       "unitName": "Demonstratives",
       "phase": 3,
       "type": "comprehension",
@@ -4962,10 +4872,10 @@
         "The book is interesting",
         "This book was interesting"
       ],
-      "id": 242
+      "id": 238
     },
     {
-      "unit": 72,
+      "unit": 71,
       "unitName": "Demonstratives",
       "phase": 3,
       "type": "production",
@@ -4985,10 +4895,10 @@
         "estão",
         "casa"
       ],
-      "id": 243
+      "id": 239
     },
     {
-      "unit": 72,
+      "unit": 71,
       "unitName": "Demonstratives",
       "phase": 3,
       "type": "comprehension",
@@ -5003,10 +4913,10 @@
         "The car is new",
         "That car was new"
       ],
-      "id": 244
+      "id": 240
     },
     {
-      "unit": 72,
+      "unit": 71,
       "unitName": "Demonstratives",
       "phase": 3,
       "type": "production",
@@ -5026,10 +4936,10 @@
         "estão",
         "menina"
       ],
-      "id": 245
+      "id": 241
     },
     {
-      "unit": 72,
+      "unit": 71,
       "unitName": "Demonstratives",
       "phase": 3,
       "type": "comprehension",
@@ -5044,10 +4954,10 @@
         "The man is a teacher",
         "That man was a teacher"
       ],
-      "id": 246
+      "id": 242
     },
     {
-      "unit": 72,
+      "unit": 71,
       "unitName": "Demonstratives",
       "phase": 3,
       "type": "production",
@@ -5067,11 +4977,11 @@
         "estão",
         "flor"
       ],
-      "id": 247
+      "id": 243
     },
     {
-      "id": 248,
-      "unit": 73,
+      "id": 244,
+      "unit": 72,
       "unitName": "Furniture and Household Items",
       "phase": 3,
       "type": "comprehension",
@@ -5088,8 +4998,8 @@
       ]
     },
     {
-      "id": 249,
-      "unit": 73,
+      "id": 245,
+      "unit": 72,
       "unitName": "Furniture and Household Items",
       "phase": 3,
       "type": "comprehension",
@@ -5106,8 +5016,8 @@
       ]
     },
     {
-      "id": 250,
-      "unit": 73,
+      "id": 246,
+      "unit": 72,
       "unitName": "Furniture and Household Items",
       "phase": 3,
       "type": "comprehension",
@@ -5124,8 +5034,8 @@
       ]
     },
     {
-      "id": 251,
-      "unit": 74,
+      "id": 247,
+      "unit": 73,
       "unitName": "Nature and Animals",
       "phase": 3,
       "type": "comprehension",
@@ -5142,8 +5052,8 @@
       ]
     },
     {
-      "id": 252,
-      "unit": 74,
+      "id": 248,
+      "unit": 73,
       "unitName": "Nature and Animals",
       "phase": 3,
       "type": "comprehension",
@@ -5160,8 +5070,8 @@
       ]
     },
     {
-      "id": 253,
-      "unit": 74,
+      "id": 249,
+      "unit": 73,
       "unitName": "Nature and Animals",
       "phase": 3,
       "type": "comprehension",
@@ -5178,8 +5088,8 @@
       ]
     },
     {
-      "id": 254,
-      "unit": 75,
+      "id": 250,
+      "unit": 74,
       "unitName": "School and Education",
       "phase": 3,
       "type": "comprehension",
@@ -5196,8 +5106,8 @@
       ]
     },
     {
-      "id": 255,
-      "unit": 75,
+      "id": 251,
+      "unit": 74,
       "unitName": "School and Education",
       "phase": 3,
       "type": "comprehension",
@@ -5214,8 +5124,8 @@
       ]
     },
     {
-      "id": 256,
-      "unit": 75,
+      "id": 252,
+      "unit": 74,
       "unitName": "School and Education",
       "phase": 3,
       "type": "comprehension",
@@ -5232,8 +5142,8 @@
       ]
     },
     {
-      "id": 257,
-      "unit": 76,
+      "id": 253,
+      "unit": 75,
       "unitName": "Future Tense",
       "phase": 4,
       "type": "comprehension",
@@ -5250,8 +5160,8 @@
       ]
     },
     {
-      "id": 258,
-      "unit": 76,
+      "id": 254,
+      "unit": 75,
       "unitName": "Future Tense",
       "phase": 4,
       "type": "production",
@@ -5274,8 +5184,8 @@
       "hint": "future tense"
     },
     {
-      "id": 259,
-      "unit": 76,
+      "id": 255,
+      "unit": 75,
       "unitName": "Future Tense",
       "phase": 4,
       "type": "production",
@@ -5298,8 +5208,8 @@
       "hint": "future tense, nós"
     },
     {
-      "id": 260,
-      "unit": 76,
+      "id": 256,
+      "unit": 75,
       "unitName": "Future Tense",
       "phase": 4,
       "type": "production",
@@ -5322,8 +5232,8 @@
       "hint": "future tense"
     },
     {
-      "id": 261,
-      "unit": 77,
+      "id": 257,
+      "unit": 76,
       "unitName": "Conditional Tense",
       "phase": 4,
       "type": "comprehension",
@@ -5340,8 +5250,8 @@
       ]
     },
     {
-      "id": 262,
-      "unit": 77,
+      "id": 258,
+      "unit": 76,
       "unitName": "Conditional Tense",
       "phase": 4,
       "type": "production",
@@ -5364,8 +5274,8 @@
       "hint": "conditional"
     },
     {
-      "id": 263,
-      "unit": 77,
+      "id": 259,
+      "unit": 76,
       "unitName": "Conditional Tense",
       "phase": 4,
       "type": "production",
@@ -5388,8 +5298,8 @@
       "hint": "conditional"
     },
     {
-      "id": 264,
-      "unit": 77,
+      "id": 260,
+      "unit": 76,
       "unitName": "Conditional Tense",
       "phase": 4,
       "type": "production",
@@ -5412,8 +5322,8 @@
       "hint": "conditional, nós"
     },
     {
-      "id": 265,
-      "unit": 78,
+      "id": 261,
+      "unit": 77,
       "unitName": "É que - Emphatic Questions",
       "phase": 4,
       "type": "comprehension",
@@ -5430,8 +5340,8 @@
       ]
     },
     {
-      "id": 266,
-      "unit": 78,
+      "id": 262,
+      "unit": 77,
       "unitName": "É que - Emphatic Questions",
       "phase": 4,
       "type": "comprehension",
@@ -5448,8 +5358,8 @@
       ]
     },
     {
-      "id": 267,
-      "unit": 79,
+      "id": 263,
+      "unit": 78,
       "unitName": "Crase",
       "phase": 4,
       "type": "production",
@@ -5472,8 +5382,8 @@
       "hint": "a + a"
     },
     {
-      "id": 268,
-      "unit": 79,
+      "id": 264,
+      "unit": 78,
       "unitName": "Crase",
       "phase": 4,
       "type": "production",
@@ -5496,8 +5406,8 @@
       "hint": "a + as (time)"
     },
     {
-      "id": 269,
-      "unit": 79,
+      "id": 265,
+      "unit": 78,
       "unitName": "Crase",
       "phase": 4,
       "type": "production",
@@ -5520,8 +5430,8 @@
       "hint": "a + a"
     },
     {
-      "id": 270,
-      "unit": 80,
+      "id": 266,
+      "unit": 79,
       "unitName": "Todo vs Tudo",
       "phase": 4,
       "type": "comprehension",
@@ -5538,8 +5448,8 @@
       ]
     },
     {
-      "id": 271,
-      "unit": 80,
+      "id": 267,
+      "unit": 79,
       "unitName": "Todo vs Tudo",
       "phase": 4,
       "type": "comprehension",
@@ -5556,8 +5466,8 @@
       ]
     },
     {
-      "id": 272,
-      "unit": 80,
+      "id": 268,
+      "unit": 79,
       "unitName": "Todo vs Tudo",
       "phase": 4,
       "type": "production",
@@ -5578,6 +5488,96 @@
       ],
       "correct": "Todo",
       "hint": "every/all"
+    },
+    {
+      "id": 269,
+      "unit": 80,
+      "unitName": "Commands/Imperative Mood",
+      "phase": 4,
+      "type": "comprehension",
+      "pt": "Fale português!",
+      "question": "What does this mean?",
+      "correct": "Speak Portuguese!",
+      "options": [
+        "Speak Portuguese!",
+        "You speak Portuguese!",
+        "Speaks Portuguese!",
+        "Speaking Portuguese!",
+        "Spoke Portuguese!",
+        "Will speak Portuguese!"
+      ]
+    },
+    {
+      "id": 270,
+      "unit": 80,
+      "unitName": "Commands/Imperative Mood",
+      "phase": 4,
+      "type": "production",
+      "en": "Come here! (você)",
+      "question": "Complete the sentence:",
+      "template": "__ aqui!",
+      "chips": [
+        "Venha",
+        "Vem",
+        "Vir",
+        "Vindo",
+        "Vim",
+        "Vinha",
+        "Virei",
+        "Viria",
+        "Vá",
+        "Vai"
+      ],
+      "correct": "Venha",
+      "hint": "imperative você form"
+    },
+    {
+      "id": 271,
+      "unit": 80,
+      "unitName": "Commands/Imperative Mood",
+      "phase": 4,
+      "type": "production",
+      "en": "Speak Portuguese! (você)",
+      "question": "Complete the sentence:",
+      "template": "__ português!",
+      "chips": [
+        "Fale",
+        "Fala",
+        "Falar",
+        "Falando",
+        "Falei",
+        "Falava",
+        "Falarei",
+        "Falaria",
+        "Diga",
+        "Diz"
+      ],
+      "correct": "Fale",
+      "hint": "imperative você form"
+    },
+    {
+      "id": 272,
+      "unit": 80,
+      "unitName": "Commands/Imperative Mood",
+      "phase": 4,
+      "type": "production",
+      "en": "Open the door! (vocês)",
+      "question": "Complete the sentence:",
+      "template": "__ a porta!",
+      "chips": [
+        "Abram",
+        "Abra",
+        "Abrir",
+        "Abrindo",
+        "Abri",
+        "Abria",
+        "Abrirei",
+        "Abriria",
+        "Abrem",
+        "Abre"
+      ],
+      "correct": "Abram",
+      "hint": "imperative vocês form"
     },
     {
       "id": 273,

@@ -99,6 +99,9 @@ async function startPlacementTest() {
       messagesContainer.innerHTML = '';
     }
 
+    // Randomize question order within the test
+    questionBank.questions = shuffleArray(questionBank.questions);
+
     // Display first question immediately (no welcome message)
     displayQuestion(0);
 

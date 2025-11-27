@@ -67,30 +67,32 @@ function buildPrompt(drillId: string, prompt: string | undefined, answer: string
   };
 }
 
-async function callOpenAI(apiKey: string, messages: {role:'system'|'user'|'assistant'; content: string}[]) {
-  const resp = await fetch('https://api.openai.com/v1/chat/completions', {
+async function callAnthropic(apiKey: string, systemMessage: string, userMessage: string) {
+  const resp = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
-      'Authorization': `Bearer ${apiKey}`,
+      'x-api-key': apiKey,
+      'anthropic-version': '2023-06-01',
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      model: 'gpt-4o-mini',
+      model: 'claude-opus-4-5-20251101',
       temperature: 0.2,
       max_tokens: 250,
-      messages
+      system: systemMessage,
+      messages: [{ role: 'user', content: userMessage }]
     })
   });
   if (!resp.ok) {
     const text = await resp.text();
-    throw new Error(`OpenAI error ${resp.status}: ${text}`);
+    throw new Error(`Anthropic error ${resp.status}: ${text}`);
   }
   const data = await resp.json();
-  const content = data.choices?.[0]?.message?.content ?? '';
+  const content = data.content?.[0]?.text ?? '';
   return String(content);
 }
 
-export const onRequestPost: PagesFunction<{ OPENAI_API_KEY: string }> = async ({ request, env }) => {
+export const onRequestPost: PagesFunction<{ ANTHROPIC_API_KEY: string }> = async ({ request, env }) => {
   const headers = corsHeaders(request);
   try {
     const body = (await request.json().catch(() => ({}))) as GradeRequest;
@@ -104,10 +106,7 @@ export const onRequestPost: PagesFunction<{ OPENAI_API_KEY: string }> = async ({
     }
 
     const { system, user } = buildPrompt(drillId, prompt, answer, dialect);
-    const content = await callOpenAI(env.OPENAI_API_KEY, [
-      { role: 'system', content: system },
-      { role: 'user', content: user }
-    ]);
+    const content = await callAnthropic(env.ANTHROPIC_API_KEY, system, user);
 
     // Try to parse JSON from the model response; fallback to regex for score
     let parsed: GradeResponse | null = null;
