@@ -533,4 +533,12 @@ def main():
         print()
 
 if __name__ == "__main__":
-    main()
+    import sys
+    if len(sys.argv) > 1:
+        # CLI mode: annotate the provided text and print result only
+        # Force UTF-8 output for Windows compatibility
+        sys.stdout.reconfigure(encoding='utf-8')
+        text = " ".join(sys.argv[1:])
+        print(annotate_pronunciation(text), end="")
+        sys.exit(0)
+    main()  # Interactive demo mode

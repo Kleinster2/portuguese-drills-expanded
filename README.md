@@ -323,10 +323,11 @@ Set in Cloudflare Pages → Settings → Environment Variables:
 │   ├── unit-1.html                # Unit 1: Identity Statements (Eu sou)
 │   └── unit-2.html                # Unit 2: Location (Morar)
 ├── config/
-│   ├── prompts/                   # Drill prompt configurations (JSON)
+│   ├── prompts/                   # Source JSON files for prompts (edit here!)
 │   └── placement-test-questions-grammar-v1.0.json
 ├── utils/
-│   ├── promptManager.js           # Prompt loading and management
+│   ├── promptManager.js           # Loads prompts from generated data
+│   ├── promptData.generated.js    # Auto-generated (run npm run build)
 │   ├── annotate_pronunciation.py  # Python v2.0 annotation engine
 │   └── README_ANNOTATOR.md        # Annotation tool documentation
 ├── js/
@@ -341,6 +342,8 @@ Set in Cloudflare Pages → Settings → Environment Variables:
     └── api/
         └── chat.ts                # Cloudflare Pages Function for chat API
 ```
+
+**Editing Prompts:** Edit the JSON files in `config/prompts/`, then run `npm run build` to regenerate `utils/promptData.generated.js`. The generated file is committed to git so Cloudflare Pages can deploy without a build step.
 
 ### API Endpoint
 **POST** `/api/chat`

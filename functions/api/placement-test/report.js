@@ -7,15 +7,21 @@
 
 const ALLOWED_ORIGINS = [
   'https://kleinster2.github.io',
+  'https://portuguese-drills-expanded.pages.dev',
   'http://localhost:8788',
   'http://127.0.0.1:8788'
 ];
 
 function corsHeaders(req) {
   const origin = req.headers.get('Origin') || '';
-  const allowed = ALLOWED_ORIGINS.find(o => origin.startsWith(o)) ? origin : '*';
+  const isAllowed = ALLOWED_ORIGINS.some(o => origin.startsWith(o));
+
+  if (!isAllowed) {
+    return {}; // No CORS headers = browser blocks the request
+  }
+
   return {
-    'Access-Control-Allow-Origin': allowed,
+    'Access-Control-Allow-Origin': origin,
     'Access-Control-Allow-Methods': 'POST,OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Max-Age': '86400'

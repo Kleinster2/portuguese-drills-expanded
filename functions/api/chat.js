@@ -3,15 +3,21 @@
 
 const ALLOWED_ORIGINS = [
   'https://kleinster2.github.io',
+  'https://portuguese-drills-expanded.pages.dev',
   'http://localhost:8788',
   'http://127.0.0.1:8788'
 ];
 
 function corsHeaders(req) {
   const origin = req.headers.get('Origin') || '';
-  const allowed = ALLOWED_ORIGINS.find(o => origin.startsWith(o)) ? origin : '*';
+  const isAllowed = ALLOWED_ORIGINS.some(o => origin.startsWith(o));
+
+  if (!isAllowed) {
+    return {}; // No CORS headers = browser blocks the request
+  }
+
   return {
-    'Access-Control-Allow-Origin': allowed,
+    'Access-Control-Allow-Origin': origin,
     'Access-Control-Allow-Methods': 'POST,OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type, Authorization',
     'Access-Control-Max-Age': '86400'
@@ -451,8 +457,18 @@ The goal is to build confidence with early successes while gradually challenging
 
 Remember: Variety and randomization are KEY to maintaining user interest and preventing boredom. Every session should feel fresh and different.`;
 
-  // Don't add randomization suffix to placement test - it needs to end at 50 questions
-  if (drillId === 'placement-test') {
+  // Don't add randomization suffix to placement test or simplifiers
+  // - Placement test needs to end at 50 questions
+  // - Simplifiers are one-shot text transformations, not drill exercises
+  const excludeFromRandomization = [
+    'placement-test',
+    'a1-simplifier',
+    'a2-simplifier',
+    'b1-simplifier',
+    'b2-simplifier'
+  ];
+
+  if (excludeFromRandomization.includes(drillId)) {
     return basePrompt;
   }
 
@@ -481,24 +497,23 @@ async function callClaude(apiKey, messages, retryCount = 0, forbiddenWordRetryCo
   const MAX_FORBIDDEN_WORD_RETRIES = 3; // Max attempts to avoid forbidden words
   const BASE_DELAY = 1000; // 1 second
 
-  // Use full context for Claude reliability
-  const limitedMessages = messages.slice(-10); // Keep last 10 messages for context
-
-  // Convert messages to Claude format - separate system message from conversation
+  // Extract system message FIRST (before slicing) to preserve drill guardrails
   let systemMessage = '';
-  const conversationMessages = [];
+  const nonSystemMessages = [];
 
-  for (const msg of limitedMessages) {
+  for (const msg of messages) {
     if (msg.role === 'system') {
-      systemMessage = msg.content;
+      systemMessage = msg.content; // System message is always preserved
     } else {
-      // Remove timestamp and other extra fields for Claude API
-      conversationMessages.push({
+      nonSystemMessages.push({
         role: msg.role,
         content: msg.content
       });
     }
   }
+
+  // Now limit only the conversation messages (keep last 10 exchanges)
+  const conversationMessages = nonSystemMessages.slice(-10);
 
   const requestBody = {
     model: 'claude-opus-4-5-20251101',

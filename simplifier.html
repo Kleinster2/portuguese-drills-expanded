@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portuguese Text Simplifier - A1/A2 Level</title>
-    <meta name="description" content="Simplify Portuguese text to A1 or A2 CEFR level. Translate and adapt any text to beginner-friendly Portuguese.">
+    <title>Portuguese Text Simplifier</title>
+    <meta name="description" content="Simplify Portuguese text for learners. Translate and adapt any text to easy-to-read Portuguese.">
     <meta name="theme-color" content="#0ea5e9">
     <!-- Favicons -->
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -17,6 +17,109 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
+    <!-- Plausible Analytics -->
+    <script async src="https://plausible.io/js/pa-A2kEULXGZtzUYXPsVOQwU.js"></script>
+    <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
+    <style>
+        /* All translatable words/phrases - hoverable, no underline */
+        .word-tooltip,
+        .phrase-tooltip {
+            position: relative;
+            cursor: help;
+        }
+        .word-tooltip:hover,
+        .phrase-tooltip:hover {
+            background-color: #dbeafe;
+            border-radius: 2px;
+        }
+
+        /* Tooltip styles for both */
+        .word-tooltip::after,
+        .phrase-tooltip::after {
+            content: attr(data-translation);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #1e293b;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-style: italic;
+            white-space: nowrap;
+            text-align: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+            z-index: 10;
+            pointer-events: none;
+        }
+        .word-tooltip::before,
+        .phrase-tooltip::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top-color: #1e293b;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+            z-index: 10;
+        }
+        .word-tooltip:hover::after,
+        .word-tooltip:hover::before,
+        .phrase-tooltip:hover::after,
+        .phrase-tooltip:hover::before {
+            opacity: 1;
+            visibility: visible;
+        }
+        /* Mobile: show on tap */
+        .word-tooltip.active::after,
+        .word-tooltip.active::before,
+        .phrase-tooltip.active::after,
+        .phrase-tooltip.active::before {
+            opacity: 1;
+            visibility: visible;
+        }
+        /* Output area styling */
+        #simplifier-output {
+            overflow: visible;
+            padding-top: 1.5rem; /* Room for tooltips on first line */
+        }
+
+        /* Left-aligned tooltip (for words near left edge) */
+        .word-tooltip.tooltip-left::after,
+        .phrase-tooltip.tooltip-left::after {
+            left: 0;
+            transform: translateX(0);
+        }
+        .word-tooltip.tooltip-left::before,
+        .phrase-tooltip.tooltip-left::before {
+            left: 10px;
+            transform: translateX(0);
+        }
+
+        /* Right-aligned tooltip (for words near right edge) */
+        .word-tooltip.tooltip-right::after,
+        .phrase-tooltip.tooltip-right::after {
+            left: auto;
+            right: 0;
+            transform: translateX(0);
+        }
+        .word-tooltip.tooltip-right::before,
+        .phrase-tooltip.tooltip-right::before {
+            left: auto;
+            right: 10px;
+            transform: translateX(0);
+        }
+        #simplifier-output .prose {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
 
@@ -143,17 +246,27 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:items-start">
                 <!-- Input Section -->
-                <div>
-                    <label for="simplifier-input" class="block text-sm font-semibold text-slate-700 mb-2">
-                        Original Text (any language)
-                    </label>
+                <div class="flex flex-col">
+                    <div class="mb-2 flex flex-col justify-end">
+                        <div class="flex items-center justify-between">
+                            <label for="simplifier-input" class="block text-sm font-semibold text-slate-700">
+                                Original Text (any language)
+                            </label>
+                        </div>
+                        <p class="text-base text-slate-500 mt-1">
+                            Press Enter to simplify
+                        </p>
+                    </div>
                     <textarea
                         id="simplifier-input"
-                        rows="18"
-                        class="w-full px-4 py-3 text-slate-900 bg-white border border-slate-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                        placeholder="Paste or type text in any language here..."
+                        rows="4"
+                        class="w-full px-4 py-3 text-slate-900 bg-white border border-slate-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none min-h-[120px] max-h-[400px] sm:max-h-[500px]"
+                        style="overflow-y: hidden;"
+                        placeholder="Paste or type text in any language here... (Press Enter to simplify)"
+                        onkeydown="if(event.key === 'Enter' && !event.shiftKey) { event.preventDefault(); simplifyText(); }"
+                        oninput="autoResizeTextarea(this)"
                     ></textarea>
                     <div class="mt-3 flex items-center justify-between">
                         <span class="text-xs text-slate-500">Supports text in any language</span>
@@ -168,13 +281,18 @@
                 </div>
 
                 <!-- Output Section -->
-                <div>
-                    <label id="simplifier-output-label" for="simplifier-output" class="block text-sm font-semibold text-slate-700 mb-2">
-                        Simplified A1-Level Portuguese
-                    </label>
+                <div class="flex flex-col">
+                    <div class="mb-2 flex flex-col justify-end">
+                        <label id="simplifier-output-label" for="simplifier-output" class="block text-sm font-semibold text-slate-700">
+                            Simplified A1-Level Portuguese
+                        </label>
+                        <p id="usage-hint" class="text-base text-slate-500 mt-1 opacity-0 transition-opacity">
+                            <span id="usage-hint-text">Hover/tap words for translation · Click/tap again to hear the sentence</span>
+                        </p>
+                    </div>
                     <div
                         id="simplifier-output"
-                        class="w-full h-96 px-4 py-3 text-slate-900 bg-white border border-slate-300 rounded-lg shadow-sm overflow-y-auto"
+                        class="w-full min-h-[150px] max-h-[400px] sm:min-h-[180px] sm:max-h-[500px] px-4 py-3 text-slate-900 bg-white border border-slate-300 rounded-lg shadow-sm overflow-y-auto"
                     >
                         <div class="flex items-center justify-center h-full text-slate-400">
                             <div class="text-center">
@@ -185,17 +303,28 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-3 flex justify-end gap-2">
+                    <div class="mt-3 flex items-center justify-end gap-2">
+                        <button
+                            onclick="speakSimplifiedText()"
+                            id="speak-btn"
+                            class="hidden bg-green-100 hover:bg-green-200 text-green-700 font-medium px-3 py-1 rounded-lg transition-colors text-sm flex items-center gap-1"
+                        >
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+                            </svg>
+                            Listen All
+                        </button>
                         <button
                             onclick="copySimplifiedText()"
                             id="copy-btn"
-                            class="hidden bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium px-4 py-2 rounded-lg transition-colors text-sm"
+                            class="hidden bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium px-3 py-1 rounded-lg transition-colors text-sm"
                         >
-                            Copy Text
+                            Copy
                         </button>
                         <button
                             onclick="clearSimplifier()"
-                            class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium px-4 py-2 rounded-lg transition-colors text-sm"
+                            id="clear-btn"
+                            class="hidden bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium px-3 py-1 rounded-lg transition-colors text-sm"
                         >
                             Clear
                         </button>
@@ -212,6 +341,183 @@ function escapeHtml(text) {
   const div = document.createElement('div');
   div.textContent = text;
   return div.innerHTML;
+}
+
+// Dictionary for translations
+let dictionary = { phrases: {}, words: {} };
+let dictionaryLoaded = false;
+
+// Load dictionary from JSON file
+async function loadDictionary() {
+  if (dictionaryLoaded) return;
+  try {
+    const response = await fetch('/config/dictionary.json');
+    if (response.ok) {
+      dictionary = await response.json();
+      dictionaryLoaded = true;
+      console.log('Dictionary loaded:', Object.keys(dictionary.words).length, 'words,', Object.keys(dictionary.phrases).length, 'phrases');
+    }
+  } catch (error) {
+    console.warn('Failed to load dictionary:', error);
+  }
+}
+
+// Get cached translations from localStorage
+function getCachedTranslation(word) {
+  try {
+    const cache = JSON.parse(localStorage.getItem('translationCache') || '{}');
+    return cache[word.toLowerCase()];
+  } catch {
+    return null;
+  }
+}
+
+// Cache a translation in localStorage
+function cacheTranslation(word, translation) {
+  try {
+    const cache = JSON.parse(localStorage.getItem('translationCache') || '{}');
+    cache[word.toLowerCase()] = translation;
+    localStorage.setItem('translationCache', JSON.stringify(cache));
+  } catch (error) {
+    console.warn('Failed to cache translation:', error);
+  }
+}
+
+// Lookup word in dictionary (local first, then cache)
+function lookupWord(word) {
+  const lower = word.toLowerCase();
+
+  // Check local dictionary first
+  if (dictionary.words[lower]) {
+    return dictionary.words[lower];
+  }
+
+  // Check localStorage cache
+  const cached = getCachedTranslation(lower);
+  if (cached) {
+    return cached;
+  }
+
+  return null;
+}
+
+// Lookup phrase in dictionary
+function lookupPhrase(phrase) {
+  const lower = phrase.toLowerCase();
+  return dictionary.phrases[lower] || null;
+}
+
+// Extract all unique words from text that aren't in dictionary or cache
+function extractUnknownWords(text) {
+  // Get all words (Portuguese letters including accents)
+  const words = text.match(/[A-Za-zÀ-ÿ]+/g) || [];
+  const unknownWords = new Set();
+
+  for (const word of words) {
+    const lower = word.toLowerCase();
+    // Skip short words (articles, prepositions usually)
+    if (lower.length < 3) continue;
+    // Skip if in dictionary or cache
+    if (dictionary.words[lower]) continue;
+    if (getCachedTranslation(lower)) continue;
+    // Skip common cognates that don't need translation
+    if (/^(importante|problema|diferente|interessante|possível|impossível|normal|especial|original|natural|final|total|principal|central|federal|social|musical|hospital|hotel|animal|capital|canal|festival|global|local|real|legal|digital|virtual|visual|ideal|formal|informal)$/i.test(lower)) continue;
+    unknownWords.add(lower);
+  }
+
+  return Array.from(unknownWords);
+}
+
+// Batch fetch translations for unknown words using Claude
+async function fetchUnknownTranslations(words) {
+  if (words.length === 0) return;
+
+  // Limit batch size to avoid token limits
+  const batch = words.slice(0, 30);
+
+  try {
+    const response = await fetch('/api/translate-words', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ words: batch })
+    });
+
+    if (!response.ok) {
+      console.warn('Translation API failed:', response.status);
+      return;
+    }
+
+    const data = await response.json();
+
+    // Cache the translations
+    if (data.translations) {
+      for (const [word, translation] of Object.entries(data.translations)) {
+        if (translation) {
+          cacheTranslation(word, translation);
+        }
+      }
+    }
+  } catch (error) {
+    console.warn('Failed to fetch translations:', error);
+  }
+}
+
+// Update hint text - show both mouse and touch instructions
+function updateHintText() {
+  const hintText = document.getElementById('usage-hint-text');
+  if (hintText) {
+    hintText.textContent = 'Hover/tap words for translation · Click/tap again to hear the sentence';
+  }
+}
+
+// Load dictionary on page load
+loadDictionary();
+
+// Adjust tooltip positions for elements near container edges
+function adjustTooltipPositions() {
+  const container = document.getElementById('simplifier-output');
+  if (!container) return;
+
+  const containerRect = container.getBoundingClientRect();
+  const tooltips = container.querySelectorAll('.word-tooltip, .phrase-tooltip');
+
+  tooltips.forEach(tooltip => {
+    // Remove existing position classes
+    tooltip.classList.remove('tooltip-left', 'tooltip-right');
+
+    const rect = tooltip.getBoundingClientRect();
+    const tooltipCenter = rect.left + rect.width / 2;
+
+    // Estimate tooltip width (use a reasonable max for translation text)
+    const estimatedTooltipWidth = 150;
+    const halfTooltip = estimatedTooltipWidth / 2;
+
+    // Check if centered tooltip would overflow left edge
+    if (tooltipCenter - halfTooltip < containerRect.left + 10) {
+      tooltip.classList.add('tooltip-left');
+    }
+    // Check if centered tooltip would overflow right edge
+    else if (tooltipCenter + halfTooltip > containerRect.right - 10) {
+      tooltip.classList.add('tooltip-right');
+    }
+  });
+}
+
+// Auto-resize textarea based on content
+function autoResizeTextarea(textarea) {
+  // Get max-height from computed style
+  const computedStyle = window.getComputedStyle(textarea);
+  const maxHeight = parseInt(computedStyle.maxHeight) || 500;
+
+  // Reset height to auto to get the correct scrollHeight
+  textarea.style.height = 'auto';
+
+  // Set new height (capped at max-height)
+  const newHeight = Math.min(textarea.scrollHeight, maxHeight);
+  textarea.style.height = newHeight + 'px';
+
+  // Show scrollbar only if content exceeds max-height
+  textarea.style.overflowY = textarea.scrollHeight > maxHeight ? 'auto' : 'hidden';
 }
 
 async function simplifyText() {
@@ -231,6 +537,14 @@ async function simplifyText() {
   const selectedLevel = document.querySelector('input[name="simplifier-level"]:checked').value;
   const levelUpper = selectedLevel.toUpperCase();
   const drillId = `${selectedLevel}-simplifier`;
+
+  // Track simplifier usage with Plausible
+  if (window.plausible) {
+    plausible('Simplifier', { props: {
+      level: levelUpper,
+      text: inputText.substring(0, 500)
+    }});
+  }
 
   // Disable button and show loading
   simplifyBtn.disabled = true;
@@ -264,11 +578,45 @@ async function simplifyText() {
 
     const data = await response.json();
 
-    // Display the simplified text
-    output.innerHTML = `<div class="prose prose-slate max-w-none whitespace-pre-wrap">${escapeHtml(data.response)}</div>`;
+    // Pre-fetch translations for unknown words before rendering
+    const unknownWords = extractUnknownWords(data.response);
+    if (unknownWords.length > 0) {
+      output.innerHTML = `<div class="flex items-center justify-center h-full"><div class="text-center"><div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-3"></div><p class="text-slate-600">Loading translations for ${unknownWords.length} words...</p></div></div>`;
+      await fetchUnknownTranslations(unknownWords);
+    }
 
-    // Show copy button
+    // Display the simplified text with clickable sentences
+    output.innerHTML = formatSimplifiedTextWithSentences(data.response);
+
+    // Adjust tooltip positions for edge words
+    adjustTooltipPositions();
+
+    // Log to D1 database (async, don't wait)
+    // Get user ID from hash fragment (e.g., #john or #7x3k)
+    const userId = window.location.hash ? window.location.hash.substring(1) : null;
+    fetch('/api/simplifier-log', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        level: levelUpper,
+        input_text: inputText,
+        output_text: data.response,
+        user_id: userId
+      })
+    }).catch(err => console.log('Log error:', err));
+
+    // Show copy, speak, clear buttons, and hints
     copyBtn.classList.remove('hidden');
+    const speakBtn = document.getElementById('speak-btn');
+    if (speakBtn) speakBtn.classList.remove('hidden');
+    const clearBtn = document.getElementById('clear-btn');
+    if (clearBtn) clearBtn.classList.remove('hidden');
+    const usageHint = document.getElementById('usage-hint');
+    if (usageHint) {
+      usageHint.classList.remove('opacity-0');
+      usageHint.classList.add('opacity-100');
+      updateHintText();
+    }
 
   } catch (error) {
     console.error('Error simplifying text:', error);
@@ -385,11 +733,247 @@ function clearSimplifier() {
   const input = document.getElementById('simplifier-input');
   const output = document.getElementById('simplifier-output');
   const copyBtn = document.getElementById('copy-btn');
+  const speakBtn = document.getElementById('speak-btn');
+  const clearBtn = document.getElementById('clear-btn');
+  const usageHint = document.getElementById('usage-hint');
 
   input.value = '';
   copyBtn.classList.add('hidden');
+  if (speakBtn) speakBtn.classList.add('hidden');
+  if (clearBtn) clearBtn.classList.add('hidden');
+  if (usageHint) {
+    usageHint.classList.remove('opacity-100');
+    usageHint.classList.add('opacity-0');
+  }
+
+  // Stop any ongoing speech
+  if (typeof portugueseSpeech !== 'undefined') {
+    portugueseSpeech.stop();
+  }
 
   output.innerHTML = '<div class="flex items-center justify-center h-full text-slate-400"><div class="text-center"><svg class="w-16 h-16 mx-auto mb-3 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg><p class="text-sm">Simplified text will appear here</p></div></div>';
+}
+
+// Format simplified text with clickable sentences and hover tooltips using dictionary
+function formatSimplifiedTextWithSentences(text) {
+  // Strip any vocab section if Claude still includes it (backwards compatibility)
+  const vocabSeparator = '---VOCAB---';
+  let mainText = text;
+  if (text.includes(vocabSeparator)) {
+    mainText = text.split(vocabSeparator)[0].trim();
+  }
+
+  const escaped = escapeHtml(mainText);
+
+  // STEP 1: Split into sentences FIRST (before adding tooltip spans)
+  // Split on . ! ? followed by space and any letter (uppercase or lowercase, including accented)
+  const sentences = escaped.split(/(?<=[.!?])\s+(?=[A-Za-zÀ-ÿ])/);
+
+  // Helper function to add tooltips to a piece of text
+  function addTooltips(text) {
+    let withTooltips = text;
+
+    // Get all phrases from dictionary, sorted by length (longest first)
+    const phrases = Object.entries(dictionary.phrases || {})
+      .sort((a, b) => b[0].length - a[0].length);
+
+    // Process multi-word phrases FIRST
+    // Use Unicode-aware word boundaries (not \b which fails with accented chars)
+    for (const [phrase, translation] of phrases) {
+      const safeTranslation = translation.replace(/"/g, '&quot;');
+      const escapedPhrase = phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      // Match phrase not preceded or followed by letters (including accented)
+      const phraseRegex = new RegExp(`(?<![A-Za-zÀ-ÿ])(${escapedPhrase})(?![A-Za-zÀ-ÿ])`, 'gi');
+      withTooltips = withTooltips.replace(phraseRegex, function(match) {
+        return `<span class="phrase-tooltip" data-translation="${safeTranslation}">${match}</span>`;
+      });
+    }
+
+    // Process single words (skip words already inside spans)
+    withTooltips = withTooltips.replace(/(<span[^>]*>.*?<\/span>)|([A-Za-zÀ-ÿ]+)/g, function(match, spanGroup, wordGroup) {
+      if (spanGroup) {
+        return spanGroup;
+      }
+
+      const translation = lookupWord(wordGroup);
+      if (translation) {
+        const safeTranslation = translation.replace(/"/g, '&quot;');
+        return `<span class="word-tooltip" data-translation="${safeTranslation}">${wordGroup}</span>`;
+      }
+
+      // No translation found - return word without tooltip
+      return wordGroup;
+    });
+
+    return withTooltips;
+  }
+
+  if (sentences.length <= 1) {
+    const withTooltips = addTooltips(escaped);
+    return `<div class="prose prose-slate max-w-none whitespace-pre-wrap">
+      <span class="simplifier-sentence cursor-pointer hover:bg-green-50 rounded px-1 -mx-1 transition-colors">${withTooltips}</span>
+    </div>`;
+  }
+
+  const wrappedSentences = sentences
+    .filter(s => s.trim())
+    .map(sentence => {
+      const withTooltips = addTooltips(sentence.trim());
+      return `<span class="simplifier-sentence cursor-pointer hover:bg-green-50 rounded px-1 -mx-1 transition-colors">${withTooltips}</span>`;
+    })
+    .join(' ');
+
+  return `<div class="prose prose-slate max-w-none whitespace-pre-wrap">${wrappedSentences}</div>`;
+}
+
+// Speak a single sentence when clicked
+// Detect if text is likely English (to filter from audio)
+function isLikelyEnglish(text) {
+  const englishPatterns = [
+    /^I\s+(see|would|can|will|have|am|think|notice)/i,
+    /^(If you|You've|You can|You may|Feel free|This is|That is|Here is)/i,
+    /^(The text|Your text|This text|That text)/i,
+    /\b(you'd like|you would|I'll help|I can help|paste it|already at)\b/i,
+    /\b(simplif|translat|Portuguese|English|level|greeting)/i,
+    /\b(here and|just paste|any text)\b/i
+  ];
+  return englishPatterns.some(pattern => pattern.test(text));
+}
+
+// Check if text contains emoji
+function containsEmoji(text) {
+  const emojiPattern = /[\u{1F300}-\u{1F9FF}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]/u;
+  return emojiPattern.test(text);
+}
+
+function speakSentence(element) {
+  if (typeof portugueseSpeech === 'undefined') {
+    console.warn('Speech not available');
+    return;
+  }
+
+  // Stop any ongoing speech
+  portugueseSpeech.stop();
+
+  // Remove highlight from all sentences
+  document.querySelectorAll('.simplifier-sentence').forEach(el => {
+    el.classList.remove('bg-green-100');
+  });
+
+  // Get text without translations
+  let text = element.textContent.trim();
+  text = text.replace(/\s*\([^)]+\)\s*/g, ' ').replace(/\s+/g, ' ').trim();
+
+  // Skip if text is English or contains emoji
+  if (isLikelyEnglish(text) || containsEmoji(text)) {
+    console.log('Skipping English/emoji text:', text);
+    return;
+  }
+
+  // Highlight current sentence
+  element.classList.add('bg-green-100');
+
+  portugueseSpeech.speak(text, {
+    onEnd: () => {
+      element.classList.remove('bg-green-100');
+    },
+    onError: () => {
+      element.classList.remove('bg-green-100');
+    }
+  });
+}
+
+// Speak all text (Listen button)
+function speakSimplifiedText() {
+  const output = document.getElementById('simplifier-output');
+  const speakBtn = document.getElementById('speak-btn');
+  const sentences = output.querySelectorAll('.simplifier-sentence');
+
+  if (sentences.length === 0) {
+    console.warn('No sentences to speak');
+    return;
+  }
+
+  if (typeof portugueseSpeech === 'undefined') {
+    console.warn('Speech not available');
+    return;
+  }
+
+  // Stop any ongoing speech
+  portugueseSpeech.stop();
+
+  const originalHTML = speakBtn.innerHTML;
+  speakBtn.innerHTML = `
+    <svg class="w-4 h-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+    </svg>
+    Stop
+  `;
+  speakBtn.disabled = false;
+  speakBtn.onclick = stopSimplifiedSpeech;
+
+  let currentIndex = 0;
+
+  function speakNext() {
+    if (currentIndex >= sentences.length) {
+      // Done speaking all sentences
+      resetSpeakButton();
+      return;
+    }
+
+    const sentence = sentences[currentIndex];
+
+    // Get text without translations
+    let text = sentence.textContent.trim();
+    text = text.replace(/\s*\([^)]+\)\s*/g, ' ').replace(/\s+/g, ' ').trim();
+
+    // Skip English/emoji sentences
+    if (isLikelyEnglish(text) || containsEmoji(text)) {
+      console.log('Skipping English/emoji in Listen All:', text);
+      currentIndex++;
+      speakNext();
+      return;
+    }
+
+    // Remove highlight from all, add to current
+    sentences.forEach(el => el.classList.remove('bg-green-100'));
+    sentence.classList.add('bg-green-100');
+
+    // Scroll sentence into view if needed
+    sentence.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    portugueseSpeech.speak(text, {
+      onEnd: () => {
+        sentence.classList.remove('bg-green-100');
+        currentIndex++;
+        speakNext();
+      },
+      onError: () => {
+        sentence.classList.remove('bg-green-100');
+        resetSpeakButton();
+      }
+    });
+  }
+
+  function resetSpeakButton() {
+    speakBtn.innerHTML = originalHTML;
+    speakBtn.onclick = speakSimplifiedText;
+    sentences.forEach(el => el.classList.remove('bg-green-100'));
+  }
+
+  // Store reset function for stop button
+  window._resetSimplifierSpeakBtn = resetSpeakButton;
+
+  speakNext();
+}
+
+function stopSimplifiedSpeech() {
+  if (typeof portugueseSpeech !== 'undefined') {
+    portugueseSpeech.stop();
+  }
+  if (typeof window._resetSimplifierSpeakBtn === 'function') {
+    window._resetSimplifierSpeakBtn();
+  }
 }
 
 // Check for level URL parameter on page load
@@ -404,8 +988,44 @@ document.addEventListener('DOMContentLoaded', () => {
       updateSimplifierLabels();
     }
   }
+
+  // Readjust tooltip positions on window resize
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(adjustTooltipPositions, 100);
+  });
+
+  // Handle clicks for tooltips and sentence audio (two-tap on mobile)
+  document.addEventListener('click', (e) => {
+    const tooltip = e.target.closest('.word-tooltip, .phrase-tooltip');
+    const sentence = e.target.closest('.simplifier-sentence');
+
+    // Remove active class from all other tooltips
+    document.querySelectorAll('.word-tooltip.active, .phrase-tooltip.active').forEach(el => {
+      if (el !== tooltip) el.classList.remove('active');
+    });
+
+    if (tooltip) {
+      // Clicked on a word/phrase with tooltip
+      if (tooltip.classList.contains('active')) {
+        // Second tap on active tooltip: play audio and hide tooltip
+        tooltip.classList.remove('active');
+        if (sentence) {
+          speakSentence(sentence);
+        }
+      } else {
+        // First tap: show tooltip only
+        tooltip.classList.add('active');
+      }
+    } else if (sentence) {
+      // Clicked on sentence but not on a tooltip word: play audio directly
+      speakSentence(sentence);
+    }
+  });
 });
     </script>
+    <script src="/speech.js"></script>
 
 </body>
 </html>

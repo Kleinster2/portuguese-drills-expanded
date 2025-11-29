@@ -13,3 +13,14 @@ name = "portuguese-drills-expanded"
 
 [env.production.vars]
 # Production variables will use secrets
+
+# D1 Database for simplifier logs
+[[d1_databases]]
+binding = "DB"
+database_name = "simplifier-logs"
+database_id = "98089380-e608-4a48-86cb-87031601d02c"
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "simplifier-logs"
+database_id = "98089380-e608-4a48-86cb-87031601d02c"
