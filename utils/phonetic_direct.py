@@ -476,16 +476,29 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
 
         # Vowels (not in diphthongs)
         elif char in 'aáàã':
-            result += 'ah'
+            # Check if followed by m/n in same syllable (nasalization)
+            if i + 1 < len(syl) and syl[i+1] in 'mn':
+                result += 'ãh'
+            else:
+                result += 'ah'
         elif char in 'eéêè':
-            # Apply E quality rules
-            quality = determine_e_quality(word, syllable, syl_index, is_stressed)
-            if char == 'é' or quality == 'é':
-                result += 'É'
-            else:  # ê or default
-                result += 'Ê'
+            # Check if followed by m/n in same syllable (nasalization)
+            if i + 1 < len(syl) and syl[i+1] in 'mn':
+                # Nasal E → ẽ (we'll use ê with tilde for simplicity)
+                result += 'ẽ'
+            else:
+                # Apply E quality rules
+                quality = determine_e_quality(word, syllable, syl_index, is_stressed)
+                if char == 'é' or quality == 'é':
+                    result += 'É'
+                else:  # ê or default
+                    result += 'Ê'
         elif char in 'iíĩ':
-            result += 'ee'
+            # Check if followed by m/n in same syllable (nasalization)
+            if i + 1 < len(syl) and syl[i+1] in 'mn':
+                result += 'ĩ'
+            else:
+                result += 'ee'
         elif char in 'oóôõ':
             # Apply O quality rules
             is_final = (i == len(syl) - 1) and (syl_index == total_syls - 1)
@@ -494,12 +507,16 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
                 # Final unstressed -o → oo (closed, no quality marker needed)
                 result += 'oo'
             else:
-                # Determine quality: ó (open) vs ô (closed)
-                quality = determine_o_quality(word, syllable, syl_index, is_stressed)
-                if char == 'ó' or quality == 'ó':
-                    result += 'Ó'
-                else:  # ô or default
-                    result += 'Ô'
+                # Check if followed by m/n in same syllable (nasalization)
+                if i + 1 < len(syl) and syl[i+1] in 'mn':
+                    result += 'õh'
+                else:
+                    # Determine quality: ó (open) vs ô (closed)
+                    quality = determine_o_quality(word, syllable, syl_index, is_stressed)
+                    if char == 'ó' or quality == 'ó':
+                        result += 'Ó'
+                    else:  # ô or default
+                        result += 'Ô'
         elif char in 'uúũ':
             # Check if U is silent (after g/q before e/i)
             if char == 'u' and i > 0 and syl[i-1] in 'gq':
@@ -507,13 +524,17 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
                     # Silent U in GU/QU digraph - skip
                     i += 1
                     continue
-            result += 'oo'
+            # Check if followed by m/n in same syllable (nasalization)
+            if i + 1 < len(syl) and syl[i+1] in 'mn':
+                result += 'ũ'
+            else:
+                result += 'oo'
 
         i += 1
 
     # Mark final consonants (coda) to stay lowercase even in stressed syllables
     # Scan backwards and wrap trailing consonants that come AFTER any existing markers
-    vowel_chars = 'aeiouãõáéíóúâêôÁÉÍÓÚÂÊÔÃÕ'
+    vowel_chars = 'aeiouãõáéíóúâêôÁÉÍÓÚÂÊÔÃÕẽĩũẼĨŨ'
     i = len(result) - 1
     coda_start = -1
 
@@ -578,6 +599,24 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
             elif char == 'õ':
                 # Lowercase nasal O - capitalize
                 result_new += 'Õ'
+            elif char == 'ẽ':
+                # Lowercase nasal E - capitalize
+                result_new += 'Ẽ'
+            elif char == 'Ẽ':
+                # Already capitalized nasal E - keep as is
+                result_new += char
+            elif char == 'ĩ':
+                # Lowercase nasal I - capitalize
+                result_new += 'Ĩ'
+            elif char == 'Ĩ':
+                # Already capitalized nasal I - keep as is
+                result_new += char
+            elif char == 'ũ':
+                # Lowercase nasal U - capitalize
+                result_new += 'Ũ'
+            elif char == 'Ũ':
+                # Already capitalized nasal U - keep as is
+                result_new += char
             else:
                 # All other characters - capitalize
                 result_new += char.upper()
