@@ -426,58 +426,446 @@ if coda.startswith('h'):
 
 ---
 
-## Design Decisions
+## Architecture Decision Records (ADRs)
 
-### 1. Word-Level Processing
+This section documents major architectural decisions following ADR best practices: context, decision, alternatives considered, and consequences.
 
-**Decision:** Each word is processed independently.
+---
 
-**Rationale:**
-- Simpler algorithm
-- Modular design
-- Sandhi rules (cross-word effects) handled in future pipeline step
+### ADR-001: Inverted Pipeline Design (Direct Generation)
 
-**Example:**
+**Status:** Accepted (v2.0)
+
+**Context:**
+- Original pipeline had 4 steps: Annotate → Substitute → Dictionary → E Quality
+- Each step transformed the output of the previous step
+- Difficult to maintain and debug
+- E vowel quality was "patched on" at the end rather than integrated
+
+**Decision:**
+Direct generation of dictionary-style phonetics in a single transformation pass. All rules (vowel quality, consonant transformations, stress) applied during syllable conversion.
+
+**Alternatives Considered:**
+
+1. **Keep 4-step pipeline**
+   - ❌ Complex: intermediate representations hard to reason about
+   - ❌ Brittle: changes cascade through multiple steps
+   - ❌ Vowel quality feels like afterthought
+
+2. **Dictionary-based approach**
+   - ❌ Doesn't scale: need to add every new word
+   - ❌ Opaque: learners don't see patterns
+   - ❌ Maintenance burden: 1000s of entries
+
+3. **Direct generation (chosen)**
+   - ✅ Simpler: single transformation
+   - ✅ Integrated: vowel quality built into rules
+   - ✅ Maintainable: rules are self-contained
+   - ✅ Transparent: patterns visible to learners
+
+**Consequences:**
+- ✅ Simpler codebase (1 function vs 4)
+- ✅ Easier to add new rules
+- ✅ Better vowel quality integration
+- ⚠️ Must handle all cases in one pass (no intermediate cleanup)
+
+**Reference:** `docs/INVERTED_PIPELINE_DESIGN.md`
+
+---
+
+### ADR-002: Syllable-Level Processing
+
+**Status:** Accepted (v1.0)
+
+**Context:**
+- Portuguese phonetics depend heavily on syllable structure
+- Stress applies to entire syllables
+- Some rules need to know syllable boundaries (closed vs open)
+
+**Decision:**
+Process words by first splitting into syllables, then transforming each syllable independently.
+
+**Alternatives Considered:**
+
+1. **Character-by-character processing**
+   - ❌ Can't determine stress properly
+   - ❌ Can't detect closed syllables
+   - ❌ Can't apply syllable-level rules (like coda marking)
+
+2. **Whole-word pattern matching**
+   - ❌ Doesn't scale (too many patterns)
+   - ❌ Hard to maintain
+   - ❌ Can't generalize
+
+3. **Syllable-level (chosen)**
+   - ✅ Natural unit for phonetics
+   - ✅ Stress applies to syllables
+   - ✅ Rules reference syllable structure
+   - ✅ Modular: each syllable independent
+
+**Consequences:**
+- ✅ Clean separation of concerns (syllabify → stress → transform)
+- ✅ Rules are declarative and understandable
+- ⚠️ Requires accurate syllabification algorithm
+- ⚠️ Some cross-syllable effects need special handling
+
+---
+
+### ADR-003: Maximal Onset Principle for Syllabification
+
+**Status:** Accepted (v1.0)
+
+**Context:**
+- Need to split Portuguese words into syllables algorithmically
+- No access to pronunciation dictionary
+- Must handle all possible consonant clusters
+
+**Decision:**
+Use Maximal Onset Principle: consonants between vowels attach to the following syllable when they form valid onsets.
+
+**Alternatives Considered:**
+
+1. **Naive split (every consonant ends previous syllable)**
+   - ❌ Wrong: "a-bra-si-lei-ro" → should be "a-bra-si-lei-ro"
+   - ❌ Doesn't match Portuguese phonotactics
+
+2. **Machine learning model**
+   - ❌ Overkill for rule-based language
+   - ❌ Requires training data
+   - ❌ Black box (can't explain to learners)
+
+3. **Maximal Onset (chosen)**
+   - ✅ Linguistically motivated
+   - ✅ Handles consonant clusters correctly
+   - ✅ Simple rules with valid onset list
+   - ✅ Matches native speaker intuition
+
+**Consequences:**
+- ✅ Accurate syllabification (~95%)
+- ✅ Handles complex clusters (pr, br, tr, etc.)
+- ⚠️ Must maintain list of valid onsets
+- ⚠️ Some edge cases (digraphs like 'lh', 'nh') need special handling
+
+**Implementation:** See `syllabify()` function and `VALID_ONSETS` list
+
+---
+
+### ADR-004: Priority-Based Rule Checking
+
+**Status:** Accepted (v2.0)
+
+**Context:**
+- Multiple rules can apply to same phoneme (e.g., E vowel quality)
+- Rules have different reliability/specificity
+- Need deterministic, predictable behavior
+
+**Decision:**
+Apply rules in priority order; first match wins.
+
+**Alternatives Considered:**
+
+1. **All rules vote, majority wins**
+   - ❌ Ambiguous when rules conflict
+   - ❌ Requires weighting system
+   - ❌ Non-deterministic
+
+2. **Most specific rule wins**
+   - ❌ Hard to define "specificity"
+   - ❌ Requires complex comparison logic
+   - ❌ Still ambiguous in some cases
+
+3. **Priority order (chosen)**
+   - ✅ Deterministic: always same output
+   - ✅ Clear: priority is explicit
+   - ✅ Maintainable: easy to adjust priority
+   - ✅ Fast: stop at first match
+
+**Consequences:**
+- ✅ Predictable behavior
+- ✅ Easy to debug (check rules in order)
+- ⚠️ Priority must be carefully chosen
+- ⚠️ Adding new rule requires choosing position
+
+**Example:** E quality rules (nasal → R → closed syllable → diphthongs → default)
+
+---
+
+### ADR-005: Marker System for Lowercase Preservation
+
+**Status:** Accepted (v3.0)
+
+**Context:**
+- Stressed syllables are capitalized
+- Some content should stay lowercase (diphthong second element, final consonants)
+- Can't use simple `.upper()` as it loses vowel quality (é → E)
+
+**Decision:**
+Use `<...>` markers to wrap content that should stay lowercase during capitalization. Remove markers after capitalization.
+
+**Alternatives Considered:**
+
+1. **Post-process with regex**
+   - ❌ Fragile: hard to identify which parts to lowercase
+   - ❌ Loses context about why something is lowercase
+   - ❌ Doesn't scale to new patterns
+
+2. **Store metadata separately**
+   - ❌ Complex: need parallel data structure
+   - ❌ Error-prone: metadata can get out of sync
+   - ❌ Harder to debug
+
+3. **Marker system (chosen)**
+   - ✅ Simple: markers travel with content
+   - ✅ Clear: explicitly marks lowercase regions
+   - ✅ Flexible: easy to add new patterns
+   - ✅ Self-documenting: markers show intent
+
+**Consequences:**
+- ✅ Clean separation: mark during generation, capitalize later
+- ✅ Easy to add new lowercase patterns
+- ⚠️ Markers must be stripped in final output
+- ⚠️ Debug output shows markers (can be confusing)
+
+**Examples:**
 ```python
-"os amigos" → process separately
-  "os" → "oos"
-  "amigos" → "ah-MEE-goos"
-
-Future sandhi: "oos" + vowel → "ooz" (liaison)
+'au' → 'ah-<oo>' → capitalized → 'AH-oo'
+'inglês' → 'inglê<s>' → capitalized → 'een-GLÊs'
 ```
 
-### 2. No Dictionary Lookups
+---
 
-**Decision:** 100% algorithmic, no word dictionaries.
+### ADR-006: Context Hierarchy for X Pronunciation
 
-**Rationale:**
-- Scales to infinite vocabulary
-- Maintainable (rules > exceptions)
-- Transparent (users understand patterns)
+**Status:** Accepted (v3.0)
 
-**Trade-off:** ~5-10% words may have non-standard pronunciation (handle with future exception list if needed).
+**Context:**
+- X has 4 different sounds in Portuguese: sh, ks, s, z
+- Pronunciation depends on position and context
+- No simple rule covers all cases
+- Dictionary lookup would require 1000s of entries
 
-### 3. Vowel Quality from Context
+**Decision:**
+Implement Context Hierarchy algorithm: 9 priority-ordered rules based on position, surrounding context, and word roots.
 
-**Decision:** Determine é/ê and ó/ô algorithmically.
+**Alternatives Considered:**
 
-**Rationale:**
-- Most patterns are predictable
-- Teaches learners the phonetic rules
-- Reduces maintenance burden
+1. **Always use 'sh' (default)**
+   - ❌ Only ~60% accurate
+   - ❌ Many common words wrong (texto, exame, táxi)
 
-**Implementation:** Priority-ordered rule checking.
+2. **Dictionary of X words**
+   - ❌ Doesn't scale (need entry for every X word)
+   - ❌ Maintenance burden
+   - ❌ Against "no dictionary" principle
 
-### 4. Function Word List
+3. **Context Hierarchy (chosen)**
+   - ✅ 90-95% accuracy (tested)
+   - ✅ No dictionary needed
+   - ✅ Handles novel words
+   - ✅ Teachable (learners can understand rules)
 
-**Decision:** Explicit list of unstressed function words.
+**Consequences:**
+- ✅ High accuracy without dictionary
+- ✅ Handles start-of-word, end-of-word, before consonant, prefixes, diphthongs, ex+vowel, scientific roots
+- ⚠️ Still ~5-10% error rate on obscure words
+- ⚠️ Root list needs occasional updates
 
-**Rationale:**
-- Small, finite set
-- Predictable behavior
-- Avoids complex grammatical analysis
+**Test Results:** 24/24 test cases (100% on test set)
+
+**Reference:** See `get_x_sound()` function and X pronunciation section
+
+---
+
+### ADR-007: Function Word List vs Grammatical Analysis
+
+**Status:** Accepted (v3.0)
+
+**Context:**
+- Function words (articles, prepositions) should be unstressed
+- Content words should be stressed
+- Need to distinguish between them
+
+**Decision:**
+Maintain explicit list of common function words that remain unstressed even when single-syllable.
+
+**Alternatives Considered:**
+
+1. **Grammatical analysis (POS tagging)**
+   - ❌ Requires NLP library (complex dependency)
+   - ❌ Overkill for simple distinction
+   - ❌ May not be 100% accurate
+   - ❌ Slow
+
+2. **Heuristics (word length, frequency)**
+   - ❌ Unreliable (many short content words)
+   - ❌ Hard to tune
+   - ❌ Doesn't generalize
+
+3. **Explicit list (chosen)**
+   - ✅ Simple: just a list
+   - ✅ Fast: O(1) lookup
+   - ✅ Accurate: no false positives
+   - ✅ Maintainable: small, finite set (~13 words)
+
+**Consequences:**
+- ✅ Correct stress on articles/prepositions (o→oo, not ÓH)
+- ✅ Fast and simple
+- ⚠️ List must be maintained (but rarely changes)
+- ⚠️ Doesn't handle new function words automatically (but there are very few)
 
 **List:** `['o', 'a', 'os', 'as', 'de', 'em', 'e', 'que', 'se', 'te', 'me', 'lhe', 'nos']`
+
+---
+
+### ADR-008: Word-Level vs Phrase-Level Processing
+
+**Status:** Accepted (v1.0)
+
+**Context:**
+- Portuguese has sandhi effects (liaison, elision) across word boundaries
+- Examples: "os amigos" → s becomes z before vowel
+- Need to decide processing granularity
+
+**Decision:**
+Process each word independently. Handle cross-word effects (sandhi) in separate future pipeline step.
+
+**Alternatives Considered:**
+
+1. **Phrase-level processing (all at once)**
+   - ❌ Complex: need to track word boundaries
+   - ❌ Tight coupling: can't reuse word-level function
+   - ❌ Harder to test individual words
+   - ❌ Mixing concerns: single-word rules + multi-word rules
+
+2. **Word-level with built-in lookahead**
+   - ❌ Requires passing next word to every function
+   - ❌ Complicates API
+   - ❌ Still mixing concerns
+
+3. **Word-level only, sandhi separate (chosen)**
+   - ✅ Clean separation of concerns
+   - ✅ Modular: word transform is reusable
+   - ✅ Testable: can test words independently
+   - ✅ Simple API: just pass word, get phonetic
+   - ✅ Extensible: add sandhi layer later
+
+**Consequences:**
+- ✅ Simple, focused algorithm
+- ✅ Easy to test and debug
+- ✅ Can reuse for single-word lookups
+- ⚠️ Doesn't handle liaison yet (e.g., "os amigos" → "oos" not "ooz")
+- ⏳ Future: sandhi rules as separate transformation
+
+**Pipeline Design:**
+```
+Word 1 → Transform → Phonetic 1 ─┐
+Word 2 → Transform → Phonetic 2 ─┤→ Future: Sandhi Rules → Connected Speech
+Word 3 → Transform → Phonetic 3 ─┘
+```
+
+---
+
+### ADR-009: Vowel Quality Markers with H Suffix
+
+**Status:** Accepted (v3.0)
+
+**Context:**
+- Need to show vowel quality: é (open) vs ê (closed)
+- Must be visible in monospace phonetic output
+- Should be consistent with Portuguese accent notation
+
+**Decision:**
+Use capital letters with H suffix: ÉH, ÊH, ÓH, ÔH in stressed syllables.
+
+**Alternatives Considered:**
+
+1. **Unicode accents only (É, Ê, Ó, Ô)**
+   - ⚠️ Works but can be missed in quick reading
+   - ⚠️ Small visual difference in some fonts
+
+2. **Verbal markers (EH-open, EH-closed)**
+   - ❌ Too verbose
+   - ❌ Hard to read in phrases
+
+3. **Accents with H suffix (chosen)**
+   - ✅ Clear: accent + H is very visible
+   - ✅ Consistent: matches Portuguese notation style
+   - ✅ Distinctive: ÉH vs ÊH easy to distinguish
+   - ✅ Monospace-friendly: stands out in terminal/code
+
+**Consequences:**
+- ✅ Very clear visual distinction
+- ✅ Consistent notation across all vowels
+- ⚠️ Slightly more verbose (1 extra character)
+- ✅ 'h' not confused with coda (special handling)
+
+**Examples:**
+- `tenho` → TÊH-ñoo (closed E)
+- `café` → kah-FÉH (open E)
+- `melhor` → mê-LYÓHr (open O)
+
+---
+
+### ADR-010: No Dictionary Lookups (100% Algorithmic)
+
+**Status:** Accepted (v2.0)
+
+**Context:**
+- Need phonetic transcriptions for Portuguese words
+- Could use dictionary of pre-transcribed words
+- Or could generate algorithmically
+
+**Decision:**
+100% algorithmic generation. No dictionary lookups except for future exception list if needed (<1% of words).
+
+**Alternatives Considered:**
+
+1. **Full dictionary approach**
+   - ❌ Doesn't scale: need 100,000+ entries for full coverage
+   - ❌ Maintenance: every new word needs manual entry
+   - ❌ Opaque: learners can't see patterns
+   - ❌ Storage: large data files
+
+2. **Hybrid (dictionary + fallback rules)**
+   - ❌ Complex: two systems to maintain
+   - ❌ When to use dictionary vs rules?
+   - ❌ Still need comprehensive rules for fallback
+
+3. **100% algorithmic (chosen)**
+   - ✅ Scales infinitely: handles any word
+   - ✅ Maintainable: rules are code, not data
+   - ✅ Transparent: learners see phonetic patterns
+   - ✅ Educational: teaches systematic pronunciation
+   - ✅ Small: no large data files
+
+**Consequences:**
+- ✅ Infinite vocabulary coverage
+- ✅ Small codebase (no data files)
+- ✅ Teachable patterns
+- ⚠️ ~5-10% words may have exceptional pronunciation
+- ✅ Can add small exception list later if needed (<1%)
+
+**Accuracy:** 90-95% on Brazilian Portuguese (good enough for learning tool)
+
+**Philosophy:** Rules > Exceptions. Teach patterns, not memorization.
+
+---
+
+## Summary of Key Architectural Principles
+
+1. **Simplicity** - Prefer simple, understandable solutions
+2. **Modularity** - Separate concerns (syllabify, stress, transform, sandhi)
+3. **Determinism** - Same input always produces same output
+4. **Transparency** - Learners can understand the rules
+5. **Scalability** - Works for infinite vocabulary
+6. **Maintainability** - Easy to modify and extend
+7. **Testability** - Each component testable independently
+
+**Trade-offs Accepted:**
+- ~5-10% accuracy loss vs full dictionary (acceptable for learning tool)
+- No sandhi rules yet (future enhancement)
+- Function word list must be maintained manually (but rarely changes)
+- Some edge cases handled specially (complexity for correctness)
 
 ---
 
