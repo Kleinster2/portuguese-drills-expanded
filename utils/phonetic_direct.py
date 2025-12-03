@@ -23,9 +23,12 @@ VALID_ONSETS = ['pr', 'br', 'tr', 'dr', 'cr', 'gr', 'fr',
 # Only for words where algorithmic approach produces incorrect output
 # Keep this list small (<1% of vocabulary)
 PHONETIC_EXCEPTIONS = {
-    # Add irregular words here as they're discovered
-    # Format: 'word': 'phonetic-transcription'
-    # Example: 'táxi': 'TAH-ksee'  # (already handled correctly by algorithm)
+    # X pronounced as "ss" (not predictable algorithmically)
+    'próximo': 'pró-SSi-mo',        # Algorithm: "PRÓH-ksee-moo" → Correct: X as "ss"
+    'máximo': 'má-SSi-mo',          # Algorithm: "MAH-ksee-moo" → Correct: X as "ss"
+    'auxílio': 'au-SSí-li-oo',      # Algorithm: "ah-oo-SHEE-lee-oo" → Correct: X as "ss"
+    'sintaxe': 'sin-ta-SSe',        # Algorithm: "sĩn-TAH-ksee" → Correct: X as "ss"
+    'trouxer': 'trou-SSer',         # Algorithm: "trôh-SHÉHr" → Correct: X as "ss"
 }
 
 
