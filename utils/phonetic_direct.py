@@ -164,17 +164,22 @@ def determine_o_quality(word, syllable, syl_index, is_stressed):
     3. Final unstressed -o → ô (closed, becomes 'oo')
     4. O with written accent ó → ó (open)
     5. O before L → ó (open)
-    6. Default → ô (closed)
+    6. Stressed O in open syllable → ó (open)
+    7. Default → ô (closed)
 
-    Note: In Brazilian Portuguese, closed ô is the default. Open ó occurs mainly:
-    - Before L (sol, hotel)
-    - When explicitly marked with accent ó
+    Note: O quality in Portuguese is complex and often lexical.
+    This is a simplified rule set that may need word-by-word refinement.
     """
     syl_lower = syllable.lower()
     word_lower = word.lower()
 
-    # Rule 1: O before nasal
+    # Rule 1: O before nasal (m, n) - in same syllable or if next syllable starts with m/n
     if re.search(r'o[mn]', syl_lower):
+        return 'ô'
+    # Check if next syllable starts with m or n (for words like nome, fome)
+    # This requires access to full word context
+    # Simple heuristic: if syllable ends with 'o' and word has 'me' or 'ne' pattern
+    if syl_lower.endswith('o') and re.search(r'o[mn]e', word_lower):
         return 'ô'
 
     # Rule 2: OU diphthong
@@ -192,7 +197,14 @@ def determine_o_quality(word, syllable, syl_index, is_stressed):
     if re.search(r'ol', syl_lower):
         return 'ó'
 
-    # Rule 6: Default is closed ô
+    # Rule 6: Stressed O in open syllable (ends with vowel)
+    # In many words, stressed O in open syllables is open (ó)
+    if is_stressed:
+        vowels = 'aeiouãõáéíóúâêô'
+        if len(syl_lower) > 0 and syl_lower[-1] in vowels:
+            return 'ó'
+
+    # Rule 7: Default is closed ô
     return 'ô'
 
 
