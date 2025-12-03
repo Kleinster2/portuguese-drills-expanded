@@ -378,6 +378,9 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
         # Other consonants
         elif char == 'b':
             result += 'b'
+        elif char == 'ç':
+            # Ç (cedilha) always sounds like S
+            result += 's'
         elif char == 'c':
             # Check for CH digraph first
             if i + 1 < len(syl) and syl[i+1] == 'h':
