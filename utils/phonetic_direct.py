@@ -508,6 +508,32 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
 
         i += 1
 
+    # Mark final consonants (coda) to stay lowercase even in stressed syllables
+    # Scan backwards and wrap trailing consonants that come AFTER any existing markers
+    vowel_chars = 'aeiouãõáéíóúâêôÁÉÍÓÚÂÊÔÃÕ'
+    i = len(result) - 1
+    coda_start = -1
+
+    # Scan backwards from end, skipping consonants
+    while i >= 0 and result[i] not in vowel_chars and result[i] not in '<>-':
+        i -= 1
+
+    # If we ended on a consonant (not vowel, not marker), we have a coda
+    if i >= 0 and i < len(result) - 1 and result[i] in vowel_chars:
+        # Consonants are everything after this vowel
+        coda_start = i + 1
+        coda = result[coda_start:]
+        # Only wrap if there's actual content and no existing markers
+        if coda and not any(c in coda for c in '<>'):
+            result = result[:coda_start] + '<' + coda + '>'
+    elif i >= 0 and result[i] == '>':
+        # We have a marker, check if there are consonants after it
+        marker_end = i + 1
+        if marker_end < len(result):
+            coda = result[marker_end:]
+            if coda:
+                result = result[:marker_end] + '<' + coda + '>'
+
     # Apply stress (CAPITALS for entire stressed syllable)
     if is_stressed:
         # Capitalize entire syllable, preserving É/Ê and Ó/Ô that were already set
