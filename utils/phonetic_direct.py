@@ -29,6 +29,20 @@ PHONETIC_EXCEPTIONS = {
     'auxílio': 'au-SSí-li-oo',      # Algorithm: "ah-oo-SHEE-lee-oo" → Correct: X as "ss"
     'sintaxe': 'sin-ta-SSe',        # Algorithm: "sĩn-TAH-ksee" → Correct: X as "ss"
     'trouxer': 'trou-SSer',         # Algorithm: "trôh-SHÉHr" → Correct: X as "ss"
+
+    # Loanwords (retain foreign pronunciation rules)
+    'tchau': 'chau',                # Italian origin - Hard CH (not soft "sh")
+    'pizza': 'pí-tsah',             # Italian - ZZ as /ts/ (not /z/)
+    'design': 'di-ZÁIN',            # English pronunciation retained
+    'site': 'SÁI-chee',             # English vowel shift (i → ai)
+    'wi-fi': 'wái-fái',             # English vowel shift
+    'show': 'shô',                  # English - Single syllable, closed O
+    'shopping': 'SHÓ-ping',         # English pronunciation retained
+
+    # Silent consonant irregularities (SC, XC clusters)
+    'nascimento': 'nah-see-MÊN-too',  # SC → S (not /sk/)
+    'exceção': 'eh-seh-SÁHN',         # XC → SS, nasal ending
+    'piscina': 'pee-SEE-nah',         # SC → S (not /sk/)
 }
 
 
