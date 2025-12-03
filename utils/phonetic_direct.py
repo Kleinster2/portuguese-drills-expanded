@@ -424,8 +424,12 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
         elif char == 'k':
             result += 'k'
         elif char == 'l':
+            # Check for LH digraph first
+            if i + 1 < len(syl) and syl[i+1] == 'h':
+                result += 'ly'
+                i += 1  # Skip the H
             # L handling: word-final L vocalizes, syllable-final L stays
-            if i == len(syl) - 1:
+            elif i == len(syl) - 1:
                 # Syllable-final L
                 if syl_index == total_syls - 1:
                     # Word-final L → vocalization to /w/ glide
