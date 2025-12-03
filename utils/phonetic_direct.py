@@ -198,11 +198,23 @@ def determine_o_quality(word, syllable, syl_index, is_stressed):
         return 'ó'
 
     # Rule 6: Stressed O in open syllable (ends with vowel)
-    # In many words, stressed O in open syllables is open (ó)
+    # Plural vs Singular distinction:
+    # - Plurals (ending in -s): stressed O in open syllable → open (ó)
+    # - Singulars: stressed O in open syllable before final → closed (ô)
+    # - Words like bola, rosa (not ending in -o): open (ó)
     if is_stressed:
         vowels = 'aeiouãõáéíóúâêô'
         if len(syl_lower) > 0 and syl_lower[-1] in vowels:
-            return 'ó'
+            # If word ends in -s (likely plural), open the O
+            if word_lower.endswith('s'):
+                return 'ó'
+            # If word ends in -o and this is NOT the last syllable, close it
+            # (e.g., jogo → jo-go, first syllable "jo" has closed ô)
+            elif word_lower.endswith('o') and syl_index < len([s for s in word_lower if s in vowels]) - 1:
+                return 'ô'
+            # Otherwise (bola, rosa, etc.), open it
+            else:
+                return 'ó'
 
     # Rule 7: Default is closed ô
     return 'ô'
