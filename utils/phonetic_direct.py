@@ -327,6 +327,18 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
             i += 2
             found_diphthong = True
 
+        # ÃE nasal diphthong → ÃH-ee (nasal, first part capitalized, second lowercase)
+        elif syl[i:i+2] == 'ãe':
+            result += 'ãh-<ee>'
+            i += 2
+            found_diphthong = True
+
+        # ÕE nasal diphthong → ÕH-ee (nasal, first part capitalized, second lowercase)
+        elif syl[i:i+2] == 'õe':
+            result += 'õh-<ee>'
+            i += 2
+            found_diphthong = True
+
         if found_diphthong:
             continue
 
@@ -528,12 +540,15 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
             elif char in 'óô':
                 # Lowercase O with quality - capitalize
                 result_new += char.upper()
-            elif char in 'Ã':
-                # Already capitalized nasal A - keep as is
+            elif char in 'ÃÕ':
+                # Already capitalized nasal vowels - keep as is
                 result_new += char
             elif char == 'ã':
                 # Lowercase nasal A - capitalize
                 result_new += 'Ã'
+            elif char == 'õ':
+                # Lowercase nasal O - capitalize
+                result_new += 'Õ'
             else:
                 # All other characters - capitalize
                 result_new += char.upper()
