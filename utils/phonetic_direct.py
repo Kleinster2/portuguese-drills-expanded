@@ -321,9 +321,9 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
             i += 2
             found_diphthong = True
 
-        # ÃO nasal diphthong → AHⁿ-oo (nasal, first part capitalized, second lowercase)
+        # ÃO nasal diphthong → ÃH-oo (nasal, first part capitalized, second lowercase)
         elif syl[i:i+2] == 'ão':
-            result += 'ahⁿ-<oo>'
+            result += 'ãh-<oo>'
             i += 2
             found_diphthong = True
 
@@ -528,6 +528,12 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
             elif char in 'óô':
                 # Lowercase O with quality - capitalize
                 result_new += char.upper()
+            elif char in 'Ã':
+                # Already capitalized nasal A - keep as is
+                result_new += char
+            elif char == 'ã':
+                # Lowercase nasal A - capitalize
+                result_new += 'Ã'
             else:
                 # All other characters - capitalize
                 result_new += char.upper()
