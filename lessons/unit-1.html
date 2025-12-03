@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unit 1: Identity Statements (Eu sou) - Portuguese Tutor</title>
+    <title>Unit 1: Saying "I am" - Portuguese Tutor</title>
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json">
@@ -24,33 +24,11 @@
         body {
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
         }
-        .pronunciation {
-            color: #0ea5e9;
-            font-size: 0.85em;
-            font-weight: 500;
-        }
-        .grammar-pattern {
-            border-left: none;
-            background: transparent;
-        }
-        @media (min-width: 768px) {
-            .grammar-pattern {
-                background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-                border-left: 4px solid #0ea5e9;
-            }
-        }
         .example-sentence {
             transition: all 0.2s;
         }
         .example-sentence:hover {
             background-color: #f0f9ff;
-            transform: translateX(4px);
-        }
-        .step-card {
-            transition: all 0.3s;
-        }
-        .step-card:hover {
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
         .vocab-item {
             transition: all 0.2s;
@@ -66,8 +44,8 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 28px;
-            height: 28px;
+            width: 32px;
+            height: 32px;
             margin-left: 8px;
             background: #0ea5e9;
             color: white;
@@ -75,12 +53,13 @@
             border-radius: 6px;
             cursor: pointer;
             transition: all 0.2s;
-            opacity: 0.8;
+            opacity: 0.9;
+            flex-shrink: 0;
         }
         .speaker-btn:hover {
             opacity: 1;
             background: #0284c7;
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
         .speaker-btn:active {
             transform: scale(0.95);
@@ -93,949 +72,527 @@
             0%, 100% { opacity: 1; }
             50% { opacity: 0.7; }
         }
+
+        /* Hover translation tooltip styles */
+        .word-tooltip,
+        .phrase-tooltip {
+            position: relative;
+            cursor: help;
+            border-bottom: 1px dotted #94a3b8;
+        }
+
+        .word-tooltip:hover,
+        .phrase-tooltip:hover {
+            background-color: #dbeafe;
+            border-radius: 2px;
+        }
+
+        .word-tooltip::after,
+        .phrase-tooltip::after {
+            content: attr(data-translation);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #1e293b;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-style: italic;
+            white-space: nowrap;
+            text-align: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .word-tooltip::before,
+        .phrase-tooltip::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: #1e293b;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+            z-index: 10;
+        }
+
+        .word-tooltip:hover::after,
+        .word-tooltip:hover::before,
+        .phrase-tooltip:hover::after,
+        .phrase-tooltip:hover::before {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .word-tooltip.active::after,
+        .word-tooltip.active::before,
+        .phrase-tooltip.active::after,
+        .phrase-tooltip.active::before {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lesson-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .lesson-card {
+                border-radius: 0;
+                margin-left: -0.5rem;
+                margin-right: -0.5rem;
+            }
+        }
     </style>
+    <!-- Plausible Analytics -->
+    <script async src="https://plausible.io/js/pa-A2kEULXGZtzUYXPsVOQwU.js"></script>
+    <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
 </head>
 <body class="bg-slate-50">
 
     <!-- Header -->
     <header class="bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg">
-        <div class="container mx-auto max-w-full lg:max-w-6xl px-2 md:px-4 py-6">
-            <a href="/syllabus.html" class="text-sm opacity-80 hover:opacity-100 mb-2 inline-block">← Back to Syllabus</a>
+        <div class="container mx-auto max-w-3xl px-4 py-6">
+            <a href="/syllabus.html" class="text-sm opacity-80 hover:opacity-100 mb-2 inline-block">&larr; Back to Syllabus</a>
             <div class="flex items-center justify-between">
                 <div>
-                    <div class="text-xs font-bold uppercase tracking-wide opacity-80 mb-1">Phase 1 - Unit 1</div>
-                    <h1 class="text-3xl md:text-4xl font-bold">Identity Statements (Eu sou)</h1>
-                    <p class="mt-2 text-lg opacity-90">Learn to introduce yourself using "ser" verb</p>
+                    <div class="text-xs font-bold uppercase tracking-wide opacity-80 mb-1">Unit 1</div>
+                    <h1 class="text-2xl md:text-3xl font-bold">Saying "I am"</h1>
+                    <p class="mt-1 text-base opacity-90">Your first Portuguese sentence</p>
                 </div>
-                <div class="hidden md:block text-right">
-                    <div class="text-5xl font-bold opacity-20">1</div>
-                </div>
+                <div class="text-5xl font-bold opacity-20">1</div>
             </div>
         </div>
     </header>
 
-    <!-- Learning Objectives -->
-    <div class="bg-white border-b shadow-sm">
-        <div class="container mx-auto max-w-full lg:max-w-6xl px-2 md:px-4 py-6">
-            <h2 class="text-sm font-bold uppercase tracking-wide text-gray-500 mb-3">Learning Objectives</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="flex items-start gap-3">
-                    <div class="text-2xl">✓</div>
-                    <div>
-                        <div class="font-semibold text-gray-900">Verb Conjugation</div>
-                        <div class="text-sm text-gray-600">Master "eu sou" /I am/</div>
-                    </div>
-                </div>
-                <div class="flex items-start gap-3">
-                    <div class="text-2xl">✓</div>
-                    <div>
-                        <div class="font-semibold text-gray-900">6 Patterns</div>
-                        <div class="text-sm text-gray-600">Identity, profession, origin</div>
-                    </div>
-                </div>
-                <div class="flex items-start gap-3">
-                    <div class="text-2xl">✓</div>
-                    <div>
-                        <div class="font-semibold text-gray-900">Pronunciation</div>
-                        <div class="text-sm text-gray-600">Learn Brazilian reductions</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Main Content -->
-    <div class="container mx-auto max-w-full lg:max-w-6xl px-2 md:px-4 py-8">
+    <div class="container mx-auto max-w-3xl px-4 py-8">
 
-        <!-- Grammar Patterns Section -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Grammar Patterns</h2>
-
-            <!-- Eu sou o/a {name} -->
-            <div class="grammar-pattern md:rounded-lg p-0 md:p-6 mb-6">
-                <h3 class="font-bold text-lg text-gray-900 mb-2">Eu sou o/a {name}</h3>
-                <div class="text-sm text-gray-600 mb-3">Introducing yourself by name</div>
-                <div class="bg-white rounded p-3 mb-3">
-                    <div class="font-mono text-gray-700">Eu sou + o/a + {name}</div>
-                </div>
-                <div class="space-y-4">
-                    <div class="example-sentence p-4 rounded bg-white border-l-2 border-transparent space-y-2">
-                        <!-- Step 1: Original -->
-                        <div class="flex items-center gap-2">
-                            <span class="font-medium text-gray-900">Eu sou o Daniel.</span>
-                            <button class="three-step-speaker speaker-btn" data-text="Eu sou o Daniel" aria-label="Speak this sentence" title="Click to hear pronunciation">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
-                            </button>
-                            <span class="text-sm text-gray-600 italic">I am Daniel. (male)</span>
-                        </div>
-
-                        <!-- Step 2: Annotated + Step 3: Substituted -->
-                        <div class="font-medium text-gray-700 bg-blue-50 px-3 py-2 rounded">Eu sou o<span class="pronunciation" title="Final -o → /u/">/u/</span> Daniel<span class="pronunciation" title="\'Daniel\' → /u/ (syllable-final -l)">/u/</span>. <span class="text-sm text-gray-600 ml-2">— Final -o → /u/ • Syllable-final -l → /u/ →</span> Eu sou <span class="font-mono text-blue-600 substitution-text italic cursor-pointer" data-original="o Daniel">u Danieu</span>.</div>
-                    </div>
-                </div>
-
-                <div class="example-sentence p-4 rounded bg-white border-l-2 border-transparent space-y-2 mt-4">
-                    <!-- Step 1: Original -->
-                    <div class="flex items-center gap-2">
-                        <span class="font-medium text-gray-900">Eu sou a Alice.</span>
-                        <button class="three-step-speaker speaker-btn" data-text="Eu sou a Alice" aria-label="Speak this sentence" title="Click to hear pronunciation">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
-                        </button>
-                        <span class="text-sm text-gray-600 italic">I am Alice. (female)</span>
-                    </div>
-
-                    <!-- Step 2: Annotated + Step 3: Substituted -->
-                    <div class="font-medium text-gray-700 bg-blue-50 px-3 py-2 rounded">Eu sou a Alic<span class="pronunciation" title="Final -e → /i/">/i/</span>. <span class="text-sm text-gray-600 ml-2">— Final -e → /i/ →</span> Eu sou <span class="font-mono text-blue-600 substitution-text italic cursor-pointer" data-original="a Alice">a Alici</span>.</div>
-                </div>
-
-                <div class="example-sentence p-4 rounded bg-white border-l-2 border-transparent space-y-2 mt-4">
-                    <!-- Step 1: Original -->
-                    <div class="flex items-center gap-2">
-                        <span class="font-medium text-gray-900">Eu sou Cris.</span>
-                        <button class="three-step-speaker speaker-btn" data-text="Eu sou Cris" aria-label="Speak this sentence" title="Click to hear pronunciation">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
-                        </button>
-                        <span class="text-sm text-gray-600 italic">I am Cris. (non-binary)</span>
-                    </div>
-
-                    <!-- Note about no changes -->
-                    <div class="font-medium text-gray-700 bg-blue-50 px-3 py-2 rounded">
-                        <span class="text-sm text-gray-600">No article used • No pronunciation changes in this pattern</span>
-                    </div>
-                </div>
+        <!-- PART 1: The Big Picture -->
+        <section class="lesson-card">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">What You'll Learn</h2>
+            <p class="text-gray-700 mb-4">
+                By the end of this lesson, you'll be able to introduce yourself in Portuguese. You'll say things like:
+            </p>
+            <div class="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-lg">
+                <p class="text-lg font-medium text-gray-900 mb-1" data-hoverable="true">Eu sou a Maria.</p>
+                <p class="text-xs text-emerald-700 font-mono italic">ÊH-OO SÔH ah mah-REE-ah</p>
+                <p class="text-gray-600 text-sm mt-2">I am Maria.</p>
             </div>
-
-            <!-- Eu sou {profession} -->
-            <div class="grammar-pattern md:rounded-lg p-0 md:p-6 mb-6">
-                <h3 class="font-bold text-lg text-gray-900 mb-2">Eu sou {profession}</h3>
-                <div class="text-sm text-gray-600 mb-3">Stating your profession</div>
-                <div class="bg-white rounded p-3 mb-3">
-                    <div class="font-mono text-gray-700">Eu sou + {profession}</div>
-                    <div class="text-xs text-gray-500 mt-1">⚠️ Some professions change for gender (professor/professora), others stay the same (analista)</div>
-                </div>
-                <div class="bg-blue-50 p-4 rounded">
-                    <div class="text-sm text-gray-700 mb-2">
-                        <strong>Note:</strong> Professions have no pronunciation changes in this pattern.
-                    </div>
-                    <div class="space-y-2 text-sm">
-                        <div><span class="font-medium">Eu sou analista.</span> <span class="text-gray-600 italic">- I am an analyst. (same for m/f)</span></div>
-                        <div><span class="font-medium">Eu sou professor.</span> <span class="text-gray-600 italic">- I am a teacher. (male)</span></div>
-                        <div><span class="font-medium">Eu sou professora.</span> <span class="text-gray-600 italic">- I am a teacher. (female)</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Eu sou {nationality} -->
-            <div class="grammar-pattern md:rounded-lg p-0 md:p-6 mb-6">
-                <h3 class="font-bold text-lg text-gray-900 mb-2">Eu sou {nationality}</h3>
-                <div class="text-sm text-gray-600 mb-3">Stating your nationality</div>
-                <div class="bg-white rounded p-3 mb-3">
-                    <div class="font-mono text-gray-700">Eu sou + <span class="text-sky-600">nationality</span></div>
-                    <div class="text-xs text-gray-500 mt-1">⚠️ Nationality changes for gender (m/f)</div>
-                </div>
-                <div class="space-y-4">
-                    <div class="example-sentence p-4 rounded bg-white border-l-2 border-transparent space-y-2">
-                                                <!-- Step 1: Original -->
-                        <div class="flex items-center gap-2">
-                            <span class="font-medium text-gray-900">Eu sou americano.</span>
-                            <button class="three-step-speaker speaker-btn" data-text="Eu sou americano." aria-label="Speak this sentence" title="Click to hear pronunciation">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
-                            </button>
-                            <span class="text-sm text-gray-600 italic">I am American. (male)</span>
-                        </div>
-
-                        <!-- Step 2: Annotated + Step 3: Substituted -->
-                        <div class="font-medium text-gray-700 bg-blue-50 px-3 py-2 rounded">Eu sou americano<span class="pronunciation" title="\'americano\' → /u/ (final -o)">/u/</span>. <span class="text-sm text-gray-600 ml-2">— Final -o → /u/ →</span> Eu sou <span class="font-mono text-blue-600 substitution-text italic cursor-pointer" data-original="americano">americanu</span>.</div>
-                    </div>
-
-                    <div class="example-sentence p-4 rounded bg-white border-l-2 border-transparent space-y-2">
-                                                <!-- Step 1: Original -->
-                        <div class="flex items-center gap-2">
-                            <span class="font-medium text-gray-900">Eu sou brasileiro.</span>
-                            <button class="three-step-speaker speaker-btn" data-text="Eu sou brasileiro." aria-label="Speak this sentence" title="Click to hear pronunciation">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
-                            </button>
-                            <span class="text-sm text-gray-600 italic">I am Brazilian. (male)</span>
-                        </div>
-
-                        <!-- Step 2: Annotated + Step 3: Substituted -->
-                        <div class="font-medium text-gray-700 bg-blue-50 px-3 py-2 rounded">Eu sou brasileiro<span class="pronunciation" title="'brasileiro' → /u/ (final -o)">/u/</span>. <span class="text-sm text-gray-600 ml-2">— Final -o → /u/ →</span> Eu sou <span class="font-mono text-blue-600 substitution-text italic cursor-pointer" data-original="brasileiro">brasileiru</span>.</div>
-                    </div>
-                </div>
-
-                <div class="bg-blue-50 p-4 rounded mt-4">
-                    <div class="text-sm text-gray-700 mb-2">
-                        <strong>Feminine examples (no changes):</strong>
-                    </div>
-                    <div class="space-y-1 text-sm">
-                        <div><span class="font-medium">Eu sou americana.</span> <span class="text-gray-600 italic">- I am American. (female)</span></div>
-                        <div><span class="font-medium">Eu sou brasileira.</span> <span class="text-gray-600 italic">- I am Brazilian. (female)</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Eu sou de {city} -->
-            <div class="grammar-pattern md:rounded-lg p-0 md:p-6 mb-6">
-                <h3 class="font-bold text-lg text-gray-900 mb-2">Eu sou de {city}</h3>
-                <div class="text-sm text-gray-600 mb-3">Stating city of origin</div>
-                <div class="bg-white rounded p-3 mb-3">
-                    <div class="font-mono text-gray-700">Eu sou + <span class="text-sky-600">de</span> + city</div>
-                </div>
-                <div class="space-y-4">
-                    <div class="example-sentence p-4 rounded bg-white border-l-2 border-transparent space-y-2">
-                                                <!-- Step 1: Original -->
-                        <div class="flex items-center gap-2">
-                            <span class="font-medium text-gray-900">Eu sou de Miami.</span>
-                            <button class="three-step-speaker speaker-btn" data-text="Eu sou de Miami." aria-label="Speak this sentence" title="Click to hear pronunciation">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
-                            </button>
-                            <span class="text-sm text-gray-600 italic">I am from Miami.</span>
-                        </div>
-
-                        <!-- Step 2: Annotated + Step 3: Substituted -->
-                        <div class="font-medium text-gray-700 bg-blue-50 px-3 py-2 rounded">Eu sou de<span class="pronunciation" title="\'de\' → /dji/ (always)">/dji/</span> Miami. <span class="text-sm text-gray-600 ml-2">— Final de → /dji/ →</span> Eu sou <span class="font-mono text-blue-600 substitution-text italic cursor-pointer" data-original="de Miami">dji Miami</span>.</div>
-                    </div>
-
-                    <div class="example-sentence p-4 rounded bg-white border-l-2 border-transparent space-y-2">
-                                                <!-- Step 1: Original -->
-                        <div class="flex items-center gap-2">
-                            <span class="font-medium text-gray-900">Eu sou de São Paulo.</span>
-                            <button class="three-step-speaker speaker-btn" data-text="Eu sou de São Paulo." aria-label="Speak this sentence" title="Click to hear pronunciation">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
-                            </button>
-                            <span class="text-sm text-gray-600 italic">I am from São Paulo.</span>
-                        </div>
-
-                        <!-- Step 2: Annotated + Step 3: Substituted -->
-                        <div class="font-medium text-gray-700 bg-blue-50 px-3 py-2 rounded">Eu sou de<span class="pronunciation" title="\'de\' → /dji/ (always)">/dji/</span> São Paulo<span class="pronunciation" title="\'Paulo\' → /u/ (final -o)">/u/</span>. <span class="text-sm text-gray-600 ml-2">— Final de → /dji/ • Final -o → /u/ →</span> Eu sou <span class="font-mono text-blue-600 substitution-text italic cursor-pointer" data-original="de São Paulo">dji São Paulu</span>.</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Eu sou do/da {place} -->
-            <div class="grammar-pattern md:rounded-lg p-0 md:p-6 mb-6">
-                <h3 class="font-bold text-lg text-gray-900 mb-2">Eu sou do/da {place}</h3>
-                <div class="text-sm text-gray-600 mb-3">Stating country/region of origin (with article)</div>
-                <div class="bg-white rounded p-3 mb-3">
-                    <div class="font-mono text-gray-700">Eu sou + <span class="text-sky-600">de + article</span> + {place}</div>
-                    <div class="text-xs text-gray-500 mt-1">Contractions: de + o = do, de + a = da</div>
-                </div>
-                <div class="space-y-4">
-                    <div class="example-sentence p-4 rounded bg-white border-l-2 border-transparent space-y-2">
-                                                <!-- Step 1: Original -->
-                        <div class="flex items-center gap-2">
-                            <span class="font-medium text-gray-900">Eu sou do Brasil.</span>
-                            <button class="three-step-speaker speaker-btn" data-text="Eu sou do Brasil." aria-label="Speak this sentence" title="Click to hear pronunciation">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
-                            </button>
-                            <span class="text-sm text-gray-600 italic">I am from Brazil. (male: o Brasil)</span>
-                        </div>
-
-                        <!-- Step 2: Annotated + Step 3: Substituted -->
-                        <div class="font-medium text-gray-700 bg-blue-50 px-3 py-2 rounded">Eu sou do<span class="pronunciation" title="\'do\' → /u/ (final -o)">/u/</span> Brasil<span class="pronunciation" title="\'Brasil\' → /u/ (syllable-final -l)">/u/</span>. <span class="text-sm text-gray-600 ml-2">— Final -o → /u/ • Syllable-final -l → /u/ →</span> Eu sou <span class="font-mono text-blue-600 substitution-text italic cursor-pointer" data-original="do Brasil">du Brasiu</span>.</div>
-                    </div>
-                </div>
-
-                <div class="bg-blue-50 p-4 rounded mt-4">
-                    <div class="text-sm text-gray-700 mb-2">
-                        <strong>Feminine example (no changes):</strong>
-                    </div>
-                    <div class="text-sm">
-                        <span class="font-medium">Eu sou da França.</span> <span class="text-gray-600 italic">- I am from France. (female: a França)</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Eu sou {characteristic} -->
-            <div class="grammar-pattern md:rounded-lg p-0 md:p-6 mb-6">
-                <h3 class="font-bold text-lg text-gray-900 mb-2">Eu sou {characteristic}</h3>
-                <div class="text-sm text-gray-600 mb-3">Stating permanent characteristics</div>
-                <div class="bg-white rounded p-3 mb-3">
-                    <div class="font-mono text-gray-700">Eu sou + <span class="text-sky-600">adjective</span></div>
-                    <div class="text-xs text-gray-500 mt-1">⚠️ Adjective changes for gender (m/f)</div>
-                </div>
-                <div class="space-y-4">
-                    <div class="example-sentence p-4 rounded bg-white border-l-2 border-transparent space-y-2">
-                                                <!-- Step 1: Original -->
-                        <div class="flex items-center gap-2">
-                            <span class="font-medium text-gray-900">Eu sou casado.</span>
-                            <button class="three-step-speaker speaker-btn" data-text="Eu sou casado." aria-label="Speak this sentence" title="Click to hear pronunciation">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
-                            </button>
-                            <span class="text-sm text-gray-600 italic">I am married. (male)</span>
-                        </div>
-
-                        <!-- Step 2: Annotated + Step 3: Substituted -->
-                        <div class="font-medium text-gray-700 bg-blue-50 px-3 py-2 rounded">Eu sou casado<span class="pronunciation" title="\'casado\' → /u/ (final -o)">/u/</span>. <span class="text-sm text-gray-600 ml-2">— Final -o → /u/ →</span> Eu sou <span class="font-mono text-blue-600 substitution-text italic cursor-pointer" data-original="casado">casadu</span>.</div>
-                    </div>
-
-                    <div class="example-sentence p-4 rounded bg-white border-l-2 border-transparent space-y-2">
-                                                <!-- Step 1: Original -->
-                        <div class="flex items-center gap-2">
-                            <span class="font-medium text-gray-900">Eu sou alto.</span>
-                            <button class="three-step-speaker speaker-btn" data-text="Eu sou alto." aria-label="Speak this sentence" title="Click to hear pronunciation">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
-                            </button>
-                            <span class="text-sm text-gray-600 italic">I am tall. (male)</span>
-                        </div>
-
-                        <!-- Step 2: Annotated + Step 3: Substituted -->
-                        <div class="font-medium text-gray-700 bg-blue-50 px-3 py-2 rounded">Eu sou alto<span class="pronunciation" title="'alto' → /u/ (final -o)">/u/</span>. <span class="text-sm text-gray-600 ml-2">— Final -o → /u/ →</span> Eu sou <span class="font-mono text-blue-600 substitution-text italic cursor-pointer" data-original="alto">altu</span>.</div>
-                    </div>
-                </div>
-
-                <div class="bg-blue-50 p-4 rounded mt-4">
-                    <div class="text-sm text-gray-700 mb-2">
-                        <strong>Feminine examples (no changes):</strong>
-                    </div>
-                    <div class="space-y-1 text-sm">
-                        <div><span class="font-medium">Eu sou casada.</span> <span class="text-gray-600 italic">- I am married. (female)</span></div>
-                        <div><span class="font-medium">Eu sou alta.</span> <span class="text-gray-600 italic">- I am tall. (female)</span></div>
-                    </div>
-                </div>
-            </div>
+            <p class="text-gray-600 mt-4 text-sm">
+                <strong>Tip:</strong> Hover over Portuguese words to see their meaning. Click the speaker button to hear pronunciation.
+            </p>
         </section>
 
-        
-<!-- Meet Daniel - Hero Introduction -->
-        <section class="mb-12">
-            <div class="md:bg-gradient-to-br md:from-green-50 md:to-emerald-50 md:rounded-xl md:shadow-xl p-0 md:p-8 md:border-l-4 md:border-green-500">
-                <div class="flex items-start gap-4 mb-6">
-                    <span class="text-5xl">👋</span>
-                    <div class="flex-1">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-2">Meet Daniel</h2>
-                        <p class="text-gray-600">Learn sentence by sentence, then see how it all comes together</p>
-                    </div>
-                </div>
-
-                <!-- Sentence-by-Sentence Study -->
-                <div class="space-y-4 mb-8">
-                    <!-- Sentence 1: Eu sou o Daniel -->
-                                <div class="grammar-pattern md:rounded-lg p-0 md:p-6 mb-6">
-                                    <h3 class="font-bold text-lg text-gray-900 mb-2">Sentence 1: Introducing yourself by name</h3>
-                                    <div class="space-y-4">
-                                        <div class="example-sentence p-4 rounded bg-white border-l-4 border-green-500 space-y-2">
-                                            <!-- Step 1: Original -->
-                                            <div class="flex items-center gap-2">
-                                                <span class="font-medium text-gray-900">Eu sou o Daniel.</span>
-                                                <button class="three-step-speaker speaker-btn" data-text="Eu sou o Daniel" aria-label="Speak this sentence" title="Click to hear pronunciation">
-                                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
-                                                </button>
-                                                <span class="text-sm text-gray-600 italic">I am Daniel.</span>
-                                            </div>
-
-                                            <!-- Step 2: Annotated + Step 3: Substituted -->
-                                            <div class="font-medium text-gray-700 bg-blue-50 px-3 py-2 rounded">Eu sou o<span class="pronunciation" title="'o' → /u/ (final -o)">/u/</span> Daniel<span class="pronunciation" title="'Daniel' → /u/ (syllable-final -l)">/u/</span>. <span class="text-sm text-gray-600 ml-2">— Final -o → /u/ • Syllable-final -l → /u/ →</span> <span class="font-mono text-blue-600">Eu sou u Danieu.</span></div>
-                                        </div>
-                                    </div>
-                                    </div>
-                    <!-- Sentence 2: Eu sou americano -->
-                                <div class="grammar-pattern md:rounded-lg p-0 md:p-6 mb-6">
-                                    <h3 class="font-bold text-lg text-gray-900 mb-2">Sentence 2: Stating your nationality</h3>
-                                    <div class="space-y-4">
-                                        <div class="example-sentence p-4 rounded bg-white border-l-4 border-green-500 space-y-2">
-                                            <!-- Step 1: Original -->
-                                            <div class="flex items-center gap-2">
-                                                <span class="font-medium text-gray-900">Eu sou americano.</span>
-                                                <button class="three-step-speaker speaker-btn" data-text="Eu sou americano" aria-label="Speak this sentence" title="Click to hear pronunciation">
-                                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
-                                                </button>
-                                                <span class="text-sm text-gray-600 italic">I am American.</span>
-                                            </div>
-
-                                            <!-- Step 2: Annotated -->
-                                            <div class="font-medium text-gray-700 bg-blue-50 px-3 py-2 rounded">Eu sou americano<span class="pronunciation" title="\'americano\' → /u/ (final -o)">/u/</span>. <span class="text-sm text-gray-600 ml-2">— Final -o → /u/ →</span> Eu sou <span class="font-mono text-blue-600 substitution-text italic cursor-pointer" data-original="americano">americanu</span>.</div>
-                                        </div>
-                                    </div>
-                                    </div>
-                    <!-- Sentence 3: Eu sou de Miami -->
-                                <div class="grammar-pattern md:rounded-lg p-0 md:p-6 mb-6">
-                                    <h3 class="font-bold text-lg text-gray-900 mb-2">Sentence 3: Stating your city of origin</h3>
-                                    <div class="space-y-4">
-                                        <div class="example-sentence p-4 rounded bg-white border-l-4 border-green-500 space-y-2">
-                                            <!-- Step 1: Original -->
-                                            <div class="flex items-center gap-2">
-                                                <span class="font-medium text-gray-900">Eu sou de Miami.</span>
-                                                <button class="three-step-speaker speaker-btn" data-text="Eu sou de Miami" aria-label="Speak this sentence" title="Click to hear pronunciation">
-                                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
-                                        </button>
-                                                <span class="text-sm text-gray-600 italic">I am from Miami.</span>
-                                            </div>
-
-                                            <!-- Step 2: Annotated -->
-                                            <div class="font-medium text-gray-700 bg-blue-50 px-3 py-2 rounded">Eu sou de<span class="pronunciation" title="\'de\' → /dji/ (always)">/dji/</span> Miami. <span class="text-sm text-gray-600 ml-2">— Final de → /dji/ →</span> Eu sou <span class="font-mono text-blue-600 substitution-text italic cursor-pointer" data-original="de Miami">dji Miami</span>.</div>
-                                        </div>
-                                    </div>
-                                    </div>
-                    <!-- Sentence 4: Eu sou analista -->
-                                <div class="grammar-pattern md:rounded-lg p-0 md:p-6 mb-6">
-                                    <h3 class="font-bold text-lg text-gray-900 mb-2">Sentence 4: Stating your profession</h3>
-                                    <div class="space-y-4">
-                                        <div class="example-sentence p-4 rounded bg-white border-l-4 border-green-500 space-y-2">
-                                            <!-- Step 1: Original -->
-                                            <div class="flex items-center gap-2">
-                                                <span class="font-medium text-gray-900">Eu sou analista.</span>
-                                                <button class="three-step-speaker speaker-btn" data-text="Eu sou analista" aria-label="Speak this sentence" title="Click to hear pronunciation">
-                                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
-                                        </button>
-                                                <span class="text-sm text-gray-600 italic">I am an analyst.</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                    <!-- Sentence 5: Eu sou casado com a Sofia -->
-                                <div class="grammar-pattern md:rounded-lg p-0 md:p-6 mb-6">
-                                    <h3 class="font-bold text-lg text-gray-900 mb-2">Sentence 5: Stating marital status</h3>
-                                    <div class="space-y-4">
-                                        <div class="example-sentence p-4 rounded bg-white border-l-4 border-green-500 space-y-2">
-                                            <!-- Step 1: Original -->
-                                            <div class="flex items-center gap-2">
-                                                <span class="font-medium text-gray-900">Eu sou casado com a Sofia.</span>
-                                                <button class="three-step-speaker speaker-btn" data-text="Eu sou casado com a Sofia" aria-label="Speak this sentence" title="Click to hear pronunciation">
-                                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
-                                        </button>
-                                                <span class="text-sm text-gray-600 italic">I am married to Sofia.</span>
-                                            </div>
-
-                                            <!-- Step 2: Annotated -->
-                                            <div class="font-medium text-gray-700 bg-blue-50 px-3 py-2 rounded">Eu sou casado<span class="pronunciation" title="\'casado\' → /u/ (final -o)">/u/</span> com<span class="pronunciation" title="\'com\' → /oun/ (final -om)">/coun/</span> a Sofia. <span class="text-sm text-gray-600 ml-2">— Final -o → /u/ →</span> Eu sou <span class="font-mono text-blue-600 substitution-text italic cursor-pointer" data-original="casado com a Sofia">casadu coun a Sofia</span>.</div>
-                                        </div>
-                                    </div>
-                                    </div>
-                </div>
-
-                <!-- Overview: Full Introduction -->
-                <div class="mb-6">
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">🎯 The Complete Introduction</h3>
-                    <p class="text-sm text-gray-600 mb-4">Now hear all sentences together</p>
-                </div>
-
-                <!-- Three-Step Progression -->
-                <div class="space-y-4">
-                    <div class="text-sm text-gray-700 font-semibold mb-3">
-                        📚 How Daniel's Introduction Evolves:
-                    </div>
-
-                    <!-- Step 1: With "eu" (explicit) -->
-                    <div class="step-card md:bg-white md:rounded-lg md:shadow-md p-0 md:p-5">
-                        <div class="flex items-center justify-between mb-3">
-                            <div class="flex items-center gap-3">
-                                <div class="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">1</div>
-                                <div>
-                                    <h3 class="text-base font-bold text-gray-900">Step 1: With "eu" (explicit)</h3>
-                                    <p class="text-xs text-gray-600">Beginner level - subject pronoun included</p>
-                                </div>
-                            </div>
-                            <button class="speaker-btn" data-text="Eu sou o Daniel. Eu sou americano. Eu sou de Miami. Eu sou analista. Eu sou casado com a Sofia." aria-label="Play full step 1" title="Click to hear full introduction with 'eu'">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
-                            </button>
-                        </div>
-                        <div class="bg-slate-50 rounded-lg p-4 font-mono text-base leading-relaxed">
-                            <div class="mb-2"><strong>Eu sou</strong> o<span class="pronunciation" title="Final -o → /u/">/u/</span> Daniel<span class="pronunciation" title="\'Daniel\' → /u/ (syllable-final -l)">/u/</span>.</div>
-                            <div class="mb-2"><strong>Eu sou</strong> americano<span class="pronunciation" title="\'americano\' → /u/ (final -o)">/u/</span>.</div>
-                            <div class="mb-2"><strong>Eu sou</strong> de<span class="pronunciation" title="\'de\' → /dji/ (always)">/dji/</span> Miami.</div>
-                            <div class="mb-2"><strong>Eu sou</strong> analista.</div>
-                            <div><strong>Eu sou</strong> casado<span class="pronunciation" title="\'casado\' → /u/ (final -o)">/u/</span> com<span class="pronunciation" title="\'com\' → /oun/ (final -om)">/coun/</span> a Sofia.</div>
-                        </div>
-                        <div class="mt-3 p-3 bg-green-50 rounded-lg text-xs text-gray-700">
-                            <strong>📖 Pronunciation Rules Applied:</strong><br>
-                            • Final unstressed -o → /u/<br>
-                            • Final de → /dji/ (always)<br>
-                            • Final -om → /oun/ (nasal)<br>
-                            • Syllable-final -l → /u/
-                        </div>
-                    </div>
-
-                    <!-- Step 2: Without "eu" (implicit) -->
-                    <div class="step-card md:bg-white md:rounded-lg md:shadow-md p-0 md:p-5">
-                        <div class="flex items-center justify-between mb-3">
-                            <div class="flex items-center gap-3">
-                                <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">2</div>
-                                <div>
-                                    <h3 class="text-base font-bold text-gray-900">Step 2: Without "eu" (implicit)</h3>
-                                    <p class="text-xs text-gray-600">Intermediate level - subject pronoun dropped</p>
-                                </div>
-                            </div>
-                            <button class="speaker-btn" data-text="Sou o Daniel. Sou americano. Sou de Miami. Sou analista. Sou casado com a Sofia." aria-label="Play full step 2" title="Click to hear full introduction without 'eu'">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
-                            </button>
-                        </div>
-                        <div class="bg-slate-50 rounded-lg p-4 font-mono text-base leading-relaxed">
-                            <div class="mb-2"><strong>Sou</strong> o<span class="pronunciation" title="Final -o → /u/">/u/</span> Daniel<span class="pronunciation" title="\'Daniel\' → /u/ (syllable-final -l)">/u/</span>.</div>
-                            <div class="mb-2"><strong>Sou</strong> americano<span class="pronunciation" title="\'americano\' → /u/ (final -o)">/u/</span>.</div>
-                            <div class="mb-2"><strong>Sou</strong> de<span class="pronunciation" title="\'de\' → /dji/ (always)">/dji/</span> Miami.</div>
-                            <div class="mb-2"><strong>Sou</strong> analista.</div>
-                            <div><strong>Sou</strong> casado<span class="pronunciation" title="\'casado\' → /u/ (final -o)">/u/</span> com<span class="pronunciation" title="\'com\' → /oun/ (final -om)">/coun/</span> a Sofia.</div>
-                        </div>
-                        <div class="mt-3 p-3 bg-blue-50 rounded-lg text-xs text-gray-700">
-                            <strong>💡 Note:</strong> In Portuguese, the subject pronoun "eu" is often dropped because the verb conjugation (-ou ending) already indicates first person.<br><br>
-                            <strong>📖 Pronunciation Rules:</strong> Same as Step 1 (Final -o, de, -om, -l)
-                        </div>
-                    </div>
-
-                    <!-- Step 3: Concatenated (natural flow) -->
-                    <div class="step-card md:bg-white md:rounded-lg md:shadow-md p-0 md:p-5">
-                        <div class="flex items-center justify-between mb-3">
-                            <div class="flex items-center gap-3">
-                                <div class="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">3</div>
-                                <div>
-                                    <h3 class="text-base font-bold text-gray-900">Step 3: Concatenated (natural flow)</h3>
-                                    <p class="text-xs text-gray-600">Advanced level - sentences flow naturally together</p>
-                                </div>
-                            </div>
-                            <button class="speaker-btn" data-text="Sou o Daniel. Sou americano, de Miami. Sou analista e sou casado com a Sofia." aria-label="Play full step 3" title="Click to hear natural flow version">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
-                            </button>
-                        </div>
-                        <div class="bg-slate-50 rounded-lg p-4 font-mono text-base leading-relaxed">
-                            <p>
-                                <strong>Sou</strong> o<span class="pronunciation" title="Final -o → /u/">/u/</span> Daniel<span class="pronunciation" title="\'Daniel\' → /u/ (syllable-final -l)">/u/</span>.
-                                <strong>Sou</strong> americano<span class="pronunciation" title="\'americano\' → /u/ (final -o)">/u/</span>,
-                                de<span class="pronunciation" title="\'de\' → /dji/ (always)">/dji/</span> Miami.
-                                <strong>Sou</strong> analista
-                                e<span class="pronunciation" title="\'e\' → /i/ (final -e)">/i/</span> <strong>sou</strong> casado<span class="pronunciation" title="\'casado\' → /u/ (final -o)">/u/</span>
-                                com<span class="pronunciation" title="\'com\' → /oun/ (final -om)">/coun/</span> a Sofia.
-                            </p>
-                        </div>
-                        <div class="mt-3 text-xs text-gray-600 italic">
-                            <strong>Translation:</strong> I'm Daniel. I'm American, from Miami. I'm an analyst and I'm married to Sofia.
-                        </div>
-                        <div class="mt-2 p-3 bg-purple-50 rounded-lg text-xs text-gray-700">
-                            <strong>📖 Pronunciation Rules:</strong> Final -o, -e, de, -om, -l •
-                            <span class="italic">Hover over annotations to see which rule applies</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-            </div>
-        </section>
-
-<!-- Vocabulary Section -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Vocabulary - Unit 1</h2>
-
-            <!-- Verbs -->
-            <div class="md:bg-white md:rounded-xl md:shadow-lg p-0 md:p-6 mb-6">
-                <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <span class="text-2xl">🔤</span> Verbs
-                </h3>
-                <div class="space-y-3">
-                    <div class="vocab-item p-3 border-l-2 border-transparent">
-                        <div class="font-semibold text-gray-900">ser <span class="text-sm text-gray-500">/verb/</span></div>
-                        <div class="text-sm text-gray-600">to be (permanent/identity)</div>
-                        <div class="text-sm text-sky-600 mt-1">→ (eu) sou = I am</div>
-                    </div>
-                </div>
+        <!-- PART 2: The Key Phrase -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Learn "Eu sou"</h2>
             </div>
 
-            <!-- Nationalities -->
-            <div class="md:bg-white md:rounded-xl md:shadow-lg p-0 md:p-6 mb-6">
-                <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <span class="text-2xl">🌍</span> Nationalities
-                </h3>
-                <div class="space-y-3">
-                    <div class="vocab-item p-3 border-l-2 border-transparent">
-                        <div class="font-semibold text-gray-900">americano (m) / americana (f)</div>
-                        <div class="text-sm text-gray-600">American</div>
-                    </div>
-                    <div class="vocab-item p-3 border-l-2 border-transparent">
-                        <div class="font-semibold text-gray-900">brasileiro (m) / brasileira (f)</div>
-                        <div class="text-sm text-gray-600">Brazilian</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Professions -->
-            <div class="md:bg-white md:rounded-xl md:shadow-lg p-0 md:p-6 mb-6">
-                <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <span class="text-2xl">💼</span> Professions
-                </h3>
-                <div class="space-y-3">
-                    <div class="vocab-item p-3 border-l-2 border-transparent">
-                        <div class="font-semibold text-gray-900">analista <span class="text-sm text-gray-500">(m/f)</span></div>
-                        <div class="text-sm text-gray-600">analyst</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Adjectives -->
-            <div class="md:bg-white md:rounded-xl md:shadow-lg p-0 md:p-6 mb-6">
-                <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <span class="text-2xl">📝</span> Descriptive Adjectives
-                </h3>
-                <div class="space-y-3">
-                    <div class="vocab-item p-3 border-l-2 border-transparent">
-                        <div class="font-semibold text-gray-900">casado (m) / casada (f)</div>
-                        <div class="text-sm text-gray-600">married</div>
-                    </div>
-                    <div class="vocab-item p-3 border-l-2 border-transparent">
-                        <div class="font-semibold text-gray-900">solteiro (m) / solteira (f)</div>
-                        <div class="text-sm text-gray-600">single</div>
-                    </div>
-                    <div class="vocab-item p-3 border-l-2 border-transparent">
-                        <div class="font-semibold text-gray-900">alto (m) / alta (f)</div>
-                        <div class="text-sm text-gray-600">tall</div>
-                    </div>
-                    <div class="vocab-item p-3 border-l-2 border-transparent">
-                        <div class="font-semibold text-gray-900">baixo (m) / baixa (f)</div>
-                        <div class="text-sm text-gray-600">short</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Relationships -->
-            <div class="md:bg-white md:rounded-xl md:shadow-lg p-0 md:p-6 mb-6">
-                <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <span class="text-2xl">👥</span> Relationships
-                </h3>
-                <div class="space-y-3">
-                    <div class="vocab-item p-3 border-l-2 border-transparent">
-                        <div class="font-semibold text-gray-900">colega <span class="text-sm text-gray-500">(m/f)</span></div>
-                        <div class="text-sm text-gray-600">colleague</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Grammar Words -->
-            <div class="md:bg-white md:rounded-xl md:shadow-lg p-0 md:p-6 mb-6">
-                <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <span class="text-2xl">⚙️</span> Articles & Grammar
-                </h3>
-                <div class="space-y-3">
-                    <div class="vocab-item p-3 border-l-2 border-transparent">
-                        <div class="font-semibold text-gray-900">o (m) / a (f)</div>
-                        <div class="text-sm text-gray-600">the (definite article)</div>
-                    </div>
-                    <div class="vocab-item p-3 border-l-2 border-transparent">
-                        <div class="font-semibold text-gray-900">um (m) / uma (f)</div>
-                        <div class="text-sm text-gray-600">a, an (indefinite article)</div>
-                    </div>
-                    <div class="vocab-item p-3 border-l-2 border-transparent">
-                        <div class="font-semibold text-gray-900">de</div>
-                        <div class="text-sm text-gray-600">from, of</div>
-                        <div class="text-xs text-gray-500 mt-1">Contractions: de + o = do, de + a = da</div>
-                    </div>
-                    <div class="vocab-item p-3 border-l-2 border-transparent">
-                        <div class="font-semibold text-gray-900">com</div>
-                        <div class="text-sm text-gray-600">with</div>
-                    </div>
-                    <div class="vocab-item p-3 border-l-2 border-transparent">
-                        <div class="font-semibold text-gray-900">e</div>
-                        <div class="text-sm text-gray-600">and</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pronunciation Guide -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Pronunciation Guide</h2>
-            <div class="md:bg-gradient-to-br md:from-amber-50 md:to-orange-50 md:rounded-xl md:shadow-lg p-0 md:p-6 md:border-l-4 md:border-amber-500">
-                <div class="flex items-start gap-3 mb-4">
-                    <span class="text-3xl">🔊</span>
+            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                <div class="flex items-center gap-3">
                     <div>
-                        <h3 class="text-lg font-bold text-gray-900">Brazilian Portuguese Reductions</h3>
-                        <p class="text-sm text-gray-600">Common sound changes in natural speech</p>
+                        <p class="text-3xl font-bold text-blue-900" data-hoverable="true">Eu sou</p>
+                        <p class="text-sm text-blue-600 font-mono italic mt-1">ÊH-OO SÔH</p>
                     </div>
+                    <button class="speaker-btn" data-text="Eu sou" aria-label="Hear pronunciation">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                    </button>
                 </div>
+                <p class="text-blue-700 mt-1">= I am</p>
+            </div>
+
+            <div class="space-y-3">
+                <div class="flex items-center gap-3 text-gray-700">
+                    <span class="text-2xl">👤</span>
+                    <div><strong data-hoverable="true">Eu</strong> = I (the person speaking)</div>
+                </div>
+                <div class="flex items-center gap-3 text-gray-700">
+                    <span class="text-2xl">🔗</span>
+                    <div><strong data-hoverable="true">sou</strong> = am (from the verb "<span data-hoverable="true">ser</span>" - to be)</div>
+                </div>
+            </div>
+
+            <div class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg text-gray-700">
+                <strong class="text-blue-800">Why "<span data-hoverable="true">sou</span>"?</strong> Portuguese verbs change based on who's doing the action. "<span data-hoverable="true">Sou</span>" is the "I" form of "<span data-hoverable="true">ser</span>" (to be).
+            </div>
+        </section>
+
+        <!-- PART 3: Say Your Name -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Say Your Name</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">
+                <strong>When to use this:</strong> Meeting someone for the first time, introducing yourself.
+            </p>
+
+            <div class="bg-slate-50 p-4 rounded-lg mb-4">
+                <p class="font-mono text-gray-600 mb-2"><span data-hoverable="true">Eu sou</span> <span class="text-blue-600" data-hoverable="true">o</span>/<span class="text-blue-600" data-hoverable="true">a</span> + <span class="text-blue-600">[your name]</span></p>
+                <p class="text-sm text-gray-500 mt-2"><strong data-hoverable="true">o</strong> = for male names &bull; <strong data-hoverable="true">a</strong> = for female names</p>
+            </div>
+
+            <div class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg text-gray-700 mb-4">
+                <strong class="text-blue-800">Why "o" or "a"?</strong> In Brazilian Portuguese, names are treated as third-person nouns, so they take the definite article (o/a) - even when talking about yourself!
+            </div>
+
+            <h3 class="font-semibold text-gray-900 mb-3">Examples:</h3>
+            <div class="space-y-3">
+                <div class="example-sentence p-3 bg-white border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1">
+                            <p class="font-medium text-gray-900" data-hoverable="true">Eu sou o Daniel.</p>
+                            <p class="text-xs text-gray-600 font-mono italic">ÊH-OO SÔH oo dah-nee-É-oo</p>
+                        </div>
+                        <button class="speaker-btn" data-text="Eu sou o Daniel" aria-label="Hear pronunciation">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">I am Daniel. (male name = <strong>o</strong>)</p>
+                </div>
+                <div class="example-sentence p-3 bg-white border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1">
+                            <p class="font-medium text-gray-900" data-hoverable="true">Eu sou a Sofia.</p>
+                            <p class="text-xs text-gray-600 font-mono italic">ÊH-OO SÔH ah sô-FEE-ah</p>
+                        </div>
+                        <button class="speaker-btn" data-text="Eu sou a Sofia" aria-label="Hear pronunciation">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">I am Sofia. (female name = <strong>a</strong>)</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- PART 4: Say Where You're From -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Say What City You're From</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">
+                <strong>When to use this:</strong> When someone asks where you're from, or when introducing yourself more fully.
+            </p>
+
+            <div class="bg-slate-50 p-4 rounded-lg mb-4">
+                <p class="font-mono text-gray-600 mb-2"><span data-hoverable="true">Eu sou de</span> + <span class="text-blue-600">[city]</span></p>
+                <p class="text-sm text-gray-500"><strong data-hoverable="true">de</strong> = from, of</p>
+            </div>
+
+            <div class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg text-gray-700 mb-4">
+                <strong class="text-blue-800">Pronunciation:</strong> In Brazilian Portuguese, "<span data-hoverable="true">de</span>" sounds like "djee" (the "d" before "e" or "i" becomes a "dj" sound).
+                <button class="speaker-btn ml-2 inline-flex align-middle" data-text="de" aria-label="Hear pronunciation of de">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+
+            <h3 class="font-semibold text-gray-900 mb-3">Examples:</h3>
+            <div class="space-y-3">
+                <div class="example-sentence p-3 bg-white border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1">
+                            <p class="font-medium text-gray-900" data-hoverable="true">Eu sou de Miami.</p>
+                            <p class="text-xs text-gray-600 font-mono italic">ÊH-OO SÔH jee mee-ah-MEE</p>
+                        </div>
+                        <button class="speaker-btn" data-text="Eu sou de Miami" aria-label="Hear pronunciation">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">I am from Miami.</p>
+                </div>
+                <div class="example-sentence p-3 bg-white border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1">
+                            <p class="font-medium text-gray-900" data-hoverable="true">Eu sou de Nova York.</p>
+                            <p class="text-xs text-gray-600 font-mono italic">ÊH-OO SÔH jee nô-VAH ôrk</p>
+                        </div>
+                        <button class="speaker-btn" data-text="Eu sou de Nova York" aria-label="Hear pronunciation">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">I am from New York.</p>
+                </div>
+                <div class="example-sentence p-3 bg-white border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1">
+                            <p class="font-medium text-gray-900" data-hoverable="true">Eu sou de São Paulo.</p>
+                            <p class="text-xs text-gray-600 font-mono italic">ÊH-OO SÔH jee SAHOO PAH-OO-loo</p>
+                        </div>
+                        <button class="speaker-btn" data-text="Eu sou de São Paulo" aria-label="Hear pronunciation">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">I am from São Paulo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 5: Put It Together -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Put It Together</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">
+                Now combine what you've learned into a mini self-introduction:
+            </p>
+
+            <div class="bg-gradient-to-r from-emerald-50 to-green-50 p-5 rounded-lg border border-emerald-200">
                 <div class="space-y-3">
-                    <div class="bg-white rounded-lg p-4">
-                        <div class="font-mono text-lg mb-1">Final -o → <span class="pronunciation" title="Final -o → /u/">/u/</span></div>
-                        <div class="text-sm text-gray-600">Final unstressed "o" sounds like "oo" in "food"</div>
-                        <div class="text-sm text-gray-500 mt-1">Examples:</div>
-                        <div class="mt-2 space-y-1 text-sm">
-                            <div>americano<span class="pronunciation" title="\'americano\' → /u/ (final -o)">/u/</span> → <span class="font-mono text-blue-600">americanu</span></div>
-                            <div>Paulo<span class="pronunciation" title="\'Paulo\' → /u/ (final -o)">/u/</span> → <span class="font-mono text-blue-600">Paulu</span></div>
-                            <div>do<span class="pronunciation" title="\'do\' → /u/ (final -o)">/u/</span> → <span class="font-mono text-blue-600">du</span></div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex-1">
+                                <p class="text-lg font-medium text-gray-900" data-hoverable="true">Eu sou o Daniel.</p>
+                                <p class="text-xs text-emerald-700 font-mono italic">ÊH-OO SÔH oo dah-nee-É-oo</p>
+                            </div>
+                            <button class="speaker-btn" data-text="Eu sou o Daniel" aria-label="Hear pronunciation">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                            </button>
                         </div>
+                        <p class="text-sm text-gray-600 mt-2">I am Daniel.</p>
                     </div>
-                    <div class="bg-white rounded-lg p-4">
-                        <div class="font-mono text-lg mb-1">de → <span class="pronunciation" title="Final de → /dji/ (always)">/dji/</span></div>
-                        <div class="text-sm text-gray-600">"de" sounds like "djee" (soft "j" sound)</div>
-                        <div class="text-sm text-gray-500 mt-1">Examples:</div>
-                        <div class="mt-2 space-y-1 text-sm">
-                            <div>de<span class="pronunciation" title="\'de\' → /dji/ (always)">/dji/</span> Miami → <span class="font-mono text-blue-600">dji Miami</span></div>
-                            <div>de<span class="pronunciation" title="\'de\' → /dji/ (always)">/dji/</span> São Paulo → <span class="font-mono text-blue-600">dji São Paulo</span></div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex-1">
+                                <p class="text-lg font-medium text-gray-900" data-hoverable="true">Eu sou de Miami.</p>
+                                <p class="text-xs text-emerald-700 font-mono italic">ÊH-OO SÔH jee mee-ah-MEE</p>
+                            </div>
+                            <button class="speaker-btn" data-text="Eu sou de Miami" aria-label="Hear pronunciation">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                            </button>
                         </div>
+                        <p class="text-sm text-gray-600 mt-2">I am from Miami.</p>
                     </div>
-                    <div class="bg-white rounded-lg p-4">
-                        <div class="font-mono text-lg mb-1">e → <span class="pronunciation" title="Final -e → /i/">/i/</span></div>
-                        <div class="text-sm text-gray-600">Final "e" sounds like "ee" in "see"</div>
-                        <div class="text-sm text-gray-500 mt-1">Examples:</div>
-                        <div class="mt-2 space-y-1 text-sm">
-                            <div>e<span class="pronunciation" title="\'e\' → /i/ (final -e)">/i/</span> (and) → <span class="font-mono text-blue-600">i</span></div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg p-4">
-                        <div class="font-mono text-lg mb-1">com → <span class="pronunciation" title="Final -om → /oun/">/coun/</span></div>
-                        <div class="text-sm text-gray-600">"com" has a nasal sound</div>
-                        <div class="text-sm text-gray-500 mt-1">Examples:</div>
-                        <div class="mt-2 space-y-1 text-sm">
-                            <div>com<span class="pronunciation" title="\'com\' → /oun/ (final -om)">/coun/</span> a Sofia → <span class="font-mono text-blue-600">coun a Sofia</span></div>
-                        </div>
-                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-emerald-200">
+                    <button class="speaker-btn w-full justify-center gap-2 py-2" data-text="Eu sou o Daniel. Eu sou de Miami." aria-label="Hear full introduction" style="width: 100%;">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        <span>Hear full introduction</span>
+                    </button>
                 </div>
             </div>
         </section>
 
-        <!-- Practice Exercises -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Practice Exercises</h2>
-            <div class="md:bg-white md:rounded-xl md:shadow-lg p-0 md:p-6">
-                <div class="text-center py-8 md:py-12">
-                    <div class="text-6xl mb-4">🎯</div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Interactive Exercises Coming Soon</h3>
-                    <p class="text-gray-600 mb-6">Practice what you've learned with interactive drills</p>
-                    <a href="/?action=start-session" class="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        Start Practice Session
-                    </a>
+        <!-- Vocabulary Summary -->
+        <section class="lesson-card">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Words You Learned</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div class="vocab-item p-3 border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <p class="font-semibold text-gray-900" data-hoverable="true">eu</p>
+                        <button class="speaker-btn" data-text="eu" aria-label="Hear pronunciation">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">I</p>
+                </div>
+                <div class="vocab-item p-3 border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <p class="font-semibold text-gray-900" data-hoverable="true">sou</p>
+                        <button class="speaker-btn" data-text="sou" aria-label="Hear pronunciation">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">am (I am)</p>
+                </div>
+                <div class="vocab-item p-3 border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <p class="font-semibold text-gray-900"><span data-hoverable="true">o</span> / <span data-hoverable="true">a</span></p>
+                        <button class="speaker-btn" data-text="o, a" aria-label="Hear pronunciation">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">the (before names)</p>
+                </div>
+                <div class="vocab-item p-3 border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <p class="font-semibold text-gray-900" data-hoverable="true">de</p>
+                        <button class="speaker-btn" data-text="de" aria-label="Hear pronunciation">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">from, of</p>
+                </div>
+                <div class="vocab-item p-3 border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <p class="font-semibold text-gray-900" data-hoverable="true">ser</p>
+                        <button class="speaker-btn" data-text="ser" aria-label="Hear pronunciation">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">to be</p>
                 </div>
             </div>
         </section>
 
-        <!-- Navigation -->
-        <div class="flex justify-between items-center">
-            <a href="/syllabus.html" class="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 font-medium">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                </svg>
-                Back to Syllabus
+        <!-- What's Next -->
+        <section class="lesson-card bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200">
+            <h2 class="text-xl font-bold text-gray-900 mb-3">What's Next?</h2>
+            <p class="text-gray-700 mb-4">
+                In Unit 2, you'll learn to say your nationality and profession - expanding your self-introduction even further!
+            </p>
+            <a href="/lessons/unit-2.html" class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                Continue to Unit 2
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
             </a>
-            <div class="inline-flex items-center gap-2 bg-gray-300 text-gray-600 font-bold px-6 py-3 rounded-lg cursor-not-allowed" title="Coming soon">
-                Next: Unit 2 (Coming Soon)
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-                </svg>
-            </div>
-        </div>
+        </section>
 
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-100 border-t mt-12">
-        <div class="container mx-auto max-w-full lg:max-w-6xl px-2 md:px-4 py-8 text-center text-gray-600 text-sm">
-            <p>© 2025 Portuguese Language Tutor</p>
-            <p class="mt-2">
-                <a href="/" class="text-sky-600 hover:text-sky-700">Home</a> •
-                <a href="/syllabus.html" class="text-sky-600 hover:text-sky-700">Syllabus</a> •
-                <a href="/?section=placement-test" class="text-sky-600 hover:text-sky-700">Placement Test</a>
-            </p>
+    <footer class="bg-gray-100 border-t mt-8">
+        <div class="container mx-auto max-w-3xl px-4 py-6 text-center text-gray-600 text-sm">
+            <a href="/syllabus.html" class="hover:text-blue-600">&larr; Back to Syllabus</a>
         </div>
     </footer>
 
-
-    <!-- Speech Utility -->
-    <script src="/speech.js"></script>
-
+    <!-- Text-to-Speech Script -->
     <script>
-        // Add speaker buttons to Portuguese sentences
+        // Simple TTS using Web Speech API
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) {
+                // Cancel any ongoing speech
+                window.speechSynthesis.cancel();
+
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'pt-BR';
+                utterance.rate = options.rate || 0.9;
+
+                if (options.onEnd) utterance.onend = options.onEnd;
+                if (options.onError) utterance.onerror = options.onError;
+
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+
+        // Initialize speaker buttons
         document.addEventListener('DOMContentLoaded', function() {
-            // Handle ALL speaker buttons with data-text attribute (includes three-step AND hero button)
             const speakerButtons = document.querySelectorAll('.speaker-btn[data-text]');
             speakerButtons.forEach(function(btn) {
-                const textToSpeak = btn.getAttribute('data-text');
-                const preferFemale = btn.getAttribute('data-prefer-female') === 'true';
-
                 btn.addEventListener('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
 
-                    btn.classList.add('speaking');
+                    const text = this.getAttribute('data-text');
+                    this.classList.add('speaking');
 
-                    speak(textToSpeak, {
-                        preferFemale: preferFemale,
-                        onEnd: () => btn.classList.remove('speaking'),
-                        onError: () => btn.classList.remove('speaking')
+                    speak(text, {
+                        onEnd: () => this.classList.remove('speaking'),
+                        onError: () => this.classList.remove('speaking')
                     });
                 });
             });
 
-            // Helper function to clean text for speech
-            function cleanTextForSpeech(text) {
-                // Helper to clean annotations from a single part
-                function cleanAnnotations(str) {
-                    // Remove anything between slashes: [m], [f], /u/, etc.
-                    str = str.replace(/\/[^\/]+\//g, '');
-                    // Remove leftover slash fragments: f/, m/, etc.
-                    str = str.replace(/[a-z]+\/|\/[a-z]+/gi, '');
-                    // Clean up spaces
-                    return str.replace(/\s+/g, ' ').trim();
-                }
+            console.log('[Unit 1] Initialized', speakerButtons.length, 'speaker buttons');
+        });
 
-                // If there's a slash separator, handle both parts
-                if (text.includes(' / ')) {
-                    const parts = text.split(' / ');
-                    const cleaned = parts.map(cleanAnnotations);
-                    // Use comma for longer pause (better for single letters like "o, a")
-                    return cleaned.join(', ');
-                } else {
-                    return cleanAnnotations(text);
+        // ===== Hover Dictionary System =====
+        let dictionary = { phrases: {}, words: {} };
+
+        async function loadDictionary() {
+            try {
+                const response = await fetch('/config/dictionary.json');
+                dictionary = await response.json();
+                console.log('[Unit 1] Dictionary loaded');
+            } catch (error) {
+                console.error('[Unit 1] Failed to load dictionary:', error);
+            }
+        }
+
+        function lookupWord(word) {
+            const lowerWord = word.toLowerCase();
+            if (dictionary.words && dictionary.words[lowerWord]) {
+                return dictionary.words[lowerWord];
+            }
+            for (const [key, value] of Object.entries(dictionary.words || {})) {
+                if (key.toLowerCase() === lowerWord) {
+                    return value;
                 }
             }
-            // Find all Portuguese sentence elements (SKIP three-step examples)
-            const sentences = document.querySelectorAll('.font-medium');
+            return null;
+        }
 
-            sentences.forEach(function(sentence) {
-                // Skip if already has speaker button
-                if (sentence.querySelector('.speaker-btn')) return;
+        function addTooltips(text) {
+            let withTooltips = text;
 
-                // Skip if part of a three-step example (has .example-sentence ancestor)
-                if (sentence.closest('.example-sentence')) return;
+            // Process phrases first (longest first)
+            const phrases = Object.entries(dictionary.phrases || {})
+                .sort((a, b) => b[0].length - a[0].length);
 
-                // Get and clean the Portuguese text
-                const portugueseText = cleanTextForSpeech(sentence.textContent.trim());
-
-                // Create speaker button
-                const speakerBtn = document.createElement('button');
-                speakerBtn.className = 'speaker-btn';
-                speakerBtn.setAttribute('aria-label', 'Speak this sentence');
-                speakerBtn.setAttribute('title', 'Click to hear pronunciation');
-                speakerBtn.innerHTML = '<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>';
-
-                // Add click handler
-                speakerBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-
-                    // Add speaking class for visual feedback
-                    speakerBtn.classList.add('speaking');
-
-                    // Speak the text
-                    speak(portugueseText, {
-                        onEnd: function() {
-                            speakerBtn.classList.remove('speaking');
-                        },
-                        onError: function() {
-                            speakerBtn.classList.remove('speaking');
-                        }
-                    });
+            for (const [phrase, translation] of phrases) {
+                const safeTranslation = translation.replace(/"/g, '&quot;');
+                const escapedPhrase = phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                const phraseRegex = new RegExp(
+                    `(?<![A-Za-zÀ-ÿ])(${escapedPhrase})(?![A-Za-zÀ-ÿ])`,
+                    'gi'
+                );
+                withTooltips = withTooltips.replace(phraseRegex, function(match) {
+                    return `<span class="phrase-tooltip" data-translation="${safeTranslation}">${match}</span>`;
                 });
+            }
 
-                // Add button after the sentence
-                sentence.appendChild(speakerBtn);
-            });
-            
-            // Also add to vocabulary items
-            const vocabItems = document.querySelectorAll('.vocab-item .font-semibold');
-            vocabItems.forEach(function(item) {
-                if (item.querySelector('.speaker-btn')) return;
-
-                // Get and clean the vocabulary text
-                const portugueseText = cleanTextForSpeech(item.textContent.trim());
-                
-                const speakerBtn = document.createElement('button');
-                speakerBtn.className = 'speaker-btn';
-                speakerBtn.setAttribute('aria-label', 'Speak this word');
-                speakerBtn.innerHTML = '<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>';
-                
-                speakerBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    speakerBtn.classList.add('speaking');
-                    speak(portugueseText, {
-                        onEnd: () => speakerBtn.classList.remove('speaking'),
-                        onError: () => speakerBtn.classList.remove('speaking')
-                    });
-                });
-                
-                item.appendChild(speakerBtn);
-            });
-            
-            // Make pronunciation annotations clickable to hear the sound
-            const pronunciations = document.querySelectorAll('.pronunciation[title]');
-            pronunciations.forEach(function(annotation) {
-                // Make tappable/clickable
-                annotation.style.cursor = 'pointer';
-                annotation.style.position = 'relative';
-
-                annotation.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-
-                    // Get the phonetic sound (text between slashes, e.g., /u/ -> u)
-                    const phoneticText = this.textContent.replace(/\//g, '').trim();
-
-                    // Speak the sound
-                    if (phoneticText) {
-                        speak(phoneticText, {
-                            rate: 0.7  // Slower for clarity
-                        });
+            // Process single words
+            withTooltips = withTooltips.replace(
+                /(<span[^>]*>.*?<\/span>)|([A-Za-zÀ-ÿ]+)/g,
+                function(match, spanGroup, wordGroup) {
+                    if (spanGroup) return spanGroup;
+                    const translation = lookupWord(wordGroup);
+                    if (translation) {
+                        const safeTranslation = translation.replace(/"/g, '&quot;');
+                        return `<span class="word-tooltip" data-translation="${safeTranslation}">${wordGroup}</span>`;
                     }
-
-                    // Remove any existing tooltips
-                    document.querySelectorAll('.mobile-tooltip').forEach(t => t.remove());
-
-                    // Create tooltip
-                    const tooltip = document.createElement('div');
-                    tooltip.className = 'mobile-tooltip';
-                    tooltip.textContent = this.getAttribute('title');
-                    tooltip.style.cssText = `
-                        position: absolute;
-                        bottom: 100%;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        background: #1f2937;
-                        color: white;
-                        padding: 8px 12px;
-                        border-radius: 6px;
-                        font-size: 12px;
-                        white-space: nowrap;
-                        z-index: 1000;
-                        margin-bottom: 5px;
-                        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-                    `;
-
-                    // Add arrow
-                    const arrow = document.createElement('div');
-                    arrow.style.cssText = `
-                        position: absolute;
-                        top: 100%;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        width: 0;
-                        height: 0;
-                        border-left: 6px solid transparent;
-                        border-right: 6px solid transparent;
-                        border-top: 6px solid #1f2937;
-                    `;
-                    tooltip.appendChild(arrow);
-
-                    this.appendChild(tooltip);
-
-                    // Remove after 3 seconds
-                    setTimeout(() => tooltip.remove(), 3000);
-                });
-            });
-
-            // Make substitution texts clickable to hear original pronunciation
-            const substitutionTexts = document.querySelectorAll('.substitution-text[data-original]');
-            substitutionTexts.forEach(function(element) {
-                element.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-
-                    const originalText = this.getAttribute('data-original');
-                    if (originalText) {
-                        speak(originalText, {
-                            rate: 0.7  // Slower for clarity
-                        });
-                    }
-                });
-            });
-
-            // Close tooltips when tapping elsewhere
-            document.addEventListener('click', function(e) {
-                if (!e.target.classList.contains('pronunciation')) {
-                    document.querySelectorAll('.mobile-tooltip').forEach(t => t.remove());
+                    return wordGroup;
                 }
-            });
+            );
 
-            console.log('[Unit 1] Speaker buttons, mobile tooltips, and substitution texts initialized');
+            return withTooltips;
+        }
+
+        function processHoverableElements() {
+            const hoverableElements = document.querySelectorAll('[data-hoverable="true"]');
+            hoverableElements.forEach(function(el) {
+                if (el.dataset.processed) return;
+                const originalText = el.textContent;
+                el.innerHTML = addTooltips(originalText);
+                el.dataset.processed = 'true';
+            });
+            console.log('[Unit 1] Processed', hoverableElements.length, 'hoverable elements');
+        }
+
+        // Mobile tap support
+        document.addEventListener('click', function(e) {
+            const tooltip = e.target.closest('.word-tooltip, .phrase-tooltip');
+            document.querySelectorAll('.word-tooltip.active, .phrase-tooltip.active').forEach(el => {
+                if (el !== tooltip) el.classList.remove('active');
+            });
+            if (tooltip) {
+                tooltip.classList.toggle('active');
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', async function() {
+            await loadDictionary();
+            processHoverableElements();
         });
     </script>
     <!-- PWA Setup -->
