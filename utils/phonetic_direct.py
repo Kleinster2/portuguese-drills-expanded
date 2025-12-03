@@ -285,39 +285,45 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
         # Check for diphthongs FIRST (atomic units)
         found_diphthong = False
 
-        # EU diphthong → êh-oo (lowercase, will capitalize if stressed)
+        # EU diphthong → ÊH-oo (first part capitalized, second part stays lowercase)
         if syl[i:i+2] == 'eu':
-            result += 'êh-oo'
+            result += 'êh-<oo>'
             i += 2
             found_diphthong = True
 
-        # OU diphthong → ôh (closed O, lowercase, will capitalize if stressed)
+        # OU diphthong → ÔH (closed O, single sound)
         elif syl[i:i+2] == 'ou':
             result += 'ôh'
             i += 2
             found_diphthong = True
 
-        # EI diphthong → êh (closed E, lowercase, will capitalize if stressed)
+        # EI diphthong → ÊH (closed E, single sound)
         elif syl[i:i+2] == 'ei':
             result += 'êh'
             i += 2
             found_diphthong = True
 
-        # AI diphthong → ah-ee (lowercase, will capitalize if stressed)
+        # AI diphthong → AH-ee (first part capitalized, second part stays lowercase)
         elif syl[i:i+2] == 'ai':
-            result += 'ah-ee'
+            result += 'ah-<ee>'
             i += 2
             found_diphthong = True
 
-        # OI diphthong → oh-ee (lowercase, will capitalize if stressed)
+        # OI diphthong → OH-ee (first part capitalized, second part stays lowercase)
         elif syl[i:i+2] == 'oi':
-            result += 'oh-ee'
+            result += 'oh-<ee>'
             i += 2
             found_diphthong = True
 
-        # AU diphthong → ah-oo (lowercase, will capitalize if stressed)
+        # AU diphthong → AH-oo (first part capitalized, second part stays lowercase)
         elif syl[i:i+2] == 'au':
-            result += 'ah-oo'
+            result += 'ah-<oo>'
+            i += 2
+            found_diphthong = True
+
+        # ÃO nasal diphthong → AH-oo (nasal, first part capitalized, second lowercase)
+        elif syl[i:i+2] == 'ão':
+            result += 'ah-<oo>'
             i += 2
             found_diphthong = True
 
