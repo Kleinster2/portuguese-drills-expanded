@@ -482,9 +482,15 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
             else:
                 result += 'ah'
         elif char in 'eéêè':
+            # Check if this is final unstressed -e (becomes 'ee')
+            is_final_e = (i == len(syl) - 1 or (i == len(syl) - 2 and syl[i+1] == 's')) and (syl_index == total_syls - 1) and not is_stressed and char == 'e'
+
+            if is_final_e:
+                # Final unstressed -e → ee
+                result += 'ee'
             # Check if followed by m/n in same syllable (nasalization)
-            if i + 1 < len(syl) and syl[i+1] in 'mn':
-                # Nasal E → ẽ (we'll use ê with tilde for simplicity)
+            elif i + 1 < len(syl) and syl[i+1] in 'mn':
+                # Nasal E → ẽ
                 result += 'ẽ'
             else:
                 # Apply E quality rules
