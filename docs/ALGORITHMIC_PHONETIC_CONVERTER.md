@@ -1,6 +1,6 @@
 # Algorithmic Phonetic Converter
 
-**Version:** 3.0
+**Version:** 3.1
 **Date:** 2025-01-03
 **Status:** Production
 **File:** `utils/phonetic_direct.py`
@@ -9,16 +9,17 @@
 
 ## Overview
 
-The Algorithmic Phonetic Converter transforms Portuguese text into dictionary-style phonetic transcriptions **without any dictionary lookups**. It achieves 90-95% accuracy using rule-based algorithms for all pronunciation patterns.
+The Algorithmic Phonetic Converter transforms Portuguese text into dictionary-style phonetic transcriptions using rule-based algorithms. It checks a small exception dictionary first (<1% of vocabulary), then falls back to algorithmic generation. It achieves 90-95% accuracy on Brazilian Portuguese.
 
 ### Key Features
 
-- ✅ **100% Algorithmic** - No word dictionaries required
+- ✅ **Algorithmic Generation** - Rule-based with small exception dictionary (<1%)
 - ✅ **Vowel Quality** - Distinguishes é/ê and ó/ô systematically
 - ✅ **Digraphs** - Handles lh→ly, nh→ñ, ch→sh
 - ✅ **X Pronunciation** - Context Hierarchy algorithm (90-95% accuracy)
 - ✅ **Function Words** - Properly handles unstressed articles/prepositions
 - ✅ **Stress Detection** - Uses Portuguese stress rules
+- ✅ **Exception Dictionary** - Handles irregular words when needed
 - ✅ **Modular Design** - Word-level processing, sandhi as future step
 
 ---
@@ -28,13 +29,14 @@ The Algorithmic Phonetic Converter transforms Portuguese text into dictionary-st
 ### Processing Pipeline
 
 ```
-Input Word → Syllabify → Find Stress → Transform Each Syllable → Join with Hyphens → Output
+Input Word → Check Exception Dictionary → [If not found] → Syllabify → Find Stress → Transform Each Syllable → Join with Hyphens → Output
 ```
 
 #### Example Flow
 
 ```
 "brasileiro"
+  → Not in PHONETIC_EXCEPTIONS
   → ['bra', 'si', 'lei', 'ro'] (syllabify)
   → stress on 'lei' (penultimate)
   → ['brah', 'zee', 'LÉI', 'roo'] (transform)
@@ -851,6 +853,94 @@ Use capital letters with H suffix: ÉH, ÊH, ÓH, ÔH in stressed syllables.
 
 ---
 
+### ADR-011: Exception Dictionary for Irregular Words
+
+**Status:** Accepted (v3.1)
+
+**Context:**
+- Algorithm achieves ~90-95% accuracy
+- Some words have truly irregular pronunciations that don't fit patterns
+- Don't want to complicate algorithm with one-off special cases
+- Need mechanism to handle edge cases without sacrificing maintainability
+
+**Decision:**
+Add small exception dictionary (`PHONETIC_EXCEPTIONS`) checked before algorithmic generation. Only for words where algorithm produces incorrect output.
+
+**Alternatives Considered:**
+
+1. **No exceptions (pure algorithm)**
+   - ❌ Some words will always be wrong
+   - ❌ Can't override for truly irregular cases
+   - ✅ Simplest approach (already implemented)
+
+2. **Add special cases to algorithm**
+   - ❌ Makes algorithm complex
+   - ❌ Hard to maintain (special cases everywhere)
+   - ❌ Doesn't scale (new exception = new code)
+
+3. **Small exception dictionary (chosen)**
+   - ✅ Simple: just a dict lookup
+   - ✅ Fast: O(1) check before algorithm
+   - ✅ Maintainable: easy to add/remove entries
+   - ✅ Doesn't complicate algorithm
+   - ✅ Self-documenting: exceptions are explicit
+
+4. **Large comprehensive dictionary**
+   - ❌ Defeats purpose of algorithmic approach
+   - ❌ See ADR-010 (already rejected)
+
+**Consequences:**
+- ✅ Can handle true irregularities
+- ✅ Algorithm stays clean (no special cases)
+- ✅ Easy to add exceptions as discovered
+- ⚠️ Must maintain exception list (but should be <1% of words)
+- ⚠️ Could be misused (adding too many exceptions defeats purpose)
+
+**Implementation:**
+```python
+PHONETIC_EXCEPTIONS = {
+    # Format: 'word': 'phonetic-transcription'
+    # Only add truly irregular words
+}
+
+def portuguese_to_phonetic(word):
+    # Check exceptions first
+    if word.lower() in PHONETIC_EXCEPTIONS:
+        return PHONETIC_EXCEPTIONS[word.lower()]
+
+    # Fall back to algorithm
+    return algorithmic_generation(word)
+```
+
+**Guidelines for Adding Exceptions:**
+
+1. **Only for genuine irregularities** - Algorithm can't produce correct output
+2. **Not for algorithm bugs** - Fix the algorithm instead
+3. **Keep list small** - Target <1% of vocabulary (< ~100 words)
+4. **Document why** - Comment explaining why word is irregular
+5. **Test first** - Verify algorithm actually fails before adding
+
+**Example Use Cases:**
+- Loan words with non-Portuguese pronunciation
+- Historical spelling irregularities
+- Words with multiple valid pronunciations (choose one)
+- Edge cases that would require excessive algorithm complexity
+
+**Non-Examples (Don't Add):**
+- Words algorithm already handles correctly
+- Minor variants that are acceptable
+- Words that could be fixed by improving algorithm rules
+
+**Monitoring:**
+Track exception dictionary size. If it grows beyond ~1% of vocabulary, indicates algorithm needs improvement, not more exceptions.
+
+**Current Status:**
+- Dictionary initialized (empty)
+- Ready to add exceptions as needed
+- None required yet (algorithm performing well)
+
+---
+
 ## Summary of Key Architectural Principles
 
 1. **Simplicity** - Prefer simple, understandable solutions
@@ -999,7 +1089,16 @@ def determine_o_quality(word, syllable, syl_index, is_stressed) -> str:
 
 ## Version History
 
-### Version 3.0 (2025-01-03) - Current
+### Version 3.1 (2025-01-03) - Current
+
+**Major changes:**
+- ✅ Added exception dictionary for irregular pronunciations
+  - `PHONETIC_EXCEPTIONS` dict checked before algorithm
+  - Keeps algorithm clean while handling edge cases
+  - Target <1% of vocabulary (<100 words)
+  - Currently empty (algorithm performing well)
+
+### Version 3.0 (2025-01-03)
 
 **Major changes:**
 - ✅ Added X pronunciation Context Hierarchy (90-95% accuracy)

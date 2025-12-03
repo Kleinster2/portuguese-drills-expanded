@@ -19,6 +19,15 @@ VALID_ONSETS = ['pr', 'br', 'tr', 'dr', 'cr', 'gr', 'fr',
                 'pl', 'bl', 'cl', 'gl', 'fl',
                 'qu', 'gu', 'ch', 'lh', 'nh']
 
+# Exception dictionary for irregular pronunciations
+# Only for words where algorithmic approach produces incorrect output
+# Keep this list small (<1% of vocabulary)
+PHONETIC_EXCEPTIONS = {
+    # Add irregular words here as they're discovered
+    # Format: 'word': 'phonetic-transcription'
+    # Example: 'táxi': 'TAH-ksee'  # (already handled correctly by algorithm)
+}
+
 
 def has_accent(char):
     """Check if character has an accent mark."""
@@ -818,7 +827,7 @@ def portuguese_to_phonetic(word):
     """
     Convert Portuguese word to dictionary-style phonetic transcription.
 
-    100% algorithmic - no dictionary lookup needed.
+    Checks exception dictionary first, then falls back to algorithmic generation.
 
     Args:
         word: Portuguese word
@@ -826,6 +835,11 @@ def portuguese_to_phonetic(word):
     Returns:
         str: Dictionary-style phonetic (e.g., "brah-zee-LÉI-roo")
     """
+    # 0. Check exception dictionary first (for truly irregular words)
+    word_lower = word.lower()
+    if word_lower in PHONETIC_EXCEPTIONS:
+        return PHONETIC_EXCEPTIONS[word_lower]
+
     # 1. Syllabify
     syllables = syllabify(word)
 
