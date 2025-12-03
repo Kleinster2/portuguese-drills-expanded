@@ -21,16 +21,20 @@ let testAnswers = [];
  */
 async function loadQuestionBank() {
   try {
-    let fileName;
-    if (testType === 'vocabulary') {
-      fileName = '/config/placement-test-questions-vocabulary-v1.0.json';
-    } else if (testType === 'grammar-a') {
-      fileName = '/config/placement-test-questions-grammar-a-levels.json';
-    } else if (testType === 'grammar-b') {
-      fileName = '/config/placement-test-questions-grammar-b-levels.json';
-    } else {
-      fileName = '/config/placement-test-questions-grammar-v1.0.json';
-    }
+    // Map test types to their JSON files
+    const testFileMap = {
+      'vocabulary': '/config/placement-test-questions-vocabulary-v1.0.json',
+      'grammar-a': '/config/placement-test-questions-grammar-a-levels.json',
+      'grammar-b': '/config/placement-test-questions-grammar-b-levels.json',
+      'grammar': '/config/placement-test-questions-grammar-v1.0.json',
+      // Topic-based tests
+      'verb-tenses': '/config/placement-test-questions-verb-tenses.json',
+      'pronouns': '/config/placement-test-questions-pronouns.json',
+      'prepositions': '/config/placement-test-questions-prepositions.json',
+      'articles-determiners': '/config/placement-test-questions-articles-determiners.json'
+    };
+
+    const fileName = testFileMap[testType] || testFileMap['grammar'];
 
     const response = await fetch(fileName);
     if (!response.ok) {
@@ -62,17 +66,23 @@ async function startPlacementTest() {
   testAnswers = [];
 
   // Update title based on test type
-  let testTitle;
-  if (testType === 'vocabulary') {
-    testTitle = 'Portuguese Vocabulary Placement Test';
-  } else if (testType === 'grammar-a') {
-    testTitle = 'Portuguese Grammar Placement Test - A Levels (A1-A2)';
-  } else if (testType === 'grammar-b') {
-    testTitle = 'Portuguese Grammar Placement Test - B Levels (B1-B2)';
-  } else {
-    testTitle = 'Portuguese Grammar Placement Test';
+  const testTitles = {
+    'vocabulary': 'Portuguese Vocabulary Placement Test',
+    'grammar': 'Portuguese Grammar Placement Test',
+    'grammar-a': 'Portuguese Grammar Placement Test - A Levels (A1-A2)',
+    'grammar-b': 'Portuguese Grammar Placement Test - B Levels (B1-B2)',
+    // Topic-based tests
+    'verb-tenses': 'Portuguese Verb Tenses Test',
+    'pronouns': 'Portuguese Pronouns Test',
+    'prepositions': 'Portuguese Prepositions Test',
+    'articles-determiners': 'Portuguese Articles & Determiners Test'
+  };
+  drillTitle.textContent = testTitles[testType] || testTitles['grammar'];
+
+  // Track placement test start with Plausible
+  if (window.plausible) {
+    plausible('Placement Test', { props: { type: testType || 'grammar' } });
   }
-  drillTitle.textContent = testTitle;
 
   // Show modal
   modal.classList.remove('hidden');
@@ -569,7 +579,18 @@ function generateHash() {
 
   const json = JSON.stringify(testData);
   const compressed = LZString.compressToBase64(json);
-  const prefix = testType === 'vocabulary' ? 'PT-BR-V-' : 'PT-BR-G-';
+  // Use different prefixes for different test types
+  const prefixMap = {
+    'vocabulary': 'PT-BR-V-',
+    'grammar': 'PT-BR-G-',
+    'grammar-a': 'PT-BR-GA-',
+    'grammar-b': 'PT-BR-GB-',
+    'verb-tenses': 'PT-BR-VT-',
+    'pronouns': 'PT-BR-PR-',
+    'prepositions': 'PT-BR-PP-',
+    'articles-determiners': 'PT-BR-AD-'
+  };
+  const prefix = prefixMap[testType] || 'PT-BR-G-';
   return `${prefix}${compressed}`;
 }
 

@@ -489,6 +489,332 @@ def format_substitution(annotated: str) -> str:
     return result
 
 
+def determine_e_quality(word: str, pos: int) -> str:
+    """
+    Determine if E at position should be é (open) or ê (closed).
+
+    Rules (in priority order):
+    1. E before nasal (m, n, nh) → ê (closed)
+    2. E in closed syllable (ending in consonant, except L) → ê (closed)
+    3. EU diphthong → ê (closed)
+    4. E before L → é (open)
+    5. EI diphthong → é (open)
+    6. Default (open syllable) → é (open)
+
+    Args:
+        word: The word containing E (lowercase)
+        pos: Position of E in the word
+
+    Returns:
+        'é' for open, 'ê' for closed
+    """
+    if pos >= len(word):
+        return 'é'
+
+    # Get next character(s)
+    next_char = word[pos + 1] if pos + 1 < len(word) else ''
+    next_two = word[pos + 1:pos + 3] if pos + 2 < len(word) else next_char
+
+    # Rule 1: E before nasal consonants (m, n, nh)
+    if next_char in 'mn':
+        return 'ê'
+    if next_two == 'nh':
+        return 'ê'
+
+    # Rule 3: EU diphthong (check before Rule 4)
+    if next_char == 'u':
+        return 'ê'
+
+    # Rule 4: E before L → open é
+    if next_char == 'l':
+        return 'é'
+
+    # Rule 5: EI diphthong → open é
+    if next_char == 'i':
+        return 'é'
+
+    # Rule 2: E in closed syllable
+    # Check if followed by consonant cluster or single consonant then consonant
+    # This is a simplified check: if next char is consonant (not vowel)
+    vowels = 'aeiouãõ'
+    if next_char and next_char not in vowels:
+        # Check if it's not just a consonant before a vowel (open syllable)
+        # Look ahead: if pattern is e + consonant + vowel, it's open
+        next_next = word[pos + 2] if pos + 2 < len(word) else ''
+        if next_next and next_next not in vowels:
+            # Consonant cluster or word-final: closed syllable
+            return 'ê'
+        # Single consonant before vowel: open syllable, use default
+
+    # Rule 6: Default for open syllables → open é
+    return 'é'
+
+
+def apply_e_quality_to_phonetic(phonetic: str, original_word: str) -> str:
+    """
+    Apply é/ê quality markers to phonetic transcription based on original Portuguese word.
+
+    Uses algorithmic rules to determine E vowel quality:
+    1. E before nasal (m, n, nh) → ê (closed)
+    2. E in closed syllable (except before L) → ê (closed)
+    3. EU diphthong → ê (closed)
+    4. E before L → é (open)
+    5. EI diphthong → é (open)
+    6. Default (open syllable) → é (open)
+
+    Args:
+        phonetic: Basic phonetic transcription (e.g., "dah-nee-EH-oo")
+        original_word: Original Portuguese word (e.g., "daniel")
+
+    Returns:
+        Phonetic with proper é/ê markers (e.g., "dah-nee-ÉH-oo")
+    """
+    result = phonetic
+    orig = original_word.lower()
+
+    # Rule 1 & 5: E before nasal consonants → Ê (closed)
+    if re.search(r'e[mn]', orig):
+        result = re.sub(r'E([MN])', r'Ê\1', result, flags=re.IGNORECASE)
+
+    # Rule 3: EU diphthong → Ê (closed)
+    if 'eu' in orig:
+        result = re.sub(r'E([HU])', r'Ê\1', result)
+
+    # Rule 4: E before L (becomes EH-oo after L→u) → É (open)
+    if 'el' in orig or orig.endswith('l'):
+        result = re.sub(r'E([HL])', r'É\1', result)
+        # After L vocalization: -el → -éu
+        result = re.sub(r'Ê([HL])-oo\b', r'É\1-oo', result)  # Override EU rule for -el words
+
+    # Rule 5: EI diphthong → É (open)
+    if 'ei' in orig:
+        result = re.sub(r'([LR])E([IY])', r'\1É\2', result, flags=re.IGNORECASE)
+        result = re.sub(r'E([IY])', r'É\1', result)
+
+    # Rule 2: E in closed syllable (ends with consonant like -ês) → Ê (closed)
+    if orig.endswith('ês') or (orig.endswith('es') and not 'ei' in orig):
+        result = re.sub(r'E([S])', r'Ê\1', result, flags=re.IGNORECASE)
+
+    # Default: If E hasn't been marked yet, it's in open syllable → É (open)
+    # (This is handled by individual word patterns, not globally)
+
+    return result
+
+
+def format_dictionary_style(text: str) -> str:
+    """
+    Format text in dictionary-style pronunciation with stress marking.
+
+    Converts Portuguese text to English-like pronunciation respelling:
+    - CAPITALS indicate stressed syllables
+    - Hyphens separate syllables
+    - (nasal) markers for nasal vowels
+
+    Args:
+        text (str): Portuguese text (can be original or annotated)
+
+    Returns:
+        str: Dictionary-style phonetic respelling
+
+    Examples:
+        >>> format_dictionary_style("Eu sou o Daniel")
+        'EH-oo SOH oo dah-nee-EH-oo'
+
+        >>> format_dictionary_style("Eu sou de Miami")
+        'EH-oo SOH jee mee-AH-mee'
+
+        >>> format_dictionary_style("Eu sou casado com a Sofia")
+        'EH-oo SOH kah-ZAH-doo KOHN (nasal) ah so-FEE-ah'
+    """
+    # Save original text for E quality analysis
+    original_text = text
+    original_words = re.findall(r'\b\w+\b', original_text.lower())
+
+    # First, get the annotated version if not already annotated
+    if not is_already_annotated(text):
+        text = annotate_pronunciation(text)
+
+    # Apply transformations to simplified format
+    simple = format_substitution(text)
+
+    # Dictionary mapping of common words/patterns to dictionary-style
+    # This is a comprehensive mapping based on Portuguese phonology
+
+    word_mappings = {
+        # Pronouns and common words
+        'eu': 'ÊH-oo',  # closed ê
+        'i': 'ee',  # e conjunction
+        'u': 'oo',  # o article
+        'a': 'ah',
+        'as': 'ahs',
+        'us': 'oos',
+
+        # Verb forms
+        'sou': 'SOH',
+        'su': 'SOO',  # simplified sou
+        'moru': 'MOH-roo',
+        'moro': 'MOH-roo',
+        'trabalhu': 'trah-BAH-lyoo',
+        'trabalho': 'trah-BAH-lyoo',
+        'falu': 'FAH-loo',
+        'falo': 'FAH-loo',
+        'gostu': 'GOHS-too',
+        'gosto': 'GOHS-too',
+        'tenhu': 'TAY-nyoo',
+        'tenho': 'TAY-nyoo',
+        'voou': 'VOH',
+        'vou': 'VOH',
+        'estou': 'ess-TOH',
+
+        # Prepositions
+        'dji': 'jee',
+        'de': 'jee',  # after transformation
+        'du': 'doo',
+        'do': 'doo',
+        'da': 'dah',
+        'das': 'dahs',
+        'dus': 'doos',
+        'dos': 'doos',
+        'nu': 'noo',
+        'no': 'noo',
+        'na': 'nah',
+        'nas': 'nahs',
+        'nus': 'noos',
+        'nos': 'noos',
+        'coun': 'KOHN (nasal)',
+        'com': 'KOHN (nasal)',
+        'comu': 'KOH-moo',
+        'como': 'KOH-moo',
+        'para': 'PAH-rah',
+        'pra': 'prah',
+
+        # Nasal words
+        'beyn': 'BAYN (nasal)',
+        'bem': 'BAYN (nasal)',
+        'teyn': 'TAYN (nasal)',
+        'tem': 'TAYN (nasal)',
+        'seyn': 'SAYN (nasal)',
+        'sem': 'SAYN (nasal)',
+        'ũm': 'OOM (nasal)',
+        'um': 'OOM (nasal)',
+        'ũma': 'OO-mah (nasal)',
+        'uma': 'OO-mah (nasal)',
+        'sing': 'SING (nasal)',
+        'sim': 'SING (nasal)',
+        'boun': 'BOHN (nasal)',
+        'bom': 'BOHN (nasal)',
+        'soun': 'SOHN (nasal)',
+        'som': 'SOHN (nasal)',
+        'tambeyn': 'tahm-BAYN (nasal)',
+        'também': 'tahm-BAYN (nasal)',
+
+        # Common adjectives
+        'americanu': 'ah-meh-ree-KAH-noo',
+        'americano': 'ah-meh-ree-KAH-noo',
+        'americana': 'ah-meh-ree-KAH-nah',
+        'brasileiru': 'brah-zee-LÉH-roo',  # open é
+        'brasileiro': 'brah-zee-LÉH-roo',  # open é
+        'brasileira': 'brah-zee-LÉH-rah',  # open é
+        'casadu': 'kah-ZAH-doo',
+        'casado': 'kah-ZAH-doo',
+        'casada': 'kah-ZAH-dah',
+        'solteiro': 'sohl-TÉH-roo',  # open é
+        'solteiru': 'sohl-TÉH-roo',  # after transformation
+        'solteira': 'sohl-TÉH-rah',  # open é
+        'altu': 'AHL-too',
+        'alto': 'AHL-too',
+        'alta': 'AHL-tah',
+        'baixu': 'BAI-shoo',
+        'baixo': 'BAI-shoo',
+        'baixa': 'BAI-shah',
+
+        # Common nouns
+        'professor': 'pro-feh-SOHR',
+        'professora': 'pro-feh-SOH-rah',
+        'analista': 'ah-nah-LEES-tah',
+        'cachorru': 'kah-SHOH-hoo',
+        'cachorro': 'kah-SHOH-hoo',
+        'gata': 'GAH-tah',
+        'gatu': 'GAH-too',
+        'gato': 'GAH-too',
+        'música': 'MOO-zee-kah',
+        'futebolu': 'foo-cheh-BOH-loo',
+        'futebol': 'foo-cheh-BOH-loo',
+        'trabalhu': 'trah-BAH-lyoo',
+        'trabalho': 'trah-BAH-lyoo',
+        'escritório': 'ess-kree-TOH-ree-oo',
+        'metrô': 'meh-TROH',
+
+        # Place names
+        'miami': 'mee-AH-mee',
+        'yorki': 'YORK-ee',
+        'york': 'YORK-ee',
+        'nova': 'NOH-vah',
+        'paulu': 'POW-loo',
+        'paulo': 'POW-loo',
+        'são': 'SOW',
+        'brasilu': 'brah-ZEE-loo',
+        'brasil': 'brah-ZEE-loo',
+        'frança': 'FRAHN-sah',
+
+        # Names
+        'danieu': 'dah-nee-ÉH-oo',  # open é
+        'daniel': 'dah-nee-ÉH-oo',  # open é
+        'sofia': 'so-FEE-ah',
+        'maria': 'mah-REE-ah',
+        'carlos': 'KAHR-loos',
+        'john': 'JAWN',
+        'sarah': 'SAH-rah',
+
+        # Other common words
+        'inglês': 'een-GLÊS',  # closed ê
+        'inguês': 'een-GLÊS',  # inglês after transformation
+        'espanhol': 'ess-pahn-YOHL',
+        'espanholu': 'ess-pahn-YOHL',  # after transformation
+        'pouco': 'POH-koo',
+        'poucu': 'POH-koo',  # after transformation
+        'português': 'por-too-GÊS',  # closed ê
+        'contente': 'kohn-TEN-chee',  # will get ÊN from algorithm
+        'contentchi': 'kohn-TEN-chee',  # after transformation
+        'ônibus': 'OH-nee-boos',
+    }
+
+    # Split into words
+    words = simple.split()
+    result_words = []
+    original_word_index = 0
+
+    for word in words:
+        # Remove punctuation for lookup
+        clean_word = word.rstrip('.,!?;:')
+        punct = word[len(clean_word):]
+
+        # Get corresponding original Portuguese word for E quality analysis
+        original_word = original_words[original_word_index] if original_word_index < len(original_words) else clean_word
+        original_word_index += 1
+
+        # Look up in dictionary (case-insensitive)
+        lookup = clean_word.lower()
+        if lookup in word_mappings:
+            phonetic = word_mappings[lookup]
+        else:
+            # If not in dictionary, keep as-is but apply basic transformations
+            # This handles unknown words gracefully
+            phonetic = clean_word
+
+            # Basic vowel mappings for unknown words
+            phonetic = re.sub(r'\bu\b', 'oo', phonetic, flags=re.IGNORECASE)
+            phonetic = re.sub(r'\bi\b', 'ee', phonetic, flags=re.IGNORECASE)
+            phonetic = re.sub(r'u(?=\s|$)', 'oo', phonetic)
+
+        # Apply algorithmic E quality rules based on original Portuguese word
+        phonetic = apply_e_quality_to_phonetic(phonetic, original_word)
+
+        result_words.append(phonetic + punct)
+
+    return ' '.join(result_words)
+
+
 # ============================================================================
 # COMMAND LINE INTERFACE
 # ============================================================================
@@ -528,8 +854,12 @@ def main():
 
     for sentence in test_sentences:
         annotated = annotate_pronunciation(sentence)
-        print(f"Original:  {sentence}")
-        print(f"Annotated: {annotated}")
+        substituted = format_substitution(annotated)
+        dictionary = format_dictionary_style(sentence)
+        print(f"Original:    {sentence}")
+        print(f"Annotated:   {annotated}")
+        print(f"Substituted: {substituted}")
+        print(f"Dictionary:  {dictionary}")
         print()
 
 if __name__ == "__main__":

@@ -405,10 +405,305 @@ function annotatePronunciation(text, skipIfAnnotated = true) {
     return text;
 }
 
+/**
+ * Apply é/ê quality markers to phonetic transcription based on original Portuguese word.
+ *
+ * Uses algorithmic rules to determine E vowel quality:
+ * 1. E before nasal (m, n, nh) → ê (closed)
+ * 2. E in closed syllable (except before L) → ê (closed)
+ * 3. EU diphthong → ê (closed)
+ * 4. E before L → é (open)
+ * 5. EI diphthong → é (open)
+ * 6. Default (open syllable) → é (open)
+ *
+ * @param {string} phonetic - Basic phonetic transcription (e.g., "dah-nee-EH-oo")
+ * @param {string} originalWord - Original Portuguese word (e.g., "daniel")
+ * @returns {string} Phonetic with proper é/ê markers (e.g., "dah-nee-ÉH-oo")
+ */
+function applyEQualityToPhonetic(phonetic, originalWord) {
+    let result = phonetic;
+    const orig = originalWord.toLowerCase();
+
+    // Rule 1 & 5: E before nasal consonants → Ê (closed)
+    if (/e[mn]/.test(orig)) {
+        result = result.replace(/E([MN])/gi, 'Ê$1');
+    }
+
+    // Rule 3: EU diphthong → Ê (closed)
+    if (orig.includes('eu')) {
+        result = result.replace(/E([HU])/g, 'Ê$1');
+    }
+
+    // Rule 4: E before L (becomes EH-oo after L→u) → É (open)
+    if (orig.includes('el') || orig.endsWith('l')) {
+        result = result.replace(/E([HL])/g, 'É$1');
+        // After L vocalization: -el → -éu
+        result = result.replace(/Ê([HL])-oo\b/g, 'É$1-oo');  // Override EU rule for -el words
+    }
+
+    // Rule 5: EI diphthong → É (open)
+    if (orig.includes('ei')) {
+        result = result.replace(/([LR])E([IY])/gi, '$1É$2');
+        result = result.replace(/E([IY])/g, 'É$1');
+    }
+
+    // Rule 2: E in closed syllable (ends with consonant like -ês) → Ê (closed)
+    if (orig.endsWith('ês') || (orig.endsWith('es') && !orig.includes('ei'))) {
+        result = result.replace(/E([S])/gi, 'Ê$1');
+    }
+
+    return result;
+}
+
+/**
+ * Format text in dictionary-style pronunciation with stress marking.
+ *
+ * Converts Portuguese text to English-like pronunciation respelling:
+ * - CAPITALS indicate stressed syllables
+ * - Hyphens separate syllables
+ * - (nasal) markers for nasal vowels
+ *
+ * @param {string} text - Portuguese text (original or annotated)
+ * @returns {string} Dictionary-style phonetic respelling
+ *
+ * @example
+ * formatDictionaryStyle("Eu sou o Daniel")
+ * // Returns: "ÊH-oo SOH oo dah-nee-ÉH-oo"
+ *
+ * @example
+ * formatDictionaryStyle("Eu sou de Miami")
+ * // Returns: "ÊH-oo SOH jee mee-AH-mee"
+ *
+ * @example
+ * formatDictionaryStyle("Eu sou casado com a Sofia")
+ * // Returns: "ÊH-oo SOH kah-ZAH-doo KOHN (nasal) ah so-FEE-ah"
+ */
+function formatDictionaryStyle(text) {
+    // Save original text for E quality analysis
+    const originalText = text;
+    const originalWords = originalText.toLowerCase().match(/\b\w+\b/g) || [];
+
+
+    // Dictionary mapping of Portuguese words to dictionary-style pronunciation
+    const wordMappings = {
+        // Pronouns and common words
+        'eu': 'ÊH-oo',  // closed ê
+        'i': 'ee',  // e conjunction
+        'u': 'oo',  // o article
+        'a': 'ah',
+        'as': 'ahs',
+        'us': 'oos',
+
+        // Verb forms
+        'sou': 'SOH',
+        'su': 'SOO',  // simplified sou
+        'moru': 'MOH-roo',
+        'moro': 'MOH-roo',
+        'trabalhu': 'trah-BAH-lyoo',
+        'trabalho': 'trah-BAH-lyoo',
+        'falu': 'FAH-loo',
+        'falo': 'FAH-loo',
+        'gostu': 'GOHS-too',
+        'gosto': 'GOHS-too',
+        'tenhu': 'TAY-nyoo',
+        'tenho': 'TAY-nyoo',
+        'voou': 'VOH',
+        'vou': 'VOH',
+        'estou': 'ess-TOH',
+
+        // Prepositions
+        'dji': 'jee',
+        'de': 'jee',  // after transformation
+        'du': 'doo',
+        'do': 'doo',
+        'da': 'dah',
+        'das': 'dahs',
+        'dus': 'doos',
+        'dos': 'doos',
+        'nu': 'noo',
+        'no': 'noo',
+        'na': 'nah',
+        'nas': 'nahs',
+        'nus': 'noos',
+        'nos': 'noos',
+        'coun': 'KOHN (nasal)',
+        'com': 'KOHN (nasal)',
+        'comu': 'KOH-moo',
+        'como': 'KOH-moo',
+        'para': 'PAH-rah',
+        'pra': 'prah',
+
+        // Nasal words
+        'beyn': 'BAYN (nasal)',
+        'bem': 'BAYN (nasal)',
+        'teyn': 'TAYN (nasal)',
+        'tem': 'TAYN (nasal)',
+        'seyn': 'SAYN (nasal)',
+        'sem': 'SAYN (nasal)',
+        'ũm': 'OOM (nasal)',
+        'um': 'OOM (nasal)',
+        'ũma': 'OO-mah (nasal)',
+        'uma': 'OO-mah (nasal)',
+        'sing': 'SING (nasal)',
+        'sim': 'SING (nasal)',
+        'boun': 'BOHN (nasal)',
+        'bom': 'BOHN (nasal)',
+        'soun': 'SOHN (nasal)',
+        'som': 'SOHN (nasal)',
+        'tambeyn': 'tahm-BAYN (nasal)',
+        'também': 'tahm-BAYN (nasal)',
+
+        // Common adjectives
+        'americanu': 'ah-meh-ree-KAH-noo',
+        'americano': 'ah-meh-ree-KAH-noo',
+        'americana': 'ah-meh-ree-KAH-nah',
+        'brasileiru': 'brah-zee-LÉH-roo',  // open é
+        'brasileiro': 'brah-zee-LÉH-roo',  // open é
+        'brasileira': 'brah-zee-LÉH-rah',  // open é
+        'casadu': 'kah-ZAH-doo',
+        'casado': 'kah-ZAH-doo',
+        'casada': 'kah-ZAH-dah',
+        'solteiro': 'sohl-TÉH-roo',  // open é
+        'solteiru': 'sohl-TÉH-roo',  // after transformation
+        'solteira': 'sohl-TÉH-rah',  // open é
+        'altu': 'AHL-too',
+        'alto': 'AHL-too',
+        'alta': 'AHL-tah',
+        'baixu': 'BAI-shoo',
+        'baixo': 'BAI-shoo',
+        'baixa': 'BAI-shah',
+
+        // Common nouns
+        'professor': 'pro-feh-SOHR',
+        'professora': 'pro-feh-SOH-rah',
+        'analista': 'ah-nah-LEES-tah',
+        'cachorru': 'kah-SHOH-hoo',
+        'cachorro': 'kah-SHOH-hoo',
+        'gata': 'GAH-tah',
+        'gatu': 'GAH-too',
+        'gato': 'GAH-too',
+        'música': 'MOO-zee-kah',
+        'futebolu': 'foo-cheh-BOH-loo',
+        'futebol': 'foo-cheh-BOH-loo',
+        'trabalhu': 'trah-BAH-lyoo',
+        'trabalho': 'trah-BAH-lyoo',
+        'escritório': 'ess-kree-TOH-ree-oo',
+
+        // Place names
+        'miami': 'mee-AH-mee',
+        'yorki': 'YORK-ee',
+        'york': 'YORK-ee',
+        'nova': 'NOH-vah',
+        'paulu': 'POW-loo',
+        'paulo': 'POW-loo',
+        'são': 'SOW',
+        'sãu': 'SOW',  // In case transformation happened
+        'brasilu': 'brah-ZEE-loo',
+        'brasil': 'brah-ZEE-loo',
+        'frança': 'FRAHN-sah',
+
+        // Names
+        'danieu': 'dah-nee-ÉH-oo',  // open é
+        'daniel': 'dah-nee-ÉH-oo',  // open é
+        'sofia': 'so-FEE-ah',
+        'maria': 'mah-REE-ah',
+        'carlos': 'KAHR-loos',
+        'john': 'JAWN',
+        'sarah': 'SAH-rah',
+
+        // Other common words
+        'inglês': 'een-GLÊS',  // closed ê
+        'inguês': 'een-GLÊS',  // inglês after transformation
+        'espanhol': 'ess-pahn-YOHL',
+        'espanholu': 'ess-pahn-YOHL',  // after transformation
+        'pouco': 'POH-koo',
+        'poucu': 'POH-koo',  // after transformation
+        'português': 'por-too-GÊS',  // closed ê
+        'contente': 'kohn-TEN-chee',  // will get ÊN from algorithm
+        'contentchi': 'kohn-TEN-chee',  // after transformation
+        'ônibus': 'OH-nee-boos',
+        'metrô': 'meh-TROH',
+    };
+
+    // First apply pronunciation transformations using simplified substitution
+    // This converts: "Eu sou o Daniel" -> "Eu sou u Danieu"
+    let simple = text;
+
+    // Apply transformations (simplified version - mirrors Python format_substitution)
+    // Handle palatalization
+    simple = simple.replace(/\bde\b/gi, 'dji');
+
+    // Handle final -o -> u (but NOT words with tildes like "São")
+    simple = simple.replace(/(\w+)o\b/g, (match, word) => {
+        // Don't transform if the full match (word+o) has tilde
+        if (/[ãõ]/.test(match)) {
+            return match;
+        }
+        return word + 'u';
+    });
+    simple = simple.replace(/\bo\b/g, 'u');
+
+    // Handle final -l -> u (at end of word)
+    simple = simple.replace(/(\w+)l\b/gi, '$1u');
+
+    // Handle conjunction "e" (and)
+    simple = simple.replace(/\be\b/gi, 'i');
+
+    // Handle nasal -om -> oun, -em -> eyn
+    simple = simple.replace(/\bcom\b/gi, 'coun');
+    simple = simple.replace(/\bbem\b/gi, 'beyn');
+    simple = simple.replace(/\btem\b/gi, 'teyn');
+    simple = simple.replace(/\bsem\b/gi, 'seyn');
+
+    // Split into words and map to dictionary style
+    const words = simple.split(/\s+/);
+    const resultWords = [];
+    let originalWordIndex = 0;
+
+    for (const word of words) {
+        // Remove punctuation for lookup
+        const match = word.match(/^([^.,!?;:]+)([.,!?;:]*)$/);
+        if (!match) {
+            resultWords.push(word);
+            continue;
+        }
+
+        const cleanWord = match[1];
+        const punct = match[2];
+
+        // Get corresponding original Portuguese word for E quality analysis
+        const originalWord = originalWords[originalWordIndex] || cleanWord;
+        originalWordIndex++;
+
+        // Look up in dictionary (case-insensitive)
+        const lookup = cleanWord.toLowerCase();
+        let phonetic;
+        if (wordMappings[lookup]) {
+            phonetic = wordMappings[lookup];
+        } else {
+            // If not in dictionary, apply basic transformations
+            phonetic = cleanWord;
+
+            // Basic vowel mappings for unknown words
+            phonetic = phonetic.replace(/\bu\b/gi, 'oo');
+            phonetic = phonetic.replace(/\bi\b/gi, 'ee');
+            phonetic = phonetic.replace(/u$/i, 'oo');
+        }
+
+        // Apply algorithmic E quality rules based on original Portuguese word
+        phonetic = applyEQualityToPhonetic(phonetic, originalWord);
+
+        resultWords.push(phonetic + punct);
+    }
+
+    return resultWords.join(' ');
+}
+
 // Export for use in Node.js and browser environments
 // For Node.js, it's a direct export. For browsers, it's attached to window for compatibility
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { annotatePronunciation };
+    module.exports = { annotatePronunciation, formatDictionaryStyle };
 } else if (typeof window !== 'undefined') {
     window.annotatePronunciation = annotatePronunciation;
+    window.formatDictionaryStyle = formatDictionaryStyle;
 }

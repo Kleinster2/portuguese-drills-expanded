@@ -197,6 +197,10 @@ def determine_o_quality(word, syllable, syl_index, is_stressed):
     if re.search(r'ol', syl_lower):
         return 'ó'
 
+    # Rule 5b: O before R (stressed) → open
+    if re.search(r'o[rR]', syl_lower) and is_stressed:
+        return 'ó'
+
     # Rule 6: Stressed O in open syllable (ends with vowel)
     # Plural vs Singular distinction:
     # - Plurals (ending in -s): stressed O in open syllable → open (ó)
@@ -226,12 +230,13 @@ def determine_e_quality(word, syllable, syl_index, is_stressed):
 
     Rules (priority order):
     1. E before nasal (m, n, nh) → ê (closed)
-    2. E in closed syllable (ends with consonant except L) → ê (closed)
-    3. EU diphthong → ê (closed)
-    4. EI diphthong → ê (closed)
-    5. E before L → é (open)
-    6. Stressed E in open syllable → é (open)
-    7. Unstressed E → ê (closed) - default
+    2. E before R → é (open)
+    3. E in closed syllable (ends with consonant except L, R) → ê (closed)
+    4. EU diphthong → ê (closed)
+    5. EI diphthong → ê (closed)
+    6. E before L → é (open)
+    7. Stressed E in open syllable → é (open)
+    8. Unstressed E → ê (closed) - default
     """
     syl_lower = syllable.lower()
     word_lower = word.lower()
@@ -240,32 +245,36 @@ def determine_e_quality(word, syllable, syl_index, is_stressed):
     if re.search(r'e[mn]', syl_lower):
         return 'ê'
 
-    # Rule 3: EU diphthong
+    # Rule 2: E before R (stressed) → open
+    if re.search(r'e[rR]', syl_lower) and is_stressed:
+        return 'é'
+
+    # Rule 4: EU diphthong
     if 'eu' in syl_lower:
         return 'ê'
 
-    # Rule 4: EI diphthong
+    # Rule 5: EI diphthong
     if 'ei' in syl_lower:
         return 'ê'
 
-    # Rule 5: E before L
+    # Rule 6: E before L
     if re.search(r'el', syl_lower):
         return 'é'
 
-    # Rule 2: E in closed syllable (ends with consonant, not just has consonant)
+    # Rule 3: E in closed syllable (ends with consonant, not just has consonant)
     vowels = 'aeiouãõáéíóúâêô'
-    # Closed syllable: ends with consonant (except L which is rule 4)
+    # Closed syllable: ends with consonant (except L, R which have specific rules)
     if len(syl_lower) > 0 and syl_lower[-1] not in vowels:
         # Check if E (with any diacritic) is in this syllable
         has_e = any(c in 'eéêè' for c in syl_lower)
-        if has_e and 'l' != syl_lower[-1]:
+        if has_e and syl_lower[-1] not in 'lr':
             return 'ê'
 
-    # Rule 6: Stressed E in open syllable
+    # Rule 7: Stressed E in open syllable
     if is_stressed:
         return 'é'
 
-    # Rule 7: Default unstressed
+    # Rule 8: Default unstressed
     return 'ê'
 
 
@@ -291,7 +300,10 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
 
     # Determine if this syllable is stressed
     is_stressed = False
-    if stress_type == 'accent':
+    if total_syls == 1:
+        # Single syllable words are always stressed
+        is_stressed = True
+    elif stress_type == 'accent':
         is_stressed = any(has_accent(c) for c in syllable)
     elif stress_type == 'penultimate':
         is_stressed = (syl_index == total_syls - 2)
@@ -531,10 +543,12 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
                 result += 'ee'
         elif char in 'oóôõ':
             # Apply O quality rules
-            is_final = (i == len(syl) - 1) and (syl_index == total_syls - 1)
+            # Check if this is final unstressed -o (including -os plural)
+            is_final_o = (i == len(syl) - 1 and syl_index == total_syls - 1) or \
+                         (i == len(syl) - 2 and syl[i+1] == 's' and syl_index == total_syls - 1)
 
-            if is_final and char == 'o':
-                # Final unstressed -o → oo (closed, no quality marker needed)
+            if is_final_o and char == 'o' and not is_stressed:
+                # Final unstressed -o or -os → oo (closed, no quality marker needed)
                 result += 'oo'
             else:
                 # Check if followed by m/n in same syllable (nasalization)
@@ -578,7 +592,8 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
         coda_start = i + 1
         coda = result[coda_start:]
         # Only wrap if there's actual content and no existing markers
-        if coda and not any(c in coda for c in '<>'):
+        # Exception: 'h' after a vowel is part of the vowel sound (ah, eh, oh), not a coda
+        if coda and not any(c in coda for c in '<>') and coda != 'h':
             result = result[:coda_start] + '<' + coda + '>'
     elif i >= 0 and result[i] == '>':
         # We have a marker, check if there are consonants after it

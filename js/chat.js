@@ -102,11 +102,17 @@ async function simplifyText() {
 
     const data = await response.json();
 
-    // Display the simplified text
-    output.innerHTML = `<div class="prose prose-slate max-w-none whitespace-pre-wrap">${escapeHtml(data.response)}</div>`;
+    // Display the simplified text with clickable sentences
+    output.innerHTML = formatSimplifiedTextWithSentences(data.response);
 
-    // Show copy button
+    // Show copy, speak, clear buttons, and hint
     copyBtn.classList.remove('hidden');
+    const speakBtn = document.getElementById('speak-btn');
+    if (speakBtn) speakBtn.classList.remove('hidden');
+    const clearBtn = document.getElementById('clear-btn');
+    if (clearBtn) clearBtn.classList.remove('hidden');
+    const audioHint = document.getElementById('audio-hint');
+    if (audioHint) audioHint.classList.remove('hidden');
 
   } catch (error) {
     console.error('Error simplifying text:', error);
@@ -219,13 +225,166 @@ function copySimplifiedText() {
   }
 }
 
+// Format simplified text with clickable sentences
+function formatSimplifiedTextWithSentences(text) {
+  const escaped = escapeHtml(text);
+
+  // Italicize content in parentheses (translations)
+  const withItalics = escaped.replace(/\(([^)]+)\)/g, '<span class="text-slate-500 italic text-sm">($1)</span>');
+
+  // Split by sentence-ending punctuation, keeping the punctuation
+  const sentences = withItalics.split(/(?<=[.!?])\s+(?=[A-ZÁÉÍÓÚÀÂÊÔÃÕÇ])/);
+
+  if (sentences.length <= 1) {
+    // Single sentence or no clear sentence breaks
+    return `<div class="prose prose-slate max-w-none whitespace-pre-wrap">
+      <span class="simplifier-sentence cursor-pointer hover:bg-green-50 rounded px-1 -mx-1 transition-colors" onclick="speakSentence(this)">${withItalics}</span>
+    </div>`;
+  }
+
+  const wrappedSentences = sentences
+    .filter(s => s.trim())
+    .map(sentence => `<span class="simplifier-sentence cursor-pointer hover:bg-green-50 rounded px-1 -mx-1 transition-colors" onclick="speakSentence(this)">${sentence.trim()}</span>`)
+    .join(' ');
+
+  return `<div class="prose prose-slate max-w-none whitespace-pre-wrap">${wrappedSentences}</div>`;
+}
+
+// Speak a single sentence when clicked
+function speakSentence(element) {
+  if (typeof portugueseSpeech === 'undefined') {
+    console.warn('Speech not available');
+    return;
+  }
+
+  // Stop any ongoing speech
+  portugueseSpeech.stop();
+
+  // Remove highlight from all sentences
+  document.querySelectorAll('.simplifier-sentence').forEach(el => {
+    el.classList.remove('bg-green-100');
+  });
+
+  // Get text without translations
+  let text = element.textContent.trim();
+  text = text.replace(/\s*\([^)]+\)\s*/g, ' ').replace(/\s+/g, ' ').trim();
+
+  // Highlight current sentence
+  element.classList.add('bg-green-100');
+
+  portugueseSpeech.speak(text, {
+    onEnd: () => {
+      element.classList.remove('bg-green-100');
+    },
+    onError: () => {
+      element.classList.remove('bg-green-100');
+    }
+  });
+}
+
+// Speak all text (Listen button)
+function speakSimplifiedText() {
+  const output = document.getElementById('simplifier-output');
+  const speakBtn = document.getElementById('speak-btn');
+  const sentences = output.querySelectorAll('.simplifier-sentence');
+
+  if (sentences.length === 0) {
+    console.warn('No sentences to speak');
+    return;
+  }
+
+  if (typeof portugueseSpeech === 'undefined') {
+    console.warn('Speech not available');
+    return;
+  }
+
+  // Stop any ongoing speech
+  portugueseSpeech.stop();
+
+  const originalHTML = speakBtn.innerHTML;
+  speakBtn.innerHTML = `
+    <svg class="w-4 h-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+    </svg>
+    Stop
+  `;
+  speakBtn.disabled = false;
+  speakBtn.onclick = stopSimplifiedSpeech;
+
+  let currentIndex = 0;
+
+  function speakNext() {
+    if (currentIndex >= sentences.length) {
+      // Done speaking all sentences
+      resetSpeakButton();
+      return;
+    }
+
+    const sentence = sentences[currentIndex];
+
+    // Remove highlight from all, add to current
+    sentences.forEach(el => el.classList.remove('bg-green-100'));
+    sentence.classList.add('bg-green-100');
+
+    // Scroll sentence into view if needed
+    sentence.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    // Get text without translations
+    let text = sentence.textContent.trim();
+    text = text.replace(/\s*\([^)]+\)\s*/g, ' ').replace(/\s+/g, ' ').trim();
+
+    portugueseSpeech.speak(text, {
+      onEnd: () => {
+        sentence.classList.remove('bg-green-100');
+        currentIndex++;
+        speakNext();
+      },
+      onError: () => {
+        sentence.classList.remove('bg-green-100');
+        resetSpeakButton();
+      }
+    });
+  }
+
+  function resetSpeakButton() {
+    speakBtn.innerHTML = originalHTML;
+    speakBtn.onclick = speakSimplifiedText;
+    sentences.forEach(el => el.classList.remove('bg-green-100'));
+  }
+
+  // Store reset function for stop button
+  window._resetSimplifierSpeakBtn = resetSpeakButton;
+
+  speakNext();
+}
+
+function stopSimplifiedSpeech() {
+  if (typeof portugueseSpeech !== 'undefined') {
+    portugueseSpeech.stop();
+  }
+  if (typeof window._resetSimplifierSpeakBtn === 'function') {
+    window._resetSimplifierSpeakBtn();
+  }
+}
+
 function clearSimplifier() {
   const input = document.getElementById('simplifier-input');
   const output = document.getElementById('simplifier-output');
   const copyBtn = document.getElementById('copy-btn');
+  const speakBtn = document.getElementById('speak-btn');
+  const clearBtn = document.getElementById('clear-btn');
+  const audioHint = document.getElementById('audio-hint');
 
   input.value = '';
   copyBtn.classList.add('hidden');
+  if (speakBtn) speakBtn.classList.add('hidden');
+  if (clearBtn) clearBtn.classList.add('hidden');
+  if (audioHint) audioHint.classList.add('hidden');
+
+  // Stop any ongoing speech
+  if (typeof portugueseSpeech !== 'undefined') {
+    portugueseSpeech.stop();
+  }
 
   output.innerHTML = '<div class="flex items-center justify-center h-full text-slate-400"><div class="text-center"><svg class="w-16 h-16 mx-auto mb-3 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg><p class="text-sm">Simplified text will appear here</p></div></div>';
 }
@@ -502,6 +661,12 @@ async function openDrillChat(drillId) {
 
   // Update current drill and set title
   currentDrillId = drillId;
+
+  // Track drill usage with Plausible
+  if (window.plausible) {
+    plausible('Drill', { props: { drill: drillId } });
+  }
+
   const drillTitle = document.getElementById('chat-drill-title');
 
   // Set appropriate title based on drill ID

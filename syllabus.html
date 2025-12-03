@@ -41,6 +41,9 @@
             backdrop-filter: blur(10px);
         }
     </style>
+    <!-- Plausible Analytics -->
+    <script async src="https://plausible.io/js/pa-A2kEULXGZtzUYXPsVOQwU.js"></script>
+    <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
 </head>
 
 <body class="bg-slate-50">
@@ -55,7 +58,7 @@
                     <p class="mt-2 text-lg opacity-90">Structured learning path from A1 to B2</p>
                 </div>
                 <div class="hidden md:block text-right">
-                    <div class="text-5xl font-bold">90</div>
+                    <div class="text-5xl font-bold">100</div>
                     <div class="text-sm opacity-80">Units</div>
                 </div>
             </div>
@@ -72,7 +75,7 @@
                     <div class="text-xs text-gray-500">Beginner</div>
                 </div>
                 <div class="text-center p-4 bg-blue-50 rounded-lg">
-                    <div class="text-3xl font-bold text-blue-600">25</div>
+                    <div class="text-3xl font-bold text-blue-600">30</div>
                     <div class="text-sm text-gray-600 mt-1">A2 Units</div>
                     <div class="text-xs text-gray-500">Elementary</div>
                 </div>
@@ -82,7 +85,7 @@
                     <div class="text-xs text-gray-500">Intermediate</div>
                 </div>
                 <div class="text-center p-4 bg-orange-50 rounded-lg">
-                    <div class="text-3xl font-bold text-orange-600">15</div>
+                    <div class="text-3xl font-bold text-orange-600">20</div>
                     <div class="text-sm text-gray-600 mt-1">B2 Units</div>
                     <div class="text-xs text-gray-500">Upper-Int.</div>
                 </div>
@@ -148,10 +151,10 @@
                 <div class="flex items-center justify-between">
                     <div>
                         <h2 class="text-2xl font-bold">Phase 2: A2 (Elementary)</h2>
-                        <p class="text-sm opacity-90 mt-1">Expansion & Daily Life • Units 26-50</p>
+                        <p class="text-sm opacity-90 mt-1">Past Tenses & Pronouns • Units 26-55</p>
                     </div>
                     <div class="text-right">
-                        <div class="text-3xl font-bold">25</div>
+                        <div class="text-3xl font-bold">30</div>
                         <div class="text-xs opacity-80">units</div>
                     </div>
                 </div>
@@ -169,7 +172,7 @@
                 <div class="flex items-center justify-between">
                     <div>
                         <h2 class="text-2xl font-bold">Phase 3: B1 (Intermediate)</h2>
-                        <p class="text-sm opacity-90 mt-1">Fluency & Complex Topics • Units 51-75</p>
+                        <p class="text-sm opacity-90 mt-1">Relative Clauses & Passive • Units 56-80</p>
                     </div>
                     <div class="text-right">
                         <div class="text-3xl font-bold">25</div>
@@ -190,10 +193,10 @@
                 <div class="flex items-center justify-between">
                     <div>
                         <h2 class="text-2xl font-bold">Phase 4: B2 (Upper-Intermediate)</h2>
-                        <p class="text-sm opacity-90 mt-1">Advanced Grammar & Nuance • Units 76-90</p>
+                        <p class="text-sm opacity-90 mt-1">Subjunctive & Personal Infinitive • Units 81-100</p>
                     </div>
                     <div class="text-right">
-                        <div class="text-3xl font-bold">15</div>
+                        <div class="text-3xl font-bold">20</div>
                         <div class="text-xs opacity-80">units</div>
                     </div>
                 </div>
@@ -220,105 +223,119 @@
     </footer>
 
     <script>
-        // Syllabus data structure
+        // Syllabus data structure - comprehensive A1-B2 curriculum (100 units)
         const syllabusData = {
             A1: [
-                { unit: 1, title: "Identity Statements (Eu sou)", topics: ["Click to Practice"], drillId: "self-introduction" },
-                { unit: 2, title: "Origin with Contractions (Eu sou de)", topics: ["Click to Practice"], drillId: "contractions-articles" },
+                // Core grammar foundations + essential vocabulary
+                { unit: 1, title: "Ser - Identity Statements (Eu sou)", topics: ["Click to Practice"], drillId: "self-introduction" },
+                { unit: 2, title: "Prepositions de/do/da (Eu sou do Brasil)", topics: ["Click to Practice"], drillId: "contractions-articles" },
                 { unit: 3, title: "Definite Articles (o, a, os, as)", topics: ["Click to Practice"], drillId: "noun-plurals" },
                 { unit: 4, title: "Indefinite Articles (um, uma, uns, umas)", topics: ["Click to Practice"], drillId: "noun-plurals" },
-                { unit: 5, title: "Location with Estar", topics: ["Click to Practice"], drillId: "ser-estar" },
-                { unit: 6, title: "Adjective Agreement", topics: ["Click to Practice"], drillId: "adjective-agreement" },
-                { unit: 7, title: "Basic Verbs - Morar (to live)", topics: ["Click to Practice"], drillId: "regular-ar" },
-                { unit: 8, title: "Basic Verbs - Falar (to speak)", topics: ["Click to Practice"], drillId: "regular-ar" },
-                { unit: 9, title: "Basic Verbs - Trabalhar (to work)", topics: ["Click to Practice"], drillId: "regular-ar" },
-                { unit: 10, title: "Basic Verbs - Estudar (to study)", topics: ["Click to Practice"], drillId: "regular-ar" },
-                { unit: 11, title: "Verb Ficar (to be located / to stay)", topics: ["Click to Practice"], drillId: "regular-ar" },
-                { unit: 12, title: "Verb Estar (Eu estou)", topics: ["Click to Practice"], drillId: "ser-estar" },
-                { unit: 13, title: "Location Prepositions (em casa, no trabalho)", topics: ["Click to Practice"], drillId: "common-prepositions" },
-                { unit: 14, title: "Family Members (Minha mãe, meu pai)", topics: ["Click to Practice"], drillId: "possessives" },
-                { unit: 15, title: "Negation with Não", topics: ["Click to Practice"], drillId: "conversational-answers" },
-                { unit: 16, title: "Verb Ter (Eu tenho)", topics: ["Click to Practice"], drillId: "irregular-verbs" },
-                { unit: 17, title: "Age with Ter (Eu tenho X anos)", topics: ["Click to Practice"], drillId: "numbers" },
-                { unit: 18, title: "Yes/No Questions (Você fala?)", topics: ["Click to Practice"], drillId: "conversational-answers" },
-                { unit: 19, title: "Verb Precisar de (to need)", topics: ["Click to Practice"], drillId: "regular-ar" },
-                { unit: 20, title: "Basic Food Vocabulary", topics: ["Click to Practice"], drillId: "food-meals" },
-                { unit: 21, title: "Drinks and Beverages", topics: ["Click to Practice"], drillId: "regular-er" },
+                { unit: 5, title: "Estar - Location & States", topics: ["Click to Practice"], drillId: "ser-estar" },
+                { unit: 6, title: "Adjective Agreement (bonito/bonita)", topics: ["Click to Practice"], drillId: "adjective-agreement" },
+                { unit: 7, title: "Muito Agreement (muito/muita/muitos)", topics: ["Click to Practice"], drillId: "muito" },
+                { unit: 8, title: "Regular -AR Verbs: Morar, Falar", topics: ["Click to Practice"], drillId: "regular-ar" },
+                { unit: 9, title: "Prepositions em/no/na (no Brasil, na casa)", topics: ["Click to Practice"], drillId: "common-prepositions" },
+                { unit: 10, title: "Regular -AR Verbs: Trabalhar, Estudar", topics: ["Click to Practice"], drillId: "regular-ar" },
+                { unit: 11, title: "Numbers 0-100 & Age (Tenho X anos)", topics: ["Click to Practice"], drillId: "numbers" },
+                { unit: 12, title: "Ser vs Estar - When to Use Each", topics: ["Click to Practice"], drillId: "ser-estar" },
+                { unit: 13, title: "Location Prepositions (perto de, longe de)", topics: ["Click to Practice"], drillId: "common-prepositions" },
+                { unit: 14, title: "Family Vocabulary (mãe, pai, irmão)", topics: ["Click to Practice"], drillId: "possessives" },
+                { unit: 15, title: "Food & Drinks Vocabulary", topics: ["Click to Practice"], drillId: "food-meals" },
+                { unit: 16, title: "Ter - Possession (Eu tenho)", topics: ["Click to Practice"], drillId: "irregular-verbs" },
+                { unit: 17, title: "Colors (cores)", topics: ["Click to Practice"], drillId: "colors" },
+                { unit: 18, title: "Days of the Week", topics: ["Click to Practice"], drillId: "days-of-week" },
+                { unit: 19, title: "Gostar de - Expressing Likes", topics: ["Click to Practice"], drillId: "regular-ar" },
+                { unit: 20, title: "Body Parts (partes do corpo)", topics: ["Click to Practice"], drillId: "body-parts" },
+                { unit: 21, title: "Ficar - Location & Staying", topics: ["Click to Practice"], drillId: "regular-ar" },
                 { unit: 22, title: "Regular -ER Verbs (Comer, Beber)", topics: ["Click to Practice"], drillId: "regular-er" },
-                { unit: 23, title: "Você/Ele/Ela Forms", topics: ["Click to Practice"], drillId: "subject-identification" },
-                { unit: 24, title: "Nós Forms (We)", topics: ["Click to Practice"], drillId: "subject-identification" },
-                { unit: 25, title: "Verb Gostar de (to like)", topics: ["Click to Practice"], drillId: "regular-ar" },
+                { unit: 23, title: "3rd Person Singular (Ele/Ela fala)", topics: ["Click to Practice"], drillId: "subject-identification" },
+                { unit: 24, title: "1st Person Plural (Nós falamos)", topics: ["Click to Practice"], drillId: "subject-identification" },
+                { unit: 25, title: "Precisar de - Expressing Needs", topics: ["Click to Practice"], drillId: "regular-ar" },
             ],
             A2: [
+                // Expanding verb system, past tenses, basic pronouns
                 { unit: 26, title: "Regular -IR Verbs (Abrir, Partir)", topics: ["Click to Practice"], drillId: "regular-ir" },
-                { unit: 27, title: "Future with Ir + Infinitive", topics: ["Click to Practice"], drillId: "immediate-future" },
-                { unit: 28, title: "Vocês/Eles/Elas Forms (You all/They)", topics: ["Click to Practice"], drillId: "subject-identification" },
-                { unit: 29, title: "Time Expressions (hoje, amanhã, ontem)", topics: ["Click to Practice"], drillId: "time-expressions" },
-                { unit: 30, title: "Common Question Words (Onde, O que, Quando)", topics: ["Click to Practice"], drillId: "question-words" },
-                { unit: 31, title: "Possessive Adjectives - Meu/Minha", topics: ["Click to Practice"], drillId: "possessives" },
-                { unit: 32, title: "Possessive Adjectives - Seu/Sua", topics: ["Click to Practice"], drillId: "possessives" },
-                { unit: 33, title: "Possessive Adjectives - Nosso/Nossa", topics: ["Click to Practice"], drillId: "possessives" },
-                { unit: 34, title: "Preterite Tense - Regular -AR Verbs", topics: ["Click to Practice"], drillId: "preterite-tense" },
-                { unit: 35, title: "Preterite Tense - Regular -ER/-IR Verbs", topics: ["Click to Practice"], drillId: "preterite-tense" },
-                { unit: 36, title: "Irregular Preterite - Ser/Ir (fui, foi)", topics: ["Click to Practice"], drillId: "preterite-tense" },
-                { unit: 37, title: "Irregular Preterite - Ter/Estar", topics: ["Click to Practice"], drillId: "preterite-tense" },
-                { unit: 38, title: "Irregular Preterite - Fazer/Dizer/Trazer", topics: ["Click to Practice"], drillId: "preterite-tense" },
-                { unit: 39, title: "Irregular Preterite - Ver/Vir/Dar", topics: ["Click to Practice"], drillId: "preterite-tense" },
-                { unit: 40, title: "Irregular Preterite - Poder/Pôr/Saber/Querer", topics: ["Click to Practice"], drillId: "preterite-tense" },
-                { unit: 41, title: "Contractions with Preposition A (ao, à, aos, às)", topics: ["Click to Practice"], drillId: "crase" },
-                { unit: 42, title: "Prepositions Por and Para", topics: ["Click to Practice"], drillId: "por-vs-para" },
-                { unit: 43, title: "Numbers 0-100", topics: ["Click to Practice"], drillId: "numbers" },
-                { unit: 44, title: "Numbers 100-1000 and Beyond", topics: ["Click to Practice"], drillId: "numbers" },
-                { unit: 45, title: "Imperfect Tense - Regular Verbs", topics: ["Click to Practice"], drillId: "imperfect-tense" },
-                { unit: 46, title: "Imperfect Tense - Irregular Verbs (ser, ter, vir)", topics: ["Click to Practice"], drillId: "imperfect-tense" },
-                { unit: 47, title: "Comparatives (mais...que, menos...que, tão...quanto)", topics: ["Click to Practice"], drillId: "comparatives" },
-                { unit: 48, title: "Superlatives (O mais..., O menos...)", topics: ["Click to Practice"], drillId: "superlatives" },
-                { unit: 49, title: "Telling Time (Que horas são?)", topics: ["Click to Practice"], drillId: "time-expressions" },
-                { unit: 50, title: "Days of the Week", topics: ["Click to Practice"], drillId: "days-of-week" },
+                { unit: 27, title: "Near Future (Ir + Infinitive)", topics: ["Click to Practice"], drillId: "immediate-future" },
+                { unit: 28, title: "3rd Person Plural (Eles/Elas falam)", topics: ["Click to Practice"], drillId: "subject-identification" },
+                { unit: 29, title: "Weather Expressions (Está chovendo)", topics: ["Click to Practice"], drillId: "weather" },
+                { unit: 30, title: "Question Words (Onde, O que, Quando)", topics: ["Click to Practice"], drillId: "question-words" },
+                { unit: 31, title: "Haver - Existence (Há, Havia)", topics: ["Click to Practice"], drillId: "irregular-verbs" },
+                { unit: 32, title: "Possessives: Meu/Minha, Seu/Sua", topics: ["Click to Practice"], drillId: "possessives" },
+                { unit: 33, title: "Possessives: Nosso/Nossa, Dele/Dela", topics: ["Click to Practice"], drillId: "possessives" },
+                { unit: 34, title: "Negative Words (não, nunca, nada, ninguém)", topics: ["Click to Practice"], drillId: "conversational-answers" },
+                { unit: 35, title: "Preterite Regular -AR (falei, falou)", topics: ["Click to Practice"], drillId: "preterite-tense" },
+                { unit: 36, title: "Preterite Regular -ER/-IR (comi, parti)", topics: ["Click to Practice"], drillId: "preterite-tense" },
+                { unit: 37, title: "Preterite Irregular: Ser/Ir (fui, foi)", topics: ["Click to Practice"], drillId: "preterite-tense" },
+                { unit: 38, title: "Preterite Irregular: Ter/Estar", topics: ["Click to Practice"], drillId: "preterite-tense" },
+                { unit: 39, title: "Preterite Irregular: Fazer/Dizer/Trazer", topics: ["Click to Practice"], drillId: "preterite-tense" },
+                { unit: 40, title: "Preterite Irregular: Ver/Vir/Dar", topics: ["Click to Practice"], drillId: "preterite-tense" },
+                { unit: 41, title: "Preterite Irregular: Poder/Pôr/Saber/Querer", topics: ["Click to Practice"], drillId: "preterite-tense" },
+                { unit: 42, title: "Preposition Contractions (ao, à, pelo, pela)", topics: ["Click to Practice"], drillId: "crase" },
+                { unit: 43, title: "Para vs Por - Basic Uses", topics: ["Click to Practice"], drillId: "por-vs-para" },
+                { unit: 44, title: "Reflexive Pronouns (me, se, nos)", topics: ["Click to Practice"], drillId: "reflexive-verbs" },
+                { unit: 45, title: "Direct Object Pronouns (o, a, os, as)", topics: ["Click to Practice"], drillId: "object-pronouns" },
+                { unit: 46, title: "Imperfect Tense - Regular (falava, comia)", topics: ["Click to Practice"], drillId: "imperfect-tense" },
+                { unit: 47, title: "Imperfect Tense - Irregular (era, tinha, vinha)", topics: ["Click to Practice"], drillId: "imperfect-tense" },
+                { unit: 48, title: "Preterite vs Imperfect - When to Use", topics: ["Click to Practice"], drillId: "imperfect-tense" },
+                { unit: 49, title: "Comparatives (mais...que, menos...que)", topics: ["Click to Practice"], drillId: "comparatives" },
+                { unit: 50, title: "Superlatives (o mais..., o menos...)", topics: ["Click to Practice"], drillId: "superlatives" },
+                { unit: 51, title: "Irregular Comparatives (melhor, pior, maior)", topics: ["Click to Practice"], drillId: "comparatives" },
+                { unit: 52, title: "Absolute Superlatives (-íssimo)", topics: ["Click to Practice"], drillId: "superlatives" },
+                { unit: 53, title: "Diminutives (-inho, -zinho)", topics: ["Click to Practice"], drillId: "noun-plurals" },
+                { unit: 54, title: "Augmentatives (-ão, -ona)", topics: ["Click to Practice"], drillId: "noun-plurals" },
+                { unit: 55, title: "Months, Dates & Telling Time", topics: ["Click to Practice"], drillId: "dates" },
             ],
             B1: [
-                { unit: 51, title: "Months of the Year", topics: ["Click to Practice"], drillId: "months" },
-                { unit: 52, title: "Dates (Calendar Dates)", topics: ["Click to Practice"], drillId: "dates" },
-                { unit: 53, title: "Ordinal Numbers", topics: ["Click to Practice"], drillId: "numbers" },
-                { unit: 54, title: "Weather Expressions", topics: ["Click to Practice"], drillId: "weather" },
-                { unit: 55, title: "Colors", topics: ["Click to Practice"], drillId: "colors" },
-                { unit: 56, title: "Clothing Basics", topics: ["Click to Practice"], drillId: "clothing" },
-                { unit: 57, title: "Body Parts", topics: ["Click to Practice"], drillId: "body-parts" },
-                { unit: 58, title: "Family Members Expanded", topics: ["Click to Practice"], drillId: "possessives" },
-                { unit: 59, title: "Emotions and Feelings", topics: ["Click to Practice"], drillId: "emotions" },
-                { unit: 60, title: "Locations and Directions", topics: ["Click to Practice"], drillId: "directions" },
-                { unit: 61, title: "House and Rooms", topics: ["Click to Practice"], drillId: "house-rooms" },
-                { unit: 62, title: "Daily Activities Verbs", topics: ["Click to Practice"], drillId: "reflexive-verbs" },
-                { unit: 63, title: "Frequency Adverbs", topics: ["Click to Practice"], drillId: "frequency-adverbs" },
-                { unit: 64, title: "Food and Meals Expanded", topics: ["Click to Practice"], drillId: "food-meals" },
-                { unit: 65, title: "Transportation and Travel", topics: ["Click to Practice"], drillId: "ir-transportation" },
-                { unit: 66, title: "Hobbies and Leisure Activities", topics: ["Click to Practice"], drillId: "hobbies" },
-                { unit: 67, title: "Technology and Communication", topics: ["Click to Practice"], drillId: "technology" },
-                { unit: 68, title: "Shopping and Money", topics: ["Click to Practice"], drillId: "shopping" },
-                { unit: 69, title: "Professions and Work", topics: ["Click to Practice"], drillId: "self-introduction" },
-                { unit: 70, title: "Health and Medical Basics", topics: ["Click to Practice"], drillId: "health-medical" },
-                { unit: 71, title: "Commands/Imperative Mood", topics: ["Click to Practice"], drillId: "imperative" },
-                { unit: 72, title: "Demonstratives - This/That", topics: ["Click to Practice"], drillId: "demonstratives" },
-                { unit: 73, title: "Furniture and Household Items", topics: ["Click to Practice"], drillId: "house-rooms" },
-                { unit: 74, title: "Nature and Animals", topics: ["Click to Practice"], drillId: "weather" },
-                { unit: 75, title: "School and Education", topics: ["Click to Practice"], drillId: "technology" },
+                // Pronouns, relative clauses, passive voice, compound tenses
+                { unit: 56, title: "Demonstratives (este, esse, aquele)", topics: ["Click to Practice"], drillId: "demonstratives" },
+                { unit: 57, title: "Indefinite Pronouns (alguém, algo, nenhum)", topics: ["Click to Practice"], drillId: "conversational-answers" },
+                { unit: 58, title: "Indefinite Pronouns (qualquer, cada, outro)", topics: ["Click to Practice"], drillId: "conversational-answers" },
+                { unit: 59, title: "Indirect Object Pronouns (me, lhe, nos)", topics: ["Click to Practice"], drillId: "object-pronouns" },
+                { unit: 60, title: "Próclise with Negatives (não me)", topics: ["Click to Practice"], drillId: "object-pronouns" },
+                { unit: 61, title: "Próclise with Adverbs (sempre me)", topics: ["Click to Practice"], drillId: "object-pronouns" },
+                { unit: 62, title: "Pronouns after Infinitives (para me ver)", topics: ["Click to Practice"], drillId: "object-pronouns" },
+                { unit: 63, title: "Verb + Preposition: Pensar em, Sonhar com", topics: ["Click to Practice"], drillId: "common-prepositions" },
+                { unit: 64, title: "Verb + Preposition: Depender de, Gostar de", topics: ["Click to Practice"], drillId: "common-prepositions" },
+                { unit: 65, title: "Relative Pronoun: Que (basic)", topics: ["Click to Practice"], drillId: "interrogatives" },
+                { unit: 66, title: "Relative Pronoun: Onde (where)", topics: ["Click to Practice"], drillId: "interrogatives" },
+                { unit: 67, title: "Relative Pronoun: Quem (who)", topics: ["Click to Practice"], drillId: "interrogatives" },
+                { unit: 68, title: "Relative Pronoun: Cujo (whose)", topics: ["Click to Practice"], drillId: "interrogatives" },
+                { unit: 69, title: "Relative Pronoun: O que (what/that which)", topics: ["Click to Practice"], drillId: "interrogatives" },
+                { unit: 70, title: "Preposition + Que (em que, com que)", topics: ["Click to Practice"], drillId: "common-prepositions" },
+                { unit: 71, title: "Relative Pronoun: O qual (formal)", topics: ["Click to Practice"], drillId: "interrogatives" },
+                { unit: 72, title: "Compound Past: Ter + Participle (tenho feito)", topics: ["Click to Practice"], drillId: "preterite-tense" },
+                { unit: 73, title: "Pluperfect: Tinha + Participle (tinha feito)", topics: ["Click to Practice"], drillId: "imperfect-tense" },
+                { unit: 74, title: "Reported Speech (Ele disse que...)", topics: ["Click to Practice"], drillId: "conversational-answers" },
+                { unit: 75, title: "Passive Voice with Ser (foi feito)", topics: ["Click to Practice"], drillId: "irregular-verbs" },
+                { unit: 76, title: "Passive Progressive (está sendo feito)", topics: ["Click to Practice"], drillId: "present-continuous" },
+                { unit: 77, title: "SE Passive (Fala-se português)", topics: ["Click to Practice"], drillId: "reflexive-verbs" },
+                { unit: 78, title: "SE Passive - Impersonal (Vende-se)", topics: ["Click to Practice"], drillId: "reflexive-verbs" },
+                { unit: 79, title: "Imperative - Affirmative (Fala! Fale!)", topics: ["Click to Practice"], drillId: "imperative" },
+                { unit: 80, title: "Imperative - Negative (Não fale!)", topics: ["Click to Practice"], drillId: "imperative" },
             ],
             B2: [
-                { unit: 76, title: "Future Tense (Farei, Fará)", topics: ["Click to Practice"], drillId: "future-tense" },
-                { unit: 77, title: "Conditional Tense (Faria, Gostaria)", topics: ["Click to Practice"], drillId: "conditional-tense" },
-                { unit: 78, title: "É que - Emphatic Questions", topics: ["Click to Practice"], drillId: "e-que-questions" },
-                { unit: 79, title: "Crase (à, às)", topics: ["Click to Practice"], drillId: "crase" },
-                { unit: 80, title: "Todo vs Tudo", topics: ["Click to Practice"], drillId: "todo-tudo" },
-                { unit: 81, title: "Introduction to Subjunctive Mood", topics: ["Click to Practice"], drillId: "subjunctive-intro" },
-                { unit: 82, title: "Present Subjunctive - Regular Verbs", topics: ["Click to Practice"], drillId: "present-subjunctive" },
-                { unit: 83, title: "Present Subjunctive - Irregular Verbs", topics: ["Click to Practice"], drillId: "present-subjunctive" },
-                { unit: 84, title: "Imperfect Subjunctive", topics: ["Click to Practice"], drillId: "imperfect-subjunctive" },
-                { unit: 85, title: "Future Subjunctive", topics: ["Click to Practice"], drillId: "future-subjunctive" },
-                { unit: 86, title: "Colloquial Brazilian Portuguese", topics: ["Click to Practice"], drillId: "colloquial-speech" },
-                { unit: 87, title: "Advanced Demonstratives", topics: ["Click to Practice"], drillId: "advanced-demonstratives" },
-                { unit: 88, title: "Discourse Markers", topics: ["Click to Practice"], drillId: "discourse-markers" },
-                { unit: 89, title: "Advanced Por/Para & Idioms", topics: ["Click to Practice"], drillId: "advanced-por-para" },
-                { unit: 90, title: "Comprehensive Synthesis", topics: ["Click to Practice"], drillId: "capstone-synthesis" },
+                // Future, conditional, subjunctive, personal infinitive, periphrases
+                { unit: 81, title: "Simple Future (Farei, Fará)", topics: ["Click to Practice"], drillId: "future-tense" },
+                { unit: 82, title: "Conditional Tense (Faria, Gostaria)", topics: ["Click to Practice"], drillId: "conditional-tense" },
+                { unit: 83, title: "Past Future (Disse que faria)", topics: ["Click to Practice"], drillId: "conditional-tense" },
+                { unit: 84, title: "Acabar de + Infinitive (just did)", topics: ["Click to Practice"], drillId: "time-expressions" },
+                { unit: 85, title: "Voltar a + Infinitive (do again)", topics: ["Click to Practice"], drillId: "time-expressions" },
+                { unit: 86, title: "Aspectual Verbs (começar a, parar de)", topics: ["Click to Practice"], drillId: "time-expressions" },
+                { unit: 87, title: "Time Expressions (há, faz, desde)", topics: ["Click to Practice"], drillId: "time-expressions" },
+                { unit: 88, title: "Todo vs Tudo", topics: ["Click to Practice"], drillId: "todo-tudo" },
+                { unit: 89, title: "Present Subjunctive - Regular", topics: ["Click to Practice"], drillId: "present-subjunctive" },
+                { unit: 90, title: "Present Subjunctive - Irregular", topics: ["Click to Practice"], drillId: "present-subjunctive" },
+                { unit: 91, title: "Subjunctive Triggers: Querer que, Espero que", topics: ["Click to Practice"], drillId: "present-subjunctive" },
+                { unit: 92, title: "Subjunctive Triggers: Talvez, Embora, Caso", topics: ["Click to Practice"], drillId: "present-subjunctive" },
+                { unit: 93, title: "Imperfect Subjunctive (Se eu fosse)", topics: ["Click to Practice"], drillId: "imperfect-subjunctive" },
+                { unit: 94, title: "Future Subjunctive (Quando eu for)", topics: ["Click to Practice"], drillId: "future-subjunctive" },
+                { unit: 95, title: "Personal Infinitive - Introduction", topics: ["Click to Practice"], drillId: "regular-ar" },
+                { unit: 96, title: "Personal Infinitive - Uses (para eu fazer)", topics: ["Click to Practice"], drillId: "regular-ar" },
+                { unit: 97, title: "Progressive Periphrases (estar/andar/vir)", topics: ["Click to Practice"], drillId: "present-continuous" },
+                { unit: 98, title: "Ficar + Gerúndio (kept doing)", topics: ["Click to Practice"], drillId: "present-continuous" },
+                { unit: 99, title: "Colloquial Contractions (pra, tá, né)", topics: ["Click to Practice"], drillId: "colloquial-speech" },
+                { unit: 100, title: "Comprehensive Review & Synthesis", topics: ["Click to Practice"], drillId: "capstone-synthesis" },
             ]
         };
 

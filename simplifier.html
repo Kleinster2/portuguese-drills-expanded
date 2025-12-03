@@ -283,9 +283,12 @@
                 <!-- Output Section -->
                 <div class="flex flex-col">
                     <div class="mb-2 flex flex-col justify-end">
-                        <label id="simplifier-output-label" for="simplifier-output" class="block text-sm font-semibold text-slate-700">
-                            Simplified A1-Level Portuguese
-                        </label>
+                        <div class="flex items-center justify-between">
+                            <label id="simplifier-output-label" for="simplifier-output" class="block text-sm font-semibold text-slate-700">
+                                Simplified A1-Level Portuguese
+                            </label>
+                            <span id="dict-status" class="text-xs"></span>
+                        </div>
                         <p id="usage-hint" class="text-base text-slate-500 mt-1 opacity-0 transition-opacity">
                             <span id="usage-hint-text">Hover/tap words for translation · Click/tap again to hear the sentence</span>
                         </p>
@@ -346,19 +349,76 @@ function escapeHtml(text) {
 // Dictionary for translations
 let dictionary = { phrases: {}, words: {} };
 let dictionaryLoaded = false;
+let dictionaryError = false;
+
+// Normalize text by removing diacritics (accents) for fallback matching
+function normalizeAccents(text) {
+  return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+// Build normalized lookup maps for fallback matching
+let normalizedWords = {};
+let normalizedPhrases = {};
+
+function buildNormalizedMaps() {
+  // Build word map: normalized -> original key
+  for (const key of Object.keys(dictionary.words)) {
+    const normalized = normalizeAccents(key);
+    if (!normalizedWords[normalized]) {
+      normalizedWords[normalized] = key;
+    }
+  }
+  // Build phrase map: normalized -> original key
+  for (const key of Object.keys(dictionary.phrases)) {
+    const normalized = normalizeAccents(key);
+    if (!normalizedPhrases[normalized]) {
+      normalizedPhrases[normalized] = key;
+    }
+  }
+  console.log('Normalized maps built for accent-insensitive lookups');
+}
+
+// Update dictionary status indicator
+function updateDictionaryStatus(status) {
+  const indicator = document.getElementById('dict-status');
+  if (!indicator) return;
+
+  if (status === 'loading') {
+    indicator.innerHTML = '<span class="text-slate-400">Loading dictionary...</span>';
+    indicator.className = 'text-xs';
+  } else if (status === 'loaded') {
+    indicator.innerHTML = '<span class="text-green-600">✓ Dictionary ready</span>';
+    indicator.className = 'text-xs';
+    // Fade out after 3 seconds
+    setTimeout(() => {
+      indicator.style.transition = 'opacity 1s';
+      indicator.style.opacity = '0';
+    }, 3000);
+  } else if (status === 'error') {
+    indicator.innerHTML = '<span class="text-amber-600">⚠ Dictionary unavailable (using API fallback)</span>';
+    indicator.className = 'text-xs';
+  }
+}
 
 // Load dictionary from JSON file
 async function loadDictionary() {
   if (dictionaryLoaded) return;
+  updateDictionaryStatus('loading');
   try {
     const response = await fetch('/config/dictionary.json');
     if (response.ok) {
       dictionary = await response.json();
       dictionaryLoaded = true;
+      buildNormalizedMaps();
       console.log('Dictionary loaded:', Object.keys(dictionary.words).length, 'words,', Object.keys(dictionary.phrases).length, 'phrases');
+      updateDictionaryStatus('loaded');
+    } else {
+      throw new Error('Response not OK');
     }
   } catch (error) {
     console.warn('Failed to load dictionary:', error);
+    dictionaryError = true;
+    updateDictionaryStatus('error');
   }
 }
 
@@ -383,13 +443,20 @@ function cacheTranslation(word, translation) {
   }
 }
 
-// Lookup word in dictionary (local first, then cache)
+// Lookup word in dictionary (local first, then normalized fallback, then cache)
 function lookupWord(word) {
   const lower = word.toLowerCase();
 
-  // Check local dictionary first
+  // Check local dictionary first (exact match)
   if (dictionary.words[lower]) {
     return dictionary.words[lower];
+  }
+
+  // Try normalized (accent-insensitive) lookup
+  const normalized = normalizeAccents(lower);
+  if (normalizedWords[normalized]) {
+    const originalKey = normalizedWords[normalized];
+    return dictionary.words[originalKey];
   }
 
   // Check localStorage cache
@@ -401,10 +468,23 @@ function lookupWord(word) {
   return null;
 }
 
-// Lookup phrase in dictionary
+// Lookup phrase in dictionary (exact first, then normalized fallback)
 function lookupPhrase(phrase) {
   const lower = phrase.toLowerCase();
-  return dictionary.phrases[lower] || null;
+
+  // Exact match first
+  if (dictionary.phrases[lower]) {
+    return dictionary.phrases[lower];
+  }
+
+  // Try normalized (accent-insensitive) lookup
+  const normalized = normalizeAccents(lower);
+  if (normalizedPhrases[normalized]) {
+    const originalKey = normalizedPhrases[normalized];
+    return dictionary.phrases[originalKey];
+  }
+
+  return null;
 }
 
 // Extract all unique words from text that aren't in dictionary or cache
@@ -417,15 +497,21 @@ function extractUnknownWords(text) {
     const lower = word.toLowerCase();
     // Skip short words (articles, prepositions usually)
     if (lower.length < 3) continue;
-    // Skip if in dictionary or cache
+    // Skip if in dictionary (exact or normalized) or cache
     if (dictionary.words[lower]) continue;
+    const normalized = normalizeAccents(lower);
+    if (normalizedWords[normalized]) continue;
     if (getCachedTranslation(lower)) continue;
     // Skip common cognates that don't need translation
     if (/^(importante|problema|diferente|interessante|possível|impossível|normal|especial|original|natural|final|total|principal|central|federal|social|musical|hospital|hotel|animal|capital|canal|festival|global|local|real|legal|digital|virtual|visual|ideal|formal|informal)$/i.test(lower)) continue;
     unknownWords.add(lower);
   }
 
-  return Array.from(unknownWords);
+  const result = Array.from(unknownWords);
+  if (result.length > 0) {
+    console.log('[Translate] Unknown words found:', result);
+  }
+  return result;
 }
 
 // Batch fetch translations for unknown words using Claude
@@ -434,6 +520,7 @@ async function fetchUnknownTranslations(words) {
 
   // Limit batch size to avoid token limits
   const batch = words.slice(0, 30);
+  console.log('[Translate] Fetching translations for:', batch);
 
   try {
     const response = await fetch('/api/translate-words', {
@@ -443,11 +530,12 @@ async function fetchUnknownTranslations(words) {
     });
 
     if (!response.ok) {
-      console.warn('Translation API failed:', response.status);
+      console.warn('[Translate] API failed:', response.status, await response.text());
       return;
     }
 
     const data = await response.json();
+    console.log('[Translate] Received:', data);
 
     // Cache the translations
     if (data.translations) {
@@ -456,9 +544,10 @@ async function fetchUnknownTranslations(words) {
           cacheTranslation(word, translation);
         }
       }
+      console.log('[Translate] Cached', Object.keys(data.translations).length, 'translations');
     }
   } catch (error) {
-    console.warn('Failed to fetch translations:', error);
+    console.warn('[Translate] Failed:', error);
   }
 }
 
@@ -774,6 +863,7 @@ function formatSimplifiedTextWithSentences(text) {
     let withTooltips = text;
 
     // Get all phrases from dictionary, sorted by length (longest first)
+    // Dictionary phrases run FIRST so idiomatic phrases like "vamos ver" take priority
     const phrases = Object.entries(dictionary.phrases || {})
       .sort((a, b) => b[0].length - a[0].length);
 
@@ -788,6 +878,34 @@ function formatSimplifiedTextWithSentences(text) {
         return `<span class="phrase-tooltip" data-translation="${safeTranslation}">${match}</span>`;
       });
     }
+
+    // DYNAMIC PATTERN: ir + infinitive (vai falar = "will speak")
+    // Forms of ir: vou, vai, vamos, vão, vais
+    // Infinitives end in -ar, -er, -ir
+    // Runs AFTER dictionary phrases so "vamos ver" keeps "let's see" translation
+    const irInfinitiveRegex = /(?<![A-Za-zÀ-ÿ<])(vou|vai|vamos|vão|vais)\s+([A-Za-zÀ-ÿ]*(?:ar|er|ir))(?![A-Za-zÀ-ÿ])/gi;
+    withTooltips = withTooltips.replace(irInfinitiveRegex, function(match, irForm, infinitive) {
+      // Look up the infinitive to get its English translation
+      const verbTranslation = lookupWord(infinitive);
+      let baseVerb;
+      if (verbTranslation) {
+        // Remove "to " from all parts, join with "/" (e.g., "to change; to move" -> "change/move")
+        baseVerb = verbTranslation
+          .split(/;\s*/)
+          .map(part => part.replace(/^to\s+/i, '').trim())
+          .join('/');
+      } else {
+        // Fallback: use the Portuguese infinitive
+        baseVerb = infinitive;
+      }
+      // Match "going to" form to subject: vou=am, vai=is, vamos/vão/vais=are
+      // Reserve "will" for proper future tense (e.g., mudarei), use only "going to" for ir+infinitive
+      const goingTo = irForm.toLowerCase() === 'vou' ? 'am going to' :
+                      irForm.toLowerCase() === 'vai' ? 'is going to' : 'are going to';
+      const translation = `${goingTo} ${baseVerb}`;
+      const safeTranslation = translation.replace(/"/g, '&quot;');
+      return `<span class="phrase-tooltip" data-translation="${safeTranslation}">${match}</span>`;
+    });
 
     // Process single words (skip words already inside spans)
     withTooltips = withTooltips.replace(/(<span[^>]*>.*?<\/span>)|([A-Za-zÀ-ÿ]+)/g, function(match, spanGroup, wordGroup) {

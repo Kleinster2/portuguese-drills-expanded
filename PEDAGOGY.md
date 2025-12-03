@@ -174,7 +174,67 @@ I will then internalize all principles and be ready to apply them to any questio
 
 ---
 
-### 10. **Comprehension Before Production (But Not Too Much)**
+### 10. **Show All Main Meanings**
+
+**Principle:** When introducing vocabulary, always show all main meanings of a word, not just the one used in the current context.
+
+**Example:**
+- ✅ **de** = from, of
+- ❌ **de** = from (only showing contextual meaning)
+
+**Rationale:** Students benefit from seeing the full picture. They can figure out which meaning applies in context. This builds deeper vocabulary understanding and prepares them for encountering the word in different situations.
+
+**Application:**
+- Vocabulary lists show all primary translations
+- Inline definitions include multiple meanings separated by commas
+- Trust the student to apply the correct meaning from context
+
+---
+
+### 11. **All Portuguese Text Should Be Hoverable**
+
+**Principle:** Every Portuguese word or phrase in a lesson should benefit from the hover dictionary, not just example sentences.
+
+**Application:**
+- Pattern templates like "Eu sou de + [city]" should be hoverable
+- Vocabulary words in explanations (e.g., "sou" in "Why sou?") should be hoverable
+- Inline Portuguese in English text should be wrapped with `data-hoverable="true"`
+
+**Implementation:**
+```html
+<!-- Pattern template -->
+<span data-hoverable="true">Eu sou de</span> + [city]
+
+<!-- Vocabulary in explanation -->
+<strong data-hoverable="true">sou</strong> = am
+```
+
+**Rationale:** Students may encounter unfamiliar words anywhere in the lesson, not just in example sentences. Consistent hover support reduces friction and encourages exploration.
+
+---
+
+### 12. **Pronunciation Must Be Audible**
+
+**Principle:** Any time a phoneme, sound, or pronunciation is mentioned in text, a speaker button must be immediately available to hear it.
+
+**Application:**
+- Pronunciation notes (e.g., "'de' sounds like 'djee'") must include a speaker button
+- Phonetic explanations should let students hear the sound instantly
+- Don't describe a sound without providing a way to hear it
+
+**Example:**
+```html
+<div class="pronunciation-note">
+    <strong>Pronunciation:</strong> "de" sounds like "djee"
+    <button class="speaker-btn" data-text="de">🔊</button>
+</div>
+```
+
+**Rationale:** Reading about pronunciation is insufficient. Students need to hear sounds immediately when they're being explained. The moment of explanation is the moment of highest curiosity.
+
+---
+
+### 13. **Comprehension Before Production (But Not Too Much)**
 
 **Principle:** Balance comprehension and production appropriately for level.
 

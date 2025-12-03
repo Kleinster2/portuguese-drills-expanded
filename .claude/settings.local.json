@@ -1,7 +1,36 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx wrangler pages dev:*)"
+      "Bash(npx wrangler pages deploy:*)",
+      "Bash(git push:*)",
+      "Bash(git commit:*)",
+      "Bash(npm install:*)",
+      "Bash(npx wrangler --version)",
+      "Bash(git add:*)",
+      "Bash(npx wrangler pages dev:*)",
+      "Bash(timeout 8 bash:*)",
+      "Bash(curl:*)",
+      "Bash(npm run deploy:*)",
+      "Bash(node -e:*)",
+      "Bash(python3:*)",
+      "Bash(dir \"C:\\Users\\klein\\cascadeprojects\\portuguese-drills-expanded\\charting_app\")",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(cat:*)",
+      "Bash(npm run dev:*)",
+      "Bash(paste:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx wrangler d1 create simplifier-logs)",
+      "Bash(npx wrangler d1 execute:*)",
+      "Bash(npx wrangler pages project list:*)",
+      "Bash(node scripts/build-prompts.js:*)",
+      "Bash(npm test)",
+      "Bash(timeout 5 bash:*)",
+      "WebFetch(domain:portuguese-drills-expanded.pages.dev)",
+      "WebSearch",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:easypronunciation.com)",
+      "Bash(python:*)"
     ],
     "deny": [],
     "ask": []
