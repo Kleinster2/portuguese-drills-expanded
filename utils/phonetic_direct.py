@@ -396,10 +396,15 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
     stress_type, stress_pos = stress_info
 
     # Determine if this syllable is stressed
+    # Function words (articles, prepositions, conjunctions) remain unstressed
+    function_words = ['o', 'a', 'os', 'as', 'de', 'em', 'e', 'que', 'se', 'te', 'me', 'lhe', 'nos']
+    word_lower = word.lower()
+
     is_stressed = False
     if total_syls == 1:
-        # Single syllable words are always stressed
-        is_stressed = True
+        # Single syllable words are stressed UNLESS they're function words
+        if word_lower not in function_words:
+            is_stressed = True
     elif stress_type == 'accent':
         is_stressed = any(has_accent(c) for c in syllable)
     elif stress_type == 'penultimate':
