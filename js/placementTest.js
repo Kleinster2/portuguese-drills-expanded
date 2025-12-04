@@ -1,8 +1,9 @@
 /**
- * Placement Test Module - Adaptive Testing (v2.0)
+ * Placement Test Module - Adaptive Testing (v2.1)
  * Features:
  *   - Progressive Unlock: Tests phases sequentially (A1 → A2 → B1 → B2)
  *   - Three-Strikes Logic: Stops after 3 consecutive failures in a phase
+ *   - Mercy Rule: Auto-pass phase after 15 consecutive correct answers
  *   - Smart Placement: 5-15 minute test instead of 90 minutes
  * Complete coverage: Units 1-89 (A1 Beginner → B2 Upper-Intermediate)
  * Assessment Types: Comprehension (PT→EN) + Production (EN→PT)
@@ -19,6 +20,7 @@ let testAnswers = [];
 // Adaptive testing state
 let currentPhase = 1; // Start with Phase 1 (A1)
 let consecutiveFailures = 0; // Track consecutive failures in current phase
+let consecutiveCorrect = 0; // Track consecutive correct answers (for mercy rule)
 let phaseQuestions = []; // Questions for current phase only
 let phaseAnswers = []; // Answers for current phase
 let completedPhases = []; // Track completed phases with scores
@@ -26,6 +28,7 @@ let testStopped = false; // Flag for early termination
 
 const PHASE_PASS_THRESHOLD = 0.80; // 80% to pass a phase
 const THREE_STRIKES_LIMIT = 3; // Stop after 3 consecutive failures
+const MERCY_RULE_THRESHOLD = 15; // Auto-pass phase after 15 consecutive correct
 
 /**
  * Load question bank from JSON file based on test type
@@ -73,6 +76,7 @@ async function startPlacementTest() {
   testAnswers = [];
   currentPhase = 1;
   consecutiveFailures = 0;
+  consecutiveCorrect = 0;
   phaseQuestions = [];
   phaseAnswers = [];
   completedPhases = [];
@@ -93,7 +97,7 @@ async function startPlacementTest() {
 
   // Track with Plausible
   if (window.plausible) {
-    plausible('Placement Test', { props: { type: testType || 'grammar', version: 'adaptive-v2' } });
+    plausible('Placement Test', { props: { type: testType || 'grammar', version: 'adaptive-v2.1' } });
   }
 
   modal.classList.remove('hidden');
@@ -140,6 +144,7 @@ function startPhase(phaseNum) {
   currentQuestionIndex = 0;
   phaseAnswers = [];
   consecutiveFailures = 0;
+  consecutiveCorrect = 0;
 
   // Get questions for this phase only
   phaseQuestions = questionBank.questions.filter(q => q.phase === phaseNum);
@@ -352,9 +357,10 @@ window.handlePlacementAnswer = function(questionId, selectedAnswer) {
   phaseAnswers.push(answerRecord);
   testAnswers.push(answerRecord);
 
-  // THREE-STRIKES LOGIC: Track consecutive failures
+  // ADAPTIVE LOGIC: Track consecutive failures and successes
   if (!isCorrect) {
     consecutiveFailures++;
+    consecutiveCorrect = 0; // Reset mercy rule counter
     console.log(`❌ Wrong answer. Consecutive failures: ${consecutiveFailures}/${THREE_STRIKES_LIMIT}`);
 
     if (consecutiveFailures >= THREE_STRIKES_LIMIT) {
@@ -364,7 +370,17 @@ window.handlePlacementAnswer = function(questionId, selectedAnswer) {
       return;
     }
   } else {
-    consecutiveFailures = 0; // Reset on correct answer
+    consecutiveFailures = 0; // Reset three-strikes counter
+    consecutiveCorrect++;
+    console.log(`✓ Correct answer. Consecutive correct: ${consecutiveCorrect}/${MERCY_RULE_THRESHOLD}`);
+
+    // MERCY RULE: Auto-pass phase after consistent excellence
+    if (consecutiveCorrect >= MERCY_RULE_THRESHOLD) {
+      console.log(`🎯 Mercy rule! Auto-passing Phase ${currentPhase} after ${MERCY_RULE_THRESHOLD} consecutive correct`);
+      testStopped = true; // Stop current phase
+      setTimeout(() => showMercyRuleMessage(), 800);
+      return;
+    }
   }
 
   // Show processing indicator
@@ -483,9 +499,10 @@ window.handleProductionAnswer = function(questionId) {
   phaseAnswers.push(answerRecord);
   testAnswers.push(answerRecord);
 
-  // THREE-STRIKES LOGIC
+  // ADAPTIVE LOGIC: Track consecutive failures and successes
   if (!isCorrect) {
     consecutiveFailures++;
+    consecutiveCorrect = 0; // Reset mercy rule counter
     console.log(`❌ Wrong answer. Consecutive failures: ${consecutiveFailures}/${THREE_STRIKES_LIMIT}`);
 
     if (consecutiveFailures >= THREE_STRIKES_LIMIT) {
@@ -496,7 +513,18 @@ window.handleProductionAnswer = function(questionId) {
       return;
     }
   } else {
-    consecutiveFailures = 0;
+    consecutiveFailures = 0; // Reset three-strikes counter
+    consecutiveCorrect++;
+    console.log(`✓ Correct answer. Consecutive correct: ${consecutiveCorrect}/${MERCY_RULE_THRESHOLD}`);
+
+    // MERCY RULE: Auto-pass phase after consistent excellence
+    if (consecutiveCorrect >= MERCY_RULE_THRESHOLD) {
+      console.log(`🎯 Mercy rule! Auto-passing Phase ${currentPhase} after ${MERCY_RULE_THRESHOLD} consecutive correct`);
+      testStopped = true; // Stop current phase
+      delete chipSelectionState[questionId];
+      setTimeout(() => showMercyRuleMessage(), 800);
+      return;
+    }
   }
 
   // Show processing
@@ -565,8 +593,9 @@ window.skipProductionQuestion = function(questionId) {
   phaseAnswers.push(answerRecord);
   testAnswers.push(answerRecord);
 
-  // Skipped counts as wrong for three-strikes
+  // Skipped counts as wrong for adaptive logic
   consecutiveFailures++;
+  consecutiveCorrect = 0; // Reset mercy rule counter
   console.log(`⏭️  Skipped. Consecutive failures: ${consecutiveFailures}/${THREE_STRIKES_LIMIT}`);
 
   if (consecutiveFailures >= THREE_STRIKES_LIMIT) {
@@ -680,6 +709,72 @@ function showThreeStrikesMessage() {
 
   // Show completion screen after brief delay
   setTimeout(() => showCompletionScreen(), 2000);
+}
+
+/**
+ * Show mercy rule message (auto-pass after 15 consecutive correct)
+ */
+function showMercyRuleMessage() {
+  const messagesContainer = document.getElementById('chat-messages');
+  const phaseInfo = questionBank.phases?.find(p => p.num === currentPhase);
+  const phaseName = phaseInfo ? phaseInfo.name : `Phase ${currentPhase}`;
+
+  const correctCount = phaseAnswers.filter(a => a.c).length;
+  const totalCount = phaseAnswers.length;
+  const successRate = totalCount > 0 ? correctCount / totalCount : 0;
+
+  // Store phase result as passed
+  completedPhases.push({
+    phase: currentPhase,
+    name: phaseName,
+    correct: correctCount,
+    total: totalCount,
+    rate: successRate,
+    passed: true,
+    mercyRule: true
+  });
+
+  const hasNextPhase = currentPhase < 4;
+  const nextPhaseInfo = questionBank.phases?.find(p => p.num === currentPhase + 1);
+  const nextPhaseName = nextPhaseInfo ? nextPhaseInfo.name : `Phase ${currentPhase + 1}`;
+
+  const mercyRuleHTML = `
+    <div class="flex items-start space-x-3 mb-4">
+      <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+        <span class="text-yellow-600 text-xl">🎯</span>
+      </div>
+      <div class="bg-yellow-50 border-2 border-yellow-200 rounded-2xl p-6 max-w-2xl w-full">
+        <h3 class="text-xl font-bold mb-2 text-yellow-900">Excellence Detected!</h3>
+        <p class="text-yellow-800 mb-4">${MERCY_RULE_THRESHOLD} correct answers in a row - you've mastered this level!</p>
+        <div class="bg-white rounded-lg p-4 mb-4">
+          <p class="font-semibold text-slate-800 mb-2">Auto-Passed:</p>
+          <p class="text-2xl font-bold text-green-600">${phaseName} ✓</p>
+          <p class="text-sm text-slate-600 mt-2">Perfect streak: ${MERCY_RULE_THRESHOLD}/${totalCount} questions</p>
+        </div>
+        ${hasNextPhase ? `
+          <div class="bg-white rounded-lg p-4">
+            <p class="font-semibold text-slate-800 mb-2">🎯 Unlocking:</p>
+            <p class="text-lg font-bold text-purple-600">${nextPhaseName}</p>
+          </div>
+        ` : `
+          <p class="text-sm text-yellow-700 font-semibold">🏆 All phases completed!</p>
+        `}
+      </div>
+    </div>
+  `;
+
+  messagesContainer.insertAdjacentHTML('beforeend', mercyRuleHTML);
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+  // Reset testStopped flag for next phase
+  testStopped = false;
+
+  // Move to next phase or show completion
+  if (hasNextPhase) {
+    setTimeout(() => startPhase(currentPhase + 1), 2500);
+  } else {
+    setTimeout(() => showCompletionScreen(), 2500);
+  }
 }
 
 /**
@@ -831,14 +926,22 @@ function showCompletionScreen() {
  * Generate compressed hash of test results
  */
 function generateHash() {
+  // Determine termination reason
+  let reason = 'phase-completion';
+  if (consecutiveFailures >= THREE_STRIKES_LIMIT) {
+    reason = 'three-strikes';
+  } else if (completedPhases.some(p => p.mercyRule)) {
+    reason = 'mercy-rule';
+  }
+
   const testData = {
-    v: "2.0.0-adaptive",
+    v: "2.1.0-adaptive",
     type: testType,
     t: Math.floor(Date.now() / 1000),
     a: testAnswers,
     adaptive: {
       stopped: testStopped,
-      reason: consecutiveFailures >= THREE_STRIKES_LIMIT ? 'three-strikes' : 'phase-completion',
+      reason: reason,
       phases: completedPhases
     }
   };
