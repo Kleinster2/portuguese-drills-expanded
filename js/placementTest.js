@@ -39,7 +39,7 @@ async function loadQuestionBank() {
       'vocabulary': '/config/placement-test-questions-vocabulary-v1.0.json',
       'grammar-a': '/config/placement-test-questions-grammar-a-levels.json',
       'grammar-b': '/config/placement-test-questions-grammar-b-levels.json',
-      'grammar': '/config/placement-test-questions-v9.0-comprehensive.json',
+      'grammar': '/config/placement-test-questions-v9.2-multistep.json',
       'verb-tenses': '/config/placement-test-questions-verb-tenses.json',
       'pronouns': '/config/placement-test-questions-pronouns.json',
       'prepositions': '/config/placement-test-questions-prepositions.json',
