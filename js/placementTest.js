@@ -1,33 +1,42 @@
 /**
- * Placement Test Module - Incognito Mode (No Feedback)
- * Two independent diagnostic tests (v1.0.0):
- *   - Grammar Test: 192 questions (71 comprehension + 121 production)
- *   - Vocabulary Test: 111 questions (106 comprehension + 5 production)
+ * Placement Test Module - Adaptive Testing (v2.0)
+ * Features:
+ *   - Progressive Unlock: Tests phases sequentially (A1 → A2 → B1 → B2)
+ *   - Three-Strikes Logic: Stops after 3 consecutive failures in a phase
+ *   - Smart Placement: 5-15 minute test instead of 90 minutes
  * Complete coverage: Units 1-89 (A1 Beginner → B2 Upper-Intermediate)
- * Assessment Types: Comprehension (PT→EN, 6-7 options) + Production (EN→PT, 8-10 chip options)
- * Features: Diagonal testing of 2×2 matrices, complete possessive/demonstrative coverage, "I don't know" skip
+ * Assessment Types: Comprehension (PT→EN) + Production (EN→PT)
  */
 
-// Detect test type from URL parameter (?test=grammar or ?test=vocabulary)
+// Detect test type from URL parameter
 const urlParams = new URLSearchParams(window.location.search);
-const testType = urlParams.get('test') || 'grammar'; // Default to grammar
+const testType = urlParams.get('test') || 'grammar';
 
 let questionBank = null;
 let currentQuestionIndex = 0;
 let testAnswers = [];
+
+// Adaptive testing state
+let currentPhase = 1; // Start with Phase 1 (A1)
+let consecutiveFailures = 0; // Track consecutive failures in current phase
+let phaseQuestions = []; // Questions for current phase only
+let phaseAnswers = []; // Answers for current phase
+let completedPhases = []; // Track completed phases with scores
+let testStopped = false; // Flag for early termination
+
+const PHASE_PASS_THRESHOLD = 0.80; // 80% to pass a phase
+const THREE_STRIKES_LIMIT = 3; // Stop after 3 consecutive failures
 
 /**
  * Load question bank from JSON file based on test type
  */
 async function loadQuestionBank() {
   try {
-    // Map test types to their JSON files
     const testFileMap = {
       'vocabulary': '/config/placement-test-questions-vocabulary-v1.0.json',
       'grammar-a': '/config/placement-test-questions-grammar-a-levels.json',
       'grammar-b': '/config/placement-test-questions-grammar-b-levels.json',
       'grammar': '/config/placement-test-questions-v8.0-streamlined.json',
-      // Topic-based tests
       'verb-tenses': '/config/placement-test-questions-verb-tenses.json',
       'pronouns': '/config/placement-test-questions-pronouns.json',
       'prepositions': '/config/placement-test-questions-prepositions.json',
@@ -42,8 +51,6 @@ async function loadQuestionBank() {
     }
     questionBank = await response.json();
     console.log(`✓ Loaded ${testType} test: ${questionBank.questions.length} questions (v${questionBank.metadata.version})`);
-    console.log(`  - Comprehension: ${questionBank.metadata.questionTypes.comprehension}`);
-    console.log(`  - Production: ${questionBank.metadata.questionTypes.production}`);
     return questionBank;
   } catch (error) {
     console.error('Error loading question bank:', error);
@@ -52,7 +59,7 @@ async function loadQuestionBank() {
 }
 
 /**
- * Initialize placement test (auto-start, no welcome)
+ * Initialize placement test with adaptive testing
  */
 async function startPlacementTest() {
   const modal = document.getElementById('chat-modal');
@@ -64,14 +71,19 @@ async function startPlacementTest() {
   // Reset state
   currentQuestionIndex = 0;
   testAnswers = [];
+  currentPhase = 1;
+  consecutiveFailures = 0;
+  phaseQuestions = [];
+  phaseAnswers = [];
+  completedPhases = [];
+  testStopped = false;
 
-  // Update title based on test type
+  // Update title
   const testTitles = {
     'vocabulary': 'Portuguese Vocabulary Placement Test',
     'grammar': 'Portuguese Grammar Placement Test',
-    'grammar-a': 'Portuguese Grammar Placement Test - A Levels (A1-A2)',
-    'grammar-b': 'Portuguese Grammar Placement Test - B Levels (B1-B2)',
-    // Topic-based tests
+    'grammar-a': 'Portuguese Grammar Test - A Levels',
+    'grammar-b': 'Portuguese Grammar Test - B Levels',
     'verb-tenses': 'Portuguese Verb Tenses Test',
     'pronouns': 'Portuguese Pronouns Test',
     'prepositions': 'Portuguese Prepositions Test',
@@ -79,29 +91,22 @@ async function startPlacementTest() {
   };
   drillTitle.textContent = testTitles[testType] || testTitles['grammar'];
 
-  // Track placement test start with Plausible
+  // Track with Plausible
   if (window.plausible) {
-    plausible('Placement Test', { props: { type: testType || 'grammar' } });
+    plausible('Placement Test', { props: { type: testType || 'grammar', version: 'adaptive-v2' } });
   }
 
-  // Show modal
   modal.classList.remove('hidden');
-
-  // Hide input field and send button
   chatInput.style.display = 'none';
   sendButton.style.display = 'none';
-
-  // Clear messages
   messagesContainer.innerHTML = '';
 
   try {
-    // Load question bank if not already loaded
     if (!questionBank) {
-      // Show loading
       messagesContainer.innerHTML = `
         <div class="flex items-center justify-center py-8">
           <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600"></div>
-          <span class="ml-3 text-slate-600">Loading test...</span>
+          <span class="ml-3 text-slate-600">Loading adaptive test...</span>
         </div>
       `;
 
@@ -109,11 +114,8 @@ async function startPlacementTest() {
       messagesContainer.innerHTML = '';
     }
 
-    // Randomize question order within the test
-    questionBank.questions = shuffleArray(questionBank.questions);
-
-    // Display first question immediately (no welcome message)
-    displayQuestion(0);
+    // Start with Phase 1
+    startPhase(1);
 
   } catch (error) {
     messagesContainer.innerHTML = `
@@ -131,6 +133,48 @@ async function startPlacementTest() {
 }
 
 /**
+ * Start testing a specific phase
+ */
+function startPhase(phaseNum) {
+  currentPhase = phaseNum;
+  currentQuestionIndex = 0;
+  phaseAnswers = [];
+  consecutiveFailures = 0;
+
+  // Get questions for this phase only
+  phaseQuestions = questionBank.questions.filter(q => q.phase === phaseNum);
+
+  // Shuffle questions within the phase
+  phaseQuestions = shuffleArray(phaseQuestions);
+
+  console.log(`Starting Phase ${phaseNum}: ${phaseQuestions.length} questions`);
+
+  // Display phase intro message
+  const phaseInfo = questionBank.phases?.find(p => p.num === phaseNum);
+  const phaseName = phaseInfo ? phaseInfo.name : `Phase ${phaseNum}`;
+
+  const messagesContainer = document.getElementById('chat-messages');
+  const phaseIntroHTML = `
+    <div class="flex items-start space-x-3 mb-4">
+      <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+        <span class="text-purple-600 text-sm font-bold">${phaseNum}</span>
+      </div>
+      <div class="bg-purple-50 rounded-2xl p-4 max-w-2xl">
+        <h3 class="font-bold text-purple-900 mb-2">${phaseName}</h3>
+        <p class="text-sm text-purple-700">${phaseInfo?.description || ''}</p>
+        <p class="text-xs text-purple-600 mt-2">Pass with 80% to unlock the next level</p>
+      </div>
+    </div>
+  `;
+  messagesContainer.insertAdjacentHTML('beforeend', phaseIntroHTML);
+
+  // Display first question
+  if (phaseQuestions.length > 0) {
+    displayQuestion(0);
+  }
+}
+
+/**
  * Fisher-Yates shuffle algorithm
  */
 function shuffleArray(array) {
@@ -143,31 +187,29 @@ function shuffleArray(array) {
 }
 
 /**
- * Display a question (incognito - no topic labels)
- * v6 format: Dual assessment - comprehension (multiple choice) + production (text input)
+ * Display a question
  */
 function displayQuestion(index) {
+  if (testStopped) return;
+
   const messagesContainer = document.getElementById('chat-messages');
-  const question = questionBank.questions[index];
+  const question = phaseQuestions[index];
 
-  // Unit info display
-  const unitInfo = question.unit && question.unitTopic ?
-    `<div class="mb-2 pb-2 border-b border-slate-300">
-      <p class="text-xs font-semibold text-purple-600">Unit ${question.unit}: ${question.unitTopic}</p>
-    </div>` : '';
+  const phaseInfo = questionBank.phases?.find(p => p.num === currentPhase);
+  const phaseName = phaseInfo ? phaseInfo.name.split(' ')[0] : `Phase ${currentPhase}`;
 
-  // Check question type
+  // Calculate progress within current phase
+  const progress = Math.round(((index + 1) / phaseQuestions.length) * 100);
+
   const isProduction = question.type === 'production';
 
   if (isProduction) {
-    // PRODUCTION QUESTION: Chip-based fill-in-the-blank
+    // PRODUCTION QUESTION
     const englishLine = question.en ? `<p class="font-mono mb-3 text-lg text-green-700">${question.en}</p>` : '';
     const hintLine = question.hint ? `<p class="text-xs text-slate-500 mt-2 italic">💡 ${question.hint}</p>` : '';
 
-    // Calculate number of blanks
     const numBlanks = Array.isArray(question.correct) ? question.correct.length : 1;
 
-    // Create template with clickable blanks
     const templateParts = question.template.split('__');
     let templateHTML = '';
     for (let i = 0; i < templateParts.length; i++) {
@@ -177,7 +219,6 @@ function displayQuestion(index) {
       }
     }
 
-    // Shuffle chips
     const shuffledChips = shuffleArray(question.chips);
 
     const questionHTML = `
@@ -186,12 +227,14 @@ function displayQuestion(index) {
           <span class="text-green-600 text-sm font-bold">${index + 1}</span>
         </div>
         <div class="bg-green-50 rounded-2xl p-4 max-w-2xl w-full">
-          <p class="text-xs text-slate-500 mb-2">Question ${index + 1} of ${questionBank.questions.length} <span class="text-green-600 font-semibold">[PRODUCTION]</span></p>
-          ${unitInfo}
+          <p class="text-xs text-slate-500 mb-2">
+            <span class="font-semibold text-purple-600">${phaseName}</span> •
+            Question ${index + 1}/${phaseQuestions.length} (${progress}%) •
+            <span class="text-green-600 font-semibold">[PRODUCTION]</span>
+          </p>
           ${englishLine}
           <p class="mb-3 font-semibold text-slate-800">${question.question}</p>
 
-          <!-- Template with blanks -->
           <div class="mb-4 p-4 bg-white rounded-lg border-2 border-green-300">
             <p class="text-lg font-mono leading-relaxed" id="template-${question.id}">
               ${templateHTML}
@@ -200,7 +243,6 @@ function displayQuestion(index) {
 
           ${hintLine}
 
-          <!-- Chips with "I don't know" option -->
           <div class="flex flex-wrap gap-2 mb-3" id="chips-${question.id}">
             ${shuffledChips.map((chip, idx) => `
               <button
@@ -220,7 +262,6 @@ function displayQuestion(index) {
             </button>
           </div>
 
-          <!-- Submit button -->
           <button
             onclick="handleProductionAnswer(${question.id})"
             id="submit-${question.id}"
@@ -236,7 +277,7 @@ function displayQuestion(index) {
     messagesContainer.insertAdjacentHTML('beforeend', questionHTML);
 
   } else {
-    // COMPREHENSION QUESTION: Multiple choice
+    // COMPREHENSION QUESTION
     const shuffledOptions = shuffleArray(question.options);
     const portugueseLine = question.pt ? `<p class="font-mono mb-3 text-lg text-blue-700">${question.pt}</p>` : '';
 
@@ -246,8 +287,11 @@ function displayQuestion(index) {
           <span class="text-blue-600 text-sm font-bold">${index + 1}</span>
         </div>
         <div class="bg-slate-100 rounded-2xl p-4 max-w-2xl w-full">
-          <p class="text-xs text-slate-500 mb-2">Question ${index + 1} of ${questionBank.questions.length} <span class="text-blue-600 font-semibold">[COMPREHENSION]</span></p>
-          ${unitInfo}
+          <p class="text-xs text-slate-500 mb-2">
+            <span class="font-semibold text-purple-600">${phaseName}</span> •
+            Question ${index + 1}/${phaseQuestions.length} (${progress}%) •
+            <span class="text-blue-600 font-semibold">[COMPREHENSION]</span>
+          </p>
           ${portugueseLine}
           <p class="mb-3 font-semibold text-slate-800">${question.question}</p>
           <div class="flex flex-wrap gap-2" id="question-${question.id}-options">
@@ -271,43 +315,59 @@ function displayQuestion(index) {
 }
 
 /**
- * Handle answer selection (INCOGNITO MODE - NO FEEDBACK)
+ * Handle answer selection with adaptive logic
  */
 window.handlePlacementAnswer = function(questionId, selectedAnswer) {
-  const question = questionBank.questions.find(q => q.id === questionId);
-  // Support both single correct answer (string) and multiple correct answers (array)
+  if (testStopped) return;
+
+  const question = phaseQuestions.find(q => q.id === questionId);
   const correctAnswers = Array.isArray(question.correct) ? question.correct : [question.correct];
   const isCorrect = correctAnswers.includes(selectedAnswer);
 
-  // 1. Visual acknowledgment only (no correctness indication)
+  // Visual acknowledgment
   const optionsContainer = document.getElementById(`question-${questionId}-options`);
   const buttons = optionsContainer.querySelectorAll('button');
   const clickedButton = Array.from(buttons).find(btn => btn.textContent.trim() === selectedAnswer);
 
-  // Brief pulse animation on clicked button
   if (clickedButton) {
     clickedButton.classList.add('scale-105', 'bg-blue-100', 'border-blue-400');
-    setTimeout(() => {
-      clickedButton.classList.remove('scale-105');
-    }, 300);
+    setTimeout(() => clickedButton.classList.remove('scale-105'), 300);
   }
 
-  // Disable all buttons (no green/red highlighting)
   buttons.forEach(btn => {
     btn.disabled = true;
     btn.classList.remove('hover:border-blue-500', 'hover:bg-blue-50');
     btn.classList.add('opacity-50', 'cursor-not-allowed');
   });
 
-  // 2. Store answer silently
-  testAnswers.push({
+  // Store answer for current phase
+  const answerRecord = {
     q: questionId,
     s: selectedAnswer,
     c: isCorrect,
-    lesson: question.lesson
-  });
+    phase: currentPhase,
+    unit: question.unit
+  };
 
-  // 3. Show brief "processing" indicator
+  phaseAnswers.push(answerRecord);
+  testAnswers.push(answerRecord);
+
+  // THREE-STRIKES LOGIC: Track consecutive failures
+  if (!isCorrect) {
+    consecutiveFailures++;
+    console.log(`❌ Wrong answer. Consecutive failures: ${consecutiveFailures}/${THREE_STRIKES_LIMIT}`);
+
+    if (consecutiveFailures >= THREE_STRIKES_LIMIT) {
+      console.log(`🛑 Three strikes! Stopping test at Phase ${currentPhase}`);
+      testStopped = true;
+      setTimeout(() => showThreeStrikesMessage(), 800);
+      return;
+    }
+  } else {
+    consecutiveFailures = 0; // Reset on correct answer
+  }
+
+  // Show processing indicator
   const messagesContainer = document.getElementById('chat-messages');
   const processingHTML = `
     <div class="flex items-center justify-center py-3" id="processing-indicator-${questionId}">
@@ -321,16 +381,17 @@ window.handlePlacementAnswer = function(questionId, selectedAnswer) {
   messagesContainer.insertAdjacentHTML('beforeend', processingHTML);
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
-  // 4. Move to next question after brief delay (NO FEEDBACK SHOWN)
+  // Move to next question
   currentQuestionIndex++;
 
   setTimeout(() => {
     document.getElementById(`processing-indicator-${questionId}`)?.remove();
 
-    if (currentQuestionIndex < questionBank.questions.length) {
+    if (currentQuestionIndex < phaseQuestions.length) {
       displayQuestion(currentQuestionIndex);
     } else {
-      showCompletionScreen();
+      // Phase completed - check if user passes
+      evaluatePhaseCompletion();
     }
   }, 800);
 };
@@ -341,27 +402,22 @@ window.handlePlacementAnswer = function(questionId, selectedAnswer) {
 const chipSelectionState = {};
 
 /**
- * Handle chip selection (fill-in-the-blank with re-selection support)
- * Supports wraparound: after filling all blanks, next click replaces blank 0, then blank 1, etc.
+ * Handle chip selection
  */
 window.selectChip = function(questionId, chipValue, chipIndex) {
-  const question = questionBank.questions.find(q => q.id === questionId);
+  const question = phaseQuestions.find(q => q.id === questionId);
   const numBlanks = Array.isArray(question.correct) ? question.correct.length : 1;
 
-  // Initialize state if not exists
   if (!chipSelectionState[questionId]) {
     chipSelectionState[questionId] = {
-      selectedChips: new Array(numBlanks).fill(null), // Pre-allocate array for all blanks
+      selectedChips: new Array(numBlanks).fill(null),
       currentBlankIndex: 0
     };
   }
 
   const state = chipSelectionState[questionId];
-
-  // Determine which blank to fill (wraparound)
   const blankToFill = state.currentBlankIndex % numBlanks;
 
-  // Fill/replace the blank
   const blankElement = document.getElementById(`blank-${questionId}-${blankToFill}`);
   if (blankElement) {
     blankElement.textContent = chipValue;
@@ -369,40 +425,36 @@ window.selectChip = function(questionId, chipValue, chipIndex) {
     blankElement.classList.add('border-solid', 'bg-green-100', 'font-semibold');
   }
 
-  // Store selection (replace if already exists)
   state.selectedChips[blankToFill] = chipValue;
   state.currentBlankIndex++;
 
-  // Enable submit button if at least all blanks have been filled once
   const allBlanksFilled = state.selectedChips.every(chip => chip !== null);
   if (allBlanksFilled) {
     const submitButton = document.getElementById(`submit-${questionId}`);
-    if (submitButton) {
-      submitButton.disabled = false;
-    }
+    if (submitButton) submitButton.disabled = false;
   }
 };
 
 /**
- * Handle production answer submission (chip-based)
+ * Handle production answer submission with adaptive logic
  */
 window.handleProductionAnswer = function(questionId) {
-  const question = questionBank.questions.find(q => q.id === questionId);
+  if (testStopped) return;
+
+  const question = phaseQuestions.find(q => q.id === questionId);
   const state = chipSelectionState[questionId];
 
   if (!state || !state.selectedChips || state.selectedChips.every(chip => chip === null)) {
     return;
   }
 
-  // Get user's selected chips (filter out nulls, though there shouldn't be any)
   const userAnswer = state.selectedChips.filter(chip => chip !== null);
   const correctAnswer = Array.isArray(question.correct) ? question.correct : [question.correct];
 
-  // Check if correct (exact match in order)
   const isCorrect = userAnswer.length === correctAnswer.length &&
                    userAnswer.every((chip, idx) => chip === correctAnswer[idx]);
 
-  // 1. Disable all chips and submit button
+  // Disable UI
   const chipsContainer = document.getElementById(`chips-${questionId}`);
   if (chipsContainer) {
     const allChips = chipsContainer.querySelectorAll('button');
@@ -418,16 +470,36 @@ window.handleProductionAnswer = function(questionId) {
     submitButton.classList.add('opacity-50');
   }
 
-  // 2. Store answer silently
-  testAnswers.push({
+  // Store answer
+  const answerRecord = {
     q: questionId,
     s: userAnswer.join(' '),
     c: isCorrect,
     type: 'production',
+    phase: currentPhase,
     unit: question.unit
-  });
+  };
 
-  // 3. Show brief "processing" indicator
+  phaseAnswers.push(answerRecord);
+  testAnswers.push(answerRecord);
+
+  // THREE-STRIKES LOGIC
+  if (!isCorrect) {
+    consecutiveFailures++;
+    console.log(`❌ Wrong answer. Consecutive failures: ${consecutiveFailures}/${THREE_STRIKES_LIMIT}`);
+
+    if (consecutiveFailures >= THREE_STRIKES_LIMIT) {
+      console.log(`🛑 Three strikes! Stopping test at Phase ${currentPhase}`);
+      testStopped = true;
+      delete chipSelectionState[questionId];
+      setTimeout(() => showThreeStrikesMessage(), 800);
+      return;
+    }
+  } else {
+    consecutiveFailures = 0;
+  }
+
+  // Show processing
   const messagesContainer = document.getElementById('chat-messages');
   const processingHTML = `
     <div class="flex items-center justify-center py-3" id="processing-indicator-${questionId}">
@@ -441,28 +513,29 @@ window.handleProductionAnswer = function(questionId) {
   messagesContainer.insertAdjacentHTML('beforeend', processingHTML);
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
-  // 4. Clean up state and move to next question
   delete chipSelectionState[questionId];
   currentQuestionIndex++;
 
   setTimeout(() => {
     document.getElementById(`processing-indicator-${questionId}`)?.remove();
 
-    if (currentQuestionIndex < questionBank.questions.length) {
+    if (currentQuestionIndex < phaseQuestions.length) {
       displayQuestion(currentQuestionIndex);
     } else {
-      showCompletionScreen();
+      evaluatePhaseCompletion();
     }
   }, 800);
 };
 
 /**
- * Handle skipping a production question ("I don't know")
+ * Handle skipping a production question
  */
 window.skipProductionQuestion = function(questionId) {
-  const question = questionBank.questions.find(q => q.id === questionId);
+  if (testStopped) return;
 
-  // 1. Disable all chips and both buttons
+  const question = phaseQuestions.find(q => q.id === questionId);
+
+  // Disable UI
   const chipsContainer = document.getElementById(`chips-${questionId}`);
   if (chipsContainer) {
     const allChips = chipsContainer.querySelectorAll('button');
@@ -478,23 +551,33 @@ window.skipProductionQuestion = function(questionId) {
     submitButton.classList.add('opacity-50');
   }
 
-  const skipButton = document.getElementById(`skip-${questionId}`);
-  if (skipButton) {
-    skipButton.disabled = true;
-    skipButton.classList.add('opacity-50', 'cursor-not-allowed');
+  // Store as skipped
+  const answerRecord = {
+    q: questionId,
+    s: null,
+    c: false,
+    skipped: true,
+    type: 'production',
+    phase: currentPhase,
+    unit: question.unit
+  };
+
+  phaseAnswers.push(answerRecord);
+  testAnswers.push(answerRecord);
+
+  // Skipped counts as wrong for three-strikes
+  consecutiveFailures++;
+  console.log(`⏭️  Skipped. Consecutive failures: ${consecutiveFailures}/${THREE_STRIKES_LIMIT}`);
+
+  if (consecutiveFailures >= THREE_STRIKES_LIMIT) {
+    console.log(`🛑 Three strikes! Stopping test at Phase ${currentPhase}`);
+    testStopped = true;
+    delete chipSelectionState[questionId];
+    setTimeout(() => showThreeStrikesMessage(), 600);
+    return;
   }
 
-  // 2. Store as skipped (three-way scoring: correct/incorrect/skipped)
-  testAnswers.push({
-    q: questionId,
-    s: null, // null indicates skipped
-    c: false, // incorrect for placement purposes
-    skipped: true, // flag for instructor analysis
-    type: 'production',
-    unit: question.unit
-  });
-
-  // 3. Show brief "processing" indicator
+  // Show processing
   const messagesContainer = document.getElementById('chat-messages');
   const processingHTML = `
     <div class="flex items-center justify-center py-3" id="processing-indicator-${questionId}">
@@ -508,38 +591,216 @@ window.skipProductionQuestion = function(questionId) {
   messagesContainer.insertAdjacentHTML('beforeend', processingHTML);
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
-  // 4. Clean up state and move to next question
   delete chipSelectionState[questionId];
   currentQuestionIndex++;
 
   setTimeout(() => {
     document.getElementById(`processing-indicator-${questionId}`)?.remove();
 
-    if (currentQuestionIndex < questionBank.questions.length) {
+    if (currentQuestionIndex < phaseQuestions.length) {
       displayQuestion(currentQuestionIndex);
     } else {
-      showCompletionScreen();
+      evaluatePhaseCompletion();
     }
-  }, 600); // Slightly faster for skipped questions
+  }, 600);
 };
 
 /**
- * Show completion screen with hash (NO SCORE SHOWN)
+ * Evaluate phase completion - PROGRESSIVE UNLOCK logic
  */
-function showCompletionScreen() {
+function evaluatePhaseCompletion() {
+  const correctCount = phaseAnswers.filter(a => a.c).length;
+  const totalCount = phaseAnswers.length;
+  const successRate = totalCount > 0 ? correctCount / totalCount : 0;
+
+  const phaseInfo = questionBank.phases?.find(p => p.num === currentPhase);
+  const phaseName = phaseInfo ? phaseInfo.name : `Phase ${currentPhase}`;
+
+  // Store phase result
+  completedPhases.push({
+    phase: currentPhase,
+    name: phaseName,
+    correct: correctCount,
+    total: totalCount,
+    rate: successRate,
+    passed: successRate >= PHASE_PASS_THRESHOLD
+  });
+
+  console.log(`Phase ${currentPhase} complete: ${correctCount}/${totalCount} = ${(successRate * 100).toFixed(1)}%`);
+
+  if (successRate >= PHASE_PASS_THRESHOLD) {
+    // PASSED - Check if there's a next phase
+    const hasNextPhase = currentPhase < 4; // Phases 1-4 (A1, A2, B1, B2)
+
+    if (hasNextPhase) {
+      // Show success message and move to next phase
+      showPhaseSuccessMessage(currentPhase, successRate, true);
+    } else {
+      // Completed all phases!
+      showCompletionScreen();
+    }
+  } else {
+    // FAILED - Stop test, place at this phase
+    console.log(`❌ Failed Phase ${currentPhase}. Placing at ${phaseName}`);
+    showPhaseFailureMessage(currentPhase, successRate);
+  }
+}
+
+/**
+ * Show three-strikes message
+ */
+function showThreeStrikesMessage() {
   const messagesContainer = document.getElementById('chat-messages');
+  const phaseInfo = questionBank.phases?.find(p => p.num === currentPhase);
+  const phaseName = phaseInfo ? phaseInfo.name : `Phase ${currentPhase}`;
 
-  // Generate hash
-  const hash = generateHash();
+  const correctCount = phaseAnswers.filter(a => a.c).length;
+  const totalCount = phaseAnswers.length;
 
-  const completionHTML = `
+  const threeStrikesHTML = `
+    <div class="flex items-start space-x-3 mb-4">
+      <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+        <span class="text-orange-600 text-xl">⚠️</span>
+      </div>
+      <div class="bg-orange-50 border-2 border-orange-200 rounded-2xl p-6 max-w-2xl w-full">
+        <h3 class="text-xl font-bold mb-2 text-orange-900">Test Stopped - Three Strikes</h3>
+        <p class="text-orange-800 mb-4">You've missed 3 questions in a row. This helps us place you accurately.</p>
+        <div class="bg-white rounded-lg p-4 mb-4">
+          <p class="font-semibold text-slate-800 mb-2">Your Placement:</p>
+          <p class="text-2xl font-bold text-purple-600">${phaseName}</p>
+          <p class="text-sm text-slate-600 mt-2">Score in this phase: ${correctCount}/${totalCount} correct</p>
+        </div>
+        <p class="text-sm text-orange-700">This is normal! We've found your current level.</p>
+      </div>
+    </div>
+  `;
+
+  messagesContainer.insertAdjacentHTML('beforeend', threeStrikesHTML);
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+  // Show completion screen after brief delay
+  setTimeout(() => showCompletionScreen(), 2000);
+}
+
+/**
+ * Show phase success message and continue
+ */
+function showPhaseSuccessMessage(phaseNum, successRate, hasNextPhase) {
+  const messagesContainer = document.getElementById('chat-messages');
+  const phaseInfo = questionBank.phases?.find(p => p.num === phaseNum);
+  const phaseName = phaseInfo ? phaseInfo.name : `Phase ${phaseNum}`;
+  const nextPhaseInfo = questionBank.phases?.find(p => p.num === phaseNum + 1);
+  const nextPhaseName = nextPhaseInfo ? nextPhaseInfo.name : `Phase ${phaseNum + 1}`;
+
+  const successHTML = `
     <div class="flex items-start space-x-3 mb-4">
       <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
         <span class="text-green-600 text-xl">✓</span>
       </div>
-      <div class="bg-white border-2 border-green-200 rounded-2xl p-6 max-w-2xl w-full">
-        <h3 class="text-xl font-bold mb-4 text-slate-800">Test Complete</h3>
-        <p class="mb-4 text-slate-600">Thank you for completing the placement test.</p>
+      <div class="bg-green-50 border-2 border-green-200 rounded-2xl p-6 max-w-2xl w-full">
+        <h3 class="text-xl font-bold mb-2 text-green-900">${phaseName} Complete!</h3>
+        <p class="text-green-800 mb-4">You passed with ${(successRate * 100).toFixed(0)}%</p>
+        ${hasNextPhase ? `
+          <div class="bg-white rounded-lg p-4">
+            <p class="font-semibold text-slate-800 mb-2">🎯 Unlocking:</p>
+            <p class="text-lg font-bold text-purple-600">${nextPhaseName}</p>
+          </div>
+        ` : ''}
+      </div>
+    </div>
+  `;
+
+  messagesContainer.insertAdjacentHTML('beforeend', successHTML);
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+  // Move to next phase after brief celebration
+  if (hasNextPhase) {
+    setTimeout(() => startPhase(phaseNum + 1), 2000);
+  }
+}
+
+/**
+ * Show phase failure message and stop
+ */
+function showPhaseFailureMessage(phaseNum, successRate) {
+  const messagesContainer = document.getElementById('chat-messages');
+  const phaseInfo = questionBank.phases?.find(p => p.num === phaseNum);
+  const phaseName = phaseInfo ? phaseInfo.name : `Phase ${phaseNum}`;
+
+  const correctCount = phaseAnswers.filter(a => a.c).length;
+  const totalCount = phaseAnswers.length;
+
+  const failureHTML = `
+    <div class="flex items-start space-x-3 mb-4">
+      <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+        <span class="text-blue-600 text-xl">📍</span>
+      </div>
+      <div class="bg-blue-50 border-2 border-blue-200 rounded-2xl p-6 max-w-2xl w-full">
+        <h3 class="text-xl font-bold mb-2 text-blue-900">Placement Found!</h3>
+        <p class="text-blue-800 mb-4">We've identified your current level.</p>
+        <div class="bg-white rounded-lg p-4 mb-4">
+          <p class="font-semibold text-slate-800 mb-2">Your Level:</p>
+          <p class="text-2xl font-bold text-purple-600">${phaseName}</p>
+          <p class="text-sm text-slate-600 mt-2">Score: ${correctCount}/${totalCount} (${(successRate * 100).toFixed(0)}%)</p>
+        </div>
+        <p class="text-sm text-blue-700">This is your starting point. You'll build from here!</p>
+      </div>
+    </div>
+  `;
+
+  messagesContainer.insertAdjacentHTML('beforeend', failureHTML);
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+  // Show completion screen
+  setTimeout(() => showCompletionScreen(), 2000);
+}
+
+/**
+ * Show completion screen with results
+ */
+function showCompletionScreen() {
+  const messagesContainer = document.getElementById('chat-messages');
+
+  // Determine final placement
+  let placementPhase = completedPhases.length > 0 ?
+    completedPhases[completedPhases.length - 1] :
+    { phase: 1, name: 'Foundation (A1)', correct: 0, total: 0, rate: 0 };
+
+  // If stopped by three-strikes, use current phase
+  if (testStopped && consecutiveFailures >= THREE_STRIKES_LIMIT) {
+    placementPhase = {
+      phase: currentPhase,
+      name: questionBank.phases?.find(p => p.num === currentPhase)?.name || `Phase ${currentPhase}`,
+      correct: phaseAnswers.filter(a => a.c).length,
+      total: phaseAnswers.length,
+      rate: phaseAnswers.length > 0 ? phaseAnswers.filter(a => a.c).length / phaseAnswers.length : 0
+    };
+  }
+
+  // Generate hash
+  const hash = generateHash();
+
+  // Calculate total time saved
+  const totalQuestionsAnswered = testAnswers.length;
+  const totalQuestionsInBank = questionBank.questions.length;
+  const timeSaved = Math.round((totalQuestionsInBank - totalQuestionsAnswered) * 0.3); // ~0.3 min per question
+
+  const completionHTML = `
+    <div class="flex items-start space-x-3 mb-4">
+      <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+        <span class="text-purple-600 text-xl">🎓</span>
+      </div>
+      <div class="bg-white border-2 border-purple-200 rounded-2xl p-6 max-w-2xl w-full">
+        <h3 class="text-xl font-bold mb-4 text-slate-800">Placement Test Complete</h3>
+
+        <div class="bg-purple-50 rounded-lg p-4 mb-4">
+          <p class="font-semibold text-sm text-purple-700 mb-2">YOUR PLACEMENT:</p>
+          <p class="text-2xl font-bold text-purple-600">${placementPhase.name}</p>
+          <p class="text-sm text-slate-600 mt-2">
+            Answered: ${totalQuestionsAnswered} questions •
+            Saved: ~${timeSaved} minutes
+          </p>
+        </div>
 
         <div class="bg-slate-50 border-2 border-slate-200 rounded-lg p-4 mb-4">
           <p class="font-semibold mb-2 text-sm text-slate-700">Send this code to your instructor:</p>
@@ -556,7 +817,7 @@ function showCompletionScreen() {
         </div>
 
         <p class="text-xs text-slate-500 leading-relaxed">
-          You can send this code via WhatsApp, email, or any messaging app.
+          🚀 Adaptive testing saved you time by stopping when we found your level!
         </p>
       </div>
     </div>
@@ -571,15 +832,20 @@ function showCompletionScreen() {
  */
 function generateHash() {
   const testData = {
-    v: "1.0.0",
+    v: "2.0.0-adaptive",
     type: testType,
     t: Math.floor(Date.now() / 1000),
-    a: testAnswers
+    a: testAnswers,
+    adaptive: {
+      stopped: testStopped,
+      reason: consecutiveFailures >= THREE_STRIKES_LIMIT ? 'three-strikes' : 'phase-completion',
+      phases: completedPhases
+    }
   };
 
   const json = JSON.stringify(testData);
   const compressed = LZString.compressToBase64(json);
-  // Use different prefixes for different test types
+
   const prefixMap = {
     'vocabulary': 'PT-BR-V-',
     'grammar': 'PT-BR-G-',
@@ -602,7 +868,6 @@ window.copyHash = function() {
   const hash = hashElement.textContent;
 
   navigator.clipboard.writeText(hash).then(() => {
-    // Visual feedback
     const button = document.getElementById('copy-button');
     const originalText = button.innerHTML;
     button.innerHTML = '✅ Copied!';
@@ -619,10 +884,10 @@ window.copyHash = function() {
   });
 };
 
-// Expose to global scope for route detection
+// Expose to global scope
 window.startPlacementTest = startPlacementTest;
 
-// Export for use in other modules
+// Export for modules
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { startPlacementTest, loadQuestionBank };
 }
