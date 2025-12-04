@@ -192,6 +192,107 @@ function shuffleArray(array) {
 }
 
 /**
+ * Display a multi-step question
+ */
+function displayMultiStepQuestion(index, question) {
+  const messagesContainer = document.getElementById('chat-messages');
+  const phaseInfo = questionBank.phases?.find(p => p.num === currentPhase);
+  const phaseName = phaseInfo ? phaseInfo.name.split(' ')[0] : `Phase ${currentPhase}`;
+  const progress = Math.round(((index + 1) / phaseQuestions.length) * 100);
+
+  // Initialize multi-step state if not exists
+  if (!window.multiStepState) {
+    window.multiStepState = {};
+  }
+  if (!window.multiStepState[question.id]) {
+    window.multiStepState[question.id] = {
+      currentStep: 0,
+      answers: []
+    };
+  }
+
+  const state = window.multiStepState[question.id];
+  const currentStepData = question.steps[state.currentStep];
+  const totalSteps = question.steps.length;
+
+  // Scenario (shown once at the beginning)
+  const scenarioHTML = state.currentStep === 0 && question.scenario ? `
+    <div class="mb-3 p-3 bg-amber-50 border-l-4 border-amber-400 rounded">
+      <p class="text-sm text-amber-900"><span class="font-semibold">Scenario:</span> ${question.scenario}</p>
+    </div>
+  ` : '';
+
+  // Build template with previously answered steps
+  let template = currentStepData.template;
+  for (let i = 0; i < state.currentStep; i++) {
+    const prevAnswer = state.answers[i];
+    template = template.replace('__', `<span class="text-green-600 font-bold">${prevAnswer}</span>`);
+  }
+
+  // Add blank for current step
+  const templateParts = template.split('__');
+  let templateHTML = '';
+  for (let i = 0; i < templateParts.length; i++) {
+    templateHTML += templateParts[i];
+    if (i < templateParts.length - 1) {
+      templateHTML += `<span class="inline-block min-w-[80px] px-3 py-1 mx-1 border-2 border-green-400 border-dashed rounded bg-white text-center" id="blank-${question.id}-${i}" data-blank-index="${i}">___</span>`;
+    }
+  }
+
+  const shuffledChips = shuffleArray(currentStepData.chips);
+  const hintLine = currentStepData.hint ? `<p class="text-xs text-slate-500 mt-2 italic">💡 ${currentStepData.hint}</p>` : '';
+
+  const questionHTML = `
+    <div class="flex items-start space-x-3 mb-4" data-question-id="${question.id}" data-step="${state.currentStep}">
+      <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+        <span class="text-purple-600 text-sm font-bold">${index + 1}</span>
+      </div>
+      <div class="bg-purple-50 rounded-2xl p-4 max-w-2xl w-full">
+        <p class="text-xs text-slate-500 mb-2">
+          <span class="font-semibold text-purple-600">${phaseName}</span> •
+          Question ${index + 1}/${phaseQuestions.length} (${progress}%) •
+          <span class="text-purple-600 font-semibold">[MULTI-STEP ${state.currentStep + 1}/${totalSteps}]</span>
+        </p>
+        ${scenarioHTML}
+        <p class="font-mono mb-3 text-lg text-purple-700">${currentStepData.en}</p>
+        <p class="mb-3 font-semibold text-slate-800">${currentStepData.question}</p>
+
+        <div class="mb-4 p-4 bg-white rounded-lg border-2 border-purple-300">
+          <p class="text-lg font-mono leading-relaxed" id="template-${question.id}">
+            ${templateHTML}
+          </p>
+        </div>
+
+        ${hintLine}
+
+        <div class="flex flex-wrap gap-2 mb-3" id="chips-${question.id}">
+          ${shuffledChips.map((chip, idx) => `
+            <button
+              onclick="selectMultiStepChip(${question.id}, '${chip.replace(/'/g, "\\'")}', ${idx}, ${state.currentStep})"
+              id="chip-${question.id}-${idx}"
+              class="px-4 py-2 bg-white border-2 border-purple-400 rounded-lg hover:border-purple-600 hover:bg-purple-100 transition-all text-sm font-medium"
+            >
+              ${chip}
+            </button>
+          `).join('')}
+        </div>
+
+        <button
+          onclick="handleMultiStepAnswer(${question.id}, ${state.currentStep})"
+          id="submit-${question.id}"
+          disabled
+          class="w-full px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-all font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          ${state.currentStep < totalSteps - 1 ? 'Next Step' : 'Submit Answer'}
+        </button>
+      </div>
+    </div>
+  `;
+
+  messagesContainer.insertAdjacentHTML('beforeend', questionHTML);
+}
+
+/**
  * Display a question
  */
 function displayQuestion(index) {
@@ -206,10 +307,17 @@ function displayQuestion(index) {
   // Calculate progress within current phase
   const progress = Math.round(((index + 1) / phaseQuestions.length) * 100);
 
-  const isProduction = question.type === 'production';
+  // Check question type
+  if (question.type === 'multiStep') {
+    displayMultiStepQuestion(index, question);
+    return;
+  }
+
+  const isProduction = question.type === 'production' || question.type === 'contextualizedProduction' || question.type === 'quickCheck';
 
   if (isProduction) {
-    // PRODUCTION QUESTION
+    // PRODUCTION QUESTION (includes contextualizedProduction and quickCheck)
+    const scenarioLine = question.scenario ? `<div class="mb-3 p-3 bg-amber-50 border-l-4 border-amber-400 rounded"><p class="text-sm text-amber-900"><span class="font-semibold">Scenario:</span> ${question.scenario}</p></div>` : '';
     const englishLine = question.en ? `<p class="font-mono mb-3 text-lg text-green-700">${question.en}</p>` : '';
     const hintLine = question.hint ? `<p class="text-xs text-slate-500 mt-2 italic">💡 ${question.hint}</p>` : '';
 
@@ -237,6 +345,7 @@ function displayQuestion(index) {
             Question ${index + 1}/${phaseQuestions.length} (${progress}%) •
             <span class="text-green-600 font-semibold">[PRODUCTION]</span>
           </p>
+          ${scenarioLine}
           ${englishLine}
           <p class="mb-3 font-semibold text-slate-800">${question.question}</p>
 
@@ -448,6 +557,162 @@ window.selectChip = function(questionId, chipValue, chipIndex) {
   if (allBlanksFilled) {
     const submitButton = document.getElementById(`submit-${questionId}`);
     if (submitButton) submitButton.disabled = false;
+  }
+};
+
+/**
+ * Handle multi-step chip selection
+ */
+window.selectMultiStepChip = function(questionId, chipValue, chipIndex, stepIndex) {
+  const blankElement = document.getElementById(`blank-${questionId}-0`);
+  if (blankElement) {
+    blankElement.textContent = chipValue;
+    blankElement.classList.remove('border-dashed');
+    blankElement.classList.add('border-solid', 'bg-purple-100', 'font-semibold');
+  }
+
+  // Store the selected answer for this step
+  if (!window.multiStepState[questionId].selectedAnswer) {
+    window.multiStepState[questionId].selectedAnswer = chipValue;
+  } else {
+    window.multiStepState[questionId].selectedAnswer = chipValue;
+  }
+
+  // Enable submit button
+  const submitButton = document.getElementById(`submit-${questionId}`);
+  if (submitButton) submitButton.disabled = false;
+};
+
+/**
+ * Handle multi-step answer submission
+ */
+window.handleMultiStepAnswer = function(questionId, stepIndex) {
+  if (testStopped) return;
+
+  const question = phaseQuestions.find(q => q.id === questionId);
+  const state = window.multiStepState[questionId];
+
+  if (!state.selectedAnswer) return;
+
+  const currentStepData = question.steps[stepIndex];
+  const isCorrect = state.selectedAnswer === currentStepData.correct;
+
+  // Store answer for this step
+  state.answers.push(state.selectedAnswer);
+
+  // Disable UI
+  const chipsContainer = document.getElementById(`chips-${questionId}`);
+  if (chipsContainer) {
+    const allChips = chipsContainer.querySelectorAll('button');
+    allChips.forEach(btn => {
+      btn.disabled = true;
+      btn.classList.add('opacity-50', 'cursor-not-allowed');
+    });
+  }
+
+  const submitButton = document.getElementById(`submit-${questionId}`);
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.classList.add('opacity-50');
+  }
+
+  // Check if this is the last step
+  if (stepIndex === question.steps.length - 1) {
+    // Last step - evaluate entire multi-step question
+    const allCorrect = state.answers.every((ans, idx) => ans === question.steps[idx].correct);
+
+    // Store complete answer record
+    const answerRecord = {
+      q: questionId,
+      s: state.answers.join(' → '),
+      c: allCorrect,
+      type: 'multiStep',
+      phase: currentPhase,
+      unit: question.unit,
+      steps: state.answers
+    };
+
+    phaseAnswers.push(answerRecord);
+    testAnswers.push(answerRecord);
+
+    // ADAPTIVE LOGIC
+    if (!allCorrect) {
+      consecutiveFailures++;
+      consecutiveCorrect = 0;
+      console.log(`❌ Wrong answer. Consecutive failures: ${consecutiveFailures}/${THREE_STRIKES_LIMIT}`);
+
+      if (consecutiveFailures >= THREE_STRIKES_LIMIT) {
+        console.log(`🛑 Three strikes! Stopping test at Phase ${currentPhase}`);
+        testStopped = true;
+        delete window.multiStepState[questionId];
+        setTimeout(() => showThreeStrikesMessage(), 800);
+        return;
+      }
+    } else {
+      consecutiveFailures = 0;
+      consecutiveCorrect++;
+      console.log(`✓ Correct answer. Consecutive correct: ${consecutiveCorrect}/${MERCY_RULE_THRESHOLD}`);
+
+      if (consecutiveCorrect >= MERCY_RULE_THRESHOLD) {
+        console.log(`🎯 Mercy rule! Auto-passing Phase ${currentPhase} after ${MERCY_RULE_THRESHOLD} consecutive correct`);
+        testStopped = true;
+        delete window.multiStepState[questionId];
+        setTimeout(() => showMercyRuleMessage(), 800);
+        return;
+      }
+    }
+
+    // Show processing and move to next question
+    const messagesContainer = document.getElementById('chat-messages');
+    const processingHTML = `
+      <div class="flex items-center justify-center py-3" id="processing-indicator-${questionId}">
+        <div class="flex gap-1">
+          <div class="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style="animation-delay: 0ms"></div>
+          <div class="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style="animation-delay: 150ms"></div>
+          <div class="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style="animation-delay: 300ms"></div>
+        </div>
+      </div>
+    `;
+    messagesContainer.insertAdjacentHTML('beforeend', processingHTML);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+    delete window.multiStepState[questionId];
+    currentQuestionIndex++;
+
+    setTimeout(() => {
+      document.getElementById(`processing-indicator-${questionId}`)?.remove();
+
+      if (currentQuestionIndex < phaseQuestions.length) {
+        displayQuestion(currentQuestionIndex);
+      } else {
+        evaluatePhaseCompletion();
+      }
+    }, 800);
+
+  } else {
+    // Not the last step - move to next step
+    state.currentStep++;
+    state.selectedAnswer = null;
+
+    // Show brief processing
+    const messagesContainer = document.getElementById('chat-messages');
+    const processingHTML = `
+      <div class="flex items-center justify-center py-3" id="processing-step-${questionId}">
+        <div class="flex gap-1">
+          <div class="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style="animation-delay: 0ms"></div>
+          <div class="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style="animation-delay: 150ms"></div>
+          <div class="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style="animation-delay: 300ms"></div>
+        </div>
+      </div>
+    `;
+    messagesContainer.insertAdjacentHTML('beforeend', processingHTML);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+    // Display next step
+    setTimeout(() => {
+      document.getElementById(`processing-step-${questionId}`)?.remove();
+      displayMultiStepQuestion(currentQuestionIndex, question);
+    }, 600);
   }
 };
 

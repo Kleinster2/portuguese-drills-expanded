@@ -1,0 +1,402 @@
+{
+  "metadata": {
+    "name": "Comprehensive Language Assessment - Example Questions",
+    "description": "10 redesigned questions demonstrating contextualized production approach",
+    "version": "prototype-v1.1",
+    "questionMix": {
+      "contextualizedProduction": "70%",
+      "quickChecks": "30%"
+    },
+    "designPrinciples": [
+      "Real-world scenarios with clear context",
+      "Production over recognition",
+      "Distractor chips test common mistakes (NOT hints via clustering)",
+      "Randomized chip positions (correct answer varies position)",
+      "Progressive complexity within phases",
+      "Multi-step questions for advanced levels"
+    ]
+  },
+  "phases": [
+    {
+      "phase": 1,
+      "name": "A1 - Beginner",
+      "description": "Basic communication, present tense, essential vocabulary"
+    },
+    {
+      "phase": 2,
+      "name": "A2 - Elementary",
+      "description": "Past tense, comparisons, basic conversation"
+    },
+    {
+      "phase": 3,
+      "name": "B1 - Intermediate",
+      "description": "Complex grammar, spatial/temporal expressions, nuanced meaning"
+    },
+    {
+      "phase": 4,
+      "name": "B2 - Upper Intermediate",
+      "description": "Subjunctive, conditional, hypotheticals, advanced discourse"
+    }
+  ],
+  "questions": [
+    {
+      "id": "A1-001",
+      "phase": 1,
+      "unit": 8,
+      "unitName": "Ser vs Estar - Basic",
+      "type": "contextualizedProduction",
+      "scenario": "You're introducing your friend Maria at a party. She's from Brazil.",
+      "en": "She is Brazilian",
+      "question": "How do you describe Maria's nationality?",
+      "template": "Ela ______ brasileira",
+      "chips": [
+        "está",
+        "sou",
+        "é",
+        "são",
+        "era",
+        "foi",
+        "ser",
+        "estar"
+      ],
+      "correct": "é",
+      "hint": "permanent characteristic",
+      "teachingNote": "Nationality uses SER (permanent identity) not ESTAR (temporary state). Correct answer at position 2 (randomized)."
+    },
+    {
+      "id": "A1-002",
+      "phase": 1,
+      "unit": 12,
+      "unitName": "Present Tense - Regular -AR Verbs",
+      "type": "contextualizedProduction",
+      "scenario": "Your friend Paulo calls you every morning before work to chat.",
+      "en": "Paulo talks with me every day",
+      "question": "Complete the sentence:",
+      "template": "Paulo ______ comigo todo dia",
+      "chips": [
+        "falo",
+        "falou",
+        "falar",
+        "fala",
+        "falava",
+        "falei",
+        "falando",
+        "falado"
+      ],
+      "correct": "fala",
+      "hint": "he/she form, present tense",
+      "teachingNote": "Third person singular present: falar → fala. Tests agreement with 'Paulo' (he). Correct answer at position 3."
+    },
+    {
+      "id": "A1-003",
+      "phase": 1,
+      "unit": 5,
+      "unitName": "Articles - Definite & Indefinite",
+      "type": "quickCheck",
+      "en": "I have a book",
+      "question": "Complete the sentence:",
+      "template": "Eu tenho ______ livro",
+      "chips": [
+        "o",
+        "uma",
+        "um",
+        "a",
+        "uns",
+        "os",
+        "umas",
+        "as"
+      ],
+      "correct": "um",
+      "hint": "indefinite article, masculine singular",
+      "teachingNote": "Quick check of basic article agreement. No scenario needed for fundamental grammar. Correct answer at position 2."
+    },
+    {
+      "id": "A2-001",
+      "phase": 2,
+      "unit": 36,
+      "unitName": "Preterite Tense - Regular -AR Verbs",
+      "type": "contextualizedProduction",
+      "scenario": "You're telling your colleague about your weekend. Yesterday you visited your parents in São Paulo.",
+      "en": "I visited my parents yesterday",
+      "question": "Complete your story:",
+      "template": "Eu ______ meus pais ontem",
+      "chips": [
+        "visito",
+        "visitava",
+        "visitei",
+        "visitar",
+        "visitarei",
+        "visite",
+        "visitaria",
+        "visitando"
+      ],
+      "correct": "visitei",
+      "hint": "completed action in the past",
+      "teachingNote": "Preterite (simple past) for completed actions. 'Ontem' signals preterite, not imperfect. Correct answer at position 2."
+    },
+    {
+      "id": "A2-002",
+      "phase": 2,
+      "unit": 42,
+      "unitName": "Imperfect Tense - Uses",
+      "type": "contextualizedProduction",
+      "scenario": "You're reminiscing about your childhood. Every summer, your family would travel to the beach.",
+      "en": "We traveled to the beach every summer",
+      "question": "Describe your childhood habit:",
+      "template": "Nós ______ para a praia todo verão",
+      "chips": [
+        "viajamos",
+        "viajar",
+        "viajávamos",
+        "viajei",
+        "viajarei",
+        "viajando",
+        "viajaria",
+        "viajássemos"
+      ],
+      "correct": "viajávamos",
+      "hint": "repeated action in the past",
+      "teachingNote": "Imperfect for habitual past actions. 'Todo verão' signals repetition, not one-time event. Correct answer at position 2."
+    },
+    {
+      "id": "A2-003",
+      "phase": 2,
+      "unit": 45,
+      "unitName": "Comparatives",
+      "type": "quickCheck",
+      "en": "Maria is taller than João",
+      "question": "Complete the sentence:",
+      "template": "Maria é ______ alta ______ João",
+      "chips": [
+        "menos...do que",
+        "tão...quanto",
+        "mais...do que",
+        "muito...que",
+        "maior...de",
+        "mais...que",
+        "como...de",
+        "melhor...de"
+      ],
+      "correct": "mais...do que",
+      "hint": "comparison: more...than",
+      "teachingNote": "Standard comparative structure. This tests if student knows 'mais...do que' pattern. Correct answer at position 2."
+    },
+    {
+      "id": "B1-001",
+      "phase": 3,
+      "unit": 71,
+      "unitName": "Demonstratives - Spatial Context",
+      "type": "contextualizedProduction",
+      "scenario": "You're at a café with your friend Ana. There are three men: one at your table, one at Ana's table (a few meters away), and one across the street outside.",
+      "en": "That man (across the street) is a teacher",
+      "question": "Point to the man far from both of you and say:",
+      "template": "______ homem é professor",
+      "chips": [
+        "Esse",
+        "O",
+        "Aquele",
+        "Este",
+        "Algum",
+        "Outro",
+        "Cada",
+        "Qual"
+      ],
+      "correct": "Aquele",
+      "hint": "far from both speaker and listener",
+      "teachingNote": "Three-way demonstrative system: este (near me), esse (near you), aquele (far from both). Context is crucial. NO CLUSTERING: only one from each demonstrative category. Correct answer at position 2."
+    },
+    {
+      "id": "B1-002",
+      "phase": 3,
+      "unit": 64,
+      "unitName": "Por vs Para - Purpose",
+      "type": "contextualizedProduction",
+      "scenario": "Your friend is studying medicine. She studies every night because she wants to become a doctor.",
+      "en": "She studies to become a doctor",
+      "question": "Express her purpose:",
+      "template": "Ela estuda ______ ser médica",
+      "chips": [
+        "por",
+        "de",
+        "para",
+        "a",
+        "em",
+        "com",
+        "sem",
+        "até"
+      ],
+      "correct": "para",
+      "hint": "purpose or goal",
+      "teachingNote": "PARA = purpose/goal ('in order to'). POR = reason/cause. This is a classic distinction error. Correct answer at position 2."
+    },
+    {
+      "id": "B1-003",
+      "phase": 3,
+      "unit": 58,
+      "unitName": "Future Tense",
+      "type": "quickCheck",
+      "en": "Tomorrow I will work",
+      "question": "Complete the sentence:",
+      "template": "Amanhã eu ______",
+      "chips": [
+        "trabalho",
+        "trabalhava",
+        "trabalharei",
+        "trabalhei",
+        "trabalharia",
+        "trabalhar",
+        "trabalhe",
+        "trabalhasse"
+      ],
+      "correct": "trabalharei",
+      "hint": "future tense",
+      "teachingNote": "Simple future tense. 'Amanhã' clearly signals future. Correct answer at position 2."
+    },
+    {
+      "id": "B2-001",
+      "phase": 4,
+      "unit": 83,
+      "unitName": "Present Subjunctive - Doubt & Desire",
+      "type": "contextualizedProduction",
+      "scenario": "Your friend Pedro is always late. You're meeting him for dinner tonight and you're worried he'll be late again.",
+      "en": "I hope he arrives on time",
+      "question": "Express your hope:",
+      "template": "Espero que ele ______ na hora",
+      "chips": [
+        "chega",
+        "chegou",
+        "chegue",
+        "chegava",
+        "chegará",
+        "chegar",
+        "chegaria",
+        "chegasse"
+      ],
+      "correct": "chegue",
+      "hint": "subjunctive after 'espero que'",
+      "teachingNote": "Present subjunctive triggered by 'espero que' (doubt/desire). Real-world scenario makes the doubt/uncertainty concrete. Correct answer at position 2."
+    },
+    {
+      "id": "B2-002",
+      "phase": 4,
+      "unit": 84,
+      "unitName": "Imperfect Subjunctive - Hypotheticals",
+      "type": "multiStep",
+      "scenario": "Your friend is frustrated with her job. She says 'If I had more money, I would quit and travel the world.' You want to respond with your own hypothetical.",
+      "steps": [
+        {
+          "step": 1,
+          "en": "If I were rich",
+          "question": "Complete the 'if' clause:",
+          "template": "Se eu ______ rico",
+          "chips": [
+            "sou",
+            "era",
+            "fosse",
+            "fui",
+            "serei",
+            "for",
+            "seria",
+            "ser"
+          ],
+          "correct": "fosse",
+          "hint": "imperfect subjunctive for hypothetical"
+        },
+        {
+          "step": 2,
+          "en": "I would travel more",
+          "question": "Complete the consequence:",
+          "template": "Se eu fosse rico, eu ______ mais",
+          "chips": [
+            "viajo",
+            "viajava",
+            "viajaria",
+            "viajei",
+            "viajarei",
+            "viajar",
+            "viaje",
+            "viajasse"
+          ],
+          "correct": "viajaria",
+          "hint": "conditional for hypothetical result",
+          "fullSentence": "Se eu fosse rico, eu viajaria mais"
+        }
+      ],
+      "teachingNote": "Multi-step tests both parts of hypothetical: imperfect subjunctive (if clause) + conditional (result). Shows complete sentence construction ability. EACH STEP HAS ITS OWN CHIPS. Step 1 answer is locked in before Step 2 appears."
+    }
+  ],
+  "implementationNotes": {
+    "chipSelectionRules": {
+      "rule1": "NO CLUSTERING: Avoid multiple variations of the correct answer that hint at the answer category",
+      "badExample": "chips: [Aquele, Esse, Este, O, Um, Daquele, Naquele, Aquilo] ← 4 aquele-related = hint!",
+      "goodExample": "chips: [Aquele, Esse, Este, O, Algum, Outro, Cada, Qual] ← only one from each category",
+      "rule2": "RANDOMIZE POSITIONS: Correct answer should appear at different positions (0-7), not always first",
+      "rule3": "TEST COMMON ERRORS: Include chips that represent typical mistakes",
+      "commonErrors": [
+        "Wrong tense (present instead of past)",
+        "Wrong mood (indicative instead of subjunctive)",
+        "Wrong person (eu form instead of ele/ela)",
+        "Wrong verb (ser vs estar)",
+        "Infinitive form (unconjugated)",
+        "Gerund/participle forms",
+        "Similar-sounding words"
+      ],
+      "rule4": "BALANCE: Mix obviously wrong options with subtle errors",
+      "balanceExample": "trabalharei (correct), trabalho (wrong tense), trabalharia (wrong mood), trabalhar (infinitive), xyz (nonsense)"
+    },
+    "contextualizedProduction": {
+      "format": "Scenario → Question → Template → Chips (randomized positions)",
+      "characteristics": [
+        "Clear real-world situation",
+        "Specific context that constrains answer",
+        "Tests production in realistic use",
+        "Chips include common mistakes (no clustering)"
+      ]
+    },
+    "quickCheck": {
+      "format": "Question → Template → Chips (randomized positions)",
+      "characteristics": [
+        "No scenario needed",
+        "Tests fundamental grammar",
+        "Faster to complete",
+        "Good for basic rules"
+      ]
+    },
+    "multiStep": {
+      "format": "Scenario → Step 1 (with chips) → Step 2 (with chips) → (Optional Step 3)",
+      "mechanics": [
+        "EACH STEP has its own chips array",
+        "User answers Step 1, selects from chips",
+        "Step 1 answer is LOCKED IN (displayed in Step 2 template)",
+        "Step 2 shows new template with Step 1 answer filled in",
+        "User answers Step 2, selects from NEW chips",
+        "Final result shows complete sentence"
+      ],
+      "characteristics": [
+        "Tests complex sentence construction",
+        "Each step builds on previous",
+        "Shows ability to combine grammar points",
+        "Advanced levels only (B1+)"
+      ],
+      "example": {
+        "step1": {
+          "template": "Se eu ______ rico",
+          "chips": ["sou", "era", "fosse", "fui", ...],
+          "userSelects": "fosse"
+        },
+        "step2": {
+          "template": "Se eu fosse rico, eu ______ mais",
+          "chips": ["viajo", "viajava", "viajaria", "viajei", ...],
+          "userSelects": "viajaria"
+        },
+        "result": "Se eu fosse rico, eu viajaria mais"
+      }
+    },
+    "recommendedMix": {
+      "A1": "50% contextualizedProduction, 40% quickCheck, 10% multiStep (simple)",
+      "A2": "60% contextualizedProduction, 30% quickCheck, 10% multiStep",
+      "B1": "70% contextualizedProduction, 20% quickCheck, 10% multiStep",
+      "B2": "70% contextualizedProduction, 15% quickCheck, 15% multiStep"
+    }
+  }
+}
