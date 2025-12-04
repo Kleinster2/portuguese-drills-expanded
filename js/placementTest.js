@@ -26,7 +26,7 @@ async function loadQuestionBank() {
       'vocabulary': '/config/placement-test-questions-vocabulary-v1.0.json',
       'grammar-a': '/config/placement-test-questions-grammar-a-levels.json',
       'grammar-b': '/config/placement-test-questions-grammar-b-levels.json',
-      'grammar': '/config/placement-test-questions-grammar-v1.0.json',
+      'grammar': '/config/placement-test-questions-v8.0-streamlined.json',
       // Topic-based tests
       'verb-tenses': '/config/placement-test-questions-verb-tenses.json',
       'pronouns': '/config/placement-test-questions-pronouns.json',
