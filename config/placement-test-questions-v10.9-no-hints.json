@@ -4,7 +4,7 @@
     "title": "Portuguese Placement Test - Streamlined with Enhanced Coverage",
     "description": "Production-only comprehensive assessment - tests actual Portuguese production ability",
     "variant": "pt-BR",
-    "totalQuestions": 137,
+    "totalQuestions": 144,
     "estimatedMinutes": 90,
     "structure": "Strategic allocation replaces rigid 2-per-unit rule",
     "assessmentTypes": {
@@ -3411,6 +3411,157 @@
       ],
       "correct": "não falo",
       "scenario": "Someone asks if you speak English, and you need to clarify that you don't."
+    },
+    {
+      "id": 214,
+      "unit": 12,
+      "unitName": "Verb Estar",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "The tomato is expensive.",
+      "question": "Complete the sentence:",
+      "template": "O tomate __ caro.",
+      "chips": [
+        "está",
+        "é",
+        "fica",
+        "foi",
+        "era",
+        "ser",
+        "estar"
+      ],
+      "correct": "está",
+      "scenario": "Complaining about recent price increases at the market."
+    },
+    {
+      "id": 215,
+      "unit": 100,
+      "unitName": "Verbs Saber vs Conhecer",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "Do you know Maria?",
+      "question": "Complete the sentence:",
+      "template": "Você __ a Maria?",
+      "chips": [
+        "conhece",
+        "sabe",
+        "saber",
+        "conhecer",
+        "conheceis",
+        "sabem",
+        "saberia",
+        "conheça",
+        "saiba",
+        "souber"
+      ],
+      "correct": "conhece",
+      "scenario": "Asking a friend if they have met the new student."
+    },
+    {
+      "id": 216,
+      "unit": 79,
+      "unitName": "Todo vs Tudo",
+      "phase": 3,
+      "type": "contextualizedProduction",
+      "en": "I ate everything",
+      "question": "Complete the sentence:",
+      "template": "Eu comi __",
+      "chips": [
+        "tudo",
+        "todo",
+        "toda",
+        "todos",
+        "todas",
+        "nada",
+        "algo"
+      ],
+      "correct": "tudo",
+      "scenario": "You finished your meal completely."
+    },
+    {
+      "id": 217,
+      "unit": 79,
+      "unitName": "Todo vs Tudo",
+      "phase": 3,
+      "type": "contextualizedProduction",
+      "en": "I read the whole book",
+      "question": "Complete the sentence:",
+      "template": "Eu li __ o livro",
+      "chips": [
+        "todo",
+        "tudo",
+        "toda",
+        "todos",
+        "cada"
+      ],
+      "correct": "todo",
+      "scenario": "You read a book from start to finish."
+    },
+    {
+      "id": 218,
+      "unit": 96,
+      "unitName": "Verbs of Communication",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "He asks for the bill.",
+      "question": "Complete the sentence:",
+      "template": "Ele __ a conta.",
+      "chips": [
+        "pede",
+        "pergunta",
+        "pedir",
+        "perguntar",
+        "peço",
+        "pergunto",
+        "pedem",
+        "perguntam"
+      ],
+      "correct": "pede",
+      "scenario": "Observing a customer at a restaurant."
+    },
+    {
+      "id": 219,
+      "unit": 96,
+      "unitName": "Verbs of Communication",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "He asks where the subway is.",
+      "question": "Complete the sentence:",
+      "template": "Ele __ onde é o metrô.",
+      "chips": [
+        "pergunta",
+        "pede",
+        "perguntar",
+        "pedir",
+        "pergunto",
+        "peço",
+        "perguntam",
+        "pedem"
+      ],
+      "correct": "pergunta",
+      "scenario": "Observing a lost tourist."
+    },
+    {
+      "id": 220,
+      "unit": 97,
+      "unitName": "Verbs of Movement (Ir vs Vir)",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I am going there now (to where you are).",
+      "question": "Complete the sentence:",
+      "template": "Eu estou __ para aí agora.",
+      "chips": [
+        "indo",
+        "vindo",
+        "vou",
+        "venho",
+        "ir",
+        "vir",
+        "fui",
+        "vim"
+      ],
+      "correct": "indo",
+      "scenario": "You are at home, telling your friend (who is already at the restaurant) that you are leaving to meet them."
     }
   ]
 }

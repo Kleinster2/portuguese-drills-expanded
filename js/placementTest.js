@@ -209,7 +209,7 @@ function renderProductionQuestion(question, index) {
           ${chipsHTML}
         </div>
         <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
-           <button onclick="skipDiagnosticQuestion(${question.id})" class="text-slate-400 hover:text-slate-600 text-sm font-medium">I don't know</button>
+           <button onclick="skipDiagnosticQuestion(${question.id})" class="text-slate-400 hover:text-slate-600 text-sm font-medium">I'm not totally sure / Skip</button>
            <button id="submit-${question.id}" onclick="submitDiagnosticAnswer(${question.id})" disabled 
                    class="bg-blue-600 text-white px-6 py-2 rounded-lg font-bold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-700 transition">
              Submit
