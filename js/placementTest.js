@@ -177,7 +177,7 @@ function renderProductionQuestion(question, index) {
   
   // Scenario
   const scenarioHTML = question.scenario ? 
-    `<div class="mb-3 p-3 bg-amber-50/60 backdrop-blur-sm border-l-4 border-amber-400 rounded text-sm text-amber-900 italic">${question.scenario}</div>` : '';
+    `<div class="mb-3 p-3 glass-info border-l-4 border-amber-400 rounded text-sm text-amber-900 italic">${question.scenario}</div>` : '';
 
   // Template
   let templateHTML = question.template.replace('__', 
@@ -189,7 +189,7 @@ function renderProductionQuestion(question, index) {
   const chipsHTML = shuffledChips.map((chip, idx) => `
     <button onclick="selectDiagnosticChip(${question.id}, '${chip.replace(/'/g, "\'")}')" 
             id="chip-${question.id}-${idx}"
-            class="px-3 py-2 bg-white/70 backdrop-blur-sm border border-slate-300 rounded hover:bg-blue-50 hover:border-blue-500 transition text-sm shadow-sm">
+            class="px-3 py-2 glass-chip rounded hover:bg-blue-50 hover:border-blue-500 transition text-sm shadow-sm">
       ${chip}
     </button>
   `).join('');
@@ -197,13 +197,13 @@ function renderProductionQuestion(question, index) {
   const html = `
     <div class="flex items-start space-x-3 mb-6" id="q-container-${question.id}">
       <div class="w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-xs font-bold text-slate-600">${index + 1}</div>
-      <div class="bg-white/60 backdrop-blur-md rounded-2xl p-5 shadow-md w-full max-w-2xl">
+      <div class="glass-panel rounded-2xl p-5 shadow-md w-full max-w-2xl">
         <div class="flex justify-between mb-2">
           <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">${phaseName} • ${question.unitName}</span>
         </div>
         ${scenarioHTML}
         <p class="text-lg font-medium text-slate-800 mb-4">${question.en}</p>
-        <div class="text-xl font-mono text-slate-700 mb-6 bg-white/60 p-4 rounded-lg border border-slate-200 shadow-inner">
+        <div class="text-xl font-mono text-slate-700 mb-6 glass-panel p-4 rounded-lg border border-slate-200 shadow-inner">
           ${templateHTML}
         </div>
         <div class="flex flex-wrap gap-2 mb-4" id="chips-container-${question.id}">
@@ -335,7 +335,7 @@ function evaluatePhaseCompletion() {
 function showPhaseSuccess(nextPhase) {
   const container = document.getElementById('chat-messages');
   container.insertAdjacentHTML('beforeend', `
-    <div class="my-4 p-4 bg-green-100/60 backdrop-blur-sm text-green-800 rounded-xl text-center font-bold animate-pulse glassmorphic-card">
+    <div class="my-4 p-4 glass-success text-green-800 rounded-xl text-center font-bold animate-pulse">
       Phase Complete! Unlocking Level ${nextPhase}...
     </div>
   `);
@@ -360,7 +360,7 @@ function finishTest() {
   });
 
   const html = `
-    <div class="mt-8 bg-slate-900/80 backdrop-blur-sm text-white p-8 rounded-3xl shadow-2xl glassmorphic-card">
+    <div class="mt-8 bg-slate-900/90 backdrop-blur-md text-white p-8 rounded-3xl shadow-2xl">
       <h2 class="text-3xl font-bold mb-4">Diagnostic Complete 📊</h2>
       <div class="grid grid-cols-2 gap-4 mb-6">
         <div class="bg-slate-800 p-4 rounded-xl">
@@ -373,7 +373,7 @@ function finishTest() {
         </div>
       </div>
       
-      <div class="bg-white/70 backdrop-blur-sm text-slate-900 p-4 rounded-xl mb-4 glassmorphic-card">
+      <div class="glass-panel text-slate-900 p-4 rounded-xl mb-4">
         <p class="font-bold text-sm mb-2 uppercase tracking-wide text-slate-500">Instructor Code</p>
         <code id="hash-code" class="block p-3 bg-slate-100 rounded text-blue-600 font-mono break-all select-all">${hash}</code>
       </div>

@@ -27,6 +27,38 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.05); /* Soft, subtle shadow */
 }
 
+/* Glassmorphic Panel (for JS-injected content) */
+.glass-panel {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Glassmorphic Chip/Button */
+.glass-chip {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(4px);
+    border: 1px solid #cbd5e1; /* slate-300 */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.glass-chip:hover {
+    background-color: #eff6ff; /* blue-50 */
+    border-color: #3b82f6; /* blue-500 */
+}
+
+/* Glassmorphic Success/Info Box */
+.glass-info {
+    background-color: rgba(254, 252, 232, 0.6); /* amber-50/60 */
+    backdrop-filter: blur(4px);
+}
+
+.glass-success {
+    background-color: rgba(220, 252, 231, 0.6); /* green-100/60 */
+    backdrop-filter: blur(4px);
+}
+
 /* Drill Card Styles - Inherit glassmorphism base */
 .drill-card {
     visibility: visible;
