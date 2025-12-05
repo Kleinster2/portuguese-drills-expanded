@@ -1,7 +1,7 @@
 // Portuguese Drills - Service Worker
 // Version 1.0.0 - PWA Offline Support
 
-const CACHE_NAME = 'portuguese-drills-v1';
+const CACHE_NAME = 'portuguese-drills-v3-diagnostic';
 const OFFLINE_URL = '/offline.html';
 
 // Assets to cache on install
@@ -12,6 +12,7 @@ const STATIC_ASSETS = [
 
   // JavaScript files
   '/js/pronunciation-annotator.js',
+  '/js/placementTest.js',
   '/js/answerChips.js',
   '/js/conjugations.js',
   '/js/utils.js',
@@ -40,7 +41,7 @@ const DOCUMENTATION_ASSETS = [
 
 // Configuration files to cache
 const CONFIG_ASSETS = [
-  '/config/placement-test-questions-v5.json',
+  '/config/placement-test-questions-v10.9-no-hints.json',
   '/config/placement-test-production-questions.json'
 ];
 
