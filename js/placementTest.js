@@ -142,19 +142,20 @@ function startPhase(phaseNum) {
 function displayQuestion(index) {
   if (testStopped) return;
 
-  // 1. Find the next valid question (skipping "dead" topics)
+  // 1. Find the next valid question (skipping "dead" topics) -> DISABLED for Pure Diagnostic Mode
   let validIndex = index;
   let question = phaseQuestions[validIndex];
 
-  while (question) {
-    const topic = topicState[question.unitName];
-    if (topic && topic.active) {
-      break; // Found a valid question
-    }
-    // Topic is dead (failed too many times), skip this question
-    validIndex++;
-    question = phaseQuestions[validIndex];
-  }
+  // PURE DIAGNOSTIC MODE: Do not skip topics. Ask everything in the phase.
+  // while (question) {
+  //   const topic = topicState[question.unitName];
+  //   if (topic && topic.active) {
+  //     break; // Found a valid question
+  //   }
+  //   // Topic is dead (failed too many times), skip this question
+  //   validIndex++;
+  //   question = phaseQuestions[validIndex];
+  // }
 
   // If we ran out of questions in this phase
   if (!question) {
@@ -271,10 +272,10 @@ function processAnswer(qid, answer) {
     document.getElementById(`q-container-${qid}`).querySelector('.bg-white').classList.add('border-green-200');
   } else {
     topic.failures++;
-    // Diagnostic Logic: Soft Fail
+    // Diagnostic Logic: Soft Fail -> DISABLED for Pure Diagnostic Mode
     if (topic.failures >= TOPIC_FAILURE_LIMIT) {
-      topic.active = false; 
-      console.log(`🚫 Topic Failed: ${question.unitName}. Skipping remaining questions for this topic.`);
+      // topic.active = false; 
+      console.log(`🚫 Topic Failed: ${question.unitName}. (Continuing phase for full diagnostic)`);
     }
   }
 

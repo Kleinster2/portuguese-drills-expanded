@@ -1,244 +1,86 @@
-# Placement Test Question Guidelines
+# Placement Test Question Guidelines (v3.1 - Efficacy-Focused)
 
-Best practices for creating effective grammar placement test questions.
+Best practices for creating effective grammar diagnostic assessment questions.
 
-## No Explanations
+## Core Philosophy: Efficacy First
 
-**Don't give away the answer**
+The goal of the diagnostic engine is to measure proficiency with the highest possible accuracy and efficiency. **Question type should be selected based on what best measures the specific topic.**
 
-The test should assess what students know, not teach them.
+- **Production (Contextualized):** The default standard. Best for testing active command of grammar, conjugation, and syntax.
+- **Comprehension / Concept Check:** Use *only* when production would introduce unnecessary friction (like rote vocabulary memorization) or when testing abstract rules (e.g., gender ambiguity awareness).
+
+## Selecting Question Types
+
+### When to use Production (`contextualizedProduction`)
+Use for 90% of the test. It is the only way to prove a student can *use* the language.
+- **Verb Conjugations:** "Eu __ (falar)" -> `falo`.
+- **Prepositions:** "Gosto __ você" -> `de`.
+- **Articles:** "Eu tenho __ carro" -> `um`.
+
+### When to use Comprehension/Concept (`comprehension`)
+Use when testing a rule or concept where "filling in the blank" would test the wrong thing (e.g., testing vocabulary instead of the rule).
+
+**Example: Gender Ambiguity**
+*   *Goal:* Test if the student knows that `-e` endings do not guarantee masculine/feminine gender.
+*   *Production Failure:* Asking `__ ponte` tests if they memorized "ponte". It does not test if they know the *rule* of ambiguity.
+*   *Comprehension Success:* "Which group of words contains both masculine and feminine nouns?" (Options: lists of words ending in -e). This tests the concept directly.
+
+## No Explanations / No Hints
+
+**Don't give away the answer or provide direct grammatical hints.**
+
+The test should assess what students know, not teach them. The `hint` field is intentionally omitted in v10.9+ question banks.
 
 Bad:
 - EN: "I am in Brazil right now **(temporary location)**" → hints at estar
-- EN: "She is a teacher **(permanent profession)**" → hints at ser
 - Question: "Choose ser (not estar) for professions:" → gives the rule
 
 Good:
 - EN: "I am in Brazil right now"
-- EN: "She is a teacher"
 - Question: "Complete the sentence:"
 
-## Acceptable Clarifications
+## Contextual Scenarios
 
-Some parenthetical hints are needed for disambiguation (not teaching):
+Use the `scenario` field to provide a brief, realistic situation that justifies the English prompt. This adds naturalness and relevance without giving away the grammatical rule.
 
-| Type | Example | Why OK |
-|------|---------|--------|
-| Gender | "I bought them **(feminine)**" | Specifies which pronoun |
-| Addressee | "Please speak slowly **(você)**" | Specifies singular/plural formal |
-| Portuguese word | "The key is from the car **(o carro)**" | Shows gender of noun |
-| Demonstrative distance | "Those flowers **(over there)**" | Distinguishes esse vs aquele |
+**Guideline:** The scenario should explain *why* the student is saying/writing the English sentence.
 
-## Blank Pattern for Multiple Valid Answers
-
-**Use blanks in English when multiple answers are grammatically valid**
-
-When testing gender agreement without requiring a specific article type:
-
-```json
-{
-  "en": "___ boy is here",
-  "template": "__ menino está aqui",
-  "correct": "O",
-  "alsoCorrect": ["Um"]
-}
-```
-
-This tests:
-- Gender agreement (menino → masculine → O/Um, not A/Uma)
-- Both definite (O) and indefinite (Um) are valid
-
-When to use blanks vs specific words:
-
-| Goal | EN | Correct | alsoCorrect |
-|------|-----|---------|-------------|
-| Test gender only | "___ boy is here" | O | Um |
-| Test definite article | "**The** boy is here" | O | — |
-| Test indefinite article | "**A** boy is here" | Um | — |
-
-### Other Double-Blank Patterns
-
-**Demonstratives (distance unspecified):**
-```json
-{
-  "en": "___ book is interesting",
-  "template": "__ livro é interessante",
-  "correct": "Este",
-  "alsoCorrect": ["Esse", "Aquele"]
-}
-```
-
-**Future Tense (both forms valid):**
-```json
-{
-  "en": "I _ study tomorrow",
-  "template": "Eu __ amanhã",
-  "correct": "estudarei",
-  "alsoCorrect": ["vou estudar"]
-}
-```
-
-**Comparatives (que vs do que):**
-```json
-{
-  "en": "She is taller _ her brother",
-  "template": "Ela é mais alta __ o irmão",
-  "correct": "que",
-  "alsoCorrect": ["do que"]
-}
-```
-
-**Ser/Estar (ambiguous adjectives):**
-```json
-{
-  "en": "The food _ delicious",
-  "template": "A comida __ deliciosa",
-  "correct": "está",
-  "alsoCorrect": ["é"]
-}
-```
-Some adjectives allow both ser (inherent quality) and estar (current state):
-- delicioso, bom, bonito, interessante, etc.
+- `en`: "I am Brazilian"
+- `scenario`: "You meet someone new at a café and they ask about your nationality."
 
 ## Distractor Quality
 
-**Distractors must be grammatically incorrect, not just different meanings**
 
-Chips should only include:
-1. **Correct answers** - valid translations of the English
-2. **Grammatically wrong** - incorrect Portuguese
 
-Do NOT include answers that are grammatically correct Portuguese but translate to something different. This creates unfair "trick questions."
+**Distractors must be unambiguously incorrect translations of the English prompt.**
 
-Bad:
-- EN: "Maria is **a** teacher"
-- Chip: "a" (definite article) → "Maria é a professora" is valid Portuguese but means "the teacher"
 
-Good:
-- EN: "Maria is **a** teacher"
-- Chips: ∅, uma (correct) | ela, como, ser (grammatically wrong in this position)
 
-**Distractors should test grammar, not vocabulary**
+Chips should include:
 
-Bad distractor:
-- PT: "Eu sou professor"
-- Option: "I am a student" → only tests if they know professor ≠ estudante
+1.  **Correct answers** - valid translations of the English.
 
-Good distractors test grammar understanding:
-- "I am temporarily a teacher" → tests ser vs estar
-- "I have a teacher" → tests ser vs ter
-- "I was a teacher" → tests present vs past
-- "I am the teacher" → tests article usage
+2.  **Grammatically incorrect forms** - e.g., wrong conjugation for the subject.
 
-## Multiple Correct Answers
+3.  **Semantically incorrect choices** - e.g., wrong verb (saber vs conhecer).
 
-Use `alsoCorrect` field when multiple answers are grammatically valid:
 
-```json
-{
-  "correct": "∅",
-  "alsoCorrect": ["uma"]
-}
-```
 
-Examples where this applies:
-- Articles with professions: "Maria é __ professora" (∅ or uma)
-- Possessives in BP: "__ Minha casa é grande" (∅ or A)
-- Personal "a": "Eu visitei __ Maria" (∅ or a)
+**Strict Rule:** No other answer can be a plausible translation of the English prompt, even under a loose interpretation.
 
-## Nothing (∅) Questions
+*   If the prompt is Present Tense ("Do you know?"), do **not** include Past Tense forms (`conhecia`) if they could confuse the student about the intended timeframe. Focus on the specific skill being tested (e.g., verb choice).
 
-When testing that nothing is needed, ensure only ONE answer is valid.
 
-Bad (ambiguous):
-- "Maria é __ professora" → both ∅ and "uma" work
 
-Good (unambiguous):
-- "Eu posso __ falar português" → only ∅ (modal + infinitive, no preposition)
-- "Eu sei __ nadar" → only ∅ (saber + infinitive)
+Do NOT include answers that are grammatically correct Portuguese but translate to something completely different (e.g., "cat" vs "dog").
 
-## Neutral Question Prompts
+## Clear Gender Endings (For Production)
 
-Use neutral prompts that don't hint at the answer:
+**Use nouns with obvious gender endings when testing gender agreement via Production**
 
-| Avoid | Use Instead |
-|-------|-------------|
-| "Choose ser (not estar)..." | "Complete the sentence:" |
-| "Choose the formal imperative:" | "Complete the sentence:" |
-| "Use the simple future tense:" | "Complete the sentence:" |
-| "Choose imperfect (ongoing)..." | "Complete the sentence:" |
-
-## Chip/Option Count
-
-- Production questions: 6-10 chips
-- Comprehension questions: 6 options
-- Include plausible distractors from related grammar points
-
-## Randomize Chip Order
-
-**Never place the correct answer in a predictable position**
-
-The correct answer should be randomly distributed across all chip positions. If the correct answer is always first (or always in another position), students can game the test.
-
-Bad: Correct answer always in position 1
-Good: Correct answer evenly distributed across positions 1-10
-
-Use random shuffling when generating questions to ensure fair distribution.
-
-## Question Order
-
-**JSON files: Follow syllabus order** - Keep questions organized by unit/topic for maintainability and easier editing.
-
-**Runtime: Automatically randomized** - Questions are shuffled at test start (`placementTest.js`), so the static JSON order doesn't affect test-takers. This prevents:
-- Topic clustering (adjacent questions priming students)
-- Comprehension questions revealing answers for production questions
-- Pattern recognition from predictable ordering
-
-## Clear Gender Endings
-
-**Use nouns with obvious gender endings when testing gender agreement**
-
-When testing grammar that involves gender (articles, prepositions with contractions, demonstratives, adjective agreement), use nouns that end in:
-- **-o / -os** for masculine (carro, livros, banco)
-- **-a / -as** for feminine (casa, mesas, rosa)
-
-Avoid nouns with ambiguous endings like:
-- **-e** (estudante, ponte)
-- **-al** (hospital, animal)
-- **-or** (flor, cor)
-- **-ão** (can be masc or fem)
-
-| Bad | Good | Why |
-|-----|------|-----|
-| hospital | banco | -al ending doesn't show gender |
-| flores | rosas | -es ending doesn't show gender |
-| estudante | aluno/aluna | -e ending is ambiguous |
-
-## English Must Be Natural
-
-**Distractors and prompts must be grammatical English**
-
-All English text (prompts, options, distractors) must be natural, grammatical English.
-
-Bad:
-- "I am teacher" (missing article)
-- "I am being a teacher" (unnatural)
-
-Good:
-- "I am a teacher"
-- "I am temporarily a teacher"
-
-## Avoid Redundant Context
-
-**Don't add unnecessary framing**
-
-Bad:
-- "João says: I am Brazilian"
-
-Good:
-- "I am Brazilian"
-
-The template already shows first person (Eu __), so no need to specify who is speaking.
+When asking a student to *produce* an article or adjective:
+- Use nouns ending in **-o / -os** (masc) or **-a / -as** (fem).
+- **Avoid** nouns with ambiguous endings like **-e, -al, -or, -ão** unless the specific goal is to test knowledge of that specific exception.
 
 ## Schema Reference
 
@@ -247,36 +89,37 @@ The template already shows first person (Eu __), so no need to specify who is sp
 {
   "id": 1,
   "unit": 1,
+  "unitName": "Identity Statements",
   "phase": 1,
-  "type": "production",
+  "type": "contextualizedProduction",
   "en": "I am Brazilian",
   "question": "Complete the sentence:",
   "template": "Eu __ brasileiro",
   "chips": ["sou", "é", "está", "estou", "era", "foi"],
   "correct": "sou",
-  "alsoCorrect": [],          // optional
-  "unitTopic": "Ser"
+  "scenario": "You meet someone new at a café and they ask about your nationality."
 }
 ```
 
-### Comprehension Question
+### Concept/Comprehension Question
 ```json
 {
-  "id": 2,
-  "unit": 1,
-  "phase": 1,
+  "id": 200,
+  "unit": 95,
+  "unitName": "Gender Rules - Ambiguity",
+  "phase": 2,
   "type": "comprehension",
-  "pt": "Eu sou professor",
-  "question": "What does this mean?",
-  "correct": "I am a teacher",
-  "options": [
-    "I am a teacher",
-    "I am temporarily a teacher",
-    "I have a teacher",
-    "I work as a teacher",
-    "I was a teacher",
-    "I am the teacher"
-  ],
-  "unitTopic": "Ser"
+  "en": "Which of these words is Feminine?",
+  "question": "Identify the gender pattern:",
+  "options": ["O Leite", "O Dente", "A Ponte", "O Tapete"],
+  "correct": "A Ponte",
+  "scenario": "Analyzing noun genders."
 }
 ```
+
+<br>
+<hr>
+<br>
+**Change Log:**
+- **v3.1 (2025-12-03):** Shifted philosophy to "Efficacy-Focused". Explicitly allows non-production questions when they better measure the specific topic (e.g., metalinguistic rules).
+- **v3.0 (2025-12-03):** Updated for Diagnostic Engine. Emphasized production-only, contextual scenarios, and no hints.
