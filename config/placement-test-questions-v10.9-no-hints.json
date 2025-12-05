@@ -1,20 +1,20 @@
 {
   "metadata": {
     "version": "10.9-no-hints",
-    "title": "Portuguese Placement Test - Streamlined with Enhanced Coverage",
-    "description": "Production-only comprehensive assessment - tests actual Portuguese production ability",
+    "title": "Portuguese Diagnostic Assessment - Production-Only",
+    "description": "Comprehensive diagnostic test with granular topic tracking (A1→B2)",
     "variant": "pt-BR",
-    "totalQuestions": 146,
-    "estimatedMinutes": 90,
-    "structure": "Strategic allocation replaces rigid 2-per-unit rule",
+    "totalQuestions": 130,
+    "estimatedMinutes": 20,
+    "structure": "Topic-based adaptive testing with soft failures and phase promotion",
     "assessmentTypes": {
-      "comprehension": "~95 questions - Portuguese to English with 6-7 strategic distractors",
-      "production": "~120 questions - English to Portuguese with 8-10 strategic distractors"
+      "production": "130 questions - English to Portuguese with strategic chip options"
     },
-    "changelog": "v8.0: Strategic streamlining of 2x2 matrices (-8 questions: Units 2,3,4,6,9). Enhanced possessives (Units 31-33) with plural forms. Enhanced demonstratives (Unit 72) with gender/number coverage (+3 questions). Total: 303 questions. v7.1.2: Removed parenthetical explanations from unit names to prevent spoilers. v7.1.1: Fixed 3 multi-word chip ambiguities (Q3, Q134, Q200). v7.1: Fixed 18 critical ambiguity issues (17 tense, 1 gender)",
-    "scenarioCoverage": "100.0%",
+    "changelog": "v10.9: Removed all 117 hints for true assessment. v10.8: Removed contrived basic scenarios. v10.7: Fixed tense/scenario mismatches. v10.6: Separated definite/indefinite article chips. v10.5: Clear gender markers only (-o/-a/-os/-as). v10.4: Removed adjective scenarios. v10.0: Production-only (removed 177 comprehension questions). v8.0: Strategic streamlining. v7.1: Fixed ambiguities.",
+    "scenarioCoverage": "Strategic - contextual where beneficial, removed for basic drills",
     "questionTypes": "Production (EN→PT with chips) and Multi-step only",
-    "approach": "Hybrid contextual: A1 simple, A2 moderate, B1/B2 full context"
+    "approach": "No hints, clear gender markers, separated article types, proper scenarios",
+    "diagnosticMode": "Topic-based adaptive with 2-strike failures and 70% phase pass threshold"
   },
   "phases": [
     {
