@@ -1,17 +1,39 @@
 /**
  * Custom Styles for Portuguese Language Drills
+ * V3.1 - Stripe/SaaS Vibe
  */
 
 body {
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
+    /* Gradient Background */
+    background: linear-gradient(135deg, #f0f4f8, #e0e7ed); /* Light, subtle blue-gray gradient */
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite; /* Subtle animation */
+    min-height: 100vh; /* Ensure it covers full height */
 }
 
-/* Drill Card Styles */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Glassmorphism base for cards/modals */
+.glassmorphic-card {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.05); /* Soft, subtle shadow */
+}
+
+/* Drill Card Styles - Inherit glassmorphism base */
 .drill-card {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.3s ease-out, transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    @apply glassmorphic-card; /* Apply base glassmorphism styles */
+    border: none; /* Remove default border to use glassmorphic one */
 }
 
 .drill-card.hidden {
