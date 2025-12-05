@@ -4,7 +4,7 @@
     "title": "Portuguese Placement Test - Streamlined with Enhanced Coverage",
     "description": "Production-only comprehensive assessment - tests actual Portuguese production ability",
     "variant": "pt-BR",
-    "totalQuestions": 144,
+    "totalQuestions": 146,
     "estimatedMinutes": 90,
     "structure": "Strategic allocation replaces rigid 2-per-unit rule",
     "assessmentTypes": {
@@ -267,9 +267,9 @@
       "unitName": "Location with Estar",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I am at home",
+      "en": "I am in the office",
       "question": "Complete the sentence:",
-      "template": "Eu __ em casa",
+      "template": "Eu __ no escritório",
       "chips": [
         "estava",
         "estaria",
@@ -478,9 +478,9 @@
       "unitName": "Verb Ficar",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I stay at home",
+      "en": "I stay at the hotel",
       "question": "Complete the sentence:",
-      "template": "Eu __ em casa",
+      "template": "Eu __ no hotel",
       "chips": [
         "ficaria",
         "fico",
@@ -494,7 +494,7 @@
         "ficava"
       ],
       "correct": "fico",
-      "scenario": "Declining an invitation because you're staying in."
+      "scenario": "Telling a friend where you are staying during your trip."
     },
     {
       "id": 29,
@@ -526,9 +526,9 @@
       "unitName": "Verb Estar",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I am at home",
+      "en": "I am at the market",
       "question": "Complete the sentence:",
-      "template": "Eu __ em casa",
+      "template": "Eu __ no mercado",
       "chips": [
         "moro",
         "estava",
@@ -575,9 +575,9 @@
       "unitName": "Verb Ter",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I have a house",
+      "en": "I have an apartment",
       "question": "Complete the sentence:",
-      "template": "Eu __ uma casa",
+      "template": "Eu __ um apartamento",
       "chips": [
         "tenho",
         "tivesse",
@@ -623,9 +623,9 @@
       "unitName": "Verb Precisar de",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I need money",
+      "en": "I need water",
       "question": "Complete the sentence:",
-      "template": "Eu preciso __ dinheiro",
+      "template": "Eu preciso __ água",
       "chips": [
         "na",
         "para",
@@ -640,7 +640,7 @@
         "(blank)"
       ],
       "correct": "de",
-      "scenario": "Explaining why you can't join a trip."
+      "scenario": "Explaining what you need to survive."
     },
     {
       "id": 54,
@@ -1146,7 +1146,7 @@
       "unitName": "Possessive Adjectives - Seu/Sua",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "This is your car is new",
+      "en": "Your car is new",
       "question": "Complete the sentence:",
       "template": "__ carro é novo",
       "chips": [
@@ -1372,7 +1372,7 @@
       "unitName": "Irregular Preterite - Ser/Ir",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Yesterday, i went to the park",
+      "en": "Yesterday, I went to the park",
       "question": "Complete the sentence:",
       "template": "Eu __ ao parque",
       "chips": [
@@ -1611,7 +1611,7 @@
       "unitName": "Irregular Preterite - Ver/Vir/Dar",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Yesterday, i saw that",
+      "en": "Yesterday, I saw that",
       "question": "Complete the sentence:",
       "template": "Eu __ isso",
       "chips": [
@@ -1635,9 +1635,9 @@
       "unitName": "Irregular Preterite - Ver/Vir/Dar",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I gave money",
+      "en": "I gave a book",
       "question": "Complete the sentence:",
-      "template": "Eu __ dinheiro",
+      "template": "Eu __ um livro",
       "chips": [
         "dei",
         "dava",
@@ -1651,7 +1651,7 @@
         "dá"
       ],
       "correct": "dei",
-      "scenario": "You're recounting a completed event."
+      "scenario": "You're recounting a past event of gift-giving."
     },
     {
       "id": 126,
@@ -1854,9 +1854,9 @@
       "unitName": "Prepositions Por and Para",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I am going home",
+      "en": "I am going to work",
       "question": "Complete the sentence:",
-      "template": "Eu vou __ casa",
+      "template": "Eu vou __ o trabalho",
       "chips": [
         "no",
         "por",
@@ -1871,7 +1871,7 @@
         "(blank)"
       ],
       "correct": "para",
-      "scenario": "Letting friends know you're heading home now."
+      "scenario": "Letting friends know you're heading to work now."
     },
     {
       "id": 138,
@@ -2675,7 +2675,7 @@
       "unitName": "Present Subjunctive - Regular Verbs",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I'm worried, but i hope you eat",
+      "en": "I'm worried, but I hope you eat",
       "question": "Complete the sentence:",
       "template": "Espero que você __",
       "chips": [
@@ -2699,7 +2699,7 @@
       "unitName": "Present Subjunctive - Regular Verbs",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I'm worried, but i hope you leave",
+      "en": "I'm worried, but I hope you leave",
       "question": "Complete the sentence:",
       "template": "Espero que você __",
       "chips": [
@@ -2747,7 +2747,7 @@
       "unitName": "Present Subjunctive - Irregular Verbs",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I'm worried, but i hope you are happy",
+      "en": "I'm worried, but I hope you are happy",
       "question": "Complete the sentence:",
       "template": "Espero que você __ feliz",
       "chips": [
@@ -2771,7 +2771,7 @@
       "unitName": "Present Subjunctive - Irregular Verbs",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I'm worried, but i hope you are here",
+      "en": "I'm worried, but I hope you are here",
       "question": "Complete the sentence:",
       "template": "Espero que você __ aqui",
       "chips": [
@@ -2795,7 +2795,7 @@
       "unitName": "Present Subjunctive - Irregular Verbs",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I'm worried, but i hope you go",
+      "en": "I'm worried, but I hope you go",
       "question": "Complete the sentence:",
       "template": "Espero que você __",
       "chips": [
@@ -3562,6 +3562,50 @@
       ],
       "correct": "indo",
       "scenario": "You are at home, telling your friend (who is already at the restaurant) that you are leaving to meet them."
+    },
+    {
+      "id": 223,
+      "unit": 43,
+      "unitName": "Contractions with Preposition A",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I go home.",
+      "question": "Complete the sentence:",
+      "template": "Eu vou __ casa.",
+      "chips": [
+        "para",
+        "para a",
+        "a",
+        "em",
+        "na",
+        "no",
+        "da",
+        "do"
+      ],
+      "correct": "para",
+      "scenario": "You are leaving work at the end of the day."
+    },
+    {
+      "id": 224,
+      "unit": 43,
+      "unitName": "Contractions with Preposition A",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I am going to the house of my friend.",
+      "question": "Complete the sentence:",
+      "template": "Eu vou __ casa do meu amigo.",
+      "chips": [
+        "para a",
+        "para",
+        "a",
+        "em",
+        "na",
+        "no",
+        "da",
+        "do"
+      ],
+      "correct": "para a",
+      "scenario": "You are visiting a specific residence."
     }
   ]
 }
