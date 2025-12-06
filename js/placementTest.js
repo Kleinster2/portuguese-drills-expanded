@@ -189,7 +189,7 @@ function renderProductionQuestion(question, index) {
   const chipsHTML = shuffledChips.map((chip, idx) => `
     <button onclick="selectDiagnosticChip(${question.id}, '${chip.replace(/'/g, "\'")}')" 
             id="chip-${question.id}-${idx}"
-            class="px-3 py-2 glass-chip rounded hover:bg-blue-50 hover:border-blue-500 transition text-sm shadow-sm">
+            class="px-5 py-3 glass-chip rounded-lg hover:bg-blue-50 hover:border-blue-500 transition text-base shadow-sm">
       ${chip}
     </button>
   `).join('');
@@ -210,9 +210,9 @@ function renderProductionQuestion(question, index) {
           ${chipsHTML}
         </div>
         <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
-           <button onclick="skipDiagnosticQuestion(${question.id})" class="glass-chip px-3 py-2 text-sm">I'm not totally sure / Skip</button>
+           <button onclick="skipDiagnosticQuestion(${question.id})" class="glass-chip px-5 py-3 text-base rounded-lg">I'm not totally sure / Skip</button>
            <button id="submit-${question.id}" onclick="submitDiagnosticAnswer(${question.id})" disabled
-                   class="bg-blue-600 text-white px-6 py-2 rounded-lg font-bold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-700 transition">
+                   class="bg-blue-600 text-white px-8 py-3 rounded-lg text-base font-bold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-700 transition">
              Submit
            </button>
         </div>
