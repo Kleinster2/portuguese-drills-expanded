@@ -4,11 +4,11 @@
     "title": "Portuguese Diagnostic Assessment - Production-Only",
     "description": "Comprehensive diagnostic test with granular topic tracking (A1→B2)",
     "variant": "pt-BR",
-    "totalQuestions": 130,
-    "estimatedMinutes": 20,
+    "totalQuestions": 146,
+    "estimatedMinutes": 25,
     "structure": "Topic-based adaptive testing with soft failures and phase promotion",
     "assessmentTypes": {
-      "production": "130 questions - English to Portuguese with strategic chip options"
+      "production": "146 questions - English to Portuguese with strategic chip options"
     },
     "changelog": "v10.9: Removed all 117 hints for true assessment. v10.8: Removed contrived basic scenarios. v10.7: Fixed tense/scenario mismatches. v10.6: Separated definite/indefinite article chips. v10.5: Clear gender markers only (-o/-a/-os/-as). v10.4: Removed adjective scenarios. v10.0: Production-only (removed 177 comprehension questions). v8.0: Strategic streamlining. v7.1: Fixed ambiguities.",
     "scenarioCoverage": "Strategic - contextual where beneficial, removed for basic drills",
@@ -100,7 +100,7 @@
       ],
       "correct": "sou",
       "scenario": "You are introducing yourself to a new group of friends in Brazil."
-    }
+    },
     {
       "id": 3,
       "unit": 1,
