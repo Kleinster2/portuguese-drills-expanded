@@ -1,7 +1,7 @@
 // Portuguese Drills - Service Worker
 // Version 1.0.0 - PWA Offline Support
 
-const CACHE_NAME = 'portuguese-drills-v4-glassmorphism';
+const CACHE_NAME = 'portuguese-drills-v5-fixed-sw';
 const OFFLINE_URL = '/offline.html';
 
 // Assets to cache on install
@@ -19,9 +19,6 @@ const STATIC_ASSETS = [
 
   // CSS
   '/css/styles.css',
-
-  // Tailwind CSS (CDN - cache for offline)
-  'https://cdn.tailwindcss.com',
 
   // Manifest
   '/manifest.json',
@@ -148,9 +145,8 @@ self.addEventListener('fetch', (event) => {
 
         // Cache successful responses
         caches.open(CACHE_NAME).then((cache) => {
-          // Only cache same-origin requests and CDN assets
-          if (event.request.url.startsWith(self.location.origin) ||
-              event.request.url.includes('cdn.tailwindcss.com')) {
+          // Only cache same-origin requests
+          if (event.request.url.startsWith(self.location.origin)) {
             cache.put(event.request, responseToCache);
             console.log('[Service Worker] Cached new resource:', event.request.url);
           }
