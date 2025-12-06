@@ -22,6 +22,7 @@ body {
 /* Glassmorphism base for cards/modals */
 .glassmorphic-card {
     background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect - Safari/Chrome */
     backdrop-filter: blur(10px); /* Blur effect */
     border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.05); /* Soft, subtle shadow */
@@ -30,6 +31,7 @@ body {
 /* Glassmorphic Panel (for JS-injected content) */
 .glass-panel {
     background-color: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(12px); /* Safari/Chrome */
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -38,6 +40,7 @@ body {
 /* Glassmorphic Chip/Button */
 .glass-chip {
     background-color: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     border: 1px solid #cbd5e1; /* slate-300 */
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -51,11 +54,13 @@ body {
 /* Glassmorphic Success/Info Box */
 .glass-info {
     background-color: rgba(254, 252, 232, 0.6); /* amber-50/60 */
+    -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
 }
 
 .glass-success {
     background-color: rgba(220, 252, 231, 0.6); /* green-100/60 */
+    -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
 }
 
@@ -65,6 +70,7 @@ body {
     opacity: 1;
     transition: opacity 0.3s ease-out, transform 0.3s ease-in-out, box-shadow 0.3s ease;
     background-color: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.05);
