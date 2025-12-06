@@ -180,8 +180,8 @@ function renderProductionQuestion(question, index) {
     `<div class="mb-3 p-3 glass-info border-l-4 border-amber-400 rounded text-sm text-amber-900 italic">${question.scenario}</div>` : '';
 
   // Template
-  let templateHTML = question.template.replace('__', 
-    `<span class="inline-block min-w-[60px] px-2 border-b-2 border-blue-400 text-center" id="blank-${question.id}">___</span>`
+  let templateHTML = question.template.replace('__',
+    `<span class="inline-block min-w-[80px] px-3 py-1 border border-slate-300 rounded text-center bg-slate-50" id="blank-${question.id}">&nbsp;</span>`
   );
 
   // Chips
@@ -229,8 +229,10 @@ let currentSelection = null;
 
 window.selectDiagnosticChip = function(qid, chip) {
   currentSelection = chip;
-  document.getElementById(`blank-${qid}`).textContent = chip;
-  document.getElementById(`blank-${qid}`).classList.add('text-blue-700', 'font-bold');
+  const blank = document.getElementById(`blank-${qid}`);
+  blank.textContent = chip;
+  blank.classList.remove('bg-slate-50');
+  blank.classList.add('bg-blue-50', 'text-blue-700', 'font-bold', 'border-blue-400');
   document.getElementById(`submit-${qid}`).disabled = false;
   
   // Visual selection state
