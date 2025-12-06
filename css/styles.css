@@ -1,96 +1,125 @@
 /**
  * Custom Styles for Portuguese Language Drills
- * V3.1 - Stripe/SaaS Vibe
+ * V4.0 - Vibrant & Colorful
  */
 
 body {
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
-    /* Gradient Background */
-    background: linear-gradient(135deg, #f0f4f8, #e0e7ed); /* Light, subtle blue-gray gradient */
+    /* Vibrant Gradient Background */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
     background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite; /* Subtle animation */
-    min-height: 100vh; /* Ensure it covers full height */
+    animation: gradientShift 20s ease infinite;
+    min-height: 100vh;
 }
 
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
+    25% { background-position: 50% 50%; }
     50% { background-position: 100% 50%; }
+    75% { background-position: 50% 100%; }
     100% { background-position: 0% 50%; }
 }
 
-/* Glassmorphism base for cards/modals */
+/* Vibrant Card for modals */
 .glassmorphic-card {
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
-    -webkit-backdrop-filter: blur(10px); /* Blur effect - Safari/Chrome */
-    backdrop-filter: blur(10px); /* Blur effect */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.05); /* Soft, subtle shadow */
+    background: linear-gradient(to bottom, #ffffff, #fafafa);
+    border: 3px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.5);
+    position: relative;
 }
 
-/* Glassmorphic Panel (for JS-injected content) */
+.glassmorphic-card::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(135deg, #667eea, #764ba2, #f093fb, #4facfe);
+    border-radius: inherit;
+    z-index: -1;
+}
+
+/* Vibrant Panel (for JS-injected content) */
 .glass-panel {
-    background-color: rgba(255, 255, 255, 0.6);
-    -webkit-backdrop-filter: blur(12px); /* Safari/Chrome */
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background: white;
+    border: 3px solid transparent;
+    border-image: linear-gradient(135deg, #667eea, #764ba2, #f093fb) 1;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15), 0 0 20px rgba(102, 126, 234, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Glassmorphic Chip/Button */
+.glass-panel:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2), 0 0 30px rgba(102, 126, 234, 0.3);
+}
+
+/* Vibrant Chip/Button */
 .glass-chip {
-    background-color: rgba(255, 255, 255, 0.7);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    border: 1px solid #cbd5e1; /* slate-300 */
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    background: linear-gradient(135deg, #ffffff, #f5f5f5);
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 .glass-chip:hover {
-    background-color: #eff6ff; /* blue-50 */
-    border-color: #3b82f6; /* blue-500 */
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-color: #667eea;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
 
-/* Glassmorphic Success/Info Box */
+/* Vibrant Success/Info Box */
 .glass-info {
-    background-color: rgba(254, 252, 232, 0.6); /* amber-50/60 */
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    border-left: 4px solid #f59e0b;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
 }
 
 .glass-success {
-    background-color: rgba(220, 252, 231, 0.6); /* green-100/60 */
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+    border-left: 4px solid #10b981;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+    animation: successPulse 2s ease infinite;
 }
 
-/* Drill Card Styles - Inherit glassmorphism base */
+@keyframes successPulse {
+    0%, 100% { box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2); }
+    50% { box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4); }
+}
+
+/* Vibrant Drill Card Styles */
 .drill-card {
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.3s ease-out, transform 0.3s ease-in-out, box-shadow 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.7);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: linear-gradient(to bottom, #ffffff, #fafafa);
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(240, 147, 251, 0.3)) 1;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .drill-card.hidden {
     visibility: hidden;
     opacity: 0;
-    position: absolute; /* Take it out of the flow to prevent empty space */
-    transform: scale(0.95);
+    position: absolute;
+    transform: scale(0.9);
 }
 
 .drill-card.highlight {
-    box-shadow: 0 0 0 3px #3b82f6; /* blue-500 */
+    background: linear-gradient(135deg, #fef3ff, #f5f3ff);
+    border-image: linear-gradient(135deg, #667eea, #764ba2) 1;
+    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
     transform: translateY(-4px) scale(1.02);
 }
 
 .drill-card.highlight:hover {
-    box-shadow: 0 0 0 3px #3b82f6, 0 25px 50px -12px rgb(0 0 0 / 0.25); /* Combines blue ring with shadow-2xl */
-    transform: translateY(-6px) scale(1.03); /* A slightly more pronounced effect */
+    box-shadow: 0 15px 50px rgba(102, 126, 234, 0.4), 0 0 40px rgba(240, 147, 251, 0.3);
+    transform: translateY(-8px) scale(1.03);
 }
 
 /* Screen Reader Only */
