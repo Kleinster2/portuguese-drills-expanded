@@ -269,7 +269,8 @@ function processAnswer(qid, answer) {
   if (isCorrect) {
     topic.correct++;
     // Visual Feedback (Subtle)
-    document.getElementById(`q-container-${qid}`).querySelector('.bg-white').classList.add('border-green-200');
+    const container = document.getElementById(`q-container-${qid}`).querySelector('.glass-panel');
+    if (container) container.classList.add('border-green-200');
   } else {
     topic.failures++;
     // Diagnostic Logic: Soft Fail -> DISABLED for Pure Diagnostic Mode
