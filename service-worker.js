@@ -1,7 +1,7 @@
 // Portuguese Drills - Service Worker
 // Version 1.0.0 - PWA Offline Support
 
-const CACHE_NAME = 'portuguese-drills-v6-linear';
+const CACHE_NAME = 'portuguese-drills-v7-notion';
 const OFFLINE_URL = '/offline.html';
 
 // Assets to cache on install
