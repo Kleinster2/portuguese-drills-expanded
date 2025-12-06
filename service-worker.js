@@ -1,7 +1,7 @@
 // Portuguese Drills - Service Worker
 // Version 1.0.0 - PWA Offline Support
 
-const CACHE_NAME = 'portuguese-drills-v5-fixed-sw';
+const CACHE_NAME = 'portuguese-drills-v6-linear';
 const OFFLINE_URL = '/offline.html';
 
 // Assets to cache on install
