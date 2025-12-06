@@ -37,7 +37,7 @@ async function loadQuestionBank() {
   try {
     const testFileMap = {
       'vocabulary': '/config/placement-test-questions-vocabulary-v1.0.json',
-      'grammar': '/config/placement-test-questions-v10.2-hybrid.json', // Using the latest refined bank
+      'grammar': '/config/placement-test-questions-v10.9-no-hints.json', // Using the latest refined bank
     };
 
     const fileName = testFileMap[testType] || testFileMap['grammar'];
