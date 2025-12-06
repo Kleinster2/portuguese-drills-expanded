@@ -1,125 +1,108 @@
 /**
  * Custom Styles for Portuguese Language Drills
- * V4.0 - Vibrant & Colorful
+ * V5.0 - Linear Design System
  */
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     scroll-behavior: smooth;
-    /* Vibrant Gradient Background */
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
-    background-size: 400% 400%;
-    animation: gradientShift 20s ease infinite;
+    /* Linear-style subtle gradient */
+    background: linear-gradient(180deg, #f7f8f9 0%, #fafbfc 100%);
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    25% { background-position: 50% 50%; }
-    50% { background-position: 100% 50%; }
-    75% { background-position: 50% 100%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Vibrant Card for modals */
+/* Linear-style modal container */
 .glassmorphic-card {
-    background: linear-gradient(to bottom, #ffffff, #fafafa);
-    border: 3px solid transparent;
-    background-clip: padding-box;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.5);
-    position: relative;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.02),
+                0px 1px 2px rgba(0, 0, 0, 0.04),
+                0px 2px 4px rgba(0, 0, 0, 0.04),
+                0px 4px 8px rgba(0, 0, 0, 0.04);
 }
 
-.glassmorphic-card::before {
-    content: '';
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    background: linear-gradient(135deg, #667eea, #764ba2, #f093fb, #4facfe);
-    border-radius: inherit;
-    z-index: -1;
-}
-
-/* Vibrant Panel (for JS-injected content) */
+/* Linear-style panel (for question cards) */
 .glass-panel {
-    background: white;
-    border: 3px solid transparent;
-    border-image: linear-gradient(135deg, #667eea, #764ba2, #f093fb) 1;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15), 0 0 20px rgba(102, 126, 234, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.04),
+                0px 2px 4px rgba(0, 0, 0, 0.04);
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-panel:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2), 0 0 30px rgba(102, 126, 234, 0.3);
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.06),
+                0px 4px 8px rgba(0, 0, 0, 0.06);
 }
 
-/* Vibrant Chip/Button */
+/* Linear-style chip/button */
 .glass-chip {
-    background: linear-gradient(135deg, #ffffff, #f5f5f5);
-    border: 2px solid #e0e0e0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.04);
+    transition: all 0.12s cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 500;
+    color: #1f2937;
 }
 
 .glass-chip:hover {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    border-color: #667eea;
+    background: #5e6ad2;
+    border-color: #5e6ad2;
     color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    box-shadow: 0px 2px 4px rgba(94, 106, 210, 0.2);
+    transform: translateY(-1px);
 }
 
-/* Vibrant Success/Info Box */
+/* Linear-style info/success boxes */
 .glass-info {
-    background: linear-gradient(135deg, #fef3c7, #fde68a);
-    border-left: 4px solid #f59e0b;
-    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+    background: #fef6e7;
+    border: 1px solid #f5d899;
+    border-left: 3px solid #f0b429;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.04);
 }
 
 .glass-success {
-    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
-    border-left: 4px solid #10b981;
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
-    animation: successPulse 2s ease infinite;
+    background: #e7f8f0;
+    border: 1px solid #9fe4c4;
+    border-left: 3px solid #30c785;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.04);
 }
 
-@keyframes successPulse {
-    0%, 100% { box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2); }
-    50% { box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4); }
-}
-
-/* Vibrant Drill Card Styles */
+/* Linear-style drill card */
 .drill-card {
     visibility: visible;
     opacity: 1;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    background: linear-gradient(to bottom, #ffffff, #fafafa);
-    border: 2px solid transparent;
-    border-image: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(240, 147, 251, 0.3)) 1;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.04),
+                0px 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .drill-card.hidden {
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    transform: scale(0.9);
+    transform: scale(0.98);
 }
 
 .drill-card.highlight {
-    background: linear-gradient(135deg, #fef3ff, #f5f3ff);
-    border-image: linear-gradient(135deg, #667eea, #764ba2) 1;
-    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
-    transform: translateY(-4px) scale(1.02);
+    background: #ffffff;
+    border-color: #5e6ad2;
+    box-shadow: 0px 0px 0px 1px #5e6ad2,
+                0px 2px 4px rgba(94, 106, 210, 0.1),
+                0px 4px 8px rgba(94, 106, 210, 0.1);
+    transform: translateY(-1px);
 }
 
 .drill-card.highlight:hover {
-    box-shadow: 0 15px 50px rgba(102, 126, 234, 0.4), 0 0 40px rgba(240, 147, 251, 0.3);
-    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0px 0px 0px 1px #5e6ad2,
+                0px 4px 8px rgba(94, 106, 210, 0.15),
+                0px 8px 16px rgba(94, 106, 210, 0.15);
+    transform: translateY(-2px);
 }
 
 /* Screen Reader Only */
