@@ -1,18 +1,19 @@
 /**
- * Placement Test Module - Diagnostic Mode (v3.0)
- * Goal: Detailed Granular Profiling (not just placement)
- * Logic: Topic-Based Adaptive Testing
- * 
+ * Diagnostic Test Module (v3.2)
+ * Goal: Complete Proficiency Mapping
+ * Logic: Full Diagnostic Mode (no gating)
+ *
  * Key Features:
- * 1. Topic Tracking: Tracks performance per grammar topic (e.g., "Preterite", "Ser/Estar")
- * 2. Soft Failures: If a topic fails (2 wrong), skip remaining questions in THAT topic, but continue the Phase.
- * 3. Phase Promotion: Must pass >70% of topics to unlock next Phase.
- * 4. Comprehensive Report: Generates a detailed skills matrix in the hash.
+ * 1. Topic Tracking: Tracks correct/wrong/skipped per grammar topic
+ * 2. Full Diagnostic: Tests ALL phases (A1→B2) for complete proficiency map
+ * 3. Skip Support: Students can indicate "not sure" for honest gap identification
+ * 4. Comprehensive Report: Raw data per topic in compressed hash
  */
 
-// Detect test type from URL parameter
+// Detect test type from URL parameters and user ID from hash (like simplifier)
 const urlParams = new URLSearchParams(window.location.search);
 const testType = urlParams.get('test') || 'grammar';
+const userId = window.location.hash ? window.location.hash.substring(1) : null; // User hash from URL fragment
 
 let questionBank = null;
 let currentQuestionIndex = 0;
@@ -25,10 +26,9 @@ let phaseQuestions = [];
 let phaseAnswers = [];
 let completedPhases = [];
 let testStopped = false;
+let testStartTime = null;
+let testSessionId = null;
 
-// Thresholds
-const TOPIC_FAILURE_LIMIT = 2; // 2 wrong answers kills a topic
-const PHASE_PASS_RATIO = 0.70; // Must pass 70% of topics to advance phase
 
 /**
  * Load question bank
@@ -36,8 +36,8 @@ const PHASE_PASS_RATIO = 0.70; // Must pass 70% of topics to advance phase
 async function loadQuestionBank() {
   try {
     const testFileMap = {
-      'vocabulary': '/config/placement-test-questions-vocabulary-v1.0.json',
-      'grammar': '/config/placement-test-questions-v10.9-no-hints.json', // Using the latest refined bank
+      'vocabulary': '/config/diagnostic-test-questions-vocabulary-v1.0.json',
+      'grammar': '/config/diagnostic-test-questions-v10.9-no-hints.json', // Using the latest refined bank
     };
 
     const fileName = testFileMap[testType] || testFileMap['grammar'];
@@ -58,7 +58,7 @@ async function loadQuestionBank() {
 /**
  * Start Diagnostic Test
  */
-async function startPlacementTest() {
+async function startDiagnosticTest() {
   const modal = document.getElementById('chat-modal');
   const messagesContainer = document.getElementById('chat-messages');
   const drillTitle = document.getElementById('chat-drill-title');
@@ -70,6 +70,8 @@ async function startPlacementTest() {
   topicState = {};
   completedPhases = [];
   testStopped = false;
+  testStartTime = Date.now();
+  testSessionId = Date.now() + '-' + Math.random().toString(36).substr(2, 9);
 
   drillTitle.textContent = "Portuguese Diagnostic Assessment";
   
@@ -109,7 +111,7 @@ function startPhase(phaseNum) {
   // 2. Initialize Topic State
   rawQuestions.forEach(q => {
     if (!topicState[q.unitName]) {
-      topicState[q.unitName] = { total: 0, correct: 0, failures: 0, active: true };
+      topicState[q.unitName] = { total: 0, correct: 0, wrong: 0, skipped: 0 };
     }
   });
 
@@ -142,20 +144,9 @@ function startPhase(phaseNum) {
 function displayQuestion(index) {
   if (testStopped) return;
 
-  // 1. Find the next valid question (skipping "dead" topics) -> DISABLED for Pure Diagnostic Mode
+  // Full diagnostic mode: ask all questions in the phase
   let validIndex = index;
   let question = phaseQuestions[validIndex];
-
-  // PURE DIAGNOSTIC MODE: Do not skip topics. Ask everything in the phase.
-  // while (question) {
-  //   const topic = topicState[question.unitName];
-  //   if (topic && topic.active) {
-  //     break; // Found a valid question
-  //   }
-  //   // Topic is dead (failed too many times), skip this question
-  //   validIndex++;
-  //   question = phaseQuestions[validIndex];
-  // }
 
   // If we ran out of questions in this phase
   if (!question) {
@@ -199,7 +190,7 @@ function renderProductionQuestion(question, index) {
       <div class="w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-xs font-bold text-slate-600">${index + 1}</div>
       <div class="glass-panel rounded-2xl p-5 shadow-md w-full max-w-2xl">
         <div class="flex justify-between mb-2">
-          <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">${phaseName} • ${question.unitName}</span>
+          <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">${phaseName}</span>
         </div>
         ${scenarioHTML}
         <p class="text-lg font-medium text-slate-800 mb-4">${question.en}</p>
@@ -252,13 +243,13 @@ window.submitDiagnosticAnswer = function(qid) {
 };
 
 window.skipDiagnosticQuestion = function(qid) {
-  processAnswer(qid, null); // null = skipped/wrong
+  processAnswer(qid, null, true); // null answer, skipped=true
 };
 
-function processAnswer(qid, answer) {
+function processAnswer(qid, answer, wasSkipped = false) {
   const question = phaseQuestions.find(q => q.id === qid);
   const isCorrect = answer === question.correct;
-  
+
   // Disable UI
   document.getElementById(`submit-${qid}`).disabled = true;
   document.getElementById(`chips-container-${qid}`).style.pointerEvents = 'none';
@@ -267,32 +258,31 @@ function processAnswer(qid, answer) {
   // Update State
   const topic = topicState[question.unitName];
   topic.total++;
-  
+
   if (isCorrect) {
     topic.correct++;
     // Visual Feedback (Subtle)
     const container = document.getElementById(`q-container-${qid}`).querySelector('.glass-panel');
     if (container) container.classList.add('border-green-200');
+  } else if (wasSkipped) {
+    topic.skipped++;
   } else {
-    topic.failures++;
-    // Diagnostic Logic: Soft Fail -> DISABLED for Pure Diagnostic Mode
-    if (topic.failures >= TOPIC_FAILURE_LIMIT) {
-      // topic.active = false; 
-      console.log(`🚫 Topic Failed: ${question.unitName}. (Continuing phase for full diagnostic)`);
-    }
+    topic.wrong++;
   }
 
-  // Record
+  // Record answer with result type: 'correct', 'wrong', or 'skipped'
+  const result = isCorrect ? 'correct' : (wasSkipped ? 'skipped' : 'wrong');
+
   phaseAnswers.push({
     q: qid,
     unit: question.unitName,
-    correct: isCorrect
+    result: result
   });
 
   testAnswers.push({
     q: qid,
     u: question.unitName,
-    c: isCorrect,
+    r: result,
     p: currentPhase
   });
 
@@ -301,88 +291,81 @@ function processAnswer(qid, answer) {
   displayQuestion(currentQuestionIndex + 1);
 }
 
-function evaluatePhaseCompletion() {
-  // Calculate Topic Pass Rate
-  let topicsPassed = 0;
-  let totalTopics = 0;
-
-  for (const [name, stats] of Object.entries(topicState)) {
-    if (stats.total > 0) { // Only count topics we actually tested
-      totalTopics++;
-      // Definition of "Pass Topic": >50% correct or didn't fail out
-      const rate = stats.correct / stats.total;
-      if (stats.active && rate >= 0.5) {
-        topicsPassed++;
-      }
-    }
+/**
+ * Log test progress to server (tracks partial completions and dropouts)
+ */
+async function logTestProgress(isComplete = false) {
+  try {
+    await fetch('/api/diagnostic-test/report', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        answers: testAnswers,
+        completedPhases: completedPhases,
+        startTime: testStartTime,
+        sessionId: testSessionId,
+        userId: userId,
+        isComplete: isComplete
+      })
+    });
+  } catch (error) {
+    console.error('Failed to log diagnostic test progress:', error);
+    // Silently fail - don't interrupt user experience
   }
+}
 
-  const phasePassRate = totalTopics === 0 ? 0 : topicsPassed / totalTopics;
-  console.log(`Phase ${currentPhase} Result: Passed ${topicsPassed}/${totalTopics} topics (${(phasePassRate*100).toFixed(1)}%)`);
+function evaluatePhaseCompletion() {
+  // Record phase results (no pass/fail - pure diagnostic)
+  console.log(`Phase ${currentPhase} complete: ${Object.keys(topicState).length} topics tested`);
 
   completedPhases.push({
     phase: currentPhase,
-    topics: topicState,
-    passRate: phasePassRate
+    topics: { ...topicState } // Clone to preserve state
   });
 
-  if (phasePassRate >= PHASE_PASS_RATIO && currentPhase < 4) {
-    // Promotion
-    showPhaseSuccess(currentPhase + 1);
+  // Log progress after each phase (tracks dropouts)
+  logTestProgress(false);
+
+  // Always continue to next phase (no gating)
+  if (currentPhase < 4) {
+    showPhaseTransition(currentPhase + 1);
   } else {
-    // End of Line
     finishTest();
   }
 }
 
-function showPhaseSuccess(nextPhase) {
+function showPhaseTransition(nextPhase) {
   const container = document.getElementById('chat-messages');
+  const phaseNames = { 1: 'A1', 2: 'A2', 3: 'B1', 4: 'B2' };
   container.insertAdjacentHTML('beforeend', `
-    <div class="my-4 p-4 glass-success text-green-800 rounded-xl text-center font-bold animate-pulse">
-      Phase Complete! Unlocking Level ${nextPhase}...
+    <div class="my-4 p-4 glass-info text-blue-800 rounded-xl text-center font-bold">
+      Phase complete. Moving to ${phaseNames[nextPhase]}...
     </div>
   `);
   container.scrollTop = container.scrollHeight;
-  setTimeout(() => startPhase(nextPhase), 1500);
+  setTimeout(() => startPhase(nextPhase), 1200);
 }
 
-function finishTest() {
+async function finishTest() {
   const container = document.getElementById('chat-messages');
-  const hash = generateDiagnosticHash();
-  
-  // Count total topics mastered
-  let mastered = 0;
-  let needsWork = 0;
-  completedPhases.forEach(p => {
-    for (const [t, s] of Object.entries(p.topics)) {
-      if (s.total > 0) {
-        if (s.active && (s.correct/s.total) >= 0.5) mastered++;
-        else needsWork++;
-      }
-    }
-  });
+
+  // Log final complete results to server (teacher monitors via D1 dashboard)
+  await logTestProgress(true);
+
+  // Generate a simple hash for the student to "share" (maintains UX illusion)
+  const hash = generateResultsCode();
 
   const html = `
-    <div class="mt-8 bg-slate-900/90 backdrop-blur-md text-white p-8 rounded-3xl shadow-2xl">
-      <h2 class="text-3xl font-bold mb-4">Diagnostic Complete 📊</h2>
-      <div class="grid grid-cols-2 gap-4 mb-6">
-        <div class="bg-slate-800 p-4 rounded-xl">
-          <div class="text-2xl font-bold text-green-400">${mastered}</div>
-          <div class="text-slate-400 text-sm">Topics Mastered</div>
-        </div>
-        <div class="bg-slate-800 p-4 rounded-xl">
-          <div class="text-2xl font-bold text-orange-400">${needsWork}</div>
-          <div class="text-slate-400 text-sm">Focus Areas</div>
-        </div>
+    <div class="mt-8 bg-slate-900/90 backdrop-blur-md text-white p-8 rounded-3xl shadow-2xl text-center">
+      <h2 class="text-3xl font-bold mb-4">Diagnostic Complete</h2>
+      <p class="text-slate-300 mb-6">Share this code with your instructor:</p>
+
+      <div class="bg-slate-800 rounded-xl p-4 mb-4">
+        <code id="results-code" class="text-blue-400 font-mono text-sm break-all select-all">${hash}</code>
       </div>
-      
-      <div class="glass-panel text-slate-900 p-4 rounded-xl mb-4">
-        <p class="font-bold text-sm mb-2 uppercase tracking-wide text-slate-500">Instructor Code</p>
-        <code id="hash-code" class="block p-3 bg-slate-100 rounded text-blue-600 font-mono break-all select-all">${hash}</code>
-      </div>
-      
-      <button onclick="copyDiagnosticHash()" class="w-full py-3 bg-blue-600 hover:bg-blue-500 rounded-xl font-bold transition">
-        Copy Results
+
+      <button onclick="copyResultsCode()" class="px-6 py-3 bg-blue-600 hover:bg-blue-500 rounded-xl font-bold transition">
+        Copy Code
       </button>
     </div>
   `;
@@ -390,25 +373,29 @@ function finishTest() {
   container.scrollTop = container.scrollHeight;
 }
 
-function generateDiagnosticHash() {
-  const data = {
-    v: "3.0-diag",
-    date: new Date().toISOString().split('T')[0],
-    phases: completedPhases
-  };
-  return "PT-DIAG-" + LZString.compressToBase64(JSON.stringify(data));
+function generateResultsCode() {
+  // Simple hash based on session - teacher uses D1 for real data
+  const sessionPart = testSessionId ? testSessionId.split('-')[1] || testSessionId.slice(-8) : Date.now().toString(36);
+  return 'PT-' + sessionPart.toUpperCase();
 }
 
-window.copyDiagnosticHash = function() {
-  const code = document.getElementById('hash-code').innerText;
+window.copyResultsCode = function() {
+  const code = document.getElementById('results-code').innerText;
   navigator.clipboard.writeText(code);
-  alert("Copied to clipboard!");
+  alert('Code copied!');
 };
 
-// Utilities
+// Utilities - Fisher-Yates shuffle (unbiased)
 function shuffleArray(array) {
-  return array.sort(() => Math.random() - 0.5);
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
 }
 
-window.startPlacementTest = startPlacementTest;
-if (typeof module !== 'undefined') module.exports = { startPlacementTest };
+window.startDiagnosticTest = startDiagnosticTest;
+// Keep legacy name for backwards compatibility during transition
+window.startPlacementTest = startDiagnosticTest;
+if (typeof module !== 'undefined') module.exports = { startDiagnosticTest };
