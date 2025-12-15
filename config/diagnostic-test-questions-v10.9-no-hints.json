@@ -1094,7 +1094,7 @@
     {
       "id": 94,
       "unit": 33,
-      "unitName": "Possessive Adjectives - Meu/Minha",
+      "unitName": "Possessive Adjectives",
       "phase": 2,
       "type": "contextualizedProduction",
       "en": "My father is a lawyer",
@@ -1116,7 +1116,7 @@
     {
       "id": 95,
       "unit": 33,
-      "unitName": "Possessive Adjectives - Meu/Minha",
+      "unitName": "Possessive Adjectives",
       "phase": 2,
       "type": "contextualizedProduction",
       "en": "My friends live in São Paulo",
@@ -1137,7 +1137,7 @@
     {
       "id": 96,
       "unit": 34,
-      "unitName": "Possessive Adjectives - Seu/Sua",
+      "unitName": "Possessive Adjectives",
       "phase": 2,
       "type": "contextualizedProduction",
       "en": "Your phone is on the table",
@@ -1159,7 +1159,7 @@
     {
       "id": 97,
       "unit": 34,
-      "unitName": "Possessive Adjectives - Seu/Sua",
+      "unitName": "Possessive Adjectives",
       "phase": 2,
       "type": "contextualizedProduction",
       "en": "Your keys are in the bag",
@@ -1180,7 +1180,7 @@
     {
       "id": 98,
       "unit": 35,
-      "unitName": "Possessive Adjectives - Nosso/Nossa",
+      "unitName": "Possessive Adjectives",
       "phase": 2,
       "type": "contextualizedProduction",
       "en": "Our friend lives here",
@@ -1202,7 +1202,7 @@
     {
       "id": 99,
       "unit": 35,
-      "unitName": "Possessive Adjectives - Nosso/Nossa",
+      "unitName": "Possessive Adjectives",
       "phase": 2,
       "type": "contextualizedProduction",
       "en": "Our questions are difficult",
@@ -3335,7 +3335,7 @@
     {
       "id": 304,
       "unit": 65,
-      "unitName": "Relative Pronoun - Que",
+      "unitName": "Relative Pronouns",
       "phase": 3,
       "type": "contextualizedProduction",
       "en": "The book that I bought is interesting",
@@ -3355,7 +3355,7 @@
     {
       "id": 305,
       "unit": 65,
-      "unitName": "Relative Pronoun - Que",
+      "unitName": "Relative Pronouns",
       "phase": 3,
       "type": "contextualizedProduction",
       "en": "The woman that works here is my aunt",
@@ -3375,7 +3375,7 @@
     {
       "id": 306,
       "unit": 66,
-      "unitName": "Relative Pronoun - Onde",
+      "unitName": "Relative Pronouns",
       "phase": 3,
       "type": "contextualizedProduction",
       "en": "The city where I was born is small",
@@ -3395,7 +3395,7 @@
     {
       "id": 307,
       "unit": 65,
-      "unitName": "Relative Pronoun - Que",
+      "unitName": "Relative Pronouns",
       "phase": 3,
       "type": "contextualizedProduction",
       "en": "The person who called is my brother",
@@ -3415,7 +3415,7 @@
     {
       "id": 308,
       "unit": 69,
-      "unitName": "Relative Pronoun - O que",
+      "unitName": "Relative Pronouns",
       "phase": 3,
       "type": "contextualizedProduction",
       "en": "I don't understand what you said",
@@ -7323,6 +7323,303 @@
       ],
       "correct": "geralmente",
       "scenario": "Describing your typical weekend."
+    },
+    {
+      "id": 518,
+      "unit": 63,
+      "unitName": "Comparisons of Equality",
+      "phase": 3,
+      "type": "contextualizedProduction",
+      "en": "She is as intelligent as him",
+      "question": "Complete the sentence:",
+      "template": "Ela é __ inteligente quanto ele",
+      "chips": [
+        "tão",
+        "mais",
+        "menos",
+        "muito",
+        "tanto"
+      ],
+      "correct": "tão",
+      "scenario": "Comparing two friends."
+    },
+    {
+      "id": 519,
+      "unit": 63,
+      "unitName": "Comparisons of Equality",
+      "phase": 3,
+      "type": "contextualizedProduction",
+      "en": "I work as much as you",
+      "question": "Complete the sentence:",
+      "template": "Eu trabalho __ quanto você",
+      "chips": [
+        "tanto",
+        "tão",
+        "mais",
+        "menos",
+        "muito"
+      ],
+      "correct": "tanto",
+      "scenario": "Comparing workloads."
+    },
+    {
+      "id": 520,
+      "unit": 63,
+      "unitName": "Comparisons of Equality",
+      "phase": 3,
+      "type": "contextualizedProduction",
+      "en": "He has as many books as her",
+      "question": "Complete the sentence:",
+      "template": "Ele tem __ livros quanto ela",
+      "chips": [
+        "tantos",
+        "tão",
+        "tanto",
+        "muitos",
+        "mais"
+      ],
+      "correct": "tantos",
+      "scenario": "Comparing siblings."
+    },
+    {
+      "id": 521,
+      "unit": 21,
+      "unitName": "Verb Precisar de",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "I need your help",
+      "question": "Complete the sentence:",
+      "template": "Eu preciso __ sua ajuda",
+      "chips": [
+        "da",
+        "de",
+        "do",
+        "na",
+        "para",
+        "com"
+      ],
+      "correct": "da",
+      "scenario": "You're asking a colleague for assistance."
+    },
+    {
+      "id": 522,
+      "unit": 21,
+      "unitName": "Verb Precisar de",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "I need the keys",
+      "question": "Complete the sentence:",
+      "template": "Eu preciso __ chaves",
+      "chips": [
+        "das",
+        "dos",
+        "de",
+        "nas",
+        "para",
+        "com"
+      ],
+      "correct": "das",
+      "scenario": "You're about to leave and can't find them."
+    },
+    {
+      "id": 523,
+      "unit": 86,
+      "unitName": "Colloquial Brazilian Portuguese",
+      "phase": 4,
+      "type": "contextualizedProduction",
+      "en": "I'm busy",
+      "question": "Complete the sentence:",
+      "template": "__ ocupado",
+      "chips": [
+        "Tô",
+        "Estou",
+        "Sou",
+        "Tá",
+        "Eu",
+        "Fico"
+      ],
+      "correct": "Tô",
+      "scenario": "Texting a friend who wants to hang out."
+    },
+    {
+      "id": 524,
+      "unit": 86,
+      "unitName": "Colloquial Brazilian Portuguese",
+      "phase": 4,
+      "type": "contextualizedProduction",
+      "en": "I'm going to work",
+      "question": "Complete the sentence:",
+      "template": "Vou __ trabalhar",
+      "chips": [
+        "pra",
+        "para",
+        "por",
+        "de",
+        "a",
+        "em"
+      ],
+      "correct": "pra",
+      "scenario": "Casual conversation about your morning."
+    },
+    {
+      "id": 525,
+      "unit": 86,
+      "unitName": "Colloquial Brazilian Portuguese",
+      "phase": 4,
+      "type": "contextualizedProduction",
+      "en": "It's hot, isn't it?",
+      "question": "Complete the sentence:",
+      "template": "Tá quente, __?",
+      "chips": [
+        "né",
+        "não é",
+        "sim",
+        "não",
+        "certo",
+        "verdade"
+      ],
+      "correct": "né",
+      "scenario": "Making small talk about the weather."
+    },
+    {
+      "id": 526,
+      "unit": 89,
+      "unitName": "Advanced Por/Para & Idioms",
+      "phase": 4,
+      "type": "contextualizedProduction",
+      "en": "That's why I didn't go",
+      "question": "Complete the sentence:",
+      "template": "__ eu não fui",
+      "chips": [
+        "Por isso",
+        "Para isso",
+        "Porque",
+        "Por que",
+        "Assim",
+        "Então"
+      ],
+      "correct": "Por isso",
+      "scenario": "Explaining why you missed an event."
+    },
+    {
+      "id": 527,
+      "unit": 89,
+      "unitName": "Advanced Por/Para & Idioms",
+      "phase": 4,
+      "type": "contextualizedProduction",
+      "en": "Do you by chance know her?",
+      "question": "Complete the sentence:",
+      "template": "Você __ conhece ela?",
+      "chips": [
+        "por acaso",
+        "para",
+        "por",
+        "acaso",
+        "talvez",
+        "ainda"
+      ],
+      "correct": "por acaso",
+      "scenario": "Asking about a mutual acquaintance."
+    },
+    {
+      "id": 528,
+      "unit": 89,
+      "unitName": "Advanced Por/Para & Idioms",
+      "phase": 4,
+      "type": "contextualizedProduction",
+      "en": "For the time being, everything is fine",
+      "question": "Complete the sentence:",
+      "template": "__, tudo está bem",
+      "chips": [
+        "Por enquanto",
+        "Para sempre",
+        "Até agora",
+        "Enquanto",
+        "Desde já",
+        "Ainda"
+      ],
+      "correct": "Por enquanto",
+      "scenario": "Updating someone on a project status."
+    },
+    {
+      "id": 529,
+      "unit": 29,
+      "unitName": "Future with Ir + Infinitive",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "We are going to travel next month",
+      "question": "Complete the sentence:",
+      "template": "Nós __ viajar no próximo mês",
+      "chips": [
+        "vamos",
+        "vou",
+        "vai",
+        "vão",
+        "ia",
+        "foram"
+      ],
+      "correct": "vamos",
+      "scenario": "Planning a trip with friends."
+    },
+    {
+      "id": 530,
+      "unit": 29,
+      "unitName": "Future with Ir + Infinitive",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "She is going to call you later",
+      "question": "Complete the sentence:",
+      "template": "Ela __ ligar para você depois",
+      "chips": [
+        "vai",
+        "vou",
+        "vamos",
+        "vão",
+        "fui",
+        "foram"
+      ],
+      "correct": "vai",
+      "scenario": "Passing along a message."
+    },
+    {
+      "id": 531,
+      "unit": 48,
+      "unitName": "Superlatives",
+      "phase": 3,
+      "type": "contextualizedProduction",
+      "en": "She is the smartest in the group",
+      "question": "Complete the sentence:",
+      "template": "Ela é __ inteligente do grupo",
+      "chips": [
+        "a mais",
+        "o mais",
+        "mais",
+        "a menos",
+        "muito",
+        "tão"
+      ],
+      "correct": "a mais",
+      "scenario": "Praising a classmate's achievements."
+    },
+    {
+      "id": 532,
+      "unit": 48,
+      "unitName": "Superlatives",
+      "phase": 3,
+      "type": "contextualizedProduction",
+      "en": "This is the best restaurant in the city",
+      "question": "Complete the sentence:",
+      "template": "Este é o __ restaurante da cidade",
+      "chips": [
+        "melhor",
+        "mais bom",
+        "maior",
+        "menor",
+        "pior",
+        "bom"
+      ],
+      "correct": "melhor",
+      "scenario": "Recommending a place to eat."
     }
   ]
 }
