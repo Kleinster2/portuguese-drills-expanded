@@ -287,23 +287,19 @@
       "unitName": "Verb Estar",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I am in Brazil",
+      "en": "I am tired",
       "question": "Complete the sentence:",
-      "template": "Eu __ no Brasil",
+      "template": "Eu __ cansado",
       "chips": [
-        "seja",
         "sou",
         "estou",
-        "moro",
         "fico",
         "era",
-        "estaria",
         "fui",
-        "estava",
-        "vou"
+        "seja"
       ],
       "correct": "estou",
-      "scenario": "You're giving your location to a delivery driver."
+      "scenario": "Your coworker asks how you're doing this Monday morning."
     },
     {
       "id": 14,
@@ -2772,23 +2768,19 @@
       "unitName": "Present Subjunctive - Irregular Verbs",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I'm worried, but I hope you are here",
+      "en": "I hope you are well",
       "question": "Complete the sentence:",
-      "template": "Espero que você __ aqui",
+      "template": "Espero que você __ bem",
       "chips": [
-        "estava",
-        "estaria",
-        "esteve",
-        "estivesse",
         "está",
         "esteja",
-        "estando",
-        "estar",
-        "estará",
-        "estive"
+        "esteve",
+        "estava",
+        "estiver",
+        "estar"
       ],
       "correct": "esteja",
-      "scenario": "Hoping they are here at the location."
+      "scenario": "Writing to a friend you haven't heard from in a while."
     },
     {
       "id": 282,
