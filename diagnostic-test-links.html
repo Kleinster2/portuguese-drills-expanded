@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate Diagnostic Test Links</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen p-8">
+  <div class="max-w-4xl mx-auto">
+    <div class="bg-white rounded-lg shadow-md p-8">
+      <h1 class="text-3xl font-bold text-gray-900 mb-6">Generate Diagnostic Test Links</h1>
+
+      <div class="mb-6">
+        <label class="block text-sm font-medium text-gray-700 mb-2">
+          Number of links to generate:
+        </label>
+        <input
+          type="number"
+          id="numLinks"
+          value="5"
+          min="1"
+          max="100"
+          class="w-32 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+        >
+        <button
+          onclick="generateLinks()"
+          class="ml-4 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 font-medium"
+        >
+          Generate Links
+        </button>
+      </div>
+
+      <div id="linksContainer" class="space-y-2"></div>
+
+      <div class="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+        <h2 class="font-bold text-blue-900 mb-2">How to Use:</h2>
+        <ol class="list-decimal list-inside text-sm text-blue-800 space-y-1">
+          <li>Click "Generate Links" to create unique test URLs</li>
+          <li>Each link has a unique ID in the hash (e.g., <code class="bg-blue-100 px-1 rounded">#abc123</code>)</li>
+          <li>Send one link to each student/user</li>
+          <li>View results at: <a href="/api/diagnostic-test/report" class="underline font-medium">/api/diagnostic-test/report</a></li>
+          <li>Match results by the ID shown in the "User ID" column</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function generateHash() {
+      return Date.now().toString(36) + Math.random().toString(36).substr(2, 9);
+    }
+
+    function generateLinks() {
+      const num = parseInt(document.getElementById('numLinks').value);
+      const container = document.getElementById('linksContainer');
+      container.innerHTML = '';
+
+      const baseUrl = window.location.origin + '/diagnostic-test';
+
+      for (let i = 0; i < num; i++) {
+        const hash = generateHash();
+        const url = `${baseUrl}#${hash}`;
+
+        const div = document.createElement('div');
+        div.className = 'flex items-center gap-2 p-3 bg-gray-50 rounded-md border border-gray-200';
+        div.innerHTML = `
+          <span class="text-xs font-mono text-gray-600 w-20">ID: ${hash.substr(0, 8)}...</span>
+          <input
+            type="text"
+            value="${url}"
+            readonly
+            class="flex-1 px-3 py-2 text-sm bg-white border border-gray-300 rounded font-mono"
+            onclick="this.select()"
+          >
+          <button
+            onclick="copyToClipboard('${url}')"
+            class="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-800 text-sm font-medium"
+          >
+            Copy
+          </button>
+        `;
+        container.appendChild(div);
+      }
+    }
+
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        // Visual feedback
+        const btn = event.target;
+        const originalText = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.classList.add('bg-green-600');
+        btn.classList.remove('bg-gray-700');
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.classList.remove('bg-green-600');
+          btn.classList.add('bg-gray-700');
+        }, 2000);
+      });
+    }
+
+    // Generate 5 links on page load
+    window.addEventListener('load', () => generateLinks());
+  </script>
+</body>
+</html>

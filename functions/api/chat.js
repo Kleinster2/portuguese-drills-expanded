@@ -457,11 +457,11 @@ The goal is to build confidence with early successes while gradually challenging
 
 Remember: Variety and randomization are KEY to maintaining user interest and preventing boredom. Every session should feel fresh and different.`;
 
-  // Don't add randomization suffix to placement test or simplifiers
-  // - Placement test needs to end at 50 questions
+  // Don't add randomization suffix to diagnostic test or simplifiers
+  // - Diagnostic test needs to end at 50 questions
   // - Simplifiers are one-shot text transformations, not drill exercises
   const excludeFromRandomization = [
-    'placement-test',
+    'diagnostic-test',
     'a1-simplifier',
     'a2-simplifier',
     'b1-simplifier',

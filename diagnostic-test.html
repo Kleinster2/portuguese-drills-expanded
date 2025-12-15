@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portuguese Placement Test</title>
+    <title>Portuguese Diagnostic Test</title>
     <meta name="theme-color" content="#0ea5e9">
     <!-- Favicons -->
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -22,7 +22,7 @@
 </head>
 <body class="text-slate-800">
 
-    <!-- Chat Modal (placement test) -->
+    <!-- Chat Modal (diagnostic test) -->
     <div id="chat-modal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
         <div class="glassmorphic-card rounded-2xl shadow-2xl w-full max-w-4xl h-[90vh] flex flex-col m-4">
             <!-- Header -->
@@ -34,7 +34,7 @@
                         </svg>
                     </div>
                     <div>
-                        <h3 id="chat-drill-title" class="font-bold text-lg">Portuguese Placement Test</h3>
+                        <h3 id="chat-drill-title" class="font-bold text-lg">Portuguese Diagnostic Test</h3>
                         <p class="text-sm text-white/80" id="chat-drill-subtitle">Loading...</p>
                     </div>
                 </div>
@@ -71,18 +71,18 @@
     <!-- Scripts -->
     <script src="/js/dependencies.js?v=1733420000000"></script>
 
-    <!-- LZ-String for placement test hash compression -->
+    <!-- LZ-String for diagnostic test hash compression -->
     <script src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"></script>
-    <script src="/js/placementTest.js?v=1733420000000"></script>
+    <script src="/js/diagnosticTest.js?v=1733420000000"></script>
 
-    <!-- Auto-start placement test -->
+    <!-- Auto-start diagnostic test -->
     <script>
       window.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
-          if (typeof startPlacementTest === 'function') {
-            startPlacementTest();
+          if (typeof startDiagnosticTest === 'function') {
+            startDiagnosticTest();
           } else {
-            console.error('startPlacementTest function not found');
+            console.error('startDiagnosticTest function not found');
           }
         }, 100);
       });

@@ -764,7 +764,7 @@ async function openDrillChat(drillId) {
     case 'por-vs-para':
       drillTitle.textContent = 'Por vs Para';
       break;
-    case 'placement-test':
+    case 'diagnostic-test':
       drillTitle.textContent = 'Portuguese Diagnostic Test';
       break;
     default:

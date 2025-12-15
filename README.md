@@ -108,17 +108,31 @@ Designed to be dialect-neutral (PT-PT and PT-BR) with enhanced learning experien
 - **Responsive Design**: Works seamlessly on desktop and mobile devices
 - **Clean Header**: "No drills active" / Single drill name / Multiple drills separated by bullets
 
-### 🎯 Placement Test
+### 🎯 Diagnostic Test
 - **Comprehensive Evaluation**: 25-question test covering A1 to B2 levels
-- **Instant Results**: Detailed proficiency report with personalized recommendations
+- **Instant Results**: Detailed proficiency report identifying strengths and weaknesses
 - **Structured Assessment**: Progressive difficulty testing across 5 sections
-- **Drill Recommendations**: Get specific drill suggestions based on your level
+- **Drill Recommendations**: Get specific drill suggestions to address gaps
+- **For Teachers**: Generate unique test links for students, view results dashboard at `/api/diagnostic-test/report`
+- **Printable Handouts**: Print-friendly versions for paper-based testing (A1-A2 and advanced)
+
+### 📝 Text Simplifier
+- **Any Text → Portuguese**: Paste text in any language, get simplified Portuguese
+- **CEFR Level Selection**: Choose A1, A2, B1, or B2 complexity
+- **Hover Translations**: Every word/phrase shows English translation on hover (3000+ word dictionary with Claude API fallback for unknown words)
+- **Level-Appropriate Grammar**: A1 uses present/simple past only; higher levels add more tenses
+- **Mobile Friendly**: Tap words on mobile to see translations
 
 ### 📚 Extensive Drill Library
 - **48 Drills Available**: Covering A1 to B2+ levels
 - **Filterable by Topic**: Verbs, Grammar, Tenses, Pronunciation, Conversation
 - **Search Functionality**: Find specific drills by keyword
 - **Learning Paths**: Structured progression from A1 to B2
+
+### 📱 Progressive Web App (PWA)
+- **Installable**: Add to home screen on mobile or desktop
+- **Offline Fallback**: Graceful offline page when connection is lost
+- **Fast Loading**: Service worker caches static assets
 
 ## Recent Updates
 
@@ -134,7 +148,7 @@ Designed to be dialect-neutral (PT-PT and PT-BR) with enhanced learning experien
 
 ### Latest Enhancements (December 2024)
 
-**Placement Test - NEW:**
+**Diagnostic Test - NEW:**
 - ✅ **Comprehensive 25-question evaluation** - Tests A1 through B2 proficiency
 - ✅ **Structured in 5 sections** - A1 Basics, A1-A2 Foundation, A2 Intermediate, B1 Advanced, B2 Proficient
 - ✅ **Instant detailed report** - Performance breakdown by level with strengths and weaknesses
@@ -318,13 +332,21 @@ Set in Cloudflare Pages → Settings → Environment Variables:
 ### Project Structure
 ```
 ├── index.html                      # Main application file (drills)
+├── simplifier.html                 # Text Simplifier tool
+├── diagnostic-test.html            # Interactive diagnostic test
+├── diagnostic-test-links.html      # Generate unique test URLs (for teachers)
+├── diagnostic-test-handout.html    # Printable test (A1-A2)
+├── diagnostic-test-handout-advanced.html  # Printable test (B1-B2)
 ├── syllabus.html                   # Pronunciation lessons syllabus
+├── manifest.json                   # PWA manifest
+├── service-worker.js               # PWA service worker for caching
+├── offline.html                    # Offline fallback page
 ├── lessons/
-│   ├── unit-1.html                # Unit 1: Identity Statements (Eu sou)
-│   └── unit-2.html                # Unit 2: Location (Morar)
+│   └── unit-1.html                # Unit 1: Identity Statements (Eu sou)
 ├── config/
 │   ├── prompts/                   # Source JSON files for prompts (edit here!)
-│   └── placement-test-questions-grammar-v1.0.json
+│   ├── dictionary.json            # 3000+ word Portuguese-English dictionary
+│   └── diagnostic-test-questions-v10.9-no-hints.json
 ├── utils/
 │   ├── promptManager.js           # Loads prompts from generated data
 │   ├── promptData.generated.js    # Auto-generated (run npm run build)

@@ -1,0 +1,454 @@
+{
+  "metadata": {
+    "description": "Dr. Portuguese recommended questions based on SLA error analysis",
+    "date": "2025-12-11",
+    "categories": [
+      "object_pronouns",
+      "gender_agreement",
+      "ser_estar",
+      "saber_conhecer"
+    ]
+  },
+  "questions": [
+    {
+      "id": 322,
+      "unit": 50,
+      "unitName": "Direct Object Pronouns",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I see her every day",
+      "question": "Complete the sentence:",
+      "template": "Eu __ vejo todo dia",
+      "chips": [
+        "ela",
+        "a",
+        "lhe",
+        "the",
+        "se",
+        "o"
+      ],
+      "correct": "a",
+      "scenario": "You're telling a colleague about a neighbor you often run into."
+    },
+    {
+      "id": 323,
+      "unit": 50,
+      "unitName": "Direct Object Pronouns",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I bought it yesterday",
+      "question": "Complete the sentence:",
+      "template": "Eu __ comprei ontem",
+      "chips": [
+        "ele",
+        "isso",
+        "se",
+        "lhe",
+        "o",
+        "lo"
+      ],
+      "correct": "o",
+      "scenario": "A friend asks about the new phone you're holding."
+    },
+    {
+      "id": 324,
+      "unit": 51,
+      "unitName": "Indirect Object Pronouns",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I gave him the book",
+      "question": "Complete the sentence:",
+      "template": "Eu __ dei o livro",
+      "chips": [
+        "se",
+        "ele",
+        "lo",
+        "lhe",
+        "a",
+        "o"
+      ],
+      "correct": "lhe",
+      "scenario": "You're explaining what you did with the book your friend was looking for."
+    },
+    {
+      "id": 325,
+      "unit": 51,
+      "unitName": "Indirect Object Pronouns",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "She gave the book to me",
+      "question": "Complete the sentence:",
+      "template": "Ela deu o livro para __",
+      "chips": [
+        "minha",
+        "meu",
+        "mim",
+        "me",
+        "mi",
+        "eu"
+      ],
+      "correct": "mim",
+      "scenario": "You're telling someone who received the gift."
+    },
+    {
+      "id": 326,
+      "unit": 50,
+      "unitName": "Direct Object Pronouns",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "Do you know them?",
+      "question": "Complete the sentence:",
+      "template": "Você __ conhece?",
+      "chips": [
+        "eles",
+        "as",
+        "se",
+        "lhes",
+        "los",
+        "os"
+      ],
+      "correct": "os",
+      "scenario": "You're asking if your friend knows the guys who just walked in."
+    },
+    {
+      "id": 327,
+      "unit": 52,
+      "unitName": "Pronoun Placement",
+      "phase": 3,
+      "type": "contextualizedProduction",
+      "en": "I will call you tomorrow",
+      "question": "Complete the sentence:",
+      "template": "Eu __ ligo amanhã",
+      "chips": [
+        "te",
+        "lhe",
+        "tu",
+        "se",
+        "você",
+        "ti"
+      ],
+      "correct": "te",
+      "scenario": "You're ending a phone call with a friend."
+    },
+    {
+      "id": 328,
+      "unit": 52,
+      "unitName": "Pronoun Placement",
+      "phase": 3,
+      "type": "contextualizedProduction",
+      "en": "He helped us a lot",
+      "question": "Complete the sentence:",
+      "template": "Ele __ ajudou muito",
+      "chips": [
+        "lhe",
+        "lhes",
+        "nós",
+        "nos",
+        "se",
+        "a gente"
+      ],
+      "correct": "nos",
+      "scenario": "You're thanking someone who assisted your group."
+    },
+    {
+      "id": 329,
+      "unit": 50,
+      "unitName": "Direct Object Pronouns",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I love you",
+      "question": "Complete the sentence:",
+      "template": "Eu __ amo",
+      "chips": [
+        "você",
+        "tu",
+        "se",
+        "ti",
+        "lhe",
+        "te"
+      ],
+      "correct": "te",
+      "scenario": "You're expressing your feelings to your partner."
+    },
+    {
+      "id": 331,
+      "unit": 16,
+      "unitName": "Gender Agreement - Nouns",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "The car is new",
+      "question": "Complete the sentence:",
+      "template": "__ carro é novo",
+      "chips": [
+        "Os",
+        "O",
+        "Uma",
+        "Um",
+        "A",
+        "As"
+      ],
+      "correct": "O",
+      "scenario": "You're showing off your recently purchased vehicle."
+    },
+    {
+      "id": 338,
+      "unit": 11,
+      "unitName": "Ser - Permanent Characteristics",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "My father is a doctor",
+      "question": "Complete the sentence:",
+      "template": "Meu pai __ médico",
+      "chips": [
+        "foi",
+        "estar",
+        "ser",
+        "é",
+        "era",
+        "está"
+      ],
+      "correct": "é",
+      "scenario": "Someone asks what your father does for a living."
+    },
+    {
+      "id": 339,
+      "unit": 12,
+      "unitName": "Estar - Temporary States",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "The soup is hot",
+      "question": "Complete the sentence:",
+      "template": "A sopa __ quente",
+      "chips": [
+        "está",
+        "esteve",
+        "ser",
+        "era",
+        "é",
+        "estar"
+      ],
+      "correct": "está",
+      "scenario": "You're warning someone before they taste the soup."
+    },
+    {
+      "id": 340,
+      "unit": 11,
+      "unitName": "Ser - Origin",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "This wine is from Portugal",
+      "question": "Complete the sentence:",
+      "template": "Este vinho __ de Portugal",
+      "chips": [
+        "esteve",
+        "era",
+        "fica",
+        "foi",
+        "é",
+        "está"
+      ],
+      "correct": "é",
+      "scenario": "You're explaining to guests where the wine came from."
+    },
+    {
+      "id": 341,
+      "unit": 12,
+      "unitName": "Estar - Location",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "The keys are on the table",
+      "question": "Complete the sentence:",
+      "template": "As chaves __ na mesa",
+      "chips": [
+        "foram",
+        "estar",
+        "são",
+        "estão",
+        "têm",
+        "eram"
+      ],
+      "correct": "estão",
+      "scenario": "Someone is looking for the car keys."
+    },
+    {
+      "id": 342,
+      "unit": 11,
+      "unitName": "Ser - Characteristics",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "She is intelligent",
+      "question": "Complete the sentence:",
+      "template": "Ela __ inteligente",
+      "chips": [
+        "foi",
+        "esteve",
+        "será",
+        "era",
+        "está",
+        "é"
+      ],
+      "correct": "é",
+      "scenario": "You're recommending someone for a job."
+    },
+    {
+      "id": 343,
+      "unit": 12,
+      "unitName": "Estar - Emotions",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I am happy today",
+      "question": "Complete the sentence:",
+      "template": "Eu __ feliz hoje",
+      "chips": [
+        "estarei",
+        "fui",
+        "estou",
+        "sou",
+        "era",
+        "estava"
+      ],
+      "correct": "estou",
+      "scenario": "A friend asks how you're feeling after good news."
+    },
+    {
+      "id": 344,
+      "unit": 11,
+      "unitName": "Ser - Time/Date",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "Today is Monday",
+      "question": "Complete the sentence:",
+      "template": "Hoje __ segunda-feira",
+      "chips": [
+        "será",
+        "é",
+        "era",
+        "esteve",
+        "está",
+        "foi"
+      ],
+      "correct": "é",
+      "scenario": "You're confirming the day of the week."
+    },
+    {
+      "id": 345,
+      "unit": 12,
+      "unitName": "Estar - Progressive Action",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "He is working now",
+      "question": "Complete the sentence:",
+      "template": "Ele __ trabalhando agora",
+      "chips": [
+        "está",
+        "fica",
+        "foi",
+        "é",
+        "era",
+        "vai"
+      ],
+      "correct": "está",
+      "scenario": "Someone asks why your brother can't come to the phone."
+    },
+    {
+      "id": 346,
+      "unit": 100,
+      "unitName": "Saber vs Conhecer",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I know how to swim",
+      "question": "Complete the sentence:",
+      "template": "Eu __ nadar",
+      "chips": [
+        "sei",
+        "sabe",
+        "conhecemos",
+        "conhece",
+        "sabemos",
+        "conheço"
+      ],
+      "correct": "sei",
+      "scenario": "Someone asks if you can join them at the pool."
+    },
+    {
+      "id": 347,
+      "unit": 100,
+      "unitName": "Saber vs Conhecer",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "Do you know Maria?",
+      "question": "Complete the sentence:",
+      "template": "Você __ a Maria?",
+      "chips": [
+        "sabe",
+        "conhece",
+        "conhecer",
+        "sabemos",
+        "saber",
+        "conhecemos"
+      ],
+      "correct": "conhece",
+      "scenario": "You're asking if your friend has met your coworker."
+    },
+    {
+      "id": 348,
+      "unit": 100,
+      "unitName": "Saber vs Conhecer",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I know the answer",
+      "question": "Complete the sentence:",
+      "template": "Eu __ a resposta",
+      "chips": [
+        "conhecemos",
+        "conheço",
+        "sabemos",
+        "conhece",
+        "sabe",
+        "sei"
+      ],
+      "correct": "sei",
+      "scenario": "The teacher asks a question and you raise your hand."
+    },
+    {
+      "id": 349,
+      "unit": 100,
+      "unitName": "Saber vs Conhecer",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I know this city well",
+      "question": "Complete the sentence:",
+      "template": "Eu __ bem esta cidade",
+      "chips": [
+        "sei",
+        "conhecemos",
+        "sabemos",
+        "conhece",
+        "conheço",
+        "sabe"
+      ],
+      "correct": "conheço",
+      "scenario": "A tourist asks if you can recommend places to visit."
+    },
+    {
+      "id": 350,
+      "unit": 100,
+      "unitName": "Saber vs Conhecer",
+      "phase": 3,
+      "type": "contextualizedProduction",
+      "en": "I don't know where he lives",
+      "question": "Complete the sentence:",
+      "template": "Eu não __ onde ele mora",
+      "chips": [
+        "conhecemos",
+        "conhece",
+        "sei",
+        "sabe",
+        "sabemos",
+        "conheço"
+      ],
+      "correct": "sei",
+      "scenario": "Someone asks for your friend's address."
+    }
+  ]
+}

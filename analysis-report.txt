@@ -1,0 +1,130 @@
+========================================
+DIAGNOSTIC TEST PEDAGOGICAL ANALYSIS
+========================================
+
+1. COVERAGE GAP ANALYSIS
+------------------------
+
+Total Syllabus Units: 100
+Units with 0 questions (CRITICAL GAPS): 35
+Units with 1 question (Under-represented): 20
+Units with 5+ questions (Over-represented): 1
+
+Units with 0 questions:
+  [A1] Unit 14: Family Vocabulary (mãe, pai, irmão)
+  [A1] Unit 17: Colors (cores)
+  [A1] Unit 18: Days of the Week
+  [A1] Unit 19: Gostar de - Expressing Likes
+  [A1] Unit 20: Body Parts (partes do corpo)
+  [A1] Unit 22: Regular -ER Verbs (Comer, Beber)
+  [A1] Unit 23: 3rd Person Singular (Ele/Ela fala)
+  [A2] Unit 31: Haver - Existence (Há, Havia)
+  [A2] Unit 50: Superlatives (o mais..., o menos...)
+  [A2] Unit 51: Irregular Comparatives (melhor, pior, maior)
+  [A2] Unit 52: Absolute Superlatives (-íssimo)
+  [A2] Unit 53: Diminutives (-inho, -zinho)
+  [A2] Unit 54: Augmentatives (-ão, -ona)
+  [A2] Unit 55: Months, Dates & Telling Time
+  [B1] Unit 56: Demonstratives (este, esse, aquele)
+  [B1] Unit 57: Indefinite Pronouns (alguém, algo, nenhum)
+  [B1] Unit 58: Indefinite Pronouns (qualquer, cada, outro)
+  [B1] Unit 61: Próclise with Adverbs (sempre me)
+  [B1] Unit 64: Verb + Preposition: Depender de, Gostar de
+  [B1] Unit 65: Relative Pronoun: Que (basic)
+  [B1] Unit 66: Relative Pronoun: Onde (where)
+  [B1] Unit 67: Relative Pronoun: Quem (who)
+  [B1] Unit 69: Relative Pronoun: O que (what/that which)
+  [B1] Unit 70: Preposition + Que (em que, com que)
+  [B1] Unit 72: Compound Past: Ter + Participle (tenho feito)
+  [B1] Unit 73: Pluperfect: Tinha + Participle (tinha feito)
+  [B1] Unit 74: Reported Speech (Ele disse que...)
+  [B1] Unit 77: SE Passive (Fala-se português)
+  [B2] Unit 81: Simple Future (Farei, Fará)
+  [B2] Unit 87: Time Expressions (há, faz, desde)
+  [B2] Unit 88: Todo vs Tudo
+  [B2] Unit 93: Imperfect Subjunctive (Se eu fosse)
+  [B2] Unit 94: Future Subjunctive (Quando eu for)
+  [B2] Unit 98: Ficar + Gerúndio (kept doing)
+  [B2] Unit 99: Colloquial Contractions (pra, tá, né)
+
+
+2. PHASE BALANCE
+----------------
+
+Total Questions: 142
+
+A1: 28 questions (19.7%) - 25 units - 1.1 q/unit avg
+A2: 63 questions (44.4%) - 30 units - 2.1 q/unit avg
+B1: 23 questions (16.2%) - 25 units - 0.9 q/unit avg
+B2: 28 questions (19.7%) - 20 units - 1.4 q/unit avg
+
+
+3. UNIT DISTRIBUTION
+--------------------
+
+Under-represented units (1 question):
+  [A1] Unit 7: Muito Agreement (muito/muita/muitos)
+  [A1] Unit 8: Regular -AR Verbs: Morar, Falar
+  [A1] Unit 9: Prepositions em/no/na (no Brasil, na casa)
+  [A1] Unit 10: Regular -AR Verbs: Trabalhar, Estudar
+  [A1] Unit 13: Location Prepositions (perto de, longe de)
+  [A1] Unit 15: Food & Drinks Vocabulary
+  [A2] Unit 32: Possessives: Meu/Minha, Seu/Sua
+  [A2] Unit 49: Comparatives (mais...que, menos...que)
+  [B1] Unit 59: Indirect Object Pronouns (me, lhe, nos)
+  [B1] Unit 60: Próclise with Negatives (não me)
+  [B1] Unit 62: Pronouns after Infinitives (para me ver)
+  [B1] Unit 63: Verb + Preposition: Pensar em, Sonhar com
+  [B1] Unit 68: Relative Pronoun: Cujo (whose)
+  [B2] Unit 86: Aspectual Verbs (começar a, parar de)
+  [B2] Unit 89: Present Subjunctive - Regular
+  [B2] Unit 90: Present Subjunctive - Irregular
+  [B2] Unit 91: Subjunctive Triggers: Querer que, Espero que
+  [B2] Unit 92: Subjunctive Triggers: Talvez, Embora, Caso
+  [B2] Unit 97: Progressive Periphrases (estar/andar/vir)
+  [B2] Unit 100: Comprehensive Review & Synthesis
+
+Over-represented units (5+ questions):
+  [A2] Unit 43: Para vs Por - Basic Uses - 6 questions
+
+
+4. PEDAGOGICAL ISSUES (Sample of 20 Questions)
+-----------------------------------------------
+
+Issues found in sample:
+
+  Question ID: 30
+  Phase: A1
+  Unit: Verb Estar
+  Issues:
+    - Ser/Estar question may lack clear context for choice
+
+
+5. SPECIFIC DEFECT SCAN (All Questions)
+----------------------------------------
+
+Correct answer missing from chips: 0
+
+Duplicate chips: 0
+
+Missing scenarios where needed: 0
+
+
+========================================
+SUMMARY STATISTICS
+========================================
+
+Total Questions: 142
+Syllabus Units: 100
+Units Tested: 65 (65.0%)
+Units Untested: 35
+Average Questions per Tested Unit: 2.2
+
+Defects Found:
+  - Correct answer missing: 0
+  - Duplicate chips: 0
+  - Missing scenarios: 0
+  - Total defects: 0
+
+========================================
+

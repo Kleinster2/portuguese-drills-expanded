@@ -1,0 +1,102 @@
+========================================
+DETAILED PEDAGOGICAL ISSUE ANALYSIS
+========================================
+
+Analyzing 32 sampled questions...
+
+
+1. SCENARIO HINTS AT ANSWER:
+----------------------------
+  ✓ No issues found
+
+
+2. DEMONSTRATIVE QUESTIONS - DISTANCE CONTEXT:
+-----------------------------------------------
+  ✓ No demonstrative questions in sample or all have proper distance context
+
+
+3. SER/ESTAR QUESTIONS - CONTEXTUAL CLARITY:
+---------------------------------------------
+
+  Q112 [A2] Irregular Preterite - Ser/Ir
+  EN: Yesterday, we went there
+  Template: Nós __ lá
+  Scenario: Explaining that your group already went there yesterday.
+  Issue: Ser/Estar choice may be ambiguous without clearer temporal/contextual markers
+
+  Q214 [A2] Verb Estar
+  EN: The tomato is expensive.
+  Template: O tomate __ caro.
+  Scenario: Complaining about recent price increases at the market.
+  Issue: Ser/Estar choice may be ambiguous without clearer temporal/contextual markers
+
+
+4. TENSE QUESTIONS - TEMPORAL MARKERS:
+---------------------------------------
+
+  Q101 [A2] Preterite Tense - Regular -AR Verbs
+  EN: I spoke Portuguese
+  Template: Eu __ português
+  Scenario: You're recounting a completed event.
+  Issue: Tense-based question lacks clear temporal context
+
+  Q141 [B1] Imperfect Tense - Regular Verbs
+  EN: When I was younger, I used to live in the countryside.
+  Template: Eu __ aqui
+  Scenario: Reminiscing about your childhood in conversation.
+  Issue: Tense-based question lacks clear temporal context
+
+  Q145 [B1] Imperfect Tense - Irregular Verbs
+  EN: Things were different back then. I used to be happy.
+  Template: Eu __ feliz
+  Scenario: Reflecting on how life felt happier in the past.
+  Issue: Tense-based question lacks clear temporal context
+
+
+5. DISTRACTOR QUALITY:
+----------------------
+  Note: Similar distractors can be pedagogically valid (testing fine distinctions)
+  Flagged for review:
+
+  Q2 [A1] Identity Statements
+  Distractor "são" very similar to correct "sou" (may be pedagogically valid)
+
+  Q5 [A1] Origin with Contractions
+  Distractor "dos" very similar to correct "das" (may be pedagogically valid)
+
+  Q5 [A1] Origin with Contractions
+  Distractor "aos" very similar to correct "das" (may be pedagogically valid)
+
+  Q5 [A1] Origin with Contractions
+  Distractor "nos" very similar to correct "das" (may be pedagogically valid)
+
+  Q5 [A1] Origin with Contractions
+  Distractor "nas" very similar to correct "das" (may be pedagogically valid)
+
+  ... and 51 more similar distractor pairs
+
+
+6. ENGLISH-PORTUGUESE ALIGNMENT:
+---------------------------------
+  ✓ No obvious mismatches found
+
+
+========================================
+PEDAGOGICAL ISSUES SUMMARY
+========================================
+
+Questions Analyzed: 32
+
+Issues Found:
+  - Scenario hints at answer: 0
+  - Demonstratives lacking distance context: 0
+  - Ser/Estar lacking clear context: 2
+  - Tense questions lacking time markers: 3
+  - Distractors very similar to correct: 56
+  - EN-PT alignment concerns: 0
+
+Total Pedagogical Concerns: 5
+Issue Rate: 15.6%
+
+========================================
+

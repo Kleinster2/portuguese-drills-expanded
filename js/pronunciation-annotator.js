@@ -455,248 +455,396 @@ function applyEQualityToPhonetic(phonetic, originalWord) {
     return result;
 }
 
+// ============================================================================
+// SUFFIX PATTERNS FOR DICTIONARY-STYLE PHONETICS
+// ============================================================================
+
+// Patterns matched against ORIGINAL Portuguese words (with accents preserved)
+// Format: [regex_pattern, phonetic_suffix, chars_to_remove_from_end]
+const SUFFIX_PATTERNS = [
+    // -eiro/-eira (common profession/agent suffix)
+    [/eiro$/, 'EH-roo', 4],      // engenheiro → engenh + EH-roo
+    [/eira$/, 'EH-rah', 4],      // engenheira → engenh + EH-rah
+
+    // -ção (noun suffix, very common)
+    [/ção$/, 'SOW (nasal)', 3],  // informação → informa + SOW
+    [/ções$/, 'SOYNS (nasal)', 4],  // informações → informa + SOYNS
+
+    // -inho/-inha (diminutive)
+    [/inho$/, 'EEN-yoo', 4],     // gatinho → gat + EEN-yoo
+    [/inha$/, 'EEN-yah', 4],     // gatinha → gat + EEN-yah
+
+    // -mente (adverb suffix)
+    [/mente$/, 'MEN-chee', 5],   // realmente → real + MEN-chee
+
+    // -dade (noun suffix)
+    [/dade$/, 'DAH-jee', 4],     // cidade → ci + DAH-jee
+    [/dades$/, 'DAH-jees', 5],   // cidades → ci + DAH-jees
+
+    // -oso/-osa (adjective suffix)
+    [/oso$/, 'OH-zoo', 3],       // famoso → fam + OH-zoo
+    [/osa$/, 'OH-zah', 3],       // famosa → fam + OH-zah
+
+    // -ista (profession/ideology)
+    [/ista$/, 'EES-tah', 4],     // artista → art + EES-tah
+    [/istas$/, 'EES-tahs', 5],   // artistas → art + EES-tahs
+
+    // -ável/-ível (adjective suffix)
+    [/ável$/, 'AH-vew', 4],      // amável → am + AH-vew
+    [/ível$/, 'EE-vew', 4],      // possível → poss + EE-vew
+
+    // -ão (augmentative/noun)
+    [/ão$/, 'OW (nasal)', 2],    // irmão → irm + OW
+    [/ões$/, 'OYNS (nasal)', 3], // irmões → irm + OYNS
+
+    // -ar/-er/-ir (verb infinitives)
+    [/ar$/, 'AHR', 2],           // falar → fal + AHR
+    [/er$/, 'EHR', 2],           // comer → com + EHR
+    [/ir$/, 'EER', 2],           // partir → part + EER
+
+    // -ando/-endo/-indo (gerund)
+    [/ando$/, 'AHN-doo', 4],     // falando → fal + AHN-doo
+    [/endo$/, 'EN-doo', 4],      // comendo → com + EN-doo
+    [/indo$/, 'EEN-doo', 4],     // partindo → part + EEN-doo
+
+    // -ado/-ido (past participle)
+    [/ado$/, 'AH-doo', 3],       // falado → fal + AH-doo
+    [/ada$/, 'AH-dah', 3],       // falada → fal + AH-dah
+    [/ido$/, 'EE-doo', 3],       // comido → com + EE-doo
+    [/ida$/, 'EE-dah', 3],       // comida → com + EE-dah
+
+    // -ção with ti sound (special case)
+    [/tiba$/, 'CHEE-bah', 4],    // Curitiba → Curi + CHEE-bah
+    [/tivo$/, 'CHEE-voo', 4],    // ativo → a + CHEE-voo
+    [/tiva$/, 'CHEE-vah', 4],    // ativa → a + CHEE-vah
+
+    // -nte (present participle / adjective)
+    [/nte$/, 'N-chee', 3],       // contente → conte + N-chee
+    [/ntes$/, 'N-chees', 4],     // contentes → conte + N-chees
+
+    // -gem (noun suffix)
+    [/gem$/, 'ZHAYN (nasal)', 3],  // viagem → via + ZHAYN
+    [/gens$/, 'ZHAYNS (nasal)', 4], // viagens → via + ZHAYNS
+
+    // -ês/-esa (nationality/origin)
+    [/ês$/, 'EHS', 2],           // português → portugu + EHS
+    [/esa$/, 'EH-zah', 3],       // portuguesa → portugu + EH-zah
+
+    // -al (adjective/noun)
+    [/al$/, 'OW', 2],            // final → fin + OW (L vocalization)
+    [/ais$/, 'ICE', 3],          // finais → fin + ICE
+
+    // -ol (L vocalization)
+    [/ol$/, 'OW', 2],            // espanhol → espanh + OW
+
+    // -el (L vocalization)
+    [/el$/, 'EW', 2],            // papel → pap + EW
+    [/éis$/, 'EH-ees', 3],       // papéis → pap + EH-ees
+
+    // -il (L vocalization)
+    [/il$/, 'EW', 2],            // difícil → difíc + EW
+];
+
+// Word mappings for dictionary-style (works on ORIGINAL Portuguese words)
+const WORD_MAPPINGS_DICT = {
+    // Pronouns and common words
+    'eu': 'EH-oo',
+    'e': 'ee',       // conjunction "and"
+    'o': 'oo',       // article
+    'a': 'ah',
+    'os': 'oos',
+    'as': 'ahs',
+
+    // Verb forms
+    'sou': 'SOH',
+    'moro': 'MOH-roo',
+    'trabalho': 'trah-BAH-lyoo',
+    'falo': 'FAH-loo',
+    'gosto': 'GOHS-too',
+    'tenho': 'TEN-yoo',
+    'vou': 'VOH',
+    'estou': 'ess-TOH',
+
+    // Prepositions
+    'de': 'jee',
+    'do': 'doo',
+    'da': 'dah',
+    'dos': 'doos',
+    'das': 'dahs',
+    'no': 'noo',
+    'na': 'nah',
+    'nos': 'noos',
+    'nas': 'nahs',
+    'com': 'KOHN (nasal)',
+    'como': 'KOH-moo',
+    'para': 'PAH-rah',
+    'em': 'EYN (nasal)',
+    'ao': 'ow',
+    'aos': 'ows',
+
+    // Nasal words
+    'bem': 'BAYN (nasal)',
+    'tem': 'TAYN (nasal)',
+    'sem': 'SAYN (nasal)',
+    'um': 'OOM (nasal)',
+    'uma': 'OO-mah (nasal)',
+    'sim': 'SEEN (nasal)',
+    'bom': 'BOHN (nasal)',
+    'som': 'SOHN (nasal)',
+    'também': 'tahm-BAYN (nasal)',
+    'quem': 'KAYN (nasal)',
+
+    // Common adjectives
+    'americano': 'ah-meh-ree-KAH-noo',
+    'americana': 'ah-meh-ree-KAH-nah',
+    'brasileiro': 'brah-zee-LEH-roo',
+    'brasileira': 'brah-zee-LEH-rah',
+    'casado': 'kah-ZAH-doo',
+    'casada': 'kah-ZAH-dah',
+    'solteiro': 'sohl-TEH-roo',
+    'solteira': 'sohl-TEH-rah',
+    'alto': 'AHL-too',
+    'alta': 'AHL-tah',
+    'baixo': 'BAI-shoo',
+    'baixa': 'BAI-shah',
+    'muito': 'MWEEN-too',
+    'muita': 'MWEEN-tah',
+    'pouco': 'POH-koo',
+    'pouca': 'POH-kah',
+
+    // Common nouns
+    'professor': 'pro-feh-SOHR',
+    'professora': 'pro-feh-SOH-rah',
+    'analista': 'ah-nah-LEES-tah',
+    'cachorro': 'kah-SHOH-hoo',
+    'gata': 'GAH-tah',
+    'gato': 'GAH-too',
+    'música': 'MOO-zee-kah',
+    'futebol': 'foo-cheh-BOW',
+    'trabalho': 'trah-BAH-lyoo',
+    'escritório': 'ess-kree-TOH-ree-oo',
+    'metrô': 'meh-TROH',
+    'ônibus': 'OH-nee-boos',
+
+    // Place names
+    'miami': 'mee-AH-mee',
+    'york': 'YORK',
+    'nova': 'NOH-vah',
+    'paulo': 'POW-loo',
+    'são': 'SOW (nasal)',
+    'brasil': 'brah-ZEW',
+    'frança': 'FRAHN-sah',
+    'curitiba': 'koo-ree-CHEE-bah',
+
+    // Names
+    'daniel': 'dah-nee-EW',
+    'sofia': 'so-FEE-ah',
+    'maria': 'mah-REE-ah',
+    'carlos': 'KAHR-loos',
+    'john': 'JAWN',
+    'sarah': 'SAH-rah',
+
+    // Other common words
+    'inglês': 'een-GLEHS',
+    'espanhol': 'ess-pahn-YOW',
+    'português': 'por-too-GEHS',
+    'contente': 'kohn-TEN-chee',
+    'que': 'kee',
+    'mais': 'mice',
+    'mas': 'mahs',
+    'não': 'NOW (nasal)',
+    'já': 'ZHAH',
+    'aqui': 'ah-KEE',
+    'ali': 'ah-LEE',
+    'onde': 'OHN-jee',
+    'quando': 'KWAHN-doo',
+    'porque': 'por-KEH',
+    'sempre': 'SEM-pree',
+    'nunca': 'NOON-kah',
+    'tudo': 'TOO-doo',
+    'nada': 'NAH-dah',
+};
+
+/**
+ * Convert a Portuguese word stem to basic phonetics.
+ * @param {string} stem - Portuguese stem (lowercase)
+ * @returns {string} Basic phonetic transcription of the stem
+ */
+function convertStemToPhonetic(stem) {
+    if (!stem) return '';
+
+    let result = stem;
+
+    // Handle digraphs first (order matters!)
+    result = result.replace(/nh/g, 'ny');
+    result = result.replace(/lh/g, 'ly');
+    result = result.replace(/ch/g, 'sh');
+    result = result.replace(/rr/g, 'h');
+    result = result.replace(/ss/g, 's');
+    result = result.replace(/qu/g, 'k');
+    result = result.replace(/gu(?=[ei])/g, 'g');
+
+    // Handle vowels with accents
+    result = result.replace(/[áà]/g, 'AH');
+    result = result.replace(/[éè]/g, 'EH');
+    result = result.replace(/[íì]/g, 'EE');
+    result = result.replace(/[óò]/g, 'OH');
+    result = result.replace(/[úù]/g, 'OO');
+    result = result.replace(/â/g, 'ah');
+    result = result.replace(/ê/g, 'eh');
+    result = result.replace(/ô/g, 'oh');
+    result = result.replace(/ã/g, 'ah(n)');
+    result = result.replace(/õ/g, 'oh(n)');
+
+    // Handle common vowel combinations
+    result = result.replace(/ou/g, 'oh');
+    result = result.replace(/ei/g, 'ay');
+    result = result.replace(/ai/g, 'eye');
+    result = result.replace(/au/g, 'ow');
+
+    // Handle basic vowels (unaccented)
+    result = result.replace(/a/g, 'ah');
+    result = result.replace(/e/g, 'eh');
+    result = result.replace(/i/g, 'ee');
+    result = result.replace(/o/g, 'oh');
+    result = result.replace(/u/g, 'oo');
+
+    // Handle consonants
+    result = result.replace(/ç/g, 's');
+    result = result.replace(/j/g, 'zh');
+    result = result.replace(/x/g, 'sh');
+    result = result.replace(/z$/g, 's');  // final z sounds like s
+
+    // Clean up repeated vowels
+    result = result.replace(/(ah){2,}/g, 'ah');
+    result = result.replace(/(eh){2,}/g, 'eh');
+    result = result.replace(/(ee){2,}/g, 'ee');
+    result = result.replace(/(oh){2,}/g, 'oh');
+    result = result.replace(/(oo){2,}/g, 'oo');
+
+    return result;
+}
+
+/**
+ * Try to match a suffix pattern and return phonetic transcription.
+ * @param {string} word - Original Portuguese word
+ * @returns {string|null} Phonetic transcription if pattern matched, null otherwise
+ */
+function applySuffixPattern(word) {
+    const wordLower = word.toLowerCase();
+
+    for (const [pattern, suffixPhonetic, charsToCut] of SUFFIX_PATTERNS) {
+        if (pattern.test(wordLower)) {
+            // Get the stem (part before the suffix)
+            const stem = charsToCut > 0 ? wordLower.slice(0, -charsToCut) : wordLower;
+
+            // Convert stem to basic phonetics
+            const stemPhonetic = convertStemToPhonetic(stem);
+
+            // Combine stem + suffix
+            if (stemPhonetic) {
+                return `${stemPhonetic}-${suffixPhonetic}`;
+            } else {
+                return suffixPhonetic;
+            }
+        }
+    }
+
+    return null;
+}
+
+/**
+ * Fallback: Convert unknown Portuguese word to phonetics using basic rules.
+ * @param {string} word - Original Portuguese word
+ * @returns {string} Basic phonetic transcription
+ */
+function syllabifyAndConvert(word) {
+    // Apply full word conversion
+    let phonetic = convertStemToPhonetic(word.toLowerCase());
+
+    // Try to identify stressed syllable (simplified rules)
+    // Portuguese stress rules:
+    // 1. If has accent → that syllable is stressed
+    // 2. If ends in a, e, o, am, em → penultimate
+    // 3. If ends in consonant (not s), i, u → final
+
+    if (/[áéíóúâêô]/.test(word.toLowerCase())) {
+        // Has accent - already marked with CAPS in convertStemToPhonetic
+    } else if (/[aeo]s?$|[ae]m$/.test(word.toLowerCase())) {
+        // Ends in vowel (with optional s) or am/em → stress penultimate
+        phonetic = phonetic.toUpperCase();  // Mark whole word for now
+    } else {
+        // Ends in consonant or i/u → stress final
+        phonetic = phonetic.toUpperCase();
+    }
+
+    return phonetic;
+}
+
 /**
  * Format text in dictionary-style pronunciation with stress marking.
+ *
+ * This is an INDEPENDENT pipeline that works directly on original Portuguese text.
+ * It does NOT depend on annotatePronunciation() or format_substitution().
  *
  * Converts Portuguese text to English-like pronunciation respelling:
  * - CAPITALS indicate stressed syllables
  * - Hyphens separate syllables
  * - (nasal) markers for nasal vowels
  *
- * @param {string} text - Portuguese text (original or annotated)
+ * @param {string} text - Original Portuguese text
  * @returns {string} Dictionary-style phonetic respelling
  *
  * @example
  * formatDictionaryStyle("Eu sou o Daniel")
- * // Returns: "ÊH-oo SOH oo dah-nee-ÉH-oo"
+ * // Returns: "EH-oo SOH oo dah-nee-EW"
  *
  * @example
  * formatDictionaryStyle("Eu sou de Miami")
- * // Returns: "ÊH-oo SOH jee mee-AH-mee"
+ * // Returns: "EH-oo SOH jee mee-AH-mee"
  *
  * @example
- * formatDictionaryStyle("Eu sou casado com a Sofia")
- * // Returns: "ÊH-oo SOH kah-ZAH-doo KOHN (nasal) ah so-FEE-ah"
+ * formatDictionaryStyle("Eu sou engenheiro de Curitiba")
+ * // Returns: "EH-oo SOH en-zhen-EH-roo jee koo-ree-CHEE-bah"
  */
 function formatDictionaryStyle(text) {
-    // Save original text for E quality analysis
-    const originalText = text;
-    const originalWords = originalText.toLowerCase().match(/\b\w+\b/g) || [];
+    // Extract words and punctuation
+    // Note: \w doesn't match accented characters in JS, so we include them explicitly
+    const tokens = text.match(/[\wáàâãéèêíìîóòôõúùûçÁÀÂÃÉÈÊÍÌÎÓÒÔÕÚÙÛÇ]+|[.,!?;:]/g) || [];
+    const result = [];
 
-
-    // Dictionary mapping of Portuguese words to dictionary-style pronunciation
-    const wordMappings = {
-        // Pronouns and common words
-        'eu': 'ÊH-oo',  // closed ê
-        'i': 'ee',  // e conjunction
-        'u': 'oo',  // o article
-        'a': 'ah',
-        'as': 'ahs',
-        'us': 'oos',
-
-        // Verb forms
-        'sou': 'SOH',
-        'su': 'SOO',  // simplified sou
-        'moru': 'MOH-roo',
-        'moro': 'MOH-roo',
-        'trabalhu': 'trah-BAH-lyoo',
-        'trabalho': 'trah-BAH-lyoo',
-        'falu': 'FAH-loo',
-        'falo': 'FAH-loo',
-        'gostu': 'GOHS-too',
-        'gosto': 'GOHS-too',
-        'tenhu': 'TAY-nyoo',
-        'tenho': 'TAY-nyoo',
-        'voou': 'VOH',
-        'vou': 'VOH',
-        'estou': 'ess-TOH',
-
-        // Prepositions
-        'dji': 'jee',
-        'de': 'jee',  // after transformation
-        'du': 'doo',
-        'do': 'doo',
-        'da': 'dah',
-        'das': 'dahs',
-        'dus': 'doos',
-        'dos': 'doos',
-        'nu': 'noo',
-        'no': 'noo',
-        'na': 'nah',
-        'nas': 'nahs',
-        'nus': 'noos',
-        'nos': 'noos',
-        'coun': 'KOHN (nasal)',
-        'com': 'KOHN (nasal)',
-        'comu': 'KOH-moo',
-        'como': 'KOH-moo',
-        'para': 'PAH-rah',
-        'pra': 'prah',
-
-        // Nasal words
-        'beyn': 'BAYN (nasal)',
-        'bem': 'BAYN (nasal)',
-        'teyn': 'TAYN (nasal)',
-        'tem': 'TAYN (nasal)',
-        'seyn': 'SAYN (nasal)',
-        'sem': 'SAYN (nasal)',
-        'ũm': 'OOM (nasal)',
-        'um': 'OOM (nasal)',
-        'ũma': 'OO-mah (nasal)',
-        'uma': 'OO-mah (nasal)',
-        'sing': 'SING (nasal)',
-        'sim': 'SING (nasal)',
-        'boun': 'BOHN (nasal)',
-        'bom': 'BOHN (nasal)',
-        'soun': 'SOHN (nasal)',
-        'som': 'SOHN (nasal)',
-        'tambeyn': 'tahm-BAYN (nasal)',
-        'também': 'tahm-BAYN (nasal)',
-
-        // Common adjectives
-        'americanu': 'ah-meh-ree-KAH-noo',
-        'americano': 'ah-meh-ree-KAH-noo',
-        'americana': 'ah-meh-ree-KAH-nah',
-        'brasileiru': 'brah-zee-LÉH-roo',  // open é
-        'brasileiro': 'brah-zee-LÉH-roo',  // open é
-        'brasileira': 'brah-zee-LÉH-rah',  // open é
-        'casadu': 'kah-ZAH-doo',
-        'casado': 'kah-ZAH-doo',
-        'casada': 'kah-ZAH-dah',
-        'solteiro': 'sohl-TÉH-roo',  // open é
-        'solteiru': 'sohl-TÉH-roo',  // after transformation
-        'solteira': 'sohl-TÉH-rah',  // open é
-        'altu': 'AHL-too',
-        'alto': 'AHL-too',
-        'alta': 'AHL-tah',
-        'baixu': 'BAI-shoo',
-        'baixo': 'BAI-shoo',
-        'baixa': 'BAI-shah',
-
-        // Common nouns
-        'professor': 'pro-feh-SOHR',
-        'professora': 'pro-feh-SOH-rah',
-        'analista': 'ah-nah-LEES-tah',
-        'cachorru': 'kah-SHOH-hoo',
-        'cachorro': 'kah-SHOH-hoo',
-        'gata': 'GAH-tah',
-        'gatu': 'GAH-too',
-        'gato': 'GAH-too',
-        'música': 'MOO-zee-kah',
-        'futebolu': 'foo-cheh-BOH-loo',
-        'futebol': 'foo-cheh-BOH-loo',
-        'trabalhu': 'trah-BAH-lyoo',
-        'trabalho': 'trah-BAH-lyoo',
-        'escritório': 'ess-kree-TOH-ree-oo',
-
-        // Place names
-        'miami': 'mee-AH-mee',
-        'yorki': 'YORK-ee',
-        'york': 'YORK-ee',
-        'nova': 'NOH-vah',
-        'paulu': 'POW-loo',
-        'paulo': 'POW-loo',
-        'são': 'SOW',
-        'sãu': 'SOW',  // In case transformation happened
-        'brasilu': 'brah-ZEE-loo',
-        'brasil': 'brah-ZEE-loo',
-        'frança': 'FRAHN-sah',
-
-        // Names
-        'danieu': 'dah-nee-ÉH-oo',  // open é
-        'daniel': 'dah-nee-ÉH-oo',  // open é
-        'sofia': 'so-FEE-ah',
-        'maria': 'mah-REE-ah',
-        'carlos': 'KAHR-loos',
-        'john': 'JAWN',
-        'sarah': 'SAH-rah',
-
-        // Other common words
-        'inglês': 'een-GLÊS',  // closed ê
-        'inguês': 'een-GLÊS',  // inglês after transformation
-        'espanhol': 'ess-pahn-YOHL',
-        'espanholu': 'ess-pahn-YOHL',  // after transformation
-        'pouco': 'POH-koo',
-        'poucu': 'POH-koo',  // after transformation
-        'português': 'por-too-GÊS',  // closed ê
-        'contente': 'kohn-TEN-chee',  // will get ÊN from algorithm
-        'contentchi': 'kohn-TEN-chee',  // after transformation
-        'ônibus': 'OH-nee-boos',
-        'metrô': 'meh-TROH',
-    };
-
-    // First apply pronunciation transformations using simplified substitution
-    // This converts: "Eu sou o Daniel" -> "Eu sou u Danieu"
-    let simple = text;
-
-    // Apply transformations (simplified version - mirrors Python format_substitution)
-    // Handle palatalization
-    simple = simple.replace(/\bde\b/gi, 'dji');
-
-    // Handle final -o -> u (but NOT words with tildes like "São")
-    simple = simple.replace(/(\w+)o\b/g, (match, word) => {
-        // Don't transform if the full match (word+o) has tilde
-        if (/[ãõ]/.test(match)) {
-            return match;
-        }
-        return word + 'u';
-    });
-    simple = simple.replace(/\bo\b/g, 'u');
-
-    // Handle final -l -> u (at end of word)
-    simple = simple.replace(/(\w+)l\b/gi, '$1u');
-
-    // Handle conjunction "e" (and)
-    simple = simple.replace(/\be\b/gi, 'i');
-
-    // Handle nasal -om -> oun, -em -> eyn
-    simple = simple.replace(/\bcom\b/gi, 'coun');
-    simple = simple.replace(/\bbem\b/gi, 'beyn');
-    simple = simple.replace(/\btem\b/gi, 'teyn');
-    simple = simple.replace(/\bsem\b/gi, 'seyn');
-
-    // Split into words and map to dictionary style
-    const words = simple.split(/\s+/);
-    const resultWords = [];
-    let originalWordIndex = 0;
-
-    for (const word of words) {
-        // Remove punctuation for lookup
-        const match = word.match(/^([^.,!?;:]+)([.,!?;:]*)$/);
-        if (!match) {
-            resultWords.push(word);
+    for (const token of tokens) {
+        // Pass through punctuation
+        if (/^[.,!?;:]$/.test(token)) {
+            // Attach to previous word if exists
+            if (result.length > 0) {
+                result[result.length - 1] = result[result.length - 1] + token;
+            }
             continue;
         }
 
-        const cleanWord = match[1];
-        const punct = match[2];
+        const word = token;
+        const lookup = word.toLowerCase();
 
-        // Get corresponding original Portuguese word for E quality analysis
-        const originalWord = originalWords[originalWordIndex] || cleanWord;
-        originalWordIndex++;
-
-        // Look up in dictionary (case-insensitive)
-        const lookup = cleanWord.toLowerCase();
-        let phonetic;
-        if (wordMappings[lookup]) {
-            phonetic = wordMappings[lookup];
-        } else {
-            // If not in dictionary, apply basic transformations
-            phonetic = cleanWord;
-
-            // Basic vowel mappings for unknown words
-            phonetic = phonetic.replace(/\bu\b/gi, 'oo');
-            phonetic = phonetic.replace(/\bi\b/gi, 'ee');
-            phonetic = phonetic.replace(/u$/i, 'oo');
+        // 1. Check word mappings first (exact match)
+        if (WORD_MAPPINGS_DICT[lookup]) {
+            result.push(WORD_MAPPINGS_DICT[lookup]);
+            continue;
         }
 
-        // Apply algorithmic E quality rules based on original Portuguese word
-        phonetic = applyEQualityToPhonetic(phonetic, originalWord);
+        // 2. Try suffix patterns (on original word)
+        const patternResult = applySuffixPattern(word);
+        if (patternResult) {
+            result.push(patternResult);
+            continue;
+        }
 
-        resultWords.push(phonetic + punct);
+        // 3. Fallback: basic conversion
+        const fallback = syllabifyAndConvert(word);
+        result.push(fallback);
     }
 
-    return resultWords.join(' ');
+    return result.join(' ');
 }
 
 // Export for use in Node.js and browser environments

@@ -92,10 +92,10 @@
       ]
     },
     {
-      "name": "Placement Test",
+      "name": "Diagnostic Test",
       "short_name": "Test",
       "description": "Diagnostic test to find your level",
-      "url": "/?section=placement-test",
+      "url": "/?section=diagnostic-test",
       "icons": [
         {
           "src": "/icons/shortcut-test.png",

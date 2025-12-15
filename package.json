@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node scripts/build-prompts.js",
     "dev": "wrangler pages dev . --compatibility-date=2024-01-01 --local",
-    "deploy": "npm run build && wrangler pages deploy . --project-name=portuguese-drills-expanded",
+    "deploy": "npm run build && npx wrangler pages deploy . --project-name=portuguese-drills-expanded",
     "test": "npm run test:python && npm run test:js && npm run test:consistency",
     "test:python": "python utils/test_consistency.py",
     "test:js": "node utils/test-js.mjs",
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/Kleinster2/portuguese-drills-expanded#readme",
   "dependencies": {
-    "wrangler": "^4.52.1"
+    "wrangler": "^4.53.0"
   },
   "devDependencies": {
     "playwright": "^1.49.0"

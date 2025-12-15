@@ -12,7 +12,7 @@ const STATIC_ASSETS = [
 
   // JavaScript files
   '/js/pronunciation-annotator.js',
-  '/js/placementTest.js',
+  '/js/diagnosticTest.js',
   '/js/answerChips.js',
   '/js/conjugations.js',
   '/js/utils.js',
@@ -38,8 +38,8 @@ const DOCUMENTATION_ASSETS = [
 
 // Configuration files to cache
 const CONFIG_ASSETS = [
-  '/config/placement-test-questions-v10.9-no-hints.json',
-  '/config/placement-test-production-questions.json'
+  '/config/diagnostic-test-questions-v10.9-no-hints.json',
+  '/config/diagnostic-test-production-questions.json'
 ];
 
 // Install event - cache static assets

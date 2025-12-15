@@ -62,19 +62,19 @@
                             <h3 class="text-sm font-semibold text-slate-600 mb-2">GRAMMAR TESTS</h3>
                             <div class="flex flex-wrap items-center gap-3">
                                 <button
-                                    onclick="window.location.href='/placement-test?test=grammar'"
+                                    onclick="window.location.href='/diagnostic-test?test=grammar'"
                                     class="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold px-6 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl text-sm border-2 border-green-400"
                                 >
-                                    ⭐ Production-Only (130 qs) - NEW
+                                    ⭐ Production-Only (146 qs) - NEW
                                 </button>
                                 <button
-                                    onclick="window.location.href='/placement-test?test=grammar-a'"
+                                    onclick="window.location.href='/diagnostic-test?test=grammar-a'"
                                     class="bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors shadow-md hover:shadow-lg text-sm"
                                 >
                                     Legacy: A-Levels (102 qs)
                                 </button>
                                 <button
-                                    onclick="window.location.href='/placement-test?test=grammar-b'"
+                                    onclick="window.location.href='/diagnostic-test?test=grammar-b'"
                                     class="bg-green-600 hover:bg-green-700 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors shadow-md hover:shadow-lg text-sm"
                                 >
                                     Legacy: B-Levels (178 qs)
@@ -86,7 +86,7 @@
                             <h3 class="text-sm font-semibold text-slate-600 mb-2">VOCABULARY TEST</h3>
                             <div class="flex flex-wrap items-center gap-3">
                                 <button
-                                    onclick="window.location.href='/placement-test?test=vocabulary'"
+                                    onclick="window.location.href='/diagnostic-test?test=vocabulary'"
                                     class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors shadow-md hover:shadow-lg text-sm"
                                 >
                                     Vocabulary (111 qs)
@@ -98,25 +98,25 @@
                             <h3 class="text-sm font-semibold text-slate-600 mb-2">TOPIC-BASED TESTS</h3>
                             <div class="flex flex-wrap items-center gap-3">
                                 <button
-                                    onclick="window.location.href='/placement-test?test=verb-tenses'"
+                                    onclick="window.location.href='/diagnostic-test?test=verb-tenses'"
                                     class="bg-purple-500 hover:bg-purple-600 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors shadow-md hover:shadow-lg text-sm"
                                 >
                                     Verb Tenses (168 qs)
                                 </button>
                                 <button
-                                    onclick="window.location.href='/placement-test?test=pronouns'"
+                                    onclick="window.location.href='/diagnostic-test?test=pronouns'"
                                     class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors shadow-md hover:shadow-lg text-sm"
                                 >
                                     Pronouns (44 qs)
                                 </button>
                                 <button
-                                    onclick="window.location.href='/placement-test?test=prepositions'"
+                                    onclick="window.location.href='/diagnostic-test?test=prepositions'"
                                     class="bg-purple-700 hover:bg-purple-800 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors shadow-md hover:shadow-lg text-sm"
                                 >
                                     Prepositions (18 qs)
                                 </button>
                                 <button
-                                    onclick="window.location.href='/placement-test?test=articles-determiners'"
+                                    onclick="window.location.href='/diagnostic-test?test=articles-determiners'"
                                     class="bg-purple-800 hover:bg-purple-900 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors shadow-md hover:shadow-lg text-sm"
                                 >
                                     Articles (50 qs)
@@ -882,15 +882,15 @@
     <script src="/js/conjugations.js?v=1761210000000"></script>
     <script src="/js/answerChips.js?v=1761210000000"></script>
     <script src="/js/dependencies.js?v=1761210000000"></script>
-    <!-- LZ-String for placement test hash compression -->
+    <!-- LZ-String for diagnostic test hash compression -->
     <script src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"></script>
-    <script src="/js/placementTest.js?v=1764800000000"></script>
+    <script src="/js/diagnosticTest.js?v=1764800000000"></script>
 
-    <!-- Route detection for direct /placement-test access -->
+    <!-- Route detection for direct /diagnostic-test access -->
     <script>
       (function() {
         const path = window.location.pathname;
-        if (path === '/placement-test' || path === '/placement-test/') {
+        if (path === '/diagnostic-test' || path === '/diagnostic-test/') {
           // Hide body content immediately
           document.addEventListener('DOMContentLoaded', () => {
             // Hide all main content
@@ -908,13 +908,13 @@
             sections.forEach(el => el.style.display = 'none');
           });
 
-          // Start placement test when function is available
+          // Start diagnostic test when function is available
           window.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
-              if (typeof startPlacementTest === 'function') {
-                startPlacementTest();
+              if (typeof startDiagnosticTest === 'function') {
+                startDiagnosticTest();
               } else {
-                console.error('startPlacementTest function not found');
+                console.error('startDiagnosticTest function not found');
               }
             }, 200);
           });

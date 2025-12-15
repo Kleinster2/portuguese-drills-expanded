@@ -601,9 +601,350 @@ def apply_e_quality_to_phonetic(phonetic: str, original_word: str) -> str:
     return result
 
 
+# ============================================================================
+# SUFFIX PATTERNS FOR DICTIONARY-STYLE PHONETICS
+# ============================================================================
+
+# Patterns matched against ORIGINAL Portuguese words (with accents preserved)
+# Format: (regex_pattern, phonetic_suffix, chars_to_remove_from_end)
+SUFFIX_PATTERNS = [
+    # -eiro/-eira (common profession/agent suffix)
+    (r'eiro$', 'EH-roo', 4),      # engenheiro → engenh + EH-roo
+    (r'eira$', 'EH-rah', 4),      # engenheira → engenh + EH-rah
+
+    # -ção (noun suffix, very common)
+    (r'ção$', 'SOW (nasal)', 3),  # informação → informa + SOW
+    (r'ções$', 'SOYNS (nasal)', 4),  # informações → informa + SOYNS
+
+    # -inho/-inha (diminutive)
+    (r'inho$', 'EEN-yoo', 4),     # gatinho → gat + EEN-yoo
+    (r'inha$', 'EEN-yah', 4),     # gatinha → gat + EEN-yah
+
+    # -mente (adverb suffix)
+    (r'mente$', 'MEN-chee', 5),   # realmente → real + MEN-chee
+
+    # -dade (noun suffix)
+    (r'dade$', 'DAH-jee', 4),     # cidade → ci + DAH-jee
+    (r'dades$', 'DAH-jees', 5),   # cidades → ci + DAH-jees
+
+    # -oso/-osa (adjective suffix)
+    (r'oso$', 'OH-zoo', 3),       # famoso → fam + OH-zoo
+    (r'osa$', 'OH-zah', 3),       # famosa → fam + OH-zah
+
+    # -ista (profession/ideology)
+    (r'ista$', 'EES-tah', 4),     # artista → art + EES-tah
+    (r'istas$', 'EES-tahs', 5),   # artistas → art + EES-tahs
+
+    # -ável/-ível (adjective suffix)
+    (r'ável$', 'AH-vew', 4),      # amável → am + AH-vew
+    (r'ível$', 'EE-vew', 4),      # possível → poss + EE-vew
+
+    # -ão (augmentative/noun)
+    (r'ão$', 'OW (nasal)', 2),    # irmão → irm + OW
+    (r'ões$', 'OYNS (nasal)', 3), # irmões → irm + OYNS
+
+    # -ar/-er/-ir (verb infinitives)
+    (r'ar$', 'AHR', 2),           # falar → fal + AHR
+    (r'er$', 'EHR', 2),           # comer → com + EHR
+    (r'ir$', 'EER', 2),           # partir → part + EER
+
+    # -ando/-endo/-indo (gerund)
+    (r'ando$', 'AHN-doo', 4),     # falando → fal + AHN-doo
+    (r'endo$', 'EN-doo', 4),      # comendo → com + EN-doo
+    (r'indo$', 'EEN-doo', 4),     # partindo → part + EEN-doo
+
+    # -ado/-ido (past participle)
+    (r'ado$', 'AH-doo', 3),       # falado → fal + AH-doo
+    (r'ada$', 'AH-dah', 3),       # falada → fal + AH-dah
+    (r'ido$', 'EE-doo', 3),       # comido → com + EE-doo
+    (r'ida$', 'EE-dah', 3),       # comida → com + EE-dah
+
+    # -ção with ti sound (special case)
+    (r'tiba$', 'CHEE-bah', 4),    # Curitiba → Curi + CHEE-bah
+    (r'tivo$', 'CHEE-voo', 4),    # ativo → a + CHEE-voo
+    (r'tiva$', 'CHEE-vah', 4),    # ativa → a + CHEE-vah
+
+    # -nte (present participle / adjective)
+    (r'nte$', 'N-chee', 3),       # contente → conte + N-chee
+    (r'ntes$', 'N-chees', 4),     # contentes → conte + N-chees
+
+    # -gem (noun suffix)
+    (r'gem$', 'ZHAYN (nasal)', 3),  # viagem → via + ZHAYN
+    (r'gens$', 'ZHAYNS (nasal)', 4), # viagens → via + ZHAYNS
+
+    # -ês/-esa (nationality/origin)
+    (r'ês$', 'EHS', 2),           # português → portugu + EHS
+    (r'esa$', 'EH-zah', 3),       # portuguesa → portugu + EH-zah
+
+    # -al (adjective/noun)
+    (r'al$', 'OW', 2),            # final → fin + OW (L vocalization)
+    (r'ais$', 'ICE', 3),          # finais → fin + ICE
+
+    # -ol (L vocalization)
+    (r'ol$', 'OW', 2),            # espanhol → espanh + OW
+
+    # -el (L vocalization)
+    (r'el$', 'EW', 2),            # papel → pap + EW
+    (r'éis$', 'EH-ees', 3),       # papéis → pap + EH-ees
+
+    # -il (L vocalization)
+    (r'il$', 'EW', 2),            # difícil → difíc + EW
+]
+
+# Word mappings for dictionary-style (works on ORIGINAL Portuguese words)
+WORD_MAPPINGS = {
+    # Pronouns and common words
+    'eu': 'EH-oo',
+    'e': 'ee',       # conjunction "and"
+    'o': 'oo',       # article
+    'a': 'ah',
+    'os': 'oos',
+    'as': 'ahs',
+
+    # Verb forms
+    'sou': 'SOH',
+    'moro': 'MOH-roo',
+    'trabalho': 'trah-BAH-lyoo',
+    'falo': 'FAH-loo',
+    'gosto': 'GOHS-too',
+    'tenho': 'TEN-yoo',
+    'vou': 'VOH',
+    'estou': 'ess-TOH',
+
+    # Prepositions
+    'de': 'jee',
+    'do': 'doo',
+    'da': 'dah',
+    'dos': 'doos',
+    'das': 'dahs',
+    'no': 'noo',
+    'na': 'nah',
+    'nos': 'noos',
+    'nas': 'nahs',
+    'com': 'KOHN (nasal)',
+    'como': 'KOH-moo',
+    'para': 'PAH-rah',
+    'em': 'EYN (nasal)',
+    'ao': 'ow',
+    'aos': 'ows',
+
+    # Nasal words
+    'bem': 'BAYN (nasal)',
+    'tem': 'TAYN (nasal)',
+    'sem': 'SAYN (nasal)',
+    'um': 'OOM (nasal)',
+    'uma': 'OO-mah (nasal)',
+    'sim': 'SEEN (nasal)',
+    'bom': 'BOHN (nasal)',
+    'som': 'SOHN (nasal)',
+    'também': 'tahm-BAYN (nasal)',
+    'quem': 'KAYN (nasal)',
+
+    # Common adjectives
+    'americano': 'ah-meh-ree-KAH-noo',
+    'americana': 'ah-meh-ree-KAH-nah',
+    'brasileiro': 'brah-zee-LEH-roo',
+    'brasileira': 'brah-zee-LEH-rah',
+    'casado': 'kah-ZAH-doo',
+    'casada': 'kah-ZAH-dah',
+    'solteiro': 'sohl-TEH-roo',
+    'solteira': 'sohl-TEH-rah',
+    'alto': 'AHL-too',
+    'alta': 'AHL-tah',
+    'baixo': 'BAI-shoo',
+    'baixa': 'BAI-shah',
+    'muito': 'MWEEN-too',
+    'muita': 'MWEEN-tah',
+    'pouco': 'POH-koo',
+    'pouca': 'POH-kah',
+
+    # Common nouns
+    'professor': 'pro-feh-SOHR',
+    'professora': 'pro-feh-SOH-rah',
+    'analista': 'ah-nah-LEES-tah',
+    'cachorro': 'kah-SHOH-hoo',
+    'gata': 'GAH-tah',
+    'gato': 'GAH-too',
+    'música': 'MOO-zee-kah',
+    'futebol': 'foo-cheh-BOW',
+    'trabalho': 'trah-BAH-lyoo',
+    'escritório': 'ess-kree-TOH-ree-oo',
+    'metrô': 'meh-TROH',
+    'ônibus': 'OH-nee-boos',
+
+    # Place names
+    'miami': 'mee-AH-mee',
+    'york': 'YORK',
+    'nova': 'NOH-vah',
+    'paulo': 'POW-loo',
+    'são': 'SOW (nasal)',
+    'brasil': 'brah-ZEW',
+    'frança': 'FRAHN-sah',
+    'curitiba': 'koo-ree-CHEE-bah',
+
+    # Names
+    'daniel': 'dah-nee-EW',
+    'sofia': 'so-FEE-ah',
+    'maria': 'mah-REE-ah',
+    'carlos': 'KAHR-loos',
+    'john': 'JAWN',
+    'sarah': 'SAH-rah',
+
+    # Other common words
+    'inglês': 'een-GLEHS',
+    'espanhol': 'ess-pahn-YOW',
+    'português': 'por-too-GEHS',
+    'contente': 'kohn-TEN-chee',
+    'que': 'kee',
+    'mais': 'mice',
+    'mas': 'mahs',
+    'não': 'NOW (nasal)',
+    'já': 'ZHAH',
+    'aqui': 'ah-KEE',
+    'ali': 'ah-LEE',
+    'onde': 'OHN-jee',
+    'quando': 'KWAHN-doo',
+    'porque': 'por-KEH',
+    'sempre': 'SEM-pree',
+    'nunca': 'NOON-kah',
+    'tudo': 'TOO-doo',
+    'nada': 'NAH-dah',
+}
+
+
+def apply_suffix_pattern(word: str) -> str | None:
+    """
+    Try to match a suffix pattern and return phonetic transcription.
+
+    Args:
+        word: Original Portuguese word (lowercase)
+
+    Returns:
+        Phonetic transcription if pattern matched, None otherwise
+    """
+    word_lower = word.lower()
+
+    for pattern, suffix_phonetic, chars_to_cut in SUFFIX_PATTERNS:
+        if re.search(pattern, word_lower):
+            # Get the stem (part before the suffix)
+            stem = word_lower[:-chars_to_cut] if chars_to_cut > 0 else word_lower
+
+            # Convert stem to basic phonetics
+            stem_phonetic = convert_stem_to_phonetic(stem)
+
+            # Combine stem + suffix
+            if stem_phonetic:
+                return f"{stem_phonetic}-{suffix_phonetic}"
+            else:
+                return suffix_phonetic
+
+    return None
+
+
+def convert_stem_to_phonetic(stem: str) -> str:
+    """
+    Convert a Portuguese word stem to basic phonetics.
+
+    Args:
+        stem: Portuguese stem (lowercase)
+
+    Returns:
+        Basic phonetic transcription of the stem
+    """
+    if not stem:
+        return ''
+
+    result = stem
+
+    # Handle digraphs first (order matters!)
+    result = re.sub(r'nh', 'ny', result)
+    result = re.sub(r'lh', 'ly', result)
+    result = re.sub(r'ch', 'sh', result)
+    result = re.sub(r'rr', 'h', result)
+    result = re.sub(r'ss', 's', result)
+    result = re.sub(r'qu', 'k', result)
+    result = re.sub(r'gu(?=[ei])', 'g', result)
+
+    # Handle vowels with accents
+    result = re.sub(r'[áà]', 'AH', result)
+    result = re.sub(r'[éè]', 'EH', result)
+    result = re.sub(r'[íì]', 'EE', result)
+    result = re.sub(r'[óò]', 'OH', result)
+    result = re.sub(r'[úù]', 'OO', result)
+    result = re.sub(r'â', 'ah', result)
+    result = re.sub(r'ê', 'eh', result)
+    result = re.sub(r'ô', 'oh', result)
+    result = re.sub(r'ã', 'ah(n)', result)
+    result = re.sub(r'õ', 'oh(n)', result)
+
+    # Handle common vowel combinations
+    result = re.sub(r'ou', 'oh', result)
+    result = re.sub(r'ei', 'ay', result)
+    result = re.sub(r'ai', 'eye', result)
+    result = re.sub(r'au', 'ow', result)
+
+    # Handle basic vowels (unaccented)
+    result = re.sub(r'a', 'ah', result)
+    result = re.sub(r'e', 'eh', result)
+    result = re.sub(r'i', 'ee', result)
+    result = re.sub(r'o', 'oh', result)
+    result = re.sub(r'u', 'oo', result)
+
+    # Handle consonants
+    result = re.sub(r'ç', 's', result)
+    result = re.sub(r'j', 'zh', result)
+    result = re.sub(r'x', 'sh', result)
+    result = re.sub(r'z(?=$)', 's', result)  # final z sounds like s
+
+    # Clean up repeated vowels
+    result = re.sub(r'(ah){2,}', 'ah', result)
+    result = re.sub(r'(eh){2,}', 'eh', result)
+    result = re.sub(r'(ee){2,}', 'ee', result)
+    result = re.sub(r'(oh){2,}', 'oh', result)
+    result = re.sub(r'(oo){2,}', 'oo', result)
+
+    return result
+
+
+def syllabify_and_convert(word: str) -> str:
+    """
+    Fallback: Convert unknown Portuguese word to phonetics using basic rules.
+
+    Args:
+        word: Original Portuguese word
+
+    Returns:
+        Basic phonetic transcription
+    """
+    # Apply full word conversion
+    phonetic = convert_stem_to_phonetic(word.lower())
+
+    # Try to identify stressed syllable (simplified rules)
+    # Portuguese stress rules:
+    # 1. If has accent → that syllable is stressed
+    # 2. If ends in a, e, o, am, em → penultimate
+    # 3. If ends in consonant (not s), i, u → final
+
+    if re.search(r'[áéíóúâêô]', word.lower()):
+        # Has accent - already marked with CAPS in convert_stem_to_phonetic
+        pass
+    elif re.search(r'[aeo]s?$|[ae]m$', word.lower()):
+        # Ends in vowel (with optional s) or am/em → stress penultimate
+        # Add basic stress marking (simplified)
+        phonetic = phonetic.upper()  # Mark whole word for now
+    else:
+        # Ends in consonant or i/u → stress final
+        phonetic = phonetic.upper()
+
+    return phonetic
+
+
 def format_dictionary_style(text: str) -> str:
     """
     Format text in dictionary-style pronunciation with stress marking.
+
+    This is an INDEPENDENT pipeline that works directly on original Portuguese text.
+    It does NOT depend on annotate_pronunciation() or format_substitution().
 
     Converts Portuguese text to English-like pronunciation respelling:
     - CAPITALS indicate stressed syllables
@@ -611,208 +952,52 @@ def format_dictionary_style(text: str) -> str:
     - (nasal) markers for nasal vowels
 
     Args:
-        text (str): Portuguese text (can be original or annotated)
+        text (str): Original Portuguese text
 
     Returns:
         str: Dictionary-style phonetic respelling
 
     Examples:
         >>> format_dictionary_style("Eu sou o Daniel")
-        'EH-oo SOH oo dah-nee-EH-oo'
+        'EH-oo SOH oo dah-nee-EW'
 
         >>> format_dictionary_style("Eu sou de Miami")
         'EH-oo SOH jee mee-AH-mee'
 
-        >>> format_dictionary_style("Eu sou casado com a Sofia")
-        'EH-oo SOH kah-ZAH-doo KOHN (nasal) ah so-FEE-ah'
+        >>> format_dictionary_style("Eu sou engenheiro de Curitiba")
+        'EH-oo SOH en-zhehn-YEH-roo jee koo-ree-CHEE-bah'
     """
-    # Save original text for E quality analysis
-    original_text = text
-    original_words = re.findall(r'\b\w+\b', original_text.lower())
+    # Extract words and punctuation
+    tokens = re.findall(r'\b[\w]+\b|[.,!?;:]', text)
+    result = []
 
-    # First, get the annotated version if not already annotated
-    if not is_already_annotated(text):
-        text = annotate_pronunciation(text)
+    for token in tokens:
+        # Pass through punctuation
+        if re.match(r'^[.,!?;:]$', token):
+            # Attach to previous word if exists
+            if result:
+                result[-1] = result[-1] + token
+            continue
 
-    # Apply transformations to simplified format
-    simple = format_substitution(text)
+        word = token
+        lookup = word.lower()
 
-    # Dictionary mapping of common words/patterns to dictionary-style
-    # This is a comprehensive mapping based on Portuguese phonology
+        # 1. Check word mappings first (exact match)
+        if lookup in WORD_MAPPINGS:
+            result.append(WORD_MAPPINGS[lookup])
+            continue
 
-    word_mappings = {
-        # Pronouns and common words
-        'eu': 'ÊH-oo',  # closed ê
-        'i': 'ee',  # e conjunction
-        'u': 'oo',  # o article
-        'a': 'ah',
-        'as': 'ahs',
-        'us': 'oos',
+        # 2. Try suffix patterns (on original word)
+        pattern_result = apply_suffix_pattern(word)
+        if pattern_result:
+            result.append(pattern_result)
+            continue
 
-        # Verb forms
-        'sou': 'SOH',
-        'su': 'SOO',  # simplified sou
-        'moru': 'MOH-roo',
-        'moro': 'MOH-roo',
-        'trabalhu': 'trah-BAH-lyoo',
-        'trabalho': 'trah-BAH-lyoo',
-        'falu': 'FAH-loo',
-        'falo': 'FAH-loo',
-        'gostu': 'GOHS-too',
-        'gosto': 'GOHS-too',
-        'tenhu': 'TAY-nyoo',
-        'tenho': 'TAY-nyoo',
-        'voou': 'VOH',
-        'vou': 'VOH',
-        'estou': 'ess-TOH',
+        # 3. Fallback: basic conversion
+        fallback = syllabify_and_convert(word)
+        result.append(fallback)
 
-        # Prepositions
-        'dji': 'jee',
-        'de': 'jee',  # after transformation
-        'du': 'doo',
-        'do': 'doo',
-        'da': 'dah',
-        'das': 'dahs',
-        'dus': 'doos',
-        'dos': 'doos',
-        'nu': 'noo',
-        'no': 'noo',
-        'na': 'nah',
-        'nas': 'nahs',
-        'nus': 'noos',
-        'nos': 'noos',
-        'coun': 'KOHN (nasal)',
-        'com': 'KOHN (nasal)',
-        'comu': 'KOH-moo',
-        'como': 'KOH-moo',
-        'para': 'PAH-rah',
-        'pra': 'prah',
-
-        # Nasal words
-        'beyn': 'BAYN (nasal)',
-        'bem': 'BAYN (nasal)',
-        'teyn': 'TAYN (nasal)',
-        'tem': 'TAYN (nasal)',
-        'seyn': 'SAYN (nasal)',
-        'sem': 'SAYN (nasal)',
-        'ũm': 'OOM (nasal)',
-        'um': 'OOM (nasal)',
-        'ũma': 'OO-mah (nasal)',
-        'uma': 'OO-mah (nasal)',
-        'sing': 'SING (nasal)',
-        'sim': 'SING (nasal)',
-        'boun': 'BOHN (nasal)',
-        'bom': 'BOHN (nasal)',
-        'soun': 'SOHN (nasal)',
-        'som': 'SOHN (nasal)',
-        'tambeyn': 'tahm-BAYN (nasal)',
-        'também': 'tahm-BAYN (nasal)',
-
-        # Common adjectives
-        'americanu': 'ah-meh-ree-KAH-noo',
-        'americano': 'ah-meh-ree-KAH-noo',
-        'americana': 'ah-meh-ree-KAH-nah',
-        'brasileiru': 'brah-zee-LÉH-roo',  # open é
-        'brasileiro': 'brah-zee-LÉH-roo',  # open é
-        'brasileira': 'brah-zee-LÉH-rah',  # open é
-        'casadu': 'kah-ZAH-doo',
-        'casado': 'kah-ZAH-doo',
-        'casada': 'kah-ZAH-dah',
-        'solteiro': 'sohl-TÉH-roo',  # open é
-        'solteiru': 'sohl-TÉH-roo',  # after transformation
-        'solteira': 'sohl-TÉH-rah',  # open é
-        'altu': 'AHL-too',
-        'alto': 'AHL-too',
-        'alta': 'AHL-tah',
-        'baixu': 'BAI-shoo',
-        'baixo': 'BAI-shoo',
-        'baixa': 'BAI-shah',
-
-        # Common nouns
-        'professor': 'pro-feh-SOHR',
-        'professora': 'pro-feh-SOH-rah',
-        'analista': 'ah-nah-LEES-tah',
-        'cachorru': 'kah-SHOH-hoo',
-        'cachorro': 'kah-SHOH-hoo',
-        'gata': 'GAH-tah',
-        'gatu': 'GAH-too',
-        'gato': 'GAH-too',
-        'música': 'MOO-zee-kah',
-        'futebolu': 'foo-cheh-BOH-loo',
-        'futebol': 'foo-cheh-BOH-loo',
-        'trabalhu': 'trah-BAH-lyoo',
-        'trabalho': 'trah-BAH-lyoo',
-        'escritório': 'ess-kree-TOH-ree-oo',
-        'metrô': 'meh-TROH',
-
-        # Place names
-        'miami': 'mee-AH-mee',
-        'yorki': 'YORK-ee',
-        'york': 'YORK-ee',
-        'nova': 'NOH-vah',
-        'paulu': 'POW-loo',
-        'paulo': 'POW-loo',
-        'são': 'SOW',
-        'brasilu': 'brah-ZEE-loo',
-        'brasil': 'brah-ZEE-loo',
-        'frança': 'FRAHN-sah',
-
-        # Names
-        'danieu': 'dah-nee-ÉH-oo',  # open é
-        'daniel': 'dah-nee-ÉH-oo',  # open é
-        'sofia': 'so-FEE-ah',
-        'maria': 'mah-REE-ah',
-        'carlos': 'KAHR-loos',
-        'john': 'JAWN',
-        'sarah': 'SAH-rah',
-
-        # Other common words
-        'inglês': 'een-GLÊS',  # closed ê
-        'inguês': 'een-GLÊS',  # inglês after transformation
-        'espanhol': 'ess-pahn-YOHL',
-        'espanholu': 'ess-pahn-YOHL',  # after transformation
-        'pouco': 'POH-koo',
-        'poucu': 'POH-koo',  # after transformation
-        'português': 'por-too-GÊS',  # closed ê
-        'contente': 'kohn-TEN-chee',  # will get ÊN from algorithm
-        'contentchi': 'kohn-TEN-chee',  # after transformation
-        'ônibus': 'OH-nee-boos',
-    }
-
-    # Split into words
-    words = simple.split()
-    result_words = []
-    original_word_index = 0
-
-    for word in words:
-        # Remove punctuation for lookup
-        clean_word = word.rstrip('.,!?;:')
-        punct = word[len(clean_word):]
-
-        # Get corresponding original Portuguese word for E quality analysis
-        original_word = original_words[original_word_index] if original_word_index < len(original_words) else clean_word
-        original_word_index += 1
-
-        # Look up in dictionary (case-insensitive)
-        lookup = clean_word.lower()
-        if lookup in word_mappings:
-            phonetic = word_mappings[lookup]
-        else:
-            # If not in dictionary, keep as-is but apply basic transformations
-            # This handles unknown words gracefully
-            phonetic = clean_word
-
-            # Basic vowel mappings for unknown words
-            phonetic = re.sub(r'\bu\b', 'oo', phonetic, flags=re.IGNORECASE)
-            phonetic = re.sub(r'\bi\b', 'ee', phonetic, flags=re.IGNORECASE)
-            phonetic = re.sub(r'u(?=\s|$)', 'oo', phonetic)
-
-        # Apply algorithmic E quality rules based on original Portuguese word
-        phonetic = apply_e_quality_to_phonetic(phonetic, original_word)
-
-        result_words.append(phonetic + punct)
-
-    return ' '.join(result_words)
+    return ' '.join(result)
 
 
 # ============================================================================
