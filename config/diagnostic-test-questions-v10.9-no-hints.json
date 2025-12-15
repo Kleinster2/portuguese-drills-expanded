@@ -174,7 +174,7 @@
       "unit": 3,
       "unitName": "Definite Articles",
       "phase": 1,
-      "type": "quickCheck",
+      "type": "contextualizedProduction",
       "en": "The boy is here",
       "question": "Complete the sentence:",
       "template": "__ menino está aqui",
@@ -184,14 +184,15 @@
         "As",
         "O"
       ],
-      "correct": "O"
+      "correct": "O",
+      "scenario": "Pointing someone out at a gathering."
     },
     {
       "id": 7,
       "unit": 3,
       "unitName": "Definite Articles",
       "phase": 1,
-      "type": "quickCheck",
+      "type": "contextualizedProduction",
       "en": "The girls are here",
       "question": "Complete the sentence:",
       "template": "__ meninas estão aqui",
@@ -201,14 +202,15 @@
         "O",
         "A"
       ],
-      "correct": "As"
+      "correct": "As",
+      "scenario": "Letting a friend know their guests arrived."
     },
     {
       "id": 8,
       "unit": 4,
       "unitName": "Indefinite Articles",
       "phase": 1,
-      "type": "quickCheck",
+      "type": "contextualizedProduction",
       "en": "I have a dog",
       "question": "Complete the sentence:",
       "template": "Eu tenho __ cachorro",
@@ -219,14 +221,15 @@
         "uns",
         "(blank)"
       ],
-      "correct": "um"
+      "correct": "um",
+      "scenario": "Chatting about pets with a new neighbor."
     },
     {
       "id": 9,
       "unit": 4,
       "unitName": "Indefinite Articles",
       "phase": 1,
-      "type": "quickCheck",
+      "type": "contextualizedProduction",
       "en": "I have some pens",
       "question": "Complete the sentence:",
       "template": "Eu tenho __ canetas",
@@ -237,14 +240,15 @@
         "umas",
         "(blank)"
       ],
-      "correct": "umas"
+      "correct": "umas",
+      "scenario": "Offering to lend supplies to a classmate."
     },
     {
       "id": 10,
       "unit": 4,
       "unitName": "Indefinite Articles",
       "phase": 1,
-      "type": "quickCheck",
+      "type": "contextualizedProduction",
       "en": "I have some books",
       "question": "Complete the sentence:",
       "template": "Eu tenho __ livros",
@@ -255,7 +259,8 @@
         "umas",
         "(blank)"
       ],
-      "correct": "uns"
+      "correct": "uns",
+      "scenario": "Responding to someone looking for reading material."
     },
     {
       "id": 12,
@@ -306,42 +311,38 @@
       "unit": 6,
       "unitName": "Adjective Agreement",
       "phase": 1,
-      "type": "quickCheck",
-      "en": "The tall boy",
+      "type": "contextualizedProduction",
+      "en": "The excited boy",
       "question": "Complete the sentence:",
       "template": "O menino __",
       "chips": [
-        "pequeno",
-        "grandes",
-        "pequena",
-        "alto",
-        "altas",
-        "grande",
-        "altos",
-        "alta"
+        "animado",
+        "animada",
+        "animados",
+        "animadas",
+        "triste"
       ],
-      "correct": "alto"
+      "correct": "animado",
+      "scenario": "Describing someone at a birthday party."
     },
     {
       "id": 15,
       "unit": 6,
       "unitName": "Adjective Agreement",
       "phase": 1,
-      "type": "quickCheck",
-      "en": "The tall girls",
+      "type": "contextualizedProduction",
+      "en": "The excited girls",
       "question": "Complete the sentence:",
       "template": "As meninas __",
       "chips": [
-        "pequenas",
-        "grande",
-        "alto",
-        "alta",
-        "grandes",
-        "altas",
-        "altos",
-        "pequenos"
+        "animadas",
+        "animado",
+        "animada",
+        "animados",
+        "tristes"
       ],
-      "correct": "altas"
+      "correct": "animadas",
+      "scenario": "Describing friends before a concert."
     },
     {
       "id": 17,
@@ -6703,7 +6704,7 @@
       "unit": 3,
       "unitName": "Definite Articles",
       "phase": 1,
-      "type": "quickCheck",
+      "type": "contextualizedProduction",
       "en": "The boys are there",
       "question": "Complete the sentence:",
       "template": "__ meninos estão ali",
@@ -6713,14 +6714,15 @@
         "O",
         "A"
       ],
-      "correct": "Os"
+      "correct": "Os",
+      "scenario": "Directing someone's attention across the room."
     },
     {
       "id": 486,
       "unit": 3,
       "unitName": "Definite Articles",
       "phase": 1,
-      "type": "quickCheck",
+      "type": "contextualizedProduction",
       "en": "The girl is my friend",
       "question": "Complete the sentence:",
       "template": "__ menina é minha amiga",
@@ -6730,7 +6732,8 @@
         "As",
         "Os"
       ],
-      "correct": "A"
+      "correct": "A",
+      "scenario": "Introducing someone you know."
     },
     {
       "id": 487,
