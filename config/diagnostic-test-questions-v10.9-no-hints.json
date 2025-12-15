@@ -562,7 +562,7 @@
         "(blank)"
       ],
       "correct": "no",
-      "scenario": "A friend asks where the party is."
+      "scenario": "A friend asks where you are."
     },
     {
       "id": 42,
@@ -3026,7 +3026,7 @@
     {
       "id": 200,
       "unit": 90,
-      "unitName": "Existential Ter (There is/are)",
+      "unitName": "Existential Ter (BP)",
       "phase": 1,
       "type": "contextualizedProduction",
       "en": "There are many parks here",
@@ -3034,14 +3034,9 @@
       "template": "__ muitos parques aqui",
       "chips": [
         "Tem",
-        "Há",
         "Têm",
-        "Havia",
-        "Houve",
         "Ter",
-        "Haver",
         "Tem-se",
-        "Haja",
         "Teria"
       ],
       "correct": "Tem",
@@ -3788,7 +3783,7 @@
     {
       "id": 338,
       "unit": 11,
-      "unitName": "Ser - Permanent Characteristics",
+      "unitName": "Verb Ser",
       "phase": 1,
       "type": "contextualizedProduction",
       "en": "My father is a doctor",
@@ -3828,7 +3823,7 @@
     {
       "id": 340,
       "unit": 11,
-      "unitName": "Ser - Origin",
+      "unitName": "Verb Ser",
       "phase": 1,
       "type": "contextualizedProduction",
       "en": "This wine is from Portugal",
@@ -3868,7 +3863,7 @@
     {
       "id": 342,
       "unit": 11,
-      "unitName": "Ser - Characteristics",
+      "unitName": "Verb Ser",
       "phase": 2,
       "type": "contextualizedProduction",
       "en": "She is intelligent",
@@ -3908,7 +3903,7 @@
     {
       "id": 344,
       "unit": 11,
-      "unitName": "Ser - Time/Date",
+      "unitName": "Verb Ser",
       "phase": 2,
       "type": "contextualizedProduction",
       "en": "Today is Monday",
@@ -6406,6 +6401,648 @@
       ],
       "correct": "devolver",
       "scenario": "You're planning to exchange a purchase."
+    },
+    {
+      "id": 469,
+      "unit": 91,
+      "unitName": "Present Progressive (Gerund)",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I am eating",
+      "question": "Complete the sentence:",
+      "template": "Eu estou __",
+      "chips": [
+        "comendo",
+        "comer",
+        "como",
+        "comi",
+        "comido"
+      ],
+      "correct": "comendo",
+      "scenario": "You're explaining why you can't answer the door."
+    },
+    {
+      "id": 470,
+      "unit": 91,
+      "unitName": "Present Progressive (Gerund)",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I am sleeping",
+      "question": "Complete the sentence:",
+      "template": "Eu estou __",
+      "chips": [
+        "dormindo",
+        "dormir",
+        "durmo",
+        "dormi",
+        "dormido"
+      ],
+      "correct": "dormindo",
+      "scenario": "Your roommate asks why you're still in bed."
+    },
+    {
+      "id": 471,
+      "unit": 91,
+      "unitName": "Present Progressive (Gerund)",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "The children are playing",
+      "question": "Complete the sentence:",
+      "template": "As crianças estão __",
+      "chips": [
+        "brincando",
+        "brincar",
+        "brincam",
+        "brincaram",
+        "brincado"
+      ],
+      "correct": "brincando",
+      "scenario": "Describing what's happening outside."
+    },
+    {
+      "id": 472,
+      "unit": 15,
+      "unitName": "Negation with Não",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "I don't want coffee",
+      "question": "Complete the sentence:",
+      "template": "Eu __ café",
+      "chips": [
+        "não quero",
+        "quero não",
+        "não quer",
+        "quer não",
+        "quero"
+      ],
+      "correct": "não quero",
+      "scenario": "Your friend offers you coffee but you don't want any."
+    },
+    {
+      "id": 473,
+      "unit": 15,
+      "unitName": "Negation with Não",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "He doesn't live here",
+      "question": "Complete the sentence:",
+      "template": "Ele __ aqui",
+      "chips": [
+        "não mora",
+        "mora não",
+        "não moro",
+        "moro não",
+        "mora"
+      ],
+      "correct": "não mora",
+      "scenario": "Explaining that your brother doesn't live here."
+    },
+    {
+      "id": 474,
+      "unit": 15,
+      "unitName": "Negation with Não",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "I don't have a car",
+      "question": "Complete the sentence:",
+      "template": "Eu __ carro",
+      "chips": [
+        "não tenho",
+        "tenho não",
+        "não tem",
+        "tem não",
+        "tenho"
+      ],
+      "correct": "não tenho",
+      "scenario": "Someone asks if you have a car."
+    },
+    {
+      "id": 475,
+      "unit": 49,
+      "unitName": "Telling Time",
+      "phase": 3,
+      "type": "contextualizedProduction",
+      "en": "It's one o'clock",
+      "question": "Complete the sentence:",
+      "template": "__ uma hora",
+      "chips": [
+        "São",
+        "É",
+        "Está",
+        "Tem",
+        "Estão"
+      ],
+      "correct": "É",
+      "scenario": "Someone asks you what time it is. It's 1:00."
+    },
+    {
+      "id": 476,
+      "unit": 49,
+      "unitName": "Telling Time",
+      "phase": 3,
+      "type": "contextualizedProduction",
+      "en": "It's two thirty",
+      "question": "Complete the sentence:",
+      "template": "São duas __",
+      "chips": [
+        "horas",
+        "e meia",
+        "em ponto",
+        "e quinze",
+        "menos quinze"
+      ],
+      "correct": "e meia",
+      "scenario": "Checking the time before a meeting. It's 2:30."
+    },
+    {
+      "id": 477,
+      "unit": 49,
+      "unitName": "Telling Time",
+      "phase": 3,
+      "type": "contextualizedProduction",
+      "en": "It's ten fifteen",
+      "question": "Complete the sentence:",
+      "template": "São dez __",
+      "chips": [
+        "horas",
+        "e meia",
+        "e quinze",
+        "em ponto",
+        "menos quinze"
+      ],
+      "correct": "e quinze",
+      "scenario": "You're late. It's 10:15."
+    },
+    {
+      "id": 478,
+      "unit": 90,
+      "unitName": "Existential Ter (BP)",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "There is a bathroom here",
+      "question": "Complete the sentence:",
+      "template": "__ um banheiro aqui",
+      "chips": [
+        "Tem",
+        "É",
+        "Está",
+        "Têm",
+        "Ter"
+      ],
+      "correct": "Tem",
+      "scenario": "Showing a friend around your apartment."
+    },
+    {
+      "id": 479,
+      "unit": 90,
+      "unitName": "Existential Ter (BP)",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "There is no milk",
+      "question": "Complete the sentence:",
+      "template": "Não __ leite",
+      "chips": [
+        "tem",
+        "é",
+        "está",
+        "têm",
+        "são"
+      ],
+      "correct": "tem",
+      "scenario": "Explaining why you can't make a cake."
+    },
+    {
+      "id": 480,
+      "unit": 90,
+      "unitName": "Existential Ter (BP)",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "There are many people here",
+      "question": "Complete the sentence:",
+      "template": "__ muitas pessoas aqui",
+      "chips": [
+        "Tem",
+        "São",
+        "Estão",
+        "Têm",
+        "Ter"
+      ],
+      "correct": "Tem",
+      "scenario": "Describing a restaurant."
+    },
+    {
+      "id": 481,
+      "unit": 90,
+      "unitName": "Existential Haver (formal)",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "There were problems",
+      "question": "Complete the sentence:",
+      "template": "__ problemas",
+      "chips": [
+        "Houve",
+        "Teve",
+        "Foi",
+        "Estava",
+        "Haviam"
+      ],
+      "correct": "Houve",
+      "scenario": "Writing a formal report."
+    },
+    {
+      "id": 482,
+      "unit": 90,
+      "unitName": "Existential Haver (formal)",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "There are funds available",
+      "question": "Complete the sentence:",
+      "template": "__ fundos disponíveis",
+      "chips": [
+        "Há",
+        "Tem",
+        "São",
+        "Estão",
+        "Haver"
+      ],
+      "correct": "Há",
+      "scenario": "Formal notice about resources."
+    },
+    {
+      "id": 483,
+      "unit": 1,
+      "unitName": "Identity Statements",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "She is a teacher",
+      "question": "Complete the sentence:",
+      "template": "Ela __ professora",
+      "chips": [
+        "é",
+        "sou",
+        "está",
+        "são",
+        "era"
+      ],
+      "correct": "é",
+      "scenario": "Introducing your friend to someone."
+    },
+    {
+      "id": 484,
+      "unit": 1,
+      "unitName": "Identity Statements",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "My name is João",
+      "question": "Complete the sentence:",
+      "template": "Meu nome __ João",
+      "chips": [
+        "é",
+        "sou",
+        "está",
+        "são",
+        "estou"
+      ],
+      "correct": "é",
+      "scenario": "Telling someone your name."
+    },
+    {
+      "id": 485,
+      "unit": 3,
+      "unitName": "Definite Articles",
+      "phase": 1,
+      "type": "quickCheck",
+      "en": "The boys are there",
+      "question": "Complete the sentence:",
+      "template": "__ meninos estão ali",
+      "chips": [
+        "Os",
+        "As",
+        "O",
+        "A"
+      ],
+      "correct": "Os"
+    },
+    {
+      "id": 486,
+      "unit": 3,
+      "unitName": "Definite Articles",
+      "phase": 1,
+      "type": "quickCheck",
+      "en": "The girl is my friend",
+      "question": "Complete the sentence:",
+      "template": "__ menina é minha amiga",
+      "chips": [
+        "A",
+        "O",
+        "As",
+        "Os"
+      ],
+      "correct": "A"
+    },
+    {
+      "id": 487,
+      "unit": 6,
+      "unitName": "Verb Ter",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "She has a dog",
+      "question": "Complete the sentence:",
+      "template": "Ela __ um cachorro",
+      "chips": [
+        "tem",
+        "tenho",
+        "têm",
+        "temos",
+        "ter"
+      ],
+      "correct": "tem",
+      "scenario": "Describing your friend's pet."
+    },
+    {
+      "id": 488,
+      "unit": 6,
+      "unitName": "Verb Ter",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "We have a big house",
+      "question": "Complete the sentence:",
+      "template": "Nós __ uma casa grande",
+      "chips": [
+        "temos",
+        "tenho",
+        "tem",
+        "têm",
+        "ter"
+      ],
+      "correct": "temos",
+      "scenario": "Talking about your family."
+    },
+    {
+      "id": 489,
+      "unit": 5,
+      "unitName": "Location Prepositions",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "I am at school",
+      "question": "Complete the sentence:",
+      "template": "Eu estou __ escola",
+      "chips": [
+        "na",
+        "no",
+        "em",
+        "a",
+        "o"
+      ],
+      "correct": "na",
+      "scenario": "Telling someone where you are."
+    },
+    {
+      "id": 490,
+      "unit": 5,
+      "unitName": "Location Prepositions",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "I work on weekends",
+      "question": "Complete the sentence:",
+      "template": "Eu trabalho __ fins de semana",
+      "chips": [
+        "nos",
+        "nas",
+        "no",
+        "na",
+        "em"
+      ],
+      "correct": "nos",
+      "scenario": "Describing your work schedule."
+    },
+    {
+      "id": 491,
+      "unit": 5,
+      "unitName": "Location Prepositions",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "The flowers are in the windows",
+      "question": "Complete the sentence:",
+      "template": "As flores estão __ janelas",
+      "chips": [
+        "nas",
+        "nos",
+        "na",
+        "no",
+        "em"
+      ],
+      "correct": "nas",
+      "scenario": "Describing where the flowers are."
+    },
+    {
+      "id": 492,
+      "unit": 2,
+      "unitName": "Origin with Contractions",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "I am coming from the beach",
+      "question": "Complete the sentence:",
+      "template": "Eu estou vindo __ praia",
+      "chips": [
+        "da",
+        "do",
+        "das",
+        "dos",
+        "de"
+      ],
+      "correct": "da",
+      "scenario": "Telling a friend where you're arriving from."
+    },
+    {
+      "id": 493,
+      "unit": 2,
+      "unitName": "Origin with Contractions",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "He is from the United States",
+      "question": "Complete the sentence:",
+      "template": "Ele é __ Estados Unidos",
+      "chips": [
+        "dos",
+        "das",
+        "do",
+        "da",
+        "de"
+      ],
+      "correct": "dos",
+      "scenario": "Introducing someone's nationality."
+    },
+    {
+      "id": 494,
+      "unit": 6,
+      "unitName": "Adjective Agreement",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "The tired girl",
+      "question": "Complete the sentence:",
+      "template": "A menina __",
+      "chips": [
+        "cansada",
+        "cansado",
+        "cansadas",
+        "cansados",
+        "triste"
+      ],
+      "correct": "cansada",
+      "scenario": "Describing how someone feels."
+    },
+    {
+      "id": 495,
+      "unit": 6,
+      "unitName": "Adjective Agreement",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "The tired boys",
+      "question": "Complete the sentence:",
+      "template": "Os meninos __",
+      "chips": [
+        "cansados",
+        "cansado",
+        "cansadas",
+        "cansada",
+        "tristes"
+      ],
+      "correct": "cansados",
+      "scenario": "Describing a group after a long day."
+    },
+    {
+      "id": 496,
+      "unit": 11,
+      "unitName": "Verb Ficar",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "We stay at the beach house during summer",
+      "question": "Complete the sentence:",
+      "template": "Nós __ na casa de praia durante o verão",
+      "chips": [
+        "ficamos",
+        "fico",
+        "fica",
+        "ficam",
+        "estamos"
+      ],
+      "correct": "ficamos",
+      "scenario": "Talking about vacation plans."
+    },
+    {
+      "id": 497,
+      "unit": 27,
+      "unitName": "Verb Gostar de",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I like him a lot",
+      "question": "Complete the sentence:",
+      "template": "Eu gosto muito __",
+      "chips": [
+        "dele",
+        "de ele",
+        "do ele",
+        "ele",
+        "de"
+      ],
+      "correct": "dele",
+      "scenario": "Your friend asks about your new colleague."
+    },
+    {
+      "id": 498,
+      "unit": 27,
+      "unitName": "Verb Gostar de",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I like her",
+      "question": "Complete the sentence:",
+      "template": "Eu gosto __",
+      "chips": [
+        "dela",
+        "de ela",
+        "da ela",
+        "ela",
+        "de"
+      ],
+      "correct": "dela",
+      "scenario": "A friend asks about your new teacher."
+    },
+    {
+      "id": 499,
+      "unit": 24,
+      "unitName": "Regular -ER Verbs",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "He runs every morning",
+      "question": "Complete the sentence:",
+      "template": "Ele __ todas as manhãs",
+      "chips": [
+        "corre",
+        "corro",
+        "correm",
+        "corremos",
+        "correr"
+      ],
+      "correct": "corre",
+      "scenario": "Observing your neighbor's routine."
+    },
+    {
+      "id": 500,
+      "unit": 24,
+      "unitName": "Regular -ER Verbs",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "We learn something new every day",
+      "question": "Complete the sentence:",
+      "template": "Nós __ algo novo todos os dias",
+      "chips": [
+        "aprendemos",
+        "aprendo",
+        "aprende",
+        "aprendem",
+        "aprender"
+      ],
+      "correct": "aprendemos",
+      "scenario": "Describing family habits."
+    },
+    {
+      "id": 501,
+      "unit": 28,
+      "unitName": "Regular -IR Verbs",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "She watches the news every night",
+      "question": "Complete the sentence:",
+      "template": "Ela __ o jornal todas as noites",
+      "chips": [
+        "assiste",
+        "assisto",
+        "assistem",
+        "assistimos",
+        "assistir"
+      ],
+      "correct": "assiste",
+      "scenario": "Talking about a friend's evening routine."
+    },
+    {
+      "id": 502,
+      "unit": 28,
+      "unitName": "Regular -IR Verbs",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "We share the expenses",
+      "question": "Complete the sentence:",
+      "template": "Nós __ as despesas",
+      "chips": [
+        "dividimos",
+        "divido",
+        "divide",
+        "dividem",
+        "dividir"
+      ],
+      "correct": "dividimos",
+      "scenario": "Explaining a group decision."
     }
   ]
 }
