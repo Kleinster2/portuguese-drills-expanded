@@ -182,7 +182,9 @@
         "Os",
         "A",
         "As",
-        "O"
+        "O",
+        "Um",
+        "Uma"
       ],
       "correct": "O",
       "scenario": "Pointing someone out at a gathering."
@@ -200,7 +202,9 @@
         "Os",
         "As",
         "O",
-        "A"
+        "A",
+        "Um",
+        "Uma"
       ],
       "correct": "As",
       "scenario": "Letting a friend know their guests arrived."
@@ -2187,7 +2191,9 @@
         "cansado",
         "triste",
         "animado",
-        "feliz"
+        "feliz",
+        "preocupado",
+        "ocupado"
       ],
       "correct": "feliz",
       "scenario": "Sharing your mood in a message after good news."
@@ -3106,38 +3112,6 @@
       ],
       "correct": "para",
       "scenario": "Giving a gift to a friend."
-    },
-    {
-      "id": 208,
-      "unit": 95,
-      "unitName": "Gender Agreement",
-      "phase": 2,
-      "type": "comprehension",
-      "en": "If a Portuguese noun ends in '-e', what is the rule for its gender?",
-      "question": "Choose the best description:",
-      "options": [
-        "It is always Masculine.",
-        "It is always Feminine.",
-        "It can be either Masculine or Feminine.",
-        "It depends on the plural form."
-      ],
-      "correct": "It can be either Masculine or Feminine."
-    },
-    {
-      "id": 209,
-      "unit": 95,
-      "unitName": "Gender Agreement",
-      "phase": 2,
-      "type": "comprehension",
-      "en": "If a Portuguese noun ends in '-l', what is the rule for its gender?",
-      "question": "Choose the best description:",
-      "options": [
-        "It is always Masculine.",
-        "It is always Feminine.",
-        "It can be either Masculine or Feminine.",
-        "It depends on the singular form."
-      ],
-      "correct": "It can be either Masculine or Feminine."
     },
     {
       "id": 212,
@@ -6712,7 +6686,9 @@
         "Os",
         "As",
         "O",
-        "A"
+        "A",
+        "Um",
+        "Uma"
       ],
       "correct": "Os",
       "scenario": "Directing someone's attention across the room."
@@ -6730,7 +6706,9 @@
         "A",
         "O",
         "As",
-        "Os"
+        "Os",
+        "Um",
+        "Uma"
       ],
       "correct": "A",
       "scenario": "Introducing someone you know."
