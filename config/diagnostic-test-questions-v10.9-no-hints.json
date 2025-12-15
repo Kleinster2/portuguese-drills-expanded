@@ -260,7 +260,7 @@
     {
       "id": 12,
       "unit": 5,
-      "unitName": "Location with Estar",
+      "unitName": "Verb Estar",
       "phase": 1,
       "type": "contextualizedProduction",
       "en": "I am in the office",
@@ -284,7 +284,7 @@
     {
       "id": 13,
       "unit": 5,
-      "unitName": "Location with Estar",
+      "unitName": "Verb Estar",
       "phase": 1,
       "type": "contextualizedProduction",
       "en": "I am in Brazil",
@@ -350,7 +350,7 @@
     {
       "id": 17,
       "unit": 7,
-      "unitName": "Basic Verbs - Morar",
+      "unitName": "Basic -AR Verbs",
       "phase": 1,
       "type": "contextualizedProduction",
       "en": "I live in Rio",
@@ -374,7 +374,7 @@
     {
       "id": 19,
       "unit": 8,
-      "unitName": "Basic Verbs - Falar",
+      "unitName": "Basic -AR Verbs",
       "phase": 1,
       "type": "contextualizedProduction",
       "en": "I speak Spanish",
@@ -398,7 +398,7 @@
     {
       "id": 21,
       "unit": 9,
-      "unitName": "Basic Verbs - Trabalhar",
+      "unitName": "Basic -AR Verbs",
       "phase": 1,
       "type": "contextualizedProduction",
       "en": "I work at the hospital",
@@ -423,7 +423,7 @@
     {
       "id": 23,
       "unit": 10,
-      "unitName": "Basic Verbs - Estudar",
+      "unitName": "Basic -AR Verbs",
       "phase": 1,
       "type": "contextualizedProduction",
       "en": "I study English",
@@ -2577,7 +2577,7 @@
     {
       "id": 268,
       "unit": 79,
-      "unitName": "Todo vs Tudo",
+      "unitName": "Tudo vs Todo",
       "phase": 4,
       "type": "contextualizedProduction",
       "en": "Everyone came",
@@ -3122,7 +3122,7 @@
     {
       "id": 208,
       "unit": 95,
-      "unitName": "Gender Concepts",
+      "unitName": "Gender Agreement",
       "phase": 2,
       "type": "comprehension",
       "en": "If a Portuguese noun ends in '-e', what is the rule for its gender?",
@@ -3138,7 +3138,7 @@
     {
       "id": 209,
       "unit": 95,
-      "unitName": "Gender Concepts",
+      "unitName": "Gender Agreement",
       "phase": 2,
       "type": "comprehension",
       "en": "If a Portuguese noun ends in '-l', what is the rule for its gender?",
@@ -3195,33 +3195,9 @@
       "scenario": "Complaining about recent price increases at the market."
     },
     {
-      "id": 215,
-      "unit": 100,
-      "unitName": "Verbs Saber vs Conhecer",
-      "phase": 2,
-      "type": "contextualizedProduction",
-      "en": "Do you know Maria?",
-      "question": "Complete the sentence:",
-      "template": "Você __ a Maria?",
-      "chips": [
-        "conhece",
-        "sabe",
-        "saber",
-        "conhecer",
-        "conheceis",
-        "sabem",
-        "saberia",
-        "conheça",
-        "saiba",
-        "souber"
-      ],
-      "correct": "conhece",
-      "scenario": "Asking a friend if they have met the new student."
-    },
-    {
       "id": 216,
       "unit": 79,
-      "unitName": "Todo vs Tudo",
+      "unitName": "Tudo vs Todo",
       "phase": 3,
       "type": "contextualizedProduction",
       "en": "I ate everything",
@@ -3242,7 +3218,7 @@
     {
       "id": 217,
       "unit": 79,
-      "unitName": "Todo vs Tudo",
+      "unitName": "Tudo vs Todo",
       "phase": 3,
       "type": "contextualizedProduction",
       "en": "I read the whole book",
@@ -3305,7 +3281,7 @@
     {
       "id": 220,
       "unit": 97,
-      "unitName": "Verbs of Movement (Ir vs Vir)",
+      "unitName": "Ir vs Vir",
       "phase": 2,
       "type": "contextualizedProduction",
       "en": "I am going there now (to where you are).",
@@ -3471,7 +3447,7 @@
     {
       "id": 309,
       "unit": 56,
-      "unitName": "Demonstratives - Esse/Essa",
+      "unitName": "Demonstratives",
       "phase": 3,
       "type": "contextualizedProduction",
       "en": "That pen near you is mine",
@@ -3491,7 +3467,7 @@
     {
       "id": 310,
       "unit": 56,
-      "unitName": "Demonstratives - Aquele/Aquela",
+      "unitName": "Demonstratives",
       "phase": 3,
       "type": "contextualizedProduction",
       "en": "That car over there is expensive",
@@ -3792,7 +3768,7 @@
     {
       "id": 331,
       "unit": 16,
-      "unitName": "Gender Agreement - Nouns",
+      "unitName": "Gender Agreement",
       "phase": 1,
       "type": "contextualizedProduction",
       "en": "The car is new",
@@ -3832,7 +3808,7 @@
     {
       "id": 339,
       "unit": 12,
-      "unitName": "Estar - Temporary States",
+      "unitName": "Verb Estar",
       "phase": 1,
       "type": "contextualizedProduction",
       "en": "The soup is hot",
@@ -3872,7 +3848,7 @@
     {
       "id": 341,
       "unit": 12,
-      "unitName": "Estar - Location",
+      "unitName": "Verb Estar",
       "phase": 1,
       "type": "contextualizedProduction",
       "en": "The keys are on the table",
@@ -3912,7 +3888,7 @@
     {
       "id": 343,
       "unit": 12,
-      "unitName": "Estar - Emotions",
+      "unitName": "Verb Estar",
       "phase": 2,
       "type": "contextualizedProduction",
       "en": "I am happy today",
@@ -3952,7 +3928,7 @@
     {
       "id": 345,
       "unit": 12,
-      "unitName": "Estar - Progressive Action",
+      "unitName": "Verb Estar",
       "phase": 2,
       "type": "contextualizedProduction",
       "en": "He is working now",
@@ -4072,7 +4048,7 @@
     {
       "id": 351,
       "unit": 20,
-      "unitName": "Demonstrative Pronouns",
+      "unitName": "Demonstratives",
       "phase": 2,
       "type": "contextualizedProduction",
       "en": "This book here is mine",
@@ -4092,7 +4068,7 @@
     {
       "id": 352,
       "unit": 20,
-      "unitName": "Demonstrative Pronouns",
+      "unitName": "Demonstratives",
       "phase": 2,
       "type": "contextualizedProduction",
       "en": "That pen there (near you) is yours",
@@ -4112,7 +4088,7 @@
     {
       "id": 353,
       "unit": 20,
-      "unitName": "Demonstrative Pronouns",
+      "unitName": "Demonstratives",
       "phase": 2,
       "type": "contextualizedProduction",
       "en": "That building over there is new",
@@ -4132,7 +4108,7 @@
     {
       "id": 354,
       "unit": 20,
-      "unitName": "Demonstrative Pronouns",
+      "unitName": "Demonstratives",
       "phase": 2,
       "type": "contextualizedProduction",
       "en": "What is this here?",
@@ -4152,7 +4128,7 @@
     {
       "id": 355,
       "unit": 20,
-      "unitName": "Demonstrative Pronouns",
+      "unitName": "Demonstratives",
       "phase": 2,
       "type": "contextualizedProduction",
       "en": "What is that there (near you)?",
@@ -4172,7 +4148,7 @@
     {
       "id": 356,
       "unit": 20,
-      "unitName": "Demonstrative Pronouns",
+      "unitName": "Demonstratives",
       "phase": 3,
       "type": "contextualizedProduction",
       "en": "I don't want this one here, I want that one over there",
