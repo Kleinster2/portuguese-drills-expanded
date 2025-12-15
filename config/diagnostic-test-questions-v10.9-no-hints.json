@@ -7038,6 +7038,291 @@
       ],
       "correct": "dividimos",
       "scenario": "Explaining a group decision."
+    },
+    {
+      "id": 503,
+      "unit": 32,
+      "unitName": "Common Question Words",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "Who called?",
+      "question": "Complete the sentence:",
+      "template": "__ ligou?",
+      "chips": [
+        "Quem",
+        "O que",
+        "Onde",
+        "Quando",
+        "Como"
+      ],
+      "correct": "Quem",
+      "scenario": "The phone rang while you were away."
+    },
+    {
+      "id": 504,
+      "unit": 32,
+      "unitName": "Common Question Words",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "Why are you sad?",
+      "question": "Complete the sentence:",
+      "template": "__ você está triste?",
+      "chips": [
+        "Por que",
+        "O que",
+        "Quem",
+        "Como",
+        "Quando"
+      ],
+      "correct": "Por que",
+      "scenario": "Your friend looks upset and you want to understand."
+    },
+    {
+      "id": 505,
+      "unit": 32,
+      "unitName": "Common Question Words",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "When do you arrive?",
+      "question": "Complete the sentence:",
+      "template": "__ você chega?",
+      "chips": [
+        "Quando",
+        "Onde",
+        "Como",
+        "Quem",
+        "Por que"
+      ],
+      "correct": "Quando",
+      "scenario": "Planning to meet a friend."
+    },
+    {
+      "id": 506,
+      "unit": 35,
+      "unitName": "Emotions and Feelings",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I am nervous",
+      "question": "Complete the sentence:",
+      "template": "Eu estou __",
+      "chips": [
+        "nervoso",
+        "feliz",
+        "triste",
+        "calmo",
+        "com fome"
+      ],
+      "correct": "nervoso",
+      "scenario": "Before a big presentation."
+    },
+    {
+      "id": 507,
+      "unit": 35,
+      "unitName": "Emotions and Feelings",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "She is sad",
+      "question": "Complete the sentence:",
+      "template": "Ela está __",
+      "chips": [
+        "triste",
+        "feliz",
+        "nervosa",
+        "animada",
+        "calma"
+      ],
+      "correct": "triste",
+      "scenario": "After receiving bad news."
+    },
+    {
+      "id": 508,
+      "unit": 35,
+      "unitName": "Emotions and Feelings",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "We are worried",
+      "question": "Complete the sentence:",
+      "template": "Nós estamos __",
+      "chips": [
+        "preocupados",
+        "felizes",
+        "nervosos",
+        "calmos",
+        "tristes"
+      ],
+      "correct": "preocupados",
+      "scenario": "Waiting for important test results."
+    },
+    {
+      "id": 509,
+      "unit": 36,
+      "unitName": "Locations and Directions",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "The keys are on top of the table",
+      "question": "Complete the sentence:",
+      "template": "As chaves estão __ mesa",
+      "chips": [
+        "em cima da",
+        "embaixo da",
+        "perto da",
+        "ao lado da",
+        "dentro da"
+      ],
+      "correct": "em cima da",
+      "scenario": "Describing where you left your keys."
+    },
+    {
+      "id": 510,
+      "unit": 36,
+      "unitName": "Locations and Directions",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "The pharmacy is next to the bank",
+      "question": "Complete the sentence:",
+      "template": "A farmácia fica __ banco",
+      "chips": [
+        "ao lado do",
+        "em cima do",
+        "embaixo do",
+        "perto do",
+        "dentro do"
+      ],
+      "correct": "ao lado do",
+      "scenario": "Giving directions to a friend."
+    },
+    {
+      "id": 511,
+      "unit": 36,
+      "unitName": "Locations and Directions",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "The cat is behind the sofa",
+      "question": "Complete the sentence:",
+      "template": "O gato está __ sofá",
+      "chips": [
+        "atrás do",
+        "na frente do",
+        "embaixo do",
+        "em cima do",
+        "ao lado do"
+      ],
+      "correct": "atrás do",
+      "scenario": "Explaining where the cat is hiding."
+    },
+    {
+      "id": 512,
+      "unit": 37,
+      "unitName": "Daily Activities Verbs",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I wake up at 7am",
+      "question": "Complete the sentence:",
+      "template": "Eu __ às 7h",
+      "chips": [
+        "acordo",
+        "durmo",
+        "almoço",
+        "janto",
+        "saio"
+      ],
+      "correct": "acordo",
+      "scenario": "Describing your morning routine."
+    },
+    {
+      "id": 513,
+      "unit": 37,
+      "unitName": "Daily Activities Verbs",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I have lunch at noon",
+      "question": "Complete the sentence:",
+      "template": "Eu __ ao meio-dia",
+      "chips": [
+        "almoço",
+        "janto",
+        "acordo",
+        "durmo",
+        "saio"
+      ],
+      "correct": "almoço",
+      "scenario": "Talking about your lunch break."
+    },
+    {
+      "id": 514,
+      "unit": 37,
+      "unitName": "Daily Activities Verbs",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "We have dinner at 8pm",
+      "question": "Complete the sentence:",
+      "template": "Nós __ às 20h",
+      "chips": [
+        "jantamos",
+        "almoçamos",
+        "dormimos",
+        "acordamos",
+        "saímos"
+      ],
+      "correct": "jantamos",
+      "scenario": "Describing evening habits."
+    },
+    {
+      "id": 515,
+      "unit": 38,
+      "unitName": "Frequency Adverbs",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I always drink coffee in the morning",
+      "question": "Complete the sentence:",
+      "template": "Eu __ tomo café de manhã",
+      "chips": [
+        "sempre",
+        "nunca",
+        "às vezes",
+        "raramente",
+        "geralmente"
+      ],
+      "correct": "sempre",
+      "scenario": "Talking about your coffee habit."
+    },
+    {
+      "id": 516,
+      "unit": 38,
+      "unitName": "Frequency Adverbs",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I never eat fast food",
+      "question": "Complete the sentence:",
+      "template": "Eu __ como fast food",
+      "chips": [
+        "nunca",
+        "sempre",
+        "às vezes",
+        "frequentemente",
+        "geralmente"
+      ],
+      "correct": "nunca",
+      "scenario": "Explaining your diet choices."
+    },
+    {
+      "id": 517,
+      "unit": 38,
+      "unitName": "Frequency Adverbs",
+      "phase": 2,
+      "type": "contextualizedProduction",
+      "en": "I usually sleep late on Saturdays",
+      "question": "Complete the sentence:",
+      "template": "Eu __ durmo tarde aos sábados",
+      "chips": [
+        "geralmente",
+        "nunca",
+        "sempre",
+        "raramente",
+        "às vezes"
+      ],
+      "correct": "geralmente",
+      "scenario": "Describing your typical weekend."
     }
   ]
 }
