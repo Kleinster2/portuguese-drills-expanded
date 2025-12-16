@@ -83,7 +83,7 @@
       "unitName": "Identity Statements",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I am American (m/f)",
+      "en": "I am American (m/f).",
       "question": "Complete the sentence:",
       "template": "Eu __ americano/americana",
       "chips": [
@@ -107,7 +107,7 @@
       "unitName": "Identity Statements",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I am a doctor",
+      "en": "I am a doctor.",
       "question": "Complete the sentence:",
       "template": "Eu __ médico",
       "chips": [
@@ -130,7 +130,7 @@
       "unitName": "Origin with Contractions",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I come from the market",
+      "en": "I come from the market.",
       "question": "Complete the sentence:",
       "template": "Eu venho __ mercado",
       "chips": [
@@ -151,7 +151,7 @@
       "unitName": "Origin with Contractions",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I am from the Philippines",
+      "en": "I am from the Philippines.",
       "question": "Complete the sentence:",
       "template": "Eu sou __ Filipinas",
       "chips": [
@@ -175,7 +175,7 @@
       "unitName": "Definite Articles",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "The young man is here",
+      "en": "The young man is here.",
       "question": "Complete the sentence:",
       "template": "__ rapaz está aqui",
       "chips": [
@@ -195,7 +195,7 @@
       "unitName": "Definite Articles",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "The young women are here",
+      "en": "The young women are here.",
       "question": "Complete the sentence:",
       "template": "__ moças estão aqui",
       "chips": [
@@ -215,7 +215,7 @@
       "unitName": "Indefinite Articles",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I have a dog",
+      "en": "I have a dog.",
       "question": "Complete the sentence:",
       "template": "Eu tenho __ cachorro",
       "chips": [
@@ -223,6 +223,8 @@
         "um",
         "umas",
         "uns",
+        "o",
+        "a",
         "(blank)"
       ],
       "correct": "um",
@@ -234,7 +236,7 @@
       "unitName": "Indefinite Articles",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I have some pens",
+      "en": "I have some pens.",
       "question": "Complete the sentence:",
       "template": "Eu tenho __ canetas",
       "chips": [
@@ -242,6 +244,8 @@
         "um",
         "uma",
         "umas",
+        "os",
+        "as",
         "(blank)"
       ],
       "correct": "umas",
@@ -253,7 +257,7 @@
       "unitName": "Indefinite Articles",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I have some books",
+      "en": "I have some books.",
       "question": "Complete the sentence:",
       "template": "Eu tenho __ livros",
       "chips": [
@@ -261,6 +265,8 @@
         "um",
         "uma",
         "umas",
+        "os",
+        "as",
         "(blank)"
       ],
       "correct": "uns",
@@ -272,7 +278,7 @@
       "unitName": "Verb Estar",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I am in the office",
+      "en": "I am in the office.",
       "question": "Complete the sentence:",
       "template": "Eu __ no escritório",
       "chips": [
@@ -296,7 +302,7 @@
       "unitName": "Verb Estar",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I am tired",
+      "en": "I am tired.",
       "question": "Complete the sentence:",
       "template": "Eu __ cansado",
       "chips": [
@@ -316,7 +322,7 @@
       "unitName": "Adjective Agreement",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "The excited young man",
+      "en": "The excited young man.",
       "question": "Complete the sentence:",
       "template": "O rapaz __",
       "chips": [
@@ -335,7 +341,7 @@
       "unitName": "Adjective Agreement",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "The excited young women",
+      "en": "The excited young women.",
       "question": "Complete the sentence:",
       "template": "As moças __",
       "chips": [
@@ -354,7 +360,7 @@
       "unitName": "Basic -AR Verbs",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I live in Rio",
+      "en": "I live in Rio.",
       "question": "Complete the sentence:",
       "template": "Eu __ no Rio",
       "chips": [
@@ -378,7 +384,7 @@
       "unitName": "Basic -AR Verbs",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I speak Spanish",
+      "en": "I speak Spanish.",
       "question": "Complete the sentence:",
       "template": "Eu __ espanhol",
       "chips": [
@@ -402,7 +408,7 @@
       "unitName": "Basic -AR Verbs",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I work at the hospital",
+      "en": "I work at the hospital.",
       "question": "Complete the sentence:",
       "template": "Eu trabalho __ hospital",
       "chips": [
@@ -427,7 +433,7 @@
       "unitName": "Basic -AR Verbs",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I study English",
+      "en": "I study English.",
       "question": "Complete the sentence:",
       "template": "Eu __ inglês",
       "chips": [
@@ -498,7 +504,7 @@
       "unitName": "Verb Estar",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I am happy",
+      "en": "I am happy.",
       "question": "Complete the sentence:",
       "template": "Eu __ feliz",
       "chips": [
@@ -522,7 +528,7 @@
       "unitName": "Verb Estar",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I am at the market",
+      "en": "I am at the market.",
       "question": "Complete the sentence:",
       "template": "Eu __ no mercado",
       "chips": [
@@ -546,7 +552,7 @@
       "unitName": "Location Prepositions",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I am at work",
+      "en": "I am at work.",
       "question": "Complete the sentence:",
       "template": "Eu estou __ trabalho",
       "chips": [
@@ -571,7 +577,7 @@
       "unitName": "Verb Ter",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I have an apartment",
+      "en": "I have an apartment.",
       "question": "Complete the sentence:",
       "template": "Eu __ um apartamento",
       "chips": [
@@ -595,7 +601,7 @@
       "unitName": "Verb Ter",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I have two brothers",
+      "en": "I have two brothers.",
       "question": "Complete the sentence:",
       "template": "Eu __ dois irmãos",
       "chips": [
@@ -619,7 +625,7 @@
       "unitName": "Verb Precisar de",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I need water",
+      "en": "I need water.",
       "question": "Complete the sentence:",
       "template": "Eu preciso __ água",
       "chips": [
@@ -644,7 +650,7 @@
       "unitName": "Verb Precisar de",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I need the car",
+      "en": "I need the car.",
       "question": "Complete the sentence:",
       "template": "Eu preciso __ carro",
       "chips": [
@@ -717,7 +723,7 @@
       "unitName": "Present Tense Verb Forms",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "You speak Portuguese",
+      "en": "You speak Portuguese.",
       "question": "Complete the sentence:",
       "template": "Você __ português",
       "chips": [
@@ -741,7 +747,7 @@
       "unitName": "Present Tense Verb Forms",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Every day, he eats bread",
+      "en": "Every day, he eats bread.",
       "question": "Complete the sentence:",
       "template": "Ele __ pão",
       "chips": [
@@ -765,7 +771,7 @@
       "unitName": "Present Tense Verb Forms",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She lives here",
+      "en": "She lives here.",
       "question": "Complete the sentence:",
       "template": "Ela __ aqui",
       "chips": [
@@ -789,7 +795,7 @@
       "unitName": "Present Tense Verb Forms",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We speak Portuguese",
+      "en": "We speak Portuguese.",
       "question": "Complete the sentence:",
       "template": "Nós __ português",
       "chips": [
@@ -813,7 +819,7 @@
       "unitName": "Present Tense Verb Forms",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We live here",
+      "en": "We live here.",
       "question": "Complete the sentence:",
       "template": "Nós __ aqui",
       "chips": [
@@ -837,7 +843,7 @@
       "unitName": "Present Tense Verb Forms",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We drink coffee every morning",
+      "en": "We drink coffee every morning.",
       "question": "Complete the sentence:",
       "template": "Nós __ café todas as manhãs",
       "chips": [
@@ -861,7 +867,7 @@
       "unitName": "Verb Gostar de",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I like music",
+      "en": "I like music.",
       "question": "Complete the sentence:",
       "template": "Eu gosto __ música",
       "chips": [
@@ -885,7 +891,7 @@
       "unitName": "Verb Gostar de",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Every week, I like to study",
+      "en": "Every week, I like to study.",
       "question": "Complete the sentence:",
       "template": "Eu gosto __ estudar",
       "chips": [
@@ -909,7 +915,7 @@
       "unitName": "Regular -IR Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I open the window",
+      "en": "I open the window.",
       "question": "Complete the sentence:",
       "template": "Eu __ a janela",
       "chips": [
@@ -933,7 +939,7 @@
       "unitName": "Regular -IR Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I cut the bread",
+      "en": "I cut the bread.",
       "question": "Complete the sentence:",
       "template": "Eu __ o pão",
       "chips": [
@@ -957,7 +963,7 @@
       "unitName": "Future with Ir + Infinitive",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Next year, i am going to study portuguese",
+      "en": "Next year, i am going to study portuguese.",
       "question": "Complete the sentence:",
       "template": "Eu vou __ português",
       "chips": [
@@ -981,7 +987,7 @@
       "unitName": "Future with Ir + Infinitive",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Tomorrow, i am going to stay at home",
+      "en": "Tomorrow, i am going to stay at home.",
       "question": "Complete the sentence:",
       "template": "Eu vou __ em casa",
       "chips": [
@@ -1005,7 +1011,7 @@
       "unitName": "Present Tense Verb Forms",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "You all speak Portuguese",
+      "en": "You all speak Portuguese.",
       "question": "Complete the sentence:",
       "template": "Vocês __ português",
       "chips": [
@@ -1029,7 +1035,7 @@
       "unitName": "Present Tense Verb Forms",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "They live here",
+      "en": "They live here.",
       "question": "Complete the sentence:",
       "template": "Eles __ aqui",
       "chips": [
@@ -1053,7 +1059,7 @@
       "unitName": "Present Tense Verb Forms",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "They drink juice after class",
+      "en": "They drink juice after class.",
       "question": "Complete the sentence:",
       "template": "Elas __ suco depois da aula",
       "chips": [
@@ -1099,7 +1105,7 @@
       "unitName": "Possessive Adjectives",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "My father is a lawyer",
+      "en": "My father is a lawyer.",
       "question": "Complete the sentence:",
       "template": "__ pai é advogado",
       "chips": [
@@ -1121,7 +1127,7 @@
       "unitName": "Possessive Adjectives",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "My friends live in São Paulo",
+      "en": "My friends live in São Paulo.",
       "question": "Complete the sentence:",
       "template": "__ amigas moram em São Paulo",
       "chips": [
@@ -1142,7 +1148,7 @@
       "unitName": "Possessive Adjectives",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Your phone is on the table",
+      "en": "Your phone is on the table.",
       "question": "Complete the sentence:",
       "template": "__ telefone está na mesa",
       "chips": [
@@ -1164,7 +1170,7 @@
       "unitName": "Possessive Adjectives",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Your keys are in the bag",
+      "en": "Your keys are in the bag.",
       "question": "Complete the sentence:",
       "template": "__ chaves estão na bolsa",
       "chips": [
@@ -1185,7 +1191,7 @@
       "unitName": "Possessive Adjectives",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Our friend lives here",
+      "en": "Our friend lives here.",
       "question": "Complete the sentence:",
       "template": "__ amigo mora aqui",
       "chips": [
@@ -1207,7 +1213,7 @@
       "unitName": "Possessive Adjectives",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Our questions are difficult",
+      "en": "Our questions are difficult.",
       "question": "Complete the sentence:",
       "template": "__ perguntas são difíceis",
       "chips": [
@@ -1228,7 +1234,7 @@
       "unitName": "Preterite Tense - Regular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I spoke Portuguese",
+      "en": "I spoke Portuguese.",
       "question": "Complete the sentence:",
       "template": "Eu __ português",
       "chips": [
@@ -1252,7 +1258,7 @@
       "unitName": "Preterite Tense - Regular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "You lived here",
+      "en": "You lived here.",
       "question": "Complete the sentence:",
       "template": "Você __ aqui",
       "chips": [
@@ -1276,7 +1282,7 @@
       "unitName": "Preterite Tense - Regular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We traveled",
+      "en": "We traveled.",
       "question": "Complete the sentence:",
       "template": "Nós __",
       "chips": [
@@ -1300,7 +1306,7 @@
       "unitName": "Preterite Tense - Regular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Yesterday, i drank water",
+      "en": "Yesterday, i drank water.",
       "question": "Complete the sentence:",
       "template": "Eu __ água",
       "chips": [
@@ -1324,7 +1330,7 @@
       "unitName": "Preterite Tense - Regular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I opened the door",
+      "en": "I opened the door.",
       "question": "Complete the sentence:",
       "template": "Eu __ a porta",
       "chips": [
@@ -1348,7 +1354,7 @@
       "unitName": "Preterite Tense - Regular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We lived here",
+      "en": "We lived here.",
       "question": "Complete the sentence:",
       "template": "Nós __ aqui",
       "chips": [
@@ -1372,7 +1378,7 @@
       "unitName": "Preterite Tense - Irregular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Yesterday, I went to the park",
+      "en": "Yesterday, I went to the park.",
       "question": "Complete the sentence:",
       "template": "Eu __ ao parque",
       "chips": [
@@ -1396,7 +1402,7 @@
       "unitName": "Preterite Tense - Irregular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "The trip was amazing",
+      "en": "The trip was amazing.",
       "question": "Complete the sentence:",
       "template": "A viagem __ incrível",
       "chips": [
@@ -1420,7 +1426,7 @@
       "unitName": "Preterite Tense - Irregular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Yesterday, we went there",
+      "en": "Yesterday, we went there.",
       "question": "Complete the sentence:",
       "template": "Nós __ lá",
       "chips": [
@@ -1443,7 +1449,7 @@
       "unitName": "Preterite Tense - Irregular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Yesterday, I was busy all day",
+      "en": "Yesterday, I was busy all day.",
       "question": "Complete the sentence:",
       "template": "Ontem, eu __ ocupado o dia todo",
       "chips": [
@@ -1467,7 +1473,7 @@
       "unitName": "Preterite Tense - Irregular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I had time",
+      "en": "I had time.",
       "question": "Complete the sentence:",
       "template": "Eu __ tempo",
       "chips": [
@@ -1491,7 +1497,7 @@
       "unitName": "Preterite Tense - Irregular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We had luck",
+      "en": "We had luck.",
       "question": "Complete the sentence:",
       "template": "Nós __ sorte",
       "chips": [
@@ -1515,7 +1521,7 @@
       "unitName": "Preterite Tense - Irregular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I said everything",
+      "en": "I said everything.",
       "question": "Complete the sentence:",
       "template": "Eu __ tudo",
       "chips": [
@@ -1539,7 +1545,7 @@
       "unitName": "Preterite Tense - Irregular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I brought the book",
+      "en": "I brought the book.",
       "question": "Complete the sentence:",
       "template": "Eu __ o livro",
       "chips": [
@@ -1563,7 +1569,7 @@
       "unitName": "Preterite Tense - Irregular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Yesterday, we did that",
+      "en": "Yesterday, we did that.",
       "question": "Complete the sentence:",
       "template": "Nós __ isso",
       "chips": [
@@ -1587,7 +1593,7 @@
       "unitName": "Preterite Tense - Irregular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I came here",
+      "en": "I came here.",
       "question": "Complete the sentence:",
       "template": "Eu __ aqui",
       "chips": [
@@ -1611,7 +1617,7 @@
       "unitName": "Preterite Tense - Irregular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Yesterday, I saw that",
+      "en": "Yesterday, I saw that.",
       "question": "Complete the sentence:",
       "template": "Eu __ isso",
       "chips": [
@@ -1635,7 +1641,7 @@
       "unitName": "Preterite Tense - Irregular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I gave a book",
+      "en": "I gave a book.",
       "question": "Complete the sentence:",
       "template": "Eu __ um livro",
       "chips": [
@@ -1659,7 +1665,7 @@
       "unitName": "Irregular Preterite - Poder/Pôr/Saber/Querer",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I wanted to go",
+      "en": "I wanted to go.",
       "question": "Complete the sentence:",
       "template": "Eu __ ir",
       "chips": [
@@ -1683,7 +1689,7 @@
       "unitName": "Irregular Preterite - Poder/Pôr/Saber/Querer",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I found out about that",
+      "en": "I found out about that.",
       "question": "Complete the sentence:",
       "template": "Eu __ disso",
       "chips": [
@@ -1707,7 +1713,7 @@
       "unitName": "Irregular Preterite - Poder/Pôr/Saber/Querer",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I was able to travel",
+      "en": "I was able to travel.",
       "question": "Complete the sentence:",
       "template": "Eu __ viajar",
       "chips": [
@@ -1731,7 +1737,7 @@
       "unitName": "Irregular Preterite - Poder/Pôr/Saber/Querer",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I put the book there",
+      "en": "I put the book there.",
       "question": "Complete the sentence:",
       "template": "Eu __ o livro lá",
       "chips": [
@@ -1755,7 +1761,7 @@
       "unitName": "Contractions with Preposition A",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I go to the bank",
+      "en": "I go to the bank.",
       "question": "Complete the sentence:",
       "template": "Eu vou __ banco",
       "chips": [
@@ -1780,7 +1786,7 @@
       "unitName": "Contractions with Preposition A",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I go to school",
+      "en": "I go to school.",
       "question": "Complete the sentence:",
       "template": "Eu vou __ escola",
       "chips": [
@@ -1804,7 +1810,7 @@
       "unitName": "Contractions with Preposition A",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I go to the banks",
+      "en": "I go to the banks.",
       "question": "Complete the sentence:",
       "template": "Eu vou __ bancos",
       "chips": [
@@ -1829,7 +1835,7 @@
       "unitName": "Contractions with Preposition A",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I go to the schools",
+      "en": "I go to the schools.",
       "question": "Complete the sentence:",
       "template": "Eu vou __ escolas",
       "chips": [
@@ -1854,7 +1860,7 @@
       "unitName": "Prepositions Por and Para",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I am going to work",
+      "en": "I am going to work.",
       "question": "Complete the sentence:",
       "template": "Eu vou __ o trabalho",
       "chips": [
@@ -1879,7 +1885,7 @@
       "unitName": "Prepositions Por and Para",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I walk through the street",
+      "en": "I walk through the street.",
       "question": "Complete the sentence:",
       "template": "Eu ando __ rua",
       "chips": [
@@ -2000,7 +2006,7 @@
       "unitName": "Imperfect Tense",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "In the past, i used to come here always",
+      "en": "In the past, i used to come here always.",
       "question": "Complete the sentence:",
       "template": "Eu __ aqui sempre",
       "chips": [
@@ -2024,7 +2030,7 @@
       "unitName": "Comparatives",
       "phase": 3,
       "type": "quickCheck",
-      "en": "My brother is more patient than me",
+      "en": "My brother is more patient than me.",
       "question": "Complete the sentence:",
       "template": "Meu irmão é __ paciente __ eu",
       "chips": [
@@ -2046,7 +2052,7 @@
       "unitName": "Comparatives",
       "phase": 3,
       "type": "quickCheck",
-      "en": "Actually, Mary is less busy than John",
+      "en": "Actually, Mary is less busy than John.",
       "question": "Complete the sentence:",
       "template": "Maria é __ ocupada __ João",
       "chips": [
@@ -2068,7 +2074,7 @@
       "unitName": "Comparatives",
       "phase": 3,
       "type": "quickCheck",
-      "en": "This restaurant is as good as that one",
+      "en": "This restaurant is as good as that one.",
       "question": "Complete the sentence:",
       "template": "Este restaurante é __ bom __ aquele",
       "chips": [
@@ -2090,7 +2096,7 @@
       "unitName": "Superlatives",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "He is the fastest runner",
+      "en": "He is the fastest runner.",
       "question": "Complete the sentence:",
       "template": "Ele é __ corredor mais rápido",
       "chips": [
@@ -2112,7 +2118,7 @@
       "unitName": "Superlatives",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "The least tall",
+      "en": "The least tall.",
       "question": "Complete the phrase:",
       "template": "__ menos alto",
       "chips": [
@@ -2134,7 +2140,7 @@
       "unitName": "Telling Time",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "It's five o'clock",
+      "en": "It's five o'clock.",
       "question": "Complete the sentence:",
       "template": "São cinco __",
       "chips": [
@@ -2156,7 +2162,7 @@
       "unitName": "Emotions and Feelings",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "I am happy",
+      "en": "I am happy.",
       "question": "Complete the sentence:",
       "template": "Eu estou __",
       "chips": [
@@ -2176,7 +2182,7 @@
       "unitName": "Locations and Directions",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "The book is under the table",
+      "en": "The book is under the table.",
       "question": "Complete the sentence:",
       "template": "O livro está __ mesa",
       "chips": [
@@ -2198,7 +2204,7 @@
       "unitName": "Daily Activities Verbs",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "I go to bed at 10pm",
+      "en": "I go to bed at 10pm.",
       "question": "Complete the sentence:",
       "template": "Eu me __ às 10h",
       "chips": [
@@ -2222,7 +2228,7 @@
       "unitName": "Frequency Adverbs",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "I sometimes eat meat",
+      "en": "I sometimes eat meat.",
       "question": "Complete the sentence:",
       "template": "Eu __ como carne",
       "chips": [
@@ -2265,7 +2271,7 @@
       "unitName": "Demonstratives",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "This book is interesting",
+      "en": "This book is interesting.",
       "question": "How do you say 'This book is interesting'?",
       "template": "__ livro é interessante",
       "correct": "Este",
@@ -2290,7 +2296,7 @@
       "unitName": "Demonstratives",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "That bag is expensive",
+      "en": "That bag is expensive.",
       "question": "How do you say 'That bag is expensive'?",
       "template": "__ bolsa é cara",
       "correct": "Essa",
@@ -2314,7 +2320,7 @@
       "unitName": "Demonstratives",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "That building is tall",
+      "en": "That building is tall.",
       "question": "How do you say 'That building is tall'?",
       "template": "__ prédio é alto",
       "correct": "Aquele",
@@ -2339,7 +2345,7 @@
       "unitName": "Future Tense",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I will travel tomorrow",
+      "en": "I will travel tomorrow.",
       "question": "Complete the sentence:",
       "template": "Eu __ amanhã",
       "chips": [
@@ -2361,7 +2367,7 @@
       "unitName": "Future Tense",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "We will be there",
+      "en": "We will be there.",
       "question": "Complete the sentence:",
       "template": "Nós __ lá",
       "chips": [
@@ -2385,7 +2391,7 @@
       "unitName": "Future Tense",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I will do everything I can",
+      "en": "I will do everything I can.",
       "question": "Complete the sentence:",
       "template": "Eu __ tudo o que puder",
       "chips": [
@@ -2409,7 +2415,7 @@
       "unitName": "Conditional Tense",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I would speak Portuguese",
+      "en": "I would speak Portuguese.",
       "question": "Complete the sentence:",
       "template": "Eu __ português",
       "chips": [
@@ -2433,7 +2439,7 @@
       "unitName": "Conditional Tense",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I would do that",
+      "en": "I would do that.",
       "question": "Complete the sentence:",
       "template": "Eu __ isso",
       "chips": [
@@ -2457,7 +2463,7 @@
       "unitName": "Conditional Tense",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "We would go there",
+      "en": "We would go there.",
       "question": "Complete the sentence:",
       "template": "Nós __ lá",
       "chips": [
@@ -2480,7 +2486,7 @@
       "unitName": "Crase",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I'm going to the beach",
+      "en": "I'm going to the beach.",
       "question": "Complete the sentence:",
       "template": "Eu vou __ praia",
       "chips": [
@@ -2505,7 +2511,7 @@
       "unitName": "Crase",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I go at two o'clock",
+      "en": "I go at two o'clock.",
       "question": "Complete the sentence:",
       "template": "Eu vou __ duas horas",
       "chips": [
@@ -2530,7 +2536,7 @@
       "unitName": "Tudo vs Todo",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "Everyone came",
+      "en": "Everyone came.",
       "question": "Complete the sentence:",
       "template": "__ mundo veio",
       "chips": [
@@ -2554,7 +2560,7 @@
       "unitName": "Commands/Imperative Mood",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "Sign here, please",
+      "en": "Sign here, please.",
       "question": "Complete the sentence:",
       "template": "__ aqui, por favor",
       "chips": [
@@ -2578,7 +2584,7 @@
       "unitName": "Commands/Imperative Mood",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "Fasten your seatbelt",
+      "en": "Fasten your seatbelt.",
       "question": "Complete the sentence:",
       "template": "__ o cinto de segurança",
       "chips": [
@@ -2602,7 +2608,7 @@
       "unitName": "Commands/Imperative Mood",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "Open the door! (vocês)",
+      "en": "Open the door! (vocês).",
       "question": "Complete the sentence:",
       "template": "__ a porta!",
       "chips": [
@@ -2626,7 +2632,7 @@
       "unitName": "Present Subjunctive - Regular Verbs",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I'm worried, but I hope you eat",
+      "en": "I'm worried, but I hope you eat.",
       "question": "Complete the sentence:",
       "template": "Espero que você __",
       "chips": [
@@ -2650,7 +2656,7 @@
       "unitName": "Present Subjunctive - Regular Verbs",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I'm worried, but I hope you leave",
+      "en": "I'm worried, but I hope you leave.",
       "question": "Complete the sentence:",
       "template": "Espero que você __",
       "chips": [
@@ -2674,7 +2680,7 @@
       "unitName": "Present Subjunctive - Regular Verbs",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "Maybe we travel",
+      "en": "Maybe we travel.",
       "question": "Complete the sentence:",
       "template": "Talvez nós __",
       "chips": [
@@ -2698,7 +2704,7 @@
       "unitName": "Present Subjunctive - Irregular Verbs",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I'm worried, but I hope you are happy",
+      "en": "I'm worried, but I hope you are happy.",
       "question": "Complete the sentence:",
       "template": "Espero que você __ feliz",
       "chips": [
@@ -2722,7 +2728,7 @@
       "unitName": "Present Subjunctive - Irregular Verbs",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I hope you are well",
+      "en": "I hope you are well.",
       "question": "Complete the sentence:",
       "template": "Espero que você __ bem",
       "chips": [
@@ -2742,7 +2748,7 @@
       "unitName": "Present Subjunctive - Irregular Verbs",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I'm worried, but I hope you go",
+      "en": "I'm worried, but I hope you go.",
       "question": "Complete the sentence:",
       "template": "Espero que você __",
       "chips": [
@@ -2766,7 +2772,7 @@
       "unitName": "Present Subjunctive - Irregular Verbs",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "Maybe I have time",
+      "en": "Maybe I have time.",
       "question": "Complete the sentence:",
       "template": "Talvez eu __ tempo",
       "chips": [
@@ -2790,7 +2796,7 @@
       "unit": 84,
       "unitName": "Imperfect Subjunctive",
       "type": "contextualizedProduction",
-      "en": "If I had money",
+      "en": "If I had money.",
       "question": "Complete the sentence:",
       "template": "Se eu __ dinheiro",
       "chips": [
@@ -2812,7 +2818,7 @@
       "unit": 84,
       "unitName": "Imperfect Subjunctive + Conditional",
       "type": "contextualizedProduction",
-      "en": "I would eat more vegetables",
+      "en": "I would eat more vegetables.",
       "question": "Complete the sentence:",
       "template": "Eu __ mais legumes",
       "chips": [
@@ -2834,7 +2840,7 @@
       "unitName": "Imperfect Subjunctive + Conditional",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "If I were there, I would do things differently",
+      "en": "If I were there, I would do things differently.",
       "question": "Complete the sentence:",
       "template": "Se eu estivesse lá, eu __ as coisas de forma diferente",
       "chips": [
@@ -2855,7 +2861,7 @@
       "unitName": "Future Subjunctive",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "When you arrive",
+      "en": "When you arrive.",
       "question": "Complete the sentence:",
       "template": "Quando você __",
       "chips": [
@@ -2879,7 +2885,7 @@
       "unitName": "Future Subjunctive",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "If you have time",
+      "en": "If you have time.",
       "question": "Complete the sentence:",
       "template": "Se você __ tempo",
       "chips": [
@@ -2903,7 +2909,7 @@
       "unitName": "Future Subjunctive",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "When we can",
+      "en": "When we can.",
       "question": "Complete the sentence:",
       "template": "Quando nós __",
       "chips": [
@@ -2927,7 +2933,7 @@
       "unitName": "Colloquial Brazilian Portuguese",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "You are going (colloquial)",
+      "en": "You are going (colloquial).",
       "question": "Complete the colloquial sentence:",
       "template": "Cê __ indo",
       "chips": [
@@ -2951,7 +2957,7 @@
       "unitName": "Advanced Por/Para & Idioms",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "Forever",
+      "en": "Forever.",
       "question": "Complete the phrase:",
       "template": "__ sempre",
       "chips": [
@@ -2975,7 +2981,7 @@
       "unitName": "Existential Ter (BP)",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "There are many parks here",
+      "en": "There are many parks here.",
       "question": "Complete the sentence:",
       "template": "__ muitos parques aqui",
       "chips": [
@@ -2994,7 +3000,7 @@
       "unitName": "Present Progressive (Gerund)",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I am working right now",
+      "en": "I am working right now.",
       "question": "Complete the sentence:",
       "template": "Eu estou __ agora",
       "chips": [
@@ -3018,7 +3024,7 @@
       "unitName": "Comparisons of Equality",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "This car is as fast as that one",
+      "en": "This car is as fast as that one.",
       "question": "Complete the sentence:",
       "template": "Este carro é __ rápido quanto aquele",
       "chips": [
@@ -3042,7 +3048,7 @@
       "unitName": "Prepositions Por and Para",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "This is for you",
+      "en": "This is for you.",
       "question": "Complete the sentence:",
       "template": "Isto é __ você",
       "chips": [
@@ -3066,7 +3072,7 @@
       "unitName": "Negation with Não",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I do not speak English",
+      "en": "I do not speak English.",
       "question": "Complete the sentence:",
       "template": "Eu __ inglês",
       "chips": [
@@ -3109,7 +3115,7 @@
       "unitName": "Tudo vs Todo",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "I ate everything",
+      "en": "I ate everything.",
       "question": "Complete the sentence:",
       "template": "Eu comi __",
       "chips": [
@@ -3130,7 +3136,7 @@
       "unitName": "Tudo vs Todo",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "I read the whole book",
+      "en": "I read the whole book.",
       "question": "Complete the sentence:",
       "template": "Eu li __ o livro",
       "chips": [
@@ -3259,7 +3265,7 @@
       "unitName": "Relative Pronouns",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "The book that I bought is interesting",
+      "en": "The book that I bought is interesting.",
       "question": "Complete the sentence:",
       "template": "O livro __ eu comprei é interessante",
       "chips": [
@@ -3279,7 +3285,7 @@
       "unitName": "Relative Pronouns",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "The woman that works here is my aunt",
+      "en": "The woman that works here is my aunt.",
       "question": "Complete the sentence:",
       "template": "A mulher __ trabalha aqui é minha tia",
       "chips": [
@@ -3299,7 +3305,7 @@
       "unitName": "Relative Pronouns",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "The city where I was born is small",
+      "en": "The city where I was born is small.",
       "question": "Complete the sentence:",
       "template": "A cidade __ eu nasci é pequena",
       "chips": [
@@ -3319,7 +3325,7 @@
       "unitName": "Relative Pronouns",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "The person who called is my brother",
+      "en": "The person who called is my brother.",
       "question": "Complete the sentence:",
       "template": "A pessoa __ ligou é meu irmão",
       "chips": [
@@ -3339,7 +3345,7 @@
       "unitName": "Relative Pronouns",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "I don't understand what you said",
+      "en": "I don't understand what you said.",
       "question": "Complete the sentence:",
       "template": "Eu não entendo __ você disse",
       "chips": [
@@ -3359,7 +3365,7 @@
       "unitName": "Demonstratives",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "That pen near you is mine",
+      "en": "That pen near you is mine.",
       "question": "Complete the sentence:",
       "template": "__ caneta é minha",
       "chips": [
@@ -3379,7 +3385,7 @@
       "unitName": "Demonstratives",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "That car over there is expensive",
+      "en": "That car over there is expensive.",
       "question": "Complete the sentence:",
       "template": "__ carro lá é caro",
       "chips": [
@@ -3399,7 +3405,7 @@
       "unitName": "Family Vocabulary",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "My mother is a teacher",
+      "en": "My mother is a teacher.",
       "question": "Complete the sentence:",
       "template": "Minha __ é professora",
       "chips": [
@@ -3419,7 +3425,7 @@
       "unitName": "Family Vocabulary",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "My brother lives in São Paulo",
+      "en": "My brother lives in São Paulo.",
       "question": "Complete the sentence:",
       "template": "Meu __ mora em São Paulo",
       "chips": [
@@ -3439,7 +3445,7 @@
       "unitName": "Imperfect Subjunctive",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "If I were rich, I would travel the world",
+      "en": "If I were rich, I would travel the world.",
       "question": "Complete the sentence:",
       "template": "Se eu __ rico, viajaria pelo mundo",
       "chips": [
@@ -3460,7 +3466,7 @@
       "unitName": "Imperfect Subjunctive",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I wish you were here",
+      "en": "I wish you were here.",
       "question": "Complete the sentence:",
       "template": "Eu queria que você __ aqui",
       "chips": [
@@ -3480,7 +3486,7 @@
       "unitName": "Future Subjunctive",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "When I arrive, I will call you",
+      "en": "When I arrive, I will call you.",
       "question": "Complete the sentence:",
       "template": "Quando eu __, vou te ligar",
       "chips": [
@@ -3500,7 +3506,7 @@
       "unitName": "Future Subjunctive",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "If you want, we can go together",
+      "en": "If you want, we can go together.",
       "question": "Complete the sentence:",
       "template": "Se você __, podemos ir juntos",
       "chips": [
@@ -3520,7 +3526,7 @@
       "unitName": "Direct Object Pronouns",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I see her every day",
+      "en": "I see her every day.",
       "question": "Complete the sentence:",
       "template": "Eu __ vejo todo dia",
       "chips": [
@@ -3540,7 +3546,7 @@
       "unitName": "Direct Object Pronouns",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I bought it yesterday",
+      "en": "I bought it yesterday.",
       "question": "Complete the sentence:",
       "template": "Eu __ comprei ontem",
       "chips": [
@@ -3560,7 +3566,7 @@
       "unitName": "Indirect Object Pronouns",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I gave him the book",
+      "en": "I gave him the book.",
       "question": "Complete the sentence:",
       "template": "Eu __ dei o livro",
       "chips": [
@@ -3580,7 +3586,7 @@
       "unitName": "Indirect Object Pronouns",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She gave the book to me",
+      "en": "She gave the book to me.",
       "question": "Complete the sentence:",
       "template": "Ela deu o livro para __",
       "chips": [
@@ -3620,7 +3626,7 @@
       "unitName": "Pronoun Placement",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "I will call you tomorrow",
+      "en": "I will call you tomorrow.",
       "question": "Complete the sentence:",
       "template": "Eu __ ligo amanhã",
       "chips": [
@@ -3640,7 +3646,7 @@
       "unitName": "Pronoun Placement",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "He helped us a lot",
+      "en": "He helped us a lot.",
       "question": "Complete the sentence:",
       "template": "Ele __ ajudou muito",
       "chips": [
@@ -3660,7 +3666,7 @@
       "unitName": "Direct Object Pronouns",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I love you",
+      "en": "I love you.",
       "question": "Complete the sentence:",
       "template": "Eu __ amo",
       "chips": [
@@ -3680,7 +3686,7 @@
       "unitName": "Gender Agreement",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "The car is new",
+      "en": "The car is new.",
       "question": "Complete the sentence:",
       "template": "__ carro é novo",
       "chips": [
@@ -3700,7 +3706,7 @@
       "unitName": "Verb Ser",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "My father is a doctor",
+      "en": "My father is a doctor.",
       "question": "Complete the sentence:",
       "template": "Meu pai __ médico",
       "chips": [
@@ -3720,7 +3726,7 @@
       "unitName": "Verb Estar",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "The soup is hot",
+      "en": "The soup is hot.",
       "question": "Complete the sentence:",
       "template": "A sopa __ quente",
       "chips": [
@@ -3740,7 +3746,7 @@
       "unitName": "Verb Ser",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "This wine is from Portugal",
+      "en": "This wine is from Portugal.",
       "question": "Complete the sentence:",
       "template": "Este vinho __ de Portugal",
       "chips": [
@@ -3760,7 +3766,7 @@
       "unitName": "Verb Estar",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "The keys are on the table",
+      "en": "The keys are on the table.",
       "question": "Complete the sentence:",
       "template": "As chaves __ na mesa",
       "chips": [
@@ -3780,7 +3786,7 @@
       "unitName": "Verb Ser",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She is intelligent",
+      "en": "She is intelligent.",
       "question": "Complete the sentence:",
       "template": "Ela __ inteligente",
       "chips": [
@@ -3800,7 +3806,7 @@
       "unitName": "Verb Estar",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I am happy today",
+      "en": "I am happy today.",
       "question": "Complete the sentence:",
       "template": "Eu __ feliz hoje",
       "chips": [
@@ -3820,7 +3826,7 @@
       "unitName": "Verb Ser",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Today is Monday",
+      "en": "Today is Monday.",
       "question": "Complete the sentence:",
       "template": "Hoje __ segunda-feira",
       "chips": [
@@ -3840,7 +3846,7 @@
       "unitName": "Verb Estar",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "He is working now",
+      "en": "He is working now.",
       "question": "Complete the sentence:",
       "template": "Ele __ trabalhando agora",
       "chips": [
@@ -3860,7 +3866,7 @@
       "unitName": "Saber vs Conhecer",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I know how to swim",
+      "en": "I know how to swim.",
       "question": "Complete the sentence:",
       "template": "Eu __ nadar",
       "chips": [
@@ -3900,7 +3906,7 @@
       "unitName": "Saber vs Conhecer",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I know the answer",
+      "en": "I know the answer.",
       "question": "Complete the sentence:",
       "template": "Eu __ a resposta",
       "chips": [
@@ -3920,7 +3926,7 @@
       "unitName": "Saber vs Conhecer",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I know this city well",
+      "en": "I know this city well.",
       "question": "Complete the sentence:",
       "template": "Eu __ bem esta cidade",
       "chips": [
@@ -3940,7 +3946,7 @@
       "unitName": "Saber vs Conhecer",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "I don't know where he lives",
+      "en": "I don't know where he lives.",
       "question": "Complete the sentence:",
       "template": "Eu não __ onde ele mora",
       "chips": [
@@ -3960,7 +3966,7 @@
       "unitName": "Demonstratives",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "This book here is mine",
+      "en": "This book here is mine.",
       "question": "Complete the sentence:",
       "template": "__ livro aqui é meu",
       "chips": [
@@ -3980,7 +3986,7 @@
       "unitName": "Demonstratives",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "That pen there (near you) is yours",
+      "en": "That pen there (near you) is yours.",
       "question": "Complete the sentence:",
       "template": "__ caneta aí é sua",
       "chips": [
@@ -4000,7 +4006,7 @@
       "unitName": "Demonstratives",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "That building over there is new",
+      "en": "That building over there is new.",
       "question": "Complete the sentence:",
       "template": "__ prédio lá é novo",
       "chips": [
@@ -4060,7 +4066,7 @@
       "unitName": "Demonstratives",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "I don't want this one here, I want that one over there",
+      "en": "I don't want this one here, I want that one over there.",
       "question": "Complete the sentence:",
       "template": "Não quero este aqui, quero __ lá",
       "chips": [
@@ -4080,7 +4086,7 @@
       "unitName": "Tudo vs Todo",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I work every day",
+      "en": "I work every day.",
       "question": "Complete the sentence:",
       "template": "Eu trabalho __ os dias",
       "chips": [
@@ -4100,7 +4106,7 @@
       "unitName": "Tudo vs Todo",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I read the whole magazine",
+      "en": "I read the whole magazine.",
       "question": "Complete the sentence:",
       "template": "Eu li __ a revista",
       "chips": [
@@ -4120,7 +4126,7 @@
       "unitName": "Tudo vs Todo",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "All the chairs are occupied",
+      "en": "All the chairs are occupied.",
       "question": "Complete the sentence:",
       "template": "__ as cadeiras estão ocupadas",
       "chips": [
@@ -4140,7 +4146,7 @@
       "unitName": "Tudo vs Todo",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Everything is ready",
+      "en": "Everything is ready.",
       "question": "Complete the sentence:",
       "template": "__ está pronto",
       "chips": [
@@ -4160,7 +4166,7 @@
       "unitName": "Tudo vs Todo",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She knows everything about the project",
+      "en": "She knows everything about the project.",
       "question": "Complete the sentence:",
       "template": "Ela sabe __ sobre o projeto",
       "chips": [
@@ -4180,7 +4186,7 @@
       "unitName": "Tudo vs Todo",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I visited every museum",
+      "en": "I visited every museum.",
       "question": "Complete the sentence:",
       "template": "Eu visitei __ museu",
       "chips": [
@@ -4200,7 +4206,7 @@
       "unitName": "Pessoa vs Gente",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We are going to the beach (informal)",
+      "en": "We are going to the beach (informal).",
       "question": "Complete the sentence:",
       "template": "A gente __ para a praia",
       "chips": [
@@ -4220,7 +4226,7 @@
       "unitName": "Pessoa vs Gente",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "There are many people in the room",
+      "en": "There are many people in the room.",
       "question": "Complete the sentence:",
       "template": "Há muitas __ na sala",
       "chips": [
@@ -4240,7 +4246,7 @@
       "unitName": "Pessoa vs Gente",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "There were a lot of people at the party",
+      "en": "There were a lot of people at the party.",
       "question": "Complete the sentence:",
       "template": "Tinha muita __ na festa",
       "chips": [
@@ -4260,7 +4266,7 @@
       "unitName": "Pessoa vs Gente",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "My coworkers left early today",
+      "en": "My coworkers left early today.",
       "question": "Complete the sentence:",
       "template": "__ saiu cedo hoje",
       "chips": [
@@ -4280,7 +4286,7 @@
       "unitName": "Pessoa vs Gente",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We went to the movies yesterday (informal)",
+      "en": "We went to the movies yesterday (informal).",
       "question": "Complete the sentence:",
       "template": "__ foi ao cinema ontem",
       "chips": [
@@ -4300,7 +4306,7 @@
       "unitName": "Pessoa vs Gente",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Only one person knows the password",
+      "en": "Only one person knows the password.",
       "question": "Complete the sentence:",
       "template": "Só uma __ sabe a senha",
       "chips": [
@@ -4320,7 +4326,7 @@
       "unitName": "Bom vs Bem",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She speaks Portuguese well",
+      "en": "She speaks Portuguese well.",
       "question": "Complete the sentence:",
       "template": "Ela fala português __",
       "chips": [
@@ -4340,7 +4346,7 @@
       "unitName": "Bom vs Bem",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "The movie was good",
+      "en": "The movie was good.",
       "question": "Complete the sentence:",
       "template": "O filme foi __",
       "chips": [
@@ -4360,7 +4366,7 @@
       "unitName": "Bom vs Bem",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "The food is good",
+      "en": "The food is good.",
       "question": "Complete the sentence:",
       "template": "A comida está __",
       "chips": [
@@ -4380,7 +4386,7 @@
       "unitName": "Bom vs Bem",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I slept well last night",
+      "en": "I slept well last night.",
       "question": "Complete the sentence:",
       "template": "Eu dormi __ ontem à noite",
       "chips": [
@@ -4400,7 +4406,7 @@
       "unitName": "Bom vs Bem",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "The results were good",
+      "en": "The results were good.",
       "question": "Complete the sentence:",
       "template": "Os resultados foram __",
       "chips": [
@@ -4420,7 +4426,7 @@
       "unitName": "Bom vs Bem",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "He dances very well",
+      "en": "He dances very well.",
       "question": "Complete the sentence:",
       "template": "Ele dança muito __",
       "chips": [
@@ -4440,7 +4446,7 @@
       "unitName": "Mau vs Mal",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "He sings badly",
+      "en": "He sings badly.",
       "question": "Complete the sentence:",
       "template": "Ele canta __",
       "chips": [
@@ -4460,7 +4466,7 @@
       "unitName": "Mau vs Mal",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "The weather is bad",
+      "en": "The weather is bad.",
       "question": "Complete the sentence:",
       "template": "O tempo está __",
       "chips": [
@@ -4480,7 +4486,7 @@
       "unitName": "Mau vs Mal",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "That was a bad idea",
+      "en": "That was a bad idea.",
       "question": "Complete the sentence:",
       "template": "Essa foi uma __ ideia",
       "chips": [
@@ -4500,7 +4506,7 @@
       "unitName": "Mau vs Mal",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I slept badly last night",
+      "en": "I slept badly last night.",
       "question": "Complete the sentence:",
       "template": "Eu dormi __ ontem à noite",
       "chips": [
@@ -4520,7 +4526,7 @@
       "unitName": "Mau vs Mal",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "The results were bad",
+      "en": "The results were bad.",
       "question": "Complete the sentence:",
       "template": "Os resultados foram __",
       "chips": [
@@ -4540,7 +4546,7 @@
       "unitName": "Mau vs Mal",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "The grades were bad",
+      "en": "The grades were bad.",
       "question": "Complete the sentence:",
       "template": "As notas foram __",
       "chips": [
@@ -4620,7 +4626,7 @@
       "unitName": "Ir vs Vir",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "They came from far away",
+      "en": "They came from far away.",
       "question": "Complete the sentence:",
       "template": "Eles __ de longe",
       "chips": [
@@ -4640,7 +4646,7 @@
       "unitName": "Ir vs Vir",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I went to the beach yesterday",
+      "en": "I went to the beach yesterday.",
       "question": "Complete the sentence:",
       "template": "Eu __ à praia ontem",
       "chips": [
@@ -4660,7 +4666,7 @@
       "unitName": "Ir vs Vir",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I came as fast as I could",
+      "en": "I came as fast as I could.",
       "question": "Complete the sentence:",
       "template": "Eu __ o mais rápido que pude",
       "chips": [
@@ -4680,7 +4686,7 @@
       "unitName": "Levar vs Trazer",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Bring me a glass of water",
+      "en": "Bring me a glass of water.",
       "question": "Complete the sentence:",
       "template": "__ um copo d'água para mim",
       "chips": [
@@ -4700,7 +4706,7 @@
       "unitName": "Levar vs Trazer",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I took the kids to school",
+      "en": "I took the kids to school.",
       "question": "Complete the sentence:",
       "template": "Eu __ as crianças para a escola",
       "chips": [
@@ -4740,7 +4746,7 @@
       "unitName": "Levar vs Trazer",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She brought flowers for me",
+      "en": "She brought flowers for me.",
       "question": "Complete the sentence:",
       "template": "Ela __ flores para mim",
       "chips": [
@@ -4780,7 +4786,7 @@
       "unitName": "Levar vs Trazer",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Bring the documents here",
+      "en": "Bring the documents here.",
       "question": "Complete the sentence:",
       "template": "__ os documentos aqui",
       "chips": [
@@ -4800,7 +4806,7 @@
       "unitName": "Ainda vs Já",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "He is still sleeping",
+      "en": "He is still sleeping.",
       "question": "Complete the sentence:",
       "template": "Ele __ está dormindo",
       "chips": [
@@ -4820,7 +4826,7 @@
       "unitName": "Ainda vs Já",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I already ate",
+      "en": "I already ate.",
       "question": "Complete the sentence:",
       "template": "Eu __ comi",
       "chips": [
@@ -4840,7 +4846,7 @@
       "unitName": "Ainda vs Já",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She hasn't arrived yet",
+      "en": "She hasn't arrived yet.",
       "question": "Complete the sentence:",
       "template": "Ela __ não chegou",
       "chips": [
@@ -4880,7 +4886,7 @@
       "unitName": "Ainda vs Já",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I no longer live there",
+      "en": "I no longer live there.",
       "question": "Complete the sentence:",
       "template": "Eu __ não moro lá",
       "chips": [
@@ -4920,7 +4926,7 @@
       "unitName": "Faz vs A (Time)",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I arrived two hours ago",
+      "en": "I arrived two hours ago.",
       "question": "Complete the sentence:",
       "template": "Eu cheguei __ duas horas",
       "chips": [
@@ -4940,7 +4946,7 @@
       "unitName": "Faz vs A (Time)",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "The movie starts in ten minutes",
+      "en": "The movie starts in ten minutes.",
       "question": "Complete the sentence:",
       "template": "O filme começa daqui __ dez minutos",
       "chips": [
@@ -4960,7 +4966,7 @@
       "unitName": "Faz vs A (Time)",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She left five minutes ago",
+      "en": "She left five minutes ago.",
       "question": "Complete the sentence:",
       "template": "Ela saiu __ cinco minutos",
       "chips": [
@@ -4980,7 +4986,7 @@
       "unitName": "Faz vs A (Time)",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I'll be back in an hour",
+      "en": "I'll be back in an hour.",
       "question": "Complete the sentence:",
       "template": "Eu volto daqui __ uma hora",
       "chips": [
@@ -5001,7 +5007,7 @@
       "unitName": "Faz vs A (Time)",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "They moved here three years ago",
+      "en": "They moved here three years ago.",
       "question": "Complete the sentence:",
       "template": "Eles se mudaram para cá __ três anos",
       "chips": [
@@ -5021,7 +5027,7 @@
       "unitName": "Faz vs A (Time)",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "The meeting is in thirty minutes",
+      "en": "The meeting is in thirty minutes.",
       "question": "Complete the sentence:",
       "template": "A reunião é daqui __ trinta minutos",
       "chips": [
@@ -5042,7 +5048,7 @@
       "unitName": "Muito/Muita Agreement",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I don't have much time",
+      "en": "I don't have much time.",
       "question": "Complete the sentence:",
       "template": "Eu não tenho __ tempo",
       "chips": [
@@ -5062,7 +5068,7 @@
       "unitName": "Muito/Muita Agreement",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I drank a lot of water today",
+      "en": "I drank a lot of water today.",
       "question": "Complete the sentence:",
       "template": "Eu bebi __ água hoje",
       "chips": [
@@ -5082,7 +5088,7 @@
       "unitName": "Muito/Muita Agreement",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "There are many books on the table",
+      "en": "There are many books on the table.",
       "question": "Complete the sentence:",
       "template": "Tem __ livros na mesa",
       "chips": [
@@ -5102,7 +5108,7 @@
       "unitName": "Muito/Muita Agreement",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She has many friends",
+      "en": "She has many friends.",
       "question": "Complete the sentence:",
       "template": "Ela tem __ amigas",
       "chips": [
@@ -5122,7 +5128,7 @@
       "unitName": "Muito/Muita Agreement",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She speaks very fast",
+      "en": "She speaks very fast.",
       "question": "Complete the sentence:",
       "template": "Ela fala __ rápido",
       "chips": [
@@ -5142,7 +5148,7 @@
       "unitName": "Muito/Muita Agreement",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We visited many cities",
+      "en": "We visited many cities.",
       "question": "Complete the sentence:",
       "template": "Nós visitamos __ cidades",
       "chips": [
@@ -5162,7 +5168,7 @@
       "unitName": "Mais vs Mas",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I wanted to go, but I couldn't",
+      "en": "I wanted to go, but I couldn't.",
       "question": "Complete the sentence:",
       "template": "Eu queria ir, __ não pude",
       "chips": [
@@ -5182,7 +5188,7 @@
       "unitName": "Mais vs Mas",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I want more coffee",
+      "en": "I want more coffee.",
       "question": "Complete the sentence:",
       "template": "Eu quero __ café",
       "chips": [
@@ -5202,7 +5208,7 @@
       "unitName": "Mais vs Mas",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "It's expensive, but it's worth it",
+      "en": "It's expensive, but it's worth it.",
       "question": "Complete the sentence:",
       "template": "É caro, __ vale a pena",
       "chips": [
@@ -5222,7 +5228,7 @@
       "unitName": "Mais vs Mas",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She is smarter than him",
+      "en": "She is smarter than him.",
       "question": "Complete the sentence:",
       "template": "Ela é __ inteligente que ele",
       "chips": [
@@ -5242,7 +5248,7 @@
       "unitName": "Mais vs Mas",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I like the apartment, but it's too far",
+      "en": "I like the apartment, but it's too far.",
       "question": "Complete the sentence:",
       "template": "Eu gosto do apartamento, __ é muito longe",
       "chips": [
@@ -5262,7 +5268,7 @@
       "unitName": "Mais vs Mas",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Two plus two equals four",
+      "en": "Two plus two equals four.",
       "question": "Complete the sentence:",
       "template": "Dois __ dois são quatro",
       "chips": [
@@ -5282,7 +5288,7 @@
       "unitName": "Porque Variations",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I stayed home because I was sick",
+      "en": "I stayed home because I was sick.",
       "question": "Complete the sentence:",
       "template": "Eu fiquei em casa __ estava doente",
       "chips": [
@@ -5342,7 +5348,7 @@
       "unitName": "Porque Variations",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "He left early because he was tired",
+      "en": "He left early because he was tired.",
       "question": "Complete the sentence:",
       "template": "Ele saiu cedo __ estava cansado",
       "chips": [
@@ -5382,7 +5388,7 @@
       "unitName": "Porque Variations",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She's happy because she passed the exam",
+      "en": "She's happy because she passed the exam.",
       "question": "Complete the sentence:",
       "template": "Ela está feliz __ passou na prova",
       "chips": [
@@ -5422,7 +5428,7 @@
       "unitName": "Algum vs Nenhum",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I bought some books",
+      "en": "I bought some books.",
       "question": "Complete the sentence:",
       "template": "Eu comprei __ livros",
       "chips": [
@@ -5442,7 +5448,7 @@
       "unitName": "Algum vs Nenhum",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I don't know any of these people",
+      "en": "I don't know any of these people.",
       "question": "Complete the sentence:",
       "template": "Eu não conheço __ dessas pessoas",
       "chips": [
@@ -5462,7 +5468,7 @@
       "unitName": "Algum vs Nenhum",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She has some ideas",
+      "en": "She has some ideas.",
       "question": "Complete the sentence:",
       "template": "Ela tem __ ideias",
       "chips": [
@@ -5482,7 +5488,7 @@
       "unitName": "Algum vs Nenhum",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "He made no mistake",
+      "en": "He made no mistake.",
       "question": "Complete the sentence:",
       "template": "Ele não cometeu __ erro",
       "chips": [
@@ -5522,7 +5528,7 @@
       "unitName": "Jogar vs Brincar vs Tocar",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She plays the piano",
+      "en": "She plays the piano.",
       "question": "Complete the sentence:",
       "template": "Ela __ piano",
       "chips": [
@@ -5542,7 +5548,7 @@
       "unitName": "Jogar vs Brincar vs Tocar",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "He plays soccer every weekend",
+      "en": "He plays soccer every weekend.",
       "question": "Complete the sentence:",
       "template": "Ele __ futebol todo fim de semana",
       "chips": [
@@ -5562,7 +5568,7 @@
       "unitName": "Jogar vs Brincar vs Tocar",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "The children are playing in the park",
+      "en": "The children are playing in the park.",
       "question": "Complete the sentence:",
       "template": "As crianças estão __ no parque",
       "chips": [
@@ -5602,7 +5608,7 @@
       "unitName": "Jogar vs Brincar vs Tocar",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We play cards on Fridays",
+      "en": "We play cards on Fridays.",
       "question": "Complete the sentence:",
       "template": "Nós __ cartas nas sextas",
       "chips": [
@@ -5622,7 +5628,7 @@
       "unitName": "Jogar vs Brincar vs Tocar",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "The child is playing with the toys",
+      "en": "The child is playing with the toys.",
       "question": "Complete the sentence:",
       "template": "A criança está __ com os brinquedos",
       "chips": [
@@ -5642,7 +5648,7 @@
       "unitName": "Achar vs Pensar",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I think about you every day",
+      "en": "I think about you every day.",
       "question": "Complete the sentence:",
       "template": "Eu __ em você todo dia",
       "chips": [
@@ -5662,7 +5668,7 @@
       "unitName": "Achar vs Pensar",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "What do you think? (asking for opinion)",
+      "en": "What do you think? (asking for opinion).",
       "question": "Complete the sentence:",
       "template": "O que você __?",
       "chips": [
@@ -5682,7 +5688,7 @@
       "unitName": "Achar vs Pensar",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I need to think before deciding",
+      "en": "I need to think before deciding.",
       "question": "Complete the sentence:",
       "template": "Eu preciso __ antes de decidir",
       "chips": [
@@ -5702,7 +5708,7 @@
       "unitName": "Achar vs Pensar",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She thinks I'm crazy",
+      "en": "She thinks I'm crazy.",
       "question": "Complete the sentence:",
       "template": "Ela __ que eu sou louco",
       "chips": [
@@ -5722,7 +5728,7 @@
       "unitName": "Achar vs Pensar",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I was thinking about the problem",
+      "en": "I was thinking about the problem.",
       "question": "Complete the sentence:",
       "template": "Eu estava __ no problema",
       "chips": [
@@ -5762,7 +5768,7 @@
       "unitName": "Deixar vs Sair",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I left my keys at home",
+      "en": "I left my keys at home.",
       "question": "Complete the sentence:",
       "template": "Eu __ minhas chaves em casa",
       "chips": [
@@ -5782,7 +5788,7 @@
       "unitName": "Deixar vs Sair",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She left the house early",
+      "en": "She left the house early.",
       "question": "Complete the sentence:",
       "template": "Ela __ de casa cedo",
       "chips": [
@@ -5802,7 +5808,7 @@
       "unitName": "Deixar vs Sair",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Let me help you",
+      "en": "Let me help you.",
       "question": "Complete the sentence:",
       "template": "__ eu te ajudar",
       "chips": [
@@ -5842,7 +5848,7 @@
       "unitName": "Deixar vs Sair",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "He left the door open",
+      "en": "He left the door open.",
       "question": "Complete the sentence:",
       "template": "Ele __ a porta aberta",
       "chips": [
@@ -5862,7 +5868,7 @@
       "unitName": "Deixar vs Sair",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We left the restaurant at ten",
+      "en": "We left the restaurant at ten.",
       "question": "Complete the sentence:",
       "template": "Nós __ do restaurante às dez",
       "chips": [
@@ -5882,7 +5888,7 @@
       "unitName": "Mesmo vs Próprio",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We work at the same company",
+      "en": "We work at the same company.",
       "question": "Complete the sentence:",
       "template": "Nós trabalhamos na __ empresa",
       "chips": [
@@ -5902,7 +5908,7 @@
       "unitName": "Mesmo vs Próprio",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I have my own car",
+      "en": "I have my own car.",
       "question": "Complete the sentence:",
       "template": "Eu tenho meu __ carro",
       "chips": [
@@ -5922,7 +5928,7 @@
       "unitName": "Mesmo vs Próprio",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "It's the same thing",
+      "en": "It's the same thing.",
       "question": "Complete the sentence:",
       "template": "É a __ coisa",
       "chips": [
@@ -5942,7 +5948,7 @@
       "unitName": "Mesmo vs Próprio",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She has her own house",
+      "en": "She has her own house.",
       "question": "Complete the sentence:",
       "template": "Ela tem sua __ casa",
       "chips": [
@@ -5962,7 +5968,7 @@
       "unitName": "Mesmo vs Próprio",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "He always says the same thing",
+      "en": "He always says the same thing.",
       "question": "Complete the sentence:",
       "template": "Ele sempre diz a __ coisa",
       "chips": [
@@ -5982,7 +5988,7 @@
       "unitName": "Mesmo vs Próprio",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "He started his own business",
+      "en": "He started his own business.",
       "question": "Complete the sentence:",
       "template": "Ele abriu seu __ negócio",
       "chips": [
@@ -6002,7 +6008,7 @@
       "unitName": "Também vs Tampouco",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I also want coffee",
+      "en": "I also want coffee.",
       "question": "Complete the sentence:",
       "template": "Eu __ quero café",
       "chips": [
@@ -6022,7 +6028,7 @@
       "unitName": "Também vs Tampouco",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She is coming too",
+      "en": "She is coming too.",
       "question": "Complete the sentence:",
       "template": "Ela __ vai",
       "chips": [
@@ -6042,7 +6048,7 @@
       "unitName": "Também vs Tampouco",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "My brother also lives here",
+      "en": "My brother also lives here.",
       "question": "Complete the sentence:",
       "template": "Meu irmão __ mora aqui",
       "chips": [
@@ -6062,7 +6068,7 @@
       "unitName": "Também vs Tampouco",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I like pizza, and she does too",
+      "en": "I like pizza, and she does too.",
       "question": "Complete the sentence:",
       "template": "Eu gosto de pizza, e ela __",
       "chips": [
@@ -6082,7 +6088,7 @@
       "unitName": "Também vs Tampouco",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "He works here too",
+      "en": "He works here too.",
       "question": "Complete the sentence:",
       "template": "Ele __ trabalha aqui",
       "chips": [
@@ -6102,7 +6108,7 @@
       "unitName": "Também vs Tampouco",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We also went to the beach",
+      "en": "We also went to the beach.",
       "question": "Complete the sentence:",
       "template": "Nós __ fomos à praia",
       "chips": [
@@ -6142,7 +6148,7 @@
       "unitName": "Cá Expressions (BP)",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Look this way",
+      "en": "Look this way.",
       "question": "Complete the sentence:",
       "template": "Olha para __",
       "chips": [
@@ -6162,7 +6168,7 @@
       "unitName": "Cá Expressions (BP)",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Between us, I don't like him",
+      "en": "Between us, I don't like him.",
       "question": "Complete the sentence:",
       "template": "__ entre nós, eu não gosto dele",
       "chips": [
@@ -6182,7 +6188,7 @@
       "unitName": "Cá Expressions (BP)",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "A lot has changed since then",
+      "en": "A lot has changed since then.",
       "question": "Complete the sentence:",
       "template": "Muita coisa mudou de lá para __",
       "chips": [
@@ -6202,7 +6208,7 @@
       "unitName": "Voltar vs Devolver",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I will return tomorrow",
+      "en": "I will return tomorrow.",
       "question": "Complete the sentence:",
       "template": "Eu vou __ amanhã",
       "chips": [
@@ -6222,7 +6228,7 @@
       "unitName": "Voltar vs Devolver",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I need to return this book to the library",
+      "en": "I need to return this book to the library.",
       "question": "Complete the sentence:",
       "template": "Eu preciso __ este livro para a biblioteca",
       "chips": [
@@ -6242,7 +6248,7 @@
       "unitName": "Voltar vs Devolver",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She never came back",
+      "en": "She never came back.",
       "question": "Complete the sentence:",
       "template": "Ela nunca __",
       "chips": [
@@ -6262,7 +6268,7 @@
       "unitName": "Voltar vs Devolver",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "He returned the keys",
+      "en": "He returned the keys.",
       "question": "Complete the sentence:",
       "template": "Ele __ as chaves",
       "chips": [
@@ -6302,7 +6308,7 @@
       "unitName": "Voltar vs Devolver",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I have to return this shirt to the store",
+      "en": "I have to return this shirt to the store.",
       "question": "Complete the sentence:",
       "template": "Eu tenho que __ esta camisa para a loja",
       "chips": [
@@ -6322,7 +6328,7 @@
       "unitName": "Present Progressive (Gerund)",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I am eating",
+      "en": "I am eating.",
       "question": "Complete the sentence:",
       "template": "Eu estou __",
       "chips": [
@@ -6341,7 +6347,7 @@
       "unitName": "Present Progressive (Gerund)",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I am sleeping",
+      "en": "I am sleeping.",
       "question": "Complete the sentence:",
       "template": "Eu estou __",
       "chips": [
@@ -6360,7 +6366,7 @@
       "unitName": "Present Progressive (Gerund)",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "The children are playing",
+      "en": "The children are playing.",
       "question": "Complete the sentence:",
       "template": "As crianças estão __",
       "chips": [
@@ -6379,7 +6385,7 @@
       "unitName": "Negation with Não",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I don't want coffee",
+      "en": "I don't want coffee.",
       "question": "Complete the sentence:",
       "template": "Eu __ café",
       "chips": [
@@ -6398,7 +6404,7 @@
       "unitName": "Negation with Não",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "He doesn't live here",
+      "en": "He doesn't live here.",
       "question": "Complete the sentence:",
       "template": "Ele __ aqui",
       "chips": [
@@ -6417,7 +6423,7 @@
       "unitName": "Negation with Não",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I don't have a car",
+      "en": "I don't have a car.",
       "question": "Complete the sentence:",
       "template": "Eu __ carro",
       "chips": [
@@ -6436,7 +6442,7 @@
       "unitName": "Telling Time",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "It's one o'clock",
+      "en": "It's one o'clock.",
       "question": "Complete the sentence:",
       "template": "__ uma hora",
       "chips": [
@@ -6455,7 +6461,7 @@
       "unitName": "Telling Time",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "It's two thirty",
+      "en": "It's two thirty.",
       "question": "Complete the sentence:",
       "template": "São duas __",
       "chips": [
@@ -6474,7 +6480,7 @@
       "unitName": "Telling Time",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "It's ten fifteen",
+      "en": "It's ten fifteen.",
       "question": "Complete the sentence:",
       "template": "São dez __",
       "chips": [
@@ -6493,7 +6499,7 @@
       "unitName": "Existential Ter (BP)",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "There is a bathroom here",
+      "en": "There is a bathroom here.",
       "question": "Complete the sentence:",
       "template": "__ um banheiro aqui",
       "chips": [
@@ -6512,7 +6518,7 @@
       "unitName": "Existential Ter (BP)",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "There is no milk",
+      "en": "There is no milk.",
       "question": "Complete the sentence:",
       "template": "Não __ leite",
       "chips": [
@@ -6531,7 +6537,7 @@
       "unitName": "Existential Ter (BP)",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "There are many people here",
+      "en": "There are many people here.",
       "question": "Complete the sentence:",
       "template": "__ muitas pessoas aqui",
       "chips": [
@@ -6550,7 +6556,7 @@
       "unitName": "Existential Haver (formal)",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "There were problems",
+      "en": "There were problems.",
       "question": "Complete the sentence:",
       "template": "__ problemas",
       "chips": [
@@ -6569,7 +6575,7 @@
       "unitName": "Existential Haver (formal)",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "There are funds available",
+      "en": "There are funds available.",
       "question": "Complete the sentence:",
       "template": "__ fundos disponíveis",
       "chips": [
@@ -6588,7 +6594,7 @@
       "unitName": "Identity Statements",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "She is a teacher",
+      "en": "She is a teacher.",
       "question": "Complete the sentence:",
       "template": "Ela __ professora",
       "chips": [
@@ -6607,7 +6613,7 @@
       "unitName": "Identity Statements",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "My name is João",
+      "en": "My name is João.",
       "question": "Complete the sentence:",
       "template": "Meu nome __ João",
       "chips": [
@@ -6626,7 +6632,7 @@
       "unitName": "Definite Articles",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "The young men are there",
+      "en": "The young men are there.",
       "question": "Complete the sentence:",
       "template": "__ rapazes estão ali",
       "chips": [
@@ -6646,7 +6652,7 @@
       "unitName": "Definite Articles",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "The young woman is my friend",
+      "en": "The young woman is my friend.",
       "question": "Complete the sentence:",
       "template": "__ moça é minha amiga",
       "chips": [
@@ -6666,7 +6672,7 @@
       "unitName": "Verb Ter",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "She has a dog",
+      "en": "She has a dog.",
       "question": "Complete the sentence:",
       "template": "Ela __ um cachorro",
       "chips": [
@@ -6685,7 +6691,7 @@
       "unitName": "Verb Ter",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "We have a big house",
+      "en": "We have a big house.",
       "question": "Complete the sentence:",
       "template": "Nós __ uma casa grande",
       "chips": [
@@ -6704,7 +6710,7 @@
       "unitName": "Location Prepositions",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I am at school",
+      "en": "I am at school.",
       "question": "Complete the sentence:",
       "template": "Eu estou __ escola",
       "chips": [
@@ -6723,7 +6729,7 @@
       "unitName": "Location Prepositions",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I work on weekends",
+      "en": "I work on weekends.",
       "question": "Complete the sentence:",
       "template": "Eu trabalho __ fins de semana",
       "chips": [
@@ -6742,7 +6748,7 @@
       "unitName": "Location Prepositions",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "The flowers are in the windows",
+      "en": "The flowers are in the windows.",
       "question": "Complete the sentence:",
       "template": "As flores estão __ janelas",
       "chips": [
@@ -6761,7 +6767,7 @@
       "unitName": "Origin with Contractions",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I am coming from the beach",
+      "en": "I am coming from the beach.",
       "question": "Complete the sentence:",
       "template": "Eu estou vindo __ praia",
       "chips": [
@@ -6780,7 +6786,7 @@
       "unitName": "Origin with Contractions",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "He is from the United States",
+      "en": "He is from the United States.",
       "question": "Complete the sentence:",
       "template": "Ele é __ Estados Unidos",
       "chips": [
@@ -6799,7 +6805,7 @@
       "unitName": "Adjective Agreement",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "The tired young woman",
+      "en": "The tired young woman.",
       "question": "Complete the sentence:",
       "template": "A moça __",
       "chips": [
@@ -6818,7 +6824,7 @@
       "unitName": "Adjective Agreement",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "The tired young men",
+      "en": "The tired young men.",
       "question": "Complete the sentence:",
       "template": "Os rapazes __",
       "chips": [
@@ -6837,7 +6843,7 @@
       "unitName": "Verb Ficar",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "We stay at the beach house during summer",
+      "en": "We stay at the beach house during summer.",
       "question": "Complete the sentence:",
       "template": "Nós __ na casa de praia durante o verão",
       "chips": [
@@ -6856,7 +6862,7 @@
       "unitName": "Verb Gostar de",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I like him a lot",
+      "en": "I like him a lot.",
       "question": "Complete the sentence:",
       "template": "Eu gosto muito __",
       "chips": [
@@ -6875,7 +6881,7 @@
       "unitName": "Verb Gostar de",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I like her",
+      "en": "I like her.",
       "question": "Complete the sentence:",
       "template": "Eu gosto __",
       "chips": [
@@ -6894,7 +6900,7 @@
       "unitName": "Regular -ER Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "He runs every morning",
+      "en": "He runs every morning.",
       "question": "Complete the sentence:",
       "template": "Ele __ todas as manhãs",
       "chips": [
@@ -6913,7 +6919,7 @@
       "unitName": "Regular -ER Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We learn something new every day",
+      "en": "We learn something new every day.",
       "question": "Complete the sentence:",
       "template": "Nós __ algo novo todos os dias",
       "chips": [
@@ -6932,7 +6938,7 @@
       "unitName": "Regular -IR Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She watches the news every night",
+      "en": "She watches the news every night.",
       "question": "Complete the sentence:",
       "template": "Ela __ o jornal todas as noites",
       "chips": [
@@ -6951,7 +6957,7 @@
       "unitName": "Regular -IR Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We share the expenses",
+      "en": "We share the expenses.",
       "question": "Complete the sentence:",
       "template": "Nós __ as despesas",
       "chips": [
@@ -7027,7 +7033,7 @@
       "unitName": "Emotions and Feelings",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I am nervous",
+      "en": "I am nervous.",
       "question": "Complete the sentence:",
       "template": "Eu estou __",
       "chips": [
@@ -7046,7 +7052,7 @@
       "unitName": "Emotions and Feelings",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She is sad",
+      "en": "She is sad.",
       "question": "Complete the sentence:",
       "template": "Ela está __",
       "chips": [
@@ -7065,7 +7071,7 @@
       "unitName": "Emotions and Feelings",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We are worried",
+      "en": "We are worried.",
       "question": "Complete the sentence:",
       "template": "Nós estamos __",
       "chips": [
@@ -7084,7 +7090,7 @@
       "unitName": "Locations and Directions",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "The keys are on top of the table",
+      "en": "The keys are on top of the table.",
       "question": "Complete the sentence:",
       "template": "As chaves estão __ mesa",
       "chips": [
@@ -7103,7 +7109,7 @@
       "unitName": "Locations and Directions",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "The pharmacy is next to the bank",
+      "en": "The pharmacy is next to the bank.",
       "question": "Complete the sentence:",
       "template": "A farmácia fica __ banco",
       "chips": [
@@ -7122,7 +7128,7 @@
       "unitName": "Locations and Directions",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "The cat is behind the sofa",
+      "en": "The cat is behind the sofa.",
       "question": "Complete the sentence:",
       "template": "O gato está __ sofá",
       "chips": [
@@ -7141,7 +7147,7 @@
       "unitName": "Daily Activities Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I wake up at 7am",
+      "en": "I wake up at 7am.",
       "question": "Complete the sentence:",
       "template": "Eu __ às 7h",
       "chips": [
@@ -7160,7 +7166,7 @@
       "unitName": "Daily Activities Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I have lunch at noon",
+      "en": "I have lunch at noon.",
       "question": "Complete the sentence:",
       "template": "Eu __ ao meio-dia",
       "chips": [
@@ -7179,7 +7185,7 @@
       "unitName": "Daily Activities Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We have dinner at 8pm",
+      "en": "We have dinner at 8pm.",
       "question": "Complete the sentence:",
       "template": "Nós __ às 20h",
       "chips": [
@@ -7198,7 +7204,7 @@
       "unitName": "Frequency Adverbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I always drink coffee in the morning",
+      "en": "I always drink coffee in the morning.",
       "question": "Complete the sentence:",
       "template": "Eu __ tomo café de manhã",
       "chips": [
@@ -7217,7 +7223,7 @@
       "unitName": "Frequency Adverbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I never eat fast food",
+      "en": "I never eat fast food.",
       "question": "Complete the sentence:",
       "template": "Eu __ como fast food",
       "chips": [
@@ -7236,7 +7242,7 @@
       "unitName": "Frequency Adverbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I usually sleep late on Saturdays",
+      "en": "I usually sleep late on Saturdays.",
       "question": "Complete the sentence:",
       "template": "Eu __ durmo tarde aos sábados",
       "chips": [
@@ -7255,7 +7261,7 @@
       "unitName": "Comparisons of Equality",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "She is as intelligent as him",
+      "en": "She is as intelligent as him.",
       "question": "Complete the sentence:",
       "template": "Ela é __ inteligente quanto ele",
       "chips": [
@@ -7274,7 +7280,7 @@
       "unitName": "Comparisons of Equality",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "I work as much as you",
+      "en": "I work as much as you.",
       "question": "Complete the sentence:",
       "template": "Eu trabalho __ quanto você",
       "chips": [
@@ -7293,7 +7299,7 @@
       "unitName": "Comparisons of Equality",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "He has as many books as her",
+      "en": "He has as many books as her.",
       "question": "Complete the sentence:",
       "template": "Ele tem __ livros quanto ela",
       "chips": [
@@ -7312,7 +7318,7 @@
       "unitName": "Verb Precisar de",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I need your help",
+      "en": "I need your help.",
       "question": "Complete the sentence:",
       "template": "Eu preciso __ sua ajuda",
       "chips": [
@@ -7332,7 +7338,7 @@
       "unitName": "Verb Precisar de",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I need the keys",
+      "en": "I need the keys.",
       "question": "Complete the sentence:",
       "template": "Eu preciso __ chaves",
       "chips": [
@@ -7352,7 +7358,7 @@
       "unitName": "Colloquial Brazilian Portuguese",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I'm busy",
+      "en": "I'm busy.",
       "question": "Complete the sentence:",
       "template": "__ ocupado",
       "chips": [
@@ -7372,7 +7378,7 @@
       "unitName": "Colloquial Brazilian Portuguese",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I'm going to work",
+      "en": "I'm going to work.",
       "question": "Complete the sentence:",
       "template": "Vou __ trabalhar",
       "chips": [
@@ -7412,7 +7418,7 @@
       "unitName": "Advanced Por/Para & Idioms",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "That's why I didn't go",
+      "en": "That's why I didn't go.",
       "question": "Complete the sentence:",
       "template": "__ eu não fui",
       "chips": [
@@ -7452,7 +7458,7 @@
       "unitName": "Advanced Por/Para & Idioms",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "For the time being, everything is fine",
+      "en": "For the time being, everything is fine.",
       "question": "Complete the sentence:",
       "template": "__, tudo está bem",
       "chips": [
@@ -7472,7 +7478,7 @@
       "unitName": "Future with Ir + Infinitive",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We are going to travel next month",
+      "en": "We are going to travel next month.",
       "question": "Complete the sentence:",
       "template": "Nós __ viajar no próximo mês",
       "chips": [
@@ -7492,7 +7498,7 @@
       "unitName": "Future with Ir + Infinitive",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She is going to call you later",
+      "en": "She is going to call you later.",
       "question": "Complete the sentence:",
       "template": "Ela __ ligar para você depois",
       "chips": [
@@ -7512,7 +7518,7 @@
       "unitName": "Superlatives",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "She is the smartest in the group",
+      "en": "She is the smartest in the group.",
       "question": "Complete the sentence:",
       "template": "Ela é __ inteligente do grupo",
       "chips": [
@@ -7532,7 +7538,7 @@
       "unitName": "Superlatives",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "This is the best restaurant in the city",
+      "en": "This is the best restaurant in the city.",
       "question": "Complete the sentence:",
       "template": "Este é o __ restaurante da cidade",
       "chips": [
@@ -7552,7 +7558,7 @@
       "unitName": "Imperfect Subjunctive + Conditional",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "If I were rich, I would travel the world",
+      "en": "If I were rich, I would travel the world.",
       "question": "Complete the sentence:",
       "template": "Se eu __ rico, viajaria pelo mundo",
       "chips": [
@@ -7572,7 +7578,7 @@
       "unitName": "Imperfect Subjunctive + Conditional",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "If I had time, I would help you",
+      "en": "If I had time, I would help you.",
       "question": "Complete the sentence:",
       "template": "Se eu __ tempo, te ajudaria",
       "chips": [
@@ -7592,7 +7598,7 @@
       "unitName": "Indirect Object Pronouns",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "He told me the truth",
+      "en": "He told me the truth.",
       "question": "Complete the sentence:",
       "template": "Ele __ disse a verdade",
       "chips": [
@@ -7612,7 +7618,7 @@
       "unitName": "Indirect Object Pronouns",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I'll send you a message",
+      "en": "I'll send you a message.",
       "question": "Complete the sentence:",
       "template": "Vou __ mandar uma mensagem",
       "chips": [
@@ -7632,7 +7638,7 @@
       "unitName": "Pronoun Placement",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "Tell me the time",
+      "en": "Tell me the time.",
       "question": "Complete the sentence:",
       "template": "Diga-__ as horas",
       "chips": [
@@ -7652,7 +7658,7 @@
       "unitName": "Pronoun Placement",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "I didn't see her",
+      "en": "I didn't see her.",
       "question": "Complete the sentence:",
       "template": "Não __ vi",
       "chips": [
@@ -7672,7 +7678,7 @@
       "unitName": "Indefinite Articles",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "There is a table in the room",
+      "en": "There is a table in the room.",
       "question": "Complete the sentence:",
       "template": "Tem __ mesa na sala",
       "chips": [
@@ -7692,7 +7698,7 @@
       "unitName": "Verb Ficar",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "She gets happy when she sees him",
+      "en": "She gets happy when she sees him.",
       "question": "Complete the sentence:",
       "template": "Ela __ feliz quando vê ele",
       "chips": [
@@ -7712,7 +7718,7 @@
       "unitName": "Prepositions Por and Para",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Thank you for everything",
+      "en": "Thank you for everything.",
       "question": "Complete the sentence:",
       "template": "Obrigado __ tudo",
       "chips": [
@@ -7732,7 +7738,7 @@
       "unitName": "Comparatives",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "This restaurant is better than that one",
+      "en": "This restaurant is better than that one.",
       "question": "Complete the sentence:",
       "template": "Este restaurante é __ aquele",
       "chips": [
@@ -7752,7 +7758,7 @@
       "unitName": "Future Tense",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "They will have time tomorrow",
+      "en": "They will have time tomorrow.",
       "question": "Complete the sentence:",
       "template": "Eles __ tempo amanhã",
       "chips": [
@@ -7796,7 +7802,7 @@
       "unitName": "Crase",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I referred to that woman",
+      "en": "I referred to that woman.",
       "question": "Complete the sentence:",
       "template": "Eu me referi __ mulher",
       "chips": [
@@ -7816,7 +7822,7 @@
       "unitName": "Present Subjunctive - Regular Verbs",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I want you to speak Portuguese",
+      "en": "I want you to speak Portuguese.",
       "question": "Complete the sentence:",
       "template": "Quero que você __ português",
       "chips": [
@@ -7836,7 +7842,7 @@
       "unitName": "Imperfect Subjunctive",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I wish I could go",
+      "en": "I wish I could go.",
       "question": "Complete the sentence:",
       "template": "Queria que eu __ ir",
       "chips": [
