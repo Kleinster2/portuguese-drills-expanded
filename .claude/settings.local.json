@@ -55,7 +55,9 @@
       "Bash(echo:*)",
       "Bash(source .dev.vars)",
       "Bash(del temp-delete.js)",
-      "Bash(del audit-ambiguity.js)"
+      "Bash(del audit-ambiguity.js)",
+      "Bash(npx wrangler pages deployment list:*)",
+      "Bash(ls:*)"
     ],
     "deny": [],
     "ask": []
