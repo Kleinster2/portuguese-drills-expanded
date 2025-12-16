@@ -837,9 +837,9 @@
       "unitName": "Present Tense Verb Forms",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "When I exercise, I drink water.",
+      "en": "We drink coffee every morning",
       "question": "Complete the sentence:",
-      "template": "Nós __ água",
+      "template": "Nós __ café todas as manhãs",
       "chips": [
         "beberemos",
         "bebêssemos",
@@ -853,7 +853,7 @@
         "bebíamos"
       ],
       "correct": "bebemos",
-      "scenario": "Sharing your team's training habits."
+      "scenario": "Describing your household's morning routine."
     },
     {
       "id": 73,
@@ -874,8 +874,7 @@
         "de",
         "com",
         "na",
-        "em",
-        "(blank)"
+        "em"
       ],
       "correct": "de",
       "scenario": "Talking about your hobbies on a date."
@@ -886,7 +885,7 @@
       "unitName": "Verb Gostar de",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Every week, i like to study",
+      "en": "Every week, I like to study",
       "question": "Complete the sentence:",
       "template": "Eu gosto __ estudar",
       "chips": [
@@ -899,8 +898,7 @@
         "com",
         "a",
         "de",
-        "da",
-        "(blank)"
+        "da"
       ],
       "correct": "de",
       "scenario": "Mentioning weekend plans to a friend."
@@ -1055,9 +1053,9 @@
       "unitName": "Present Tense Verb Forms",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "When I exercise, I drink water.",
+      "en": "They drink juice after class",
       "question": "Complete the sentence:",
-      "template": "Elas __ água",
+      "template": "Elas __ suco depois da aula",
       "chips": [
         "beberam",
         "bebiam",
@@ -1071,7 +1069,7 @@
         "bebemos"
       ],
       "correct": "bebem",
-      "scenario": "Talking about their gym habits."
+      "scenario": "Describing your classmates' habits."
     },
     {
       "id": 93,
@@ -1445,11 +1443,10 @@
       "unitName": "Preterite Tense - Irregular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I was at home",
+      "en": "Yesterday, I was busy all day",
       "question": "Complete the sentence:",
-      "template": "Eu __ em casa",
+      "template": "Ontem, eu __ ocupado o dia todo",
       "chips": [
-        "estava",
         "foi",
         "estou",
         "esteja",
@@ -1458,10 +1455,11 @@
         "estaria",
         "estarei",
         "estive",
-        "fui"
+        "fui",
+        "estamos"
       ],
       "correct": "estive",
-      "scenario": "You're recounting a completed event."
+      "scenario": "Explaining why you couldn't answer calls yesterday."
     },
     {
       "id": 115,
