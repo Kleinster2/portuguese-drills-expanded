@@ -13,6 +13,7 @@
 // Detect test type from URL parameters and user ID from hash (like simplifier)
 const urlParams = new URLSearchParams(window.location.search);
 const testType = urlParams.get('test') || 'grammar';
+const startingPhase = parseInt(urlParams.get('phase')) || 1; // Start at specific phase (1-4)
 const userId = window.location.hash ? window.location.hash.substring(1) : null; // User hash from URL fragment
 
 let questionBank = null;
@@ -90,7 +91,9 @@ async function startDiagnosticTest() {
       await loadQuestionBank();
       messagesContainer.innerHTML = '';
     }
-    startPhase(1);
+    // Start at specified phase (default 1, or use ?phase=3 for B1, ?phase=4 for B2)
+    const validPhase = Math.max(1, Math.min(4, startingPhase));
+    startPhase(validPhase);
   } catch (e) {
     messagesContainer.innerHTML = `<p class="text-red-600">Error: ${e.message}</p>`;
   }
