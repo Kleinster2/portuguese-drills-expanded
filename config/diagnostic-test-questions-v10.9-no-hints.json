@@ -1908,7 +1908,7 @@
       "type": "contextualizedProduction",
       "en": "When I was younger, I used to live in the countryside.",
       "question": "Complete the sentence:",
-      "template": "Eu __ aqui",
+      "template": "Eu __ no campo",
       "chips": [
         "morasse",
         "morarei",
@@ -1932,7 +1932,7 @@
       "type": "contextualizedProduction",
       "en": "As a child, I used to eat candy every day.",
       "question": "Complete the sentence:",
-      "template": "Eu __ muito",
+      "template": "Eu __ doces todos os dias",
       "chips": [
         "comi",
         "comerei",
@@ -1947,30 +1947,6 @@
       ],
       "correct": "comia",
       "scenario": "Talking about childhood candy habits with a friend."
-    },
-    {
-      "id": 143,
-      "unit": 45,
-      "unitName": "Imperfect Tense",
-      "phase": 3,
-      "type": "contextualizedProduction",
-      "en": "When I was younger, I used to live in the countryside.",
-      "question": "Complete the sentence:",
-      "template": "Nós __ lá",
-      "chips": [
-        "vivi",
-        "vivemos",
-        "vivíamos",
-        "viver",
-        "vivo",
-        "vivêssemos",
-        "viveríamos",
-        "viveremos",
-        "vivamos",
-        "vivia"
-      ],
-      "correct": "vivíamos",
-      "scenario": "Explaining where your family used to live."
     },
     {
       "id": 145,
@@ -2050,9 +2026,9 @@
       "unitName": "Comparatives",
       "phase": 3,
       "type": "quickCheck",
-      "en": "My brother is taller than me",
+      "en": "My brother is more patient than me",
       "question": "Complete the sentence:",
-      "template": "Meu irmão é __ alto __ eu",
+      "template": "Meu irmão é __ paciente __ eu",
       "chips": [
         "mais...como",
         "mais...que",
@@ -2061,11 +2037,10 @@
         "muito...que",
         "tão...quanto",
         "tão...como",
-        "menos...que",
-        "(blank)"
+        "menos...que"
       ],
       "correct": "mais...que",
-      "scenario": "My brother plays basketball. He is taller than me. Comparing siblings' heights in a casual chat."
+      "scenario": "Comparing personalities with a friend."
     },
     {
       "id": 149,
@@ -2073,9 +2048,9 @@
       "unitName": "Comparatives",
       "phase": 3,
       "type": "quickCheck",
-      "en": "Actually, mary is less tall than john",
+      "en": "Actually, Mary is less busy than John",
       "question": "Complete the sentence:",
-      "template": "Maria é __ alta __ João",
+      "template": "Maria é __ ocupada __ João",
       "chips": [
         "mais...do que",
         "tão...quanto",
@@ -2084,11 +2059,10 @@
         "pouco...que",
         "mais...que",
         "tão...como",
-        "menos...do que",
-        "(blank)"
+        "pouco...como"
       ],
       "correct": "menos...que",
-      "scenario": "Correcting someone about who is taller."
+      "scenario": "Correcting someone about who has more free time."
     },
     {
       "id": 150,
@@ -2096,9 +2070,9 @@
       "unitName": "Comparatives",
       "phase": 3,
       "type": "quickCheck",
-      "en": "Mary is as smart as John",
+      "en": "This restaurant is as good as that one",
       "question": "Complete the sentence:",
-      "template": "Maria é __ inteligente __ João",
+      "template": "Este restaurante é __ bom __ aquele",
       "chips": [
         "pouco...quanto",
         "menos...do que",
@@ -2107,7 +2081,7 @@
         "mais...que",
         "menos...que",
         "mais...do que",
-        "tão...como"
+        "muito...como"
       ],
       "correct": "tão...quanto",
       "scenario": "You're comparing two restaurants you've tried."
@@ -3653,7 +3627,7 @@
       "template": "Eu __ ligo amanhã",
       "chips": [
         "te",
-        "lhe",
+        "nos",
         "tu",
         "se",
         "você",
