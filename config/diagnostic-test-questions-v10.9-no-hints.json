@@ -880,7 +880,8 @@
         "de",
         "com",
         "na",
-        "em"
+        "em",
+        "(blank)"
       ],
       "correct": "de",
       "scenario": "Talking about your hobbies on a date."
@@ -904,7 +905,8 @@
         "com",
         "a",
         "de",
-        "da"
+        "da",
+        "(blank)"
       ],
       "correct": "de",
       "scenario": "Mentioning weekend plans to a friend."
@@ -2157,26 +2159,6 @@
       "scenario": "Telling someone the current time during a call."
     },
     {
-      "id": 192,
-      "unit": 59,
-      "unitName": "Emotions and Feelings",
-      "phase": 3,
-      "type": "contextualizedProduction",
-      "en": "I am happy.",
-      "question": "Complete the sentence:",
-      "template": "Eu estou __",
-      "chips": [
-        "cansado",
-        "triste",
-        "animado",
-        "feliz",
-        "preocupado",
-        "ocupado"
-      ],
-      "correct": "feliz",
-      "scenario": "Sharing your mood in a message after good news."
-    },
-    {
       "id": 198,
       "unit": 60,
       "unitName": "Locations and Directions",
@@ -3398,46 +3380,6 @@
       ],
       "correct": "Aquele",
       "scenario": "You're pointing to a car in a distant parking lot across the street."
-    },
-    {
-      "id": 312,
-      "unit": 14,
-      "unitName": "Family Vocabulary",
-      "phase": 1,
-      "type": "contextualizedProduction",
-      "en": "My mother is a teacher.",
-      "question": "Complete the sentence:",
-      "template": "Minha __ é professora",
-      "chips": [
-        "pai",
-        "avó",
-        "irmã",
-        "filha",
-        "tia",
-        "mãe"
-      ],
-      "correct": "mãe",
-      "scenario": "You're telling a classmate about your family."
-    },
-    {
-      "id": 313,
-      "unit": 14,
-      "unitName": "Family Vocabulary",
-      "phase": 1,
-      "type": "contextualizedProduction",
-      "en": "My brother lives in São Paulo.",
-      "question": "Complete the sentence:",
-      "template": "Meu __ mora em São Paulo",
-      "chips": [
-        "tio",
-        "filho",
-        "irmã",
-        "irmão",
-        "avô",
-        "pai"
-      ],
-      "correct": "irmão",
-      "scenario": "You're explaining where your siblings live."
     },
     {
       "id": 318,
@@ -7028,63 +6970,6 @@
       "scenario": "Planning to meet a friend."
     },
     {
-      "id": 506,
-      "unit": 35,
-      "unitName": "Emotions and Feelings",
-      "phase": 2,
-      "type": "contextualizedProduction",
-      "en": "I am nervous.",
-      "question": "Complete the sentence:",
-      "template": "Eu estou __",
-      "chips": [
-        "nervoso",
-        "feliz",
-        "triste",
-        "calmo",
-        "com fome"
-      ],
-      "correct": "nervoso",
-      "scenario": "Before a big presentation."
-    },
-    {
-      "id": 507,
-      "unit": 35,
-      "unitName": "Emotions and Feelings",
-      "phase": 2,
-      "type": "contextualizedProduction",
-      "en": "She is sad.",
-      "question": "Complete the sentence:",
-      "template": "Ela está __",
-      "chips": [
-        "triste",
-        "feliz",
-        "nervosa",
-        "animada",
-        "calma"
-      ],
-      "correct": "triste",
-      "scenario": "After receiving bad news."
-    },
-    {
-      "id": 508,
-      "unit": 35,
-      "unitName": "Emotions and Feelings",
-      "phase": 2,
-      "type": "contextualizedProduction",
-      "en": "We are worried.",
-      "question": "Complete the sentence:",
-      "template": "Nós estamos __",
-      "chips": [
-        "preocupados",
-        "felizes",
-        "nervosos",
-        "calmos",
-        "tristes"
-      ],
-      "correct": "preocupados",
-      "scenario": "Waiting for important test results."
-    },
-    {
       "id": 509,
       "unit": 36,
       "unitName": "Locations and Directions",
@@ -7140,63 +7025,6 @@
       ],
       "correct": "atrás do",
       "scenario": "Explaining where the cat is hiding."
-    },
-    {
-      "id": 512,
-      "unit": 37,
-      "unitName": "Daily Activities Verbs",
-      "phase": 2,
-      "type": "contextualizedProduction",
-      "en": "I wake up at 7am.",
-      "question": "Complete the sentence:",
-      "template": "Eu __ às 7h",
-      "chips": [
-        "acordo",
-        "durmo",
-        "almoço",
-        "janto",
-        "saio"
-      ],
-      "correct": "acordo",
-      "scenario": "Describing your morning routine."
-    },
-    {
-      "id": 513,
-      "unit": 37,
-      "unitName": "Daily Activities Verbs",
-      "phase": 2,
-      "type": "contextualizedProduction",
-      "en": "I have lunch at noon.",
-      "question": "Complete the sentence:",
-      "template": "Eu __ ao meio-dia",
-      "chips": [
-        "almoço",
-        "janto",
-        "acordo",
-        "durmo",
-        "saio"
-      ],
-      "correct": "almoço",
-      "scenario": "Talking about your lunch break."
-    },
-    {
-      "id": 514,
-      "unit": 37,
-      "unitName": "Daily Activities Verbs",
-      "phase": 2,
-      "type": "contextualizedProduction",
-      "en": "We have dinner at 8pm.",
-      "question": "Complete the sentence:",
-      "template": "Nós __ às 20h",
-      "chips": [
-        "jantamos",
-        "almoçamos",
-        "dormimos",
-        "acordamos",
-        "saímos"
-      ],
-      "correct": "jantamos",
-      "scenario": "Describing evening habits."
     },
     {
       "id": 515,
@@ -7327,7 +7155,8 @@
         "do",
         "na",
         "para",
-        "com"
+        "com",
+        "(blank)"
       ],
       "correct": "da",
       "scenario": "You're asking a colleague for assistance."
@@ -7347,7 +7176,8 @@
         "de",
         "nas",
         "para",
-        "com"
+        "com",
+        "(blank)"
       ],
       "correct": "das",
       "scenario": "You're about to leave and can't find them."
@@ -7687,7 +7517,8 @@
         "umas",
         "uns",
         "a",
-        "o"
+        "o",
+        "(blank)"
       ],
       "correct": "uma",
       "scenario": "Describing what you see."
