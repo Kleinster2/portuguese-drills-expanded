@@ -171,7 +171,7 @@ function renderProductionQuestion(question, index) {
   
   // Scenario
   const scenarioHTML = question.scenario ?
-    `<p class="text-sm text-slate-600 mb-2">${question.scenario}</p>` : '';
+    `<p class="text-lg text-slate-800 mb-2">${question.scenario}</p>` : '';
 
   // Template
   let templateHTML = question.template.replace('__',
@@ -192,11 +192,8 @@ function renderProductionQuestion(question, index) {
     <div class="flex items-start space-x-3 mb-6" id="q-container-${question.id}">
       <div class="w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center text-xs font-bold text-slate-600">${index + 1}</div>
       <div class="glass-panel rounded-2xl p-5 shadow-md w-full max-w-2xl">
-        <div class="flex justify-between mb-2">
-          <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">${phaseName}</span>
-        </div>
         ${scenarioHTML}
-        <p class="text-lg font-medium text-slate-800 mb-4">${question.en}</p>
+        <p class="text-lg italic text-slate-800 mb-4">${question.en}</p>
         <div class="text-xl font-mono text-slate-700 mb-6 glass-panel p-4 rounded-lg border border-slate-200 shadow-inner">
           ${templateHTML}
         </div>
