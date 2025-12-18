@@ -170,8 +170,8 @@ function renderProductionQuestion(question, index) {
   const phaseName = phaseInfo ? phaseInfo.name.split(' ')[0] : `Phase ${currentPhase}`;
   
   // Scenario
-  const scenarioHTML = question.scenario ? 
-    `<div class="mb-3 p-3 glass-info border-l-4 border-amber-400 rounded text-sm text-amber-900 italic">${question.scenario}</div>` : '';
+  const scenarioHTML = question.scenario ?
+    `<p class="text-sm text-slate-600 mb-2">${question.scenario}</p>` : '';
 
   // Template
   let templateHTML = question.template.replace('__',
