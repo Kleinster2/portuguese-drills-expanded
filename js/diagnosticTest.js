@@ -75,7 +75,10 @@ async function startDiagnosticTest() {
   testSessionId = Date.now() + '-' + Math.random().toString(36).substr(2, 9);
 
   drillTitle.textContent = "Portuguese Diagnostic Assessment";
-  
+
+  // Log progress if user leaves mid-test
+  window.addEventListener('beforeunload', handleTestExit);
+
   if (window.plausible) {
     plausible('Placement Test', { props: { type: 'diagnostic-v3', mode: 'granular' } });
   }
@@ -293,6 +296,25 @@ function processAnswer(qid, answer, wasSkipped = false) {
 }
 
 /**
+ * Handle user leaving mid-test (beforeunload)
+ */
+function handleTestExit() {
+  if (testAnswers.length === 0) return; // No answers to log
+
+  // Use sendBeacon for reliability during page unload
+  const data = JSON.stringify({
+    answers: testAnswers,
+    completedPhases: completedPhases,
+    startTime: testStartTime,
+    sessionId: testSessionId,
+    userId: userId,
+    isComplete: false
+  });
+  const blob = new Blob([data], { type: 'application/json' });
+  navigator.sendBeacon('/api/diagnostic-test/report', blob);
+}
+
+/**
  * Log test progress to server (tracks partial completions and dropouts)
  */
 async function logTestProgress(isComplete = false) {
@@ -349,6 +371,9 @@ function showPhaseTransition(nextPhase) {
 
 async function finishTest() {
   const container = document.getElementById('chat-messages');
+
+  // Remove beforeunload handler since test completed normally
+  window.removeEventListener('beforeunload', handleTestExit);
 
   // Log final complete results to server (teacher monitors via D1 dashboard)
   await logTestProgress(true);
