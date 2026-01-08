@@ -201,7 +201,7 @@ function renderProductionQuestion(question, index) {
           ${chipsHTML}
         </div>
         <div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
-           <button onclick="skipDiagnosticQuestion(${question.id})" class="glass-chip px-5 py-3 text-base rounded-lg">I'm not totally sure / Skip</button>
+           <button id="skip-${question.id}" onclick="skipDiagnosticQuestion(${question.id})" class="glass-chip px-5 py-3 text-base rounded-lg disabled:opacity-50 disabled:cursor-not-allowed">I'm not totally sure / Skip</button>
            <button id="submit-${question.id}" onclick="submitDiagnosticAnswer(${question.id})" disabled
                    class="bg-blue-600 text-white px-8 py-3 rounded-lg text-base font-bold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-blue-700 transition">
              Submit
@@ -252,6 +252,7 @@ function processAnswer(qid, answer, wasSkipped = false) {
 
   // Disable UI
   document.getElementById(`submit-${qid}`).disabled = true;
+  document.getElementById(`skip-${qid}`).disabled = true;
   document.getElementById(`chips-container-${qid}`).style.pointerEvents = 'none';
   document.getElementById(`chips-container-${qid}`).classList.add('opacity-50');
 
