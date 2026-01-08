@@ -107,9 +107,9 @@
       "unitName": "Identity Statements",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I am a doctor.",
+      "en": "I am a teacher.",
       "question": "Complete the sentence:",
-      "template": "Eu __ médico.",
+      "template": "Eu __ professor/professora.",
       "chips": [
         "sou",
         "é",
@@ -122,7 +122,7 @@
         "são"
       ],
       "correct": "sou",
-      "scenario": "Stating your profession."
+      "scenario": "Introducing yourself at a school."
     },
     {
       "id": 4,
@@ -143,7 +143,7 @@
         "a"
       ],
       "correct": "do",
-      "scenario": "You're telling a friend where you just came from."
+      "scenario": "You arrive home with groceries."
     },
     {
       "id": 5,
@@ -151,9 +151,9 @@
       "unitName": "Origin with Contractions",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I am from the Philippines.",
+      "en": "I come from the mountains.",
       "question": "Complete the sentence:",
-      "template": "Eu sou __ Filipinas.",
+      "template": "Eu venho __ montanhas.",
       "chips": [
         "na",
         "da",
@@ -167,7 +167,7 @@
         "do"
       ],
       "correct": "das",
-      "scenario": "You're chatting with a new classmate about your backgrounds."
+      "scenario": "Someone asks about your hometown."
     },
     {
       "id": 6,
@@ -175,9 +175,9 @@
       "unitName": "Definite Articles",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "The young man is here.",
+      "en": "The friend is here.",
       "question": "Complete the sentence:",
-      "template": "__ rapaz está aqui.",
+      "template": "__ amigo está aqui.",
       "chips": [
         "Os",
         "A",
@@ -195,9 +195,9 @@
       "unitName": "Definite Articles",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "The young women are here.",
+      "en": "The friends (f) are here.",
       "question": "Complete the sentence:",
-      "template": "__ moças estão aqui.",
+      "template": "__ amigas estão aqui.",
       "chips": [
         "Os",
         "As",
@@ -228,7 +228,7 @@
         "(blank)"
       ],
       "correct": "um",
-      "scenario": "Chatting about pets with a new neighbor."
+      "scenario": "A coworker asks if you have any pets."
     },
     {
       "id": 9,
@@ -236,9 +236,9 @@
       "unitName": "Indefinite Articles",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I have some pens.",
+      "en": "I have some coins.",
       "question": "Complete the sentence:",
-      "template": "Eu tenho __ canetas.",
+      "template": "Eu tenho __ moedas.",
       "chips": [
         "uns",
         "um",
@@ -249,7 +249,7 @@
         "(blank)"
       ],
       "correct": "umas",
-      "scenario": "Offering to lend supplies to a classmate."
+      "scenario": "Someone at a café needs change for the parking meter."
     },
     {
       "id": 10,
@@ -282,16 +282,13 @@
       "question": "Complete the sentence:",
       "template": "Eu __ no escritório.",
       "chips": [
-        "estava",
-        "estaria",
-        "seja",
-        "está",
-        "era",
-        "estou",
-        "fui",
-        "vou",
         "sou",
-        "fico"
+        "estou",
+        "fico",
+        "trabalho",
+        "era",
+        "fui",
+        "vou"
       ],
       "correct": "estou",
       "scenario": "Someone calls asking where you are."
@@ -302,9 +299,9 @@
       "unitName": "Verb Estar",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I am tired.",
+      "en": "I am ready.",
       "question": "Complete the sentence:",
-      "template": "Eu __ cansado.",
+      "template": "Eu __ pronto.",
       "chips": [
         "sou",
         "estou",
@@ -314,7 +311,7 @@
         "seja"
       ],
       "correct": "estou",
-      "scenario": "Your coworker asks how you're doing this Monday morning."
+      "scenario": "Your coworker asks if you're ready for the meeting."
     },
     {
       "id": 14,
@@ -322,18 +319,18 @@
       "unitName": "Adjective Agreement",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "The excited young man.",
+      "en": "The busy friend (m).",
       "question": "Complete the sentence:",
-      "template": "O rapaz __.",
+      "template": "O amigo __.",
       "chips": [
-        "animado",
-        "animada",
-        "animados",
-        "animadas",
-        "triste"
+        "ocupado",
+        "ocupada",
+        "ocupados",
+        "ocupadas",
+        "pronto"
       ],
-      "correct": "animado",
-      "scenario": "Describing someone at a birthday party."
+      "correct": "ocupado",
+      "scenario": "Describing a coworker to someone."
     },
     {
       "id": 15,
@@ -341,18 +338,18 @@
       "unitName": "Adjective Agreement",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "The excited young women.",
+      "en": "The busy friends (f).",
       "question": "Complete the sentence:",
-      "template": "As moças __.",
+      "template": "As amigas __.",
       "chips": [
-        "animadas",
-        "animado",
-        "animada",
-        "animados",
-        "tristes"
+        "ocupadas",
+        "ocupado",
+        "ocupada",
+        "ocupados",
+        "prontas"
       ],
-      "correct": "animadas",
-      "scenario": "Describing friends before a concert."
+      "correct": "ocupadas",
+      "scenario": "Describing coworkers during a busy week."
     },
     {
       "id": 17,
@@ -360,9 +357,9 @@
       "unitName": "Basic -AR Verbs",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I live in Rio.",
+      "en": "I live in the neighborhood.",
       "question": "Complete the sentence:",
-      "template": "Eu __ no Rio.",
+      "template": "Eu __ no bairro.",
       "chips": [
         "moramos",
         "morasse",
@@ -404,8 +401,8 @@
     },
     {
       "id": 21,
-      "unit": 9,
-      "unitName": "Basic -AR Verbs",
+      "unit": 2,
+      "unitName": "Location with Contractions",
       "phase": 1,
       "type": "contextualizedProduction",
       "en": "I work at the hospital.",
@@ -433,9 +430,9 @@
       "unitName": "Basic -AR Verbs",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I study English.",
+      "en": "I study every day.",
       "question": "Complete the sentence:",
-      "template": "Eu __ inglês.",
+      "template": "Eu __ todos os dias.",
       "chips": [
         "estude",
         "estudamos",
@@ -449,7 +446,7 @@
         "estudaria"
       ],
       "correct": "estudo",
-      "scenario": "Telling a friend about the subjects you take at school."
+      "scenario": "Describing your daily routine to a friend."
     },
     {
       "id": 26,
@@ -473,7 +470,7 @@
         "localiza"
       ],
       "correct": "fica",
-      "scenario": "Giving the address of the house."
+      "scenario": "Giving the location of the house."
     },
     {
       "id": 27,
@@ -486,7 +483,6 @@
       "template": "Eu sempre __ em casa quando chove.",
       "chips": [
         "fico",
-        "estou",
         "vou",
         "saio",
         "moro",
@@ -504,9 +500,9 @@
       "unitName": "Verb Estar",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I am happy.",
+      "en": "I am at the restaurant.",
       "question": "Complete the sentence:",
-      "template": "Eu __ feliz.",
+      "template": "Eu __ no restaurante.",
       "chips": [
         "fui",
         "estaria",
@@ -517,10 +513,10 @@
         "está",
         "era",
         "estou",
-        "fico"
+        "vou"
       ],
       "correct": "estou",
-      "scenario": "Talking about your mood after good news."
+      "scenario": "Texting a friend to let them know you arrived."
     },
     {
       "id": 30,
@@ -625,9 +621,9 @@
       "unitName": "Verb Precisar de",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "I need water.",
+      "en": "I need help.",
       "question": "Complete the sentence:",
-      "template": "Eu preciso __ água.",
+      "template": "Eu preciso __ ajuda.",
       "chips": [
         "na",
         "para",
@@ -642,7 +638,7 @@
         "(blank)"
       ],
       "correct": "de",
-      "scenario": "Explaining what you need to survive."
+      "scenario": "Asking a colleague for assistance."
     },
     {
       "id": 54,
@@ -667,7 +663,7 @@
         "(blank)"
       ],
       "correct": "do",
-      "scenario": "Asking to borrow the family vehicle."
+      "scenario": "Telling your roommate you have errands to run."
     },
     {
       "id": 64,
@@ -675,9 +671,9 @@
       "unitName": "Regular -ER Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "For breakfast, I usually eat fruit.",
+      "en": "I usually eat early.",
       "question": "Complete the sentence:",
-      "template": "Eu __ fruta.",
+      "template": "Eu geralmente __ cedo.",
       "chips": [
         "comer",
         "comesse",
@@ -691,7 +687,7 @@
         "comia"
       ],
       "correct": "como",
-      "scenario": "Describing your morning routine in a nutrition consult."
+      "scenario": "Describing your eating schedule to a nutritionist."
     },
     {
       "id": 65,
@@ -699,23 +695,23 @@
       "unitName": "Regular -ER Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "When I exercise, I drink water.",
+      "en": "I always run in the morning.",
       "question": "Complete the sentence:",
-      "template": "Eu __ água.",
+      "template": "Eu sempre __ de manhã.",
       "chips": [
-        "beberia",
-        "bebemos",
-        "bebia",
-        "beba",
-        "bebem",
-        "bebesse",
-        "bebe",
-        "beber",
-        "bebi",
-        "bebo"
+        "correria",
+        "corremos",
+        "corria",
+        "corra",
+        "correm",
+        "corresse",
+        "corre",
+        "correr",
+        "corri",
+        "corro"
       ],
-      "correct": "bebo",
-      "scenario": "Sharing workout habits with a trainer."
+      "correct": "corro",
+      "scenario": "Telling a friend about your exercise routine."
     },
     {
       "id": 66,
@@ -723,9 +719,9 @@
       "unitName": "Present Tense Verb Forms",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "You speak Portuguese.",
+      "en": "You speak Portuguese very well.",
       "question": "Complete the sentence:",
-      "template": "Você __ português.",
+      "template": "Você __ português muito bem.",
       "chips": [
         "falaria",
         "falava",
@@ -739,7 +735,7 @@
         "falamos"
       ],
       "correct": "fala",
-      "scenario": "Complimenting a classmate on their Portuguese."
+      "scenario": "Complimenting a colleague on their language skills."
     },
     {
       "id": 67,
@@ -747,9 +743,9 @@
       "unitName": "Present Tense Verb Forms",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Every day, he eats bread.",
+      "en": "He always eats bread.",
       "question": "Complete the sentence:",
-      "template": "Ele __ pão.",
+      "template": "Ele sempre __ pão.",
       "chips": [
         "comeu",
         "comia",
@@ -763,7 +759,7 @@
         "comem"
       ],
       "correct": "come",
-      "scenario": "Describing his breakfast habits to a doctor."
+      "scenario": "Describing someone's eating habits."
     },
     {
       "id": 68,
@@ -795,23 +791,23 @@
       "unitName": "Present Tense Verb Forms",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We speak Portuguese.",
+      "en": "We always eat together.",
       "question": "Complete the sentence:",
-      "template": "Nós __ português.",
+      "template": "Nós sempre __ juntos.",
       "chips": [
-        "falávamos",
-        "falamos",
-        "falo",
-        "falar",
-        "fala",
-        "falaríamos",
-        "falaremos",
-        "falemos",
-        "falássemos",
-        "falam"
+        "comíamos",
+        "comemos",
+        "como",
+        "comer",
+        "come",
+        "comeríamos",
+        "comeremos",
+        "comamos",
+        "comêssemos",
+        "comem"
       ],
-      "correct": "falamos",
-      "scenario": "Telling new classmates your group speaks Portuguese."
+      "correct": "comemos",
+      "scenario": "Describing your family's dinner routine."
     },
     {
       "id": 70,
@@ -843,23 +839,23 @@
       "unitName": "Present Tense Verb Forms",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We drink coffee every morning.",
+      "en": "We sell products every day.",
       "question": "Complete the sentence:",
-      "template": "Nós __ café todas as manhãs.",
+      "template": "Nós __ produtos todos os dias.",
       "chips": [
-        "beberemos",
-        "bebêssemos",
-        "bebem",
-        "beber",
-        "bebo",
-        "bebamos",
-        "bebemos",
-        "beberíamos",
-        "bebe",
-        "bebíamos"
+        "venderemos",
+        "vendêssemos",
+        "vendem",
+        "vender",
+        "vendo",
+        "vendamos",
+        "vendemos",
+        "venderíamos",
+        "vende",
+        "vendíamos"
       ],
-      "correct": "bebemos",
-      "scenario": "Describing your household's morning routine."
+      "correct": "vendemos",
+      "scenario": "Describing your company's operations."
     },
     {
       "id": 73,
@@ -892,9 +888,9 @@
       "unitName": "Verb Gostar de",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Every week, I like to study.",
+      "en": "I like to travel.",
       "question": "Complete the sentence:",
-      "template": "Eu gosto __ estudar.",
+      "template": "Eu gosto __ viajar.",
       "chips": [
         "em",
         "no",
@@ -909,7 +905,7 @@
         "(blank)"
       ],
       "correct": "de",
-      "scenario": "Mentioning weekend plans to a friend."
+      "scenario": "Talking about your interests with a new friend."
     },
     {
       "id": 76,
@@ -941,23 +937,23 @@
       "unitName": "Regular -IR Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I cut the bread.",
+      "en": "I always share the costs.",
       "question": "Complete the sentence:",
-      "template": "Eu __ o pão.",
+      "template": "Eu sempre __ os custos.",
       "chips": [
-        "partisse",
-        "parto",
-        "parte",
-        "parti",
-        "partir",
-        "parta",
-        "partia",
-        "partiria",
-        "partimos",
-        "partem"
+        "dividisse",
+        "divido",
+        "divide",
+        "dividi",
+        "dividir",
+        "divida",
+        "dividia",
+        "dividiria",
+        "dividimos",
+        "dividem"
       ],
-      "correct": "parto",
-      "scenario": "Describing what you're doing in the kitchen."
+      "correct": "divido",
+      "scenario": "Explaining how you split expenses with roommates."
     },
     {
       "id": 79,
@@ -965,7 +961,7 @@
       "unitName": "Future with Ir + Infinitive",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Next year, i am going to study portuguese.",
+      "en": "I am going to study Portuguese.",
       "question": "Complete the sentence:",
       "template": "Eu vou __ português.",
       "chips": [
@@ -981,7 +977,7 @@
         "estudaria"
       ],
       "correct": "estudar",
-      "scenario": "Sharing plans for next year with your family."
+      "scenario": "Sharing your plans with a friend."
     },
     {
       "id": 80,
@@ -989,7 +985,7 @@
       "unitName": "Future with Ir + Infinitive",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Tomorrow, i am going to stay at home.",
+      "en": "I am going to stay at home.",
       "question": "Complete the sentence:",
       "template": "Eu vou __ em casa.",
       "chips": [
@@ -1005,7 +1001,7 @@
         "ficado"
       ],
       "correct": "ficar",
-      "scenario": "Explaining tomorrow's plan to rest at home."
+      "scenario": "Telling a friend your weekend plans."
     },
     {
       "id": 81,
@@ -1029,7 +1025,7 @@
         "falo"
       ],
       "correct": "falam",
-      "scenario": "Complimenting a group on their Portuguese in class."
+      "scenario": "Complimenting colleagues on their language skills."
     },
     {
       "id": 82,
@@ -1061,23 +1057,23 @@
       "unitName": "Present Tense Verb Forms",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "They drink juice after class.",
+      "en": "They always run in the park.",
       "question": "Complete the sentence:",
-      "template": "Elas __ suco depois da aula.",
+      "template": "Elas sempre __ no parque.",
       "chips": [
-        "beberam",
-        "bebiam",
-        "bebe",
-        "bebem",
-        "beberiam",
-        "bebam",
-        "beber",
-        "beberão",
-        "bebo",
-        "bebemos"
+        "correram",
+        "corriam",
+        "corre",
+        "correm",
+        "correriam",
+        "corram",
+        "correr",
+        "correrão",
+        "corro",
+        "corremos"
       ],
-      "correct": "bebem",
-      "scenario": "Describing your classmates' habits."
+      "correct": "correm",
+      "scenario": "Describing your neighbors' exercise routine."
     },
     {
       "id": 93,
@@ -1085,7 +1081,7 @@
       "unitName": "Common Question Words",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I don't know this city well. Where do you live?",
+      "en": "Where do you live?",
       "question": "Complete the sentence:",
       "template": "__ você mora?",
       "chips": [
@@ -1099,7 +1095,7 @@
         "Quanto"
       ],
       "correct": "Onde",
-      "scenario": "Asking directions to understand where someone stays."
+      "scenario": "Getting to know a new colleague."
     },
     {
       "id": 94,
@@ -1142,7 +1138,7 @@
         "Minhas"
       ],
       "correct": "Minhas",
-      "scenario": "Telling someone where your friends are from."
+      "scenario": "Telling someone where your friends live."
     },
     {
       "id": 96,
@@ -1215,9 +1211,9 @@
       "unitName": "Possessive Adjectives",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Our questions are difficult.",
+      "en": "Our bags are heavy.",
       "question": "Complete the sentence:",
-      "template": "__ perguntas são difíceis.",
+      "template": "__ malas estão pesadas.",
       "chips": [
         "Nossas",
         "Minha",
@@ -1228,7 +1224,7 @@
         "Meu"
       ],
       "correct": "Nossas",
-      "scenario": "Discussing the exam with your study group."
+      "scenario": "Arriving at the airport with a friend."
     },
     {
       "id": 101,
@@ -1236,9 +1232,9 @@
       "unitName": "Preterite Tense - Regular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I spoke Portuguese.",
+      "en": "I talked to my boss.",
       "question": "Complete the sentence:",
-      "template": "Eu __ português.",
+      "template": "Eu __ com meu chefe.",
       "chips": [
         "falava",
         "falar",
@@ -1252,7 +1248,7 @@
         "falasse"
       ],
       "correct": "falei",
-      "scenario": "You're recounting a completed event."
+      "scenario": "Updating a colleague on a meeting."
     },
     {
       "id": 102,
@@ -1276,7 +1272,7 @@
         "mora"
       ],
       "correct": "morou",
-      "scenario": "A friend asks what you did yesterday."
+      "scenario": "Confirming where someone used to live."
     },
     {
       "id": 103,
@@ -1308,23 +1304,23 @@
       "unitName": "Preterite Tense - Regular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Yesterday, i drank water.",
+      "en": "I ate too much.",
       "question": "Complete the sentence:",
-      "template": "Eu __ água.",
+      "template": "Eu __ demais.",
       "chips": [
-        "bebi",
-        "bebemos",
-        "bebe",
-        "beberei",
-        "bebo",
-        "bebia",
-        "bebesse",
-        "beba",
-        "beber",
-        "beberia"
+        "comi",
+        "comemos",
+        "come",
+        "comerei",
+        "como",
+        "comia",
+        "comesse",
+        "coma",
+        "comer",
+        "comeria"
       ],
-      "correct": "bebi",
-      "scenario": "Recalling what you drank yesterday for a diet log."
+      "correct": "comi",
+      "scenario": "Commenting after a big dinner."
     },
     {
       "id": 106,
@@ -1380,7 +1376,7 @@
       "unitName": "Preterite Tense - Irregular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Yesterday, I went to the park.",
+      "en": "I went to the park.",
       "question": "Complete the sentence:",
       "template": "Eu __ ao parque.",
       "chips": [
@@ -1396,7 +1392,7 @@
         "iria"
       ],
       "correct": "fui",
-      "scenario": "Telling a friend about yesterday's outing to the park."
+      "scenario": "Telling a friend about your outing."
     },
     {
       "id": 111,
@@ -1428,7 +1424,7 @@
       "unitName": "Preterite Tense - Irregular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Yesterday, we went there.",
+      "en": "We went there.",
       "question": "Complete the sentence:",
       "template": "Nós __ lá.",
       "chips": [
@@ -1443,7 +1439,7 @@
         "foram"
       ],
       "correct": "fomos",
-      "scenario": "Explaining that your group already went there yesterday."
+      "scenario": "Explaining that your group already visited the place."
     },
     {
       "id": 114,
@@ -1499,7 +1495,7 @@
       "unitName": "Preterite Tense - Irregular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We had luck.",
+      "en": "We were lucky.",
       "question": "Complete the sentence:",
       "template": "Nós __ sorte.",
       "chips": [
@@ -1523,9 +1519,9 @@
       "unitName": "Preterite Tense - Irregular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I said everything.",
+      "en": "I said yes.",
       "question": "Complete the sentence:",
-      "template": "Eu __ tudo.",
+      "template": "Eu __ sim.",
       "chips": [
         "dizia",
         "dizemos",
@@ -1539,7 +1535,7 @@
         "diria"
       ],
       "correct": "disse",
-      "scenario": "A friend asks what you did yesterday."
+      "scenario": "Telling a friend about your answer to a job offer."
     },
     {
       "id": 119,
@@ -1571,7 +1567,7 @@
       "unitName": "Preterite Tense - Irregular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Yesterday, we did that.",
+      "en": "We did that.",
       "question": "Complete the sentence:",
       "template": "Nós __ isso.",
       "chips": [
@@ -1587,7 +1583,7 @@
         "fiz"
       ],
       "correct": "fizemos",
-      "scenario": "Mentioning the team already completed that task yesterday."
+      "scenario": "Confirming a task was completed."
     },
     {
       "id": 122,
@@ -1619,7 +1615,7 @@
       "unitName": "Preterite Tense - Irregular Verbs",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Yesterday, I saw that.",
+      "en": "I saw that.",
       "question": "Complete the sentence:",
       "template": "Eu __ isso.",
       "chips": [
@@ -1635,7 +1631,7 @@
         "via"
       ],
       "correct": "vi",
-      "scenario": "Telling someone you already saw that yesterday."
+      "scenario": "Telling someone you already noticed something."
     },
     {
       "id": 124,
@@ -1659,7 +1655,7 @@
         "dá"
       ],
       "correct": "dei",
-      "scenario": "You're recounting a past event of gift-giving."
+      "scenario": "Telling a friend about a gift you gave."
     },
     {
       "id": 126,
@@ -1667,23 +1663,23 @@
       "unitName": "Irregular Preterite - Poder/Pôr/Saber/Querer",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I wanted to go.",
+      "en": "I found out yesterday.",
       "question": "Complete the sentence:",
-      "template": "Eu __ ir.",
+      "template": "Eu __ ontem.",
       "chips": [
-        "queremos",
-        "queria",
-        "quisesse",
-        "quero",
-        "quererei",
-        "quis",
-        "queira",
-        "quereria",
-        "quer",
-        "querem"
+        "sabemos",
+        "sabia",
+        "soubesse",
+        "sei",
+        "saberei",
+        "soube",
+        "saiba",
+        "saberia",
+        "sabe",
+        "sabem"
       ],
-      "correct": "quis",
-      "scenario": "A friend asks what you did yesterday."
+      "correct": "soube",
+      "scenario": "Someone asks when you heard the news."
     },
     {
       "id": 127,
@@ -1731,7 +1727,7 @@
         "pode"
       ],
       "correct": "pude",
-      "scenario": "A friend asks what you did yesterday."
+      "scenario": "Explaining that your vacation worked out."
     },
     {
       "id": 129,
@@ -1788,9 +1784,9 @@
       "unitName": "Contractions with Preposition A",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I go to school.",
+      "en": "I go to the gym.",
       "question": "Complete the sentence:",
-      "template": "Eu vou __ escola.",
+      "template": "Eu vou __ academia.",
       "chips": [
         "às",
         "do",
@@ -1804,7 +1800,7 @@
         "(blank)"
       ],
       "correct": "à",
-      "scenario": "Explaining your daily commute to school."
+      "scenario": "Telling a friend about your exercise routine."
     },
     {
       "id": 132,
@@ -1812,9 +1808,9 @@
       "unitName": "Contractions with Preposition A",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I go to the banks.",
+      "en": "I wake up at 6 o'clock.",
       "question": "Complete the sentence:",
-      "template": "Eu vou __ bancos.",
+      "template": "Eu acordo __ 6 horas.",
       "chips": [
         "nos",
         "no",
@@ -1828,8 +1824,8 @@
         "nas",
         "(blank)"
       ],
-      "correct": "aos",
-      "scenario": "Explaining errands that take you to several banks."
+      "correct": "às",
+      "scenario": "Describing your morning routine."
     },
     {
       "id": 133,
@@ -1837,9 +1833,9 @@
       "unitName": "Contractions with Preposition A",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I go to the schools.",
+      "en": "I go to the offices.",
       "question": "Complete the sentence:",
-      "template": "Eu vou __ escolas.",
+      "template": "Eu vou __ escritórios.",
       "chips": [
         "ao",
         "das",
@@ -1853,8 +1849,8 @@
         "aos",
         "(blank)"
       ],
-      "correct": "às",
-      "scenario": "Describing visits to different schools for work."
+      "correct": "aos",
+      "scenario": "Describing visits to different clients."
     },
     {
       "id": 137,
@@ -1914,7 +1910,7 @@
       "type": "contextualizedProduction",
       "en": "When I was younger, I used to live in the countryside.",
       "question": "Complete the sentence:",
-      "template": "Eu __ no campo.",
+      "template": "Quando eu era mais jovem, eu __ no campo.",
       "chips": [
         "morasse",
         "morarei",
@@ -1938,7 +1934,7 @@
       "type": "contextualizedProduction",
       "en": "As a child, I used to eat candy every day.",
       "question": "Complete the sentence:",
-      "template": "Eu __ doces todos os dias.",
+      "template": "Quando era criança, eu __ doces todos os dias.",
       "chips": [
         "comi",
         "comerei",
@@ -1960,9 +1956,9 @@
       "unitName": "Imperfect Tense",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "Things were different back then. I used to be happy.",
+      "en": "Before, I used to be very shy.",
       "question": "Complete the sentence:",
-      "template": "Eu __ feliz.",
+      "template": "Antes, eu __ muito tímido.",
       "chips": [
         "fui",
         "fosse",
@@ -1976,7 +1972,7 @@
         "seria"
       ],
       "correct": "era",
-      "scenario": "Reflecting on how life felt happier in the past."
+      "scenario": "Telling a friend about your personality in the past."
     },
     {
       "id": 146,
@@ -1984,9 +1980,9 @@
       "unitName": "Imperfect Tense",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "Life was easier before. I used to have time.",
+      "en": "Before, I used to have more time.",
       "question": "Complete the sentence:",
-      "template": "Eu __ tempo.",
+      "template": "Antes, eu __ mais tempo.",
       "chips": [
         "terei",
         "tive",
@@ -2000,7 +1996,7 @@
         "tinha"
       ],
       "correct": "tinha",
-      "scenario": "Complaining about having less free time now."
+      "scenario": "Reflecting on how busy life has become."
     },
     {
       "id": 147,
@@ -2008,9 +2004,9 @@
       "unitName": "Imperfect Tense",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "In the past, i used to come here always.",
+      "en": "In the past, I always used to come here.",
       "question": "Complete the sentence:",
-      "template": "Eu __ aqui sempre.",
+      "template": "No passado, eu sempre __ aqui.",
       "chips": [
         "venha",
         "vínhamos",
@@ -2120,9 +2116,9 @@
       "unitName": "Superlatives",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "The least tall.",
+      "en": "The least expensive.",
       "question": "Complete the phrase:",
-      "template": "__ menos alto.",
+      "template": "__ menos caro.",
       "chips": [
         "Mais",
         "O",
@@ -2134,7 +2130,7 @@
         "Um"
       ],
       "correct": "O",
-      "scenario": "You're explaining why someone can reach the top shelf."
+      "scenario": "Comparing prices at a store."
     },
     {
       "id": 156,
@@ -2149,7 +2145,6 @@
         "da tarde",
         "minuto",
         "minutos",
-        "em ponto",
         "da manhã",
         "hora",
         "e meia",
@@ -2175,36 +2170,76 @@
         "sobre a",
         "dentro da",
         "longe da",
-        "ao lado da"
+        "ao lado da",
+        "em cima",
+        "embaixo",
+        "perto",
+        "dentro",
+        "longe",
+        "ao lado",
+        "em cima na",
+        "embaixo na",
+        "perto na",
+        "dentro na",
+        "longe na",
+        "ao lado na",
+        "em cima a",
+        "embaixo a",
+        "longe a",
+        "ao lado a",
+        "perto a",
+        "dentro a"
       ],
       "correct": "embaixo da",
-      "scenario": "You're giving your location to a delivery driver."
+      "scenario": "Helping someone find a book they're looking for."
     },
     {
-      "id": 206,
-      "unit": 62,
-      "unitName": "Daily Activities Verbs",
+      "id": 199,
+      "unit": 60,
+      "unitName": "Locations and Directions",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "I go to bed at 10pm.",
+      "en": "The keys are on top of the table.",
       "question": "Complete the sentence:",
-      "template": "Eu me __ às 10h.",
+      "template": "As chaves estão em cima __ mesa.",
       "chips": [
-        "deito",
-        "deite",
-        "deitarei",
-        "deitaria",
-        "levanto",
-        "deitei",
-        "acordo",
-        "deitasse",
-        "deitava",
-        "durmo"
+        "da",
+        "na",
+        "a",
+        "de",
+        "em",
+        "do",
+        "no",
+        "o",
+        "à"
       ],
-      "correct": "deito",
-      "scenario": "Explaining your bedtime routine to a doctor."
+      "correct": "da",
+      "scenario": "Telling someone where you left the keys."
     },
     {
+      "id": 200,
+      "unit": 60,
+      "unitName": "Locations and Directions",
+      "phase": 3,
+      "type": "contextualizedProduction",
+      "en": "The cat is next to the sofa.",
+      "question": "Complete the sentence:",
+      "template": "O gato está ao lado __ sofá.",
+      "chips": [
+        "do",
+        "no",
+        "o",
+        "de",
+        "em",
+        "da",
+        "na",
+        "a",
+        "ao"
+      ],
+      "correct": "do",
+      "scenario": "Describing where your cat is sitting."
+    },
+        {
       "id": 211,
       "unit": 63,
       "unitName": "Frequency Adverbs",
@@ -2590,7 +2625,7 @@
       "unitName": "Commands/Imperative Mood",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "Open the door! (vocês).",
+      "en": "Open the door, everyone!",
       "question": "Complete the sentence:",
       "template": "__ a porta!",
       "chips": [
@@ -2614,7 +2649,7 @@
       "unitName": "Present Subjunctive - Regular Verbs",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I'm worried, but I hope you eat.",
+      "en": "I hope you eat.",
       "question": "Complete the sentence:",
       "template": "Espero que você __.",
       "chips": [
@@ -2638,7 +2673,7 @@
       "unitName": "Present Subjunctive - Regular Verbs",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I'm worried, but I hope you leave.",
+      "en": "I hope you leave.",
       "question": "Complete the sentence:",
       "template": "Espero que você __.",
       "chips": [
@@ -2662,7 +2697,7 @@
       "unitName": "Present Subjunctive - Regular Verbs",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "Maybe we travel.",
+      "en": "Maybe we'll travel.",
       "question": "Complete the sentence:",
       "template": "Talvez nós __.",
       "chips": [
@@ -2686,7 +2721,7 @@
       "unitName": "Present Subjunctive - Irregular Verbs",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I'm worried, but I hope you are happy.",
+      "en": "I hope you are happy.",
       "question": "Complete the sentence:",
       "template": "Espero que você __ feliz.",
       "chips": [
@@ -2730,7 +2765,7 @@
       "unitName": "Present Subjunctive - Irregular Verbs",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I'm worried, but I hope you go.",
+      "en": "I hope you go.",
       "question": "Complete the sentence:",
       "template": "Espero que você __.",
       "chips": [
@@ -2915,7 +2950,7 @@
       "unitName": "Colloquial Brazilian Portuguese",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "You are going (colloquial).",
+      "en": "You're going.",
       "question": "Complete the colloquial sentence:",
       "template": "Cê __ indo.",
       "chips": [
@@ -3076,19 +3111,21 @@
       "unitName": "Verb Estar",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "The tomato is expensive.",
+      "en": "The tomatoes are expensive.",
       "question": "Complete the sentence:",
-      "template": "O tomate __ caro.",
+      "template": "Os tomates __ caros.",
       "chips": [
-        "está",
-        "é",
-        "fica",
-        "foi",
-        "era",
+        "estão",
+        "são",
+        "ficam",
+        "foram",
+        "eram",
         "ser",
-        "estar"
+        "estar",
+        "está",
+        "é"
       ],
-      "correct": "está",
+      "correct": "estão",
       "scenario": "Complaining about recent price increases at the market."
     },
     {
@@ -3137,20 +3174,20 @@
       "unitName": "Verbs of Communication",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "He asks for the bill.",
+      "en": "He asked for the bill.",
       "question": "Complete the sentence:",
       "template": "Ele __ a conta.",
       "chips": [
-        "pede",
-        "pergunta",
+        "pediu",
+        "perguntou",
         "pedir",
         "perguntar",
-        "peço",
-        "pergunto",
-        "pedem",
-        "perguntam"
+        "pedi",
+        "perguntei",
+        "pediram",
+        "perguntaram"
       ],
-      "correct": "pede",
+      "correct": "pediu",
       "scenario": "Observing a customer at a restaurant."
     },
     {
@@ -3181,7 +3218,7 @@
       "unitName": "Ir vs Vir",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I am going there now (to where you are).",
+      "en": "I'm on my way there now.",
       "question": "Complete the sentence:",
       "template": "Eu estou __ para aí agora.",
       "chips": [
@@ -3195,7 +3232,7 @@
         "vim"
       ],
       "correct": "indo",
-      "scenario": "You are at home, telling your friend (who is already at the restaurant) that you are leaving to meet them."
+      "scenario": "You are at home. Your friend calls from the restaurant asking where you are. You are about to leave your house to go to the restaurant where they are waiting."
     },
     {
       "id": 223,
@@ -3203,21 +3240,21 @@
       "unitName": "Contractions with Preposition A",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I go home.",
+      "en": "I go to the office.",
       "question": "Complete the sentence:",
-      "template": "Eu vou __ casa.",
+      "template": "Eu vou __ escritório.",
       "chips": [
+        "para o",
         "para",
-        "para a",
+        "ao",
         "a",
         "em",
-        "na",
         "no",
-        "da",
-        "do"
+        "do",
+        "o"
       ],
-      "correct": "para",
-      "scenario": "You are leaving work at the end of the day."
+      "correct": "para o",
+      "scenario": "Where do you go after you leave in the morning?"
     },
     {
       "id": 224,
@@ -3225,21 +3262,21 @@
       "unitName": "Contractions with Preposition A",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I am going to the house of my friend.",
+      "en": "I am going to move to Germany next year.",
       "question": "Complete the sentence:",
-      "template": "Eu vou __ casa do meu amigo.",
+      "template": "Eu vou mudar __ Alemanha no próximo ano.",
       "chips": [
         "para a",
-        "para",
+        "à",
         "a",
         "em",
         "na",
-        "no",
         "da",
-        "do"
+        "do",
+        "ao"
       ],
       "correct": "para a",
-      "scenario": "You are visiting a specific residence."
+      "scenario": "Telling friends about your relocation plans."
     },
     {
       "id": 304,
@@ -3256,7 +3293,8 @@
         "onde",
         "quem",
         "qual",
-        "que"
+        "que",
+        "(blank)"
       ],
       "correct": "que",
       "scenario": "You're recommending a book to a friend."
@@ -3267,19 +3305,20 @@
       "unitName": "Relative Pronouns",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "The woman that works here is my aunt.",
+      "en": "The movie that we watched was great.",
       "question": "Complete the sentence:",
-      "template": "A mulher __ trabalha aqui é minha tia.",
+      "template": "O filme __ nós assistimos foi ótimo.",
       "chips": [
         "que",
         "cujo",
         "quem",
         "qual",
         "o que",
-        "onde"
+        "onde",
+        "(blank)"
       ],
       "correct": "que",
-      "scenario": "You're introducing a family member at your workplace."
+      "scenario": "Talking about last night's movie with a friend."
     },
     {
       "id": 306,
@@ -3296,7 +3335,8 @@
         "qual",
         "onde",
         "quando",
-        "quem"
+        "quem",
+        "(blank)"
       ],
       "correct": "onde",
       "scenario": "You're telling a new friend about your hometown."
@@ -3316,7 +3356,8 @@
         "onde",
         "o que",
         "quando",
-        "cujo"
+        "cujo",
+        "(blank)"
       ],
       "correct": "que",
       "scenario": "You're explaining a missed call to your roommate."
@@ -3327,16 +3368,17 @@
       "unitName": "Relative Pronouns",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "I don't understand what you said.",
+      "en": "I didn't understand what you said.",
       "question": "Complete the sentence:",
-      "template": "Eu não entendo __ você disse.",
+      "template": "Eu não entendi __ você disse.",
       "chips": [
         "que",
         "cujo",
         "onde",
         "qual",
         "quem",
-        "o que"
+        "o que",
+        "(blank)"
       ],
       "correct": "o que",
       "scenario": "You're asking someone to repeat themselves in a noisy café."
@@ -3356,7 +3398,8 @@
         "Essa",
         "A",
         "Aquelas",
-        "Aquela"
+        "Aquela",
+        "Isso"
       ],
       "correct": "Essa",
       "scenario": "You're asking your friend to pass you a pen that's next to them."
@@ -3373,10 +3416,10 @@
       "chips": [
         "Esses",
         "Estes",
-        "Esse",
         "Aquele",
         "Este",
-        "Aqueles"
+        "Aqueles",
+        "Isso"
       ],
       "correct": "Aquele",
       "scenario": "You're pointing to a car in a distant parking lot across the street."
@@ -3417,7 +3460,12 @@
         "esteja",
         "estava",
         "estaria",
-        "está"
+        "está",
+        "seja",
+        "fosse",
+        "seria",
+        "é",
+        "for"
       ],
       "correct": "estivesse",
       "scenario": "You're on a beautiful beach, missing your partner."
@@ -3475,7 +3523,7 @@
         "ela",
         "a",
         "lhe",
-        "the",
+        "te",
         "se",
         "o"
       ],
@@ -3517,7 +3565,8 @@
         "lo",
         "lhe",
         "a",
-        "o"
+        "o",
+        "te"
       ],
       "correct": "lhe",
       "scenario": "You're explaining what you did with the book your friend was looking for."
@@ -3540,7 +3589,7 @@
         "eu"
       ],
       "correct": "mim",
-      "scenario": "You're telling someone who received the gift."
+      "scenario": "Explaining who received the book."
     },
     {
       "id": 326,
@@ -3560,7 +3609,7 @@
         "os"
       ],
       "correct": "os",
-      "scenario": "You're asking if your friend knows the guys who just walked in."
+      "scenario": "Asking a colleague about some clients."
     },
     {
       "id": 327,
@@ -3600,7 +3649,7 @@
         "a gente"
       ],
       "correct": "nos",
-      "scenario": "You're thanking someone who assisted your group."
+      "scenario": "Talking about a helpful coworker."
     },
     {
       "id": 329,
@@ -3608,9 +3657,9 @@
       "unitName": "Direct Object Pronouns",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I love you.",
+      "en": "I'll meet you there.",
       "question": "Complete the sentence:",
-      "template": "Eu __ amo.",
+      "template": "Eu __ encontro lá.",
       "chips": [
         "você",
         "tu",
@@ -3620,7 +3669,7 @@
         "te"
       ],
       "correct": "te",
-      "scenario": "You're expressing your feelings to your partner."
+      "scenario": "Making plans with a friend."
     },
     {
       "id": 331,
@@ -3640,7 +3689,7 @@
         "As"
       ],
       "correct": "O",
-      "scenario": "You're showing off your recently purchased vehicle."
+      "scenario": "Describing a car to a friend."
     },
     {
       "id": 338,
@@ -3657,7 +3706,9 @@
         "ser",
         "é",
         "era",
-        "está"
+        "está",
+        "o",
+        "um"
       ],
       "correct": "é",
       "scenario": "Someone asks what your father does for a living."
@@ -3688,9 +3739,9 @@
       "unitName": "Verb Ser",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "This wine is from Portugal.",
+      "en": "This wine is from California.",
       "question": "Complete the sentence:",
-      "template": "Este vinho __ de Portugal.",
+      "template": "Este vinho __ da Califórnia.",
       "chips": [
         "esteve",
         "era",
@@ -3728,9 +3779,9 @@
       "unitName": "Verb Ser",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She is intelligent.",
+      "en": "She is competent.",
       "question": "Complete the sentence:",
-      "template": "Ela __ inteligente.",
+      "template": "Ela __ competente.",
       "chips": [
         "foi",
         "esteve",
@@ -3748,11 +3799,11 @@
       "unitName": "Verb Estar",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I am happy today.",
+      "en": "I am busy today.",
       "question": "Complete the sentence:",
-      "template": "Eu __ feliz hoje.",
+      "template": "Eu __ ocupado hoje.",
       "chips": [
-        "estarei",
+        "fico",
         "fui",
         "estou",
         "sou",
@@ -3760,7 +3811,7 @@
         "estava"
       ],
       "correct": "estou",
-      "scenario": "A friend asks how you're feeling after good news."
+      "scenario": "A colleague asks if you can help with something."
     },
     {
       "id": 344,
@@ -3788,9 +3839,9 @@
       "unitName": "Verb Estar",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "He is working now.",
+      "en": "He is busy now.",
       "question": "Complete the sentence:",
-      "template": "Ele __ trabalhando agora.",
+      "template": "Ele __ ocupado agora.",
       "chips": [
         "está",
         "fica",
@@ -3800,7 +3851,7 @@
         "vai"
       ],
       "correct": "está",
-      "scenario": "Someone asks why your brother can't come to the phone."
+      "scenario": "Explaining why a colleague is unavailable."
     },
     {
       "id": 346,
@@ -3820,7 +3871,7 @@
         "conheço"
       ],
       "correct": "sei",
-      "scenario": "Someone asks if you can join them at the pool."
+      "scenario": "A friend asks if you can swim."
     },
     {
       "id": 347,
@@ -3880,7 +3931,7 @@
         "sabe"
       ],
       "correct": "conheço",
-      "scenario": "A tourist asks if you can recommend places to visit."
+      "scenario": "Offering to show a visitor around."
     },
     {
       "id": 350,
@@ -3908,9 +3959,9 @@
       "unitName": "Demonstratives",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "This book here is mine.",
+      "en": "This book here is great.",
       "question": "Complete the sentence:",
-      "template": "__ livro aqui é meu.",
+      "template": "__ livro aqui é ótimo.",
       "chips": [
         "Aquele",
         "Este",
@@ -3928,9 +3979,9 @@
       "unitName": "Demonstratives",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "That pen there (near you) is yours.",
+      "en": "That bag there (near you) is heavy.",
       "question": "Complete the sentence:",
-      "template": "__ caneta aí é sua.",
+      "template": "__ bolsa aí é pesada.",
       "chips": [
         "Aquela",
         "Essa",
@@ -3940,7 +3991,7 @@
         "Isto"
       ],
       "correct": "Essa",
-      "scenario": "You're telling someone about an object near them."
+      "scenario": "Warning a friend about the bag they're about to pick up."
     },
     {
       "id": 353,
@@ -3950,7 +4001,7 @@
       "type": "contextualizedProduction",
       "en": "That building over there is new.",
       "question": "Complete the sentence:",
-      "template": "__ prédio lá é novo.",
+      "template": "__ prédio ali é novo.",
       "chips": [
         "Este",
         "Esse",
@@ -3968,19 +4019,20 @@
       "unitName": "Demonstratives",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "What is this here?",
+      "en": "What is this here in my soup?",
       "question": "Complete the sentence:",
-      "template": "O que é __ aqui?",
+      "template": "O que é __ aqui na minha sopa?",
       "chips": [
         "esse",
         "aquilo",
         "isto",
         "aquele",
         "ele",
-        "este"
+        "este",
+        "coisa"
       ],
       "correct": "isto",
-      "scenario": "You found something strange in your hand."
+      "scenario": "You found something strange in your soup."
     },
     {
       "id": 355,
@@ -3997,7 +4049,8 @@
         "aquilo",
         "este",
         "esse",
-        "aquele"
+        "aquele",
+        "coisa"
       ],
       "correct": "isso",
       "scenario": "You're asking about something your friend is holding."
@@ -4010,7 +4063,7 @@
       "type": "contextualizedProduction",
       "en": "I don't want this one here, I want that one over there.",
       "question": "Complete the sentence:",
-      "template": "Não quero este aqui, quero __ lá.",
+      "template": "Não quero este aqui, quero __ ali.",
       "chips": [
         "esse",
         "este",
@@ -4059,8 +4112,7 @@
         "todas",
         "cada"
       ],
-      "correct": "toda",
-      "scenario": "You're telling a friend what you did on the train."
+      "correct": "toda"
     },
     {
       "id": 359,
@@ -4090,7 +4142,7 @@
       "type": "contextualizedProduction",
       "en": "Everything is ready.",
       "question": "Complete the sentence:",
-      "template": "__ está pronto.",
+      "template": "Está __ pronto.",
       "chips": [
         "Todo",
         "Toda",
@@ -4148,7 +4200,7 @@
       "unitName": "Pessoa vs Gente",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We are going to the beach (informal).",
+      "en": "We're going to the beach.",
       "question": "Complete the sentence:",
       "template": "A gente __ para a praia.",
       "chips": [
@@ -4157,7 +4209,8 @@
         "vai",
         "iremos",
         "foram",
-        "fomos"
+        "fomos",
+        "vá"
       ],
       "correct": "vai",
       "scenario": "You're telling a friend about weekend plans."
@@ -4172,12 +4225,12 @@
       "question": "Complete the sentence:",
       "template": "Há muitas __ na sala.",
       "chips": [
-        "gente",
         "pessoa",
         "pessoas",
         "pessoal",
         "a gente",
-        "gentes"
+        "gentes",
+        "povo"
       ],
       "correct": "pessoas",
       "scenario": "You arrive at a crowded meeting room."
@@ -4228,7 +4281,7 @@
       "unitName": "Pessoa vs Gente",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "We went to the movies yesterday (informal).",
+      "en": "We went to the movies yesterday.",
       "question": "Complete the sentence:",
       "template": "__ foi ao cinema ontem.",
       "chips": [
@@ -4310,7 +4363,7 @@
       "type": "contextualizedProduction",
       "en": "The food is good.",
       "question": "Complete the sentence:",
-      "template": "A comida está __.",
+      "template": "A comida é __.",
       "chips": [
         "bem",
         "bom",
@@ -4528,7 +4581,7 @@
       "unitName": "Ir vs Vir",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Go away!",
+      "en": "Go ahead and leave!",
       "question": "Complete the sentence:",
       "template": "__ embora!",
       "chips": [
@@ -4540,7 +4593,7 @@
         "Vim"
       ],
       "correct": "Vá",
-      "scenario": "You're telling someone to leave."
+      "scenario": "A friend is hesitating to leave for their appointment, and you're encouraging them."
     },
     {
       "id": 383,
@@ -4560,7 +4613,7 @@
         "vá"
       ],
       "correct": "veio",
-      "scenario": "You're asking someone about their origin."
+      "scenario": "A colleague arrives looking flustered and you're curious what happened."
     },
     {
       "id": 384,
@@ -4628,9 +4681,9 @@
       "unitName": "Levar vs Trazer",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Bring me a glass of water.",
+      "en": "Please bring me a glass of water.",
       "question": "Complete the sentence:",
-      "template": "__ um copo d'água para mim.",
+      "template": "Por favor, __ um copo d'água para mim.",
       "chips": [
         "Leve",
         "Leva",
@@ -4640,7 +4693,7 @@
         "Levou"
       ],
       "correct": "Traga",
-      "scenario": "You're asking someone to get you water."
+      "scenario": "You're politely asking a waiter at a restaurant."
     },
     {
       "id": 388,
@@ -4675,7 +4728,7 @@
         "levou",
         "leva",
         "trouxe",
-        "traz",
+        "trazia",
         "levar",
         "trazer"
       ],
@@ -4695,7 +4748,7 @@
         "levou",
         "leva",
         "trouxe",
-        "traz",
+        "trazia",
         "levei",
         "trago"
       ],
@@ -4708,19 +4761,19 @@
       "unitName": "Levar vs Trazer",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Can you take me home?",
+      "en": "Can you take me to the station?",
       "question": "Complete the sentence:",
-      "template": "Você pode me __ para casa?",
+      "template": "Você pode me __ para a estação?",
       "chips": [
         "trazer",
-        "traz",
+        "trazia",
         "levar",
         "trouxe",
         "trago",
         "levou"
       ],
       "correct": "levar",
-      "scenario": "You're asking for a ride after a party."
+      "scenario": "You're asking a colleague for a ride."
     },
     {
       "id": 392,
@@ -4728,9 +4781,9 @@
       "unitName": "Levar vs Trazer",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Bring the documents here.",
+      "en": "Please bring the documents here.",
       "question": "Complete the sentence:",
-      "template": "__ os documentos aqui.",
+      "template": "Por favor, __ os documentos aqui.",
       "chips": [
         "Leve",
         "Leva",
@@ -4740,7 +4793,7 @@
         "Trouxe"
       ],
       "correct": "Traga",
-      "scenario": "You're asking a coworker for files."
+      "scenario": "You're politely asking a coworker to bring some files."
     },
     {
       "id": 393,
@@ -4836,7 +4889,7 @@
         "sempre",
         "já",
         "nunca",
-        "agora",
+        "talvez",
         "logo"
       ],
       "correct": "já",
@@ -4856,11 +4909,11 @@
         "sempre",
         "ainda",
         "nunca",
-        "agora",
+        "talvez",
         "logo"
       ],
       "correct": "ainda",
-      "scenario": "You run into an old colleague."
+      "scenario": "You're visiting your old office and see a former colleague."
     },
     {
       "id": 399,
@@ -5010,19 +5063,19 @@
       "unitName": "Muito/Muita Agreement",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I drank a lot of water today.",
+      "en": "I drank a lot of coffee today.",
       "question": "Complete the sentence:",
-      "template": "Eu bebi __ água hoje.",
+      "template": "Eu bebi __ café hoje.",
       "chips": [
-        "muito",
-        "muitos",
         "muita",
         "muitas",
+        "muito",
+        "muitos",
         "pouco",
         "pouca"
       ],
-      "correct": "muita",
-      "scenario": "You're talking about staying hydrated."
+      "correct": "muito",
+      "scenario": "You're explaining why you feel jittery."
     },
     {
       "id": 407,
@@ -5052,7 +5105,7 @@
       "type": "contextualizedProduction",
       "en": "She has many friends.",
       "question": "Complete the sentence:",
-      "template": "Ela tem __ amigas.",
+      "template": "Ela tem __ amigos.",
       "chips": [
         "muito",
         "muita",
@@ -5061,7 +5114,7 @@
         "pouco",
         "pouca"
       ],
-      "correct": "muitas",
+      "correct": "muitos",
       "scenario": "You're describing a social person."
     },
     {
@@ -5130,9 +5183,9 @@
       "unitName": "Mais vs Mas",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "I want more coffee.",
+      "en": "I'd like more coffee, please.",
       "question": "Complete the sentence:",
-      "template": "Eu quero __ café.",
+      "template": "Eu gostaria de __ café, por favor.",
       "chips": [
         "mas",
         "mais",
@@ -5142,7 +5195,7 @@
         "e"
       ],
       "correct": "mais",
-      "scenario": "You're asking for a refill."
+      "scenario": "You're politely asking a waiter for a refill."
     },
     {
       "id": 413,
@@ -5170,9 +5223,9 @@
       "unitName": "Mais vs Mas",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "She is smarter than him.",
+      "en": "This bag is heavier than that one.",
       "question": "Complete the sentence:",
-      "template": "Ela é __ inteligente que ele.",
+      "template": "Esta bolsa é __ pesada que aquela.",
       "chips": [
         "mas",
         "mais",
@@ -5182,7 +5235,7 @@
         "bem"
       ],
       "correct": "mais",
-      "scenario": "You're comparing two students."
+      "scenario": "You're choosing which bag to take on a trip."
     },
     {
       "id": 415,
@@ -5210,19 +5263,19 @@
       "unitName": "Mais vs Mas",
       "phase": 2,
       "type": "contextualizedProduction",
-      "en": "Two plus two equals four.",
+      "en": "There are more people today than yesterday.",
       "question": "Complete the sentence:",
-      "template": "Dois __ dois são quatro.",
+      "template": "Tem __ gente hoje do que ontem.",
       "chips": [
         "mas",
         "mais",
         "menos",
-        "e",
-        "ou",
-        "com"
+        "muito",
+        "muita",
+        "tão"
       ],
       "correct": "mais",
-      "scenario": "You're helping a child with math."
+      "scenario": "You're comparing how busy the café is today."
     },
     {
       "id": 417,
@@ -5230,9 +5283,9 @@
       "unitName": "Porque Variations",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "I stayed home because I was sick.",
+      "en": "I didn't go because I was sick.",
       "question": "Complete the sentence:",
-      "template": "Eu fiquei em casa __ estava doente.",
+      "template": "Eu não fui __ estava doente.",
       "chips": [
         "por que",
         "por quê",
@@ -5250,9 +5303,9 @@
       "unitName": "Porque Variations",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "Why are you crying?",
+      "en": "Why are you leaving so early?",
       "question": "Complete the sentence:",
-      "template": "__ você está chorando?",
+      "template": "__ você está saindo tão cedo?",
       "chips": [
         "Porque",
         "Porquê",
@@ -5262,7 +5315,7 @@
         "Que"
       ],
       "correct": "Por que",
-      "scenario": "You're comforting a friend."
+      "scenario": "Asking a coworker."
     },
     {
       "id": 419,
@@ -5290,9 +5343,9 @@
       "unitName": "Porque Variations",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "He left early because he was tired.",
+      "en": "He left early because he had a meeting.",
       "question": "Complete the sentence:",
-      "template": "Ele saiu cedo __ estava cansado.",
+      "template": "Ele saiu cedo __ tinha uma reunião.",
       "chips": [
         "por que",
         "por quê",
@@ -5302,7 +5355,7 @@
         "que"
       ],
       "correct": "porque",
-      "scenario": "You're explaining why someone left a party."
+      "scenario": "You're explaining why someone left early."
     },
     {
       "id": 421,
@@ -5322,7 +5375,7 @@
         "Que"
       ],
       "correct": "Por que",
-      "scenario": "You arrive at a shop during business hours."
+      "scenario": "You're surprised to find a store closed."
     },
     {
       "id": 422,
@@ -5330,9 +5383,9 @@
       "unitName": "Porque Variations",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "She's happy because she passed the exam.",
+      "en": "She's celebrating because she passed the exam.",
       "question": "Complete the sentence:",
-      "template": "Ela está feliz __ passou na prova.",
+      "template": "Ela está comemorando __ passou na prova.",
       "chips": [
         "por que",
         "por quê",
@@ -5352,7 +5405,7 @@
       "type": "contextualizedProduction",
       "en": "Do you have any questions?",
       "question": "Complete the sentence:",
-      "template": "Você tem __ pergunta?",
+      "template": "Vocês têm __ pergunta?",
       "chips": [
         "nenhum",
         "nenhuma",
@@ -5422,7 +5475,7 @@
         "toda"
       ],
       "correct": "algumas",
-      "scenario": "You're discussing a project."
+      "scenario": "Brainstorming where to go for dinner."
     },
     {
       "id": 427,
@@ -5430,9 +5483,9 @@
       "unitName": "Algum vs Nenhum",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "He made no mistake.",
+      "en": "He didn't make any mistake.",
       "question": "Complete the sentence:",
-      "template": "Ele não cometeu __ erro.",
+      "template": "Ele não fez __ erro.",
       "chips": [
         "alguma",
         "nenhum",
@@ -5442,7 +5495,7 @@
         "outro"
       ],
       "correct": "nenhum",
-      "scenario": "You're praising someone's work."
+      "scenario": "Reviewing a colleague's report."
     },
     {
       "id": 428,
@@ -5610,19 +5663,19 @@
       "unitName": "Achar vs Pensar",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "What do you think? (asking for opinion).",
+      "en": "It's beautiful, don't you think?",
       "question": "Complete the sentence:",
-      "template": "O que você __?",
+      "template": "É lindo, você não __?",
       "chips": [
         "acha",
-        "encontra",
+        "pensa",
         "vê",
         "sabe",
         "quer",
-        "faz"
+        "diz"
       ],
       "correct": "acha",
-      "scenario": "You're asking a friend for their opinion."
+      "scenario": "You're seeking agreement about something."
     },
     {
       "id": 437,
@@ -5650,19 +5703,19 @@
       "unitName": "Achar vs Pensar",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "She thinks I'm crazy.",
+      "en": "What are you thinking about?",
       "question": "Complete the sentence:",
-      "template": "Ela __ que eu sou louco.",
+      "template": "No que você está __?",
       "chips": [
-        "acha",
-        "encontra",
-        "vê",
-        "sabe",
-        "diz",
-        "fala"
+        "achando",
+        "pensando",
+        "vendo",
+        "sabendo",
+        "fazendo",
+        "falando"
       ],
-      "correct": "acha",
-      "scenario": "You're telling a friend about someone's opinion of you."
+      "correct": "pensando",
+      "scenario": "Someone looks distracted."
     },
     {
       "id": 439,
@@ -5695,7 +5748,7 @@
       "template": "Você __ que vai chover?",
       "chips": [
         "acha",
-        "encontra",
+        "pensa",
         "vê",
         "sabe",
         "quer",
@@ -5710,19 +5763,19 @@
       "unitName": "Deixar vs Sair",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "I left my keys at home.",
+      "en": "I left my keys at the office.",
       "question": "Complete the sentence:",
-      "template": "Eu __ minhas chaves em casa.",
+      "template": "Eu __ minhas chaves no escritório.",
       "chips": [
         "saí",
         "sai",
         "deixei",
-        "deixa",
         "fui",
-        "foi"
+        "parti",
+        "voltei"
       ],
       "correct": "deixei",
-      "scenario": "You're explaining why you can't open the door."
+      "scenario": "You're explaining why you can't open your car."
     },
     {
       "id": 442,
@@ -5730,39 +5783,19 @@
       "unitName": "Deixar vs Sair",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "She left the house early.",
+      "en": "She left early.",
       "question": "Complete the sentence:",
-      "template": "Ela __ de casa cedo.",
+      "template": "Ela __ cedo.",
       "chips": [
         "deixou",
-        "deixa",
         "saiu",
-        "sai",
-        "foi",
-        "vai"
+        "ficou",
+        "voltou",
+        "chegou",
+        "entrou"
       ],
       "correct": "saiu",
-      "scenario": "You're explaining why someone isn't home."
-    },
-    {
-      "id": 443,
-      "unit": 35,
-      "unitName": "Deixar vs Sair",
-      "phase": 3,
-      "type": "contextualizedProduction",
-      "en": "Let me help you.",
-      "question": "Complete the sentence:",
-      "template": "__ eu te ajudar.",
-      "chips": [
-        "Sai",
-        "Saiu",
-        "Deixa",
-        "Deixou",
-        "Vai",
-        "Foi"
-      ],
-      "correct": "Deixa",
-      "scenario": "You're offering assistance to a friend."
+      "scenario": "Explaining why a colleague isn't at the office."
     },
     {
       "id": 444,
@@ -5802,27 +5835,7 @@
         "abriu"
       ],
       "correct": "deixou",
-      "scenario": "You're complaining about someone's carelessness."
-    },
-    {
-      "id": 446,
-      "unit": 35,
-      "unitName": "Deixar vs Sair",
-      "phase": 3,
-      "type": "contextualizedProduction",
-      "en": "We left the restaurant at ten.",
-      "question": "Complete the sentence:",
-      "template": "Nós __ do restaurante às dez.",
-      "chips": [
-        "deixamos",
-        "deixa",
-        "saímos",
-        "sai",
-        "fomos",
-        "vai"
-      ],
-      "correct": "saímos",
-      "scenario": "You're recounting your evening."
+      "scenario": "Noticing something as you walk into a room."
     },
     {
       "id": 447,
@@ -5836,13 +5849,15 @@
       "chips": [
         "mesma",
         "mesmo",
-        "única",
+        "própria",
+        "próprio",
         "outra",
-        "nova",
-        "grande"
+        "outro",
+        "única",
+        "único"
       ],
       "correct": "mesma",
-      "scenario": "You're explaining how you know a colleague."
+      "scenario": "Explaining how you know someone."
     },
     {
       "id": 448,
@@ -5859,10 +5874,12 @@
         "próprio",
         "própria",
         "único",
-        "novo"
+        "única",
+        "outro",
+        "outra"
       ],
       "correct": "próprio",
-      "scenario": "You're explaining you don't need a ride."
+      "scenario": "Explaining you don't need a ride."
     },
     {
       "id": 449,
@@ -5874,15 +5891,17 @@
       "question": "Complete the sentence:",
       "template": "É a __ coisa.",
       "chips": [
-        "própria",
-        "próprio",
         "mesma",
         "mesmo",
+        "própria",
+        "próprio",
         "única",
-        "outra"
+        "único",
+        "outra",
+        "outro"
       ],
       "correct": "mesma",
-      "scenario": "You're explaining that two options are identical."
+      "scenario": "Explaining that two options are identical."
     },
     {
       "id": 450,
@@ -5890,19 +5909,21 @@
       "unitName": "Mesmo vs Próprio",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "She has her own house.",
+      "en": "She has her own office.",
       "question": "Complete the sentence:",
-      "template": "Ela tem sua __ casa.",
+      "template": "Ela tem sua __ sala.",
       "chips": [
         "mesmo",
         "mesma",
         "próprio",
         "própria",
+        "único",
         "única",
-        "nova"
+        "outro",
+        "outra"
       ],
       "correct": "própria",
-      "scenario": "You're describing someone's independence."
+      "scenario": "Describing someone's workspace."
     },
     {
       "id": 451,
@@ -5914,15 +5935,17 @@
       "question": "Complete the sentence:",
       "template": "Ele sempre diz a __ coisa.",
       "chips": [
-        "própria",
-        "próprio",
         "mesma",
         "mesmo",
+        "própria",
+        "próprio",
         "única",
-        "outra"
+        "único",
+        "outra",
+        "outro"
       ],
       "correct": "mesma",
-      "scenario": "You're commenting on someone's repetitive behavior."
+      "scenario": "Talking about a coworker's habits."
     },
     {
       "id": 452,
@@ -5939,10 +5962,12 @@
         "próprio",
         "própria",
         "único",
-        "novo"
+        "única",
+        "outro",
+        "outra"
       ],
       "correct": "próprio",
-      "scenario": "You're talking about an entrepreneur."
+      "scenario": "Talking about an entrepreneur."
     },
     {
       "id": 453,
@@ -6070,19 +6095,19 @@
       "unitName": "Cá Expressions (BP)",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "Come here!",
+      "en": "Just between us, I don't agree.",
       "question": "Complete the sentence:",
-      "template": "Vem __!",
+      "template": "__ entre nós, eu não concordo.",
       "chips": [
-        "cá",
-        "lá",
-        "ali",
-        "aí",
-        "acolá",
-        "para"
+        "Cá",
+        "Aqui",
+        "Lá",
+        "Ali",
+        "Aí",
+        "Para"
       ],
-      "correct": "cá",
-      "scenario": "You're calling someone over."
+      "correct": "Cá",
+      "scenario": "Sharing a secret opinion with a friend."
     },
     {
       "id": 460,
@@ -6103,26 +6128,6 @@
       ],
       "correct": "cá",
       "scenario": "You're trying to get someone's attention."
-    },
-    {
-      "id": 461,
-      "unit": 38,
-      "unitName": "Cá Expressions (BP)",
-      "phase": 3,
-      "type": "contextualizedProduction",
-      "en": "Between us, I don't like him.",
-      "question": "Complete the sentence:",
-      "template": "__ entre nós, eu não gosto dele.",
-      "chips": [
-        "Cá",
-        "Lá",
-        "Ali",
-        "Aí",
-        "Isso",
-        "Bem"
-      ],
-      "correct": "Cá",
-      "scenario": "You're sharing a secret opinion."
     },
     {
       "id": 462,
@@ -6407,11 +6412,11 @@
       "question": "Complete the sentence:",
       "template": "São duas __.",
       "chips": [
-        "horas",
         "e meia",
-        "em ponto",
-        "e quinze",
-        "menos quinze"
+        "meia",
+        "trinta",
+        "e meia hora",
+        "meia hora"
       ],
       "correct": "e meia",
       "scenario": "Checking the time before a meeting. It's 2:30."
@@ -6426,11 +6431,12 @@
       "question": "Complete the sentence:",
       "template": "São dez __.",
       "chips": [
-        "horas",
-        "e meia",
         "e quinze",
-        "em ponto",
-        "menos quinze"
+        "quinze",
+        "e um quarto",
+        "um quarto",
+        "quinze minutos",
+        "quarto"
       ],
       "correct": "e quinze",
       "scenario": "You're late. It's 10:15."
@@ -6455,25 +6461,6 @@
       "scenario": "Showing a friend around your apartment."
     },
     {
-      "id": 479,
-      "unit": 90,
-      "unitName": "Existential Ter (BP)",
-      "phase": 1,
-      "type": "contextualizedProduction",
-      "en": "There is no milk.",
-      "question": "Complete the sentence:",
-      "template": "Não __ leite.",
-      "chips": [
-        "tem",
-        "é",
-        "está",
-        "têm",
-        "são"
-      ],
-      "correct": "tem",
-      "scenario": "Explaining why you can't make a cake."
-    },
-    {
       "id": 480,
       "unit": 90,
       "unitName": "Existential Ter (BP)",
@@ -6491,44 +6478,6 @@
       ],
       "correct": "Tem",
       "scenario": "Describing a restaurant."
-    },
-    {
-      "id": 481,
-      "unit": 90,
-      "unitName": "Existential Haver (formal)",
-      "phase": 2,
-      "type": "contextualizedProduction",
-      "en": "There were problems.",
-      "question": "Complete the sentence:",
-      "template": "__ problemas.",
-      "chips": [
-        "Houve",
-        "Teve",
-        "Foi",
-        "Estava",
-        "Haviam"
-      ],
-      "correct": "Houve",
-      "scenario": "Writing a formal report."
-    },
-    {
-      "id": 482,
-      "unit": 90,
-      "unitName": "Existential Haver (formal)",
-      "phase": 2,
-      "type": "contextualizedProduction",
-      "en": "There are funds available.",
-      "question": "Complete the sentence:",
-      "template": "__ fundos disponíveis.",
-      "chips": [
-        "Há",
-        "Tem",
-        "São",
-        "Estão",
-        "Haver"
-      ],
-      "correct": "Há",
-      "scenario": "Formal notice about resources."
     },
     {
       "id": 483,
@@ -6567,26 +6516,6 @@
       ],
       "correct": "é",
       "scenario": "Telling someone your name."
-    },
-    {
-      "id": 485,
-      "unit": 3,
-      "unitName": "Definite Articles",
-      "phase": 1,
-      "type": "contextualizedProduction",
-      "en": "The young men are there.",
-      "question": "Complete the sentence:",
-      "template": "__ rapazes estão ali.",
-      "chips": [
-        "Os",
-        "As",
-        "O",
-        "A",
-        "Um",
-        "Uma"
-      ],
-      "correct": "Os",
-      "scenario": "Directing someone's attention across the room."
     },
     {
       "id": 486,
@@ -6660,7 +6589,8 @@
         "no",
         "em",
         "a",
-        "o"
+        "o",
+        "uma"
       ],
       "correct": "na",
       "scenario": "Telling someone where you are."
@@ -6690,9 +6620,9 @@
       "unitName": "Location Prepositions",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "The flowers are in the windows.",
+      "en": "The flowers are on the tables.",
       "question": "Complete the sentence:",
-      "template": "As flores estão __ janelas.",
+      "template": "As flores estão __ mesas.",
       "chips": [
         "nas",
         "nos",
@@ -6742,61 +6672,23 @@
       "scenario": "Introducing someone's nationality."
     },
     {
-      "id": 494,
-      "unit": 6,
-      "unitName": "Adjective Agreement",
-      "phase": 1,
-      "type": "contextualizedProduction",
-      "en": "The tired young woman.",
-      "question": "Complete the sentence:",
-      "template": "A moça __.",
-      "chips": [
-        "cansada",
-        "cansado",
-        "cansadas",
-        "cansados",
-        "triste"
-      ],
-      "correct": "cansada",
-      "scenario": "Describing how someone feels."
-    },
-    {
-      "id": 495,
-      "unit": 6,
-      "unitName": "Adjective Agreement",
-      "phase": 1,
-      "type": "contextualizedProduction",
-      "en": "The tired young men.",
-      "question": "Complete the sentence:",
-      "template": "Os rapazes __.",
-      "chips": [
-        "cansados",
-        "cansado",
-        "cansadas",
-        "cansada",
-        "tristes"
-      ],
-      "correct": "cansados",
-      "scenario": "Describing a group after a long day."
-    },
-    {
       "id": 496,
       "unit": 11,
       "unitName": "Verb Ficar",
       "phase": 1,
       "type": "contextualizedProduction",
-      "en": "We stay at the beach house during summer.",
+      "en": "She became happy with the news.",
       "question": "Complete the sentence:",
-      "template": "Nós __ na casa de praia durante o verão.",
+      "template": "Ela __ feliz com a notícia.",
       "chips": [
-        "ficamos",
-        "fico",
-        "fica",
-        "ficam",
-        "estamos"
+        "ficou",
+        "estava",
+        "era",
+        "foi",
+        "teve"
       ],
-      "correct": "ficamos",
-      "scenario": "Talking about vacation plans."
+      "correct": "ficou",
+      "scenario": "Describing someone's reaction."
     },
     {
       "id": 497,
@@ -7001,7 +6893,7 @@
         "ao lado do",
         "em cima do",
         "embaixo do",
-        "perto do",
+        "atrás do",
         "dentro do"
       ],
       "correct": "ao lado do",
@@ -7151,9 +7043,9 @@
       "template": "Eu preciso __ sua ajuda.",
       "chips": [
         "da",
-        "de",
         "do",
         "na",
+        "no",
         "para",
         "com",
         "(blank)"
@@ -7183,66 +7075,6 @@
       "scenario": "You're about to leave and can't find them."
     },
     {
-      "id": 523,
-      "unit": 86,
-      "unitName": "Colloquial Brazilian Portuguese",
-      "phase": 4,
-      "type": "contextualizedProduction",
-      "en": "I'm busy.",
-      "question": "Complete the sentence:",
-      "template": "__ ocupado.",
-      "chips": [
-        "Tô",
-        "Estou",
-        "Sou",
-        "Tá",
-        "Eu",
-        "Fico"
-      ],
-      "correct": "Tô",
-      "scenario": "Texting a friend who wants to hang out."
-    },
-    {
-      "id": 524,
-      "unit": 86,
-      "unitName": "Colloquial Brazilian Portuguese",
-      "phase": 4,
-      "type": "contextualizedProduction",
-      "en": "I'm going to work.",
-      "question": "Complete the sentence:",
-      "template": "Vou __ trabalhar.",
-      "chips": [
-        "pra",
-        "para",
-        "por",
-        "de",
-        "a",
-        "em"
-      ],
-      "correct": "pra",
-      "scenario": "Casual conversation about your morning."
-    },
-    {
-      "id": 525,
-      "unit": 86,
-      "unitName": "Colloquial Brazilian Portuguese",
-      "phase": 4,
-      "type": "contextualizedProduction",
-      "en": "It's hot, isn't it?",
-      "question": "Complete the sentence:",
-      "template": "Tá quente, __?",
-      "chips": [
-        "né",
-        "não é",
-        "sim",
-        "não",
-        "certo",
-        "verdade"
-      ],
-      "correct": "né",
-      "scenario": "Making small talk about the weather."
-    },
-    {
       "id": 526,
       "unit": 89,
       "unitName": "Advanced Por/Para & Idioms",
@@ -7256,8 +7088,8 @@
         "Para isso",
         "Porque",
         "Por que",
-        "Assim",
-        "Então"
+        "Porém",
+        "Contudo"
       ],
       "correct": "Por isso",
       "scenario": "Explaining why you missed an event."
@@ -7273,10 +7105,10 @@
       "template": "Você __ conhece ela?",
       "chips": [
         "por acaso",
-        "para",
-        "por",
-        "acaso",
-        "talvez",
+        "para caso",
+        "por assim",
+        "de mesmo",
+        "mesmo",
         "ainda"
       ],
       "correct": "por acaso",
@@ -7294,10 +7126,10 @@
       "chips": [
         "Por enquanto",
         "Para sempre",
-        "Até agora",
+        "Para quando",
         "Enquanto",
         "Desde já",
-        "Ainda"
+        "Por sempre"
       ],
       "correct": "Por enquanto",
       "scenario": "Updating someone on a project status."
@@ -7468,9 +7300,9 @@
       "unitName": "Pronoun Placement",
       "phase": 3,
       "type": "contextualizedProduction",
-      "en": "Tell me the time.",
+      "en": "Please tell me your name.",
       "question": "Complete the sentence:",
-      "template": "Diga-__ as horas.",
+      "template": "Por favor, diga-__ seu nome.",
       "chips": [
         "me",
         "mim",
@@ -7480,7 +7312,7 @@
         "nos"
       ],
       "correct": "me",
-      "scenario": "Asking someone for information."
+      "scenario": "Meeting someone new at a work event."
     },
     {
       "id": 538,
@@ -7633,9 +7465,9 @@
       "unitName": "Crase",
       "phase": 4,
       "type": "contextualizedProduction",
-      "en": "I referred to that woman.",
+      "en": "I referred to that situation.",
       "question": "Complete the sentence:",
-      "template": "Eu me referi __ mulher.",
+      "template": "Eu me referi __ situação.",
       "chips": [
         "àquela",
         "aquela",
@@ -7645,7 +7477,7 @@
         "a"
       ],
       "correct": "àquela",
-      "scenario": "Clarifying who you mentioned."
+      "scenario": "Clarifying what you were talking about."
     },
     {
       "id": 546,
@@ -7686,6 +7518,27 @@
       ],
       "correct": "pudesse",
       "scenario": "Expressing a wish about possibilities."
+    },
+    {
+      "id": 548,
+      "unit": 6,
+      "unitName": "Location Prepositions",
+      "phase": 1,
+      "type": "contextualizedProduction",
+      "en": "I live in Boston.",
+      "question": "Complete the sentence:",
+      "template": "Eu moro __ Boston.",
+      "chips": [
+        "no",
+        "na",
+        "em",
+        "do",
+        "da",
+        "de",
+        "(blank)"
+      ],
+      "correct": "em",
+      "scenario": "Someone asks where you live."
     }
   ]
 }

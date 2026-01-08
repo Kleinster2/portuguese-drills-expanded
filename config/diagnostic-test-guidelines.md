@@ -1,13 +1,51 @@
-# Diagnostic Test Question Guidelines (v4.3 - Efficacy-Focused)
+# Diagnostic Test Question Guidelines (v4.5 - Efficacy-Focused)
 
 Best practices for creating effective grammar diagnostic assessment questions.
 
-## Core Philosophy: Efficacy First
+## Core Philosophy: Natural Brazilian Portuguese
+
+**All questions must use natural, authentic Brazilian Portuguese as spoken by native speakers.**
+
+Every sentence should sound like something a Brazilian would actually say. Avoid:
+- Literal translations from English that sound unnatural in Portuguese
+- Textbook constructions that aren't used in real life (e.g., "ir às compras" instead of "fazer compras")
+- Awkward or contrived sentences created just to test a grammar point
+
+If a sentence sounds odd to a native speaker, rewrite it. Grammar can be tested through natural language.
+
+## Efficacy First
 
 The goal of the diagnostic engine is to measure proficiency with the highest possible accuracy and efficiency. **Question type should be selected based on what best measures the specific topic.**
 
 - **Production (Contextualized):** The default standard. Best for testing active command of grammar, conjugation, and syntax.
 - **Comprehension / Concept Check:** Use *only* when production would introduce unnecessary friction (like rote vocabulary memorization) or when testing abstract rules (e.g., gender ambiguity awareness).
+
+## One Topic Per Question
+
+**Each question must test only its assigned grammar topic. Never mix topics.**
+
+If a question is in the "Origin with Contractions" unit, it should test contractions (de+o=do, de+a=da, etc.) in an origin context - not inadvertently test "gostar de" or another topic.
+
+- ❌ "Eu gosto das flores" in a Contractions unit (tests "gostar de" pattern)
+- ✅ "Eu venho das montanhas" in a Contractions unit (tests origin + contraction)
+
+This ensures diagnostic accuracy: if a student gets the question wrong, we know exactly which topic needs work.
+
+## Simple Present Tense Usage
+
+**When testing simple present conjugation, use habitual/regular contexts only.**
+
+In Brazilian Portuguese, ongoing actions use the progressive (estar + gerund), not simple present. The simple present indicates habitual or regular actions.
+
+- ❌ **Bad:** "I study English." with scenario "Mentioning what you're learning now"
+  - (Would naturally be "Estou estudando inglês" in BP)
+- ✅ **Good:** "I study every day." with scenario "Describing your daily routine"
+  - (Habitual action = simple present)
+
+**Markers that justify simple present:**
+- sempre (always), nunca (never), todo dia (every day)
+- geralmente (usually), às vezes (sometimes)
+- aos domingos (on Sundays), de manhã (in the morning)
 
 ## Selecting Question Types
 
@@ -45,8 +83,52 @@ Use the `scenario` field to provide a brief, realistic situation that justifies 
 
 **Guideline:** The scenario should explain *why* the student is saying/writing the English sentence.
 
+### Prefer Natural Scenarios
+
+**Always prefer natural, everyday scenarios over contrived or formal ones.**
+
+Scenarios should feel like situations the learner might actually encounter. Avoid overly specific, dramatic, or unlikely contexts.
+
+- ✅ **Good:** "Explaining why a colleague isn't at the office."
+- ✅ **Good:** "Asking a friend for their opinion."
+- ❌ **Bad:** "You're complaining about someone's carelessness."
+- ❌ **Bad:** "You're reflecting on a poor decision."
+
 - `en`: "I am Brazilian"
 - `scenario`: "You meet someone new at a café and they ask about your nationality."
+
+### Adult Contexts
+
+**Scenarios should reflect adult life, not school/classroom settings.**
+
+Test takers are adults. Use professional, social, or everyday adult contexts - not classroom situations with classmates, supplies, or school activities.
+
+- ❌ **Bad:** "Offering to lend supplies to a classmate."
+- ✅ **Good:** "Offering to lend something to a colleague at work."
+- ❌ **Bad:** "Your teacher asks about your homework."
+- ✅ **Good:** "Your manager asks about the project status."
+
+### Scenario Consistency
+
+**Scenarios must be logically consistent with real-world situations.**
+
+Apply common sense when creating scenarios. The situation should make sense - don't create scenarios where the speaker would already know the information they're asking about, or where the context contradicts itself.
+
+- ❌ **Bad:** "Your neighbor asks if you have a dog." (A neighbor would already know)
+- ✅ **Good:** "A coworker asks if you have pets." (A coworker wouldn't necessarily know)
+- ❌ **Bad:** "You're introducing yourself to your mother." (You wouldn't introduce yourself to family)
+- ✅ **Good:** "You're introducing yourself to a new classmate." (Natural situation)
+
+### Avoid Obvious or Silly Scenarios
+
+**Scenarios should be meaningful and realistic, not contrived or silly.**
+
+Don't use dramatic, absurd, or overly obvious scenarios. Keep them grounded in everyday adult life.
+
+- ❌ **Bad:** "Explaining what you need to survive." (Dramatic/silly)
+- ✅ **Good:** "Asking a colleague for assistance." (Natural/professional)
+- ❌ **Bad:** "Telling someone the sky is blue." (Obvious/pointless)
+- ✅ **Good:** "Describing the weather to a friend." (Natural context)
 
 ## Chip Order Randomization
 
@@ -60,7 +142,14 @@ When creating or reviewing questions, ensure the correct answer is not always fi
 
 ## Distractor Quality
 
+### Include Both Gender Forms
 
+**When testing adjectives or determiners, include both masculine and feminine forms of each distractor.**
+
+This tests both semantic meaning AND gender agreement in a single question.
+
+- ✅ **Good:** `mesma | mesmo | própria | próprio | outra | outro`
+- ❌ **Bad:** `mesma | própria | outra | única` (missing masculine forms)
 
 **Distractors must be unambiguously incorrect translations of the English prompt.**
 
@@ -110,27 +199,70 @@ When asking a student to *produce* an article or adjective:
 - Use nouns ending in **-o / -os** (masc) or **-a / -as** (fem).
 - **Avoid** nouns with ambiguous endings like **-e, -al, -or, -ão** unless the specific goal is to test knowledge of that specific exception.
 
+### Avoid Country Names and Rio
+
+**Do not use country names or "Rio" in questions. Only use common nouns ending in -o/-a/-os/-as.**
+
+Country names often have irregular or unpredictable genders (e.g., "o Canadá", "a França", "os Estados Unidos"). "Rio" is avoided because it's an exception - most cities don't have gender, but "o Rio" does.
+
+- ❌ "Eu sou do Brasil" / "Eu sou da França" / "Eu sou do Rio"
+- ✅ "Eu venho do mercado" / "Eu trabalho no escritório"
+
+### Use US City Names When Testing City Grammar
+
+**When testing that most cities don't take articles, use US city names, not Brazilian ones.**
+
+English speakers might think Brazilian city names have special rules. Using familiar US cities makes it clear this is a general Portuguese grammar rule.
+
+- ❌ "Eu moro em São Paulo" (student might think it's a Brazil-specific rule)
+- ✅ "Eu moro em Boston" (clearly shows it's a general rule about cities)
+
 ## Vocabulary Choices
 
 ### Avoid Physical Characteristics
 
 **Do not use physical descriptors like "tall", "short", "fat", "thin", "pretty", "ugly" in questions.**
 
-When testing adjective agreement, use:
-- ✅ Emotions/states: animado/a (excited), cansado/a (tired), ocupado/a (busy), preocupado/a (worried)
-- ❌ Physical traits: alto/a (tall), baixo/a (short), gordo/a (fat), magro/a (thin)
-
 This avoids potentially sensitive content and focuses on more universally applicable vocabulary.
 
-### Use Adult Vocabulary
+### Avoid Negative States
 
-**Prefer adult/young adult terms over child-specific vocabulary.**
+**Prefer positive or neutral vocabulary over negative states.**
 
-- ✅ **rapaz / rapazes** (young man / young men) instead of menino/meninos
-- ✅ **moça / moças** (young woman / young women) instead of menina/meninas
-- ✅ **criança** (child) only when contextually appropriate (e.g., playing with toys)
+When testing adjective agreement or verb usage, use positive/neutral words rather than negative ones.
 
-This reflects vocabulary learners will actually use in adult contexts.
+- ✅ **Good:** ocupado/a (busy), pronto/a (ready), satisfeito/a (satisfied), contente (content)
+- ❌ **Avoid:** cansado/a (tired), triste (sad), preocupado/a (worried), nervoso/a (nervous), animado/a (has sexual connotation in Portuguese), feliz (happy - overused/unnatural in many contexts)
+
+This keeps the test experience positive and avoids unnecessary negativity.
+
+### Avoid "Água"
+
+**Never use the word "água" (water) in questions.**
+
+Use other nouns instead (café, suco, etc.).
+
+### Avoid "Casa"
+
+**Never use the word "casa" (home/house) in questions.**
+
+Use other locations instead (escritório, restaurante, etc.).
+
+### Avoid Singular/Plural Ambiguity
+
+**Don't use nouns where singular vs plural is nuanced or works either way.**
+
+Some nouns can be used in singular or plural interchangeably in certain contexts (e.g., "fruta" vs "frutas"). This creates unnecessary confusion when testing other grammar points.
+
+- ❌ **Bad:** "Eu como fruta." (Student wonders: why not "frutas"?)
+- ✅ **Good:** "Eu como uma maçã." (Clearly singular)
+- ✅ **Good:** "Eu como maçãs." (Clearly plural)
+
+### Avoid Age-Specific Terms
+
+**Do not use moça/moças, rapaz/rapazes, menino/menina, or criança in questions.**
+
+Use role-based nouns instead (colega, amigo/a, vizinho/a, etc.) that don't specify age.
 
 ## Demonstratives - Scenario Clarity
 
@@ -240,6 +372,7 @@ This format mirrors the student experience and makes it easier to spot UX issues
 <hr>
 <br>
 **Change Log:**
+- **v4.4 (2025-12-20):** Added "Scenario Consistency" subsection - scenarios must be logically consistent with real-world situations.
 - **v4.3 (2025-12-15):** Added "Vocabulary Choices" section - avoid physical characteristics, use adult vocabulary (rapaz/moça).
 - **v4.2 (2025-12-11):** Added "Chip Order Randomization" section - correct answers must never be in predictable positions.
 - **v4.1 (2025-12-11):** Added "Question Review Format" section specifying how to display questions during review (as they appear to students, not as JSON).
