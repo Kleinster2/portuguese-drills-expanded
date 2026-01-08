@@ -29,6 +29,7 @@ let completedPhases = [];
 let testStopped = false;
 let testStartTime = null;
 let testSessionId = null;
+let exitLogged = false;
 
 
 /**
@@ -71,12 +72,14 @@ async function startDiagnosticTest() {
   topicState = {};
   completedPhases = [];
   testStopped = false;
+  exitLogged = false;
   testStartTime = Date.now();
   testSessionId = Date.now() + '-' + Math.random().toString(36).substr(2, 9);
 
   drillTitle.textContent = "Portuguese Diagnostic Assessment";
 
-  // Log progress if user leaves mid-test
+  // Log progress if user leaves mid-test (pagehide is more reliable than beforeunload)
+  window.addEventListener('pagehide', handleTestExit);
   window.addEventListener('beforeunload', handleTestExit);
 
   if (window.plausible) {
@@ -296,10 +299,11 @@ function processAnswer(qid, answer, wasSkipped = false) {
 }
 
 /**
- * Handle user leaving mid-test (beforeunload)
+ * Handle user leaving mid-test (pagehide/beforeunload)
  */
 function handleTestExit() {
-  if (testAnswers.length === 0) return; // No answers to log
+  if (exitLogged || testAnswers.length === 0) return;
+  exitLogged = true;
 
   // Use sendBeacon for reliability during page unload
   const data = JSON.stringify({
@@ -372,8 +376,10 @@ function showPhaseTransition(nextPhase) {
 async function finishTest() {
   const container = document.getElementById('chat-messages');
 
-  // Remove beforeunload handler since test completed normally
+  // Remove exit handlers since test completed normally
+  window.removeEventListener('pagehide', handleTestExit);
   window.removeEventListener('beforeunload', handleTestExit);
+  exitLogged = true; // Prevent any late-firing events
 
   // Log final complete results to server (teacher monitors via D1 dashboard)
   await logTestProgress(true);
