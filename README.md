@@ -432,22 +432,12 @@ npm run test:install
 
 ## Deployment
 
-### Manual Deployment (Recommended)
+Deploy using Wrangler CLI:
 ```bash
-# Deploy to production
 npx wrangler pages deploy . --project-name=portuguese-drills-expanded
-
-# The deployment URL will be shown in the output
-# Changes are live immediately at https://portuguese-drills-expanded.pages.dev
 ```
 
-### Automatic Deployment
-Cloudflare Pages also auto-deploys when pushing to GitHub:
-- **Production**: Deploys from `master` branch
-- **Preview**: Automatic preview for all branches
-- **Functions**: Cloudflare Workers handle API requests
-
-**Note:** Manual deployment via Wrangler is faster and more reliable for immediate updates.
+Changes are live immediately at https://portuguese-drills-expanded.pages.dev
 
 ## Contributing
 
