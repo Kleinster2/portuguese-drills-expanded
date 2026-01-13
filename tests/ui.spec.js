@@ -11,36 +11,23 @@ test.describe('Navigation Bar', () => {
     await expect(nav.locator('text=PT Tutor')).toBeVisible();
   });
 
-  test('nav bar appears on all pages', async ({ page }) => {
-    const pages = [
-      '/',
+  test('nav bar only appears on dashboard', async ({ page }) => {
+    // Nav should appear on dashboard
+    await page.goto(BASE_URL);
+    await expect(page.locator('nav')).toBeVisible({ timeout: 10000 });
+
+    // Feature pages are standalone (no nav)
+    const standalonePages = [
       '/diagnostic-test.html',
       '/simplifier.html',
       '/annotator.html',
       '/syllabus.html'
     ];
 
-    for (const path of pages) {
+    for (const path of standalonePages) {
       await page.goto(BASE_URL + path);
-      const nav = page.locator('nav');
-      await expect(nav).toBeVisible({ timeout: 10000 });
+      await expect(page.locator('nav')).not.toBeVisible();
     }
-  });
-
-  test('nav links work', async ({ page }) => {
-    await page.goto(BASE_URL);
-
-    // Click Simplifier link
-    await page.click('nav >> text=Simplifier');
-    await expect(page).toHaveURL(/simplifier/);
-
-    // Click Curriculum link
-    await page.click('nav >> text=Curriculum');
-    await expect(page).toHaveURL(/syllabus/);
-
-    // Click Home
-    await page.click('nav >> text=PT Tutor');
-    await expect(page).toHaveURL(BASE_URL + '/');
   });
 });
 
