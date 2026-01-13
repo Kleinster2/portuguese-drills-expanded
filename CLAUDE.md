@@ -1,94 +1,120 @@
-# Portuguese Language Drills
+# Portuguese Learning Platform
 
-Interactive Portuguese language learning platform with AI-powered drill sessions. Practice pronunciation, grammar, and conversation with Claude AI tutoring.
+AI-powered Portuguese language learning. Brazilian Portuguese by default, European Portuguese available.
 
 **[Live Site](https://portuguese-drills-expanded.pages.dev)** | **[Changelog](CHANGELOG.md)**
 
 ## Features
 
-- **48 Drills** - A1 to B2+ covering verbs, grammar, pronunciation, and conversation
-- **AI Tutoring** - Contextual practice powered by Claude
-- **Multi-Drill Sessions** - Combine drills with random rotation
-- **Pronunciation Lessons** - Structured curriculum with audio and annotations
-- **Diagnostic Test** - 25-question proficiency evaluation with recommendations
-- **Text Simplifier** - Convert any text to level-appropriate Portuguese with hover translations
-- **PWA Support** - Installable with offline fallback
+### 1. Diagnostic Test
+Assess your proficiency level in 10-15 minutes.
+- 25 questions across A1-B2 levels
+- Instant results with strengths/weaknesses
+- Personalized drill recommendations
+- Teacher tools: generate unique test links, view reports
+
+### 2. AI Practice Drills
+48 interactive exercises with Claude AI tutoring.
+- Verb conjugation, grammar, prepositions, conversation
+- Clickable answer chips for quick responses
+- Detailed explanations and feedback
+- Multi-drill sessions with random rotation
+- A1 to B2+ difficulty levels
+
+### 3. Text Simplifier
+Read anything in Portuguese at your level.
+- Paste text in any language → get simplified Portuguese
+- Choose CEFR level (A1, A2, B1, B2)
+- Hover/tap any word for English translation
+- 3000+ word dictionary with Claude fallback
+
+### 4. Pronunciation Lessons
+Structured curriculum for Brazilian Portuguese sounds.
+- 4 phases, 8+ units with audio
+- 6 pronunciation rules with annotations
+- 5-step progressive format per lesson
+- Programmatic annotation system (Python + JS)
+
+### 5. PWA Support
+Installable app with offline mode.
+- Add to home screen on any device
+- Core features work offline
+- Background updates
 
 ## Quick Start
 
 ```bash
-# Local development with API
-npx wrangler pages dev .
-
-# Deploy
-npx wrangler pages deploy . --project-name=portuguese-drills-expanded
+npx wrangler pages dev .                                    # Local dev
+npx wrangler pages deploy . --project-name=portuguese-drills-expanded  # Deploy
 ```
 
 Set `ANTHROPIC_API_KEY` in Cloudflare Pages environment variables.
 
 ## Documentation
 
-### For Users
-| Document | Description |
-|----------|-------------|
-| [A1 Curriculum Guide](docs/curriculum/A1-curriculum-primer.md) | What each A1 drill teaches |
-| [Shareable Links](docs/features/SHAREABLE_LINKS.md) | How to share and bookmark drills |
+### By Feature
+| Feature | User Guide | Dev Docs |
+|---------|------------|----------|
+| Diagnostic Test | — | `config/diagnostic-test-*.json` |
+| AI Drills | [A1 Curriculum](docs/drills/A1-curriculum-primer.md) | [Drill Template](docs/drills/DRILL_TEMPLATE.md) |
+| Text Simplifier | — | [Hover Translations](docs/simplifier/hover-translations.md) |
+| Pronunciation | [Syllabus](SYLLABUS_PHASE_1.md) | [Annotation Workflow](docs/pronunciation/ANNOTATION_WORKFLOW.md) |
 
 ### For Developers
 | Document | Description |
 |----------|-------------|
-| [Code Map](docs/development/CODEMAP.md) | Find code by feature (with line numbers) |
-| [Project Architecture](docs/development/PROJECT_README.md) | Tech stack and development guide |
-| [Drill Consistency](docs/development/DRILL_CONSISTENCY_ANALYSIS.md) | Drill patterns and improvement roadmap |
-
-### Pedagogy & Pronunciation
-| Document | Description |
-|----------|-------------|
-| [Pedagogy](PEDAGOGY.md) | Core teaching principles |
-| [Pronunciation Rules](PRONUNCIATION_RULES.md) | Brazilian Portuguese pronunciation rules |
-| [Syllabus Phase 1](SYLLABUS_PHASE_1.md) | Complete Phase 1 curriculum (8 units) |
-| [Annotation Workflow](docs/ANNOTATION_WORKFLOW.md) | How to author pronunciation content |
-| [Quick Reference](docs/QUICK_REFERENCE.md) | Fast lookup for rules and patterns |
+| [Project Architecture](docs/development/PROJECT_README.md) | Tech stack, serverless design |
+| [Code Map](docs/development/CODEMAP.md) | Find code by feature with line numbers |
+| [Pronunciation Rules](PRONUNCIATION_RULES.md) | The 6 rules and how they work |
+| [Quick Reference](docs/pronunciation/QUICK_REFERENCE.md) | Fast lookup for patterns |
 
 ## Project Structure
 
 ```
-├── index.html              # Main application (drills)
-├── simplifier.html         # Text Simplifier tool
-├── diagnostic-test.html    # Interactive diagnostic test
-├── syllabus.html           # Pronunciation lessons
+├── index.html              # Drills interface
+├── diagnostic-test.html    # Diagnostic test
+├── simplifier.html         # Text simplifier
+├── syllabus.html           # Pronunciation lessons index
 ├── lessons/                # Individual lesson pages
+│
 ├── config/
-│   ├── prompts/            # Drill prompt JSON files (edit here)
-│   └── dictionary.json     # Portuguese-English dictionary
-├── utils/
-│   ├── promptManager.js    # Loads prompts from generated data
-│   └── annotate_pronunciation.py  # Annotation engine
-├── js/                     # JavaScript modules
-├── docs/                   # Documentation
-└── functions/api/          # Cloudflare Pages Functions
+│   ├── prompts/            # 48 drill configs (JSON)
+│   ├── diagnostic-test-*.json
+│   └── dictionary.json     # 3000+ word dictionary
+│
+├── js/                     # Client-side modules
+├── functions/api/          # Cloudflare serverless backend
+├── utils/                  # Build tools, annotation engine
+├── scripts/                # Dev scripts
+│
+└── docs/
+    ├── drills/             # Drill creation guides
+    ├── pronunciation/      # Annotation system docs
+    ├── simplifier/         # Text simplifier docs
+    ├── development/        # Architecture, code map
+    └── archive/            # Old internal docs
 ```
 
-**Editing Prompts:** Edit JSON in `config/prompts/`, run `npm run build`, commit the generated file.
+## Tech Stack
+
+- **Frontend**: HTML + Tailwind CSS (CDN, no build)
+- **Backend**: Cloudflare Pages Functions
+- **AI**: Anthropic Claude API
+- **Deployment**: Cloudflare Pages
 
 ## Testing
 
 ```bash
-npm test              # Run all tests
-npm run test:js       # JavaScript tests only
-npm run test:install  # Install Playwright (first time)
+npm test              # All tests
+npm run test:js       # JavaScript only
 ```
 
-Tests validate Python/JavaScript annotation engines and all 6 pronunciation rules.
+## Editing Content
 
-## Dialects
+**Drills**: Edit `config/prompts/[drill].json` → `npm run build` → deploy
 
-Drills default to Brazilian Portuguese. Ask the AI tutor to switch: "Please switch to European Portuguese" or "Vamos praticar em EP".
-
-## Tech Stack
-
-HTML + Tailwind CSS + Cloudflare Pages Functions + Anthropic Claude API (no build step)
+**Pronunciation**: Write clean Portuguese → run through annotation tool → get annotated output
 
 ## License
 
-Builds on the original [Portuguese Drills](https://kleinster2.github.io/portuguese-drills/) by kleinster2.
+Builds on [Portuguese Drills](https://kleinster2.github.io/portuguese-drills/) by kleinster2.

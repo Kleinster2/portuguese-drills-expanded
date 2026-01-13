@@ -1,6 +1,6 @@
-# Portuguese Language Drills
+# Portuguese Learning Platform
 
-Interactive Portuguese language learning platform with AI-powered drill sessions.
+AI-powered Portuguese language learning with assessment, practice, reading, and pronunciation.
 
 **[Live Site](https://portuguese-drills-expanded.pages.dev)** | **[Documentation](CLAUDE.md)** | **[Changelog](CHANGELOG.md)**
 

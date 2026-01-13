@@ -1,65 +1,59 @@
-# Documentation Index
+# Documentation
 
-## Directory Structure
+Organized by feature.
 
 ```
 docs/
-├── curriculum/      # Learning guides for users
-├── development/     # Technical docs for developers
-├── features/        # Feature-specific guides
-└── archive/         # Old/internal docs (43 files)
+├── drills/          # AI practice drills
+├── pronunciation/   # Pronunciation lessons system
+├── simplifier/      # Text simplifier
+├── diagnostic-test/ # Diagnostic test (empty - see config/)
+├── development/     # Architecture, code map
+└── archive/         # Old internal docs
 ```
 
-## For Users
+## Drills
 
 | Document | Description |
 |----------|-------------|
-| [A1 Curriculum Guide](curriculum/A1-curriculum-primer.md) | What each A1 drill teaches |
-| [Shareable Links](features/SHAREABLE_LINKS.md) | How to share and bookmark drills |
+| [A1 Curriculum](drills/A1-curriculum-primer.md) | What each A1 drill teaches |
+| [Drill Template](drills/DRILL_TEMPLATE.md) | Template for creating new drills |
+| [Best Practices](drills/DRILL_BEST_PRACTICES.md) | Guidelines for quality prompts |
+| [Shareable Links](drills/SHAREABLE_LINKS.md) | How to share drill URLs |
+| [Syllabus Sequence](drills/syllabus-micro-sequence.md) | Micro-lesson sequencing |
 
-## For Developers
+## Pronunciation
 
 | Document | Description |
 |----------|-------------|
-| [Project Architecture](development/PROJECT_README.md) | Tech stack, architecture, dev guide |
+| [Annotation Workflow](pronunciation/ANNOTATION_WORKFLOW.md) | How to author content |
+| [Quick Reference](pronunciation/QUICK_REFERENCE.md) | Fast rule lookup |
+| [System Architecture](pronunciation/SYSTEM_ARCHITECTURE.md) | Technical design |
+| [Notation Style](pronunciation/NOTATION_STYLE_GUIDE.md) | Formatting conventions |
+| [Substitution Mode](pronunciation/SUBSTITUTION_MODE.md) | Phonetic spelling system |
+| [Changelog](pronunciation/CHANGELOG.md) | Version history |
+
+## Simplifier
+
+| Document | Description |
+|----------|-------------|
+| [Hover Translations](simplifier/hover-translations.md) | Dictionary and translation system |
+
+## Development
+
+| Document | Description |
+|----------|-------------|
+| [Project Architecture](development/PROJECT_README.md) | Tech stack, serverless design |
 | [Code Map](development/CODEMAP.md) | Find code by feature with line numbers |
-| [Drill Consistency](development/DRILL_CONSISTENCY_ANALYSIS.md) | Drill patterns and improvement roadmap |
-
-## Creating Drills
-
-| Document | Description |
-|----------|-------------|
-| [Drill Template](DRILL_TEMPLATE.md) | Ready-to-copy template for new drills |
-| [Best Practices](DRILL_BEST_PRACTICES.md) | Guidelines for quality drill prompts |
-
-## Pronunciation System
-
-| Document | Description |
-|----------|-------------|
-| [Annotation Workflow](ANNOTATION_WORKFLOW.md) | How to author pronunciation content |
-| [Quick Reference](QUICK_REFERENCE.md) | Fast lookup for rules and patterns |
-| [System Architecture](SYSTEM_ARCHITECTURE.md) | Technical pronunciation system docs |
-| [Changelog](CHANGELOG.md) | Pronunciation system version history |
+| [Drill Consistency](development/DRILL_CONSISTENCY_ANALYSIS.md) | Patterns and improvement roadmap |
 
 ## Other
 
 | Document | Description |
 |----------|-------------|
-| [PWA](PWA.md) | Progressive Web App setup and testing |
-| [Hover Translations](hover-translations.md) | Text simplifier translation feature |
-
-## Quick Start
-
-**I want to...**
-- **Use the drills** → Visit the [live site](https://portuguese-drills-expanded.pages.dev)
-- **Understand curriculum** → [A1 Curriculum Guide](curriculum/A1-curriculum-primer.md)
-- **Share a drill** → [Shareable Links](features/SHAREABLE_LINKS.md)
-- **Contribute code** → [Project Architecture](development/PROJECT_README.md)
-- **Fix a bug** → [Code Map](development/CODEMAP.md)
-- **Add a new drill** → [Drill Template](DRILL_TEMPLATE.md)
+| [PWA](PWA.md) | Progressive Web App setup |
 
 ## Links
 
-- [Main README](../README.md)
-- [CLAUDE.md](../CLAUDE.md) - Full project documentation
-- [CHANGELOG](../CHANGELOG.md) - Version history
+- [CLAUDE.md](../CLAUDE.md) - Main project documentation
+- [CHANGELOG](../CHANGELOG.md) - Project version history
