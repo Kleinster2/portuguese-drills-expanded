@@ -58,7 +58,9 @@
       "Bash(del audit-ambiguity.js)",
       "Bash(npx wrangler pages deployment list:*)",
       "Bash(ls:*)",
-      "Bash(claude update:*)"
+      "Bash(claude update:*)",
+      "Bash(npm update:*)",
+      "Bash(npx playwright test:*)"
     ],
     "deny": [],
     "ask": []
