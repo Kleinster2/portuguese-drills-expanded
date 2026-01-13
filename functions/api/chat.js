@@ -618,12 +618,16 @@ export async function onRequestPost({ request, env }) {
       });
     }
 
-    if (!message) {
+    // Message is required unless starting a new session
+    if (!message && !isNewSession) {
       return new Response(JSON.stringify({ error: 'message is required' }), {
         status: 400,
         headers: { ...headers, 'Content-Type': 'application/json' }
       });
     }
+
+    // For new sessions without a message, use a default starter
+    const userMessage = message || 'Start';
 
     // Check API key
     const apiKey = env.ANTHROPIC_API_KEY;
@@ -645,14 +649,14 @@ export async function onRequestPost({ request, env }) {
       // New session: system prompt + first user message
       conversationMessages = [
         systemMessage,
-        { role: 'user', content: message }
+        { role: 'user', content: userMessage }
       ];
     } else {
       // Existing session: system prompt + client history + new user message
       conversationMessages = [
         systemMessage,
         ...clientMessages,
-        { role: 'user', content: message }
+        { role: 'user', content: userMessage }
       ];
     }
 
