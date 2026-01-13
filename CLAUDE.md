@@ -41,6 +41,18 @@ Installable app with offline mode.
 - Core features work offline
 - Background updates
 
+## UI Structure
+
+**Navigation**: Sticky nav bar on all pages linking to Home, Diagnostic, Drills, Simplifier, Curriculum.
+
+**Homepage Dashboard**: Feature cards linking to each tool, followed by drills section with search/filters.
+
+**Pages**:
+- `/` - Dashboard + Drills
+- `/diagnostic-test.html` - Proficiency assessment
+- `/simplifier.html` - Text simplification tool
+- `/syllabus.html` - Pronunciation curriculum
+
 ## Quick Start
 
 ```bash
@@ -71,10 +83,10 @@ Set `ANTHROPIC_API_KEY` in Cloudflare Pages environment variables.
 ## Project Structure
 
 ```
-├── index.html              # Drills interface
+├── index.html              # Dashboard + Drills
 ├── diagnostic-test.html    # Diagnostic test
 ├── simplifier.html         # Text simplifier
-├── syllabus.html           # Pronunciation lessons index
+├── syllabus.html           # Pronunciation lessons
 ├── lessons/                # Individual lesson pages
 │
 ├── config/
@@ -82,10 +94,18 @@ Set `ANTHROPIC_API_KEY` in Cloudflare Pages environment variables.
 │   ├── diagnostic-test-*.json
 │   └── dictionary.json     # 3000+ word dictionary
 │
-├── js/                     # Client-side modules
+├── js/
+│   ├── nav.js              # Navigation bar component
+│   ├── chat.js             # Chat/drill interface
+│   ├── answerChips.js      # Clickable answer buttons
+│   └── ...                 # Other client modules
+│
 ├── functions/api/          # Cloudflare serverless backend
 ├── utils/                  # Build tools, annotation engine
 ├── scripts/                # Dev scripts
+│
+├── tests/
+│   └── ui.spec.js          # Playwright UI tests
 │
 └── docs/
     ├── drills/             # Drill creation guides
@@ -101,13 +121,21 @@ Set `ANTHROPIC_API_KEY` in Cloudflare Pages environment variables.
 - **Backend**: Cloudflare Pages Functions
 - **AI**: Anthropic Claude API
 - **Deployment**: Cloudflare Pages
+- **Testing**: Playwright
 
 ## Testing
 
 ```bash
-npm test              # All tests
-npm run test:js       # JavaScript only
+npm test                           # All tests (Python + JS consistency)
+npm run test:js                    # JavaScript tests only
+npx playwright test tests/ui.spec.js  # UI tests (nav, dashboard, drills)
 ```
+
+### UI Tests (Playwright)
+- Navigation bar appears on all pages
+- Nav links work correctly
+- Dashboard feature cards visible and clickable
+- Drills section has search and filters
 
 ## Editing Content
 
