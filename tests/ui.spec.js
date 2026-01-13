@@ -16,6 +16,7 @@ test.describe('Navigation Bar', () => {
       '/',
       '/diagnostic-test.html',
       '/simplifier.html',
+      '/annotator.html',
       '/syllabus.html'
     ];
 
@@ -52,6 +53,7 @@ test.describe('Dashboard', () => {
     await expect(cards.locator('text=Diagnostic Test')).toBeVisible();
     await expect(cards.locator('text=AI Drills')).toBeVisible();
     await expect(cards.locator('text=Text Simplifier')).toBeVisible();
+    await expect(cards.locator('h3:text("Annotator")')).toBeVisible();
     await expect(cards.locator('h3:text("Curriculum")')).toBeVisible();
   });
 
@@ -71,6 +73,12 @@ test.describe('Dashboard', () => {
     await page.goto(BASE_URL);
     await page.click('a:has-text("Curriculum")');
     await expect(page).toHaveURL(/syllabus/);
+  });
+
+  test('annotator card links to annotator page', async ({ page }) => {
+    await page.goto(BASE_URL);
+    await page.click('a:has-text("Annotator")');
+    await expect(page).toHaveURL(/annotator/);
   });
 
   test('drills card scrolls to drills section', async ({ page }) => {
@@ -95,5 +103,27 @@ test.describe('Drills Section', () => {
     // Check for some drill cards
     await expect(page.locator('#drill-grid')).toBeVisible();
     await expect(page.locator('.drill-card').first()).toBeVisible();
+  });
+});
+
+test.describe('Annotator Page', () => {
+  test('annotator page loads with input and output areas', async ({ page }) => {
+    await page.goto(BASE_URL + '/annotator.html');
+
+    await expect(page.locator('h1')).toContainText('Pronunciation Annotator');
+    await expect(page.locator('#input-text')).toBeVisible();
+    await expect(page.locator('#output-text')).toBeVisible();
+    await expect(page.locator('#annotate-btn')).toBeVisible();
+  });
+
+  test('example buttons load sample text', async ({ page }) => {
+    await page.goto(BASE_URL + '/annotator.html');
+
+    // Click first example button
+    await page.click('button:has-text("Self-introduction")');
+
+    // Check that input has text
+    const input = page.locator('#input-text');
+    await expect(input).not.toBeEmpty();
   });
 });
