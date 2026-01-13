@@ -1,115 +1,65 @@
-# Portuguese Drills - Documentation Index
+# Documentation Index
 
-Welcome to the Portuguese Language Drills documentation! This directory contains comprehensive guides for users, developers, and contributors.
-
-## 📂 Directory Structure
+## Directory Structure
 
 ```
 docs/
-├── curriculum/          # Learning guides for users
-├── development/         # Technical documentation for developers
-└── features/           # Feature-specific user guides
+├── curriculum/      # Learning guides for users
+├── development/     # Technical docs for developers
+├── features/        # Feature-specific guides
+└── archive/         # Old/internal docs (43 files)
 ```
 
----
+## For Users
 
-## 👥 For Users
+| Document | Description |
+|----------|-------------|
+| [A1 Curriculum Guide](curriculum/A1-curriculum-primer.md) | What each A1 drill teaches |
+| [Shareable Links](features/SHAREABLE_LINKS.md) | How to share and bookmark drills |
 
-### [A1 Curriculum Guide](curriculum/A1-curriculum-primer.md)
-**16 KB | Comprehensive learning guide**
+## For Developers
 
-Detailed explanation of what each A1-level drill teaches, including verb conjugations, grammar structures, and progression path.
+| Document | Description |
+|----------|-------------|
+| [Project Architecture](development/PROJECT_README.md) | Tech stack, architecture, dev guide |
+| [Code Map](development/CODEMAP.md) | Find code by feature with line numbers |
+| [Drill Consistency](development/DRILL_CONSISTENCY_ANALYSIS.md) | Drill patterns and improvement roadmap |
 
-**Best for:** Language learners who want to understand the curriculum structure.
+## Creating Drills
 
----
+| Document | Description |
+|----------|-------------|
+| [Drill Template](DRILL_TEMPLATE.md) | Ready-to-copy template for new drills |
+| [Best Practices](DRILL_BEST_PRACTICES.md) | Guidelines for quality drill prompts |
 
-### [Shareable Links Guide](features/SHAREABLE_LINKS.md)
-**4.6 KB | Feature documentation**
+## Pronunciation System
 
-How to share and bookmark specific drills using the "Copy Link" button and direct URLs.
+| Document | Description |
+|----------|-------------|
+| [Annotation Workflow](ANNOTATION_WORKFLOW.md) | How to author pronunciation content |
+| [Quick Reference](QUICK_REFERENCE.md) | Fast lookup for rules and patterns |
+| [System Architecture](SYSTEM_ARCHITECTURE.md) | Technical pronunciation system docs |
+| [Changelog](CHANGELOG.md) | Pronunciation system version history |
 
-**Best for:** Users who want to share drills with others or bookmark favorites.
+## Other
 
----
+| Document | Description |
+|----------|-------------|
+| [PWA](PWA.md) | Progressive Web App setup and testing |
+| [Hover Translations](hover-translations.md) | Text simplifier translation feature |
 
-## 👨‍💻 For Developers
-
-### [Project Architecture](development/PROJECT_README.md)
-**9 KB | Architecture overview**
-
-Complete technical guide covering tech stack, serverless architecture, session management, build system, and recent updates.
-
-**Best for:** New contributors or developers who want to understand the system architecture.
-
----
-
-### [Code Map](development/CODEMAP.md)
-**14 KB | Code location reference**
-
-Quick reference with exact file paths and line numbers for debugging and development.
-
-**Best for:** Developers actively working on bug fixes or new features.
-
----
-
-### [Consistency Analysis](development/DRILL_CONSISTENCY_ANALYSIS.md)
-**14 KB | Improvement roadmap**
-
-Analysis of drill patterns and standardization opportunities across all 47 drills.
-
-**Best for:** Maintainers planning systematic improvements.
-
----
-
-## 🎯 Creating New Drills
-
-### [DRILL_TEMPLATE.md](./DRILL_TEMPLATE.md)
-**START HERE** - Ready-to-copy template for creating new drills implementing all 10 best practices.
-
-### [DRILL_BEST_PRACTICES.md](./DRILL_BEST_PRACTICES.md)
-Comprehensive guide on creating high-quality drill prompts with examples and explanations.
-
----
-
-## 🚀 Quick Start
+## Quick Start
 
 **I want to...**
-
-- **Use the drills** → Visit the live site (no docs needed!)
+- **Use the drills** → Visit the [live site](https://portuguese-drills-expanded.pages.dev)
 - **Understand curriculum** → [A1 Curriculum Guide](curriculum/A1-curriculum-primer.md)
-- **Share a drill** → [Shareable Links Guide](features/SHAREABLE_LINKS.md)
+- **Share a drill** → [Shareable Links](features/SHAREABLE_LINKS.md)
 - **Contribute code** → [Project Architecture](development/PROJECT_README.md)
 - **Fix a bug** → [Code Map](development/CODEMAP.md)
-- **Add a new drill** → [DRILL_TEMPLATE.md](./DRILL_TEMPLATE.md)
+- **Add a new drill** → [Drill Template](DRILL_TEMPLATE.md)
 
----
+## Links
 
-## 🔗 Quick Links
-
-- **Main Project**: [../README.md](../README.md)
-- **Drill Configs**: [../config/prompts/](../config/prompts/)
-- **Source Code**: [../index.html](../index.html)
-
-## Documentation Standards
-
-When adding new documentation:
-1. Use Markdown format (.md)
-2. Include a clear title and purpose
-3. Add to this README with description
-4. Keep examples practical and tested
-5. Update "Last updated" dates
-
-## Contributing
-
-To improve documentation:
-1. Analyze successful drills for new patterns
-2. Document edge cases and solutions
-3. Add practical examples
-4. Keep it actionable and concise
-
----
-
----
-
-**Last updated:** December 2024
+- [Main README](../README.md)
+- [CLAUDE.md](../CLAUDE.md) - Full project documentation
+- [CHANGELOG](../CHANGELOG.md) - Version history
