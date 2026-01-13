@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portuguese Language Tutor</title>
+    <title>Portuguese Learning Platform</title>
 <!-- PWA Manifest -->    <link rel="manifest" href="/manifest.json">    <!-- Theme color for mobile browsers -->    <meta name="theme-color" content="#0ea5e9">    <meta name="apple-mobile-web-app-capable" content="yes">    <meta name="apple-mobile-web-app-status-bar-style" content="default">    <meta name="apple-mobile-web-app-title" content="PT Tutor">    <!-- Favicons -->    <link rel="icon" href="/favicon.ico" sizes="any">    <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16.png">    <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png">    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">    <link rel="apple-touch-icon" href="/icons/icon-192.png">    <!-- Description for PWA -->    <meta name="description" content="Complete Brazilian Portuguese curriculum (A1-B2) with 90 structured units, AI-powered practice, and pronunciation tools">
     <!-- Force deployment update -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,479 +19,61 @@
 
     <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 flex-grow">
         
-        <header class="text-center mb-12">
-            <div class="py-10 px-4 bg-gradient-to-br from-white to-slate-100 rounded-3xl shadow-sm">
-                <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900">Portuguese Language Tutor</h1>
-                <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">
-                    Complete Brazilian Portuguese curriculum • A1 to B2 • 90 structured units
-                </p>
-                <!-- Big Curriculum Button -->                <div class="mb-6">                    <a href="/syllabus.html" class="inline-flex items-center gap-3 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 text-lg">                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>                        </svg>                        Browse Complete Curriculum (90 Units)                    </a>                </div>                <div class="text-sm text-slate-500 mb-6">Or choose a quick action:</div>
-                <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center items-center">
-                    <button onclick="startEmptySession()" class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow-md hover:shadow-lg">
-                        Start Empty Session
-                    </button>
-                    <button onclick="showLearningPaths()" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow-md hover:shadow-lg flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
-                        </svg>
-                        Learning Paths
-                    </button>
-                </div>
-            </div>
+        <header class="text-center mb-8 pt-4">
+            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">Portuguese Learning Platform</h1>
+            <p class="mt-2 text-slate-600">Brazilian Portuguese • A1 to B2</p>
         </header>
 
-        <!-- Placement Test Section -->
-        <section class="mb-12">
-            <div class="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-3xl shadow-xl p-8 border-2 border-amber-200">
-                <div class="flex items-start gap-4">
-                    <div class="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+        <!-- Feature Cards Dashboard -->
+        <section class="mb-10">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Diagnostic Test -->
+                <a href="/diagnostic-test.html" class="group bg-gradient-to-br from-amber-50 to-yellow-50 rounded-xl p-5 border border-amber-200 hover:shadow-lg hover:scale-[1.02] transition-all">
+                    <div class="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center mb-3">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
                         </svg>
                     </div>
-                    <div class="flex-1">
-                        <div class="flex items-center gap-2 mb-2">
-                            <h2 class="text-3xl font-bold text-slate-900">Diagnostic Tests</h2>
-                            <span class="bg-amber-200 text-amber-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Updated!</span>
-                        </div>
-                        <p class="text-slate-700 text-base mb-4">
-                            Comprehensive diagnostic tests to assess your Portuguese grammar. Start at your CEFR level.
-                        </p>
+                    <h3 class="font-bold text-slate-900 group-hover:text-amber-700">Diagnostic Test</h3>
+                    <p class="text-sm text-slate-600 mt-1">Assess your level</p>
+                </a>
 
-                        <div class="mb-3">
-                            <h3 class="text-sm font-semibold text-slate-600 mb-2">SELECT YOUR LEVEL</h3>
-                            <div class="flex flex-wrap items-center gap-3">
-                                <button
-                                    onclick="window.location.href='/diagnostic-test.html?phase=1'"
-                                    class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold px-6 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl text-sm border-2 border-green-400"
-                                >
-                                    A1 Beginner (57 qs)
-                                </button>
-                                <button
-                                    onclick="window.location.href='/diagnostic-test.html?phase=2'"
-                                    class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold px-6 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl text-sm border-2 border-blue-400"
-                                >
-                                    A2 Elementary (156 qs)
-                                </button>
-                                <button
-                                    onclick="window.location.href='/diagnostic-test.html?phase=3'"
-                                    class="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-bold px-6 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl text-sm border-2 border-purple-400"
-                                >
-                                    B1 Intermediate (103 qs)
-                                </button>
-                                <button
-                                    onclick="window.location.href='/diagnostic-test.html?phase=4'"
-                                    class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold px-6 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl text-sm border-2 border-amber-400"
-                                >
-                                    B2 Upper-Int (44 qs)
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs mt-4 pt-4 border-t border-amber-200">
-                            <div class="flex items-start gap-2 text-slate-600">
-                                <span class="w-2 h-2 bg-green-500 rounded-full mt-1 flex-shrink-0"></span>
-                                <span><strong>A1:</strong> Basic phrases, identity</span>
-                            </div>
-                            <div class="flex items-start gap-2 text-slate-600">
-                                <span class="w-2 h-2 bg-blue-500 rounded-full mt-1 flex-shrink-0"></span>
-                                <span><strong>A2:</strong> Daily routines, descriptions</span>
-                            </div>
-                            <div class="flex items-start gap-2 text-slate-600">
-                                <span class="w-2 h-2 bg-purple-500 rounded-full mt-1 flex-shrink-0"></span>
-                                <span><strong>B1:</strong> Travel, experiences, opinions</span>
-                            </div>
-                            <div class="flex items-start gap-2 text-slate-600">
-                                <span class="w-2 h-2 bg-amber-500 rounded-full mt-1 flex-shrink-0"></span>
-                                <span><strong>B2:</strong> Complex topics, fluency</span>
-                            </div>
-                        </div>
+                <!-- Drills -->
+                <a href="#drills" class="group bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-5 border border-green-200 hover:shadow-lg hover:scale-[1.02] transition-all">
+                    <div class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center mb-3">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                        </svg>
                     </div>
-                </div>
+                    <h3 class="font-bold text-slate-900 group-hover:text-green-700">AI Drills</h3>
+                    <p class="text-sm text-slate-600 mt-1">48 interactive exercises</p>
+                </a>
+
+                <!-- Simplifier -->
+                <a href="/simplifier.html" class="group bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-5 border border-blue-200 hover:shadow-lg hover:scale-[1.02] transition-all">
+                    <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center mb-3">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-slate-900 group-hover:text-blue-700">Text Simplifier</h3>
+                    <p class="text-sm text-slate-600 mt-1">Read at your level</p>
+                </a>
+
+                <!-- Curriculum -->
+                <a href="/syllabus.html" class="group bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl p-5 border border-purple-200 hover:shadow-lg hover:scale-[1.02] transition-all">
+                    <div class="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center mb-3">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-slate-900 group-hover:text-purple-700">Curriculum</h3>
+                    <p class="text-sm text-slate-600 mt-1">90 structured lessons</p>
+                </a>
             </div>
         </section>
 
-        <!-- Text Simplifier Section (A1 & A2) -->
-        <section class="mb-12">
-            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl shadow-lg p-6 sm:p-8">
-                <button
-                    onclick="toggleSimplifier()"
-                    class="w-full flex items-center justify-between text-left focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg"
-                >
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h2 class="text-2xl font-bold text-slate-900">Text Simplifier</h2>
-                            <p class="text-slate-600 text-sm mt-1">Convert any text to beginner-level Portuguese (A1/A2)</p>
-                        </div>
-                    </div>
-                    <svg id="simplifier-chevron" class="w-6 h-6 text-slate-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-
-                <div id="simplifier-content" class="hidden mt-6">
-                    <!-- Level Selector -->
-                    <div class="mb-6 bg-white rounded-lg p-4 border border-slate-200">
-                        <label class="block text-sm font-semibold text-slate-700 mb-3">Select Simplification Level:</label>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            <label class="flex items-center cursor-pointer bg-slate-50 hover:bg-slate-100 rounded-lg p-3 border-2 border-transparent has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50 transition-all relative">
-                                <input
-                                    type="radio"
-                                    name="simplifier-level"
-                                    value="a1"
-                                    checked
-                                    onchange="updateSimplifierLabels()"
-                                    class="mr-3 w-4 h-4 text-blue-600 focus:ring-blue-500"
-                                >
-                                <div class="flex-1">
-                                    <div class="font-semibold text-slate-900">A1 (Beginner)</div>
-                                    <div class="text-xs text-slate-600 mt-1">Present, simple past, basic vocab</div>
-                                </div>
-                                <button
-                                    onclick="openSimplifierPage(event, 'a1')"
-                                    class="absolute top-2 right-2 p-1.5 text-slate-400 hover:text-blue-600 hover:bg-blue-100 rounded transition-colors"
-                                    title="Open A1 simplifier in new tab"
-                                >
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                    </svg>
-                                </button>
-                            </label>
-                            <label class="flex items-center cursor-pointer bg-slate-50 hover:bg-slate-100 rounded-lg p-3 border-2 border-transparent has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50 transition-all relative">
-                                <input
-                                    type="radio"
-                                    name="simplifier-level"
-                                    value="a2"
-                                    onchange="updateSimplifierLabels()"
-                                    class="mr-3 w-4 h-4 text-blue-600 focus:ring-blue-500"
-                                >
-                                <div class="flex-1">
-                                    <div class="font-semibold text-slate-900">A2 (Elementary)</div>
-                                    <div class="text-xs text-slate-600 mt-1">Past tenses, present continuous</div>
-                                </div>
-                                <button
-                                    onclick="openSimplifierPage(event, 'a2')"
-                                    class="absolute top-2 right-2 p-1.5 text-slate-400 hover:text-blue-600 hover:bg-blue-100 rounded transition-colors"
-                                    title="Open A2 simplifier in new tab"
-                                >
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                    </svg>
-                                </button>
-                            </label>
-                            <label class="flex items-center cursor-pointer bg-slate-50 hover:bg-slate-100 rounded-lg p-3 border-2 border-transparent has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50 transition-all relative">
-                                <input
-                                    type="radio"
-                                    name="simplifier-level"
-                                    value="b1"
-                                    onchange="updateSimplifierLabels()"
-                                    class="mr-3 w-4 h-4 text-blue-600 focus:ring-blue-500"
-                                >
-                                <div class="flex-1">
-                                    <div class="font-semibold text-slate-900">B1 (Intermediate)</div>
-                                    <div class="text-xs text-slate-600 mt-1">Future, conditional, subjunctive</div>
-                                </div>
-                                <button
-                                    onclick="openSimplifierPage(event, 'b1')"
-                                    class="absolute top-2 right-2 p-1.5 text-slate-400 hover:text-blue-600 hover:bg-blue-100 rounded transition-colors"
-                                    title="Open B1 simplifier in new tab"
-                                >
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                    </svg>
-                                </button>
-                            </label>
-                            <label class="flex items-center cursor-pointer bg-slate-50 hover:bg-slate-100 rounded-lg p-3 border-2 border-transparent has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50 transition-all relative">
-                                <input
-                                    type="radio"
-                                    name="simplifier-level"
-                                    value="b2"
-                                    onchange="updateSimplifierLabels()"
-                                    class="mr-3 w-4 h-4 text-blue-600 focus:ring-blue-500"
-                                >
-                                <div class="flex-1">
-                                    <div class="font-semibold text-slate-900">B2 (Upper Intermediate)</div>
-                                    <div class="text-xs text-slate-600 mt-1">All tenses, complex structures</div>
-                                </div>
-                                <button
-                                    onclick="openSimplifierPage(event, 'b2')"
-                                    class="absolute top-2 right-2 p-1.5 text-slate-400 hover:text-blue-600 hover:bg-blue-100 rounded transition-colors"
-                                    title="Open B2 simplifier in new tab"
-                                >
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                    </svg>
-                                </button>
-                            </label>
-                        </div>
-
-                        <!-- Feature Info Box -->
-                        <div id="simplifier-features" class="mt-3 p-3 bg-blue-50 rounded-lg border border-blue-200">
-                            <div class="text-xs text-blue-900 space-y-1">
-                                <div class="font-semibold mb-1">A1 Features:</div>
-                                <div>✓ Present tense (presente)</div>
-                                <div>✓ Simple past (pretérito perfeito)</div>
-                                <div>✓ Immediate future (ir + infinitive)</div>
-                                <div>✓ Basic vocabulary only</div>
-                                <div>✓ Short, clear sentences (max 10-12 words)</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                        <!-- Input Section -->
-                        <div>
-                            <label for="simplifier-input" class="block text-sm font-semibold text-slate-700 mb-2">
-                                Original Text (any language)
-                            </label>
-                            <textarea
-                                id="simplifier-input"
-                                rows="15"
-                                class="w-full px-4 py-3 text-slate-900 bg-white border border-slate-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                                placeholder="Paste or type text in any language here... (Press Enter to simplify)"
-                                onkeydown="if(event.key === 'Enter' && !event.shiftKey) { event.preventDefault(); simplifyText(); }"
-                            ></textarea>
-                            <div class="mt-3 flex items-center justify-between">
-                                <span class="text-xs text-slate-500">Supports text in any language</span>
-                                <button
-                                    onclick="simplifyText()"
-                                    id="simplify-btn"
-                                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg transition-colors shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-                                >
-                                    Simplify to A1
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Output Section -->
-                        <div>
-                            <div class="flex items-center justify-between mb-2">
-                                <label id="simplifier-output-label" for="simplifier-output" class="block text-sm font-semibold text-slate-700">
-                                    Simplified A1-Level Portuguese
-                                </label>
-                                <div class="flex items-center gap-2">
-                                    <span id="audio-hint" class="hidden text-xs text-slate-500">
-                                        <svg class="w-3 h-3 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072M12 6v12m0-12L8 10H4v4h4l4 4"></path>
-                                        </svg>
-                                        Click any sentence to hear it
-                                    </span>
-                                    <button
-                                        onclick="speakSimplifiedText()"
-                                        id="speak-btn"
-                                        class="hidden bg-green-100 hover:bg-green-200 text-green-700 font-medium px-3 py-1 rounded-lg transition-colors text-sm flex items-center gap-1"
-                                    >
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
-                                        </svg>
-                                        Listen All
-                                    </button>
-                                    <button
-                                        onclick="copySimplifiedText()"
-                                        id="copy-btn"
-                                        class="hidden bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium px-3 py-1 rounded-lg transition-colors text-sm"
-                                    >
-                                        Copy
-                                    </button>
-                                    <button
-                                        onclick="clearSimplifier()"
-                                        id="clear-btn"
-                                        class="hidden bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium px-3 py-1 rounded-lg transition-colors text-sm"
-                                    >
-                                        Clear
-                                    </button>
-                                </div>
-                            </div>
-                            <div
-                                id="simplifier-output"
-                                class="w-full h-80 px-4 py-3 text-slate-900 bg-white border border-slate-300 rounded-lg shadow-sm overflow-y-auto"
-                            >
-                                <div class="flex items-center justify-center h-full text-slate-400">
-                                    <div class="text-center">
-                                        <svg class="w-16 h-16 mx-auto mb-3 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                                        </svg>
-                                        <p class="text-sm">Simplified text will appear here</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pronunciation Annotator Section -->
-        <section class="mb-12">
-            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl shadow-lg p-6 sm:p-8">
-                <button
-                    onclick="toggleAnnotator()"
-                    class="w-full flex items-center justify-between text-left focus:outline-none focus:ring-2 focus:ring-green-500 rounded-lg"
-                >
-                    <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h2 class="text-2xl font-bold text-slate-900">Pronunciation Annotator</h2>
-                            <p class="text-slate-600 text-sm mt-1">Add Brazilian pronunciation guides to any Portuguese text</p>
-                        </div>
-                    </div>
-                    <svg id="annotator-chevron" class="w-6 h-6 text-slate-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-
-                <div id="annotator-content" class="hidden mt-6">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                        <!-- Input Section -->
-                        <div>
-                            <label for="annotator-input" class="block text-sm font-semibold text-slate-700 mb-2">
-                                Original Portuguese Text
-                            </label>
-                            <textarea
-                                id="annotator-input"
-                                rows="8"
-                                class="w-full px-4 py-3 text-slate-900 bg-white border border-slate-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none font-mono"
-                                placeholder="Eu sou americana. Eu moro em São Paulo."
-                            ></textarea>
-                            <div class="mt-3 flex items-center justify-between">
-                                <span class="text-xs text-slate-500">Paste clean Portuguese text</span>
-                                <button
-                                    onclick="annotateText()"
-                                    id="annotate-btn"
-                                    class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 rounded-lg transition-colors shadow-md hover:shadow-lg"
-                                >
-                                    Add Annotations
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Output Section -->
-                        <div>
-                            <div class="flex items-center justify-between mb-2">
-                                <label for="annotator-output" class="text-sm font-semibold text-slate-700">
-                                    Annotated Text with Pronunciation
-                                </label>
-                                <label class="flex items-center gap-2 text-sm text-slate-600 cursor-pointer">
-                                    <input
-                                        type="checkbox"
-                                        id="substitution-mode"
-                                        onchange="toggleAnnotationMode()"
-                                        class="rounded border-gray-300 text-green-600 focus:ring-green-500"
-                                    >
-                                    <span>Substitution Mode</span>
-                                </label>
-                            </div>
-                            <div
-                                id="annotator-output"
-                                class="w-full h-48 px-4 py-3 text-slate-900 bg-white border border-slate-300 rounded-lg shadow-sm overflow-y-auto font-mono text-sm"
-                            >
-                                <div class="flex items-center justify-center h-full text-slate-400">
-                                    <div class="text-center">
-                                        <svg class="w-16 h-16 mx-auto mb-3 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
-                                        </svg>
-                                        <p class="text-sm">Annotated text will appear here</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-3 flex justify-end gap-2">
-                                <button
-                                    onclick="copyAnnotatedText()"
-                                    id="copy-annotated-btn"
-                                    class="hidden bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium px-4 py-2 rounded-lg transition-colors text-sm"
-                                >
-                                    Copy Text
-                                </button>
-                                <button
-                                    onclick="clearAnnotator()"
-                                    class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium px-4 py-2 rounded-lg transition-colors text-sm"
-                                >
-                                    Clear
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Info Section -->
-                    <div class="mt-6 p-4 bg-white rounded-lg border border-green-200">
-                        <h3 class="text-sm font-semibold text-slate-900 mb-2">What this does:</h3>
-                        <ul class="space-y-1 text-sm text-slate-600">
-                            <li class="flex items-start gap-2">
-                                <span class="text-green-600 mt-0.5">•</span>
-                                <span>Adds pronunciation guides to show how Brazilians actually pronounce words</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-green-600 mt-0.5">•</span>
-                                <span><strong>Bracket Mode:</strong> Shows annotations like trabalho<i class="text-blue-600">[u]</i> de<i class="text-blue-600">[dji]</i></span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-green-600 mt-0.5">•</span>
-                                <span><strong>Substitution Mode:</strong> Shows phonetic spelling like trabalh<span class="text-blue-600 font-semibold">u</span> <span class="text-blue-600 font-semibold">dji</span></span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-green-600 mt-0.5">•</span>
-                                <span><strong>Copy function:</strong> Always preserves raw format <code class="bg-slate-100 px-1 rounded">[_u_]</code> for pasting into syllabus files</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-green-600 mt-0.5">•</span>
-                                <span>Works <strong>instantly</strong> - no server needed, all processing happens in your browser!</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Hidden templates for the learning paths -->
-        <div id="path-templates" class="hidden">
-            <div id="a1-path" class="learning-path bg-white p-6 rounded-2xl shadow-lg">
-                <h3 class="text-2xl font-bold text-indigo-600 mb-6 border-b-2 border-indigo-200 pb-3">A1 Path</h3>
-                <ol>
-                    <li><a href="#" class="path-link text-blue-600 hover:underline font-semibold" data-target-id="drill-self-introduction">Self-Introduction Drill</a></li>
-                    <li><div class="learning-bundle"><h4 class="learning-bundle-title">Bundle: Regular Verbs</h4><ul class="space-y-1 ml-4 list-disc list-inside text-slate-600"><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-ar-verbs">Regular -ar Verbs</a></li><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-er-verbs">Regular -er Verbs</a></li><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-ir-verbs">Regular -ir Verbs</a></li></ul></div></li>
-                    <li><a href="#" class="path-link text-blue-600 hover:underline font-semibold" data-target-id="drill-irregular-verbs">Irregular Verbs Drill</a></li>
-                    <li><a href="#" class="path-link text-blue-600 hover:underline font-semibold" data-target-id="drill-contractions-articles">Contractions with Articles (de/em)</a></li>
-                    <li><div class="learning-bundle"><h4 class="learning-bundle-title">Bundle: Core Concepts</h4><ul class="space-y-1 ml-4 list-disc list-inside text-slate-600"><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-immediate-future">Immediate Future</a></li><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-noun-plurals">Noun Plurals</a></li><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-adjective-agreement">Adjective Agreement</a></li><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-ir-transportation">'Ir' + Transportation</a></li></ul></div></li>
-                </ol>
-            </div>
-            <div id="a2-path" class="learning-path bg-white p-6 rounded-2xl shadow-lg">
-                <h3 class="text-2xl font-bold text-indigo-600 mb-6 border-b-2 border-indigo-200 pb-3">A2 Path</h3>
-                <ol>
-                    <li><a href="#" class="path-link text-blue-600 hover:underline font-semibold" data-target-id="drill-reflexive-verbs">Reflexive Verbs Drill</a></li>
-                    <li><div class="learning-bundle"><h4 class="learning-bundle-title">Bundle: Contractions w/ Pronouns</h4><ul class="space-y-1 ml-4 list-disc list-inside text-slate-600"><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-contractions-de">Contractions (de + pronouns)</a></li><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-contractions-em">Contractions (em + pronouns)</a></li></ul></div></li>
-                    <li><a href="#" class="path-link text-blue-600 hover:underline font-semibold" data-target-id="drill-present-continuous">Present Continuous Tense</a></li>
-                    <li class="supplemental-step"><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-conversational-answers">Supplemental: Conversational Answers</a></li>
-                </ol>
-            </div>
-            <div id="b1-path" class="learning-path bg-white p-6 rounded-2xl shadow-lg">
-                <h3 class="text-2xl font-bold text-indigo-600 mb-6 border-b-2 border-indigo-200 pb-3">B1 Path</h3>
-                <ol>
-                    <li><div class="learning-bundle"><h4 class="learning-bundle-title">Bundle: Past & Future Tenses</h4><ul class="space-y-1 ml-4 list-disc list-inside text-slate-600"><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-imperfect-tense">Imperfect Tense</a></li><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-future-tense">Future Tense</a></li><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-conditional-tense">Conditional Tense</a></li></ul></div></li>
-                    <li><div class="learning-bundle"><h4 class="learning-bundle-title">Bundle: Key Grammar</h4><ul class="space-y-1 ml-4 list-disc list-inside text-slate-600"><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-crase">Crase (à) Tutor</a></li><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-demonstratives">Demonstratives</a></li><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-imperative">Imperative (Commands)</a></li></ul></div></li>
-                    <li><a href="#" class="path-link text-blue-600 hover:underline font-semibold" data-target-id="drill-present-subjunctive">Present Subjunctive Drill</a></li>
-                    <li class="supplemental-step"><div class="learning-bundle"><h4 class="learning-bundle-title italic">Supplemental Bundle</h4><ul class="space-y-1 ml-4 list-disc list-inside text-slate-600"><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-syllable-stress">Syllable Stress</a></li><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-portuguese-for-spanish">For Spanish Speakers</a></li><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-grammar-for-spanish">Grammar for Spanish Speakers</a></li></ul></div></li>
-                </ol>
-            </div>
-            <div id="b2-path" class="learning-path bg-white p-6 rounded-2xl shadow-lg">
-                <h3 class="text-2xl font-bold text-indigo-600 mb-6 border-b-2 border-indigo-200 pb-3">B2 Path</h3>
-                <ol>
-                    <li><div class="learning-bundle"><h4 class="learning-bundle-title">Bundle: Advanced Subjunctive</h4><ul class="space-y-1 ml-4 list-disc list-inside text-slate-600"><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-imperfect-subjunctive">Imperfect Subjunctive</a></li><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-future-subjunctive">Future Subjunctive</a></li></ul></div></li>
-                    <li><a href="#" class="path-link text-blue-600 hover:underline font-semibold" data-target-id="drill-advanced-demonstratives">Advanced Demonstratives Drill</a></li>
-                    <li><div class="learning-bundle"><h4 class="learning-bundle-title">Bundle: Sounding Natural</h4><ul class="space-y-1 ml-4 list-disc list-inside text-slate-600"><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-colloquial-speech">Colloquial Speech</a></li><li><a href="#" class="path-link text-blue-600 hover:underline" data-target-id="drill-phonetic-tutor">Phonetic Tutor</a></li></ul></div></li>
-                </ol>
-            </div>
-        </div>
-
-        <main>
+        <main id="drills">
             <!-- Search Bar -->
             <div class="my-8 max-w-md mx-auto">
                 <label for="search-input" class="sr-only">Search for a drill</label>
@@ -892,5 +474,6 @@
 
     <!-- Pronunciation Annotator Engine -->
     <script src="/js/pronunciation-annotator.js"></script>    <!-- PWA Setup -->    <script src="/scripts/pwa-setup.js"></script>
+<script src="/js/nav.js"></script>
 </body>
 </html>
