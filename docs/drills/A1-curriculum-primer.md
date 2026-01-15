@@ -61,16 +61,28 @@ All drills support both Brazilian Portuguese (BP) and European Portuguese (EP).
 - Onde (where), quando (when), como (how)
 - Por que/porque (why/because), quanto (how much/many)
 
+### 11. É que Questions
+- Forming questions with "é que": O que é que você quer?
+- Optional but very common in spoken Portuguese
+- Adds emphasis or naturalness to questions
+
+---
+
+### 12. Subject Identification
+- Recognizing which subjects match a conjugated verb form
+- Unambiguous forms (eu/-o, nós/-mos) vs ambiguous forms
+- When subjects can be omitted in natural speech
+
 ---
 
 ## Verb Tenses
 
-### 11. Present Tense - Regular Verbs
+### 13. Present Tense - Regular Verbs
 - -AR verbs: falar → falo, fala, falamos, falam
 - -ER verbs: comer → como, come, comemos, comem
 - -IR verbs: partir → parto, parte, partimos, partem
 
-### 12. Present Tense - Essential Irregular Verbs
+### 14. Present Tense - Essential Irregular Verbs
 - Ser: sou, é, somos, são
 - Estar: estou, está, estamos, estão
 - Ir: vou, vai, vamos, vão
@@ -84,7 +96,7 @@ All drills support both Brazilian Portuguese (BP) and European Portuguese (EP).
 - Saber: sei, sabe, sabemos, sabem
 - Pôr: ponho, põe, pomos, põem
 
-### 13. Immediate Future
+### 15. Immediate Future
 - Ir (conjugated) + infinitive
 - "Vou falar" = I'm going to speak
 - Most common future expression in spoken Portuguese
@@ -93,58 +105,58 @@ All drills support both Brazilian Portuguese (BP) and European Portuguese (EP).
 
 ## Vocabulary Domains
 
-### 14. Numbers & Counting
+### 16. Numbers & Counting
 - Cardinal numbers 0-100, then 1000+
 - Ordinal numbers (primeiro, segundo...)
 
-### 15. Days, Months & Dates
+### 17. Days, Months & Dates
 - Days of the week (segunda-feira, terça-feira...)
 - Months (janeiro, fevereiro...)
 - Expressing dates
 
-### 16. Telling Time
+### 18. Telling Time
 - Hours, minutes
 - Time expressions (de manhã, à tarde, à noite)
 
-### 17. Colors
+### 19. Colors
 - Basic colors with gender agreement
 
-### 18. Family
+### 20. Family
 - Family members and relationships
 
-### 19. Food & Meals
+### 21. Food & Meals
 - Common foods, meals, restaurant vocabulary
 
-### 20. House & Rooms
+### 22. House & Rooms
 - Rooms, furniture, household items
 
-### 21. Body Parts
+### 23. Body Parts
 - Parts of the body
 
-### 22. Clothing
+### 24. Clothing
 - Articles of clothing
 
 ---
 
 ## Communication Skills
 
-### 23. Self-Introduction
+### 25. Self-Introduction
 - Name, age, profession, nationality
 - Where you live, languages you speak
 
-### 24. Basic Conversation
+### 26. Basic Conversation
 - Greetings and farewells
 - Please, thank you, excuse me
 - Yes/no questions and answers
 
-### 25. Ir + Transportation
+### 27. Ir + Transportation
 - Modes of transport (de carro, de ônibus, a pé)
 
 ---
 
 ## Summary
 
-A1 covers approximately 25 topic areas focusing on:
+A1 covers approximately 27 topic areas focusing on:
 - Basic sentence structure and verb conjugation
 - Essential grammar (articles, gender, agreement)
 - Survival vocabulary

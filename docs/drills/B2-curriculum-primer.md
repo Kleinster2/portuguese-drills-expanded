@@ -162,11 +162,17 @@ All drills support both Brazilian Portuguese (BP) and European Portuguese (EP).
 - Political vocabulary
 - Cultural references
 
+### 23. Capstone Synthesis
+- Integration of all grammar concepts
+- Complex sentence construction
+- Natural, fluent expression
+- Review and consolidation
+
 ---
 
 ## Summary
 
-B2 covers approximately 22 topic areas focusing on:
+B2 covers approximately 23 topic areas focusing on:
 - Future subjunctive and complete conditional system
 - Personal infinitive (unique to Portuguese)
 - All compound tenses and their uses

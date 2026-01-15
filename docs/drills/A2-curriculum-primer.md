@@ -183,11 +183,20 @@ All drills support both Brazilian Portuguese (BP) and European Portuguese (EP).
 - Emotional states
 - Expressing opinions
 
+### 29. Technology
+- Computers, phones, internet vocabulary
+- Digital communication terms
+
+### 30. Advanced Demonstratives
+- Demonstrative pronouns in complex contexts
+- Isto, isso, aquilo (neuter forms)
+- Demonstratives with prepositions
+
 ---
 
 ## Summary
 
-A2 covers approximately 28 topic areas focusing on:
+A2 covers approximately 30 topic areas focusing on:
 - Past tenses (preterite, imperfect) and their distinction
 - Reflexive verbs and present continuous
 - Object pronouns and placement
