@@ -103,8 +103,8 @@ Each unit should target ONE specific concept. When in doubt, split rather than c
 
 ### CEFR Alignment
 Curriculum follows CEFR levels (A1-B2). See:
-- [A1 Curriculum](docs/drills/A1-curriculum-primer.md) - 27 units
-- [A2 Curriculum](docs/drills/A2-curriculum-primer.md) - 30 units
+- [A1 Curriculum](docs/drills/A1-curriculum-primer.md) - 26 units
+- [A2 Curriculum](docs/drills/A2-curriculum-primer.md) - 31 units
 - [B1 Curriculum](docs/drills/B1-curriculum-primer.md) - 24 units
 - [B2 Curriculum](docs/drills/B2-curriculum-primer.md) - 23 units
 

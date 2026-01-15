@@ -151,43 +151,48 @@ All drills support both Brazilian Portuguese (BP) and European Portuguese (EP).
 - Enquanto, durante
 - Desde, até
 
+### 22. É que Questions
+- Forming questions with "é que": O que é que você quer?
+- Common in spoken Portuguese
+- Adds emphasis or naturalness to questions
+
 ---
 
 ## Vocabulary Expansion
 
-### 22. Travel & Directions
+### 23. Travel & Directions
 - Airports, hotels, transportation
 - Asking for and giving directions
 
-### 23. Health & Body
+### 24. Health & Body
 - Symptoms, doctor visits
 - Pharmacy, common ailments
 
-### 24. Shopping & Money
+### 25. Shopping & Money
 - Stores, prices, transactions
 - Bargaining, returns
 
-### 25. Work & Professions
+### 26. Work & Professions
 - Workplace vocabulary
 - Job descriptions, schedules
 
-### 26. Hobbies & Leisure
+### 27. Hobbies & Leisure
 - Sports, entertainment
 - Preferences and opinions
 
-### 27. Weather
+### 28. Weather
 - Weather conditions
 - Seasonal vocabulary
 
-### 28. Emotions & Feelings
+### 29. Emotions & Feelings
 - Emotional states
 - Expressing opinions
 
-### 29. Technology
+### 30. Technology
 - Computers, phones, internet vocabulary
 - Digital communication terms
 
-### 30. Advanced Demonstratives
+### 31. Advanced Demonstratives
 - Demonstrative pronouns in complex contexts
 - Isto, isso, aquilo (neuter forms)
 - Demonstratives with prepositions
@@ -196,7 +201,7 @@ All drills support both Brazilian Portuguese (BP) and European Portuguese (EP).
 
 ## Summary
 
-A2 covers approximately 30 topic areas focusing on:
+A2 covers approximately 31 topic areas focusing on:
 - Past tenses (preterite, imperfect) and their distinction
 - Reflexive verbs and present continuous
 - Object pronouns and placement
