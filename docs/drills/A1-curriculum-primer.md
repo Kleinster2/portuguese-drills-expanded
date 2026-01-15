@@ -17,10 +17,10 @@ All drills support both Brazilian Portuguese (BP) and European Portuguese (EP).
 - Where you live, languages you speak
 - Learn as chunks first, grammar later
 
-### 2. Basic Conversation
-- Greetings and farewells
-- Please, thank you, excuse me
-- Yes/no questions and answers
+### 2. Greetings & Politeness
+- Greetings: Olá, Bom dia, Boa tarde, Boa noite
+- Farewells: Tchau, Até logo, Até amanhã
+- Politeness: Por favor, Obrigado/a, Com licença, Desculpe
 
 ### 3. Numbers & Counting
 - Cardinal numbers 0-100, then 1000+
@@ -108,7 +108,12 @@ All drills support both Brazilian Portuguese (BP) and European Portuguese (EP).
 - Onde (where), quando (when), como (how)
 - Por que/porque (why/because), quanto (how much/many)
 
-### 21. Subject Identification
+### 21. Yes/No Questions & Answers
+- Question formation with intonation
+- Simple affirmative and negative responses
+- Sim, Não, Talvez
+
+### 22. Subject Identification
 - Recognizing which subjects match a conjugated verb form
 - Unambiguous forms (eu/-o, nós/-mos) vs ambiguous forms
 - When subjects can be omitted in natural speech
@@ -117,12 +122,12 @@ All drills support both Brazilian Portuguese (BP) and European Portuguese (EP).
 
 ## Verb Tenses
 
-### 22. Present Tense - Regular Verbs
+### 23. Present Tense - Regular Verbs
 - -AR verbs: falar → falo, fala, falamos, falam
 - -ER verbs: comer → como, come, comemos, comem
 - -IR verbs: partir → parto, parte, partimos, partem
 
-### 23. Present Tense - Essential Irregular Verbs
+### 24. Present Tense - Essential Irregular Verbs
 - Ser: sou, é, somos, são
 - Estar: estou, está, estamos, estão
 - Ir: vou, vai, vamos, vão
@@ -136,7 +141,7 @@ All drills support both Brazilian Portuguese (BP) and European Portuguese (EP).
 - Saber: sei, sabe, sabemos, sabem
 - Pôr: ponho, põe, pomos, põem
 
-### 24. Immediate Future
+### 25. Immediate Future
 - Ir (conjugated) + infinitive
 - "Vou falar" = I'm going to speak
 - Most common future expression in spoken Portuguese
@@ -145,22 +150,22 @@ All drills support both Brazilian Portuguese (BP) and European Portuguese (EP).
 
 ## Applied Skills
 
-### 25. Telling Time
+### 26. Telling Time
 - Hours, minutes
 - Time expressions (de manhã, à tarde, à noite)
 
-### 26. Ir + Transportation
+### 27. Ir + Transportation
 - Modes of transport (de carro, de ônibus, a pé)
 
 ---
 
 ## Summary
 
-A1 covers 26 topic areas organized for production first:
+A1 covers 27 topic areas organized for production first:
 - **Immediate Production (1-4):** Speak from day one
 - **Usable Vocabulary (5-10):** Words you can use immediately
-- **Core Grammar (11-21):** Rules to explain what you're doing
-- **Verb Tenses (22-24):** Systematic conjugation
-- **Applied Skills (25-26):** Combining grammar and vocabulary
+- **Core Grammar (11-22):** Rules to explain what you're doing
+- **Verb Tenses (23-25):** Systematic conjugation
+- **Applied Skills (26-27):** Combining grammar and vocabulary
 
 Continue to the [A2 Curriculum](A2-curriculum-primer.md) after mastering these foundations.
