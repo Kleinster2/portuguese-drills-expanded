@@ -40,9 +40,9 @@ function shouldShowConjugationButtons(content, activeDrills) {
   }
 
   // For other drills, check for verb in parentheses
-  // Match verbs ending in -ar, -er, -ir, with optional reflexive pronouns (-se, -me, -te, -nos)
+  // Match verbs ending in -ar, -er, -ir, -ôr (pôr), with optional reflexive pronouns (-se, -me, -te, -nos)
   // Use * instead of + to match short verbs like "ir" (2 letters)
-  const hasVerb = /\(([a-záàâãéêíóôõúç]*(?:ar|er|ir)(?:-(?:se|me|te|nos))?)\)/i.test(content);
+  const hasVerb = /\(([a-záàâãéêíóôõúç]*(?:ar|er|ir|ôr)(?:-(?:se|me|te|nos))?)\)/i.test(content);
 
   console.log('  hasBlank:', hasBlank);
   console.log('  hasVerb:', hasVerb);
@@ -53,11 +53,12 @@ function shouldShowConjugationButtons(content, activeDrills) {
 
 // Extract verb infinitive from message
 function extractVerbFromMessage(content) {
-  // Extract verb from pattern: ______ (falar/comer/abrir) or (sentar-se) or (ir)
+  // Extract verb from pattern: ______ (falar/comer/abrir) or (sentar-se) or (ir) or (pôr)
   // Look for the LAST occurrence to avoid matching English words like "(singular)" that end in -ar
   // Match verbs with optional reflexive pronouns (-se, -me, -te, -nos)
   // Use * instead of + to match short verbs like "ir" (2 letters)
-  const matches = content.matchAll(/\(([a-záàâãéêíóôõúç]*(?:ar|er|ir)(?:-(?:se|me|te|nos))?)\)/gi);
+  // Include -ôr for pôr and derivatives (compor, dispor, etc.)
+  const matches = content.matchAll(/\(([a-záàâãéêíóôõúç]*(?:ar|er|ir|ôr)(?:-(?:se|me|te|nos))?)\)/gi);
   const allMatches = Array.from(matches);
 
   // Return the last match (the Portuguese verb, not English clarifiers)
@@ -79,6 +80,7 @@ function getVerbType(infinitive) {
   if (infinitive.endsWith('ar')) return 'ar';
   if (infinitive.endsWith('er')) return 'er';
   if (infinitive.endsWith('ir')) return 'ir';
+  if (infinitive.endsWith('ôr') || infinitive.endsWith('or')) return 'ôr'; // pôr and derivatives
   return null;
 }
 
