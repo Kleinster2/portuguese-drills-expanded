@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Parts - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+        .vocab-card {
+            background: #f8fafc;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+        .speaker-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .speaker-btn:hover {
+            background: #2563eb;
+        }
+        .portuguese {
+            font-weight: 600;
+            color: #1e40af;
+        }
+        .english {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        .example-sentence {
+            background: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .info-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .grammar-box {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .vocab-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .vocab-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 8</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">O Corpo Humano</h1>
+            <p class="text-gray-600">Parts of the Body</p>
+        </div>
+
+        <!-- STEP 1: Head & Face -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Head & Face</h2>
+            </div>
+
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a cabeça')">🔊</button>
+                    <div class="portuguese">a cabeça</div>
+                    <div class="english">head</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o rosto')">🔊</button>
+                    <div class="portuguese">o rosto</div>
+                    <div class="english">face</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o cabelo')">🔊</button>
+                    <div class="portuguese">o cabelo</div>
+                    <div class="english">hair</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a testa')">🔊</button>
+                    <div class="portuguese">a testa</div>
+                    <div class="english">forehead</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o olho')">🔊</button>
+                    <div class="portuguese">o olho</div>
+                    <div class="english">eye</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o nariz')">🔊</button>
+                    <div class="portuguese">o nariz</div>
+                    <div class="english">nose</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a orelha')">🔊</button>
+                    <div class="portuguese">a orelha</div>
+                    <div class="english">ear</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a boca')">🔊</button>
+                    <div class="portuguese">a boca</div>
+                    <div class="english">mouth</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o lábio')">🔊</button>
+                    <div class="portuguese">o lábio</div>
+                    <div class="english">lip</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o dente')">🔊</button>
+                    <div class="portuguese">o dente</div>
+                    <div class="english">tooth</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a língua')">🔊</button>
+                    <div class="portuguese">a língua</div>
+                    <div class="english">tongue</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o queixo')">🔊</button>
+                    <div class="portuguese">o queixo</div>
+                    <div class="english">chin</div>
+                </div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Ela tem olhos azuis.')">🔊</button>
+                <span class="portuguese">Ela tem olhos azuis.</span>
+                <div class="english mt-1">She has blue eyes.</div>
+            </div>
+        </section>
+
+        <!-- STEP 2: Upper Body -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Upper Body</h2>
+            </div>
+
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o pescoço')">🔊</button>
+                    <div class="portuguese">o pescoço</div>
+                    <div class="english">neck</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o ombro')">🔊</button>
+                    <div class="portuguese">o ombro</div>
+                    <div class="english">shoulder</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o peito')">🔊</button>
+                    <div class="portuguese">o peito</div>
+                    <div class="english">chest</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('as costas')">🔊</button>
+                    <div class="portuguese">as costas</div>
+                    <div class="english">back</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a barriga')">🔊</button>
+                    <div class="portuguese">a barriga</div>
+                    <div class="english">belly/stomach</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o estômago')">🔊</button>
+                    <div class="portuguese">o estômago</div>
+                    <div class="english">stomach (organ)</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>💡 Note:</strong> <em>As costas</em> (back) is always plural in Portuguese, even when referring to one person's back.
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Minhas costas estão doendo.')">🔊</button>
+                <span class="portuguese">Minhas costas estão doendo.</span>
+                <div class="english mt-1">My back is hurting.</div>
+            </div>
+        </section>
+
+        <!-- STEP 3: Arms & Hands -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Arms & Hands</h2>
+            </div>
+
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o braço')">🔊</button>
+                    <div class="portuguese">o braço</div>
+                    <div class="english">arm</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o cotovelo')">🔊</button>
+                    <div class="portuguese">o cotovelo</div>
+                    <div class="english">elbow</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o pulso')">🔊</button>
+                    <div class="portuguese">o pulso</div>
+                    <div class="english">wrist</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a mão')">🔊</button>
+                    <div class="portuguese">a mão</div>
+                    <div class="english">hand</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o dedo')">🔊</button>
+                    <div class="portuguese">o dedo</div>
+                    <div class="english">finger</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o polegar')">🔊</button>
+                    <div class="portuguese">o polegar</div>
+                    <div class="english">thumb</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a unha')">🔊</button>
+                    <div class="portuguese">a unha</div>
+                    <div class="english">nail</div>
+                </div>
+            </div>
+
+            <div class="grammar-box">
+                <strong>📝 Plural:</strong> <em>a mão → as mãos</em> (irregular plural)
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Lave as mãos antes de comer.')">🔊</button>
+                <span class="portuguese">Lave as mãos antes de comer.</span>
+                <div class="english mt-1">Wash your hands before eating.</div>
+            </div>
+        </section>
+
+        <!-- STEP 4: Legs & Feet -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Legs & Feet</h2>
+            </div>
+
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a perna')">🔊</button>
+                    <div class="portuguese">a perna</div>
+                    <div class="english">leg</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a coxa')">🔊</button>
+                    <div class="portuguese">a coxa</div>
+                    <div class="english">thigh</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o joelho')">🔊</button>
+                    <div class="portuguese">o joelho</div>
+                    <div class="english">knee</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o tornozelo')">🔊</button>
+                    <div class="portuguese">o tornozelo</div>
+                    <div class="english">ankle</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o pé')">🔊</button>
+                    <div class="portuguese">o pé</div>
+                    <div class="english">foot</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o dedo do pé')">🔊</button>
+                    <div class="portuguese">o dedo do pé</div>
+                    <div class="english">toe</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o calcanhar')">🔊</button>
+                    <div class="portuguese">o calcanhar</div>
+                    <div class="english">heel</div>
+                </div>
+            </div>
+
+            <div class="grammar-box">
+                <strong>📝 Plural:</strong> <em>o pé → os pés</em> (regular plural with accent)
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Meu pé está doendo.')">🔊</button>
+                <span class="portuguese">Meu pé está doendo.</span>
+                <div class="english mt-1">My foot is hurting.</div>
+            </div>
+        </section>
+
+        <!-- STEP 5: Internal Organs -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Internal Organs</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">Common internal body parts you might need at the doctor.</p>
+
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o coração')">🔊</button>
+                    <div class="portuguese">o coração</div>
+                    <div class="english">heart</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o pulmão')">🔊</button>
+                    <div class="portuguese">o pulmão</div>
+                    <div class="english">lung</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o fígado')">🔊</button>
+                    <div class="portuguese">o fígado</div>
+                    <div class="english">liver</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o rim')">🔊</button>
+                    <div class="portuguese">o rim</div>
+                    <div class="english">kidney</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o cérebro')">🔊</button>
+                    <div class="portuguese">o cérebro</div>
+                    <div class="english">brain</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o osso')">🔊</button>
+                    <div class="portuguese">o osso</div>
+                    <div class="english">bone</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o sangue')">🔊</button>
+                    <div class="portuguese">o sangue</div>
+                    <div class="english">blood</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a pele')">🔊</button>
+                    <div class="portuguese">a pele</div>
+                    <div class="english">skin</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 6: Useful Phrases -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Useful Phrases</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">Common phrases for describing pain or physical sensations.</p>
+
+            <div class="space-y-3">
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Dói aqui.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Dói aqui.</span>
+                        <div class="english">It hurts here.</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Estou com dor de cabeça.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Estou com dor de cabeça.</span>
+                        <div class="english">I have a headache.</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Estou com dor de barriga.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Estou com dor de barriga.</span>
+                        <div class="english">I have a stomachache.</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Meu braço está quebrado.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Meu braço está quebrado.</span>
+                        <div class="english">My arm is broken.</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Machuquei o joelho.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Machuquei o joelho.</span>
+                        <div class="english">I hurt my knee.</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Ele tem cabelos castanhos e olhos verdes.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Ele tem cabelos castanhos e olhos verdes.</span>
+                        <div class="english">He has brown hair and green eyes.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box mt-4">
+                <strong>💡 Pattern:</strong> Use <em>estar com dor de + body part</em> to express pain:
+                <ul class="mt-2 space-y-1">
+                    <li>dor de cabeça - headache</li>
+                    <li>dor de barriga - stomachache</li>
+                    <li>dor de garganta - sore throat</li>
+                    <li>dor de dente - toothache</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Practice Section -->
+        <section class="lesson-card bg-blue-50">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <p class="text-gray-700 mb-4">Ready to practice body parts vocabulary? Try this drill:</p>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=body-parts" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Body Parts Drill →
+                </a>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="colors.html" class="text-blue-600 hover:text-blue-800">
+                ← Unit 7: Colors
+            </a>
+            <a href="clothing.html" class="text-blue-600 hover:text-blue-800">
+                Unit 9: Clothing →
+            </a>
+        </div>
+    </main>
+
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'pt-BR';
+                utterance.rate = options.rate || 0.9;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+    </script>
+</body>
+</html>

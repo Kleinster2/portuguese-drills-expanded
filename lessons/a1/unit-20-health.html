@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 20: Talk About Health - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .production-goal { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; }
+        .production-goal h2 { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; }
+        .production-goal .phrase { font-size: 1.75rem; font-weight: bold; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 0.75rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .now-you-can { background: #ecfdf5; border: 2px solid #10b981; border-radius: 1rem; padding: 1.5rem; margin-top: 2rem; }
+        .dialogue { background: #faf5ff; border-radius: 0.5rem; padding: 1rem; margin: 1rem 0; }
+        .dialogue-line { padding: 0.5rem 0; border-bottom: 1px solid #e9d5ff; }
+        .dialogue-line:last-child { border-bottom: none; }
+        .completion-banner { background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 2rem; border-radius: 1rem; margin-top: 2rem; text-align: center; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-6">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 20</span>
+            </div>
+        </div>
+
+        <div class="production-goal">
+            <h2>By the end of this unit, you'll say:</h2>
+            <div class="phrase">
+                <button class="speaker-btn mr-2" onclick="speak('Estou doente. Dói a cabeça.')">🔊</button>
+                "Estou doente. Dói a cabeça."
+            </div>
+            <div class="mt-2 text-white/80">I'm sick. My head hurts.</div>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Say How You Feel</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Estou</span> + [condition]
+            </div>
+            <div class="grid md:grid-cols-2 gap-3 mt-4">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Estou doente.')">🔊</button>
+                    <span class="portuguese">Estou doente.</span> - I'm sick.
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Estou bem.')">🔊</button>
+                    <span class="portuguese">Estou bem.</span> - I'm fine.
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Estou melhor.')">🔊</button>
+                    <span class="portuguese">Estou melhor.</span> - I'm better.
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Não estou bem.')">🔊</button>
+                    <span class="portuguese">Não estou bem.</span> - I'm not well.
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Body Parts</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('a cabeça')">🔊</button>
+                    <span class="portuguese">a cabeça</span> - head
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('a garganta')">🔊</button>
+                    <span class="portuguese">a garganta</span> - throat
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o estômago')">🔊</button>
+                    <span class="portuguese">o estômago</span> - stomach
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('as costas')">🔊</button>
+                    <span class="portuguese">as costas</span> - back
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o braço')">🔊</button>
+                    <span class="portuguese">o braço</span> - arm
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('a perna')">🔊</button>
+                    <span class="portuguese">a perna</span> - leg
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Say What Hurts: DOER</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Dói</span> + [body part] (singular) / <span class="portuguese">Doem</span> + [body parts] (plural)
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Dói a cabeça.')">🔊</button>
+                <span class="portuguese">Dói a cabeça.</span>
+                <div class="text-gray-600 mt-1">My head hurts.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Dói a garganta.')">🔊</button>
+                <span class="portuguese">Dói a garganta.</span>
+                <div class="text-gray-600 mt-1">My throat hurts.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Dói o estômago.')">🔊</button>
+                <span class="portuguese">Dói o estômago.</span>
+                <div class="text-gray-600 mt-1">My stomach hurts.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Doem as costas.')">🔊</button>
+                <span class="portuguese">Doem as costas.</span>
+                <div class="text-gray-600 mt-1">My back hurts.</div>
+            </div>
+            <div class="info-box">
+                <strong>💡 Alternative:</strong> You can also say <span class="portuguese">"Estou com dor de cabeça"</span> (I have a headache)
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Common Ailments</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Estou com febre.')">🔊</button>
+                <span class="portuguese">Estou com febre.</span>
+                <div class="text-gray-600 mt-1">I have a fever.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Estou resfriado.')">🔊</button>
+                <span class="portuguese">Estou resfriado/a.</span>
+                <div class="text-gray-600 mt-1">I have a cold.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Estou cansado.')">🔊</button>
+                <span class="portuguese">Estou cansado/a.</span>
+                <div class="text-gray-600 mt-1">I'm tired.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Estou com gripe.')">🔊</button>
+                <span class="portuguese">Estou com gripe.</span>
+                <div class="text-gray-600 mt-1">I have the flu.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">At the Pharmacy/Doctor</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Preciso de um remédio.')">🔊</button>
+                <span class="portuguese">Preciso de um remédio.</span>
+                <div class="text-gray-600 mt-1">I need medicine.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Tem algo para dor de cabeça?')">🔊</button>
+                <span class="portuguese">Tem algo para dor de cabeça?</span>
+                <div class="text-gray-600 mt-1">Do you have something for headache?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Preciso ir ao médico.')">🔊</button>
+                <span class="portuguese">Preciso ir ao médico.</span>
+                <div class="text-gray-600 mt-1">I need to go to the doctor.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Full Conversation</h2>
+            </div>
+            <div class="dialogue">
+                <div class="dialogue-line">
+                    <strong>Amigo:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Você está bem?')">🔊</button>
+                    <span class="portuguese">Você está bem?</span>
+                </div>
+                <div class="dialogue-line">
+                    <strong>Você:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Não, estou doente. Dói a cabeça e a garganta.')">🔊</button>
+                    <span class="portuguese">Não, estou doente. Dói a cabeça e a garganta.</span>
+                </div>
+                <div class="dialogue-line">
+                    <strong>Amigo:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Você está com febre?')">🔊</button>
+                    <span class="portuguese">Você está com febre?</span>
+                </div>
+                <div class="dialogue-line">
+                    <strong>Você:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Acho que sim. Vou ficar em casa hoje.')">🔊</button>
+                    <span class="portuguese">Acho que sim. Vou ficar em casa hoje.</span>
+                </div>
+                <div class="dialogue-line">
+                    <strong>Amigo:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Melhoras! Descanse bastante.')">🔊</button>
+                    <span class="portuguese">Melhoras! Descanse bastante.</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="now-you-can">
+            <h3 class="text-xl font-bold text-green-800 mb-3">✅ Now You Can Say:</h3>
+            <div class="space-y-2">
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Estou doente.')">🔊</button>
+                    <span class="portuguese">"Estou [condition]."</span> - say how you feel
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Dói a cabeça.')">🔊</button>
+                    <span class="portuguese">"Dói [body part]."</span> - say what hurts
+                </div>
+            </div>
+            <p class="mt-4 text-green-700">Describe symptoms if you feel unwell!</p>
+        </div>
+
+        <section class="lesson-card bg-blue-50 mt-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=health" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Health Drill →</a>
+            </div>
+        </section>
+
+        <div class="completion-banner">
+            <h2 class="text-2xl font-bold mb-2">🎉 Congratulations!</h2>
+            <p class="text-lg">You've completed the A1 Portuguese curriculum!</p>
+            <p class="mt-2 text-white/80">You can now introduce yourself, talk about your life, make plans, describe things, and handle basic conversations in Portuguese.</p>
+            <a href="/lessons/a1/" class="inline-block mt-4 bg-white text-green-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition">Review All A1 Units →</a>
+        </div>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="unit-19-weather.html" class="text-blue-600 hover:text-blue-800">← Unit 19: Talk About Weather</a>
+            <a href="/lessons/a2/" class="text-blue-600 hover:text-blue-800">Continue to A2 →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

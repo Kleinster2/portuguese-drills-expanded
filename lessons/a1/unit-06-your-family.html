@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 6: Describe Your Family - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .production-goal { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; }
+        .production-goal h2 { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; }
+        .production-goal .phrase { font-size: 1.75rem; font-weight: bold; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 0.75rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .now-you-can { background: #ecfdf5; border: 2px solid #10b981; border-radius: 1rem; padding: 1.5rem; margin-top: 2rem; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-6">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 6</span>
+            </div>
+        </div>
+
+        <div class="production-goal">
+            <h2>By the end of this unit, you'll say:</h2>
+            <div class="phrase">
+                <button class="speaker-btn mr-2" onclick="speak('Tenho dois irmãos. Minha mãe é médica.')">🔊</button>
+                "Tenho dois irmãos. Minha mãe é médica."
+            </div>
+            <div class="mt-2 text-white/80">I have two siblings. My mother is a doctor.</div>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Family Members</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('mãe')">🔊</button>
+                    <span class="portuguese">a mãe</span> - mother
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('pai')">🔊</button>
+                    <span class="portuguese">o pai</span> - father
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('irmão')">🔊</button>
+                    <span class="portuguese">o irmão</span> - brother
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('irmã')">🔊</button>
+                    <span class="portuguese">a irmã</span> - sister
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('filho')">🔊</button>
+                    <span class="portuguese">o filho</span> - son
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('filha')">🔊</button>
+                    <span class="portuguese">a filha</span> - daughter
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('marido')">🔊</button>
+                    <span class="portuguese">o marido</span> - husband
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('esposa')">🔊</button>
+                    <span class="portuguese">a esposa</span> - wife
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Say "I Have" Family</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Tenho</span> + [number] + [family member]
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Tenho um irmão.')">🔊</button>
+                <span class="portuguese">Tenho um irmão.</span>
+                <div class="text-gray-600 mt-1">I have one brother.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Tenho duas irmãs.')">🔊</button>
+                <span class="portuguese">Tenho duas irmãs.</span>
+                <div class="text-gray-600 mt-1">I have two sisters.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Tenho três filhos.')">🔊</button>
+                <span class="portuguese">Tenho três filhos.</span>
+                <div class="text-gray-600 mt-1">I have three children.</div>
+            </div>
+            <div class="info-box">
+                <strong>💡 Plurals:</strong> irmão → irm<strong>ãos</strong>, irmã → irm<strong>ãs</strong>, filho → filh<strong>os</strong>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Possessives: My</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong>
+                <ul class="mt-2 space-y-1">
+                    <li><span class="portuguese">meu</span> + masculine noun (meu pai, meu irmão)</li>
+                    <li><span class="portuguese">minha</span> + feminine noun (minha mãe, minha irmã)</li>
+                </ul>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Meu pai é engenheiro.')">🔊</button>
+                <span class="portuguese">Meu pai é engenheiro.</span>
+                <div class="text-gray-600 mt-1">My father is an engineer.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Minha mãe é professora.')">🔊</button>
+                <span class="portuguese">Minha mãe é professora.</span>
+                <div class="text-gray-600 mt-1">My mother is a teacher.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Meus irmãos moram em São Paulo.')">🔊</button>
+                <span class="portuguese">Meus irmãos moram em São Paulo.</span>
+                <div class="text-gray-600 mt-1">My siblings live in São Paulo.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Extended Family</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('avô')">🔊</button>
+                    <span class="portuguese">o avô</span> - grandfather
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('avó')">🔊</button>
+                    <span class="portuguese">a avó</span> - grandmother
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('tio')">🔊</button>
+                    <span class="portuguese">o tio</span> - uncle
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('tia')">🔊</button>
+                    <span class="portuguese">a tia</span> - aunt
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('primo')">🔊</button>
+                    <span class="portuguese">o primo / a prima</span> - cousin
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('sobrinho')">🔊</button>
+                    <span class="portuguese">o sobrinho / a sobrinha</span> - nephew/niece
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Describe Family</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Tenho uma família grande.')">🔊</button>
+                <span class="portuguese">Tenho uma família grande.</span>
+                <div class="text-gray-600 mt-1">I have a big family.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Minha família é pequena.')">🔊</button>
+                <span class="portuguese">Minha família é pequena.</span>
+                <div class="text-gray-600 mt-1">My family is small.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Sou filho único.')">🔊</button>
+                <span class="portuguese">Sou filho único. / Sou filha única.</span>
+                <div class="text-gray-600 mt-1">I'm an only child.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Não tenho irmãos.')">🔊</button>
+                <span class="portuguese">Não tenho irmãos.</span>
+                <div class="text-gray-600 mt-1">I don't have siblings.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Full Description</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Tenho dois irmãos. Meu irmão mais velho tem trinta anos. Ele é médico. Minha irmã tem vinte e cinco anos. Ela é estudante.')">🔊</button>
+                <span class="portuguese">Tenho dois irmãos. Meu irmão mais velho tem trinta anos. Ele é médico. Minha irmã tem vinte e cinco anos. Ela é estudante.</span>
+                <div class="text-gray-600 mt-1">I have two siblings. My older brother is 30. He's a doctor. My sister is 25. She's a student.</div>
+            </div>
+            <div class="info-box">
+                <strong>💡 Useful:</strong> <span class="portuguese">mais velho</span> = older, <span class="portuguese">mais novo</span> = younger
+            </div>
+        </section>
+
+        <div class="now-you-can">
+            <h3 class="text-xl font-bold text-green-800 mb-3">✅ Now You Can Say:</h3>
+            <div class="space-y-2">
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Tenho dois irmãos.')">🔊</button>
+                    <span class="portuguese">"Tenho [number] [family]."</span> - say how many family members
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Minha mãe é médica.')">🔊</button>
+                    <span class="portuguese">"Meu/Minha [family] é [profession]."</span> - describe family members
+                </div>
+            </div>
+            <p class="mt-4 text-green-700">Describe your family out loud - who they are and what they do!</p>
+        </div>
+
+        <section class="lesson-card bg-blue-50 mt-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=family" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Family Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="unit-05-your-age.html" class="text-blue-600 hover:text-blue-800">← Unit 5: Say Your Age</a>
+            <a href="unit-07-daily-routine.html" class="text-blue-600 hover:text-blue-800">Unit 7: Daily Routine →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

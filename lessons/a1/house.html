@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House & Rooms - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+        .vocab-card {
+            background: #f8fafc;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+        .speaker-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .speaker-btn:hover {
+            background: #2563eb;
+        }
+        .portuguese {
+            font-weight: 600;
+            color: #1e40af;
+        }
+        .english {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        .example-sentence {
+            background: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .info-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .grammar-box {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .vocab-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .vocab-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 10</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">A Casa</h1>
+            <p class="text-gray-600">House, Rooms & Furniture</p>
+        </div>
+
+        <!-- STEP 1: Types of Housing -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Types of Housing</h2>
+            </div>
+
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a casa')">🔊</button>
+                    <div class="portuguese">a casa</div>
+                    <div class="english">house</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o apartamento')">🔊</button>
+                    <div class="portuguese">o apartamento</div>
+                    <div class="english">apartment</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o prédio')">🔊</button>
+                    <div class="portuguese">o prédio</div>
+                    <div class="english">building</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o andar')">🔊</button>
+                    <div class="portuguese">o andar</div>
+                    <div class="english">floor/story</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o elevador')">🔊</button>
+                    <div class="portuguese">o elevador</div>
+                    <div class="english">elevator</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a escada')">🔊</button>
+                    <div class="portuguese">a escada</div>
+                    <div class="english">stairs</div>
+                </div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Eu moro em um apartamento no terceiro andar.')">🔊</button>
+                <span class="portuguese">Eu moro em um apartamento no terceiro andar.</span>
+                <div class="english mt-1">I live in an apartment on the third floor.</div>
+            </div>
+        </section>
+
+        <!-- STEP 2: Rooms -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Rooms</h2>
+            </div>
+
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o quarto')">🔊</button>
+                    <div class="portuguese">o quarto</div>
+                    <div class="english">bedroom</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a sala')">🔊</button>
+                    <div class="portuguese">a sala</div>
+                    <div class="english">living room</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a sala de estar')">🔊</button>
+                    <div class="portuguese">a sala de estar</div>
+                    <div class="english">living room</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a sala de jantar')">🔊</button>
+                    <div class="portuguese">a sala de jantar</div>
+                    <div class="english">dining room</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a cozinha')">🔊</button>
+                    <div class="portuguese">a cozinha</div>
+                    <div class="english">kitchen</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o banheiro')">🔊</button>
+                    <div class="portuguese">o banheiro</div>
+                    <div class="english">bathroom (BP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a casa de banho')">🔊</button>
+                    <div class="portuguese">a casa de banho</div>
+                    <div class="english">bathroom (EP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o escritório')">🔊</button>
+                    <div class="portuguese">o escritório</div>
+                    <div class="english">office/study</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a garagem')">🔊</button>
+                    <div class="portuguese">a garagem</div>
+                    <div class="english">garage</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o jardim')">🔊</button>
+                    <div class="portuguese">o jardim</div>
+                    <div class="english">garden</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a varanda')">🔊</button>
+                    <div class="portuguese">a varanda</div>
+                    <div class="english">balcony/porch</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o corredor')">🔊</button>
+                    <div class="portuguese">o corredor</div>
+                    <div class="english">hallway</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>🇧🇷 vs 🇵🇹:</strong> Bathroom is <em>banheiro</em> in Brazil but <em>casa de banho</em> in Portugal.
+            </div>
+        </section>
+
+        <!-- STEP 3: Living Room Furniture -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Living Room Furniture</h2>
+            </div>
+
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o sofá')">🔊</button>
+                    <div class="portuguese">o sofá</div>
+                    <div class="english">sofa/couch</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a poltrona')">🔊</button>
+                    <div class="portuguese">a poltrona</div>
+                    <div class="english">armchair</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a mesa')">🔊</button>
+                    <div class="portuguese">a mesa</div>
+                    <div class="english">table</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a cadeira')">🔊</button>
+                    <div class="portuguese">a cadeira</div>
+                    <div class="english">chair</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a estante')">🔊</button>
+                    <div class="portuguese">a estante</div>
+                    <div class="english">bookshelf</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a televisão')">🔊</button>
+                    <div class="portuguese">a televisão</div>
+                    <div class="english">television</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o tapete')">🔊</button>
+                    <div class="portuguese">o tapete</div>
+                    <div class="english">rug/carpet</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a cortina')">🔊</button>
+                    <div class="portuguese">a cortina</div>
+                    <div class="english">curtain</div>
+                </div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('O sofá fica na sala.')">🔊</button>
+                <span class="portuguese">O sofá fica na sala.</span>
+                <div class="english mt-1">The sofa is in the living room.</div>
+            </div>
+        </section>
+
+        <!-- STEP 4: Bedroom Furniture -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Bedroom Furniture</h2>
+            </div>
+
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a cama')">🔊</button>
+                    <div class="portuguese">a cama</div>
+                    <div class="english">bed</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o travesseiro')">🔊</button>
+                    <div class="portuguese">o travesseiro</div>
+                    <div class="english">pillow</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o lençol')">🔊</button>
+                    <div class="portuguese">o lençol</div>
+                    <div class="english">sheet</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o cobertor')">🔊</button>
+                    <div class="portuguese">o cobertor</div>
+                    <div class="english">blanket</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o guarda-roupa')">🔊</button>
+                    <div class="portuguese">o guarda-roupa</div>
+                    <div class="english">wardrobe</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a cômoda')">🔊</button>
+                    <div class="portuguese">a cômoda</div>
+                    <div class="english">dresser</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o espelho')">🔊</button>
+                    <div class="portuguese">o espelho</div>
+                    <div class="english">mirror</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o abajur')">🔊</button>
+                    <div class="portuguese">o abajur</div>
+                    <div class="english">lamp</div>
+                </div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('A cama está arrumada.')">🔊</button>
+                <span class="portuguese">A cama está arrumada.</span>
+                <div class="english mt-1">The bed is made.</div>
+            </div>
+        </section>
+
+        <!-- STEP 5: Kitchen & Bathroom -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Kitchen & Bathroom Items</h2>
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3">Kitchen</h3>
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o fogão')">🔊</button>
+                    <div class="portuguese">o fogão</div>
+                    <div class="english">stove</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a geladeira')">🔊</button>
+                    <div class="portuguese">a geladeira</div>
+                    <div class="english">refrigerator (BP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o frigorífico')">🔊</button>
+                    <div class="portuguese">o frigorífico</div>
+                    <div class="english">refrigerator (EP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o micro-ondas')">🔊</button>
+                    <div class="portuguese">o micro-ondas</div>
+                    <div class="english">microwave</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a pia')">🔊</button>
+                    <div class="portuguese">a pia</div>
+                    <div class="english">sink</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o armário')">🔊</button>
+                    <div class="portuguese">o armário</div>
+                    <div class="english">cabinet</div>
+                </div>
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3 mt-4">Bathroom</h3>
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o chuveiro')">🔊</button>
+                    <div class="portuguese">o chuveiro</div>
+                    <div class="english">shower</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a banheira')">🔊</button>
+                    <div class="portuguese">a banheira</div>
+                    <div class="english">bathtub</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o vaso sanitário')">🔊</button>
+                    <div class="portuguese">o vaso sanitário</div>
+                    <div class="english">toilet</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a toalha')">🔊</button>
+                    <div class="portuguese">a toalha</div>
+                    <div class="english">towel</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 6: Useful Phrases -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Useful Phrases</h2>
+            </div>
+
+            <div class="space-y-3">
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Onde você mora?')">🔊</button>
+                    <div>
+                        <span class="portuguese">Onde você mora?</span>
+                        <div class="english">Where do you live?</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Eu moro em uma casa.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Eu moro em uma casa.</span>
+                        <div class="english">I live in a house.</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Quantos quartos tem?')">🔊</button>
+                    <div>
+                        <span class="portuguese">Quantos quartos tem?</span>
+                        <div class="english">How many bedrooms does it have?</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Tem três quartos e dois banheiros.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Tem três quartos e dois banheiros.</span>
+                        <div class="english">It has three bedrooms and two bathrooms.</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Onde fica o banheiro?')">🔊</button>
+                    <div>
+                        <span class="portuguese">Onde fica o banheiro?</span>
+                        <div class="english">Where is the bathroom?</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('É no final do corredor.')">🔊</button>
+                    <div>
+                        <span class="portuguese">É no final do corredor.</span>
+                        <div class="english">It's at the end of the hallway.</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('A casa tem um jardim grande.')">🔊</button>
+                    <div>
+                        <span class="portuguese">A casa tem um jardim grande.</span>
+                        <div class="english">The house has a big garden.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grammar-box mt-4">
+                <strong>📝 Location:</strong> Use <em>em</em> for location, which contracts with articles:
+                <ul class="mt-2 space-y-1">
+                    <li>em + o = <strong>no</strong> (no quarto - in the bedroom)</li>
+                    <li>em + a = <strong>na</strong> (na cozinha - in the kitchen)</li>
+                    <li>em + os = <strong>nos</strong></li>
+                    <li>em + as = <strong>nas</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Practice Section -->
+        <section class="lesson-card bg-blue-50">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <p class="text-gray-700 mb-4">Ready to practice house vocabulary? Try this drill:</p>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=house" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                    House Vocabulary Drill →
+                </a>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="clothing.html" class="text-blue-600 hover:text-blue-800">
+                ← Unit 9: Clothing
+            </a>
+            <a href="pronouns.html" class="text-blue-600 hover:text-blue-800">
+                Unit 11: Personal Pronouns →
+            </a>
+        </div>
+    </main>
+
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'pt-BR';
+                utterance.rate = options.rate || 0.9;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+    </script>
+</body>
+</html>

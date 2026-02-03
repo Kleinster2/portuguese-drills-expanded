@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+        .color-card {
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            border: 2px solid #e2e8f0;
+        }
+        .color-swatch {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 0 auto 0.5rem;
+            border: 2px solid rgba(0,0,0,0.1);
+        }
+        .speaker-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .speaker-btn:hover {
+            background: #2563eb;
+        }
+        .portuguese {
+            font-weight: 600;
+            color: #1e40af;
+        }
+        .english {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        .example-sentence {
+            background: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .info-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .grammar-box {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .vocab-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .vocab-item:last-child {
+            border-bottom: none;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        th {
+            background: #f8fafc;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 7</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">As Cores</h1>
+            <p class="text-gray-600">Colors with Gender Agreement</p>
+        </div>
+
+        <!-- STEP 1: Basic Colors -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Basic Colors</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">Let's learn the most common colors in Portuguese.</p>
+
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #ffffff;"></div>
+                    <button class="speaker-btn mb-2" onclick="speak('branco')">🔊</button>
+                    <div class="portuguese">branco</div>
+                    <div class="english">white</div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #1a1a1a;"></div>
+                    <button class="speaker-btn mb-2" onclick="speak('preto')">🔊</button>
+                    <div class="portuguese">preto</div>
+                    <div class="english">black</div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #ef4444;"></div>
+                    <button class="speaker-btn mb-2" onclick="speak('vermelho')">🔊</button>
+                    <div class="portuguese">vermelho</div>
+                    <div class="english">red</div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #3b82f6;"></div>
+                    <button class="speaker-btn mb-2" onclick="speak('azul')">🔊</button>
+                    <div class="portuguese">azul</div>
+                    <div class="english">blue</div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #22c55e;"></div>
+                    <button class="speaker-btn mb-2" onclick="speak('verde')">🔊</button>
+                    <div class="portuguese">verde</div>
+                    <div class="english">green</div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #eab308;"></div>
+                    <button class="speaker-btn mb-2" onclick="speak('amarelo')">🔊</button>
+                    <div class="portuguese">amarelo</div>
+                    <div class="english">yellow</div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #f97316;"></div>
+                    <button class="speaker-btn mb-2" onclick="speak('laranja')">🔊</button>
+                    <div class="portuguese">laranja</div>
+                    <div class="english">orange</div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #a855f7;"></div>
+                    <button class="speaker-btn mb-2" onclick="speak('roxo')">🔊</button>
+                    <div class="portuguese">roxo</div>
+                    <div class="english">purple</div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #ec4899;"></div>
+                    <button class="speaker-btn mb-2" onclick="speak('rosa')">🔊</button>
+                    <div class="portuguese">rosa</div>
+                    <div class="english">pink</div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #92400e;"></div>
+                    <button class="speaker-btn mb-2" onclick="speak('marrom')">🔊</button>
+                    <div class="portuguese">marrom</div>
+                    <div class="english">brown (BP)</div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #78716c;"></div>
+                    <button class="speaker-btn mb-2" onclick="speak('cinza')">🔊</button>
+                    <div class="portuguese">cinza</div>
+                    <div class="english">gray</div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);"></div>
+                    <button class="speaker-btn mb-2" onclick="speak('dourado')">🔊</button>
+                    <div class="portuguese">dourado</div>
+                    <div class="english">gold</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 2: Gender Agreement -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Gender Agreement</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">In Portuguese, colors must agree in gender with the noun they describe. Colors ending in <strong>-o</strong> change to <strong>-a</strong> for feminine nouns.</p>
+
+            <div class="grammar-box">
+                <strong>📝 Rule:</strong> Colors ending in -o change to -a for feminine nouns:
+                <ul class="mt-2 space-y-1">
+                    <li>branc<strong>o</strong> → branc<strong>a</strong></li>
+                    <li>pret<strong>o</strong> → pret<strong>a</strong></li>
+                    <li>vermelh<strong>o</strong> → vermelh<strong>a</strong></li>
+                    <li>amarel<strong>o</strong> → amarel<strong>a</strong></li>
+                </ul>
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3 mt-4">Variable Colors (change with gender)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Color</th>
+                        <th>Masculine</th>
+                        <th>Feminine</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>white</td>
+                        <td><span class="portuguese">branco</span></td>
+                        <td><span class="portuguese">branca</span></td>
+                    </tr>
+                    <tr>
+                        <td>black</td>
+                        <td><span class="portuguese">preto</span></td>
+                        <td><span class="portuguese">preta</span></td>
+                    </tr>
+                    <tr>
+                        <td>red</td>
+                        <td><span class="portuguese">vermelho</span></td>
+                        <td><span class="portuguese">vermelha</span></td>
+                    </tr>
+                    <tr>
+                        <td>yellow</td>
+                        <td><span class="portuguese">amarelo</span></td>
+                        <td><span class="portuguese">amarela</span></td>
+                    </tr>
+                    <tr>
+                        <td>purple</td>
+                        <td><span class="portuguese">roxo</span></td>
+                        <td><span class="portuguese">roxa</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('O carro vermelho')">🔊</button>
+                <span class="portuguese">O carro vermelh<strong>o</strong></span>
+                <div class="english mt-1">The red car (carro = masculine)</div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('A casa vermelha')">🔊</button>
+                <span class="portuguese">A casa vermelh<strong>a</strong></span>
+                <div class="english mt-1">The red house (casa = feminine)</div>
+            </div>
+        </section>
+
+        <!-- STEP 3: Invariable Colors -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Invariable Colors</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">Some colors <strong>don't change</strong> for gender. These include colors ending in -e, -a, and colors derived from nouns.</p>
+
+            <div class="info-box">
+                <strong>💡 Remember:</strong> These colors stay the same regardless of the noun's gender:
+                <ul class="mt-2 space-y-1">
+                    <li><strong>azul</strong> - blue</li>
+                    <li><strong>verde</strong> - green</li>
+                    <li><strong>laranja</strong> - orange (from the fruit)</li>
+                    <li><strong>rosa</strong> - pink (from the flower)</li>
+                    <li><strong>marrom</strong> - brown</li>
+                    <li><strong>cinza</strong> - gray</li>
+                </ul>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('O carro azul')">🔊</button>
+                <span class="portuguese">O carro <strong>azul</strong></span>
+                <div class="english mt-1">The blue car</div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('A casa azul')">🔊</button>
+                <span class="portuguese">A casa <strong>azul</strong></span>
+                <div class="english mt-1">The blue house</div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('A camisa verde')">🔊</button>
+                <span class="portuguese">A camisa <strong>verde</strong></span>
+                <div class="english mt-1">The green shirt</div>
+            </div>
+        </section>
+
+        <!-- STEP 4: Plurals -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Color Plurals</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">Colors also agree in number (singular/plural) with the noun.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Singular</th>
+                        <th>Plural</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="portuguese">branco / branca</span></td>
+                        <td><span class="portuguese">brancos / brancas</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="portuguese">vermelho / vermelha</span></td>
+                        <td><span class="portuguese">vermelhos / vermelhas</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="portuguese">azul</span></td>
+                        <td><span class="portuguese">azuis</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="portuguese">verde</span></td>
+                        <td><span class="portuguese">verdes</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="portuguese">marrom</span></td>
+                        <td><span class="portuguese">marrons</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-box">
+                <strong>💡 Special:</strong> Colors ending in -l change to -is in the plural: <em>azul → azuis</em>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Os carros brancos')">🔊</button>
+                <span class="portuguese">Os carros brancos</span>
+                <div class="english mt-1">The white cars</div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('As flores azuis')">🔊</button>
+                <span class="portuguese">As flores azuis</span>
+                <div class="english mt-1">The blue flowers</div>
+            </div>
+        </section>
+
+        <!-- STEP 5: Shades and Modifiers -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Shades & Modifiers</h2>
+            </div>
+
+            <div class="space-y-3">
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('claro')">🔊</button>
+                    <div>
+                        <span class="portuguese">claro / clara</span>
+                        <div class="english">light (shade)</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('escuro')">🔊</button>
+                    <div>
+                        <span class="portuguese">escuro / escura</span>
+                        <div class="english">dark (shade)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('azul claro')">🔊</button>
+                <span class="portuguese">azul claro</span>
+                <div class="english mt-1">light blue</div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('verde escuro')">🔊</button>
+                <span class="portuguese">verde escuro</span>
+                <div class="english mt-1">dark green</div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('A camisa é azul claro.')">🔊</button>
+                <span class="portuguese">A camisa é azul claro.</span>
+                <div class="english mt-1">The shirt is light blue.</div>
+            </div>
+        </section>
+
+        <!-- STEP 6: Useful Phrases -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Useful Phrases</h2>
+            </div>
+
+            <div class="space-y-3">
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('De que cor é?')">🔊</button>
+                    <div>
+                        <span class="portuguese">De que cor é?</span>
+                        <div class="english">What color is it?</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Qual é a sua cor favorita?')">🔊</button>
+                    <div>
+                        <span class="portuguese">Qual é a sua cor favorita?</span>
+                        <div class="english">What is your favorite color?</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Minha cor favorita é azul.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Minha cor favorita é azul.</span>
+                        <div class="english">My favorite color is blue.</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Você tem em outra cor?')">🔊</button>
+                    <div>
+                        <span class="portuguese">Você tem em outra cor?</span>
+                        <div class="english">Do you have it in another color?</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Eu quero o vermelho.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Eu quero o vermelho.</span>
+                        <div class="english">I want the red one.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practice Section -->
+        <section class="lesson-card bg-blue-50">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <p class="text-gray-700 mb-4">Ready to practice colors? Try this drill:</p>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=colors" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Colors Drill →
+                </a>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="food.html" class="text-blue-600 hover:text-blue-800">
+                ← Unit 6: Food & Meals
+            </a>
+            <a href="body-parts.html" class="text-blue-600 hover:text-blue-800">
+                Unit 8: Body Parts →
+            </a>
+        </div>
+    </main>
+
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'pt-BR';
+                utterance.rate = options.rate || 0.9;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjective Agreement - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .speaker-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .speaker-btn:hover {
+            background: #2563eb;
+        }
+        .portuguese {
+            font-weight: 600;
+            color: #1e40af;
+        }
+        .english {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        .example-sentence {
+            background: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .info-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .grammar-box {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        th {
+            background: #f8fafc;
+            font-weight: 600;
+        }
+        .masculine {
+            background: #dbeafe;
+        }
+        .feminine {
+            background: #fce7f3;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 15</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Concordância dos Adjetivos</h1>
+            <p class="text-gray-600">Adjective Agreement</p>
+        </div>
+
+        <!-- STEP 1: The Rule -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">The Basic Rule</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">In Portuguese, adjectives must <strong>agree</strong> with the noun they describe in both <strong>gender</strong> (masculine/feminine) and <strong>number</strong> (singular/plural).</p>
+
+            <div class="grammar-box">
+                <strong>📝 Rule:</strong> Adjective matches noun in gender AND number
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th class="masculine">Masculine</th>
+                        <th class="feminine">Feminine</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Singular</strong></td>
+                        <td class="masculine">
+                            <button class="speaker-btn mr-1" onclick="speak('o carro bonito')">🔊</button>
+                            <span class="portuguese">o carro bonit<strong>o</strong></span>
+                        </td>
+                        <td class="feminine">
+                            <button class="speaker-btn mr-1" onclick="speak('a casa bonita')">🔊</button>
+                            <span class="portuguese">a casa bonit<strong>a</strong></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Plural</strong></td>
+                        <td class="masculine">
+                            <button class="speaker-btn mr-1" onclick="speak('os carros bonitos')">🔊</button>
+                            <span class="portuguese">os carros bonit<strong>os</strong></span>
+                        </td>
+                        <td class="feminine">
+                            <button class="speaker-btn mr-1" onclick="speak('as casas bonitas')">🔊</button>
+                            <span class="portuguese">as casas bonit<strong>as</strong></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- STEP 2: Variable Adjectives -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Variable Adjectives (-o/-a)</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">Most adjectives ending in <strong>-o</strong> change to <strong>-a</strong> for feminine nouns.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Meaning</th>
+                        <th class="masculine">Masculine</th>
+                        <th class="feminine">Feminine</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>beautiful</td>
+                        <td class="masculine"><span class="portuguese">bonito</span></td>
+                        <td class="feminine"><span class="portuguese">bonita</span></td>
+                    </tr>
+                    <tr>
+                        <td>new</td>
+                        <td class="masculine"><span class="portuguese">novo</span></td>
+                        <td class="feminine"><span class="portuguese">nova</span></td>
+                    </tr>
+                    <tr>
+                        <td>old</td>
+                        <td class="masculine"><span class="portuguese">velho</span></td>
+                        <td class="feminine"><span class="portuguese">velha</span></td>
+                    </tr>
+                    <tr>
+                        <td>tall/high</td>
+                        <td class="masculine"><span class="portuguese">alto</span></td>
+                        <td class="feminine"><span class="portuguese">alta</span></td>
+                    </tr>
+                    <tr>
+                        <td>short/low</td>
+                        <td class="masculine"><span class="portuguese">baixo</span></td>
+                        <td class="feminine"><span class="portuguese">baixa</span></td>
+                    </tr>
+                    <tr>
+                        <td>rich</td>
+                        <td class="masculine"><span class="portuguese">rico</span></td>
+                        <td class="feminine"><span class="portuguese">rica</span></td>
+                    </tr>
+                    <tr>
+                        <td>small</td>
+                        <td class="masculine"><span class="portuguese">pequeno</span></td>
+                        <td class="feminine"><span class="portuguese">pequena</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('O homem é alto.')">🔊</button>
+                <span class="portuguese">O homem é alt<strong>o</strong>.</span>
+                <div class="english mt-1">The man is tall.</div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('A mulher é alta.')">🔊</button>
+                <span class="portuguese">A mulher é alt<strong>a</strong>.</span>
+                <div class="english mt-1">The woman is tall.</div>
+            </div>
+        </section>
+
+        <!-- STEP 3: Invariable Adjectives -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Invariable Adjectives</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">Some adjectives <strong>don't change</strong> for gender. These typically end in <strong>-e</strong>, <strong>-l</strong>, <strong>-z</strong>, or <strong>-ar/-or</strong>.</p>
+
+            <div class="grammar-box">
+                <strong>📝 Invariable endings:</strong> -e, -l, -z, -ar, -or (for gender)
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3">Adjectives ending in -E</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Adjective</th>
+                        <th>Masculine</th>
+                        <th>Feminine</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>grande (big)</td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('o carro grande')">🔊</button>
+                            <span class="portuguese">o carro grande</span>
+                        </td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('a casa grande')">🔊</button>
+                            <span class="portuguese">a casa grande</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>triste (sad)</td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('o menino triste')">🔊</button>
+                            <span class="portuguese">o menino triste</span>
+                        </td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('a menina triste')">🔊</button>
+                            <span class="portuguese">a menina triste</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>inteligente</td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('o aluno inteligente')">🔊</button>
+                            <span class="portuguese">o aluno inteligente</span>
+                        </td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('a aluna inteligente')">🔊</button>
+                            <span class="portuguese">a aluna inteligente</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="font-semibold text-gray-800 mb-3 mt-4">Adjectives ending in -L, -Z</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>fácil (easy)</td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('o exercício fácil')">🔊</button>
+                            <span class="portuguese">o exercício fácil</span>
+                        </td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('a lição fácil')">🔊</button>
+                            <span class="portuguese">a lição fácil</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>feliz (happy)</td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('o homem feliz')">🔊</button>
+                            <span class="portuguese">o homem feliz</span>
+                        </td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('a mulher feliz')">🔊</button>
+                            <span class="portuguese">a mulher feliz</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-box">
+                <strong>💡 Note:</strong> These adjectives still change for <strong>number</strong> (plural): grande → grandes, fácil → fáceis, feliz → felizes
+            </div>
+        </section>
+
+        <!-- STEP 4: Position -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Adjective Position</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">In Portuguese, adjectives usually come <strong>after</strong> the noun (unlike English!).</p>
+
+            <div class="grammar-box">
+                <strong>📝 Word order:</strong> Noun + Adjective (most cases)
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('uma casa grande')">🔊</button>
+                <span class="portuguese">uma casa grande</span>
+                <div class="english mt-1">a big house (literally: a house big)</div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('um carro vermelho')">🔊</button>
+                <span class="portuguese">um carro vermelho</span>
+                <div class="english mt-1">a red car (literally: a car red)</div>
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3 mt-4">Exceptions (before noun)</h3>
+            <p class="text-gray-700 mb-3">Some common adjectives can come before the noun for emphasis or style:</p>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('um bom livro')">🔊</button>
+                <span class="portuguese">um <strong>bom</strong> livro</span>
+                <div class="english mt-1">a good book</div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('uma grande cidade')">🔊</button>
+                <span class="portuguese">uma <strong>grande</strong> cidade</span>
+                <div class="english mt-1">a great city (figuratively)</div>
+            </div>
+
+            <div class="info-box">
+                <strong>💡 Meaning change:</strong> <em>grande</em> before a noun often means "great" (quality), while after the noun it means "big" (size).
+                <br>• uma cidade grande = a big city
+                <br>• uma grande cidade = a great city
+            </div>
+        </section>
+
+        <!-- STEP 5: Common Adjectives -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Common Adjectives</h2>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>English</th>
+                        <th class="masculine">Masc.</th>
+                        <th class="feminine">Fem.</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>good</td>
+                        <td class="masculine">bom</td>
+                        <td class="feminine">boa</td>
+                        <td>variable</td>
+                    </tr>
+                    <tr>
+                        <td>bad</td>
+                        <td class="masculine">mau</td>
+                        <td class="feminine">má</td>
+                        <td>variable</td>
+                    </tr>
+                    <tr>
+                        <td>beautiful</td>
+                        <td class="masculine">lindo</td>
+                        <td class="feminine">linda</td>
+                        <td>variable</td>
+                    </tr>
+                    <tr>
+                        <td>ugly</td>
+                        <td class="masculine">feio</td>
+                        <td class="feminine">feia</td>
+                        <td>variable</td>
+                    </tr>
+                    <tr>
+                        <td>young</td>
+                        <td class="masculine">jovem</td>
+                        <td class="feminine">jovem</td>
+                        <td>invariable</td>
+                    </tr>
+                    <tr>
+                        <td>interesting</td>
+                        <td class="masculine">interessante</td>
+                        <td class="feminine">interessante</td>
+                        <td>invariable</td>
+                    </tr>
+                    <tr>
+                        <td>difficult</td>
+                        <td class="masculine">difícil</td>
+                        <td class="feminine">difícil</td>
+                        <td>invariable</td>
+                    </tr>
+                    <tr>
+                        <td>hot</td>
+                        <td class="masculine">quente</td>
+                        <td class="feminine">quente</td>
+                        <td>invariable</td>
+                    </tr>
+                    <tr>
+                        <td>cold</td>
+                        <td class="masculine">frio</td>
+                        <td class="feminine">fria</td>
+                        <td>variable</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- STEP 6: Practice -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Practice Sentences</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('O filme é interessante.')">🔊</button>
+                    <span class="portuguese">O filme é interessante.</span>
+                    <div class="english mt-1">The movie is interesting.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('As meninas são inteligentes.')">🔊</button>
+                    <span class="portuguese">As meninas são inteligentes.</span>
+                    <div class="english mt-1">The girls are intelligent.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Comprei sapatos novos.')">🔊</button>
+                    <span class="portuguese">Comprei sapatos novos.</span>
+                    <div class="english mt-1">I bought new shoes.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('A comida brasileira é deliciosa.')">🔊</button>
+                    <span class="portuguese">A comida brasileira é deliciosa.</span>
+                    <div class="english mt-1">Brazilian food is delicious.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practice Section -->
+        <section class="lesson-card bg-blue-50">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <p class="text-gray-700 mb-4">Ready to practice adjective agreement? Try this drill:</p>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=adjectives" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Adjectives Drill →
+                </a>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="plurals.html" class="text-blue-600 hover:text-blue-800">
+                ← Unit 14: Noun Plurals
+            </a>
+            <a href="possessives.html" class="text-blue-600 hover:text-blue-800">
+                Unit 16: Possessives →
+            </a>
+        </div>
+    </main>
+
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'pt-BR';
+                utterance.rate = options.rate || 0.9;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+    </script>
+</body>
+</html>

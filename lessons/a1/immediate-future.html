@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immediate Future - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        th, td { padding: 0.75rem; border: 1px solid #e2e8f0; text-align: center; }
+        th { background: #f8fafc; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 25</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Futuro Imediato</h1>
+            <p class="text-gray-600">Immediate Future with IR + Infinitive</p>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">The Easy Future</h2>
+            </div>
+            <p class="text-gray-700 mb-4">The most common way to express future actions in spoken Portuguese is using <strong>IR (conjugated) + INFINITIVE</strong>. It's like "going to" in English!</p>
+            <div class="grammar-box">
+                <strong>📝 Formula:</strong> IR (conjugated) + verb infinitive
+                <div class="mt-2 text-lg">
+                    <span class="portuguese">Vou falar</span> = I'm going to speak
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">IR Conjugation Review</h2>
+            </div>
+            <table>
+                <thead><tr><th>Person</th><th>IR</th><th>+ Infinitive</th></tr></thead>
+                <tbody>
+                    <tr><td>eu</td><td><button class="speaker-btn mr-1" onclick="speak('eu vou')">🔊</button><span class="portuguese">vou</span></td><td>vou falar</td></tr>
+                    <tr><td>você/ele/ela</td><td><button class="speaker-btn mr-1" onclick="speak('você vai')">🔊</button><span class="portuguese">vai</span></td><td>vai falar</td></tr>
+                    <tr><td>nós</td><td><button class="speaker-btn mr-1" onclick="speak('nós vamos')">🔊</button><span class="portuguese">vamos</span></td><td>vamos falar</td></tr>
+                    <tr><td>vocês/eles/elas</td><td><button class="speaker-btn mr-1" onclick="speak('eles vão')">🔊</button><span class="portuguese">vão</span></td><td>vão falar</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Examples</h2>
+            </div>
+            <div class="space-y-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Eu vou estudar amanhã.')">🔊</button>
+                    <span class="portuguese">Eu <strong>vou estudar</strong> amanhã.</span>
+                    <div class="english mt-1">I'm going to study tomorrow.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Ela vai viajar para o Brasil.')">🔊</button>
+                    <span class="portuguese">Ela <strong>vai viajar</strong> para o Brasil.</span>
+                    <div class="english mt-1">She's going to travel to Brazil.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Nós vamos comer pizza.')">🔊</button>
+                    <span class="portuguese">Nós <strong>vamos comer</strong> pizza.</span>
+                    <div class="english mt-1">We're going to eat pizza.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Eles vão chegar às oito.')">🔊</button>
+                    <span class="portuguese">Eles <strong>vão chegar</strong> às oito.</span>
+                    <div class="english mt-1">They're going to arrive at eight.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Questions & Negatives</h2>
+            </div>
+            <h3 class="font-semibold mb-2">Questions</h3>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Você vai sair hoje?')">🔊</button>
+                <span class="portuguese">Você vai sair hoje?</span>
+                <div class="english mt-1">Are you going to go out today?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('O que você vai fazer amanhã?')">🔊</button>
+                <span class="portuguese">O que você vai fazer amanhã?</span>
+                <div class="english mt-1">What are you going to do tomorrow?</div>
+            </div>
+            <h3 class="font-semibold mb-2 mt-4">Negatives</h3>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Eu não vou trabalhar amanhã.')">🔊</button>
+                <span class="portuguese">Eu <strong>não vou</strong> trabalhar amanhã.</span>
+                <div class="english mt-1">I'm not going to work tomorrow.</div>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Negative:</strong> Put <em>não</em> before the conjugated <em>ir</em>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Time Expressions</h2>
+            </div>
+            <p class="text-gray-700 mb-4">Common time expressions used with the immediate future:</p>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('amanhã')">🔊</button>
+                    <span class="portuguese">amanhã</span> - tomorrow
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('depois')">🔊</button>
+                    <span class="portuguese">depois</span> - later/after
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('na próxima semana')">🔊</button>
+                    <span class="portuguese">na próxima semana</span> - next week
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('no próximo mês')">🔊</button>
+                    <span class="portuguese">no próximo mês</span> - next month
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('no ano que vem')">🔊</button>
+                    <span class="portuguese">no ano que vem</span> - next year
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('daqui a pouco')">🔊</button>
+                    <span class="portuguese">daqui a pouco</span> - in a little while
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Why Use This?</h2>
+            </div>
+            <div class="info-box">
+                <strong>💡 Good news:</strong> This construction is the most common way to express future in spoken Portuguese! It's much more frequent than the simple future tense (falarei, comerei).
+            </div>
+            <div class="example-sentence">
+                <div class="mb-2"><strong>More natural:</strong> <button class="speaker-btn mr-2" onclick="speak('Vou falar com ele.')">🔊</button><span class="portuguese">Vou falar com ele.</span></div>
+                <div><strong>More formal:</strong> <span class="portuguese text-gray-500">Falarei com ele.</span></div>
+            </div>
+        </section>
+
+        <section class="lesson-card bg-blue-50">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=immediate-future" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Future Tense Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="present-irregular.html" class="text-blue-600 hover:text-blue-800">← Unit 24: Present Irregular</a>
+            <a href="telling-time.html" class="text-blue-600 hover:text-blue-800">Unit 26: Telling Time →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

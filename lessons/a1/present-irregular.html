@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Present Irregular Verbs - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+        th, td { padding: 0.5rem; border: 1px solid #e2e8f0; text-align: center; }
+        th { background: #f8fafc; font-weight: 600; }
+        .verb-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 24</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Presente - Verbos Irregulares</h1>
+            <p class="text-gray-600">Present Tense - Essential Irregular Verbs</p>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">SER & ESTAR (to be)</h2>
+            </div>
+            <div class="verb-grid">
+                <div>
+                    <h3 class="font-bold text-center mb-2">SER (permanent)</h3>
+                    <table>
+                        <tbody>
+                            <tr><td>eu</td><td><button class="speaker-btn mr-1" onclick="speak('eu sou')">🔊</button><span class="portuguese">sou</span></td></tr>
+                            <tr><td>você</td><td><button class="speaker-btn mr-1" onclick="speak('você é')">🔊</button><span class="portuguese">é</span></td></tr>
+                            <tr><td>nós</td><td><button class="speaker-btn mr-1" onclick="speak('nós somos')">🔊</button><span class="portuguese">somos</span></td></tr>
+                            <tr><td>eles</td><td><button class="speaker-btn mr-1" onclick="speak('eles são')">🔊</button><span class="portuguese">são</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h3 class="font-bold text-center mb-2">ESTAR (temporary)</h3>
+                    <table>
+                        <tbody>
+                            <tr><td>eu</td><td><button class="speaker-btn mr-1" onclick="speak('eu estou')">🔊</button><span class="portuguese">estou</span></td></tr>
+                            <tr><td>você</td><td><button class="speaker-btn mr-1" onclick="speak('você está')">🔊</button><span class="portuguese">está</span></td></tr>
+                            <tr><td>nós</td><td><button class="speaker-btn mr-1" onclick="speak('nós estamos')">🔊</button><span class="portuguese">estamos</span></td></tr>
+                            <tr><td>eles</td><td><button class="speaker-btn mr-1" onclick="speak('eles estão')">🔊</button><span class="portuguese">estão</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">TER & IR (to have & to go)</h2>
+            </div>
+            <div class="verb-grid">
+                <div>
+                    <h3 class="font-bold text-center mb-2">TER (to have)</h3>
+                    <table>
+                        <tbody>
+                            <tr><td>eu</td><td><button class="speaker-btn mr-1" onclick="speak('eu tenho')">🔊</button><span class="portuguese">tenho</span></td></tr>
+                            <tr><td>você</td><td><button class="speaker-btn mr-1" onclick="speak('você tem')">🔊</button><span class="portuguese">tem</span></td></tr>
+                            <tr><td>nós</td><td><button class="speaker-btn mr-1" onclick="speak('nós temos')">🔊</button><span class="portuguese">temos</span></td></tr>
+                            <tr><td>eles</td><td><button class="speaker-btn mr-1" onclick="speak('eles têm')">🔊</button><span class="portuguese">têm</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h3 class="font-bold text-center mb-2">IR (to go)</h3>
+                    <table>
+                        <tbody>
+                            <tr><td>eu</td><td><button class="speaker-btn mr-1" onclick="speak('eu vou')">🔊</button><span class="portuguese">vou</span></td></tr>
+                            <tr><td>você</td><td><button class="speaker-btn mr-1" onclick="speak('você vai')">🔊</button><span class="portuguese">vai</span></td></tr>
+                            <tr><td>nós</td><td><button class="speaker-btn mr-1" onclick="speak('nós vamos')">🔊</button><span class="portuguese">vamos</span></td></tr>
+                            <tr><td>eles</td><td><button class="speaker-btn mr-1" onclick="speak('eles vão')">🔊</button><span class="portuguese">vão</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">FAZER & PODER</h2>
+            </div>
+            <div class="verb-grid">
+                <div>
+                    <h3 class="font-bold text-center mb-2">FAZER (to do/make)</h3>
+                    <table>
+                        <tbody>
+                            <tr><td>eu</td><td><button class="speaker-btn mr-1" onclick="speak('eu faço')">🔊</button><span class="portuguese">faço</span></td></tr>
+                            <tr><td>você</td><td><button class="speaker-btn mr-1" onclick="speak('você faz')">🔊</button><span class="portuguese">faz</span></td></tr>
+                            <tr><td>nós</td><td><button class="speaker-btn mr-1" onclick="speak('nós fazemos')">🔊</button><span class="portuguese">fazemos</span></td></tr>
+                            <tr><td>eles</td><td><button class="speaker-btn mr-1" onclick="speak('eles fazem')">🔊</button><span class="portuguese">fazem</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h3 class="font-bold text-center mb-2">PODER (can)</h3>
+                    <table>
+                        <tbody>
+                            <tr><td>eu</td><td><button class="speaker-btn mr-1" onclick="speak('eu posso')">🔊</button><span class="portuguese">posso</span></td></tr>
+                            <tr><td>você</td><td><button class="speaker-btn mr-1" onclick="speak('você pode')">🔊</button><span class="portuguese">pode</span></td></tr>
+                            <tr><td>nós</td><td><button class="speaker-btn mr-1" onclick="speak('nós podemos')">🔊</button><span class="portuguese">podemos</span></td></tr>
+                            <tr><td>eles</td><td><button class="speaker-btn mr-1" onclick="speak('eles podem')">🔊</button><span class="portuguese">podem</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">QUERER & SABER</h2>
+            </div>
+            <div class="verb-grid">
+                <div>
+                    <h3 class="font-bold text-center mb-2">QUERER (to want)</h3>
+                    <table>
+                        <tbody>
+                            <tr><td>eu</td><td><button class="speaker-btn mr-1" onclick="speak('eu quero')">🔊</button><span class="portuguese">quero</span></td></tr>
+                            <tr><td>você</td><td><button class="speaker-btn mr-1" onclick="speak('você quer')">🔊</button><span class="portuguese">quer</span></td></tr>
+                            <tr><td>nós</td><td><button class="speaker-btn mr-1" onclick="speak('nós queremos')">🔊</button><span class="portuguese">queremos</span></td></tr>
+                            <tr><td>eles</td><td><button class="speaker-btn mr-1" onclick="speak('eles querem')">🔊</button><span class="portuguese">querem</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h3 class="font-bold text-center mb-2">SABER (to know)</h3>
+                    <table>
+                        <tbody>
+                            <tr><td>eu</td><td><button class="speaker-btn mr-1" onclick="speak('eu sei')">🔊</button><span class="portuguese">sei</span></td></tr>
+                            <tr><td>você</td><td><button class="speaker-btn mr-1" onclick="speak('você sabe')">🔊</button><span class="portuguese">sabe</span></td></tr>
+                            <tr><td>nós</td><td><button class="speaker-btn mr-1" onclick="speak('nós sabemos')">🔊</button><span class="portuguese">sabemos</span></td></tr>
+                            <tr><td>eles</td><td><button class="speaker-btn mr-1" onclick="speak('eles sabem')">🔊</button><span class="portuguese">sabem</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">VER, VIR, DAR</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div>
+                    <h3 class="font-bold text-center mb-2">VER (to see)</h3>
+                    <table>
+                        <tbody>
+                            <tr><td>eu</td><td><span class="portuguese">vejo</span></td></tr>
+                            <tr><td>você</td><td><span class="portuguese">vê</span></td></tr>
+                            <tr><td>nós</td><td><span class="portuguese">vemos</span></td></tr>
+                            <tr><td>eles</td><td><span class="portuguese">veem</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h3 class="font-bold text-center mb-2">VIR (to come)</h3>
+                    <table>
+                        <tbody>
+                            <tr><td>eu</td><td><span class="portuguese">venho</span></td></tr>
+                            <tr><td>você</td><td><span class="portuguese">vem</span></td></tr>
+                            <tr><td>nós</td><td><span class="portuguese">vimos</span></td></tr>
+                            <tr><td>eles</td><td><span class="portuguese">vêm</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h3 class="font-bold text-center mb-2">DAR (to give)</h3>
+                    <table>
+                        <tbody>
+                            <tr><td>eu</td><td><span class="portuguese">dou</span></td></tr>
+                            <tr><td>você</td><td><span class="portuguese">dá</span></td></tr>
+                            <tr><td>nós</td><td><span class="portuguese">damos</span></td></tr>
+                            <tr><td>eles</td><td><span class="portuguese">dão</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Practice Sentences</h2>
+            </div>
+            <div class="space-y-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Eu tenho dois filhos.')">🔊</button>
+                    <span class="portuguese">Eu tenho dois filhos.</span>
+                    <div class="english mt-1">I have two children.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Você sabe nadar?')">🔊</button>
+                    <span class="portuguese">Você sabe nadar?</span>
+                    <div class="english mt-1">Do you know how to swim?</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Nós vamos ao cinema.')">🔊</button>
+                    <span class="portuguese">Nós vamos ao cinema.</span>
+                    <div class="english mt-1">We're going to the movies.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card bg-blue-50">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=irregular-verbs" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Irregular Verbs Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="present-regular.html" class="text-blue-600 hover:text-blue-800">← Unit 23: Present Regular</a>
+            <a href="immediate-future.html" class="text-blue-600 hover:text-blue-800">Unit 25: Immediate Future →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

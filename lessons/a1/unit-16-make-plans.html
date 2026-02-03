@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 16: Make Plans - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .production-goal { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; }
+        .production-goal h2 { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; }
+        .production-goal .phrase { font-size: 1.75rem; font-weight: bold; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 0.75rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .now-you-can { background: #ecfdf5; border: 2px solid #10b981; border-radius: 1rem; padding: 1.5rem; margin-top: 2rem; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-6">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 16</span>
+            </div>
+        </div>
+
+        <div class="production-goal">
+            <h2>By the end of this unit, you'll say:</h2>
+            <div class="phrase">
+                <button class="speaker-btn mr-2" onclick="speak('Vou viajar amanhã. Você quer ir?')">🔊</button>
+                "Vou viajar amanhã. Você quer ir?"
+            </div>
+            <div class="mt-2 text-white/80">I'm going to travel tomorrow. Do you want to go?</div>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">IR + Infinitive: Future Plans</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Vou</span> + [verb infinitive]
+                <div class="mt-2 text-sm text-gray-600">This is the most common way to express future in spoken Portuguese!</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Vou viajar.')">🔊</button>
+                <span class="portuguese">Vou viajar.</span>
+                <div class="text-gray-600 mt-1">I'm going to travel.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Vou estudar.')">🔊</button>
+                <span class="portuguese">Vou estudar.</span>
+                <div class="text-gray-600 mt-1">I'm going to study.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Vou comer.')">🔊</button>
+                <span class="portuguese">Vou comer.</span>
+                <div class="text-gray-600 mt-1">I'm going to eat.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Time Expressions</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('hoje')">🔊</button>
+                    <span class="portuguese">hoje</span> - today
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('amanhã')">🔊</button>
+                    <span class="portuguese">amanhã</span> - tomorrow
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('depois de amanhã')">🔊</button>
+                    <span class="portuguese">depois de amanhã</span> - day after tomorrow
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('na próxima semana')">🔊</button>
+                    <span class="portuguese">na próxima semana</span> - next week
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('no próximo mês')">🔊</button>
+                    <span class="portuguese">no próximo mês</span> - next month
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('no fim de semana')">🔊</button>
+                    <span class="portuguese">no fim de semana</span> - on the weekend
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Invite Someone</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Você quer</span> + [verb infinitive]<strong>?</strong>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Você quer ir?')">🔊</button>
+                <span class="portuguese">Você quer ir?</span>
+                <div class="text-gray-600 mt-1">Do you want to go?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Você quer jantar comigo?')">🔊</button>
+                <span class="portuguese">Você quer jantar comigo?</span>
+                <div class="text-gray-600 mt-1">Do you want to have dinner with me?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Você quer assistir um filme?')">🔊</button>
+                <span class="portuguese">Você quer assistir um filme?</span>
+                <div class="text-gray-600 mt-1">Do you want to watch a movie?</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Accept or Decline</h2>
+            </div>
+            <h3 class="font-semibold mb-2">Accept:</h3>
+            <div class="grid md:grid-cols-2 gap-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Quero!')">🔊</button>
+                    <span class="portuguese">Quero!</span> - I want to!
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Claro!')">🔊</button>
+                    <span class="portuguese">Claro!</span> - Of course!
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Boa ideia!')">🔊</button>
+                    <span class="portuguese">Boa ideia!</span> - Good idea!
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Vamos!')">🔊</button>
+                    <span class="portuguese">Vamos!</span> - Let's go!
+                </div>
+            </div>
+            <h3 class="font-semibold mb-2 mt-4">Decline:</h3>
+            <div class="grid md:grid-cols-2 gap-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Não posso.')">🔊</button>
+                    <span class="portuguese">Não posso.</span> - I can't.
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Desculpa, estou ocupado.')">🔊</button>
+                    <span class="portuguese">Desculpa, estou ocupado/a.</span> - Sorry, I'm busy.
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Ask About Plans</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('O que você vai fazer amanhã?')">🔊</button>
+                <span class="portuguese">O que você vai fazer amanhã?</span>
+                <div class="text-gray-600 mt-1">What are you going to do tomorrow?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('O que você vai fazer no fim de semana?')">🔊</button>
+                <span class="portuguese">O que você vai fazer no fim de semana?</span>
+                <div class="text-gray-600 mt-1">What are you doing this weekend?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Você tem planos para hoje à noite?')">🔊</button>
+                <span class="portuguese">Você tem planos para hoje à noite?</span>
+                <div class="text-gray-600 mt-1">Do you have plans for tonight?</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Full Conversation</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Vou viajar para a praia no fim de semana. Você quer ir? Vai ser divertido!')">🔊</button>
+                <span class="portuguese">Vou viajar para a praia no fim de semana. Você quer ir? Vai ser divertido!</span>
+                <div class="text-gray-600 mt-1">I'm going to travel to the beach this weekend. Do you want to go? It'll be fun!</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Claro! A que horas vamos sair?')">🔊</button>
+                <span class="portuguese">Claro! A que horas vamos sair?</span>
+                <div class="text-gray-600 mt-1">Of course! What time are we leaving?</div>
+            </div>
+        </section>
+
+        <div class="now-you-can">
+            <h3 class="text-xl font-bold text-green-800 mb-3">✅ Now You Can Say:</h3>
+            <div class="space-y-2">
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Vou viajar amanhã.')">🔊</button>
+                    <span class="portuguese">"Vou [verb] [when]."</span> - state your plans
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Você quer ir?')">🔊</button>
+                    <span class="portuguese">"Você quer [verb]?"</span> - invite someone
+                </div>
+            </div>
+            <p class="mt-4 text-green-700">Make plans with a friend for the weekend!</p>
+        </div>
+
+        <section class="lesson-card bg-blue-50 mt-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=immediate-future" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Future Plans Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="unit-15-shopping.html" class="text-blue-600 hover:text-blue-800">← Unit 15: Go Shopping</a>
+            <a href="unit-17-past-events.html" class="text-blue-600 hover:text-blue-800">Unit 17: Talk About the Past →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

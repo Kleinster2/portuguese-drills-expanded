@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contractions - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        th, td { padding: 0.75rem; border: 1px solid #e2e8f0; text-align: center; }
+        th { background: #f8fafc; font-weight: 600; }
+        .contraction { background: #dbeafe; font-weight: bold; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 19</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Contrações</h1>
+            <p class="text-gray-600">Preposition + Article Contractions</p>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Why Contractions?</h2>
+            </div>
+            <p class="text-gray-700 mb-4">In Portuguese, certain prepositions <strong>must</strong> combine with articles. This is not optional - you can't say "de o" or "em a"!</p>
+            <div class="grammar-box">
+                <strong>📝 Rule:</strong> Preposition + Article = Contraction (mandatory!)
+                <div class="mt-2">de + o ≠ <del>de o</del> → <strong>do</strong></div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">DE + Articles</h2>
+            </div>
+            <table>
+                <thead><tr><th>de +</th><th>o</th><th>a</th><th>os</th><th>as</th></tr></thead>
+                <tbody><tr>
+                    <td>=</td>
+                    <td class="contraction"><button class="speaker-btn mr-1" onclick="speak('do')">🔊</button>do</td>
+                    <td class="contraction"><button class="speaker-btn mr-1" onclick="speak('da')">🔊</button>da</td>
+                    <td class="contraction"><button class="speaker-btn mr-1" onclick="speak('dos')">🔊</button>dos</td>
+                    <td class="contraction"><button class="speaker-btn mr-1" onclick="speak('das')">🔊</button>das</td>
+                </tr></tbody>
+            </table>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('O carro do João.')">🔊</button>
+                <span class="portuguese">O carro <strong>do</strong> João.</span>
+                <div class="english mt-1">João's car. (de + o)</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Perto da escola.')">🔊</button>
+                <span class="portuguese">Perto <strong>da</strong> escola.</span>
+                <div class="english mt-1">Near the school. (de + a)</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">EM + Articles</h2>
+            </div>
+            <table>
+                <thead><tr><th>em +</th><th>o</th><th>a</th><th>os</th><th>as</th></tr></thead>
+                <tbody><tr>
+                    <td>=</td>
+                    <td class="contraction"><button class="speaker-btn mr-1" onclick="speak('no')">🔊</button>no</td>
+                    <td class="contraction"><button class="speaker-btn mr-1" onclick="speak('na')">🔊</button>na</td>
+                    <td class="contraction"><button class="speaker-btn mr-1" onclick="speak('nos')">🔊</button>nos</td>
+                    <td class="contraction"><button class="speaker-btn mr-1" onclick="speak('nas')">🔊</button>nas</td>
+                </tr></tbody>
+            </table>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Estou no banco.')">🔊</button>
+                <span class="portuguese">Estou <strong>no</strong> banco.</span>
+                <div class="english mt-1">I'm at the bank. (em + o)</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Trabalho na cidade.')">🔊</button>
+                <span class="portuguese">Trabalho <strong>na</strong> cidade.</span>
+                <div class="english mt-1">I work in the city. (em + a)</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">A + Articles</h2>
+            </div>
+            <table>
+                <thead><tr><th>a +</th><th>o</th><th>a</th><th>os</th><th>as</th></tr></thead>
+                <tbody><tr>
+                    <td>=</td>
+                    <td class="contraction"><button class="speaker-btn mr-1" onclick="speak('ao')">🔊</button>ao</td>
+                    <td class="contraction"><button class="speaker-btn mr-1" onclick="speak('à')">🔊</button>à</td>
+                    <td class="contraction"><button class="speaker-btn mr-1" onclick="speak('aos')">🔊</button>aos</td>
+                    <td class="contraction"><button class="speaker-btn mr-1" onclick="speak('às')">🔊</button>às</td>
+                </tr></tbody>
+            </table>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Vou ao mercado.')">🔊</button>
+                <span class="portuguese">Vou <strong>ao</strong> mercado.</span>
+                <div class="english mt-1">I'm going to the market. (a + o)</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Chegamos às oito.')">🔊</button>
+                <span class="portuguese">Chegamos <strong>às</strong> oito.</span>
+                <div class="english mt-1">We arrive at eight. (a + as)</div>
+            </div>
+            <div class="info-box">
+                <strong>💡 Note:</strong> <em>à</em> has a grave accent (`) to distinguish it from the article <em>a</em>.
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">POR + Articles</h2>
+            </div>
+            <table>
+                <thead><tr><th>por +</th><th>o</th><th>a</th><th>os</th><th>as</th></tr></thead>
+                <tbody><tr>
+                    <td>=</td>
+                    <td class="contraction"><button class="speaker-btn mr-1" onclick="speak('pelo')">🔊</button>pelo</td>
+                    <td class="contraction"><button class="speaker-btn mr-1" onclick="speak('pela')">🔊</button>pela</td>
+                    <td class="contraction"><button class="speaker-btn mr-1" onclick="speak('pelos')">🔊</button>pelos</td>
+                    <td class="contraction"><button class="speaker-btn mr-1" onclick="speak('pelas')">🔊</button>pelas</td>
+                </tr></tbody>
+            </table>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Passamos pelo parque.')">🔊</button>
+                <span class="portuguese">Passamos <strong>pelo</strong> parque.</span>
+                <div class="english mt-1">We passed through the park.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Complete Reference</h2>
+            </div>
+            <table>
+                <thead><tr><th>Prep.</th><th>+ o</th><th>+ a</th><th>+ os</th><th>+ as</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>de</strong></td><td class="contraction">do</td><td class="contraction">da</td><td class="contraction">dos</td><td class="contraction">das</td></tr>
+                    <tr><td><strong>em</strong></td><td class="contraction">no</td><td class="contraction">na</td><td class="contraction">nos</td><td class="contraction">nas</td></tr>
+                    <tr><td><strong>a</strong></td><td class="contraction">ao</td><td class="contraction">à</td><td class="contraction">aos</td><td class="contraction">às</td></tr>
+                    <tr><td><strong>por</strong></td><td class="contraction">pelo</td><td class="contraction">pela</td><td class="contraction">pelos</td><td class="contraction">pelas</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="lesson-card bg-blue-50">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=contractions" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Contractions Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="prepositions.html" class="text-blue-600 hover:text-blue-800">← Unit 18: Prepositions</a>
+            <a href="question-words.html" class="text-blue-600 hover:text-blue-800">Unit 20: Question Words →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

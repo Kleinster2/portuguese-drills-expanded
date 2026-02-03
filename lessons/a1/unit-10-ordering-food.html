@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 10: Order Food - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .production-goal { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; }
+        .production-goal h2 { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; }
+        .production-goal .phrase { font-size: 1.75rem; font-weight: bold; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 0.75rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .now-you-can { background: #ecfdf5; border: 2px solid #10b981; border-radius: 1rem; padding: 1.5rem; margin-top: 2rem; }
+        .dialogue { background: #faf5ff; border-radius: 0.5rem; padding: 1rem; margin: 1rem 0; }
+        .dialogue-line { padding: 0.5rem 0; border-bottom: 1px solid #e9d5ff; }
+        .dialogue-line:last-child { border-bottom: none; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-6">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 10</span>
+            </div>
+        </div>
+
+        <div class="production-goal">
+            <h2>By the end of this unit, you'll say:</h2>
+            <div class="phrase">
+                <button class="speaker-btn mr-2" onclick="speak('Quero um café, por favor. Quanto custa?')">🔊</button>
+                "Quero um café, por favor. Quanto custa?"
+            </div>
+            <div class="mt-2 text-white/80">I want a coffee, please. How much does it cost?</div>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">QUERER: To Want</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Quero</span> + [item]
+                <div class="mt-2 text-sm text-gray-600">quero = I want (irregular verb)</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Quero um café.')">🔊</button>
+                <span class="portuguese">Quero um café.</span>
+                <div class="text-gray-600 mt-1">I want a coffee.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Quero uma água.')">🔊</button>
+                <span class="portuguese">Quero uma água.</span>
+                <div class="text-gray-600 mt-1">I want a water.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Quero a conta.')">🔊</button>
+                <span class="portuguese">Quero a conta.</span>
+                <div class="text-gray-600 mt-1">I want the bill.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Polite Options</h2>
+            </div>
+            <div class="space-y-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Quero um café, por favor.')">🔊</button>
+                    <span class="portuguese">Quero um café, <strong>por favor</strong>.</span>
+                    <div class="text-gray-600 mt-1">I want a coffee, please.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Eu queria um café, por favor.')">🔊</button>
+                    <span class="portuguese">Eu <strong>queria</strong> um café, por favor.</span>
+                    <div class="text-gray-600 mt-1">I would like a coffee, please. (more polite)</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Posso pedir um café?')">🔊</button>
+                    <span class="portuguese"><strong>Posso pedir</strong> um café?</span>
+                    <div class="text-gray-600 mt-1">Can I order a coffee?</div>
+                </div>
+            </div>
+            <div class="info-box">
+                <strong>💡 Tip:</strong> Adding <span class="portuguese">"por favor"</span> makes any request polite!
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">At a Restaurant</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o cardápio')">🔊</button>
+                    <span class="portuguese">o cardápio</span> - the menu
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('a conta')">🔊</button>
+                    <span class="portuguese">a conta</span> - the bill
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o garçom')">🔊</button>
+                    <span class="portuguese">o garçom</span> - the waiter
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('a garçonete')">🔊</button>
+                    <span class="portuguese">a garçonete</span> - the waitress
+                </div>
+            </div>
+            <div class="space-y-3 mt-4">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('O cardápio, por favor.')">🔊</button>
+                    <span class="portuguese">O cardápio, por favor.</span>
+                    <div class="text-gray-600 mt-1">The menu, please.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('A conta, por favor.')">🔊</button>
+                    <span class="portuguese">A conta, por favor.</span>
+                    <div class="text-gray-600 mt-1">The bill, please.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Ask the Price</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Quanto custa?</span> = How much does it cost?
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Quanto custa?')">🔊</button>
+                <span class="portuguese">Quanto custa?</span>
+                <div class="text-gray-600 mt-1">How much does it cost?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Quanto custa o café?')">🔊</button>
+                <span class="portuguese">Quanto custa o café?</span>
+                <div class="text-gray-600 mt-1">How much is the coffee?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Quanto é?')">🔊</button>
+                <span class="portuguese">Quanto é?</span>
+                <div class="text-gray-600 mt-1">How much is it? (informal)</div>
+            </div>
+            <div class="info-box">
+                <strong>💡 Answer:</strong> <span class="portuguese">"Custa cinco reais"</span> or <span class="portuguese">"São cinco reais"</span>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Common Orders</h2>
+            </div>
+            <div class="space-y-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Um café, por favor.')">🔊</button>
+                    <span class="portuguese">Um café, por favor.</span>
+                    <div class="text-gray-600 mt-1">A coffee, please.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Uma água com gás.')">🔊</button>
+                    <span class="portuguese">Uma água com gás.</span>
+                    <div class="text-gray-600 mt-1">A sparkling water.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Uma água sem gás.')">🔊</button>
+                    <span class="portuguese">Uma água sem gás.</span>
+                    <div class="text-gray-600 mt-1">A still water.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Uma cerveja.')">🔊</button>
+                    <span class="portuguese">Uma cerveja.</span>
+                    <div class="text-gray-600 mt-1">A beer.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('O prato do dia.')">🔊</button>
+                    <span class="portuguese">O prato do dia.</span>
+                    <div class="text-gray-600 mt-1">The dish of the day.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Full Conversation</h2>
+            </div>
+            <div class="dialogue">
+                <div class="dialogue-line">
+                    <strong>Garçom:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Boa tarde! O que você vai querer?')">🔊</button>
+                    <span class="portuguese">Boa tarde! O que você vai querer?</span>
+                </div>
+                <div class="dialogue-line">
+                    <strong>Você:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Quero um café e um pão de queijo, por favor.')">🔊</button>
+                    <span class="portuguese">Quero um café e um pão de queijo, por favor.</span>
+                </div>
+                <div class="dialogue-line">
+                    <strong>Garçom:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Mais alguma coisa?')">🔊</button>
+                    <span class="portuguese">Mais alguma coisa?</span>
+                    <span class="text-gray-500">(Anything else?)</span>
+                </div>
+                <div class="dialogue-line">
+                    <strong>Você:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Não, obrigado. Quanto custa?')">🔊</button>
+                    <span class="portuguese">Não, obrigado. Quanto custa?</span>
+                </div>
+                <div class="dialogue-line">
+                    <strong>Garçom:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('São dez reais.')">🔊</button>
+                    <span class="portuguese">São dez reais.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 7</span>
+                <h2 class="text-xl font-bold text-gray-900">Useful Phrases</h2>
+            </div>
+            <div class="space-y-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Tem Wi-Fi?')">🔊</button>
+                    <span class="portuguese">Tem Wi-Fi?</span>
+                    <div class="text-gray-600 mt-1">Do you have Wi-Fi?</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Onde fica o banheiro?')">🔊</button>
+                    <span class="portuguese">Onde fica o banheiro?</span>
+                    <div class="text-gray-600 mt-1">Where is the bathroom?</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Aceita cartão?')">🔊</button>
+                    <span class="portuguese">Aceita cartão?</span>
+                    <div class="text-gray-600 mt-1">Do you accept card?</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Está delicioso!')">🔊</button>
+                    <span class="portuguese">Está delicioso!</span>
+                    <div class="text-gray-600 mt-1">It's delicious!</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="now-you-can">
+            <h3 class="text-xl font-bold text-green-800 mb-3">✅ Now You Can Say:</h3>
+            <div class="space-y-2">
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Quero um café, por favor.')">🔊</button>
+                    <span class="portuguese">"Quero [item], por favor."</span> - order something
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Quanto custa?')">🔊</button>
+                    <span class="portuguese">"Quanto custa?"</span> - ask the price
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('A conta, por favor.')">🔊</button>
+                    <span class="portuguese">"A conta, por favor."</span> - ask for the bill
+                </div>
+            </div>
+            <p class="mt-4 text-green-700">Practice ordering your favorite food and drink in Portuguese!</p>
+        </div>
+
+        <section class="lesson-card bg-blue-50 mt-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=restaurant" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Restaurant Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="unit-09-likes-dislikes.html" class="text-blue-600 hover:text-blue-800">← Unit 9: Likes & Dislikes</a>
+            <a href="unit-11-describe-things.html" class="text-blue-600 hover:text-blue-800">Unit 11: Describe Things →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

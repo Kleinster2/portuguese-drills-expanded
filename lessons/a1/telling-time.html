@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telling Time - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        th, td { padding: 0.75rem; border: 1px solid #e2e8f0; text-align: center; }
+        th { background: #f8fafc; font-weight: 600; }
+        .time-display { font-size: 2rem; font-weight: bold; color: #1e40af; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 26</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">As Horas</h1>
+            <p class="text-gray-600">Telling Time in Portuguese</p>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Asking the Time</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Que horas são?')">🔊</button>
+                <span class="portuguese">Que horas são?</span>
+                <div class="english mt-1">What time is it?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('A que horas?')">🔊</button>
+                <span class="portuguese">A que horas?</span>
+                <div class="english mt-1">At what time?</div>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Note:</strong> Use <em>são</em> (plural) for all times except 1:00 and noon/midnight.
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">The Hours</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="example-sentence">
+                    <div class="time-display">1:00</div>
+                    <button class="speaker-btn mr-2" onclick="speak('É uma hora.')">🔊</button>
+                    <span class="portuguese">É uma hora.</span>
+                    <div class="english mt-1">It's one o'clock.</div>
+                </div>
+                <div class="example-sentence">
+                    <div class="time-display">2:00</div>
+                    <button class="speaker-btn mr-2" onclick="speak('São duas horas.')">🔊</button>
+                    <span class="portuguese">São duas horas.</span>
+                    <div class="english mt-1">It's two o'clock.</div>
+                </div>
+                <div class="example-sentence">
+                    <div class="time-display">3:00</div>
+                    <button class="speaker-btn mr-2" onclick="speak('São três horas.')">🔊</button>
+                    <span class="portuguese">São três horas.</span>
+                    <div class="english mt-1">It's three o'clock.</div>
+                </div>
+                <div class="example-sentence">
+                    <div class="time-display">12:00</div>
+                    <button class="speaker-btn mr-2" onclick="speak('É meio-dia.')">🔊</button>
+                    <span class="portuguese">É meio-dia.</span>
+                    <div class="english mt-1">It's noon.</div>
+                </div>
+                <div class="example-sentence">
+                    <div class="time-display">00:00</div>
+                    <button class="speaker-btn mr-2" onclick="speak('É meia-noite.')">🔊</button>
+                    <span class="portuguese">É meia-noite.</span>
+                    <div class="english mt-1">It's midnight.</div>
+                </div>
+            </div>
+            <div class="info-box">
+                <strong>💡 Feminine:</strong> Hours are feminine in Portuguese: <em>uma</em> hora, <em>duas</em> horas
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Adding Minutes</h2>
+            </div>
+            <p class="text-gray-700 mb-4">Use <strong>e</strong> (and) to add minutes:</p>
+            <div class="space-y-3">
+                <div class="example-sentence">
+                    <div class="time-display">3:15</div>
+                    <button class="speaker-btn mr-2" onclick="speak('São três e quinze.')">🔊</button>
+                    <span class="portuguese">São três <strong>e quinze</strong>.</span>
+                    <div class="english mt-1">It's 3:15. (three and fifteen)</div>
+                </div>
+                <div class="example-sentence">
+                    <div class="time-display">3:30</div>
+                    <button class="speaker-btn mr-2" onclick="speak('São três e meia.')">🔊</button>
+                    <span class="portuguese">São três <strong>e meia</strong>.</span>
+                    <div class="english mt-1">It's 3:30. (three and half)</div>
+                </div>
+                <div class="example-sentence">
+                    <div class="time-display">3:45</div>
+                    <button class="speaker-btn mr-2" onclick="speak('São três e quarenta e cinco.')">🔊</button>
+                    <span class="portuguese">São três <strong>e quarenta e cinco</strong>.</span>
+                    <div class="english mt-1">It's 3:45.</div>
+                </div>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Alternative for :45:</strong> You can also say "quinze para as quatro" (fifteen to four)
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Minutes Before the Hour</h2>
+            </div>
+            <p class="text-gray-700 mb-4">Use <strong>para</strong> (to) or <strong>menos</strong> (minus) for times like "quarter to":</p>
+            <div class="space-y-3">
+                <div class="example-sentence">
+                    <div class="time-display">2:50</div>
+                    <button class="speaker-btn mr-2" onclick="speak('São dez para as três.')">🔊</button>
+                    <span class="portuguese">São dez <strong>para as</strong> três.</span>
+                    <div class="english mt-1">It's ten to three.</div>
+                </div>
+                <div class="example-sentence">
+                    <div class="time-display">4:45</div>
+                    <button class="speaker-btn mr-2" onclick="speak('São quinze para as cinco.')">🔊</button>
+                    <span class="portuguese">São quinze <strong>para as</strong> cinco.</span>
+                    <div class="english mt-1">It's quarter to five.</div>
+                </div>
+            </div>
+            <div class="info-box">
+                <strong>💡 BP vs EP:</strong> In Brazil, people often just say the exact time (4:50 = "quatro e cinquenta"). The "para" style is more formal.
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Parts of the Day</h2>
+            </div>
+            <p class="text-gray-700 mb-4">Add these to specify the time of day:</p>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('da manhã')">🔊</button>
+                    <span class="portuguese">da manhã</span> - in the morning (AM)
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('da tarde')">🔊</button>
+                    <span class="portuguese">da tarde</span> - in the afternoon
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('da noite')">🔊</button>
+                    <span class="portuguese">da noite</span> - in the evening/at night
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('da madrugada')">🔊</button>
+                    <span class="portuguese">da madrugada</span> - late night/early morning
+                </div>
+            </div>
+            <div class="example-sentence mt-4">
+                <button class="speaker-btn mr-2" onclick="speak('São oito horas da manhã.')">🔊</button>
+                <span class="portuguese">São oito horas <strong>da manhã</strong>.</span>
+                <div class="english mt-1">It's 8:00 AM.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('São nove horas da noite.')">🔊</button>
+                <span class="portuguese">São nove horas <strong>da noite</strong>.</span>
+                <div class="english mt-1">It's 9:00 PM.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">"At" a Time</h2>
+            </div>
+            <p class="text-gray-700 mb-4">Use prepositions to say when something happens:</p>
+            <div class="space-y-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('A aula começa às oito.')">🔊</button>
+                    <span class="portuguese">A aula começa <strong>às</strong> oito.</span>
+                    <div class="english mt-1">Class starts at eight.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('O filme é à uma.')">🔊</button>
+                    <span class="portuguese">O filme é <strong>à</strong> uma.</span>
+                    <div class="english mt-1">The movie is at one.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Almoço ao meio-dia.')">🔊</button>
+                    <span class="portuguese">Almoço <strong>ao</strong> meio-dia.</span>
+                    <div class="english mt-1">I have lunch at noon.</div>
+                </div>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Contractions:</strong>
+                <ul class="mt-2 space-y-1">
+                    <li>• <strong>às</strong> = a + as (at + the [plural])</li>
+                    <li>• <strong>à</strong> = a + a (at + the [singular, for 1:00])</li>
+                    <li>• <strong>ao</strong> = a + o (at + the [for meio-dia])</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 7</span>
+                <h2 class="text-xl font-bold text-gray-900">Time Expressions</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('agora')">🔊</button>
+                    <span class="portuguese">agora</span> - now
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('mais tarde')">🔊</button>
+                    <span class="portuguese">mais tarde</span> - later
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('cedo')">🔊</button>
+                    <span class="portuguese">cedo</span> - early
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('tarde')">🔊</button>
+                    <span class="portuguese">tarde</span> - late
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('em ponto')">🔊</button>
+                    <span class="portuguese">em ponto</span> - on the dot, sharp
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('por volta de')">🔊</button>
+                    <span class="portuguese">por volta de</span> - around, about
+                </div>
+            </div>
+            <div class="example-sentence mt-4">
+                <button class="speaker-btn mr-2" onclick="speak('Chego às três em ponto.')">🔊</button>
+                <span class="portuguese">Chego às três <strong>em ponto</strong>.</span>
+                <div class="english mt-1">I arrive at three sharp.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card bg-blue-50">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=telling-time" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Telling Time Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="immediate-future.html" class="text-blue-600 hover:text-blue-800">← Unit 25: Immediate Future</a>
+            <a href="transportation.html" class="text-blue-600 hover:text-blue-800">Unit 27: Transportation →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 4: Say How You Feel - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .production-goal { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; }
+        .production-goal h2 { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; }
+        .production-goal .phrase { font-size: 1.75rem; font-weight: bold; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 0.75rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .now-you-can { background: #ecfdf5; border: 2px solid #10b981; border-radius: 1rem; padding: 1.5rem; margin-top: 2rem; }
+        .dialogue { background: #faf5ff; border-radius: 0.5rem; padding: 1rem; margin: 1rem 0; }
+        .dialogue-line { padding: 0.5rem 0; border-bottom: 1px solid #e9d5ff; }
+        .dialogue-line:last-child { border-bottom: none; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-6">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 4</span>
+            </div>
+        </div>
+
+        <div class="production-goal">
+            <h2>By the end of this unit, you'll say:</h2>
+            <div class="phrase">
+                <button class="speaker-btn mr-2" onclick="speak('Estou bem, obrigado. E você?')">🔊</button>
+                "Estou bem, obrigado. E você?"
+            </div>
+            <div class="mt-2 text-white/80">I'm fine, thank you. And you?</div>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">"How are you?"</h2>
+            </div>
+            <p class="text-gray-700 mb-4">Common ways to ask how someone is doing:</p>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Tudo bem?')">🔊</button>
+                <span class="portuguese">Tudo bem?</span>
+                <div class="text-gray-600 mt-1">Everything good? (most common)</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Como você está?')">🔊</button>
+                <span class="portuguese">Como você está?</span>
+                <div class="text-gray-600 mt-1">How are you?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Como vai?')">🔊</button>
+                <span class="portuguese">Como vai?</span>
+                <div class="text-gray-600 mt-1">How's it going?</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">ESTAR: Temporary States</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Estou</span> + [how you feel]
+                <div class="mt-2 text-sm text-gray-600">Use ESTAR for feelings and temporary conditions (not SER)</div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3 mt-4">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Estou bem.')">🔊</button>
+                    <span class="portuguese">Estou bem.</span>
+                    <div class="text-gray-600 mt-1">I'm fine/well.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Estou ótimo.')">🔊</button>
+                    <span class="portuguese">Estou ótimo.</span>
+                    <div class="text-gray-600 mt-1">I'm great. (male)</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Estou mal.')">🔊</button>
+                    <span class="portuguese">Estou mal.</span>
+                    <div class="text-gray-600 mt-1">I'm not well.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Estou mais ou menos.')">🔊</button>
+                    <span class="portuguese">Estou mais ou menos.</span>
+                    <div class="text-gray-600 mt-1">I'm so-so.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Feelings & States</h2>
+            </div>
+            <p class="text-gray-700 mb-4">More ways to describe how you feel:</p>
+            <div class="grid md:grid-cols-2 gap-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Estou cansado.')">🔊</button>
+                    <span class="portuguese">Estou cansado/a.</span>
+                    <div class="text-gray-600 mt-1">I'm tired.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Estou feliz.')">🔊</button>
+                    <span class="portuguese">Estou feliz.</span>
+                    <div class="text-gray-600 mt-1">I'm happy.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Estou triste.')">🔊</button>
+                    <span class="portuguese">Estou triste.</span>
+                    <div class="text-gray-600 mt-1">I'm sad.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Estou ocupado.')">🔊</button>
+                    <span class="portuguese">Estou ocupado/a.</span>
+                    <div class="text-gray-600 mt-1">I'm busy.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Estou com fome.')">🔊</button>
+                    <span class="portuguese">Estou com fome.</span>
+                    <div class="text-gray-600 mt-1">I'm hungry.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Estou com sede.')">🔊</button>
+                    <span class="portuguese">Estou com sede.</span>
+                    <div class="text-gray-600 mt-1">I'm thirsty.</div>
+                </div>
+            </div>
+            <div class="info-box">
+                <strong>💡 Gender:</strong> Some adjectives change: cansad<strong>o</strong> (male) / cansad<strong>a</strong> (female). Others don't: feliz, triste.
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Say Thank You & Ask Back</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Obrigado.')">🔊</button>
+                    <span class="portuguese">Obrigado.</span>
+                    <div class="text-gray-600 mt-1">Thank you. (male speaking)</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Obrigada.')">🔊</button>
+                    <span class="portuguese">Obrigada.</span>
+                    <div class="text-gray-600 mt-1">Thank you. (female speaking)</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('E você?')">🔊</button>
+                    <span class="portuguese">E você?</span>
+                    <div class="text-gray-600 mt-1">And you?</div>
+                </div>
+            </div>
+            <div class="info-box">
+                <strong>💡 Remember:</strong> Obrigad<strong>o</strong>/obrigad<strong>a</strong> matches the speaker's gender, not who you're thanking!
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Quick Response to "Tudo bem?"</h2>
+            </div>
+            <p class="text-gray-700 mb-4">The easiest response is to echo it back:</p>
+            <div class="dialogue">
+                <div class="dialogue-line">
+                    <strong>A:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Tudo bem?')">🔊</button>
+                    <span class="portuguese">Tudo bem?</span>
+                </div>
+                <div class="dialogue-line">
+                    <strong>B:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Tudo bem! E você?')">🔊</button>
+                    <span class="portuguese">Tudo bem! E você?</span>
+                </div>
+                <div class="dialogue-line">
+                    <strong>A:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Tudo ótimo!')">🔊</button>
+                    <span class="portuguese">Tudo ótimo!</span>
+                </div>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Variations:</strong>
+                <ul class="mt-2 space-y-1">
+                    <li>• <span class="portuguese">Tudo bem</span> - Everything's good</li>
+                    <li>• <span class="portuguese">Tudo ótimo</span> - Everything's great</li>
+                    <li>• <span class="portuguese">Tudo bom</span> - Everything's good</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Full Greeting Exchange</h2>
+            </div>
+            <div class="dialogue">
+                <div class="dialogue-line">
+                    <strong>A:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Oi! Tudo bem?')">🔊</button>
+                    <span class="portuguese">Oi! Tudo bem?</span>
+                </div>
+                <div class="dialogue-line">
+                    <strong>B:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Estou bem, obrigado. E você?')">🔊</button>
+                    <span class="portuguese">Estou bem, obrigado. E você?</span>
+                </div>
+                <div class="dialogue-line">
+                    <strong>A:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Tudo ótimo! Estou um pouco cansado.')">🔊</button>
+                    <span class="portuguese">Tudo ótimo! Estou um pouco cansado.</span>
+                </div>
+            </div>
+            <div class="info-box">
+                <strong>💡 um pouco</strong> = a little (Estou <em>um pouco</em> cansado = I'm <em>a little</em> tired)
+            </div>
+        </section>
+
+        <div class="now-you-can">
+            <h3 class="text-xl font-bold text-green-800 mb-3">✅ Now You Can Say:</h3>
+            <div class="space-y-2">
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Tudo bem?')">🔊</button>
+                    <span class="portuguese">"Tudo bem?"</span> - ask how someone is
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Estou bem, obrigado.')">🔊</button>
+                    <span class="portuguese">"Estou bem, obrigado/a."</span> - say you're fine
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Estou cansado.')">🔊</button>
+                    <span class="portuguese">"Estou [feeling]."</span> - express how you feel
+                </div>
+            </div>
+            <p class="mt-4 text-green-700">Practice the full greeting exchange with a partner or out loud!</p>
+        </div>
+
+        <section class="lesson-card bg-blue-50 mt-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=greetings" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Greetings Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="unit-03-ask-about-others.html" class="text-blue-600 hover:text-blue-800">← Unit 3: Ask About Others</a>
+            <a href="unit-05-your-age.html" class="text-blue-600 hover:text-blue-800">Unit 5: Say Your Age →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

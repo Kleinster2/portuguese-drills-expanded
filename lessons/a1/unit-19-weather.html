@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 19: Talk About Weather - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .production-goal { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; }
+        .production-goal h2 { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; }
+        .production-goal .phrase { font-size: 1.75rem; font-weight: bold; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 0.75rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .now-you-can { background: #ecfdf5; border: 2px solid #10b981; border-radius: 1rem; padding: 1.5rem; margin-top: 2rem; }
+        .weather-icon { font-size: 1.5rem; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-6">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 19</span>
+            </div>
+        </div>
+
+        <div class="production-goal">
+            <h2>By the end of this unit, you'll say:</h2>
+            <div class="phrase">
+                <button class="speaker-btn mr-2" onclick="speak('Está frio hoje. No verão faz calor.')">🔊</button>
+                "Está frio hoje. No verão faz calor."
+            </div>
+            <div class="mt-2 text-white/80">It's cold today. In summer it's hot.</div>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Current Weather with ESTAR</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Está</span> + [weather condition]
+                <div class="text-sm text-gray-600 mt-1">Use ESTAR for right now</div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3 mt-4">
+                <div class="example-sentence">
+                    <span class="weather-icon">🥶</span>
+                    <button class="speaker-btn mr-2" onclick="speak('Está frio.')">🔊</button>
+                    <span class="portuguese">Está frio.</span> - It's cold.
+                </div>
+                <div class="example-sentence">
+                    <span class="weather-icon">🥵</span>
+                    <button class="speaker-btn mr-2" onclick="speak('Está quente.')">🔊</button>
+                    <span class="portuguese">Está quente.</span> - It's hot.
+                </div>
+                <div class="example-sentence">
+                    <span class="weather-icon">🌧️</span>
+                    <button class="speaker-btn mr-2" onclick="speak('Está chovendo.')">🔊</button>
+                    <span class="portuguese">Está chovendo.</span> - It's raining.
+                </div>
+                <div class="example-sentence">
+                    <span class="weather-icon">☀️</span>
+                    <button class="speaker-btn mr-2" onclick="speak('Está ensolarado.')">🔊</button>
+                    <span class="portuguese">Está ensolarado.</span> - It's sunny.
+                </div>
+                <div class="example-sentence">
+                    <span class="weather-icon">☁️</span>
+                    <button class="speaker-btn mr-2" onclick="speak('Está nublado.')">🔊</button>
+                    <span class="portuguese">Está nublado.</span> - It's cloudy.
+                </div>
+                <div class="example-sentence">
+                    <span class="weather-icon">💨</span>
+                    <button class="speaker-btn mr-2" onclick="speak('Está ventando.')">🔊</button>
+                    <span class="portuguese">Está ventando.</span> - It's windy.
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">General Weather with FAZER</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Faz</span> + [calor/frio]
+                <div class="text-sm text-gray-600 mt-1">Use FAZER for general statements or seasons</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Faz calor.')">🔊</button>
+                <span class="portuguese">Faz calor.</span>
+                <div class="text-gray-600 mt-1">It's hot. (general)</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Faz frio.')">🔊</button>
+                <span class="portuguese">Faz frio.</span>
+                <div class="text-gray-600 mt-1">It's cold. (general)</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Faz sol.')">🔊</button>
+                <span class="portuguese">Faz sol.</span>
+                <div class="text-gray-600 mt-1">It's sunny.</div>
+            </div>
+            <div class="info-box">
+                <strong>💡 Está vs. Faz:</strong> Both work! "Está frio" = right now. "Faz frio" = in general/usually.
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">The Seasons</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3">
+                <div class="example-sentence">
+                    <span class="weather-icon">🌸</span>
+                    <button class="speaker-btn mr-2" onclick="speak('a primavera')">🔊</button>
+                    <span class="portuguese">a primavera</span> - spring
+                </div>
+                <div class="example-sentence">
+                    <span class="weather-icon">☀️</span>
+                    <button class="speaker-btn mr-2" onclick="speak('o verão')">🔊</button>
+                    <span class="portuguese">o verão</span> - summer
+                </div>
+                <div class="example-sentence">
+                    <span class="weather-icon">🍂</span>
+                    <button class="speaker-btn mr-2" onclick="speak('o outono')">🔊</button>
+                    <span class="portuguese">o outono</span> - fall/autumn
+                </div>
+                <div class="example-sentence">
+                    <span class="weather-icon">❄️</span>
+                    <button class="speaker-btn mr-2" onclick="speak('o inverno')">🔊</button>
+                    <span class="portuguese">o inverno</span> - winter
+                </div>
+            </div>
+            <div class="grammar-box mt-4">
+                <strong>📝 Pattern:</strong> <span class="portuguese">No/Na</span> + [season] + <span class="portuguese">faz</span> + [weather]
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('No verão faz calor.')">🔊</button>
+                <span class="portuguese">No verão faz calor.</span>
+                <div class="text-gray-600 mt-1">In summer it's hot.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('No inverno faz frio.')">🔊</button>
+                <span class="portuguese">No inverno faz frio.</span>
+                <div class="text-gray-600 mt-1">In winter it's cold.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Ask About Weather</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Como está o tempo?')">🔊</button>
+                <span class="portuguese">Como está o tempo?</span>
+                <div class="text-gray-600 mt-1">How's the weather?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Está frio lá?')">🔊</button>
+                <span class="portuguese">Está frio lá?</span>
+                <div class="text-gray-600 mt-1">Is it cold there?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Vai chover amanhã?')">🔊</button>
+                <span class="portuguese">Vai chover amanhã?</span>
+                <div class="text-gray-600 mt-1">Is it going to rain tomorrow?</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Weather + Plans</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Está chovendo. Vou ficar em casa.')">🔊</button>
+                <span class="portuguese">Está chovendo. Vou ficar em casa.</span>
+                <div class="text-gray-600 mt-1">It's raining. I'm going to stay home.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Está sol! Vamos à praia?')">🔊</button>
+                <span class="portuguese">Está sol! Vamos à praia?</span>
+                <div class="text-gray-600 mt-1">It's sunny! Shall we go to the beach?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Está muito quente hoje. Quero um sorvete.')">🔊</button>
+                <span class="portuguese">Está muito quente hoje. Quero um sorvete.</span>
+                <div class="text-gray-600 mt-1">It's very hot today. I want an ice cream.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Talk About Climate</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('No Brasil faz calor quase o ano todo. Mas no sul faz frio no inverno.')">🔊</button>
+                <span class="portuguese">No Brasil faz calor quase o ano todo. Mas no sul faz frio no inverno.</span>
+                <div class="text-gray-600 mt-1">In Brazil it's hot almost all year. But in the south it's cold in winter.</div>
+            </div>
+        </section>
+
+        <div class="now-you-can">
+            <h3 class="text-xl font-bold text-green-800 mb-3">✅ Now You Can Say:</h3>
+            <div class="space-y-2">
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Está frio hoje.')">🔊</button>
+                    <span class="portuguese">"Está [weather] hoje."</span> - describe current weather
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('No verão faz calor.')">🔊</button>
+                    <span class="portuguese">"No [season] faz [weather]."</span> - talk about seasons
+                </div>
+            </div>
+            <p class="mt-4 text-green-700">Describe the weather where you are right now!</p>
+        </div>
+
+        <section class="lesson-card bg-blue-50 mt-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=weather" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Weather Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="unit-18-describe-home.html" class="text-blue-600 hover:text-blue-800">← Unit 18: Describe Your Home</a>
+            <a href="unit-20-health.html" class="text-blue-600 hover:text-blue-800">Unit 20: Talk About Health →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles & Gender - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .speaker-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .speaker-btn:hover {
+            background: #2563eb;
+        }
+        .portuguese {
+            font-weight: 600;
+            color: #1e40af;
+        }
+        .english {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        .example-sentence {
+            background: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .info-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .grammar-box {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .warning-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        th {
+            background: #f8fafc;
+            font-weight: 600;
+        }
+        .masculine {
+            background: #dbeafe;
+        }
+        .feminine {
+            background: #fce7f3;
+        }
+        .pattern-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .pattern-card {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 13</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Artigos e Gênero</h1>
+            <p class="text-gray-600">Articles & Grammatical Gender</p>
+        </div>
+
+        <!-- STEP 1: Articles Overview -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Articles Overview</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">Portuguese has four definite articles (the) and four indefinite articles (a/an/some), matching the gender and number of nouns.</p>
+
+            <h3 class="font-semibold text-gray-800 mb-3">Definite Articles (the)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th class="masculine">Masculine</th>
+                        <th class="feminine">Feminine</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Singular</strong></td>
+                        <td class="masculine">
+                            <button class="speaker-btn mr-1" onclick="speak('o')">🔊</button>
+                            <span class="portuguese">o</span>
+                        </td>
+                        <td class="feminine">
+                            <button class="speaker-btn mr-1" onclick="speak('a')">🔊</button>
+                            <span class="portuguese">a</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Plural</strong></td>
+                        <td class="masculine">
+                            <button class="speaker-btn mr-1" onclick="speak('os')">🔊</button>
+                            <span class="portuguese">os</span>
+                        </td>
+                        <td class="feminine">
+                            <button class="speaker-btn mr-1" onclick="speak('as')">🔊</button>
+                            <span class="portuguese">as</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="font-semibold text-gray-800 mb-3 mt-4">Indefinite Articles (a, an, some)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th class="masculine">Masculine</th>
+                        <th class="feminine">Feminine</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Singular</strong></td>
+                        <td class="masculine">
+                            <button class="speaker-btn mr-1" onclick="speak('um')">🔊</button>
+                            <span class="portuguese">um</span>
+                        </td>
+                        <td class="feminine">
+                            <button class="speaker-btn mr-1" onclick="speak('uma')">🔊</button>
+                            <span class="portuguese">uma</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Plural</strong></td>
+                        <td class="masculine">
+                            <button class="speaker-btn mr-1" onclick="speak('uns')">🔊</button>
+                            <span class="portuguese">uns</span>
+                        </td>
+                        <td class="feminine">
+                            <button class="speaker-btn mr-1" onclick="speak('umas')">🔊</button>
+                            <span class="portuguese">umas</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- STEP 2: Gender Patterns -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Gender Patterns</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">While you must memorize the gender of each noun, there are helpful patterns.</p>
+
+            <div class="pattern-grid">
+                <div class="pattern-card masculine">
+                    <h4 class="font-bold text-blue-800 mb-2">Usually Masculine</h4>
+                    <ul class="text-sm space-y-1">
+                        <li>• Words ending in <strong>-o</strong></li>
+                        <li>• Words ending in <strong>-or</strong></li>
+                        <li>• Words ending in <strong>-ma</strong> (Greek origin)</li>
+                        <li>• Days, months, oceans, rivers</li>
+                    </ul>
+                </div>
+                <div class="pattern-card feminine">
+                    <h4 class="font-bold text-pink-800 mb-2">Usually Feminine</h4>
+                    <ul class="text-sm space-y-1">
+                        <li>• Words ending in <strong>-a</strong></li>
+                        <li>• Words ending in <strong>-ção, -são</strong></li>
+                        <li>• Words ending in <strong>-dade, -tude</strong></li>
+                        <li>• Words ending in <strong>-gem</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3 mt-4">Examples</h3>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                    <h4 class="font-semibold text-blue-700 mb-2">Masculine (-o)</h4>
+                    <div class="example-sentence">
+                        <button class="speaker-btn mr-2" onclick="speak('o livro')">🔊</button>
+                        <span class="portuguese">o livro</span>
+                        <span class="english ml-2">the book</span>
+                    </div>
+                    <div class="example-sentence">
+                        <button class="speaker-btn mr-2" onclick="speak('o carro')">🔊</button>
+                        <span class="portuguese">o carro</span>
+                        <span class="english ml-2">the car</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-pink-700 mb-2">Feminine (-a)</h4>
+                    <div class="example-sentence">
+                        <button class="speaker-btn mr-2" onclick="speak('a casa')">🔊</button>
+                        <span class="portuguese">a casa</span>
+                        <span class="english ml-2">the house</span>
+                    </div>
+                    <div class="example-sentence">
+                        <button class="speaker-btn mr-2" onclick="speak('a mesa')">🔊</button>
+                        <span class="portuguese">a mesa</span>
+                        <span class="english ml-2">the table</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 3: Exceptions -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Common Exceptions</h2>
+            </div>
+
+            <div class="warning-box">
+                <strong>⚠️ Watch out!</strong> Not all nouns follow the -o/-a pattern. These common exceptions must be memorized.
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3 mt-4">Feminine words ending in -a that are actually masculine</h3>
+            <div class="pattern-grid">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o dia')">🔊</button>
+                    <span class="portuguese">o dia</span>
+                    <span class="english ml-2">the day</span>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o problema')">🔊</button>
+                    <span class="portuguese">o problema</span>
+                    <span class="english ml-2">the problem</span>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o sistema')">🔊</button>
+                    <span class="portuguese">o sistema</span>
+                    <span class="english ml-2">the system</span>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o mapa')">🔊</button>
+                    <span class="portuguese">o mapa</span>
+                    <span class="english ml-2">the map</span>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o cinema')">🔊</button>
+                    <span class="portuguese">o cinema</span>
+                    <span class="english ml-2">the cinema</span>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o tema')">🔊</button>
+                    <span class="portuguese">o tema</span>
+                    <span class="english ml-2">the theme</span>
+                </div>
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3 mt-4">Words ending in -o that are feminine</h3>
+            <div class="pattern-grid">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('a foto')">🔊</button>
+                    <span class="portuguese">a foto</span>
+                    <span class="english ml-2">the photo</span>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('a moto')">🔊</button>
+                    <span class="portuguese">a moto</span>
+                    <span class="english ml-2">the motorcycle</span>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>💡 Tip:</strong> Words ending in <strong>-ma</strong> from Greek (problema, sistema, tema, cinema) are usually <strong>masculine</strong>.
+            </div>
+        </section>
+
+        <!-- STEP 4: When to Use Articles -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">When to Use Articles</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">Portuguese uses articles more frequently than English!</p>
+
+            <h3 class="font-semibold text-gray-800 mb-3">Use articles with:</h3>
+
+            <div class="grammar-box">
+                <strong>✓ Names of people (in Brazil)</strong>
+                <div class="example-sentence mt-2">
+                    <button class="speaker-btn mr-2" onclick="speak('A Maria é minha amiga.')">🔊</button>
+                    <span class="portuguese">A Maria é minha amiga.</span>
+                    <div class="english mt-1">Maria is my friend.</div>
+                </div>
+            </div>
+
+            <div class="grammar-box">
+                <strong>✓ Possessives (in Brazil)</strong>
+                <div class="example-sentence mt-2">
+                    <button class="speaker-btn mr-2" onclick="speak('O meu carro é azul.')">🔊</button>
+                    <span class="portuguese">O meu carro é azul.</span>
+                    <div class="english mt-1">My car is blue.</div>
+                </div>
+            </div>
+
+            <div class="grammar-box">
+                <strong>✓ Languages (with falar)</strong>
+                <div class="example-sentence mt-2">
+                    <button class="speaker-btn mr-2" onclick="speak('Eu falo o português.')">🔊</button>
+                    <span class="portuguese">Eu falo (o) português.</span>
+                    <div class="english mt-1">I speak Portuguese. (article optional)</div>
+                </div>
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3 mt-4">Omit articles with:</h3>
+
+            <div class="info-box">
+                <strong>✗ Professions after ser (without adjective)</strong>
+                <div class="example-sentence mt-2">
+                    <button class="speaker-btn mr-2" onclick="speak('Ele é médico.')">🔊</button>
+                    <span class="portuguese">Ele é médico.</span>
+                    <div class="english mt-1">He is a doctor. (no article!)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 5: Article + Preposition Contractions -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Common Contractions</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">When prepositions meet articles, they combine! (More detail in Unit 19)</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Preposition</th>
+                        <th>+ o</th>
+                        <th>+ a</th>
+                        <th>+ os</th>
+                        <th>+ as</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>de</strong> (of/from)</td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('do')">🔊</button>
+                            <span class="portuguese">do</span>
+                        </td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('da')">🔊</button>
+                            <span class="portuguese">da</span>
+                        </td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('dos')">🔊</button>
+                            <span class="portuguese">dos</span>
+                        </td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('das')">🔊</button>
+                            <span class="portuguese">das</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>em</strong> (in/on/at)</td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('no')">🔊</button>
+                            <span class="portuguese">no</span>
+                        </td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('na')">🔊</button>
+                            <span class="portuguese">na</span>
+                        </td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('nos')">🔊</button>
+                            <span class="portuguese">nos</span>
+                        </td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('nas')">🔊</button>
+                            <span class="portuguese">nas</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Eu moro no Brasil.')">🔊</button>
+                <span class="portuguese">Eu moro no Brasil.</span>
+                <div class="english mt-1">I live in Brazil. (em + o = no)</div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Sou da cidade de São Paulo.')">🔊</button>
+                <span class="portuguese">Sou da cidade de São Paulo.</span>
+                <div class="english mt-1">I'm from the city of São Paulo. (de + a = da)</div>
+            </div>
+        </section>
+
+        <!-- STEP 6: Practice Examples -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Practice Examples</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('O gato está na cama.')">🔊</button>
+                    <span class="portuguese">O gato está na cama.</span>
+                    <div class="english mt-1">The cat is on the bed.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Eu tenho um carro e uma bicicleta.')">🔊</button>
+                    <span class="portuguese">Eu tenho um carro e uma bicicleta.</span>
+                    <div class="english mt-1">I have a car and a bicycle.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Os meninos estão na escola.')">🔊</button>
+                    <span class="portuguese">Os meninos estão na escola.</span>
+                    <div class="english mt-1">The boys are at school.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('As flores são bonitas.')">🔊</button>
+                    <span class="portuguese">As flores são bonitas.</span>
+                    <div class="english mt-1">The flowers are beautiful.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practice Section -->
+        <section class="lesson-card bg-blue-50">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <p class="text-gray-700 mb-4">Ready to practice articles and gender? Try this drill:</p>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=articles" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Articles Drill →
+                </a>
+                <a href="/?drill=gender" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Gender Practice →
+                </a>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="ser-estar.html" class="text-blue-600 hover:text-blue-800">
+                ← Unit 12: Ser vs Estar
+            </a>
+            <a href="plurals.html" class="text-blue-600 hover:text-blue-800">
+                Unit 14: Noun Plurals →
+            </a>
+        </div>
+    </main>
+
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'pt-BR';
+                utterance.rate = options.rate || 0.9;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+    </script>
+</body>
+</html>

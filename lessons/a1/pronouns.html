@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Pronouns - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .speaker-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .speaker-btn:hover {
+            background: #2563eb;
+        }
+        .portuguese {
+            font-weight: 600;
+            color: #1e40af;
+        }
+        .english {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        .example-sentence {
+            background: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .info-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .grammar-box {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .warning-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .vocab-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .vocab-item:last-child {
+            border-bottom: none;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        th {
+            background: #f8fafc;
+            font-weight: 600;
+        }
+        .highlight {
+            background: #fef3c7;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 11</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Pronomes Pessoais</h1>
+            <p class="text-gray-600">Personal Pronouns & Subject Omission</p>
+        </div>
+
+        <!-- STEP 1: Subject Pronouns -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Subject Pronouns</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">Subject pronouns indicate who is performing the action. Portuguese has different pronouns for formal/informal and regional variations.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Person</th>
+                        <th>Portuguese</th>
+                        <th>English</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1st singular</td>
+                        <td>
+                            <button class="speaker-btn mr-2" onclick="speak('eu')">🔊</button>
+                            <span class="portuguese">eu</span>
+                        </td>
+                        <td>I</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>2nd singular (informal)</td>
+                        <td>
+                            <button class="speaker-btn mr-2" onclick="speak('tu')">🔊</button>
+                            <span class="portuguese">tu</span>
+                        </td>
+                        <td>you (EP, some BP regions)</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td>2nd/3rd singular</td>
+                        <td>
+                            <button class="speaker-btn mr-2" onclick="speak('você')">🔊</button>
+                            <span class="portuguese">você</span>
+                        </td>
+                        <td>you (BP, formal EP)</td>
+                    </tr>
+                    <tr>
+                        <td>3rd singular (male)</td>
+                        <td>
+                            <button class="speaker-btn mr-2" onclick="speak('ele')">🔊</button>
+                            <span class="portuguese">ele</span>
+                        </td>
+                        <td>he</td>
+                    </tr>
+                    <tr>
+                        <td>3rd singular (female)</td>
+                        <td>
+                            <button class="speaker-btn mr-2" onclick="speak('ela')">🔊</button>
+                            <span class="portuguese">ela</span>
+                        </td>
+                        <td>she</td>
+                    </tr>
+                    <tr>
+                        <td>1st plural</td>
+                        <td>
+                            <button class="speaker-btn mr-2" onclick="speak('nós')">🔊</button>
+                            <span class="portuguese">nós</span>
+                        </td>
+                        <td>we</td>
+                    </tr>
+                    <tr>
+                        <td>2nd/3rd plural</td>
+                        <td>
+                            <button class="speaker-btn mr-2" onclick="speak('vocês')">🔊</button>
+                            <span class="portuguese">vocês</span>
+                        </td>
+                        <td>you (plural)</td>
+                    </tr>
+                    <tr>
+                        <td>3rd plural (male/mixed)</td>
+                        <td>
+                            <button class="speaker-btn mr-2" onclick="speak('eles')">🔊</button>
+                            <span class="portuguese">eles</span>
+                        </td>
+                        <td>they (male/mixed)</td>
+                    </tr>
+                    <tr>
+                        <td>3rd plural (female)</td>
+                        <td>
+                            <button class="speaker-btn mr-2" onclick="speak('elas')">🔊</button>
+                            <span class="portuguese">elas</span>
+                        </td>
+                        <td>they (female)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- STEP 2: Tu vs Você -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Tu vs Você</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">This is one of the biggest differences between Brazilian and European Portuguese!</p>
+
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="p-4 bg-green-50 rounded-lg border border-green-200">
+                    <h3 class="font-bold text-green-800 mb-2">🇧🇷 Brazilian Portuguese</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>• <strong>Você</strong> is used for everyone</li>
+                        <li>• <em>Tu</em> exists in some regions (South, North)</li>
+                        <li>• Even when <em>tu</em> is used, often with <em>você</em> verb forms</li>
+                        <li>• No formal/informal distinction in most of Brazil</li>
+                    </ul>
+                </div>
+                <div class="p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <h3 class="font-bold text-blue-800 mb-2">🇵🇹 European Portuguese</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>• <strong>Tu</strong> for informal (friends, family)</li>
+                        <li>• <strong>Você</strong> for formal situations</li>
+                        <li>• Clear formal/informal distinction</li>
+                        <li>• Using wrong form can be rude or awkward</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Tu falas português?')">🔊</button>
+                <span class="portuguese">Tu falas português?</span>
+                <div class="english mt-1">Do you speak Portuguese? (informal, EP)</div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Você fala português?')">🔊</button>
+                <span class="portuguese">Você fala português?</span>
+                <div class="english mt-1">Do you speak Portuguese? (BP / formal EP)</div>
+            </div>
+
+            <div class="info-box">
+                <strong>💡 Tip for learners:</strong> If you're learning Brazilian Portuguese, focus on <em>você</em>. If European Portuguese, learn both <em>tu</em> and <em>você</em> and when to use each.
+            </div>
+        </section>
+
+        <!-- STEP 3: Formal Address -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Formal Address</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">For very formal situations, Portuguese uses titles with third-person verb forms.</p>
+
+            <div class="space-y-3">
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('o senhor')">🔊</button>
+                    <div>
+                        <span class="portuguese">o senhor</span>
+                        <div class="english">you (formal, to a man) / sir</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('a senhora')">🔊</button>
+                    <div>
+                        <span class="portuguese">a senhora</span>
+                        <div class="english">you (formal, to a woman) / ma'am</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('O senhor quer café?')">🔊</button>
+                <span class="portuguese">O senhor quer café?</span>
+                <div class="english mt-1">Would you like coffee, sir? (very formal)</div>
+            </div>
+
+            <div class="grammar-box">
+                <strong>📝 Usage:</strong> <em>O senhor / A senhora</em> takes 3rd person verb forms, just like <em>ele/ela</em>.
+            </div>
+        </section>
+
+        <!-- STEP 4: Subject Omission -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Subject Omission (Pro-Drop)</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">Unlike English, Portuguese often <strong>drops the subject pronoun</strong> when it's clear from context or verb conjugation. This is called "pro-drop."</p>
+
+            <div class="grammar-box">
+                <strong>📝 Rule:</strong> When the verb ending makes the subject clear, the pronoun is often omitted in natural speech.
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3 mt-4">Examples of Subject Omission</h3>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Falo português.')">🔊</button>
+                <span class="portuguese">Falo português.</span>
+                <div class="english mt-1">I speak Portuguese. (no need for "eu" - the -o ending shows it's "I")</div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Somos brasileiros.')">🔊</button>
+                <span class="portuguese">Somos brasileiros.</span>
+                <div class="english mt-1">We are Brazilian. (no need for "nós" - the -mos ending shows it's "we")</div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Vou ao mercado.')">🔊</button>
+                <span class="portuguese">Vou ao mercado.</span>
+                <div class="english mt-1">I'm going to the market. ("vou" is unique to "eu")</div>
+            </div>
+
+            <div class="info-box">
+                <strong>💡 When to include the pronoun:</strong>
+                <ul class="mt-2 space-y-1">
+                    <li>• For emphasis: <em>Eu</em> falo português! (I speak Portuguese!)</li>
+                    <li>• For contrast: <em>Eu</em> sou brasileiro, <em>ele</em> é português.</li>
+                    <li>• When the verb form is ambiguous (ele/ela/você share forms)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- STEP 5: Ambiguous Forms -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Ambiguous Forms</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">Some verb forms are shared by multiple subjects. In these cases, context helps, or you may need to include the pronoun.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Verb Form</th>
+                        <th>Possible Subjects</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="portuguese">falo, como, vou</td>
+                        <td>eu (unambiguous)</td>
+                    </tr>
+                    <tr>
+                        <td class="portuguese">falamos, comemos, vamos</td>
+                        <td>nós (unambiguous)</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td class="portuguese">fala, come, vai</td>
+                        <td>você, ele, ela, o senhor, a senhora (ambiguous)</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td class="portuguese">falam, comem, vão</td>
+                        <td>vocês, eles, elas (ambiguous)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="warning-box">
+                <strong>⚠️ Important:</strong> When using <em>você, ele, ela</em> forms, include the subject pronoun if it's not clear from context who you're talking about.
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Ele fala inglês.')">🔊</button>
+                <span class="portuguese">Ele fala inglês.</span>
+                <div class="english mt-1">He speaks English. (pronoun needed to clarify who)</div>
+            </div>
+        </section>
+
+        <!-- STEP 6: Practice Patterns -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Common Patterns</h2>
+            </div>
+
+            <div class="space-y-3">
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Eu sou Maria.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Eu sou Maria.</span>
+                        <div class="english">I am Maria. (introduction - pronoun often included)</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Sou de São Paulo.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Sou de São Paulo.</span>
+                        <div class="english">I'm from São Paulo. (pronoun dropped - natural)</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Você é brasileiro?')">🔊</button>
+                    <div>
+                        <span class="portuguese">Você é brasileiro?</span>
+                        <div class="english">Are you Brazilian? (pronoun included for clarity)</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Estudamos português juntos.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Estudamos português juntos.</span>
+                        <div class="english">We study Portuguese together. (pronoun dropped)</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Eles moram no Brasil.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Eles moram no Brasil.</span>
+                        <div class="english">They live in Brazil. (pronoun needed)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practice Section -->
+        <section class="lesson-card bg-blue-50">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <p class="text-gray-700 mb-4">Ready to practice personal pronouns? Try these drills:</p>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=pronouns" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Pronouns Drill →
+                </a>
+                <a href="/?drill=subject-identification" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Subject Identification Drill →
+                </a>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="house.html" class="text-blue-600 hover:text-blue-800">
+                ← Unit 10: House & Rooms
+            </a>
+            <a href="ser-estar.html" class="text-blue-600 hover:text-blue-800">
+                Unit 12: Ser vs Estar →
+            </a>
+        </div>
+    </main>
+
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'pt-BR';
+                utterance.rate = options.rate || 0.9;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+    </script>
+</body>
+</html>

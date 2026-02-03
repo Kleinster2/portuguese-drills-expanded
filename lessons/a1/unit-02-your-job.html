@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 2: Talk About Your Job - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .production-goal { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; }
+        .production-goal h2 { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; }
+        .production-goal .phrase { font-size: 1.75rem; font-weight: bold; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 0.75rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .now-you-can { background: #ecfdf5; border: 2px solid #10b981; border-radius: 1rem; padding: 1.5rem; margin-top: 2rem; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-6">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 2</span>
+            </div>
+        </div>
+
+        <div class="production-goal">
+            <h2>By the end of this unit, you'll say:</h2>
+            <div class="phrase">
+                <button class="speaker-btn mr-2" onclick="speak('Sou professor. Trabalho em São Paulo.')">🔊</button>
+                "Sou professor. Trabalho em São Paulo."
+            </div>
+            <div class="mt-2 text-white/80">I'm a teacher. I work in São Paulo.</div>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Say Your Profession</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Sou</span> + [profession]
+                <div class="mt-2 text-sm text-gray-600">No article needed! (NOT "Sou <em>um</em> professor")</div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3 mt-4">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Sou professor.')">🔊</button>
+                    <span class="portuguese">Sou professor.</span>
+                    <div class="text-gray-600 mt-1">I'm a teacher. (male)</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Sou professora.')">🔊</button>
+                    <span class="portuguese">Sou professora.</span>
+                    <div class="text-gray-600 mt-1">I'm a teacher. (female)</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Sou médico.')">🔊</button>
+                    <span class="portuguese">Sou médico.</span>
+                    <div class="text-gray-600 mt-1">I'm a doctor. (male)</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Sou médica.')">🔊</button>
+                    <span class="portuguese">Sou médica.</span>
+                    <div class="text-gray-600 mt-1">I'm a doctor. (female)</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Sou engenheiro.')">🔊</button>
+                    <span class="portuguese">Sou engenheiro/a.</span>
+                    <div class="text-gray-600 mt-1">I'm an engineer.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Sou advogado.')">🔊</button>
+                    <span class="portuguese">Sou advogado/a.</span>
+                    <div class="text-gray-600 mt-1">I'm a lawyer.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">More Professions</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('estudante')">🔊</button>
+                    <span class="portuguese">estudante</span> - student
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('programador')">🔊</button>
+                    <span class="portuguese">programador/a</span> - programmer
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('empresário')">🔊</button>
+                    <span class="portuguese">empresário/a</span> - business owner
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('vendedor')">🔊</button>
+                    <span class="portuguese">vendedor/a</span> - salesperson
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('jornalista')">🔊</button>
+                    <span class="portuguese">jornalista</span> - journalist
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('dentista')">🔊</button>
+                    <span class="portuguese">dentista</span> - dentist
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('enfermeiro')">🔊</button>
+                    <span class="portuguese">enfermeiro/a</span> - nurse
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('arquiteto')">🔊</button>
+                    <span class="portuguese">arquiteto/a</span> - architect
+                </div>
+            </div>
+            <div class="info-box">
+                <strong>💡 Pattern:</strong> Words ending in <strong>-ista</strong> don't change: <em>jornalista, dentista, artista</em>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Say Where You Work</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Useful word:</strong> <span class="portuguese">trabalho</span> = I work
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Trabalho em São Paulo.')">🔊</button>
+                <span class="portuguese">Trabalho em São Paulo.</span>
+                <div class="text-gray-600 mt-1">I work in São Paulo.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Trabalho em um hospital.')">🔊</button>
+                <span class="portuguese">Trabalho em um hospital.</span>
+                <div class="text-gray-600 mt-1">I work in a hospital.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Trabalho em uma escola.')">🔊</button>
+                <span class="portuguese">Trabalho em uma escola.</span>
+                <div class="text-gray-600 mt-1">I work at a school.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Trabalho em casa.')">🔊</button>
+                <span class="portuguese">Trabalho em casa.</span>
+                <div class="text-gray-600 mt-1">I work from home.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Not Working?</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Sou estudante.')">🔊</button>
+                <span class="portuguese">Sou estudante.</span>
+                <div class="text-gray-600 mt-1">I'm a student.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Estou aposentado.')">🔊</button>
+                <span class="portuguese">Estou aposentado/a.</span>
+                <div class="text-gray-600 mt-1">I'm retired.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Estou desempregado.')">🔊</button>
+                <span class="portuguese">Estou desempregado/a.</span>
+                <div class="text-gray-600 mt-1">I'm unemployed.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Estou procurando emprego.')">🔊</button>
+                <span class="portuguese">Estou procurando emprego.</span>
+                <div class="text-gray-600 mt-1">I'm looking for a job.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Put It Together</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Sou médica. Trabalho em um hospital em Curitiba.')">🔊</button>
+                <span class="portuguese">Sou médica. Trabalho em um hospital em Curitiba.</span>
+                <div class="text-gray-600 mt-1">I'm a doctor. I work at a hospital in Curitiba.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Sou programador. Trabalho em casa.')">🔊</button>
+                <span class="portuguese">Sou programador. Trabalho em casa.</span>
+                <div class="text-gray-600 mt-1">I'm a programmer. I work from home.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Sou estudante. Estudo na universidade.')">🔊</button>
+                <span class="portuguese">Sou estudante. Estudo na universidade.</span>
+                <div class="text-gray-600 mt-1">I'm a student. I study at the university.</div>
+            </div>
+            <div class="info-box">
+                <strong>📝 Reminder:</strong> em + a = na, em + o = no (you learned this with "moro" in Unit 1!)
+            </div>
+        </section>
+
+        <div class="now-you-can">
+            <h3 class="text-xl font-bold text-green-800 mb-3">✅ Now You Can Say:</h3>
+            <div class="space-y-2">
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Sou professor.')">🔊</button>
+                    <span class="portuguese">"Sou [profession]."</span> - state your job
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Trabalho em São Paulo.')">🔊</button>
+                    <span class="portuguese">"Trabalho em [place]."</span> - say where you work
+                </div>
+            </div>
+            <p class="mt-4 text-green-700">Introduce yourself with your profession and workplace!</p>
+        </div>
+
+        <section class="lesson-card bg-blue-50 mt-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=professions" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Professions Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="unit-01-introduce-yourself.html" class="text-blue-600 hover:text-blue-800">← Unit 1: Introduce Yourself</a>
+            <a href="unit-03-ask-about-others.html" class="text-blue-600 hover:text-blue-800">Unit 3: Ask About Others →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

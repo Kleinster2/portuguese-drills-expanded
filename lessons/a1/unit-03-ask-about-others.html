@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 3: Ask About Others - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .production-goal { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; }
+        .production-goal h2 { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; }
+        .production-goal .phrase { font-size: 1.75rem; font-weight: bold; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 0.75rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .now-you-can { background: #ecfdf5; border: 2px solid #10b981; border-radius: 1rem; padding: 1.5rem; margin-top: 2rem; }
+        .dialogue { background: #faf5ff; border-radius: 0.5rem; padding: 1rem; margin: 1rem 0; }
+        .dialogue-line { padding: 0.5rem 0; border-bottom: 1px solid #e9d5ff; }
+        .dialogue-line:last-child { border-bottom: none; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-6">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 3</span>
+            </div>
+        </div>
+
+        <div class="production-goal">
+            <h2>By the end of this unit, you'll say:</h2>
+            <div class="phrase">
+                <button class="speaker-btn mr-2" onclick="speak('Você é brasileiro? De onde você é? O que você faz?')">🔊</button>
+                "Você é brasileiro? De onde você é? O que você faz?"
+            </div>
+            <div class="mt-2 text-white/80">Are you Brazilian? Where are you from? What do you do?</div>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Ask Someone's Name</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Qual é o seu nome?</span> = What's your name?
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Qual é o seu nome?')">🔊</button>
+                <span class="portuguese">Qual é o seu nome?</span>
+                <div class="text-gray-600 mt-1">What is your name?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Como você se chama?')">🔊</button>
+                <span class="portuguese">Como você se chama?</span>
+                <div class="text-gray-600 mt-1">What do you call yourself? (alternative)</div>
+            </div>
+            <div class="info-box">
+                <strong>💡 Answer:</strong> <span class="portuguese">"Meu nome é João"</span> or <span class="portuguese">"Me chamo João"</span>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Yes/No Questions with SER</h2>
+            </div>
+            <p class="text-gray-700 mb-4">To ask a yes/no question, just raise your voice at the end:</p>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Você é</span> + [nationality]<strong>?</strong> ↗
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Você é brasileiro?')">🔊</button>
+                <span class="portuguese">Você é brasileiro?</span>
+                <div class="text-gray-600 mt-1">Are you Brazilian? (to a man)</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Você é brasileira?')">🔊</button>
+                <span class="portuguese">Você é brasileira?</span>
+                <div class="text-gray-600 mt-1">Are you Brazilian? (to a woman)</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Você é americano?')">🔊</button>
+                <span class="portuguese">Você é americano?</span>
+                <div class="text-gray-600 mt-1">Are you American?</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Answer Yes or No</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Sim, sou.')">🔊</button>
+                    <span class="portuguese">Sim, sou.</span>
+                    <div class="text-gray-600 mt-1">Yes, I am.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Não, não sou.')">🔊</button>
+                    <span class="portuguese">Não, não sou.</span>
+                    <div class="text-gray-600 mt-1">No, I'm not.</div>
+                </div>
+            </div>
+            <div class="info-box">
+                <strong>💡 Natural response:</strong> In Portuguese, it's common to repeat the verb: <span class="portuguese">"Sou"</span> (yes) or <span class="portuguese">"Não sou"</span> (no)
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Ask Where Someone Is From</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">De onde você é?</span> = Where are you from?
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('De onde você é?')">🔊</button>
+                <span class="portuguese">De onde você é?</span>
+                <div class="text-gray-600 mt-1">Where are you from?</div>
+            </div>
+            <h3 class="font-semibold mt-4 mb-2">How to answer (you learned this in Unit 1!):</h3>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Sou de São Paulo.')">🔊</button>
+                <span class="portuguese">Sou de São Paulo.</span>
+                <div class="text-gray-600 mt-1">I'm from São Paulo.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Sou do Brasil.')">🔊</button>
+                <span class="portuguese">Sou do Brasil.</span>
+                <div class="text-gray-600 mt-1">I'm from Brazil. (de + o = do)</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Sou dos Estados Unidos.')">🔊</button>
+                <span class="portuguese">Sou dos Estados Unidos.</span>
+                <div class="text-gray-600 mt-1">I'm from the United States. (de + os = dos)</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Ask About Someone's Job</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">O que você faz?</span> = What do you do?
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('O que você faz?')">🔊</button>
+                <span class="portuguese">O que você faz?</span>
+                <div class="text-gray-600 mt-1">What do you do? (literally: What do you make?)</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Qual é a sua profissão?')">🔊</button>
+                <span class="portuguese">Qual é a sua profissão?</span>
+                <div class="text-gray-600 mt-1">What's your profession? (more formal)</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Onde você trabalha?')">🔊</button>
+                <span class="portuguese">Onde você trabalha?</span>
+                <div class="text-gray-600 mt-1">Where do you work?</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Full Conversation</h2>
+            </div>
+            <div class="dialogue">
+                <div class="dialogue-line">
+                    <strong>A:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Olá! Qual é o seu nome?')">🔊</button>
+                    <span class="portuguese">Olá! Qual é o seu nome?</span>
+                </div>
+                <div class="dialogue-line">
+                    <strong>B:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Meu nome é Carlos. E você?')">🔊</button>
+                    <span class="portuguese">Meu nome é Carlos. E você?</span>
+                </div>
+                <div class="dialogue-line">
+                    <strong>A:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Sou Maria. Você é brasileiro?')">🔊</button>
+                    <span class="portuguese">Sou Maria. Você é brasileiro?</span>
+                </div>
+                <div class="dialogue-line">
+                    <strong>B:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Sim, sou do Rio. E você, de onde é?')">🔊</button>
+                    <span class="portuguese">Sim, sou do Rio. E você, de onde é?</span>
+                </div>
+                <div class="dialogue-line">
+                    <strong>A:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Sou americana, de Nova York. O que você faz?')">🔊</button>
+                    <span class="portuguese">Sou americana, de Nova York. O que você faz?</span>
+                </div>
+                <div class="dialogue-line">
+                    <strong>B:</strong>
+                    <button class="speaker-btn mr-2" onclick="speak('Sou engenheiro. Trabalho em uma empresa de tecnologia.')">🔊</button>
+                    <span class="portuguese">Sou engenheiro. Trabalho em uma empresa de tecnologia.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 7</span>
+                <h2 class="text-xl font-bold text-gray-900">Polite Extras</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Prazer em conhecer você.')">🔊</button>
+                    <span class="portuguese">Prazer em conhecer você.</span>
+                    <div class="text-gray-600 mt-1">Nice to meet you.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Muito prazer.')">🔊</button>
+                    <span class="portuguese">Muito prazer.</span>
+                    <div class="text-gray-600 mt-1">Pleasure (to meet you).</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Igualmente.')">🔊</button>
+                    <span class="portuguese">Igualmente.</span>
+                    <div class="text-gray-600 mt-1">Likewise.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('E você?')">🔊</button>
+                    <span class="portuguese">E você?</span>
+                    <div class="text-gray-600 mt-1">And you?</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="now-you-can">
+            <h3 class="text-xl font-bold text-green-800 mb-3">✅ Now You Can Say:</h3>
+            <div class="space-y-2">
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Qual é o seu nome?')">🔊</button>
+                    <span class="portuguese">"Qual é o seu nome?"</span> - ask someone's name
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Você é brasileiro?')">🔊</button>
+                    <span class="portuguese">"Você é [nationality]?"</span> - ask about nationality
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('De onde você é?')">🔊</button>
+                    <span class="portuguese">"De onde você é?"</span> - ask where from
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('O que você faz?')">🔊</button>
+                    <span class="portuguese">"O que você faz?"</span> - ask about job
+                </div>
+            </div>
+            <p class="mt-4 text-green-700">Practice having a full introduction conversation!</p>
+        </div>
+
+        <section class="lesson-card bg-blue-50 mt-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=introductions" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Introductions Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="unit-02-your-job.html" class="text-blue-600 hover:text-blue-800">← Unit 2: Talk About Your Job</a>
+            <a href="unit-04-how-you-feel.html" class="text-blue-600 hover:text-blue-800">Unit 4: Say How You Feel →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A1.1: Self-Introduction - Portuguese Tutor</title>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0ea5e9">
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="/icons/icon-192.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        .example-sentence {
+            transition: all 0.2s;
+        }
+        .example-sentence:hover {
+            background-color: #f0f9ff;
+        }
+        .vocab-item {
+            transition: all 0.2s;
+        }
+        .vocab-item:hover {
+            background-color: #f8fafc;
+            border-left: 3px solid #0ea5e9;
+            padding-left: 13px;
+        }
+
+        /* Speaker button styles */
+        .speaker-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            margin-left: 8px;
+            background: #0ea5e9;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            opacity: 0.9;
+            flex-shrink: 0;
+        }
+        .speaker-btn:hover {
+            opacity: 1;
+            background: #0284c7;
+            transform: scale(1.05);
+        }
+        .speaker-btn:active {
+            transform: scale(0.95);
+        }
+        .speaker-btn.speaking {
+            background: #10b981;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* Hover translation tooltip styles */
+        .word-tooltip,
+        .phrase-tooltip {
+            position: relative;
+            cursor: help;
+            border-bottom: 1px dotted #94a3b8;
+        }
+
+        .word-tooltip:hover,
+        .phrase-tooltip:hover {
+            background-color: #dbeafe;
+            border-radius: 2px;
+        }
+
+        .word-tooltip::after,
+        .phrase-tooltip::after {
+            content: attr(data-translation);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #1e293b;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-style: italic;
+            white-space: nowrap;
+            text-align: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .word-tooltip::before,
+        .phrase-tooltip::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: #1e293b;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+            z-index: 10;
+        }
+
+        .word-tooltip:hover::after,
+        .word-tooltip:hover::before,
+        .phrase-tooltip:hover::after,
+        .phrase-tooltip:hover::before {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .word-tooltip.active::after,
+        .word-tooltip.active::before,
+        .phrase-tooltip.active::after,
+        .phrase-tooltip.active::before {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lesson-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .lesson-card {
+                border-radius: 0;
+                margin-left: -0.5rem;
+                margin-right: -0.5rem;
+            }
+        }
+    </style>
+    <!-- Plausible Analytics -->
+    <script async src="https://plausible.io/js/pa-A2kEULXGZtzUYXPsVOQwU.js"></script>
+    <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
+</head>
+<body class="bg-slate-50">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg">
+        <div class="container mx-auto max-w-3xl px-4 py-6">
+            <a href="/" class="text-sm opacity-80 hover:opacity-100 mb-2 inline-block">&larr; Back to Home</a>
+            <div class="flex items-center justify-between">
+                <div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="bg-white/20 text-xs font-bold px-2 py-0.5 rounded">A1</span>
+                        <span class="text-xs font-bold uppercase tracking-wide opacity-80">Unit 1</span>
+                    </div>
+                    <h1 class="text-2xl md:text-3xl font-bold">Self-Introduction</h1>
+                    <p class="mt-1 text-base opacity-90">Say who you are in Portuguese</p>
+                </div>
+                <div class="text-5xl font-bold opacity-20">1</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto max-w-3xl px-4 py-8">
+
+        <!-- Learning Goal -->
+        <section class="lesson-card bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200">
+            <div class="flex items-start gap-3">
+                <span class="text-2xl">🎯</span>
+                <div>
+                    <h2 class="font-bold text-gray-900">By the end of this lesson, you'll be able to:</h2>
+                    <ul class="mt-2 space-y-1 text-gray-700">
+                        <li>• Say your name</li>
+                        <li>• Say where you're from</li>
+                        <li>• Say your profession</li>
+                        <li>• Say your nationality</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 1: Eu sou -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Learn "Eu sou" (I am)</h2>
+            </div>
+
+            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                <div class="flex items-center gap-3">
+                    <div>
+                        <p class="text-3xl font-bold text-blue-900" data-hoverable="true">Eu sou</p>
+                        <p class="text-gray-600 mt-1">= I am</p>
+                    </div>
+                    <button class="speaker-btn" data-text="Eu sou" aria-label="Hear pronunciation">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <p class="text-gray-700 mb-4">This is the most important phrase for introducing yourself. You'll use it to say your name, where you're from, what you do, and your nationality.</p>
+
+            <div class="space-y-3">
+                <div class="flex items-center gap-3 text-gray-700">
+                    <span class="text-2xl">👤</span>
+                    <div><strong data-hoverable="true">Eu</strong> = I (the person speaking)</div>
+                </div>
+                <div class="flex items-center gap-3 text-gray-700">
+                    <span class="text-2xl">🔗</span>
+                    <div><strong data-hoverable="true">sou</strong> = am (from the verb "<span data-hoverable="true">ser</span>" - to be)</div>
+                </div>
+            </div>
+
+            <div class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg text-gray-700">
+                <strong class="text-blue-800">Good news:</strong> You don't need to understand grammar yet! Just memorize "<span data-hoverable="true">Eu sou</span>" as a chunk and use it.
+            </div>
+        </section>
+
+        <!-- STEP 2: Say Your Name -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Say Your Name</h2>
+            </div>
+
+            <div class="bg-slate-50 p-4 rounded-lg mb-4">
+                <p class="font-mono text-gray-600 mb-2"><span data-hoverable="true">Eu sou</span> <span class="text-blue-600" data-hoverable="true">o</span>/<span class="text-blue-600" data-hoverable="true">a</span> + <span class="text-blue-600">[your name]</span></p>
+                <p class="text-sm text-gray-500 mt-2"><strong data-hoverable="true">o</strong> = for male names &bull; <strong data-hoverable="true">a</strong> = for female names</p>
+            </div>
+
+            <h3 class="font-semibold text-gray-900 mb-3">Examples:</h3>
+            <div class="space-y-3">
+                <div class="example-sentence p-3 bg-white border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1">
+                            <p class="font-medium text-gray-900" data-hoverable="true">Eu sou o Daniel.</p>
+                        </div>
+                        <button class="speaker-btn" data-text="Eu sou o Daniel" aria-label="Hear pronunciation">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">I am Daniel. (male name = <strong>o</strong>)</p>
+                </div>
+                <div class="example-sentence p-3 bg-white border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1">
+                            <p class="font-medium text-gray-900" data-hoverable="true">Eu sou a Sofia.</p>
+                        </div>
+                        <button class="speaker-btn" data-text="Eu sou a Sofia" aria-label="Hear pronunciation">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">I am Sofia. (female name = <strong>a</strong>)</p>
+                </div>
+            </div>
+
+            <div class="mt-4 p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r-lg text-gray-700">
+                <strong class="text-amber-800">Tip:</strong> The "o/a" before names is optional in casual speech. You can also say "<span data-hoverable="true">Eu sou Daniel</span>" or "<span data-hoverable="true">Eu sou Sofia</span>".
+            </div>
+        </section>
+
+        <!-- STEP 3: Say Where You're From -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Say Where You're From</h2>
+            </div>
+
+            <div class="bg-slate-50 p-4 rounded-lg mb-4">
+                <p class="font-mono text-gray-600 mb-2"><span data-hoverable="true">Eu sou de</span> + <span class="text-blue-600">[city/country]</span></p>
+                <p class="text-sm text-gray-500"><strong data-hoverable="true">de</strong> = from</p>
+            </div>
+
+            <h3 class="font-semibold text-gray-900 mb-3">Examples:</h3>
+            <div class="space-y-3">
+                <div class="example-sentence p-3 bg-white border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1">
+                            <p class="font-medium text-gray-900" data-hoverable="true">Eu sou de Nova York.</p>
+                        </div>
+                        <button class="speaker-btn" data-text="Eu sou de Nova York" aria-label="Hear pronunciation">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">I am from New York.</p>
+                </div>
+                <div class="example-sentence p-3 bg-white border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1">
+                            <p class="font-medium text-gray-900" data-hoverable="true">Eu sou do Brasil.</p>
+                        </div>
+                        <button class="speaker-btn" data-text="Eu sou do Brasil" aria-label="Hear pronunciation">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">I am from Brazil. (<strong>do</strong> = de + o)</p>
+                </div>
+                <div class="example-sentence p-3 bg-white border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1">
+                            <p class="font-medium text-gray-900" data-hoverable="true">Eu sou da Argentina.</p>
+                        </div>
+                        <button class="speaker-btn" data-text="Eu sou da Argentina" aria-label="Hear pronunciation">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">I am from Argentina. (<strong>da</strong> = de + a)</p>
+                </div>
+            </div>
+
+            <div class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg text-gray-700">
+                <strong class="text-blue-800">Note:</strong> Some countries use "do/da" (de + the): <span data-hoverable="true">do Brasil</span>, <span data-hoverable="true">da Argentina</span>, <span data-hoverable="true">dos Estados Unidos</span>. Cities usually don't: <span data-hoverable="true">de Paris</span>, <span data-hoverable="true">de Tokyo</span>.
+            </div>
+        </section>
+
+        <!-- STEP 4: Say Your Profession -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Say Your Profession</h2>
+            </div>
+
+            <div class="bg-slate-50 p-4 rounded-lg mb-4">
+                <p class="font-mono text-gray-600 mb-2"><span data-hoverable="true">Eu sou</span> + <span class="text-blue-600">[profession]</span></p>
+                <p class="text-sm text-gray-500">No article needed before professions!</p>
+            </div>
+
+            <h3 class="font-semibold text-gray-900 mb-3">Common Professions:</h3>
+            <div class="grid grid-cols-2 gap-2 mb-4">
+                <div class="p-2 bg-gray-50 rounded flex items-center justify-between">
+                    <span data-hoverable="true">professor / professora</span>
+                    <button class="speaker-btn" data-text="professor" aria-label="Hear">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+                <div class="text-sm text-gray-600 self-center">teacher</div>
+
+                <div class="p-2 bg-gray-50 rounded flex items-center justify-between">
+                    <span data-hoverable="true">engenheiro / engenheira</span>
+                    <button class="speaker-btn" data-text="engenheiro" aria-label="Hear">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+                <div class="text-sm text-gray-600 self-center">engineer</div>
+
+                <div class="p-2 bg-gray-50 rounded flex items-center justify-between">
+                    <span data-hoverable="true">estudante</span>
+                    <button class="speaker-btn" data-text="estudante" aria-label="Hear">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+                <div class="text-sm text-gray-600 self-center">student</div>
+
+                <div class="p-2 bg-gray-50 rounded flex items-center justify-between">
+                    <span data-hoverable="true">advogado / advogada</span>
+                    <button class="speaker-btn" data-text="advogado" aria-label="Hear">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+                <div class="text-sm text-gray-600 self-center">lawyer</div>
+            </div>
+
+            <h3 class="font-semibold text-gray-900 mb-3">Examples:</h3>
+            <div class="space-y-3">
+                <div class="example-sentence p-3 bg-white border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1">
+                            <p class="font-medium text-gray-900" data-hoverable="true">Eu sou professor.</p>
+                        </div>
+                        <button class="speaker-btn" data-text="Eu sou professor" aria-label="Hear pronunciation">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">I am a teacher. (male)</p>
+                </div>
+                <div class="example-sentence p-3 bg-white border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1">
+                            <p class="font-medium text-gray-900" data-hoverable="true">Eu sou engenheira.</p>
+                        </div>
+                        <button class="speaker-btn" data-text="Eu sou engenheira" aria-label="Hear pronunciation">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">I am an engineer. (female)</p>
+                </div>
+            </div>
+
+            <div class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg text-gray-700">
+                <strong class="text-blue-800">Pattern:</strong> Many professions have male (-o) and female (-a) forms. Some like "<span data-hoverable="true">estudante</span>" work for both genders.
+            </div>
+        </section>
+
+        <!-- STEP 5: Say Your Nationality -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Say Your Nationality</h2>
+            </div>
+
+            <div class="bg-slate-50 p-4 rounded-lg mb-4">
+                <p class="font-mono text-gray-600 mb-2"><span data-hoverable="true">Eu sou</span> + <span class="text-blue-600">[nationality]</span></p>
+                <p class="text-sm text-gray-500">Nationalities also have male/female forms!</p>
+            </div>
+
+            <h3 class="font-semibold text-gray-900 mb-3">Common Nationalities:</h3>
+            <div class="grid grid-cols-2 gap-2 mb-4">
+                <div class="p-2 bg-gray-50 rounded flex items-center justify-between">
+                    <span data-hoverable="true">americano / americana</span>
+                    <button class="speaker-btn" data-text="americano" aria-label="Hear">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+                <div class="text-sm text-gray-600 self-center">American</div>
+
+                <div class="p-2 bg-gray-50 rounded flex items-center justify-between">
+                    <span data-hoverable="true">brasileiro / brasileira</span>
+                    <button class="speaker-btn" data-text="brasileiro" aria-label="Hear">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+                <div class="text-sm text-gray-600 self-center">Brazilian</div>
+
+                <div class="p-2 bg-gray-50 rounded flex items-center justify-between">
+                    <span data-hoverable="true">espanhol / espanhola</span>
+                    <button class="speaker-btn" data-text="espanhol" aria-label="Hear">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+                <div class="text-sm text-gray-600 self-center">Spanish</div>
+
+                <div class="p-2 bg-gray-50 rounded flex items-center justify-between">
+                    <span data-hoverable="true">canadense</span>
+                    <button class="speaker-btn" data-text="canadense" aria-label="Hear">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+                <div class="text-sm text-gray-600 self-center">Canadian (same for m/f)</div>
+            </div>
+
+            <h3 class="font-semibold text-gray-900 mb-3">Examples:</h3>
+            <div class="space-y-3">
+                <div class="example-sentence p-3 bg-white border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1">
+                            <p class="font-medium text-gray-900" data-hoverable="true">Eu sou americano.</p>
+                        </div>
+                        <button class="speaker-btn" data-text="Eu sou americano" aria-label="Hear pronunciation">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">I am American. (male)</p>
+                </div>
+                <div class="example-sentence p-3 bg-white border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1">
+                            <p class="font-medium text-gray-900" data-hoverable="true">Eu sou brasileira.</p>
+                        </div>
+                        <button class="speaker-btn" data-text="Eu sou brasileira" aria-label="Hear pronunciation">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-2">I am Brazilian. (female)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Put It Together -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-purple-100 text-purple-800 text-xs font-bold px-2 py-1 rounded">PRACTICE</span>
+                <h2 class="text-xl font-bold text-gray-900">Put It All Together</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">
+                Now combine everything into a complete self-introduction:
+            </p>
+
+            <div class="bg-gradient-to-r from-emerald-50 to-green-50 p-5 rounded-lg border border-emerald-200">
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1">
+                            <p class="text-lg font-medium text-gray-900" data-hoverable="true">Eu sou a Maria.</p>
+                        </div>
+                        <button class="speaker-btn" data-text="Eu sou a Maria" aria-label="Hear">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 -mt-2 ml-1">I am Maria.</p>
+
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1">
+                            <p class="text-lg font-medium text-gray-900" data-hoverable="true">Eu sou de Los Angeles.</p>
+                        </div>
+                        <button class="speaker-btn" data-text="Eu sou de Los Angeles" aria-label="Hear">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 -mt-2 ml-1">I am from Los Angeles.</p>
+
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1">
+                            <p class="text-lg font-medium text-gray-900" data-hoverable="true">Eu sou americana.</p>
+                        </div>
+                        <button class="speaker-btn" data-text="Eu sou americana" aria-label="Hear">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 -mt-2 ml-1">I am American.</p>
+
+                    <div class="flex items-center gap-2">
+                        <div class="flex-1">
+                            <p class="text-lg font-medium text-gray-900" data-hoverable="true">Eu sou professora.</p>
+                        </div>
+                        <button class="speaker-btn" data-text="Eu sou professora" aria-label="Hear">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 -mt-2 ml-1">I am a teacher.</p>
+                </div>
+
+                <div class="mt-4 pt-4 border-t border-emerald-200">
+                    <button class="speaker-btn w-full justify-center gap-2 py-2" data-text="Eu sou a Maria. Eu sou de Los Angeles. Eu sou americana. Eu sou professora." aria-label="Hear full introduction" style="width: 100%;">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        <span>Hear full introduction</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vocabulary Summary -->
+        <section class="lesson-card">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Key Phrases</h2>
+            <div class="space-y-3">
+                <div class="vocab-item p-3 border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <p class="font-semibold text-gray-900" data-hoverable="true">Eu sou</p>
+                        <button class="speaker-btn" data-text="Eu sou" aria-label="Hear pronunciation">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">I am</p>
+                </div>
+                <div class="vocab-item p-3 border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <p class="font-semibold text-gray-900" data-hoverable="true">Eu sou de...</p>
+                        <button class="speaker-btn" data-text="Eu sou de" aria-label="Hear pronunciation">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">I am from...</p>
+                </div>
+                <div class="vocab-item p-3 border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <p class="font-semibold text-gray-900"><span data-hoverable="true">o</span> / <span data-hoverable="true">a</span></p>
+                        <button class="speaker-btn" data-text="o, a" aria-label="Hear pronunciation">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">the (m/f) - used before names</p>
+                </div>
+                <div class="vocab-item p-3 border rounded-lg">
+                    <div class="flex items-center gap-2">
+                        <p class="font-semibold text-gray-900" data-hoverable="true">de</p>
+                        <button class="speaker-btn" data-text="de" aria-label="Hear pronunciation">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-1">from, of</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practice Drill -->
+        <section class="lesson-card bg-gradient-to-r from-sky-50 to-blue-50 border border-sky-200">
+            <h2 class="text-xl font-bold text-gray-900 mb-3">Ready to Practice?</h2>
+            <p class="text-gray-700 mb-4">
+                Practice introducing yourself with our AI tutor. You'll get instant feedback on your answers!
+            </p>
+            <a href="/?drill=self-introduction" class="inline-flex items-center gap-2 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Start Practice Drill
+            </a>
+        </section>
+
+        <!-- What's Next -->
+        <section class="lesson-card bg-gradient-to-r from-purple-50 to-indigo-50 border border-purple-200">
+            <h2 class="text-xl font-bold text-gray-900 mb-3">What's Next?</h2>
+            <p class="text-gray-700 mb-4">
+                In the next lesson, you'll learn greetings and polite expressions - essential for starting conversations!
+            </p>
+            <a href="/lessons/a1/greetings.html" class="inline-flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
+                Continue to Greetings
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 border-t mt-8">
+        <div class="container mx-auto max-w-3xl px-4 py-6 text-center text-gray-600 text-sm">
+            <a href="/" class="hover:text-blue-600">&larr; Back to Home</a>
+        </div>
+    </footer>
+
+    <!-- Text-to-Speech Script -->
+    <script>
+        // Simple TTS using Web Speech API
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'pt-BR';
+                utterance.rate = options.rate || 0.9;
+                if (options.onEnd) utterance.onend = options.onEnd;
+                if (options.onError) utterance.onerror = options.onError;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+
+        // Initialize speaker buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            const speakerButtons = document.querySelectorAll('.speaker-btn[data-text]');
+            speakerButtons.forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const text = this.getAttribute('data-text');
+                    this.classList.add('speaking');
+                    speak(text, {
+                        onEnd: () => this.classList.remove('speaking'),
+                        onError: () => this.classList.remove('speaking')
+                    });
+                });
+            });
+        });
+
+        // Hover Dictionary System
+        let dictionary = { phrases: {}, words: {} };
+
+        async function loadDictionary() {
+            try {
+                const response = await fetch('/config/dictionary.json');
+                dictionary = await response.json();
+            } catch (error) {
+                console.error('Failed to load dictionary:', error);
+            }
+        }
+
+        function lookupWord(word) {
+            const lowerWord = word.toLowerCase();
+            if (dictionary.words && dictionary.words[lowerWord]) {
+                return dictionary.words[lowerWord];
+            }
+            for (const [key, value] of Object.entries(dictionary.words || {})) {
+                if (key.toLowerCase() === lowerWord) {
+                    return value;
+                }
+            }
+            return null;
+        }
+
+        function addTooltips(text) {
+            let withTooltips = text;
+            const phrases = Object.entries(dictionary.phrases || {})
+                .sort((a, b) => b[0].length - a[0].length);
+
+            for (const [phrase, translation] of phrases) {
+                const safeTranslation = translation.replace(/"/g, '&quot;');
+                const escapedPhrase = phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                const phraseRegex = new RegExp(
+                    `(?<![A-Za-zÀ-ÿ])(${escapedPhrase})(?![A-Za-zÀ-ÿ])`,
+                    'gi'
+                );
+                withTooltips = withTooltips.replace(phraseRegex, function(match) {
+                    return `<span class="phrase-tooltip" data-translation="${safeTranslation}">${match}</span>`;
+                });
+            }
+
+            withTooltips = withTooltips.replace(
+                /(<span[^>]*>.*?<\/span>)|([A-Za-zÀ-ÿ]+)/g,
+                function(match, spanGroup, wordGroup) {
+                    if (spanGroup) return spanGroup;
+                    const translation = lookupWord(wordGroup);
+                    if (translation) {
+                        const safeTranslation = translation.replace(/"/g, '&quot;');
+                        return `<span class="word-tooltip" data-translation="${safeTranslation}">${wordGroup}</span>`;
+                    }
+                    return wordGroup;
+                }
+            );
+
+            return withTooltips;
+        }
+
+        function processHoverableElements() {
+            const hoverableElements = document.querySelectorAll('[data-hoverable="true"]');
+            hoverableElements.forEach(function(el) {
+                if (el.dataset.processed) return;
+                const originalText = el.textContent;
+                el.innerHTML = addTooltips(originalText);
+                el.dataset.processed = 'true';
+            });
+        }
+
+        // Mobile tap support
+        document.addEventListener('click', function(e) {
+            const tooltip = e.target.closest('.word-tooltip, .phrase-tooltip');
+            document.querySelectorAll('.word-tooltip.active, .phrase-tooltip.active').forEach(el => {
+                if (el !== tooltip) el.classList.remove('active');
+            });
+            if (tooltip) {
+                tooltip.classList.toggle('active');
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', async function() {
+            await loadDictionary();
+            processHoverableElements();
+        });
+    </script>
+    <!-- PWA Setup -->
+    <script src="/pwa-setup.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 14: Use Transportation - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .production-goal { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; }
+        .production-goal h2 { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; }
+        .production-goal .phrase { font-size: 1.75rem; font-weight: bold; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 0.75rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .now-you-can { background: #ecfdf5; border: 2px solid #10b981; border-radius: 1rem; padding: 1.5rem; margin-top: 2rem; }
+        .transport-icon { font-size: 1.5rem; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-6">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 14</span>
+            </div>
+        </div>
+
+        <div class="production-goal">
+            <h2>By the end of this unit, you'll say:</h2>
+            <div class="phrase">
+                <button class="speaker-btn mr-2" onclick="speak('Vou de metrô. Leva vinte minutos.')">🔊</button>
+                "Vou de metrô. Leva vinte minutos."
+            </div>
+            <div class="mt-2 text-white/80">I go by subway. It takes twenty minutes.</div>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">IR + DE: How You Travel</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Vou de</span> + [vehicle]
+            </div>
+            <div class="grid md:grid-cols-2 gap-3 mt-4">
+                <div class="example-sentence">
+                    <span class="transport-icon">🚗</span>
+                    <button class="speaker-btn mr-2" onclick="speak('Vou de carro.')">🔊</button>
+                    <span class="portuguese">Vou de carro.</span>
+                </div>
+                <div class="example-sentence">
+                    <span class="transport-icon">🚌</span>
+                    <button class="speaker-btn mr-2" onclick="speak('Vou de ônibus.')">🔊</button>
+                    <span class="portuguese">Vou de ônibus.</span>
+                </div>
+                <div class="example-sentence">
+                    <span class="transport-icon">🚇</span>
+                    <button class="speaker-btn mr-2" onclick="speak('Vou de metrô.')">🔊</button>
+                    <span class="portuguese">Vou de metrô.</span>
+                </div>
+                <div class="example-sentence">
+                    <span class="transport-icon">🚕</span>
+                    <button class="speaker-btn mr-2" onclick="speak('Vou de táxi.')">🔊</button>
+                    <span class="portuguese">Vou de táxi.</span>
+                </div>
+                <div class="example-sentence">
+                    <span class="transport-icon">🚲</span>
+                    <button class="speaker-btn mr-2" onclick="speak('Vou de bicicleta.')">🔊</button>
+                    <span class="portuguese">Vou de bicicleta.</span>
+                </div>
+                <div class="example-sentence">
+                    <span class="transport-icon">✈️</span>
+                    <button class="speaker-btn mr-2" onclick="speak('Vou de avião.')">🔊</button>
+                    <span class="portuguese">Vou de avião.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">On Foot</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Exception:</strong> <span class="portuguese">a pé</span> (not "de pé")
+            </div>
+            <div class="example-sentence">
+                <span class="transport-icon">🚶</span>
+                <button class="speaker-btn mr-2" onclick="speak('Vou a pé.')">🔊</button>
+                <span class="portuguese">Vou a pé.</span>
+                <div class="text-gray-600 mt-1">I go on foot. / I walk.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('É perto, vou a pé.')">🔊</button>
+                <span class="portuguese">É perto, vou a pé.</span>
+                <div class="text-gray-600 mt-1">It's close, I'll walk.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">IR + PARA: Destination</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Vou para</span> + [place] + <span class="portuguese">de</span> + [vehicle]
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Vou para o trabalho de metrô.')">🔊</button>
+                <span class="portuguese">Vou para o trabalho de metrô.</span>
+                <div class="text-gray-600 mt-1">I go to work by subway.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Vou para a escola de ônibus.')">🔊</button>
+                <span class="portuguese">Vou para a escola de ônibus.</span>
+                <div class="text-gray-600 mt-1">I go to school by bus.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Vou para o aeroporto de táxi.')">🔊</button>
+                <span class="portuguese">Vou para o aeroporto de táxi.</span>
+                <div class="text-gray-600 mt-1">I go to the airport by taxi.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">How Long It Takes</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Leva</span> + [time]
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Leva vinte minutos.')">🔊</button>
+                <span class="portuguese">Leva vinte minutos.</span>
+                <div class="text-gray-600 mt-1">It takes twenty minutes.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Leva meia hora.')">🔊</button>
+                <span class="portuguese">Leva meia hora.</span>
+                <div class="text-gray-600 mt-1">It takes half an hour.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('De metrô, leva quinze minutos.')">🔊</button>
+                <span class="portuguese">De metrô, leva quinze minutos.</span>
+                <div class="text-gray-600 mt-1">By subway, it takes fifteen minutes.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Ask About Transport</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Como você vai?')">🔊</button>
+                <span class="portuguese">Como você vai?</span>
+                <div class="text-gray-600 mt-1">How are you going? (By what means?)</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Quanto tempo leva?')">🔊</button>
+                <span class="portuguese">Quanto tempo leva?</span>
+                <div class="text-gray-600 mt-1">How long does it take?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Você vai de carro ou de ônibus?')">🔊</button>
+                <span class="portuguese">Você vai de carro ou de ônibus?</span>
+                <div class="text-gray-600 mt-1">Are you going by car or by bus?</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Full Examples</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Vou para o trabalho de metrô. Leva trinta minutos.')">🔊</button>
+                <span class="portuguese">Vou para o trabalho de metrô. Leva trinta minutos.</span>
+                <div class="text-gray-600 mt-1">I go to work by subway. It takes thirty minutes.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Prefiro ir de bicicleta. É mais rápido.')">🔊</button>
+                <span class="portuguese">Prefiro ir de bicicleta. É mais rápido.</span>
+                <div class="text-gray-600 mt-1">I prefer to go by bike. It's faster.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('A pé, leva dez minutos. De carro, leva cinco.')">🔊</button>
+                <span class="portuguese">A pé, leva dez minutos. De carro, leva cinco.</span>
+                <div class="text-gray-600 mt-1">On foot, it takes ten minutes. By car, it takes five.</div>
+            </div>
+        </section>
+
+        <div class="now-you-can">
+            <h3 class="text-xl font-bold text-green-800 mb-3">✅ Now You Can Say:</h3>
+            <div class="space-y-2">
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Vou de metrô.')">🔊</button>
+                    <span class="portuguese">"Vou de [vehicle]."</span> - say how you travel
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Leva vinte minutos.')">🔊</button>
+                    <span class="portuguese">"Leva [time]."</span> - say how long it takes
+                </div>
+            </div>
+            <p class="mt-4 text-green-700">Describe how you get to work, school, or places you visit!</p>
+        </div>
+
+        <section class="lesson-card bg-blue-50 mt-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=transportation" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Transportation Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="unit-13-directions.html" class="text-blue-600 hover:text-blue-800">← Unit 13: Ask for Directions</a>
+            <a href="unit-15-shopping.html" class="text-blue-600 hover:text-blue-800">Unit 15: Go Shopping →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

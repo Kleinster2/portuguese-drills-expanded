@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+        .vocab-card {
+            background: #f8fafc;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+        .speaker-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .speaker-btn:hover {
+            background: #2563eb;
+        }
+        .portuguese {
+            font-weight: 600;
+            color: #1e40af;
+        }
+        .english {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        .example-sentence {
+            background: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .info-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .grammar-box {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .vocab-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .vocab-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 9</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">As Roupas</h1>
+            <p class="text-gray-600">Clothing & Accessories</p>
+        </div>
+
+        <!-- STEP 1: Upper Body Clothing -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Upper Body Clothing</h2>
+            </div>
+
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a camisa')">🔊</button>
+                    <div class="portuguese">a camisa</div>
+                    <div class="english">shirt</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a camiseta')">🔊</button>
+                    <div class="portuguese">a camiseta</div>
+                    <div class="english">t-shirt (BP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a blusa')">🔊</button>
+                    <div class="portuguese">a blusa</div>
+                    <div class="english">blouse</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o suéter')">🔊</button>
+                    <div class="portuguese">o suéter</div>
+                    <div class="english">sweater (BP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a camisola')">🔊</button>
+                    <div class="portuguese">a camisola</div>
+                    <div class="english">sweater (EP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o casaco')">🔊</button>
+                    <div class="portuguese">o casaco</div>
+                    <div class="english">coat/jacket</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a jaqueta')">🔊</button>
+                    <div class="portuguese">a jaqueta</div>
+                    <div class="english">jacket (BP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o paletó')">🔊</button>
+                    <div class="portuguese">o paletó</div>
+                    <div class="english">suit jacket</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>🇧🇷 vs 🇵🇹:</strong> In Portugal, <em>camisola</em> means sweater, but in Brazil it means nightgown!
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Ele está usando uma camisa azul.')">🔊</button>
+                <span class="portuguese">Ele está usando uma camisa azul.</span>
+                <div class="english mt-1">He is wearing a blue shirt.</div>
+            </div>
+        </section>
+
+        <!-- STEP 2: Lower Body Clothing -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Lower Body Clothing</h2>
+            </div>
+
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a calça')">🔊</button>
+                    <div class="portuguese">a calça</div>
+                    <div class="english">pants (BP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('as calças')">🔊</button>
+                    <div class="portuguese">as calças</div>
+                    <div class="english">pants (EP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a calça jeans')">🔊</button>
+                    <div class="portuguese">a calça jeans</div>
+                    <div class="english">jeans</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o shorts')">🔊</button>
+                    <div class="portuguese">o shorts</div>
+                    <div class="english">shorts (BP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a saia')">🔊</button>
+                    <div class="portuguese">a saia</div>
+                    <div class="english">skirt</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o vestido')">🔊</button>
+                    <div class="portuguese">o vestido</div>
+                    <div class="english">dress</div>
+                </div>
+            </div>
+
+            <div class="grammar-box">
+                <strong>📝 Note:</strong> In Brazil, <em>calça</em> is singular. In Portugal, <em>calças</em> is typically plural (like "pants" in English).
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Ela comprou uma saia vermelha.')">🔊</button>
+                <span class="portuguese">Ela comprou uma saia vermelha.</span>
+                <div class="english mt-1">She bought a red skirt.</div>
+            </div>
+        </section>
+
+        <!-- STEP 3: Footwear -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Footwear</h2>
+            </div>
+
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o sapato')">🔊</button>
+                    <div class="portuguese">o sapato</div>
+                    <div class="english">shoe</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o tênis')">🔊</button>
+                    <div class="portuguese">o tênis</div>
+                    <div class="english">sneakers (BP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('as sapatilhas')">🔊</button>
+                    <div class="portuguese">as sapatilhas</div>
+                    <div class="english">sneakers (EP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a bota')">🔊</button>
+                    <div class="portuguese">a bota</div>
+                    <div class="english">boot</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a sandália')">🔊</button>
+                    <div class="portuguese">a sandália</div>
+                    <div class="english">sandal</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o chinelo')">🔊</button>
+                    <div class="portuguese">o chinelo</div>
+                    <div class="english">flip-flop/slipper</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o salto alto')">🔊</button>
+                    <div class="portuguese">o salto alto</div>
+                    <div class="english">high heels</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a meia')">🔊</button>
+                    <div class="portuguese">a meia</div>
+                    <div class="english">sock</div>
+                </div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Onde estão meus sapatos?')">🔊</button>
+                <span class="portuguese">Onde estão meus sapatos?</span>
+                <div class="english mt-1">Where are my shoes?</div>
+            </div>
+        </section>
+
+        <!-- STEP 4: Accessories -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Accessories</h2>
+            </div>
+
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o chapéu')">🔊</button>
+                    <div class="portuguese">o chapéu</div>
+                    <div class="english">hat</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o boné')">🔊</button>
+                    <div class="portuguese">o boné</div>
+                    <div class="english">cap</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o cinto')">🔊</button>
+                    <div class="portuguese">o cinto</div>
+                    <div class="english">belt</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a gravata')">🔊</button>
+                    <div class="portuguese">a gravata</div>
+                    <div class="english">tie</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o cachecol')">🔊</button>
+                    <div class="portuguese">o cachecol</div>
+                    <div class="english">scarf</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('as luvas')">🔊</button>
+                    <div class="portuguese">as luvas</div>
+                    <div class="english">gloves</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('os óculos')">🔊</button>
+                    <div class="portuguese">os óculos</div>
+                    <div class="english">glasses</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('os óculos de sol')">🔊</button>
+                    <div class="portuguese">os óculos de sol</div>
+                    <div class="english">sunglasses</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a bolsa')">🔊</button>
+                    <div class="portuguese">a bolsa</div>
+                    <div class="english">bag/purse</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o relógio')">🔊</button>
+                    <div class="portuguese">o relógio</div>
+                    <div class="english">watch</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>💡 Note:</strong> <em>Os óculos</em> (glasses) is always plural in Portuguese, even for one pair.
+            </div>
+        </section>
+
+        <!-- STEP 5: Underwear & Swimwear -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Underwear & Swimwear</h2>
+            </div>
+
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a cueca')">🔊</button>
+                    <div class="portuguese">a cueca</div>
+                    <div class="english">underwear (men's)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a calcinha')">🔊</button>
+                    <div class="portuguese">a calcinha</div>
+                    <div class="english">underwear (women's)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o sutiã')">🔊</button>
+                    <div class="portuguese">o sutiã</div>
+                    <div class="english">bra</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o pijama')">🔊</button>
+                    <div class="portuguese">o pijama</div>
+                    <div class="english">pajamas</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o biquíni')">🔊</button>
+                    <div class="portuguese">o biquíni</div>
+                    <div class="english">bikini</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o maiô')">🔊</button>
+                    <div class="portuguese">o maiô</div>
+                    <div class="english">swimsuit (one-piece)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a sunga')">🔊</button>
+                    <div class="portuguese">a sunga</div>
+                    <div class="english">swim trunks (BP)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 6: Useful Phrases -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Useful Phrases</h2>
+            </div>
+
+            <div class="space-y-3">
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('O que você está vestindo?')">🔊</button>
+                    <div>
+                        <span class="portuguese">O que você está vestindo?</span>
+                        <div class="english">What are you wearing?</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Eu estou vestindo uma camiseta.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Eu estou vestindo uma camiseta.</span>
+                        <div class="english">I am wearing a t-shirt.</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Posso experimentar?')">🔊</button>
+                    <div>
+                        <span class="portuguese">Posso experimentar?</span>
+                        <div class="english">Can I try it on?</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Qual é o seu tamanho?')">🔊</button>
+                    <div>
+                        <span class="portuguese">Qual é o seu tamanho?</span>
+                        <div class="english">What is your size?</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Tem em outro tamanho?')">🔊</button>
+                    <div>
+                        <span class="portuguese">Tem em outro tamanho?</span>
+                        <div class="english">Do you have it in another size?</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Está muito apertado.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Está muito apertado.</span>
+                        <div class="english">It's too tight.</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Está muito largo.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Está muito largo.</span>
+                        <div class="english">It's too loose.</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Ficou perfeito!')">🔊</button>
+                    <div>
+                        <span class="portuguese">Ficou perfeito!</span>
+                        <div class="english">It fits perfectly!</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grammar-box mt-4">
+                <strong>📝 Sizes:</strong>
+                <ul class="mt-2 space-y-1">
+                    <li><strong>P</strong> - Pequeno (Small)</li>
+                    <li><strong>M</strong> - Médio (Medium)</li>
+                    <li><strong>G</strong> - Grande (Large)</li>
+                    <li><strong>GG</strong> - Extra Grande (Extra Large)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Practice Section -->
+        <section class="lesson-card bg-blue-50">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <p class="text-gray-700 mb-4">Ready to practice clothing vocabulary? Try this drill:</p>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=clothing" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Clothing Drill →
+                </a>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="body-parts.html" class="text-blue-600 hover:text-blue-800">
+                ← Unit 8: Body Parts
+            </a>
+            <a href="house.html" class="text-blue-600 hover:text-blue-800">
+                Unit 10: House & Rooms →
+            </a>
+        </div>
+    </main>
+
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'pt-BR';
+                utterance.rate = options.rate || 0.9;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+    </script>
+</body>
+</html>

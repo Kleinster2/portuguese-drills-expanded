@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Words - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .qword-card { background: #f8fafc; padding: 1rem; border-radius: 0.5rem; border: 1px solid #e2e8f0; margin-bottom: 1rem; }
+        .qword-title { font-size: 1.25rem; font-weight: bold; color: #1e40af; }
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 20</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Palavras Interrogativas</h1>
+            <p class="text-gray-600">Question Words</p>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Basic Question Words</h2>
+            </div>
+            <div class="vocab-grid">
+                <div class="qword-card">
+                    <button class="speaker-btn mb-2" onclick="speak('quem')">🔊</button>
+                    <div class="qword-title">Quem?</div>
+                    <div class="text-gray-600">Who?</div>
+                </div>
+                <div class="qword-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o que')">🔊</button>
+                    <div class="qword-title">O que?</div>
+                    <div class="text-gray-600">What?</div>
+                </div>
+                <div class="qword-card">
+                    <button class="speaker-btn mb-2" onclick="speak('onde')">🔊</button>
+                    <div class="qword-title">Onde?</div>
+                    <div class="text-gray-600">Where?</div>
+                </div>
+                <div class="qword-card">
+                    <button class="speaker-btn mb-2" onclick="speak('quando')">🔊</button>
+                    <div class="qword-title">Quando?</div>
+                    <div class="text-gray-600">When?</div>
+                </div>
+                <div class="qword-card">
+                    <button class="speaker-btn mb-2" onclick="speak('como')">🔊</button>
+                    <div class="qword-title">Como?</div>
+                    <div class="text-gray-600">How?</div>
+                </div>
+                <div class="qword-card">
+                    <button class="speaker-btn mb-2" onclick="speak('por que')">🔊</button>
+                    <div class="qword-title">Por que?</div>
+                    <div class="text-gray-600">Why?</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Quem, O que, Qual</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Quem é você?')">🔊</button>
+                <span class="portuguese"><strong>Quem</strong> é você?</span>
+                <div class="english mt-1">Who are you?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('O que você quer?')">🔊</button>
+                <span class="portuguese"><strong>O que</strong> você quer?</span>
+                <div class="english mt-1">What do you want?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Qual é o seu nome?')">🔊</button>
+                <span class="portuguese"><strong>Qual</strong> é o seu nome?</span>
+                <div class="english mt-1">What is your name? (Which one)</div>
+            </div>
+            <div class="info-box">
+                <strong>💡 Qual vs O que:</strong>
+                <ul class="mt-2 space-y-1">
+                    <li>• <strong>Qual</strong> = which (choosing from options)</li>
+                    <li>• <strong>O que</strong> = what (open-ended)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Onde, Quando, Como</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Onde você mora?')">🔊</button>
+                <span class="portuguese"><strong>Onde</strong> você mora?</span>
+                <div class="english mt-1">Where do you live?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Quando é a festa?')">🔊</button>
+                <span class="portuguese"><strong>Quando</strong> é a festa?</span>
+                <div class="english mt-1">When is the party?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Como você está?')">🔊</button>
+                <span class="portuguese"><strong>Como</strong> você está?</span>
+                <div class="english mt-1">How are you?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Como se diz isso em português?')">🔊</button>
+                <span class="portuguese"><strong>Como</strong> se diz isso em português?</span>
+                <div class="english mt-1">How do you say this in Portuguese?</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Por que / Porque</h2>
+            </div>
+            <div class="info-box">
+                <strong>⚠️ Four forms of "why/because":</strong>
+                <ul class="mt-2 space-y-1">
+                    <li>• <strong>Por que</strong> - why (question, 2 words)</li>
+                    <li>• <strong>Por quê?</strong> - why (at end of question)</li>
+                    <li>• <strong>Porque</strong> - because (answer, 1 word)</li>
+                    <li>• <strong>Porquê</strong> - the reason (noun)</li>
+                </ul>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Por que você está triste?')">🔊</button>
+                <span class="portuguese"><strong>Por que</strong> você está triste?</span>
+                <div class="english mt-1">Why are you sad?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Porque estou cansado.')">🔊</button>
+                <span class="portuguese"><strong>Porque</strong> estou cansado.</span>
+                <div class="english mt-1">Because I'm tired.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Quanto/Quantos</h2>
+            </div>
+            <div class="vocab-grid">
+                <div class="qword-card">
+                    <button class="speaker-btn mb-2" onclick="speak('quanto')">🔊</button>
+                    <div class="qword-title">Quanto?</div>
+                    <div class="text-gray-600">How much? (masc.)</div>
+                </div>
+                <div class="qword-card">
+                    <button class="speaker-btn mb-2" onclick="speak('quanta')">🔊</button>
+                    <div class="qword-title">Quanta?</div>
+                    <div class="text-gray-600">How much? (fem.)</div>
+                </div>
+                <div class="qword-card">
+                    <button class="speaker-btn mb-2" onclick="speak('quantos')">🔊</button>
+                    <div class="qword-title">Quantos?</div>
+                    <div class="text-gray-600">How many? (masc.)</div>
+                </div>
+                <div class="qword-card">
+                    <button class="speaker-btn mb-2" onclick="speak('quantas')">🔊</button>
+                    <div class="qword-title">Quantas?</div>
+                    <div class="text-gray-600">How many? (fem.)</div>
+                </div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Quanto custa?')">🔊</button>
+                <span class="portuguese"><strong>Quanto</strong> custa?</span>
+                <div class="english mt-1">How much does it cost?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Quantos anos você tem?')">🔊</button>
+                <span class="portuguese"><strong>Quantos</strong> anos você tem?</span>
+                <div class="english mt-1">How old are you? (How many years do you have?)</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Common Questions</h2>
+            </div>
+            <div class="space-y-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('De onde você é?')">🔊</button>
+                    <span class="portuguese">De onde você é?</span>
+                    <div class="english mt-1">Where are you from?</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Que horas são?')">🔊</button>
+                    <span class="portuguese">Que horas são?</span>
+                    <div class="english mt-1">What time is it?</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('O que isso significa?')">🔊</button>
+                    <span class="portuguese">O que isso significa?</span>
+                    <div class="english mt-1">What does this mean?</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card bg-blue-50">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=question-words" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Question Words Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="contractions.html" class="text-blue-600 hover:text-blue-800">← Unit 19: Contractions</a>
+            <a href="yes-no-questions.html" class="text-blue-600 hover:text-blue-800">Unit 21: Yes/No Questions →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

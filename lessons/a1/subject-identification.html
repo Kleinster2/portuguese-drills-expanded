@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Identification - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        th, td { padding: 0.75rem; border: 1px solid #e2e8f0; text-align: center; }
+        th { background: #f8fafc; font-weight: 600; }
+        .unambiguous { background: #dcfce7; }
+        .ambiguous { background: #fef3c7; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 22</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Identificação do Sujeito</h1>
+            <p class="text-gray-600">Recognizing Subjects from Verb Forms</p>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Why This Matters</h2>
+            </div>
+            <p class="text-gray-700 mb-4">Since Portuguese often drops subject pronouns, you need to identify <strong>who</strong> is doing the action from the <strong>verb ending</strong>.</p>
+            <div class="grammar-box">
+                <strong>📝 Key skill:</strong> See verb form → Know who's doing the action
+                <div class="mt-2">
+                    <span class="portuguese">"Falo português"</span> → Who speaks? → <strong>Eu</strong> (the -o ending tells you!)
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Unambiguous Forms</h2>
+            </div>
+            <p class="text-gray-700 mb-4">Some verb forms belong to <strong>only one subject</strong> - these are easy to identify!</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ending</th>
+                        <th>Subject</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="unambiguous">
+                        <td><strong>-o</strong></td>
+                        <td>eu (I)</td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('falo')">🔊</button>
+                            <span class="portuguese">fal<strong>o</strong></span> - I speak
+                        </td>
+                    </tr>
+                    <tr class="unambiguous">
+                        <td><strong>-mos</strong></td>
+                        <td>nós (we)</td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('falamos')">🔊</button>
+                            <span class="portuguese">fala<strong>mos</strong></span> - we speak
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Moro em São Paulo.')">🔊</button>
+                <span class="portuguese">Mor<strong>o</strong> em São Paulo.</span>
+                <div class="english mt-1">I live in São Paulo. (mor<strong>o</strong> = eu)</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Trabalhamos juntos.')">🔊</button>
+                <span class="portuguese">Trabalha<strong>mos</strong> juntos.</span>
+                <div class="english mt-1">We work together. (trabalha<strong>mos</strong> = nós)</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Ambiguous Forms</h2>
+            </div>
+            <p class="text-gray-700 mb-4">These forms are shared by multiple subjects - context helps, or the subject pronoun is included.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ending</th>
+                        <th>Possible Subjects</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="ambiguous">
+                        <td><strong>-a/-e</strong></td>
+                        <td>você, ele, ela</td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('fala')">🔊</button>
+                            <span class="portuguese">fal<strong>a</strong></span>
+                        </td>
+                    </tr>
+                    <tr class="ambiguous">
+                        <td><strong>-am/-em</strong></td>
+                        <td>vocês, eles, elas</td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('falam')">🔊</button>
+                            <span class="portuguese">fal<strong>am</strong></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="info-box">
+                <strong>💡 When it's ambiguous:</strong> Portuguese includes the subject pronoun or uses context to clarify.
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Ela fala inglês.')">🔊</button>
+                <span class="portuguese"><strong>Ela</strong> fala inglês.</span>
+                <div class="english mt-1">She speaks English. (pronoun included for clarity)</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Practice: Who's Speaking?</h2>
+            </div>
+            <p class="text-gray-700 mb-4">Look at these verb forms and identify the subject:</p>
+            <div class="space-y-4">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Estudo português.')">🔊</button>
+                    <span class="portuguese">Estud<strong>o</strong> português.</span>
+                    <div class="english mt-1">→ Subject: <strong>eu</strong> (I study Portuguese)</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Moramos no Brasil.')">🔊</button>
+                    <span class="portuguese">Mora<strong>mos</strong> no Brasil.</span>
+                    <div class="english mt-1">→ Subject: <strong>nós</strong> (We live in Brazil)</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Falam muito rápido.')">🔊</button>
+                    <span class="portuguese">Fal<strong>am</strong> muito rápido.</span>
+                    <div class="english mt-1">→ Subject: <strong>eles/elas/vocês</strong> (They/You speak very fast)</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Tenho dois irmãos.')">🔊</button>
+                    <span class="portuguese">Tenh<strong>o</strong> dois irmãos.</span>
+                    <div class="english mt-1">→ Subject: <strong>eu</strong> (I have two siblings)</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Common Irregular Verbs</h2>
+            </div>
+            <p class="text-gray-700 mb-4">Key irregular verbs to recognize:</p>
+            <table>
+                <thead>
+                    <tr><th>Verb</th><th>eu</th><th>você/ele/ela</th><th>nós</th><th>eles/elas</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>ser</strong></td><td class="unambiguous">sou</td><td class="ambiguous">é</td><td class="unambiguous">somos</td><td class="ambiguous">são</td></tr>
+                    <tr><td><strong>estar</strong></td><td class="unambiguous">estou</td><td class="ambiguous">está</td><td class="unambiguous">estamos</td><td class="ambiguous">estão</td></tr>
+                    <tr><td><strong>ter</strong></td><td class="unambiguous">tenho</td><td class="ambiguous">tem</td><td class="unambiguous">temos</td><td class="ambiguous">têm</td></tr>
+                    <tr><td><strong>ir</strong></td><td class="unambiguous">vou</td><td class="ambiguous">vai</td><td class="unambiguous">vamos</td><td class="ambiguous">vão</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Quick Reference</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Remember:</strong>
+                <ul class="mt-2 space-y-1">
+                    <li>• <strong>-o</strong> ending = always <strong>eu</strong></li>
+                    <li>• <strong>-mos</strong> ending = always <strong>nós</strong></li>
+                    <li>• <strong>-a/-e</strong> ending = você/ele/ela (need context)</li>
+                    <li>• <strong>-am/-em</strong> ending = vocês/eles/elas (need context)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-card bg-blue-50">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=subject-identification" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Subject Identification Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="yes-no-questions.html" class="text-blue-600 hover:text-blue-800">← Unit 21: Yes/No Questions</a>
+            <a href="present-regular.html" class="text-blue-600 hover:text-blue-800">Unit 23: Present Regular →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

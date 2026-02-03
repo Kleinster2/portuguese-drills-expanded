@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportation - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        th, td { padding: 0.75rem; border: 1px solid #e2e8f0; text-align: center; }
+        th { background: #f8fafc; font-weight: 600; }
+        .transport-icon { font-size: 2rem; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 27</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Meios de Transporte</h1>
+            <p class="text-gray-600">Modes of Transportation with IR</p>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Transportation Vocabulary</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="example-sentence">
+                    <span class="transport-icon">🚗</span>
+                    <button class="speaker-btn mr-2" onclick="speak('o carro')">🔊</button>
+                    <span class="portuguese">o carro</span> - car
+                </div>
+                <div class="example-sentence">
+                    <span class="transport-icon">🚌</span>
+                    <button class="speaker-btn mr-2" onclick="speak('o ônibus')">🔊</button>
+                    <span class="portuguese">o ônibus</span> - bus
+                </div>
+                <div class="example-sentence">
+                    <span class="transport-icon">🚇</span>
+                    <button class="speaker-btn mr-2" onclick="speak('o metrô')">🔊</button>
+                    <span class="portuguese">o metrô</span> - subway/metro
+                </div>
+                <div class="example-sentence">
+                    <span class="transport-icon">🚆</span>
+                    <button class="speaker-btn mr-2" onclick="speak('o trem')">🔊</button>
+                    <span class="portuguese">o trem</span> - train
+                </div>
+                <div class="example-sentence">
+                    <span class="transport-icon">✈️</span>
+                    <button class="speaker-btn mr-2" onclick="speak('o avião')">🔊</button>
+                    <span class="portuguese">o avião</span> - airplane
+                </div>
+                <div class="example-sentence">
+                    <span class="transport-icon">🚢</span>
+                    <button class="speaker-btn mr-2" onclick="speak('o barco')">🔊</button>
+                    <span class="portuguese">o barco</span> - boat
+                </div>
+                <div class="example-sentence">
+                    <span class="transport-icon">🚲</span>
+                    <button class="speaker-btn mr-2" onclick="speak('a bicicleta')">🔊</button>
+                    <span class="portuguese">a bicicleta</span> - bicycle
+                </div>
+                <div class="example-sentence">
+                    <span class="transport-icon">🏍️</span>
+                    <button class="speaker-btn mr-2" onclick="speak('a moto')">🔊</button>
+                    <span class="portuguese">a moto</span> - motorcycle
+                </div>
+                <div class="example-sentence">
+                    <span class="transport-icon">🚕</span>
+                    <button class="speaker-btn mr-2" onclick="speak('o táxi')">🔊</button>
+                    <span class="portuguese">o táxi</span> - taxi
+                </div>
+                <div class="example-sentence">
+                    <span class="transport-icon">🚶</span>
+                    <button class="speaker-btn mr-2" onclick="speak('a pé')">🔊</button>
+                    <span class="portuguese">a pé</span> - on foot
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">IR + DE + Transportation</h2>
+            </div>
+            <p class="text-gray-700 mb-4">Use <strong>IR + de + vehicle</strong> to say how you travel:</p>
+            <div class="grammar-box">
+                <strong>📝 Formula:</strong> IR (conjugated) + <strong>de</strong> + vehicle
+                <div class="mt-2 text-lg">
+                    <span class="portuguese">Vou de carro.</span> = I go by car.
+                </div>
+            </div>
+            <div class="space-y-3 mt-4">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Eu vou de carro.')">🔊</button>
+                    <span class="portuguese">Eu vou <strong>de carro</strong>.</span>
+                    <div class="english mt-1">I go by car.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Ela vai de ônibus.')">🔊</button>
+                    <span class="portuguese">Ela vai <strong>de ônibus</strong>.</span>
+                    <div class="english mt-1">She goes by bus.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Nós vamos de metrô.')">🔊</button>
+                    <span class="portuguese">Nós vamos <strong>de metrô</strong>.</span>
+                    <div class="english mt-1">We go by subway.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Eles vão de avião.')">🔊</button>
+                    <span class="portuguese">Eles vão <strong>de avião</strong>.</span>
+                    <div class="english mt-1">They go by plane.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Exception: A pé (On foot)</h2>
+            </div>
+            <p class="text-gray-700 mb-4">"On foot" uses <strong>a pé</strong> instead of "de":</p>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Eu vou a pé.')">🔊</button>
+                <span class="portuguese">Eu vou <strong>a pé</strong>.</span>
+                <div class="english mt-1">I go on foot. / I walk.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Você vai a pé ou de carro?')">🔊</button>
+                <span class="portuguese">Você vai <strong>a pé</strong> ou <strong>de carro</strong>?</span>
+                <div class="english mt-1">Are you going on foot or by car?</div>
+            </div>
+            <div class="info-box">
+                <strong>💡 Memory tip:</strong> "A pé" literally means "by foot" - think of it as one unit!
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">IR Review</h2>
+            </div>
+            <table>
+                <thead><tr><th>Person</th><th>IR</th><th>Example</th></tr></thead>
+                <tbody>
+                    <tr><td>eu</td><td><button class="speaker-btn mr-1" onclick="speak('eu vou')">🔊</button><span class="portuguese">vou</span></td><td>Vou de carro.</td></tr>
+                    <tr><td>você/ele/ela</td><td><button class="speaker-btn mr-1" onclick="speak('você vai')">🔊</button><span class="portuguese">vai</span></td><td>Vai de ônibus.</td></tr>
+                    <tr><td>nós</td><td><button class="speaker-btn mr-1" onclick="speak('nós vamos')">🔊</button><span class="portuguese">vamos</span></td><td>Vamos de metrô.</td></tr>
+                    <tr><td>vocês/eles/elas</td><td><button class="speaker-btn mr-1" onclick="speak('eles vão')">🔊</button><span class="portuguese">vão</span></td><td>Vão de táxi.</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">IR + PARA (Going TO places)</h2>
+            </div>
+            <p class="text-gray-700 mb-4">Combine transportation with destinations:</p>
+            <div class="grammar-box">
+                <strong>📝 Formula:</strong> IR + <strong>para</strong> + place + <strong>de</strong> + vehicle
+            </div>
+            <div class="space-y-3 mt-4">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Vou para o trabalho de carro.')">🔊</button>
+                    <span class="portuguese">Vou <strong>para o trabalho</strong> de carro.</span>
+                    <div class="english mt-1">I go to work by car.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Ela vai para a escola de ônibus.')">🔊</button>
+                    <span class="portuguese">Ela vai <strong>para a escola</strong> de ônibus.</span>
+                    <div class="english mt-1">She goes to school by bus.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Nós vamos para o centro de metrô.')">🔊</button>
+                    <span class="portuguese">Nós vamos <strong>para o centro</strong> de metrô.</span>
+                    <div class="english mt-1">We go downtown by subway.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Eles vão para o Brasil de avião.')">🔊</button>
+                    <span class="portuguese">Eles vão <strong>para o Brasil</strong> de avião.</span>
+                    <div class="english mt-1">They go to Brazil by plane.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Questions About Transportation</h2>
+            </div>
+            <div class="space-y-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Como você vai?')">🔊</button>
+                    <span class="portuguese">Como você vai?</span>
+                    <div class="english mt-1">How are you going? (By what means?)</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Você vai de carro ou de ônibus?')">🔊</button>
+                    <span class="portuguese">Você vai de carro ou de ônibus?</span>
+                    <div class="english mt-1">Are you going by car or by bus?</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Quanto tempo leva de metrô?')">🔊</button>
+                    <span class="portuguese">Quanto tempo leva de metrô?</span>
+                    <div class="english mt-1">How long does it take by subway?</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 7</span>
+                <h2 class="text-xl font-bold text-gray-900">Useful Travel Phrases</h2>
+            </div>
+            <div class="space-y-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Onde fica o ponto de ônibus?')">🔊</button>
+                    <span class="portuguese">Onde fica o ponto de ônibus?</span>
+                    <div class="english mt-1">Where is the bus stop?</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Onde fica a estação de metrô?')">🔊</button>
+                    <span class="portuguese">Onde fica a estação de metrô?</span>
+                    <div class="english mt-1">Where is the subway station?</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Posso pegar um táxi aqui?')">🔊</button>
+                    <span class="portuguese">Posso pegar um táxi aqui?</span>
+                    <div class="english mt-1">Can I get a taxi here?</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Prefiro ir a pé.')">🔊</button>
+                    <span class="portuguese">Prefiro ir a pé.</span>
+                    <div class="english mt-1">I prefer to walk.</div>
+                </div>
+            </div>
+            <div class="info-box mt-4">
+                <strong>💡 BP Vocabulary:</strong>
+                <ul class="mt-2 space-y-1">
+                    <li>• <strong>ponto de ônibus</strong> = bus stop</li>
+                    <li>• <strong>estação</strong> = station (train, subway)</li>
+                    <li>• <strong>aeroporto</strong> = airport</li>
+                    <li>• <strong>rodoviária</strong> = bus terminal</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-card bg-blue-50">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=transportation" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Transportation Drill →</a>
+                <a href="/?drill=ir-verb" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">IR Verb Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="telling-time.html" class="text-blue-600 hover:text-blue-800">← Unit 26: Telling Time</a>
+            <span class="text-gray-400">End of A1</span>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

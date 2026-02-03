@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Present Regular Verbs - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        th, td { padding: 0.75rem; border: 1px solid #e2e8f0; text-align: center; }
+        th { background: #f8fafc; font-weight: 600; }
+        .ar-color { background: #dbeafe; }
+        .er-color { background: #dcfce7; }
+        .ir-color { background: #fce7f3; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 23</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Presente - Verbos Regulares</h1>
+            <p class="text-gray-600">Present Tense - Regular Verbs</p>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Three Verb Groups</h2>
+            </div>
+            <p class="text-gray-700 mb-4">Portuguese verbs are classified by their infinitive ending: <strong>-AR</strong>, <strong>-ER</strong>, or <strong>-IR</strong>.</p>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="p-4 rounded-lg ar-color">
+                    <h3 class="font-bold text-lg">-AR verbs</h3>
+                    <p class="text-sm">falar, morar, trabalhar</p>
+                    <p class="text-xs text-gray-600 mt-1">Most common group</p>
+                </div>
+                <div class="p-4 rounded-lg er-color">
+                    <h3 class="font-bold text-lg">-ER verbs</h3>
+                    <p class="text-sm">comer, beber, viver</p>
+                </div>
+                <div class="p-4 rounded-lg ir-color">
+                    <h3 class="font-bold text-lg">-IR verbs</h3>
+                    <p class="text-sm">partir, abrir, decidir</p>
+                </div>
+            </div>
+            <div class="grammar-box mt-4">
+                <strong>📝 To conjugate:</strong> Remove the -ar/-er/-ir ending, then add the appropriate ending for each person.
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">-AR Verbs: FALAR (to speak)</h2>
+            </div>
+            <table>
+                <thead><tr><th>Person</th><th>Ending</th><th>FALAR</th></tr></thead>
+                <tbody class="ar-color">
+                    <tr><td>eu</td><td><strong>-o</strong></td><td><button class="speaker-btn mr-1" onclick="speak('eu falo')">🔊</button><span class="portuguese">fal<strong>o</strong></span></td></tr>
+                    <tr><td>você/ele/ela</td><td><strong>-a</strong></td><td><button class="speaker-btn mr-1" onclick="speak('ele fala')">🔊</button><span class="portuguese">fal<strong>a</strong></span></td></tr>
+                    <tr><td>nós</td><td><strong>-amos</strong></td><td><button class="speaker-btn mr-1" onclick="speak('nós falamos')">🔊</button><span class="portuguese">fal<strong>amos</strong></span></td></tr>
+                    <tr><td>vocês/eles/elas</td><td><strong>-am</strong></td><td><button class="speaker-btn mr-1" onclick="speak('eles falam')">🔊</button><span class="portuguese">fal<strong>am</strong></span></td></tr>
+                </tbody>
+            </table>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Eu falo português.')">🔊</button>
+                <span class="portuguese">Eu falo português.</span>
+                <div class="english mt-1">I speak Portuguese.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">-ER Verbs: COMER (to eat)</h2>
+            </div>
+            <table>
+                <thead><tr><th>Person</th><th>Ending</th><th>COMER</th></tr></thead>
+                <tbody class="er-color">
+                    <tr><td>eu</td><td><strong>-o</strong></td><td><button class="speaker-btn mr-1" onclick="speak('eu como')">🔊</button><span class="portuguese">com<strong>o</strong></span></td></tr>
+                    <tr><td>você/ele/ela</td><td><strong>-e</strong></td><td><button class="speaker-btn mr-1" onclick="speak('ele come')">🔊</button><span class="portuguese">com<strong>e</strong></span></td></tr>
+                    <tr><td>nós</td><td><strong>-emos</strong></td><td><button class="speaker-btn mr-1" onclick="speak('nós comemos')">🔊</button><span class="portuguese">com<strong>emos</strong></span></td></tr>
+                    <tr><td>vocês/eles/elas</td><td><strong>-em</strong></td><td><button class="speaker-btn mr-1" onclick="speak('eles comem')">🔊</button><span class="portuguese">com<strong>em</strong></span></td></tr>
+                </tbody>
+            </table>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Nós comemos arroz e feijão.')">🔊</button>
+                <span class="portuguese">Nós comemos arroz e feijão.</span>
+                <div class="english mt-1">We eat rice and beans.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">-IR Verbs: PARTIR (to leave)</h2>
+            </div>
+            <table>
+                <thead><tr><th>Person</th><th>Ending</th><th>PARTIR</th></tr></thead>
+                <tbody class="ir-color">
+                    <tr><td>eu</td><td><strong>-o</strong></td><td><button class="speaker-btn mr-1" onclick="speak('eu parto')">🔊</button><span class="portuguese">part<strong>o</strong></span></td></tr>
+                    <tr><td>você/ele/ela</td><td><strong>-e</strong></td><td><button class="speaker-btn mr-1" onclick="speak('ele parte')">🔊</button><span class="portuguese">part<strong>e</strong></span></td></tr>
+                    <tr><td>nós</td><td><strong>-imos</strong></td><td><button class="speaker-btn mr-1" onclick="speak('nós partimos')">🔊</button><span class="portuguese">part<strong>imos</strong></span></td></tr>
+                    <tr><td>vocês/eles/elas</td><td><strong>-em</strong></td><td><button class="speaker-btn mr-1" onclick="speak('eles partem')">🔊</button><span class="portuguese">part<strong>em</strong></span></td></tr>
+                </tbody>
+            </table>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('O trem parte às oito.')">🔊</button>
+                <span class="portuguese">O trem parte às oito.</span>
+                <div class="english mt-1">The train leaves at eight.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Comparison Chart</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr><th></th><th class="ar-color">-AR</th><th class="er-color">-ER</th><th class="ir-color">-IR</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>eu</strong></td><td class="ar-color">-o</td><td class="er-color">-o</td><td class="ir-color">-o</td></tr>
+                    <tr><td><strong>você</strong></td><td class="ar-color">-a</td><td class="er-color">-e</td><td class="ir-color">-e</td></tr>
+                    <tr><td><strong>nós</strong></td><td class="ar-color">-amos</td><td class="er-color">-emos</td><td class="ir-color">-imos</td></tr>
+                    <tr><td><strong>eles</strong></td><td class="ar-color">-am</td><td class="er-color">-em</td><td class="ir-color">-em</td></tr>
+                </tbody>
+            </table>
+            <div class="info-box">
+                <strong>💡 Notice:</strong> The <strong>eu</strong> form is always <strong>-o</strong> for all three groups!
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Common Regular Verbs</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="ar-color p-3 rounded">
+                    <h4 class="font-bold mb-2">-AR</h4>
+                    <ul class="text-sm space-y-1">
+                        <li>morar - to live</li>
+                        <li>trabalhar - to work</li>
+                        <li>estudar - to study</li>
+                        <li>gostar - to like</li>
+                        <li>comprar - to buy</li>
+                    </ul>
+                </div>
+                <div class="er-color p-3 rounded">
+                    <h4 class="font-bold mb-2">-ER</h4>
+                    <ul class="text-sm space-y-1">
+                        <li>beber - to drink</li>
+                        <li>viver - to live</li>
+                        <li>aprender - to learn</li>
+                        <li>escrever - to write</li>
+                        <li>correr - to run</li>
+                    </ul>
+                </div>
+                <div class="ir-color p-3 rounded">
+                    <h4 class="font-bold mb-2">-IR</h4>
+                    <ul class="text-sm space-y-1">
+                        <li>abrir - to open</li>
+                        <li>decidir - to decide</li>
+                        <li>assistir - to watch</li>
+                        <li>dividir - to divide</li>
+                        <li>existir - to exist</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card bg-blue-50">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=present-tense" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Present Tense Drill →</a>
+                <a href="/?drill=verb-conjugation" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Conjugation Practice →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="subject-identification.html" class="text-blue-600 hover:text-blue-800">← Unit 22: Subject Identification</a>
+            <a href="present-irregular.html" class="text-blue-600 hover:text-blue-800">Unit 24: Present Irregular →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

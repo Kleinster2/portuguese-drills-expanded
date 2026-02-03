@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstratives - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .english { color: #6b7280; font-size: 0.9rem; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        th, td { padding: 0.75rem; border: 1px solid #e2e8f0; text-align: center; }
+        th { background: #f8fafc; font-weight: 600; }
+        .near { background: #dcfce7; }
+        .mid { background: #fef3c7; }
+        .far { background: #fee2e2; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 17</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Demonstrativos</h1>
+            <p class="text-gray-600">Demonstrative Adjectives & Pronouns</p>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Three Degrees of Distance</h2>
+            </div>
+            <p class="text-gray-700 mb-4">Portuguese has <strong>three</strong> demonstratives based on distance from speaker and listener (English only has two: this/that).</p>
+            <div class="grammar-box">
+                <ul class="space-y-2">
+                    <li><strong class="text-green-700">Este/Esta</strong> - near the speaker (this)</li>
+                    <li><strong class="text-yellow-700">Esse/Essa</strong> - near the listener (that, nearby)</li>
+                    <li><strong class="text-red-700">Aquele/Aquela</strong> - far from both (that, over there)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Complete Forms</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Distance</th>
+                        <th>Masc. Sing.</th>
+                        <th>Fem. Sing.</th>
+                        <th>Masc. Plur.</th>
+                        <th>Fem. Plur.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="near">
+                        <td><strong>Near me</strong></td>
+                        <td><button class="speaker-btn mr-1" onclick="speak('este')">🔊</button><span class="portuguese">este</span></td>
+                        <td><button class="speaker-btn mr-1" onclick="speak('esta')">🔊</button><span class="portuguese">esta</span></td>
+                        <td><button class="speaker-btn mr-1" onclick="speak('estes')">🔊</button><span class="portuguese">estes</span></td>
+                        <td><button class="speaker-btn mr-1" onclick="speak('estas')">🔊</button><span class="portuguese">estas</span></td>
+                    </tr>
+                    <tr class="mid">
+                        <td><strong>Near you</strong></td>
+                        <td><button class="speaker-btn mr-1" onclick="speak('esse')">🔊</button><span class="portuguese">esse</span></td>
+                        <td><button class="speaker-btn mr-1" onclick="speak('essa')">🔊</button><span class="portuguese">essa</span></td>
+                        <td><button class="speaker-btn mr-1" onclick="speak('esses')">🔊</button><span class="portuguese">esses</span></td>
+                        <td><button class="speaker-btn mr-1" onclick="speak('essas')">🔊</button><span class="portuguese">essas</span></td>
+                    </tr>
+                    <tr class="far">
+                        <td><strong>Far from both</strong></td>
+                        <td><button class="speaker-btn mr-1" onclick="speak('aquele')">🔊</button><span class="portuguese">aquele</span></td>
+                        <td><button class="speaker-btn mr-1" onclick="speak('aquela')">🔊</button><span class="portuguese">aquela</span></td>
+                        <td><button class="speaker-btn mr-1" onclick="speak('aqueles')">🔊</button><span class="portuguese">aqueles</span></td>
+                        <td><button class="speaker-btn mr-1" onclick="speak('aquelas')">🔊</button><span class="portuguese">aquelas</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Examples</h2>
+            </div>
+            <div class="example-sentence near">
+                <button class="speaker-btn mr-2" onclick="speak('Este livro é meu.')">🔊</button>
+                <span class="portuguese">Este livro é meu.</span>
+                <div class="english mt-1">This book (in my hand) is mine.</div>
+            </div>
+            <div class="example-sentence mid">
+                <button class="speaker-btn mr-2" onclick="speak('Esse livro é interessante.')">🔊</button>
+                <span class="portuguese">Esse livro é interessante.</span>
+                <div class="english mt-1">That book (near you) is interesting.</div>
+            </div>
+            <div class="example-sentence far">
+                <button class="speaker-btn mr-2" onclick="speak('Aquele livro na estante é antigo.')">🔊</button>
+                <span class="portuguese">Aquele livro na estante é antigo.</span>
+                <div class="english mt-1">That book (over there on the shelf) is old.</div>
+            </div>
+            <div class="info-box">
+                <strong>🇧🇷 Note:</strong> In casual Brazilian Portuguese, <em>esse/essa</em> is often used for both "near you" and "near me" situations.
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Neutral Forms (Isso, Isto, Aquilo)</h2>
+            </div>
+            <p class="text-gray-700 mb-4">When referring to abstract ideas or unspecified things, use neutral forms:</p>
+            <table>
+                <tbody>
+                    <tr class="near"><td><button class="speaker-btn mr-1" onclick="speak('isto')">🔊</button><span class="portuguese">isto</span></td><td>this (thing/idea)</td></tr>
+                    <tr class="mid"><td><button class="speaker-btn mr-1" onclick="speak('isso')">🔊</button><span class="portuguese">isso</span></td><td>that (thing/idea)</td></tr>
+                    <tr class="far"><td><button class="speaker-btn mr-1" onclick="speak('aquilo')">🔊</button><span class="portuguese">aquilo</span></td><td>that over there</td></tr>
+                </tbody>
+            </table>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('O que é isso?')">🔊</button>
+                <span class="portuguese">O que é isso?</span>
+                <div class="english mt-1">What is that?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Isso é muito importante.')">🔊</button>
+                <span class="portuguese">Isso é muito importante.</span>
+                <div class="english mt-1">That is very important.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Contractions with Prepositions</h2>
+            </div>
+            <p class="text-gray-700 mb-4">Demonstratives contract with prepositions <em>de</em> and <em>em</em>:</p>
+            <table>
+                <thead><tr><th></th><th>de +</th><th>em +</th></tr></thead>
+                <tbody>
+                    <tr><td>este</td><td>deste</td><td>neste</td></tr>
+                    <tr><td>essa</td><td>dessa</td><td>nessa</td></tr>
+                    <tr><td>aquele</td><td>daquele</td><td>naquele</td></tr>
+                    <tr><td>isso</td><td>disso</td><td>nisso</td></tr>
+                </tbody>
+            </table>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Gosto deste restaurante.')">🔊</button>
+                <span class="portuguese">Gosto <strong>deste</strong> restaurante.</span>
+                <div class="english mt-1">I like this restaurant. (de + este)</div>
+            </div>
+        </section>
+
+        <section class="lesson-card bg-blue-50">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <p class="text-gray-700 mb-4">Ready to practice demonstratives?</p>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=demonstratives" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Demonstratives Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="possessives.html" class="text-blue-600 hover:text-blue-800">← Unit 16: Possessives</a>
+            <a href="prepositions.html" class="text-blue-600 hover:text-blue-800">Unit 18: Prepositions →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'pt-BR';
+                utterance.rate = options.rate || 0.9;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+    </script>
+</body>
+</html>

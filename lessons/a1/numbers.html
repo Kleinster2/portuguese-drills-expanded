@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A1.3: Numbers & Counting - Portuguese Tutor</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0ea5e9">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="/icons/icon-192.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .speaker-btn { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; margin-left: 8px; background: #0ea5e9; color: white; border: none; border-radius: 6px; cursor: pointer; transition: all 0.2s; opacity: 0.9; flex-shrink: 0; }
+        .speaker-btn:hover { opacity: 1; background: #0284c7; transform: scale(1.05); }
+        .speaker-btn.speaking { background: #10b981; animation: pulse 1s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+        .word-tooltip, .phrase-tooltip { position: relative; cursor: help; border-bottom: 1px dotted #94a3b8; }
+        .word-tooltip:hover, .phrase-tooltip:hover { background-color: #dbeafe; border-radius: 2px; }
+        .word-tooltip::after, .phrase-tooltip::after { content: attr(data-translation); position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background-color: #1e293b; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-style: italic; white-space: nowrap; opacity: 0; visibility: hidden; transition: opacity 0.2s; z-index: 10; pointer-events: none; }
+        .word-tooltip:hover::after, .phrase-tooltip:hover::after { opacity: 1; visibility: visible; }
+        .lesson-card { background: white; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); padding: 1.5rem; margin-bottom: 1.5rem; }
+        @media (max-width: 768px) { .lesson-card { border-radius: 0; margin-left: -0.5rem; margin-right: -0.5rem; } }
+        .number-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 0.5rem; }
+        .number-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.75rem; text-align: center; transition: all 0.2s; }
+        .number-card:hover { background: #f0f9ff; border-color: #0ea5e9; }
+    </style>
+    <script async src="https://plausible.io/js/pa-A2kEULXGZtzUYXPsVOQwU.js"></script>
+</head>
+<body class="bg-slate-50">
+
+    <header class="bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg">
+        <div class="container mx-auto max-w-3xl px-4 py-6">
+            <a href="/" class="text-sm opacity-80 hover:opacity-100 mb-2 inline-block">&larr; Back to Home</a>
+            <div class="flex items-center justify-between">
+                <div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="bg-white/20 text-xs font-bold px-2 py-0.5 rounded">A1</span>
+                        <span class="text-xs font-bold uppercase tracking-wide opacity-80">Unit 3</span>
+                    </div>
+                    <h1 class="text-2xl md:text-3xl font-bold">Numbers & Counting</h1>
+                    <p class="mt-1 text-base opacity-90">Essential numbers for everyday use</p>
+                </div>
+                <div class="text-5xl font-bold opacity-20">3</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mx-auto max-w-3xl px-4 py-8">
+
+        <!-- Learning Goal -->
+        <section class="lesson-card bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200">
+            <div class="flex items-start gap-3">
+                <span class="text-2xl">🎯</span>
+                <div>
+                    <h2 class="font-bold text-gray-900">By the end of this lesson, you'll be able to:</h2>
+                    <ul class="mt-2 space-y-1 text-gray-700">
+                        <li>• Count from 0 to 100</li>
+                        <li>• Say larger numbers (hundreds, thousands)</li>
+                        <li>• Use ordinal numbers (first, second, third...)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 1: Numbers 0-10 -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Numbers 0-10</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">Start with the basics. These are the building blocks for all other numbers.</p>
+
+            <div class="number-grid">
+                <div class="number-card">
+                    <div class="text-2xl font-bold text-gray-400">0</div>
+                    <div class="font-medium" data-hoverable="true">zero</div>
+                    <button class="speaker-btn mt-1" data-text="zero"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-2xl font-bold text-blue-600">1</div>
+                    <div class="font-medium" data-hoverable="true">um</div>
+                    <button class="speaker-btn mt-1" data-text="um"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-2xl font-bold text-blue-600">2</div>
+                    <div class="font-medium" data-hoverable="true">dois</div>
+                    <button class="speaker-btn mt-1" data-text="dois"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-2xl font-bold text-blue-600">3</div>
+                    <div class="font-medium" data-hoverable="true">tres</div>
+                    <button class="speaker-btn mt-1" data-text="tres"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-2xl font-bold text-blue-600">4</div>
+                    <div class="font-medium" data-hoverable="true">quatro</div>
+                    <button class="speaker-btn mt-1" data-text="quatro"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-2xl font-bold text-blue-600">5</div>
+                    <div class="font-medium" data-hoverable="true">cinco</div>
+                    <button class="speaker-btn mt-1" data-text="cinco"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-2xl font-bold text-blue-600">6</div>
+                    <div class="font-medium" data-hoverable="true">seis</div>
+                    <button class="speaker-btn mt-1" data-text="seis"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-2xl font-bold text-blue-600">7</div>
+                    <div class="font-medium" data-hoverable="true">sete</div>
+                    <button class="speaker-btn mt-1" data-text="sete"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-2xl font-bold text-blue-600">8</div>
+                    <div class="font-medium" data-hoverable="true">oito</div>
+                    <button class="speaker-btn mt-1" data-text="oito"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-2xl font-bold text-blue-600">9</div>
+                    <div class="font-medium" data-hoverable="true">nove</div>
+                    <button class="speaker-btn mt-1" data-text="nove"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-2xl font-bold text-blue-600">10</div>
+                    <div class="font-medium" data-hoverable="true">dez</div>
+                    <button class="speaker-btn mt-1" data-text="dez"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+            </div>
+
+            <div class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg text-gray-700">
+                <strong class="text-blue-800">Gender note:</strong> <span data-hoverable="true">Um</span> (1) and <span data-hoverable="true">dois</span> (2) have feminine forms: <span data-hoverable="true">uma</span> and <span data-hoverable="true">duas</span>. Example: <span data-hoverable="true">uma casa</span> (one house), <span data-hoverable="true">duas casas</span> (two houses).
+            </div>
+        </section>
+
+        <!-- STEP 2: Numbers 11-20 -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Numbers 11-20</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">These need to be memorized individually - they don't follow a simple pattern.</p>
+
+            <div class="number-grid">
+                <div class="number-card">
+                    <div class="text-xl font-bold text-purple-600">11</div>
+                    <div class="font-medium text-sm" data-hoverable="true">onze</div>
+                    <button class="speaker-btn mt-1" data-text="onze"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-purple-600">12</div>
+                    <div class="font-medium text-sm" data-hoverable="true">doze</div>
+                    <button class="speaker-btn mt-1" data-text="doze"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-purple-600">13</div>
+                    <div class="font-medium text-sm" data-hoverable="true">treze</div>
+                    <button class="speaker-btn mt-1" data-text="treze"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-purple-600">14</div>
+                    <div class="font-medium text-sm" data-hoverable="true">catorze</div>
+                    <button class="speaker-btn mt-1" data-text="catorze"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-purple-600">15</div>
+                    <div class="font-medium text-sm" data-hoverable="true">quinze</div>
+                    <button class="speaker-btn mt-1" data-text="quinze"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-purple-600">16</div>
+                    <div class="font-medium text-sm" data-hoverable="true">dezesseis</div>
+                    <button class="speaker-btn mt-1" data-text="dezesseis"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-purple-600">17</div>
+                    <div class="font-medium text-sm" data-hoverable="true">dezessete</div>
+                    <button class="speaker-btn mt-1" data-text="dezessete"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-purple-600">18</div>
+                    <div class="font-medium text-sm" data-hoverable="true">dezoito</div>
+                    <button class="speaker-btn mt-1" data-text="dezoito"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-purple-600">19</div>
+                    <div class="font-medium text-sm" data-hoverable="true">dezenove</div>
+                    <button class="speaker-btn mt-1" data-text="dezenove"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-purple-600">20</div>
+                    <div class="font-medium text-sm" data-hoverable="true">vinte</div>
+                    <button class="speaker-btn mt-1" data-text="vinte"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+            </div>
+
+            <div class="mt-4 p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r-lg text-gray-700">
+                <strong class="text-amber-800">Pattern hint:</strong> 16-19 follow a pattern: <span data-hoverable="true">dez</span> (10) + <span data-hoverable="true">e</span> (and) + digit = <span data-hoverable="true">dezesseis</span>, <span data-hoverable="true">dezessete</span>, <span data-hoverable="true">dezoito</span>, <span data-hoverable="true">dezenove</span>.
+            </div>
+        </section>
+
+        <!-- STEP 3: Tens (20-100) -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Tens: 20 to 100</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">Learn the tens, then combine them with units using "e" (and).</p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+                <div class="number-card">
+                    <div class="text-xl font-bold text-green-600">20</div>
+                    <div class="font-medium" data-hoverable="true">vinte</div>
+                    <button class="speaker-btn mt-1" data-text="vinte"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-green-600">30</div>
+                    <div class="font-medium" data-hoverable="true">trinta</div>
+                    <button class="speaker-btn mt-1" data-text="trinta"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-green-600">40</div>
+                    <div class="font-medium" data-hoverable="true">quarenta</div>
+                    <button class="speaker-btn mt-1" data-text="quarenta"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-green-600">50</div>
+                    <div class="font-medium" data-hoverable="true">cinquenta</div>
+                    <button class="speaker-btn mt-1" data-text="cinquenta"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-green-600">60</div>
+                    <div class="font-medium" data-hoverable="true">sessenta</div>
+                    <button class="speaker-btn mt-1" data-text="sessenta"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-green-600">70</div>
+                    <div class="font-medium" data-hoverable="true">setenta</div>
+                    <button class="speaker-btn mt-1" data-text="setenta"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-green-600">80</div>
+                    <div class="font-medium" data-hoverable="true">oitenta</div>
+                    <button class="speaker-btn mt-1" data-text="oitenta"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-green-600">90</div>
+                    <div class="font-medium" data-hoverable="true">noventa</div>
+                    <button class="speaker-btn mt-1" data-text="noventa"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+            </div>
+
+            <div class="number-card text-center mb-4">
+                <div class="text-2xl font-bold text-red-600">100</div>
+                <div class="font-medium" data-hoverable="true">cem</div>
+                <button class="speaker-btn mt-1" data-text="cem"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+            </div>
+
+            <h3 class="font-semibold text-gray-900 mb-3">Combining numbers:</h3>
+            <div class="bg-slate-50 p-4 rounded-lg">
+                <p class="font-mono text-gray-600 mb-2">tens + <span class="text-blue-600">e</span> + units</p>
+                <div class="space-y-2 mt-3">
+                    <div class="flex items-center gap-2">
+                        <span class="font-bold">21:</span>
+                        <span data-hoverable="true">vinte e um</span>
+                        <button class="speaker-btn" data-text="vinte e um"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="font-bold">35:</span>
+                        <span data-hoverable="true">trinta e cinco</span>
+                        <button class="speaker-btn" data-text="trinta e cinco"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="font-bold">99:</span>
+                        <span data-hoverable="true">noventa e nove</span>
+                        <button class="speaker-btn" data-text="noventa e nove"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 4: Larger Numbers -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Larger Numbers</h2>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 mb-4">
+                <div class="number-card">
+                    <div class="text-xl font-bold text-orange-600">100</div>
+                    <div class="font-medium" data-hoverable="true">cem</div>
+                    <p class="text-xs text-gray-500">exactly 100</p>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-orange-600">101+</div>
+                    <div class="font-medium" data-hoverable="true">cento e...</div>
+                    <p class="text-xs text-gray-500">101 and above</p>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-orange-600">200</div>
+                    <div class="font-medium" data-hoverable="true">duzentos</div>
+                    <button class="speaker-btn mt-1" data-text="duzentos"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-orange-600">500</div>
+                    <div class="font-medium" data-hoverable="true">quinhentos</div>
+                    <button class="speaker-btn mt-1" data-text="quinhentos"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-orange-600">1.000</div>
+                    <div class="font-medium" data-hoverable="true">mil</div>
+                    <button class="speaker-btn mt-1" data-text="mil"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="number-card">
+                    <div class="text-xl font-bold text-orange-600">1.000.000</div>
+                    <div class="font-medium" data-hoverable="true">um milhao</div>
+                    <button class="speaker-btn mt-1" data-text="um milhao"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+            </div>
+
+            <div class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg text-gray-700">
+                <strong class="text-blue-800">Important:</strong> Use <span data-hoverable="true">cem</span> for exactly 100, but <span data-hoverable="true">cento</span> when followed by more: <span data-hoverable="true">cento e um</span> (101), <span data-hoverable="true">cento e cinquenta</span> (150).
+            </div>
+        </section>
+
+        <!-- STEP 5: Ordinal Numbers -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Ordinal Numbers</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">For ordering things: first, second, third, etc.</p>
+
+            <div class="grid grid-cols-2 gap-2">
+                <div class="p-2 bg-gray-50 rounded flex items-center justify-between">
+                    <div>
+                        <span class="font-bold">1st:</span>
+                        <span data-hoverable="true">primeiro</span>
+                    </div>
+                    <button class="speaker-btn" data-text="primeiro"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="p-2 bg-gray-50 rounded flex items-center justify-between">
+                    <div>
+                        <span class="font-bold">2nd:</span>
+                        <span data-hoverable="true">segundo</span>
+                    </div>
+                    <button class="speaker-btn" data-text="segundo"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="p-2 bg-gray-50 rounded flex items-center justify-between">
+                    <div>
+                        <span class="font-bold">3rd:</span>
+                        <span data-hoverable="true">terceiro</span>
+                    </div>
+                    <button class="speaker-btn" data-text="terceiro"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="p-2 bg-gray-50 rounded flex items-center justify-between">
+                    <div>
+                        <span class="font-bold">4th:</span>
+                        <span data-hoverable="true">quarto</span>
+                    </div>
+                    <button class="speaker-btn" data-text="quarto"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="p-2 bg-gray-50 rounded flex items-center justify-between">
+                    <div>
+                        <span class="font-bold">5th:</span>
+                        <span data-hoverable="true">quinto</span>
+                    </div>
+                    <button class="speaker-btn" data-text="quinto"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="p-2 bg-gray-50 rounded flex items-center justify-between">
+                    <div>
+                        <span class="font-bold">6th:</span>
+                        <span data-hoverable="true">sexto</span>
+                    </div>
+                    <button class="speaker-btn" data-text="sexto"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="p-2 bg-gray-50 rounded flex items-center justify-between">
+                    <div>
+                        <span class="font-bold">7th:</span>
+                        <span data-hoverable="true">setimo</span>
+                    </div>
+                    <button class="speaker-btn" data-text="setimo"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="p-2 bg-gray-50 rounded flex items-center justify-between">
+                    <div>
+                        <span class="font-bold">8th:</span>
+                        <span data-hoverable="true">oitavo</span>
+                    </div>
+                    <button class="speaker-btn" data-text="oitavo"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="p-2 bg-gray-50 rounded flex items-center justify-between">
+                    <div>
+                        <span class="font-bold">9th:</span>
+                        <span data-hoverable="true">nono</span>
+                    </div>
+                    <button class="speaker-btn" data-text="nono"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+                <div class="p-2 bg-gray-50 rounded flex items-center justify-between">
+                    <div>
+                        <span class="font-bold">10th:</span>
+                        <span data-hoverable="true">decimo</span>
+                    </div>
+                    <button class="speaker-btn" data-text="decimo"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.983 5.983 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.984 3.984 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path></svg></button>
+                </div>
+            </div>
+
+            <div class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg text-gray-700">
+                <strong class="text-blue-800">Gender agreement:</strong> Ordinals change for gender: <span data-hoverable="true">primeiro</span> (m) / <span data-hoverable="true">primeira</span> (f), <span data-hoverable="true">segundo</span> (m) / <span data-hoverable="true">segunda</span> (f).
+            </div>
+        </section>
+
+        <!-- Practice Drill -->
+        <section class="lesson-card bg-gradient-to-r from-sky-50 to-blue-50 border border-sky-200">
+            <h2 class="text-xl font-bold text-gray-900 mb-3">Ready to Practice?</h2>
+            <p class="text-gray-700 mb-4">Test your knowledge with our numbers drill!</p>
+            <a href="/?drill=numbers" class="inline-flex items-center gap-2 bg-sky-600 text-white px-4 py-2 rounded-lg hover:bg-sky-700 transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Start Numbers Drill
+            </a>
+        </section>
+
+        <!-- What's Next -->
+        <section class="lesson-card bg-gradient-to-r from-purple-50 to-indigo-50 border border-purple-200">
+            <h2 class="text-xl font-bold text-gray-900 mb-3">What's Next?</h2>
+            <p class="text-gray-700 mb-4">Learn days of the week, months, and how to express dates!</p>
+            <a href="/lessons/a1/dates.html" class="inline-flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
+                Continue to Days & Dates
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+        </section>
+
+    </div>
+
+    <footer class="bg-gray-100 border-t mt-8">
+        <div class="container mx-auto max-w-3xl px-4 py-6 text-center text-gray-600 text-sm">
+            <a href="/lessons/a1/greetings.html" class="hover:text-blue-600">&larr; Previous: Greetings</a>
+            <span class="mx-4">|</span>
+            <a href="/" class="hover:text-blue-600">Home</a>
+        </div>
+    </footer>
+
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'pt-BR';
+                utterance.rate = options.rate || 0.9;
+                if (options.onEnd) utterance.onend = options.onEnd;
+                if (options.onError) utterance.onerror = options.onError;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.speaker-btn[data-text]').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    this.classList.add('speaking');
+                    speak(this.getAttribute('data-text'), {
+                        onEnd: () => this.classList.remove('speaking'),
+                        onError: () => this.classList.remove('speaking')
+                    });
+                });
+            });
+        });
+        let dictionary = { phrases: {}, words: {} };
+        async function loadDictionary() {
+            try { dictionary = await (await fetch('/config/dictionary.json')).json(); } catch (e) {}
+        }
+        function lookupWord(word) {
+            const lw = word.toLowerCase();
+            return dictionary.words?.[lw] || Object.entries(dictionary.words || {}).find(([k]) => k.toLowerCase() === lw)?.[1] || null;
+        }
+        function addTooltips(text) {
+            let result = text;
+            for (const [phrase, trans] of Object.entries(dictionary.phrases || {}).sort((a, b) => b[0].length - a[0].length)) {
+                result = result.replace(new RegExp(`(?<![A-Za-zÀ-ÿ])(${phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})(?![A-Za-zÀ-ÿ])`, 'gi'), m => `<span class="phrase-tooltip" data-translation="${trans.replace(/"/g, '&quot;')}">${m}</span>`);
+            }
+            return result.replace(/(<span[^>]*>.*?<\/span>)|([A-Za-zÀ-ÿ]+)/g, (m, span, word) => {
+                if (span) return span;
+                const t = lookupWord(word);
+                return t ? `<span class="word-tooltip" data-translation="${t.replace(/"/g, '&quot;')}">${word}</span>` : word;
+            });
+        }
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadDictionary();
+            document.querySelectorAll('[data-hoverable="true"]').forEach(el => {
+                if (!el.dataset.processed) { el.innerHTML = addTooltips(el.textContent); el.dataset.processed = 'true'; }
+            });
+        });
+    </script>
+    <script src="/pwa-setup.js"></script>
+</body>
+</html>

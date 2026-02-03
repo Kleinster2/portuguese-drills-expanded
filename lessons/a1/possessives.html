@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Possessives - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .speaker-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .speaker-btn:hover {
+            background: #2563eb;
+        }
+        .portuguese {
+            font-weight: 600;
+            color: #1e40af;
+        }
+        .english {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        .example-sentence {
+            background: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .info-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .grammar-box {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .warning-box {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        th {
+            background: #f8fafc;
+            font-weight: 600;
+        }
+        .masculine {
+            background: #dbeafe;
+        }
+        .feminine {
+            background: #fce7f3;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 16</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Possessivos</h1>
+            <p class="text-gray-600">Possessive Adjectives & Pronouns</p>
+        </div>
+
+        <!-- STEP 1: Overview -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">How Possessives Work</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">Portuguese possessives agree with <strong>what is owned</strong>, not the owner. This is different from English!</p>
+
+            <div class="grammar-box">
+                <strong>📝 Key concept:</strong> Possessive agrees with the <strong>thing possessed</strong> (not the possessor)
+                <div class="mt-2">
+                    <span class="portuguese">meu livro</span> (my book - masculine)
+                    <br><span class="portuguese">minha casa</span> (my house - feminine)
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>💡 Think of it this way:</strong> In "minha casa," the word <em>minha</em> is feminine because <em>casa</em> is feminine - not because of who owns it.
+            </div>
+        </section>
+
+        <!-- STEP 2: First Person -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">My & Our</h2>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th colspan="2" class="masculine">Masculine</th>
+                        <th colspan="2" class="feminine">Feminine</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th class="masculine">Sing.</th>
+                        <th class="masculine">Plur.</th>
+                        <th class="feminine">Sing.</th>
+                        <th class="feminine">Plur.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>my</strong></td>
+                        <td class="masculine">
+                            <button class="speaker-btn mr-1" onclick="speak('meu')">🔊</button>
+                            <span class="portuguese">meu</span>
+                        </td>
+                        <td class="masculine">
+                            <button class="speaker-btn mr-1" onclick="speak('meus')">🔊</button>
+                            <span class="portuguese">meus</span>
+                        </td>
+                        <td class="feminine">
+                            <button class="speaker-btn mr-1" onclick="speak('minha')">🔊</button>
+                            <span class="portuguese">minha</span>
+                        </td>
+                        <td class="feminine">
+                            <button class="speaker-btn mr-1" onclick="speak('minhas')">🔊</button>
+                            <span class="portuguese">minhas</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>our</strong></td>
+                        <td class="masculine">
+                            <button class="speaker-btn mr-1" onclick="speak('nosso')">🔊</button>
+                            <span class="portuguese">nosso</span>
+                        </td>
+                        <td class="masculine">
+                            <button class="speaker-btn mr-1" onclick="speak('nossos')">🔊</button>
+                            <span class="portuguese">nossos</span>
+                        </td>
+                        <td class="feminine">
+                            <button class="speaker-btn mr-1" onclick="speak('nossa')">🔊</button>
+                            <span class="portuguese">nossa</span>
+                        </td>
+                        <td class="feminine">
+                            <button class="speaker-btn mr-1" onclick="speak('nossas')">🔊</button>
+                            <span class="portuguese">nossas</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Meu carro é azul.')">🔊</button>
+                <span class="portuguese">Meu carro é azul.</span>
+                <div class="english mt-1">My car is blue.</div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Minhas irmãs moram em Lisboa.')">🔊</button>
+                <span class="portuguese">Minhas irmãs moram em Lisboa.</span>
+                <div class="english mt-1">My sisters live in Lisbon.</div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Nossa casa é grande.')">🔊</button>
+                <span class="portuguese">Nossa casa é grande.</span>
+                <div class="english mt-1">Our house is big.</div>
+            </div>
+        </section>
+
+        <!-- STEP 3: Your (singular) -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Your (Singular)</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">For "your," there are different forms depending on formality and region.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th colspan="2" class="masculine">Masculine</th>
+                        <th colspan="2" class="feminine">Feminine</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th class="masculine">Sing.</th>
+                        <th class="masculine">Plur.</th>
+                        <th class="feminine">Sing.</th>
+                        <th class="feminine">Plur.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>your</strong> (tu)</td>
+                        <td class="masculine">
+                            <button class="speaker-btn mr-1" onclick="speak('teu')">🔊</button>
+                            <span class="portuguese">teu</span>
+                        </td>
+                        <td class="masculine">
+                            <button class="speaker-btn mr-1" onclick="speak('teus')">🔊</button>
+                            <span class="portuguese">teus</span>
+                        </td>
+                        <td class="feminine">
+                            <button class="speaker-btn mr-1" onclick="speak('tua')">🔊</button>
+                            <span class="portuguese">tua</span>
+                        </td>
+                        <td class="feminine">
+                            <button class="speaker-btn mr-1" onclick="speak('tuas')">🔊</button>
+                            <span class="portuguese">tuas</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>your</strong> (você)</td>
+                        <td class="masculine">
+                            <button class="speaker-btn mr-1" onclick="speak('seu')">🔊</button>
+                            <span class="portuguese">seu</span>
+                        </td>
+                        <td class="masculine">
+                            <button class="speaker-btn mr-1" onclick="speak('seus')">🔊</button>
+                            <span class="portuguese">seus</span>
+                        </td>
+                        <td class="feminine">
+                            <button class="speaker-btn mr-1" onclick="speak('sua')">🔊</button>
+                            <span class="portuguese">sua</span>
+                        </td>
+                        <td class="feminine">
+                            <button class="speaker-btn mr-1" onclick="speak('suas')">🔊</button>
+                            <span class="portuguese">suas</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-box">
+                <strong>🇧🇷 vs 🇵🇹:</strong>
+                <ul class="mt-2 space-y-1">
+                    <li>• <strong>Brazil:</strong> <em>seu/sua</em> is most common for "your"</li>
+                    <li>• <strong>Portugal:</strong> <em>teu/tua</em> with tu, <em>seu/sua</em> with você</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- STEP 4: His/Her/Their -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">His, Her, Their</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">To avoid ambiguity with <em>seu/sua</em>, Brazilian Portuguese commonly uses <strong>dele/dela/deles/delas</strong> (of him/her/them).</p>
+
+            <div class="warning-box">
+                <strong>⚠️ Ambiguity alert:</strong> <em>Seu livro</em> can mean "your book," "his book," "her book," or "their book"! Context helps, but using <em>dele/dela</em> is clearer.
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Meaning</th>
+                        <th>Form</th>
+                        <th>Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>his</td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('dele')">🔊</button>
+                            <span class="portuguese">dele</span>
+                        </td>
+                        <td>after noun</td>
+                    </tr>
+                    <tr>
+                        <td>her</td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('dela')">🔊</button>
+                            <span class="portuguese">dela</span>
+                        </td>
+                        <td>after noun</td>
+                    </tr>
+                    <tr>
+                        <td>their (masc.)</td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('deles')">🔊</button>
+                            <span class="portuguese">deles</span>
+                        </td>
+                        <td>after noun</td>
+                    </tr>
+                    <tr>
+                        <td>their (fem.)</td>
+                        <td>
+                            <button class="speaker-btn mr-1" onclick="speak('delas')">🔊</button>
+                            <span class="portuguese">delas</span>
+                        </td>
+                        <td>after noun</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="grammar-box">
+                <strong>📝 Important:</strong> <em>Dele/dela</em> comes <strong>after</strong> the noun and does NOT change for gender/number of the noun!
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('O carro dele é novo.')">🔊</button>
+                <span class="portuguese">O carro <strong>dele</strong> é novo.</span>
+                <div class="english mt-1">His car is new.</div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('A casa dela é bonita.')">🔊</button>
+                <span class="portuguese">A casa <strong>dela</strong> é bonita.</span>
+                <div class="english mt-1">Her house is beautiful.</div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Os filhos deles estudam aqui.')">🔊</button>
+                <span class="portuguese">Os filhos <strong>deles</strong> estudam aqui.</span>
+                <div class="english mt-1">Their children study here.</div>
+            </div>
+        </section>
+
+        <!-- STEP 5: With Articles -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Articles with Possessives</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">In Brazilian Portuguese, possessives are often used WITH an article. In European Portuguese, the article is usually omitted.</p>
+
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="p-4 bg-green-50 rounded-lg border border-green-200">
+                    <h3 class="font-bold text-green-800 mb-2">🇧🇷 Brazilian Portuguese</h3>
+                    <div class="example-sentence">
+                        <button class="speaker-btn mr-2" onclick="speak('O meu carro')">🔊</button>
+                        <span class="portuguese"><strong>O</strong> meu carro</span>
+                    </div>
+                    <p class="text-sm text-green-700">Article + possessive is common</p>
+                </div>
+                <div class="p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <h3 class="font-bold text-blue-800 mb-2">🇵🇹 European Portuguese</h3>
+                    <div class="example-sentence">
+                        <button class="speaker-btn mr-2" onclick="speak('Meu carro')">🔊</button>
+                        <span class="portuguese">Meu carro</span>
+                    </div>
+                    <p class="text-sm text-blue-700">Usually no article</p>
+                </div>
+            </div>
+
+            <div class="info-box mt-4">
+                <strong>💡 Both are correct!</strong> Using the article is more common in speech, while omitting it is more formal.
+            </div>
+        </section>
+
+        <!-- STEP 6: Summary & Practice -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Quick Reference</h2>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>English</th>
+                        <th>Masc. Sing.</th>
+                        <th>Fem. Sing.</th>
+                        <th>Alternative</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>my</td>
+                        <td><span class="portuguese">meu</span></td>
+                        <td><span class="portuguese">minha</span></td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>your (informal)</td>
+                        <td><span class="portuguese">teu</span></td>
+                        <td><span class="portuguese">tua</span></td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>your/his/her</td>
+                        <td><span class="portuguese">seu</span></td>
+                        <td><span class="portuguese">sua</span></td>
+                        <td>dele/dela</td>
+                    </tr>
+                    <tr>
+                        <td>our</td>
+                        <td><span class="portuguese">nosso</span></td>
+                        <td><span class="portuguese">nossa</span></td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>your/their (pl.)</td>
+                        <td><span class="portuguese">seu</span></td>
+                        <td><span class="portuguese">sua</span></td>
+                        <td>deles/delas</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Practice Section -->
+        <section class="lesson-card bg-blue-50">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <p class="text-gray-700 mb-4">Ready to practice possessives? Try this drill:</p>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=possessives" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Possessives Drill →
+                </a>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="adjectives.html" class="text-blue-600 hover:text-blue-800">
+                ← Unit 15: Adjective Agreement
+            </a>
+            <a href="demonstratives.html" class="text-blue-600 hover:text-blue-800">
+                Unit 17: Demonstratives →
+            </a>
+        </div>
+    </main>
+
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'pt-BR';
+                utterance.rate = options.rate || 0.9;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+    </script>
+</body>
+</html>

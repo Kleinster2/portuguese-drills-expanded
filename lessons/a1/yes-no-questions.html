@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes/No Questions - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .response-card { background: #f8fafc; padding: 1rem; border-radius: 0.5rem; border: 1px solid #e2e8f0; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 21</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Perguntas de Sim/Não</h1>
+            <p class="text-gray-600">Yes/No Questions & Answers</p>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Forming Yes/No Questions</h2>
+            </div>
+            <p class="text-gray-700 mb-4">In Portuguese, yes/no questions are formed simply by <strong>raising your intonation</strong> at the end. No word order change needed!</p>
+            <div class="grammar-box">
+                <strong>📝 Rule:</strong> Statement + rising intonation (?) = Question
+                <div class="mt-2">
+                    <span class="portuguese">Você fala inglês.</span> (statement) ↗<br>
+                    <span class="portuguese">Você fala inglês?</span> (question) ↗
+                </div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Você é brasileiro?')">🔊</button>
+                <span class="portuguese">Você é brasileiro?</span>
+                <div class="english mt-1">Are you Brazilian?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Ele mora aqui?')">🔊</button>
+                <span class="portuguese">Ele mora aqui?</span>
+                <div class="english mt-1">Does he live here?</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Basic Answers</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-4 mb-4">
+                <div class="response-card text-center">
+                    <button class="speaker-btn mb-2" onclick="speak('sim')">🔊</button>
+                    <div class="text-2xl font-bold text-green-600">Sim</div>
+                    <div class="text-gray-600">Yes</div>
+                </div>
+                <div class="response-card text-center">
+                    <button class="speaker-btn mb-2" onclick="speak('não')">🔊</button>
+                    <div class="text-2xl font-bold text-red-600">Não</div>
+                    <div class="text-gray-600">No</div>
+                </div>
+                <div class="response-card text-center">
+                    <button class="speaker-btn mb-2" onclick="speak('talvez')">🔊</button>
+                    <div class="text-2xl font-bold text-yellow-600">Talvez</div>
+                    <div class="text-gray-600">Maybe</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Full Answers</h2>
+            </div>
+            <p class="text-gray-700 mb-4">In Portuguese, it's common to repeat the verb in your answer instead of just saying "yes" or "no".</p>
+            <div class="example-sentence">
+                <div class="mb-2"><strong>Q:</strong> <button class="speaker-btn mr-2" onclick="speak('Você fala português?')">🔊</button><span class="portuguese">Você fala português?</span></div>
+                <div><strong>A:</strong> <button class="speaker-btn mr-2" onclick="speak('Falo.')">🔊</button><span class="portuguese"><strong>Falo.</strong></span> (Yes, I speak it.)</div>
+            </div>
+            <div class="example-sentence">
+                <div class="mb-2"><strong>Q:</strong> <button class="speaker-btn mr-2" onclick="speak('Você tem irmãos?')">🔊</button><span class="portuguese">Você tem irmãos?</span></div>
+                <div><strong>A:</strong> <button class="speaker-btn mr-2" onclick="speak('Tenho.')">🔊</button><span class="portuguese"><strong>Tenho.</strong></span> (Yes, I have.)</div>
+            </div>
+            <div class="example-sentence">
+                <div class="mb-2"><strong>Q:</strong> <button class="speaker-btn mr-2" onclick="speak('Você é casado?')">🔊</button><span class="portuguese">Você é casado?</span></div>
+                <div><strong>A:</strong> <button class="speaker-btn mr-2" onclick="speak('Sou.')">🔊</button><span class="portuguese"><strong>Sou.</strong></span> (Yes, I am.)</div>
+            </div>
+            <div class="info-box">
+                <strong>💡 Tip:</strong> Repeating the verb sounds more natural than just "Sim" in many contexts!
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Negative Answers</h2>
+            </div>
+            <p class="text-gray-700 mb-4">For negative answers, use <strong>Não</strong> + verb, or just <strong>Não</strong> + verb alone.</p>
+            <div class="example-sentence">
+                <div class="mb-2"><strong>Q:</strong> <button class="speaker-btn mr-2" onclick="speak('Você mora no Brasil?')">🔊</button><span class="portuguese">Você mora no Brasil?</span></div>
+                <div><strong>A:</strong> <button class="speaker-btn mr-2" onclick="speak('Não, não moro.')">🔊</button><span class="portuguese"><strong>Não, não moro.</strong></span></div>
+            </div>
+            <div class="example-sentence">
+                <div class="mb-2"><strong>Q:</strong> <button class="speaker-btn mr-2" onclick="speak('Você gosta de café?')">🔊</button><span class="portuguese">Você gosta de café?</span></div>
+                <div><strong>A:</strong> <button class="speaker-btn mr-2" onclick="speak('Não gosto.')">🔊</button><span class="portuguese"><strong>Não gosto.</strong></span> (I don't like it.)</div>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> Não + verb = negative response
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Common Q&A Pairs</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="example-sentence">
+                    <div class="mb-1"><strong>Q:</strong> <button class="speaker-btn mr-2" onclick="speak('Está tudo bem?')">🔊</button><span class="portuguese">Está tudo bem?</span></div>
+                    <div><strong>A:</strong> <button class="speaker-btn mr-2" onclick="speak('Está, obrigado.')">🔊</button><span class="portuguese">Está, obrigado.</span> <span class="english">- Yes, thanks.</span></div>
+                </div>
+                <div class="example-sentence">
+                    <div class="mb-1"><strong>Q:</strong> <button class="speaker-btn mr-2" onclick="speak('Posso entrar?')">🔊</button><span class="portuguese">Posso entrar?</span></div>
+                    <div><strong>A:</strong> <button class="speaker-btn mr-2" onclick="speak('Pode.')">🔊</button><span class="portuguese">Pode.</span> <span class="english">- Yes, you can.</span></div>
+                </div>
+                <div class="example-sentence">
+                    <div class="mb-1"><strong>Q:</strong> <button class="speaker-btn mr-2" onclick="speak('Você quer mais?')">🔊</button><span class="portuguese">Você quer mais?</span></div>
+                    <div><strong>A:</strong> <button class="speaker-btn mr-2" onclick="speak('Não, obrigado.')">🔊</button><span class="portuguese">Não, obrigado.</span> <span class="english">- No, thank you.</span></div>
+                </div>
+                <div class="example-sentence">
+                    <div class="mb-1"><strong>Q:</strong> <button class="speaker-btn mr-2" onclick="speak('Você entendeu?')">🔊</button><span class="portuguese">Você entendeu?</span></div>
+                    <div><strong>A:</strong> <button class="speaker-btn mr-2" onclick="speak('Entendi.')">🔊</button><span class="portuguese">Entendi.</span> <span class="english">- Yes, I understood.</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Useful Expressions</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="response-card">
+                    <button class="speaker-btn mb-2" onclick="speak('Claro!')">🔊</button>
+                    <div class="portuguese">Claro!</div>
+                    <div class="text-gray-600">Of course!</div>
+                </div>
+                <div class="response-card">
+                    <button class="speaker-btn mb-2" onclick="speak('Com certeza!')">🔊</button>
+                    <div class="portuguese">Com certeza!</div>
+                    <div class="text-gray-600">Certainly!</div>
+                </div>
+                <div class="response-card">
+                    <button class="speaker-btn mb-2" onclick="speak('Acho que sim.')">🔊</button>
+                    <div class="portuguese">Acho que sim.</div>
+                    <div class="text-gray-600">I think so.</div>
+                </div>
+                <div class="response-card">
+                    <button class="speaker-btn mb-2" onclick="speak('Acho que não.')">🔊</button>
+                    <div class="portuguese">Acho que não.</div>
+                    <div class="text-gray-600">I don't think so.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card bg-blue-50">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=yes-no-questions" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Yes/No Questions Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="question-words.html" class="text-blue-600 hover:text-blue-800">← Unit 20: Question Words</a>
+            <a href="subject-identification.html" class="text-blue-600 hover:text-blue-800">Unit 22: Subject Identification →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

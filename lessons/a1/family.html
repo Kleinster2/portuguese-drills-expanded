@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .vocab-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .vocab-item:last-child {
+            border-bottom: none;
+        }
+        .speaker-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .speaker-btn:hover {
+            background: #2563eb;
+        }
+        .portuguese {
+            font-weight: 600;
+            color: #1e40af;
+        }
+        .english {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        .example-sentence {
+            background: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .info-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .family-tree {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+        .family-member {
+            background: #f8fafc;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 5</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">A Família</h1>
+            <p class="text-gray-600">Family Members & Relationships</p>
+        </div>
+
+        <!-- STEP 1: Immediate Family -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Immediate Family</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">Let's start with your closest family members - parents, siblings, and children.</p>
+
+            <h3 class="font-semibold text-gray-800 mb-3">Parents</h3>
+            <div class="family-tree">
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('o pai')">🔊</button>
+                    <div class="portuguese">o pai</div>
+                    <div class="english">father</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('a mãe')">🔊</button>
+                    <div class="portuguese">a mãe</div>
+                    <div class="english">mother</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('os pais')">🔊</button>
+                    <div class="portuguese">os pais</div>
+                    <div class="english">parents</div>
+                </div>
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3 mt-4">Children</h3>
+            <div class="family-tree">
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('o filho')">🔊</button>
+                    <div class="portuguese">o filho</div>
+                    <div class="english">son</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('a filha')">🔊</button>
+                    <div class="portuguese">a filha</div>
+                    <div class="english">daughter</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('os filhos')">🔊</button>
+                    <div class="portuguese">os filhos</div>
+                    <div class="english">children</div>
+                </div>
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3 mt-4">Siblings</h3>
+            <div class="family-tree">
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('o irmão')">🔊</button>
+                    <div class="portuguese">o irmão</div>
+                    <div class="english">brother</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('a irmã')">🔊</button>
+                    <div class="portuguese">a irmã</div>
+                    <div class="english">sister</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('os irmãos')">🔊</button>
+                    <div class="portuguese">os irmãos</div>
+                    <div class="english">siblings</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>💡 Note:</strong> In Portuguese, the masculine plural (<em>os filhos</em>, <em>os irmãos</em>) is used for mixed groups or when gender is unspecified.
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Eu tenho dois irmãos e uma irmã.')">🔊</button>
+                <span class="portuguese">Eu tenho dois irmãos e uma irmã.</span>
+                <div class="english mt-1">I have two brothers and one sister.</div>
+            </div>
+        </section>
+
+        <!-- STEP 2: Spouse & Partner -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Spouse & Partner</h2>
+            </div>
+
+            <div class="family-tree">
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('o marido')">🔊</button>
+                    <div class="portuguese">o marido</div>
+                    <div class="english">husband</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('a esposa')">🔊</button>
+                    <div class="portuguese">a esposa</div>
+                    <div class="english">wife</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('a mulher')">🔊</button>
+                    <div class="portuguese">a mulher</div>
+                    <div class="english">wife (informal)</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('o namorado')">🔊</button>
+                    <div class="portuguese">o namorado</div>
+                    <div class="english">boyfriend</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('a namorada')">🔊</button>
+                    <div class="portuguese">a namorada</div>
+                    <div class="english">girlfriend</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('o noivo')">🔊</button>
+                    <div class="portuguese">o noivo</div>
+                    <div class="english">fiancé</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('a noiva')">🔊</button>
+                    <div class="portuguese">a noiva</div>
+                    <div class="english">fiancée</div>
+                </div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Minha esposa é brasileira.')">🔊</button>
+                <span class="portuguese">Minha esposa é brasileira.</span>
+                <div class="english mt-1">My wife is Brazilian.</div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Meu marido trabalha em São Paulo.')">🔊</button>
+                <span class="portuguese">Meu marido trabalha em São Paulo.</span>
+                <div class="english mt-1">My husband works in São Paulo.</div>
+            </div>
+        </section>
+
+        <!-- STEP 3: Grandparents & Grandchildren -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Grandparents & Grandchildren</h2>
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3">Grandparents</h3>
+            <div class="family-tree">
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('o avô')">🔊</button>
+                    <div class="portuguese">o avô</div>
+                    <div class="english">grandfather</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('a avó')">🔊</button>
+                    <div class="portuguese">a avó</div>
+                    <div class="english">grandmother</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('os avós')">🔊</button>
+                    <div class="portuguese">os avós</div>
+                    <div class="english">grandparents</div>
+                </div>
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3 mt-4">Grandchildren</h3>
+            <div class="family-tree">
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('o neto')">🔊</button>
+                    <div class="portuguese">o neto</div>
+                    <div class="english">grandson</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('a neta')">🔊</button>
+                    <div class="portuguese">a neta</div>
+                    <div class="english">granddaughter</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('os netos')">🔊</button>
+                    <div class="portuguese">os netos</div>
+                    <div class="english">grandchildren</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>💡 Pronunciation:</strong> Notice the accent marks: <em>avô</em> (grandfather) has a closed "o" sound, while <em>avó</em> (grandmother) has an open "o" sound.
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Meus avós moram no interior.')">🔊</button>
+                <span class="portuguese">Meus avós moram no interior.</span>
+                <div class="english mt-1">My grandparents live in the countryside.</div>
+            </div>
+        </section>
+
+        <!-- STEP 4: Aunts, Uncles & Cousins -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Aunts, Uncles & Cousins</h2>
+            </div>
+
+            <div class="family-tree">
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('o tio')">🔊</button>
+                    <div class="portuguese">o tio</div>
+                    <div class="english">uncle</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('a tia')">🔊</button>
+                    <div class="portuguese">a tia</div>
+                    <div class="english">aunt</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('o primo')">🔊</button>
+                    <div class="portuguese">o primo</div>
+                    <div class="english">cousin (male)</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('a prima')">🔊</button>
+                    <div class="portuguese">a prima</div>
+                    <div class="english">cousin (female)</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('o sobrinho')">🔊</button>
+                    <div class="portuguese">o sobrinho</div>
+                    <div class="english">nephew</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('a sobrinha')">🔊</button>
+                    <div class="portuguese">a sobrinha</div>
+                    <div class="english">niece</div>
+                </div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Tenho muitos primos no Brasil.')">🔊</button>
+                <span class="portuguese">Tenho muitos primos no Brasil.</span>
+                <div class="english mt-1">I have many cousins in Brazil.</div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Minha tia faz o melhor bolo de chocolate.')">🔊</button>
+                <span class="portuguese">Minha tia faz o melhor bolo de chocolate.</span>
+                <div class="english mt-1">My aunt makes the best chocolate cake.</div>
+            </div>
+        </section>
+
+        <!-- STEP 5: In-Laws -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">In-Laws</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">Family members by marriage - note that Portuguese uses specific words for in-laws.</p>
+
+            <div class="family-tree">
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('o sogro')">🔊</button>
+                    <div class="portuguese">o sogro</div>
+                    <div class="english">father-in-law</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('a sogra')">🔊</button>
+                    <div class="portuguese">a sogra</div>
+                    <div class="english">mother-in-law</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('o genro')">🔊</button>
+                    <div class="portuguese">o genro</div>
+                    <div class="english">son-in-law</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('a nora')">🔊</button>
+                    <div class="portuguese">a nora</div>
+                    <div class="english">daughter-in-law</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('o cunhado')">🔊</button>
+                    <div class="portuguese">o cunhado</div>
+                    <div class="english">brother-in-law</div>
+                </div>
+                <div class="family-member">
+                    <button class="speaker-btn mb-2" onclick="speak('a cunhada')">🔊</button>
+                    <div class="portuguese">a cunhada</div>
+                    <div class="english">sister-in-law</div>
+                </div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Meus sogros vêm jantar amanhã.')">🔊</button>
+                <span class="portuguese">Meus sogros vêm jantar amanhã.</span>
+                <div class="english mt-1">My in-laws are coming for dinner tomorrow.</div>
+            </div>
+        </section>
+
+        <!-- STEP 6: Useful Phrases -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Useful Phrases</h2>
+            </div>
+
+            <p class="text-gray-700 mb-4">Common phrases for talking about your family.</p>
+
+            <div class="space-y-3">
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Você tem irmãos?')">🔊</button>
+                    <div>
+                        <span class="portuguese">Você tem irmãos?</span>
+                        <div class="english">Do you have siblings?</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Quantos filhos você tem?')">🔊</button>
+                    <div>
+                        <span class="portuguese">Quantos filhos você tem?</span>
+                        <div class="english">How many children do you have?</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Sou filho único.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Sou filho único.</span>
+                        <div class="english">I'm an only child. (male)</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Sou filha única.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Sou filha única.</span>
+                        <div class="english">I'm an only child. (female)</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Tenho uma família grande.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Tenho uma família grande.</span>
+                        <div class="english">I have a big family.</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Minha família mora em Portugal.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Minha família mora em Portugal.</span>
+                        <div class="english">My family lives in Portugal.</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Eu sou casado.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Eu sou casado. / Eu sou casada.</span>
+                        <div class="english">I am married. (male / female)</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Eu sou solteiro.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Eu sou solteiro. / Eu sou solteira.</span>
+                        <div class="english">I am single. (male / female)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practice Section -->
+        <section class="lesson-card bg-blue-50">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <p class="text-gray-700 mb-4">Ready to practice family vocabulary? Try these drills:</p>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=family" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Family Vocabulary Drill →
+                </a>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="dates.html" class="text-blue-600 hover:text-blue-800">
+                ← Unit 4: Dates
+            </a>
+            <a href="food.html" class="text-blue-600 hover:text-blue-800">
+                Unit 6: Food & Meals →
+            </a>
+        </div>
+    </main>
+
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'pt-BR';
+                utterance.rate = options.rate || 0.9;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+    </script>
+</body>
+</html>

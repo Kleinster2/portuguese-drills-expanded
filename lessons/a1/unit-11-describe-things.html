@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 11: Describe Things - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .production-goal { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; }
+        .production-goal h2 { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; }
+        .production-goal .phrase { font-size: 1.75rem; font-weight: bold; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 0.75rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .now-you-can { background: #ecfdf5; border: 2px solid #10b981; border-radius: 1rem; padding: 1.5rem; margin-top: 2rem; }
+        .color-box { width: 24px; height: 24px; border-radius: 4px; display: inline-block; vertical-align: middle; margin-right: 8px; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-6">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 11</span>
+            </div>
+        </div>
+
+        <div class="production-goal">
+            <h2>By the end of this unit, you'll say:</h2>
+            <div class="phrase">
+                <button class="speaker-btn mr-2" onclick="speak('O carro é vermelho. A casa é grande.')">🔊</button>
+                "O carro é vermelho. A casa é grande."
+            </div>
+            <div class="mt-2 text-white/80">The car is red. The house is big.</div>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Colors</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3">
+                <div class="example-sentence">
+                    <span class="color-box" style="background: #ef4444;"></span>
+                    <button class="speaker-btn mr-2" onclick="speak('vermelho')">🔊</button>
+                    <span class="portuguese">vermelho/a</span> - red
+                </div>
+                <div class="example-sentence">
+                    <span class="color-box" style="background: #3b82f6;"></span>
+                    <button class="speaker-btn mr-2" onclick="speak('azul')">🔊</button>
+                    <span class="portuguese">azul</span> - blue
+                </div>
+                <div class="example-sentence">
+                    <span class="color-box" style="background: #22c55e;"></span>
+                    <button class="speaker-btn mr-2" onclick="speak('verde')">🔊</button>
+                    <span class="portuguese">verde</span> - green
+                </div>
+                <div class="example-sentence">
+                    <span class="color-box" style="background: #facc15;"></span>
+                    <button class="speaker-btn mr-2" onclick="speak('amarelo')">🔊</button>
+                    <span class="portuguese">amarelo/a</span> - yellow
+                </div>
+                <div class="example-sentence">
+                    <span class="color-box" style="background: #000;"></span>
+                    <button class="speaker-btn mr-2" onclick="speak('preto')">🔊</button>
+                    <span class="portuguese">preto/a</span> - black
+                </div>
+                <div class="example-sentence">
+                    <span class="color-box" style="background: #fff; border: 1px solid #ccc;"></span>
+                    <button class="speaker-btn mr-2" onclick="speak('branco')">🔊</button>
+                    <span class="portuguese">branco/a</span> - white
+                </div>
+                <div class="example-sentence">
+                    <span class="color-box" style="background: #f97316;"></span>
+                    <button class="speaker-btn mr-2" onclick="speak('laranja')">🔊</button>
+                    <span class="portuguese">laranja</span> - orange
+                </div>
+                <div class="example-sentence">
+                    <span class="color-box" style="background: #ec4899;"></span>
+                    <button class="speaker-btn mr-2" onclick="speak('rosa')">🔊</button>
+                    <span class="portuguese">rosa</span> - pink
+                </div>
+            </div>
+            <div class="info-box">
+                <strong>💡 Some change:</strong> vermelho → vermelh<strong>a</strong>, preto → pret<strong>a</strong>. Others stay the same: azul, verde, laranja.
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Adjective Agreement</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Rule:</strong> Adjectives match the noun's gender
+                <ul class="mt-2 space-y-1">
+                    <li><strong>o</strong> carro vermelh<strong>o</strong> (masculine)</li>
+                    <li><strong>a</strong> casa vermelh<strong>a</strong> (feminine)</li>
+                </ul>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('O carro é vermelho.')">🔊</button>
+                <span class="portuguese">O carro é vermelh<strong>o</strong>.</span>
+                <div class="text-gray-600 mt-1">The car is red.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('A casa é vermelha.')">🔊</button>
+                <span class="portuguese">A casa é vermelh<strong>a</strong>.</span>
+                <div class="text-gray-600 mt-1">The house is red.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Size & Quality</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('grande')">🔊</button>
+                    <span class="portuguese">grande</span> - big
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('pequeno')">🔊</button>
+                    <span class="portuguese">pequeno/a</span> - small
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('novo')">🔊</button>
+                    <span class="portuguese">novo/a</span> - new
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('velho')">🔊</button>
+                    <span class="portuguese">velho/a</span> - old
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('bonito')">🔊</button>
+                    <span class="portuguese">bonito/a</span> - beautiful
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('feio')">🔊</button>
+                    <span class="portuguese">feio/a</span> - ugly
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('caro')">🔊</button>
+                    <span class="portuguese">caro/a</span> - expensive
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('barato')">🔊</button>
+                    <span class="portuguese">barato/a</span> - cheap
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Practice Descriptions</h2>
+            </div>
+            <div class="space-y-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('A casa é grande e bonita.')">🔊</button>
+                    <span class="portuguese">A casa é grande e bonita.</span>
+                    <div class="text-gray-600 mt-1">The house is big and beautiful.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('O carro é novo e azul.')">🔊</button>
+                    <span class="portuguese">O carro é novo e azul.</span>
+                    <div class="text-gray-600 mt-1">The car is new and blue.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('A camisa é branca e barata.')">🔊</button>
+                    <span class="portuguese">A camisa é branca e barata.</span>
+                    <div class="text-gray-600 mt-1">The shirt is white and cheap.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('O apartamento é pequeno mas bonito.')">🔊</button>
+                    <span class="portuguese">O apartamento é pequeno mas bonito.</span>
+                    <div class="text-gray-600 mt-1">The apartment is small but beautiful.</div>
+                </div>
+            </div>
+            <div class="info-box">
+                <strong>💡 Connectors:</strong> <span class="portuguese">e</span> = and, <span class="portuguese">mas</span> = but
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Ask About Things</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('De que cor é?')">🔊</button>
+                <span class="portuguese">De que cor é?</span>
+                <div class="text-gray-600 mt-1">What color is it?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Como é a sua casa?')">🔊</button>
+                <span class="portuguese">Como é a sua casa?</span>
+                <div class="text-gray-600 mt-1">What's your house like?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Como é o seu carro?')">🔊</button>
+                <span class="portuguese">Como é o seu carro?</span>
+                <div class="text-gray-600 mt-1">What's your car like?</div>
+            </div>
+        </section>
+
+        <div class="now-you-can">
+            <h3 class="text-xl font-bold text-green-800 mb-3">✅ Now You Can Say:</h3>
+            <div class="space-y-2">
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('O carro é vermelho.')">🔊</button>
+                    <span class="portuguese">"O/A [thing] é [adjective]."</span> - describe things
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('A casa é grande e bonita.')">🔊</button>
+                    <span class="portuguese">"[Thing] é [adj] e [adj]."</span> - combine adjectives
+                </div>
+            </div>
+            <p class="mt-4 text-green-700">Describe 5 objects around you using colors and adjectives!</p>
+        </div>
+
+        <section class="lesson-card bg-blue-50 mt-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=colors" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Colors Drill →</a>
+                <a href="/?drill=adjectives" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Adjectives Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="unit-10-ordering-food.html" class="text-blue-600 hover:text-blue-800">← Unit 10: Order Food</a>
+            <a href="unit-12-locations.html" class="text-blue-600 hover:text-blue-800">Unit 12: Talk About Locations →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

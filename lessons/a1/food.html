@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food & Meals - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+        .vocab-card {
+            background: #f8fafc;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+        .speaker-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .speaker-btn:hover {
+            background: #2563eb;
+        }
+        .portuguese {
+            font-weight: 600;
+            color: #1e40af;
+        }
+        .english {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        .example-sentence {
+            background: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .info-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .vocab-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .vocab-item:last-child {
+            border-bottom: none;
+        }
+        .meal-header {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 6</span>
+            </div>
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Comida e Refeições</h1>
+            <p class="text-gray-600">Food & Meals</p>
+        </div>
+
+        <!-- STEP 1: Meals of the Day -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Meals of the Day</h2>
+            </div>
+
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o café da manhã')">🔊</button>
+                    <div class="portuguese">o café da manhã</div>
+                    <div class="english">breakfast (BP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o pequeno-almoço')">🔊</button>
+                    <div class="portuguese">o pequeno-almoço</div>
+                    <div class="english">breakfast (EP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o almoço')">🔊</button>
+                    <div class="portuguese">o almoço</div>
+                    <div class="english">lunch</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o lanche')">🔊</button>
+                    <div class="portuguese">o lanche</div>
+                    <div class="english">snack</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o jantar')">🔊</button>
+                    <div class="portuguese">o jantar</div>
+                    <div class="english">dinner</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a sobremesa')">🔊</button>
+                    <div class="portuguese">a sobremesa</div>
+                    <div class="english">dessert</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>🇧🇷 vs 🇵🇹:</strong> Breakfast is <em>café da manhã</em> in Brazil but <em>pequeno-almoço</em> in Portugal.
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('O que você quer para o jantar?')">🔊</button>
+                <span class="portuguese">O que você quer para o jantar?</span>
+                <div class="english mt-1">What do you want for dinner?</div>
+            </div>
+        </section>
+
+        <!-- STEP 2: Basic Foods -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Basic Foods</h2>
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3">Carbohydrates & Grains</h3>
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o pão')">🔊</button>
+                    <div class="portuguese">o pão</div>
+                    <div class="english">bread</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o arroz')">🔊</button>
+                    <div class="portuguese">o arroz</div>
+                    <div class="english">rice</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o macarrão')">🔊</button>
+                    <div class="portuguese">o macarrão</div>
+                    <div class="english">pasta</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a batata')">🔊</button>
+                    <div class="portuguese">a batata</div>
+                    <div class="english">potato</div>
+                </div>
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3 mt-4">Proteins</h3>
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a carne')">🔊</button>
+                    <div class="portuguese">a carne</div>
+                    <div class="english">meat</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o frango')">🔊</button>
+                    <div class="portuguese">o frango</div>
+                    <div class="english">chicken</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o peixe')">🔊</button>
+                    <div class="portuguese">o peixe</div>
+                    <div class="english">fish</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o ovo')">🔊</button>
+                    <div class="portuguese">o ovo</div>
+                    <div class="english">egg</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o feijão')">🔊</button>
+                    <div class="portuguese">o feijão</div>
+                    <div class="english">beans</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <strong>🇧🇷 Tip:</strong> <em>Arroz e feijão</em> (rice and beans) is the classic Brazilian staple - you'll find it everywhere!
+            </div>
+        </section>
+
+        <!-- STEP 3: Fruits & Vegetables -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Fruits & Vegetables</h2>
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3">Frutas (Fruits)</h3>
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a maçã')">🔊</button>
+                    <div class="portuguese">a maçã</div>
+                    <div class="english">apple</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a laranja')">🔊</button>
+                    <div class="portuguese">a laranja</div>
+                    <div class="english">orange</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a banana')">🔊</button>
+                    <div class="portuguese">a banana</div>
+                    <div class="english">banana</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o morango')">🔊</button>
+                    <div class="portuguese">o morango</div>
+                    <div class="english">strawberry</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a uva')">🔊</button>
+                    <div class="portuguese">a uva</div>
+                    <div class="english">grape</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o abacaxi')">🔊</button>
+                    <div class="portuguese">o abacaxi</div>
+                    <div class="english">pineapple (BP)</div>
+                </div>
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3 mt-4">Legumes/Verduras (Vegetables)</h3>
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o tomate')">🔊</button>
+                    <div class="portuguese">o tomate</div>
+                    <div class="english">tomato</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a cebola')">🔊</button>
+                    <div class="portuguese">a cebola</div>
+                    <div class="english">onion</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a alface')">🔊</button>
+                    <div class="portuguese">a alface</div>
+                    <div class="english">lettuce</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a cenoura')">🔊</button>
+                    <div class="portuguese">a cenoura</div>
+                    <div class="english">carrot</div>
+                </div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Eu gosto de frutas frescas.')">🔊</button>
+                <span class="portuguese">Eu gosto de frutas frescas.</span>
+                <div class="english mt-1">I like fresh fruits.</div>
+            </div>
+        </section>
+
+        <!-- STEP 4: Drinks -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Drinks</h2>
+            </div>
+
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a água')">🔊</button>
+                    <div class="portuguese">a água</div>
+                    <div class="english">water</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o café')">🔊</button>
+                    <div class="portuguese">o café</div>
+                    <div class="english">coffee</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o chá')">🔊</button>
+                    <div class="portuguese">o chá</div>
+                    <div class="english">tea</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o leite')">🔊</button>
+                    <div class="portuguese">o leite</div>
+                    <div class="english">milk</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o suco')">🔊</button>
+                    <div class="portuguese">o suco</div>
+                    <div class="english">juice (BP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o sumo')">🔊</button>
+                    <div class="portuguese">o sumo</div>
+                    <div class="english">juice (EP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a cerveja')">🔊</button>
+                    <div class="portuguese">a cerveja</div>
+                    <div class="english">beer</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o vinho')">🔊</button>
+                    <div class="portuguese">o vinho</div>
+                    <div class="english">wine</div>
+                </div>
+            </div>
+
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Eu quero um copo de água, por favor.')">🔊</button>
+                <span class="portuguese">Eu quero um copo de água, por favor.</span>
+                <div class="english mt-1">I want a glass of water, please.</div>
+            </div>
+        </section>
+
+        <!-- STEP 5: Restaurant Vocabulary -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">At the Restaurant</h2>
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3">Table Items</h3>
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o cardápio')">🔊</button>
+                    <div class="portuguese">o cardápio</div>
+                    <div class="english">menu (BP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a ementa')">🔊</button>
+                    <div class="portuguese">a ementa</div>
+                    <div class="english">menu (EP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o prato')">🔊</button>
+                    <div class="portuguese">o prato</div>
+                    <div class="english">plate / dish</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o copo')">🔊</button>
+                    <div class="portuguese">o copo</div>
+                    <div class="english">glass</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o garfo')">🔊</button>
+                    <div class="portuguese">o garfo</div>
+                    <div class="english">fork</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a faca')">🔊</button>
+                    <div class="portuguese">a faca</div>
+                    <div class="english">knife</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a colher')">🔊</button>
+                    <div class="portuguese">a colher</div>
+                    <div class="english">spoon</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a conta')">🔊</button>
+                    <div class="portuguese">a conta</div>
+                    <div class="english">bill / check</div>
+                </div>
+            </div>
+
+            <h3 class="font-semibold text-gray-800 mb-3 mt-4">People</h3>
+            <div class="vocab-grid">
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o garçom')">🔊</button>
+                    <div class="portuguese">o garçom</div>
+                    <div class="english">waiter (BP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('o empregado')">🔊</button>
+                    <div class="portuguese">o empregado</div>
+                    <div class="english">waiter (EP)</div>
+                </div>
+                <div class="vocab-card">
+                    <button class="speaker-btn mb-2" onclick="speak('a garçonete')">🔊</button>
+                    <div class="portuguese">a garçonete</div>
+                    <div class="english">waitress (BP)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 6: Useful Phrases -->
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Useful Phrases</h2>
+            </div>
+
+            <div class="space-y-3">
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Eu estou com fome.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Eu estou com fome.</span>
+                        <div class="english">I am hungry.</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Eu estou com sede.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Eu estou com sede.</span>
+                        <div class="english">I am thirsty.</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Uma mesa para dois, por favor.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Uma mesa para dois, por favor.</span>
+                        <div class="english">A table for two, please.</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('O cardápio, por favor.')">🔊</button>
+                    <div>
+                        <span class="portuguese">O cardápio, por favor.</span>
+                        <div class="english">The menu, please.</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Eu quero pedir...')">🔊</button>
+                    <div>
+                        <span class="portuguese">Eu quero pedir...</span>
+                        <div class="english">I would like to order...</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('A conta, por favor.')">🔊</button>
+                    <div>
+                        <span class="portuguese">A conta, por favor.</span>
+                        <div class="english">The bill, please.</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Está delicioso!')">🔊</button>
+                    <div>
+                        <span class="portuguese">Está delicioso!</span>
+                        <div class="english">It's delicious!</div>
+                    </div>
+                </div>
+                <div class="vocab-item">
+                    <button class="speaker-btn" onclick="speak('Eu sou vegetariano.')">🔊</button>
+                    <div>
+                        <span class="portuguese">Eu sou vegetariano. / Eu sou vegetariana.</span>
+                        <div class="english">I am vegetarian. (male / female)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practice Section -->
+        <section class="lesson-card bg-blue-50">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <p class="text-gray-700 mb-4">Ready to practice food vocabulary? Try these drills:</p>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=food" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Food Vocabulary Drill →
+                </a>
+                <a href="/?drill=restaurant" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Restaurant Drill →
+                </a>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="family.html" class="text-blue-600 hover:text-blue-800">
+                ← Unit 5: Family
+            </a>
+            <a href="colors.html" class="text-blue-600 hover:text-blue-800">
+                Unit 7: Colors →
+            </a>
+        </div>
+    </main>
+
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'pt-BR';
+                utterance.rate = options.rate || 0.9;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 5: Say Your Age - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .production-goal { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; }
+        .production-goal h2 { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; }
+        .production-goal .phrase { font-size: 1.75rem; font-weight: bold; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 0.75rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .now-you-can { background: #ecfdf5; border: 2px solid #10b981; border-radius: 1rem; padding: 1.5rem; margin-top: 2rem; }
+        .number-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 0.5rem; }
+        .number-item { background: #f8fafc; padding: 0.5rem; border-radius: 0.5rem; text-align: center; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-6">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 5</span>
+            </div>
+        </div>
+
+        <div class="production-goal">
+            <h2>By the end of this unit, you'll say:</h2>
+            <div class="phrase">
+                <button class="speaker-btn mr-2" onclick="speak('Tenho vinte e cinco anos.')">🔊</button>
+                "Tenho vinte e cinco anos."
+            </div>
+            <div class="mt-2 text-white/80">I'm 25 years old. (literally: I have 25 years)</div>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Ask Someone's Age</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Quantos anos você tem?')">🔊</button>
+                <span class="portuguese">Quantos anos você tem?</span>
+                <div class="text-gray-600 mt-1">How old are you? (literally: How many years do you have?)</div>
+            </div>
+            <div class="info-box">
+                <strong>💡 Key difference:</strong> Portuguese uses TER (to have), not SER (to be) for age!
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">TER: To Have</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Tenho</span> + [number] + <span class="portuguese">anos</span>
+                <div class="mt-2 text-sm text-gray-600">tenh<strong>o</strong> = I have</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Tenho trinta anos.')">🔊</button>
+                <span class="portuguese">Tenho trinta anos.</span>
+                <div class="text-gray-600 mt-1">I'm 30 years old.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Ela tem vinte e dois anos.')">🔊</button>
+                <span class="portuguese">Ela tem vinte e dois anos.</span>
+                <div class="text-gray-600 mt-1">She's 22 years old.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Numbers 1-20</h2>
+            </div>
+            <div class="number-grid mb-4">
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('um')">🔊</button> 1 <span class="portuguese">um</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('dois')">🔊</button> 2 <span class="portuguese">dois</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('três')">🔊</button> 3 <span class="portuguese">três</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('quatro')">🔊</button> 4 <span class="portuguese">quatro</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('cinco')">🔊</button> 5 <span class="portuguese">cinco</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('seis')">🔊</button> 6 <span class="portuguese">seis</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('sete')">🔊</button> 7 <span class="portuguese">sete</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('oito')">🔊</button> 8 <span class="portuguese">oito</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('nove')">🔊</button> 9 <span class="portuguese">nove</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('dez')">🔊</button> 10 <span class="portuguese">dez</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('onze')">🔊</button> 11 <span class="portuguese">onze</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('doze')">🔊</button> 12 <span class="portuguese">doze</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('treze')">🔊</button> 13 <span class="portuguese">treze</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('catorze')">🔊</button> 14 <span class="portuguese">catorze</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('quinze')">🔊</button> 15 <span class="portuguese">quinze</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('dezesseis')">🔊</button> 16 <span class="portuguese">dezesseis</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('dezessete')">🔊</button> 17 <span class="portuguese">dezessete</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('dezoito')">🔊</button> 18 <span class="portuguese">dezoito</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('dezenove')">🔊</button> 19 <span class="portuguese">dezenove</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('vinte')">🔊</button> 20 <span class="portuguese">vinte</span></div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Numbers 20-100</h2>
+            </div>
+            <div class="number-grid mb-4">
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('vinte')">🔊</button> 20 <span class="portuguese">vinte</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('trinta')">🔊</button> 30 <span class="portuguese">trinta</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('quarenta')">🔊</button> 40 <span class="portuguese">quarenta</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('cinquenta')">🔊</button> 50 <span class="portuguese">cinquenta</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('sessenta')">🔊</button> 60 <span class="portuguese">sessenta</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('setenta')">🔊</button> 70 <span class="portuguese">setenta</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('oitenta')">🔊</button> 80 <span class="portuguese">oitenta</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('noventa')">🔊</button> 90 <span class="portuguese">noventa</span></div>
+                <div class="number-item"><button class="speaker-btn mr-1" onclick="speak('cem')">🔊</button> 100 <span class="portuguese">cem</span></div>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Combining numbers:</strong> Use <span class="portuguese">e</span> (and) between tens and units
+                <div class="mt-2">
+                    <span class="portuguese">vinte <strong>e</strong> cinco</span> = 25<br>
+                    <span class="portuguese">trinta <strong>e</strong> dois</span> = 32
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Practice Ages</h2>
+            </div>
+            <div class="space-y-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Tenho dezoito anos.')">🔊</button>
+                    <span class="portuguese">Tenho dezoito anos.</span>
+                    <div class="text-gray-600 mt-1">I'm 18 years old.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Tenho vinte e um anos.')">🔊</button>
+                    <span class="portuguese">Tenho vinte e um anos.</span>
+                    <div class="text-gray-600 mt-1">I'm 21 years old.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Tenho trinta e cinco anos.')">🔊</button>
+                    <span class="portuguese">Tenho trinta e cinco anos.</span>
+                    <div class="text-gray-600 mt-1">I'm 35 years old.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Tenho quarenta e oito anos.')">🔊</button>
+                    <span class="portuguese">Tenho quarenta e oito anos.</span>
+                    <div class="text-gray-600 mt-1">I'm 48 years old.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Talk About Others</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 TER forms:</strong>
+                <ul class="mt-2 space-y-1">
+                    <li>eu <span class="portuguese">tenho</span> - I have</li>
+                    <li>você/ele/ela <span class="portuguese">tem</span> - you have / he/she has</li>
+                </ul>
+            </div>
+            <div class="space-y-3 mt-4">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Meu irmão tem vinte anos.')">🔊</button>
+                    <span class="portuguese">Meu irmão tem vinte anos.</span>
+                    <div class="text-gray-600 mt-1">My brother is 20 years old.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Minha mãe tem cinquenta e dois anos.')">🔊</button>
+                    <span class="portuguese">Minha mãe tem cinquenta e dois anos.</span>
+                    <div class="text-gray-600 mt-1">My mother is 52 years old.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Quantos anos ele tem?')">🔊</button>
+                    <span class="portuguese">Quantos anos ele tem?</span>
+                    <div class="text-gray-600 mt-1">How old is he?</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="now-you-can">
+            <h3 class="text-xl font-bold text-green-800 mb-3">✅ Now You Can Say:</h3>
+            <div class="space-y-2">
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Quantos anos você tem?')">🔊</button>
+                    <span class="portuguese">"Quantos anos você tem?"</span> - ask someone's age
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Tenho trinta anos.')">🔊</button>
+                    <span class="portuguese">"Tenho [number] anos."</span> - state your age
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Ela tem vinte e cinco anos.')">🔊</button>
+                    <span class="portuguese">"[Person] tem [number] anos."</span> - state someone's age
+                </div>
+            </div>
+            <p class="mt-4 text-green-700">Practice saying your age and family members' ages!</p>
+        </div>
+
+        <section class="lesson-card bg-blue-50 mt-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=numbers" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Numbers Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="unit-04-your-job.html" class="text-blue-600 hover:text-blue-800">← Unit 4: Talk About Your Job</a>
+            <a href="unit-06-your-family.html" class="text-blue-600 hover:text-blue-800">Unit 6: Describe Your Family →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

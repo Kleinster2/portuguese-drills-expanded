@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 12: Talk About Locations - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .production-goal { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; }
+        .production-goal h2 { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; }
+        .production-goal .phrase { font-size: 1.75rem; font-weight: bold; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 0.75rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .now-you-can { background: #ecfdf5; border: 2px solid #10b981; border-radius: 1rem; padding: 1.5rem; margin-top: 2rem; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-6">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 12</span>
+            </div>
+        </div>
+
+        <div class="production-goal">
+            <h2>By the end of this unit, you'll say:</h2>
+            <div class="phrase">
+                <button class="speaker-btn mr-2" onclick="speak('Moro em São Paulo. Fica no centro.')">🔊</button>
+                "Moro em São Paulo. Fica no centro."
+            </div>
+            <div class="mt-2 text-white/80">I live in São Paulo. It's in the center.</div>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">MORAR: To Live</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Moro em</span> + [place]
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Moro em São Paulo.')">🔊</button>
+                <span class="portuguese">Moro em São Paulo.</span>
+                <div class="text-gray-600 mt-1">I live in São Paulo.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Moro no Brasil.')">🔊</button>
+                <span class="portuguese">Moro no Brasil.</span>
+                <div class="text-gray-600 mt-1">I live in Brazil.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Moro na Rua das Flores.')">🔊</button>
+                <span class="portuguese">Moro na Rua das Flores.</span>
+                <div class="text-gray-600 mt-1">I live on Flores Street.</div>
+            </div>
+            <div class="info-box">
+                <strong>📝 Contractions:</strong> em + o = <strong>no</strong>, em + a = <strong>na</strong>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">FICAR: To Be Located</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Fica</span> + [location]
+                <div class="mt-2 text-sm text-gray-600">Use "ficar" for where things are located</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Fica no centro.')">🔊</button>
+                <span class="portuguese">Fica no centro.</span>
+                <div class="text-gray-600 mt-1">It's in the center.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Fica perto daqui.')">🔊</button>
+                <span class="portuguese">Fica perto daqui.</span>
+                <div class="text-gray-600 mt-1">It's near here.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Fica longe.')">🔊</button>
+                <span class="portuguese">Fica longe.</span>
+                <div class="text-gray-600 mt-1">It's far.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Places in the City</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o centro')">🔊</button>
+                    <span class="portuguese">o centro</span> - downtown
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o banco')">🔊</button>
+                    <span class="portuguese">o banco</span> - bank
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o supermercado')">🔊</button>
+                    <span class="portuguese">o supermercado</span> - supermarket
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('a farmácia')">🔊</button>
+                    <span class="portuguese">a farmácia</span> - pharmacy
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o restaurante')">🔊</button>
+                    <span class="portuguese">o restaurante</span> - restaurant
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o hospital')">🔊</button>
+                    <span class="portuguese">o hospital</span> - hospital
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('a estação')">🔊</button>
+                    <span class="portuguese">a estação</span> - station
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o aeroporto')">🔊</button>
+                    <span class="portuguese">o aeroporto</span> - airport
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Ask Where Things Are</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Onde fica o banco?')">🔊</button>
+                <span class="portuguese">Onde fica o banco?</span>
+                <div class="text-gray-600 mt-1">Where is the bank?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Onde você mora?')">🔊</button>
+                <span class="portuguese">Onde você mora?</span>
+                <div class="text-gray-600 mt-1">Where do you live?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('É perto ou longe?')">🔊</button>
+                <span class="portuguese">É perto ou longe?</span>
+                <div class="text-gray-600 mt-1">Is it near or far?</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Position Words</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('perto de')">🔊</button>
+                    <span class="portuguese">perto de</span> - near
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('longe de')">🔊</button>
+                    <span class="portuguese">longe de</span> - far from
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('em frente a')">🔊</button>
+                    <span class="portuguese">em frente a</span> - in front of
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('ao lado de')">🔊</button>
+                    <span class="portuguese">ao lado de</span> - next to
+                </div>
+            </div>
+            <div class="space-y-3 mt-4">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Fica perto do banco.')">🔊</button>
+                    <span class="portuguese">Fica perto do banco.</span>
+                    <div class="text-gray-600 mt-1">It's near the bank.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Fica em frente ao supermercado.')">🔊</button>
+                    <span class="portuguese">Fica em frente ao supermercado.</span>
+                    <div class="text-gray-600 mt-1">It's in front of the supermarket.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Full Descriptions</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Moro em São Paulo, no bairro da Liberdade. Fica perto do centro.')">🔊</button>
+                <span class="portuguese">Moro em São Paulo, no bairro da Liberdade. Fica perto do centro.</span>
+                <div class="text-gray-600 mt-1">I live in São Paulo, in the Liberdade neighborhood. It's near downtown.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Meu apartamento fica ao lado do supermercado.')">🔊</button>
+                <span class="portuguese">Meu apartamento fica ao lado do supermercado.</span>
+                <div class="text-gray-600 mt-1">My apartment is next to the supermarket.</div>
+            </div>
+        </section>
+
+        <div class="now-you-can">
+            <h3 class="text-xl font-bold text-green-800 mb-3">✅ Now You Can Say:</h3>
+            <div class="space-y-2">
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Moro em São Paulo.')">🔊</button>
+                    <span class="portuguese">"Moro em [place]."</span> - say where you live
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Fica perto do centro.')">🔊</button>
+                    <span class="portuguese">"Fica [position]."</span> - say where things are
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Onde fica o banco?')">🔊</button>
+                    <span class="portuguese">"Onde fica [place]?"</span> - ask for locations
+                </div>
+            </div>
+            <p class="mt-4 text-green-700">Describe where you live and what's nearby!</p>
+        </div>
+
+        <section class="lesson-card bg-blue-50 mt-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=locations" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Locations Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="unit-11-describe-things.html" class="text-blue-600 hover:text-blue-800">← Unit 11: Describe Things</a>
+            <a href="unit-13-directions.html" class="text-blue-600 hover:text-blue-800">Unit 13: Ask for Directions →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

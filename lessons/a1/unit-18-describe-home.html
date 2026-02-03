@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 18: Describe Your Home - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .production-goal { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; }
+        .production-goal h2 { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; }
+        .production-goal .phrase { font-size: 1.75rem; font-weight: bold; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 0.75rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .now-you-can { background: #ecfdf5; border: 2px solid #10b981; border-radius: 1rem; padding: 1.5rem; margin-top: 2rem; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-6">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 18</span>
+            </div>
+        </div>
+
+        <div class="production-goal">
+            <h2>By the end of this unit, you'll say:</h2>
+            <div class="phrase">
+                <button class="speaker-btn mr-2" onclick="speak('Meu apartamento tem dois quartos. A cozinha é pequena.')">🔊</button>
+                "Meu apartamento tem dois quartos. A cozinha é pequena."
+            </div>
+            <div class="mt-2 text-white/80">My apartment has two bedrooms. The kitchen is small.</div>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">Types of Home</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o apartamento')">🔊</button>
+                    <span class="portuguese">o apartamento</span> - apartment
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('a casa')">🔊</button>
+                    <span class="portuguese">a casa</span> - house
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o quarto')">🔊</button>
+                    <span class="portuguese">o quarto</span> - room / bedroom
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o estúdio')">🔊</button>
+                    <span class="portuguese">o estúdio</span> - studio
+                </div>
+            </div>
+            <div class="example-sentence mt-4">
+                <button class="speaker-btn mr-2" onclick="speak('Moro em um apartamento.')">🔊</button>
+                <span class="portuguese">Moro em um apartamento.</span>
+                <div class="text-gray-600 mt-1">I live in an apartment.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Rooms in the House</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('a sala')">🔊</button>
+                    <span class="portuguese">a sala</span> - living room
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('a cozinha')">🔊</button>
+                    <span class="portuguese">a cozinha</span> - kitchen
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o banheiro')">🔊</button>
+                    <span class="portuguese">o banheiro</span> - bathroom
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('o quarto')">🔊</button>
+                    <span class="portuguese">o quarto</span> - bedroom
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('a varanda')">🔊</button>
+                    <span class="portuguese">a varanda</span> - balcony
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('a garagem')">🔊</button>
+                    <span class="portuguese">a garagem</span> - garage
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">TER: What Your Home Has</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> [Place] <span class="portuguese">tem</span> + [what it has]
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Meu apartamento tem dois quartos.')">🔊</button>
+                <span class="portuguese">Meu apartamento tem dois quartos.</span>
+                <div class="text-gray-600 mt-1">My apartment has two bedrooms.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('A casa tem um jardim.')">🔊</button>
+                <span class="portuguese">A casa tem um jardim.</span>
+                <div class="text-gray-600 mt-1">The house has a garden.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Tem dois banheiros.')">🔊</button>
+                <span class="portuguese">Tem dois banheiros.</span>
+                <div class="text-gray-600 mt-1">It has two bathrooms.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Describe the Rooms</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> [Room] <span class="portuguese">é</span> + [adjective]
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('A cozinha é pequena.')">🔊</button>
+                <span class="portuguese">A cozinha é pequena.</span>
+                <div class="text-gray-600 mt-1">The kitchen is small.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('A sala é grande.')">🔊</button>
+                <span class="portuguese">A sala é grande.</span>
+                <div class="text-gray-600 mt-1">The living room is big.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('O quarto é claro.')">🔊</button>
+                <span class="portuguese">O quarto é claro.</span>
+                <div class="text-gray-600 mt-1">The bedroom is bright.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('O banheiro é novo.')">🔊</button>
+                <span class="portuguese">O banheiro é novo.</span>
+                <div class="text-gray-600 mt-1">The bathroom is new.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Ask About Someone's Home</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Você mora em casa ou apartamento?')">🔊</button>
+                <span class="portuguese">Você mora em casa ou apartamento?</span>
+                <div class="text-gray-600 mt-1">Do you live in a house or apartment?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Quantos quartos tem?')">🔊</button>
+                <span class="portuguese">Quantos quartos tem?</span>
+                <div class="text-gray-600 mt-1">How many bedrooms does it have?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Como é a sua casa?')">🔊</button>
+                <span class="portuguese">Como é a sua casa?</span>
+                <div class="text-gray-600 mt-1">What's your house like?</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Describe Your Place</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Moro em um apartamento no centro. Tem dois quartos, uma sala grande e uma cozinha pequena. Gosto muito!')">🔊</button>
+                <span class="portuguese">Moro em um apartamento no centro. Tem dois quartos, uma sala grande e uma cozinha pequena. Gosto muito!</span>
+                <div class="text-gray-600 mt-1">I live in an apartment downtown. It has two bedrooms, a big living room and a small kitchen. I like it a lot!</div>
+            </div>
+        </section>
+
+        <div class="now-you-can">
+            <h3 class="text-xl font-bold text-green-800 mb-3">✅ Now You Can Say:</h3>
+            <div class="space-y-2">
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Meu apartamento tem dois quartos.')">🔊</button>
+                    <span class="portuguese">"[Place] tem [rooms]."</span> - say what your home has
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('A cozinha é pequena.')">🔊</button>
+                    <span class="portuguese">"[Room] é [adjective]."</span> - describe the rooms
+                </div>
+            </div>
+            <p class="mt-4 text-green-700">Describe your home to someone!</p>
+        </div>
+
+        <section class="lesson-card bg-blue-50 mt-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=home-description" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Home Description Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="unit-17-past-events.html" class="text-blue-600 hover:text-blue-800">← Unit 17: Talk About the Past</a>
+            <a href="unit-19-weather.html" class="text-blue-600 hover:text-blue-800">Unit 19: Talk About Weather →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>

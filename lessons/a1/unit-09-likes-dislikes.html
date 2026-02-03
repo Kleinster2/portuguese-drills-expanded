@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 9: Likes & Dislikes - A1 Portuguese</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .lesson-card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .speaker-btn { background: #3b82f6; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .speaker-btn:hover { background: #2563eb; }
+        .portuguese { font-weight: 600; color: #1e40af; }
+        .production-goal { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 1rem; margin-bottom: 2rem; }
+        .production-goal h2 { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; }
+        .production-goal .phrase { font-size: 1.75rem; font-weight: bold; }
+        .example-sentence { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 0.75rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .grammar-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .info-box { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .now-you-can { background: #ecfdf5; border: 2px solid #10b981; border-radius: 1rem; padding: 1.5rem; margin-top: 2rem; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="nav-placeholder"></div>
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <div class="mb-6">
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-2">
+                <a href="/syllabus.html" class="hover:text-blue-600">Curriculum</a>
+                <span>›</span>
+                <a href="/lessons/a1/" class="hover:text-blue-600">A1</a>
+                <span>›</span>
+                <span>Unit 9</span>
+            </div>
+        </div>
+
+        <div class="production-goal">
+            <h2>By the end of this unit, you'll say:</h2>
+            <div class="phrase">
+                <button class="speaker-btn mr-2" onclick="speak('Gosto de café. Não gosto de chá.')">🔊</button>
+                "Gosto de café. Não gosto de chá."
+            </div>
+            <div class="mt-2 text-white/80">I like coffee. I don't like tea.</div>
+        </div>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 1</span>
+                <h2 class="text-xl font-bold text-gray-900">GOSTAR DE: To Like</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Gosto de</span> + [thing]
+                <div class="mt-2 text-sm text-gray-600">Always use "de" after gostar!</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Gosto de café.')">🔊</button>
+                <span class="portuguese">Gosto de café.</span>
+                <div class="text-gray-600 mt-1">I like coffee.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Gosto de música.')">🔊</button>
+                <span class="portuguese">Gosto de música.</span>
+                <div class="text-gray-600 mt-1">I like music.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Gosto de viajar.')">🔊</button>
+                <span class="portuguese">Gosto de viajar.</span>
+                <div class="text-gray-600 mt-1">I like to travel.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 2</span>
+                <h2 class="text-xl font-bold text-gray-900">Say You Don't Like</h2>
+            </div>
+            <div class="grammar-box">
+                <strong>📝 Pattern:</strong> <span class="portuguese">Não gosto de</span> + [thing]
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Não gosto de chá.')">🔊</button>
+                <span class="portuguese">Não gosto de chá.</span>
+                <div class="text-gray-600 mt-1">I don't like tea.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Não gosto de acordar cedo.')">🔊</button>
+                <span class="portuguese">Não gosto de acordar cedo.</span>
+                <div class="text-gray-600 mt-1">I don't like waking up early.</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Não gosto muito de futebol.')">🔊</button>
+                <span class="portuguese">Não gosto muito de futebol.</span>
+                <div class="text-gray-600 mt-1">I don't like soccer much.</div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 3</span>
+                <h2 class="text-xl font-bold text-gray-900">Levels of Liking</h2>
+            </div>
+            <div class="space-y-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Adoro chocolate!')">🔊</button>
+                    <span class="portuguese">Adoro chocolate!</span>
+                    <div class="text-gray-600 mt-1">I love chocolate! (strongest)</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Gosto muito de pizza.')">🔊</button>
+                    <span class="portuguese">Gosto muito de pizza.</span>
+                    <div class="text-gray-600 mt-1">I really like pizza.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Gosto de arroz.')">🔊</button>
+                    <span class="portuguese">Gosto de arroz.</span>
+                    <div class="text-gray-600 mt-1">I like rice.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Não gosto muito de peixe.')">🔊</button>
+                    <span class="portuguese">Não gosto muito de peixe.</span>
+                    <div class="text-gray-600 mt-1">I don't like fish much.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Odeio cebola.')">🔊</button>
+                    <span class="portuguese">Odeio cebola.</span>
+                    <div class="text-gray-600 mt-1">I hate onion. (strongest negative)</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 4</span>
+                <h2 class="text-xl font-bold text-gray-900">Food & Drinks</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('café')">🔊</button>
+                    <span class="portuguese">café</span> - coffee
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('chá')">🔊</button>
+                    <span class="portuguese">chá</span> - tea
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('cerveja')">🔊</button>
+                    <span class="portuguese">cerveja</span> - beer
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('vinho')">🔊</button>
+                    <span class="portuguese">vinho</span> - wine
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('pizza')">🔊</button>
+                    <span class="portuguese">pizza</span> - pizza
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('carne')">🔊</button>
+                    <span class="portuguese">carne</span> - meat
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('frango')">🔊</button>
+                    <span class="portuguese">frango</span> - chicken
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('peixe')">🔊</button>
+                    <span class="portuguese">peixe</span> - fish
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 5</span>
+                <h2 class="text-xl font-bold text-gray-900">Ask About Preferences</h2>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Você gosta de café?')">🔊</button>
+                <span class="portuguese">Você gosta de café?</span>
+                <div class="text-gray-600 mt-1">Do you like coffee?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Do que você gosta?')">🔊</button>
+                <span class="portuguese">Do que você gosta?</span>
+                <div class="text-gray-600 mt-1">What do you like?</div>
+            </div>
+            <div class="example-sentence">
+                <button class="speaker-btn mr-2" onclick="speak('Você gosta de viajar?')">🔊</button>
+                <span class="portuguese">Você gosta de viajar?</span>
+                <div class="text-gray-600 mt-1">Do you like to travel?</div>
+            </div>
+            <div class="info-box">
+                <strong>💡 Answer:</strong> <span class="portuguese">"Gosto!"</span> (Yes, I like it!) or <span class="portuguese">"Não gosto."</span> (No, I don't.)
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">STEP 6</span>
+                <h2 class="text-xl font-bold text-gray-900">Hobbies & Activities</h2>
+            </div>
+            <div class="space-y-3">
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Gosto de ler.')">🔊</button>
+                    <span class="portuguese">Gosto de ler.</span>
+                    <div class="text-gray-600 mt-1">I like to read.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Gosto de assistir filmes.')">🔊</button>
+                    <span class="portuguese">Gosto de assistir filmes.</span>
+                    <div class="text-gray-600 mt-1">I like to watch movies.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Gosto de cozinhar.')">🔊</button>
+                    <span class="portuguese">Gosto de cozinhar.</span>
+                    <div class="text-gray-600 mt-1">I like to cook.</div>
+                </div>
+                <div class="example-sentence">
+                    <button class="speaker-btn mr-2" onclick="speak('Gosto de correr.')">🔊</button>
+                    <span class="portuguese">Gosto de correr.</span>
+                    <div class="text-gray-600 mt-1">I like to run.</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="now-you-can">
+            <h3 class="text-xl font-bold text-green-800 mb-3">✅ Now You Can Say:</h3>
+            <div class="space-y-2">
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Gosto de café.')">🔊</button>
+                    <span class="portuguese">"Gosto de [thing]."</span> - say what you like
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Não gosto de chá.')">🔊</button>
+                    <span class="portuguese">"Não gosto de [thing]."</span> - say what you don't like
+                </div>
+                <div class="example-sentence bg-white">
+                    <button class="speaker-btn mr-2" onclick="speak('Você gosta de música?')">🔊</button>
+                    <span class="portuguese">"Você gosta de [thing]?"</span> - ask about preferences
+                </div>
+            </div>
+            <p class="mt-4 text-green-700">List 5 things you like and 3 things you don't like in Portuguese!</p>
+        </div>
+
+        <section class="lesson-card bg-blue-50 mt-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 Practice</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="/?drill=gostar" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Likes & Dislikes Drill →</a>
+            </div>
+        </section>
+
+        <div class="flex justify-between items-center mt-8 pt-6 border-t border-gray-200">
+            <a href="unit-08-telling-time.html" class="text-blue-600 hover:text-blue-800">← Unit 8: Tell Time</a>
+            <a href="unit-10-ordering-food.html" class="text-blue-600 hover:text-blue-800">Unit 10: Order Food →</a>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function speak(text, options = {}) {
+            if ('speechSynthesis' in window) { window.speechSynthesis.cancel(); const utterance = new SpeechSynthesisUtterance(text); utterance.lang = 'pt-BR'; utterance.rate = options.rate || 0.9; window.speechSynthesis.speak(utterance); }
+        }
+    </script>
+</body>
+</html>
