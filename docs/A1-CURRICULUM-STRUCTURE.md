@@ -63,66 +63,69 @@ Unit  │ Topic                │ Grammar / Key Vocabulary
  23   │ What You Have        │ tenho
  24   │ Where You Are        │ estou em/no/na/nos/nas + location
  25   │ How You Feel         │ estou + feelings
- 26   │ Negation             │ não sou, não moro, não gosto, não trabalho, não tenho, não estou
 ──────┼──────────────────────┼─────────────────────────────────────────
       │ SECTION 3: JOIN SENTENCES │
 ──────┼──────────────────────┼─────────────────────────────────────────
- 27   │ Full Introduction    │ olá, sou o/a [name] e sou [nationality]
- 28   │ Origin + Location    │ sou de/do/da [origin] e moro em [city], na rua [street]
- 29   │ Profession + Work    │ sou [profession] e trabalho com/em/no/na [work]
- 30   │ Location + Feeling   │ estou em/no/na [location] e estou [feeling]
+ 26   │ Full Introduction    │ olá, sou o/a [name] e sou [nationality]
+ 27   │ Origin + Location    │ sou de/do/da [origin] e moro em [city], na rua [street]
+ 28   │ Profession + Work    │ sou [profession] e trabalho com/em/no/na [work]
+ 29   │ Location + Feeling   │ estou em/no/na [location] e estou [feeling]
 ──────┼──────────────────────┼─────────────────────────────────────────
       │ SECTION 4: ELE/ELA   │
 ──────┼──────────────────────┼─────────────────────────────────────────
- 31   │ Who Is He/She?       │ quem é ele?, quem é ela?
- 32   │ Say Their Name       │ (ele/ela) é o/a + name
- 33   │ Say Their Nationality│ (ele/ela) é + nationality
- 34   │ Their Profession     │ (ele/ela) é + profession
- 35   │ Where They're From   │ (ele/ela) é de/do/da/dos/das + origin
- 36   │ Where They Live (City)│ (ele/ela) mora em + city
- 37   │ Where They Live (Street)│ (ele/ela) mora na rua/avenida
- 38   │ What They Like       │ (ele/ela) gosta de
- 39   │ Where/What They Work │ (ele/ela) trabalha com/em/no/na
- 40   │ What They Have       │ (ele/ela) tem
- 41   │ Where They Are       │ (ele/ela) está em/no/na/nos/nas + location
- 42   │ How They Feel        │ (ele/ela) está + feelings
+ 30   │ Who Is He/She?       │ quem é ele?, quem é ela?
+ 31   │ Say Their Name       │ (ele/ela) é o/a + name
+ 32   │ Say Their Nationality│ (ele/ela) é + nationality
+ 33   │ Their Profession     │ (ele/ela) é + profession
+ 34   │ Where They're From   │ (ele/ela) é de/do/da/dos/das + origin
+ 35   │ Where They Live (City)│ (ele/ela) mora em + city
+ 36   │ Where They Live (Street)│ (ele/ela) mora na rua/avenida
+ 37   │ What They Like       │ (ele/ela) gosta de
+ 38   │ Where/What They Work │ (ele/ela) trabalha com/em/no/na
+ 39   │ What They Have       │ (ele/ela) tem
+ 40   │ Where They Are       │ (ele/ela) está em/no/na/nos/nas + location
+ 41   │ How They Feel        │ (ele/ela) está + feelings
 ──────┼──────────────────────┼─────────────────────────────────────────
       │ SECTION 5: ELE/ELA JOIN SENTENCES │
 ──────┼──────────────────────┼─────────────────────────────────────────
- 43   │ Full Introduction    │ (ele/ela) é o/a [name] e é [nationality]
- 44   │ Origin + Location    │ (ele/ela) é de/do/da [origin] e (ele/ela) mora em [city], na rua [street]
- 45   │ Profession + Work    │ (ele/ela) é [profession] e (ele/ela) trabalha com/em/no/na [work]
- 46   │ Location + Feeling   │ (ele/ela) está em/no/na [location] e está [feeling]
+ 42   │ Full Introduction    │ (ele/ela) é o/a [name] e é [nationality]
+ 43   │ Origin + Location    │ (ele/ela) é de/do/da [origin] e (ele/ela) mora em [city], na rua [street]
+ 44   │ Profession + Work    │ (ele/ela) é [profession] e (ele/ela) trabalha com/em/no/na [work]
+ 45   │ Location + Feeling   │ (ele/ela) está em/no/na [location] e está [feeling]
 ──────┼──────────────────────┼─────────────────────────────────────────
       │ SECTION 6: QUESTION WORDS │
 ──────┼──────────────────────┼─────────────────────────────────────────
- 47   │ Question Words       │ como, onde, de onde, de que, qual, quem
+ 46   │ Question Words       │ como, onde, de onde, de que, qual, quem
 ──────┼──────────────────────┼─────────────────────────────────────────
       │ SECTION 7: VOCÊ (Q&A) │
 ──────┼──────────────────────┼─────────────────────────────────────────
- 48   │ Your Name            │ Q: como você se chama? A: (eu) me chamo...
- 49   │ Where You Live       │ Q: onde você mora? A: moro em...
- 50   │ Where You're From    │ Q: de onde você é? A: sou de...
- 51   │ What You Like        │ Q: de que você gosta? A: gosto de...
- 52   │ Your Profession      │ Q: qual é a sua profissão? A: sou...
- 53   │ Where You Work       │ Q: onde você trabalha? A: trabalho em...
- 54   │ What You Have        │ Q: você tem...? A: tenho... / não tenho...
- 55   │ Where You Are        │ Q: onde você está? A: estou em...
- 56   │ How You Feel         │ Q: como você está? A: estou...
+ 47   │ Your Name            │ Q: como você se chama? A: (eu) me chamo...
+ 48   │ Where You Live       │ Q: onde você mora? A: moro em...
+ 49   │ Where You're From    │ Q: de onde você é? A: sou de...
+ 50   │ What You Like        │ Q: de que você gosta? A: gosto de...
+ 51   │ Your Profession      │ Q: qual é a sua profissão? A: sou...
+ 52   │ Where You Work       │ Q: onde você trabalha? A: trabalho em...
+ 53   │ What You Have        │ Q: você tem...? A: tenho...
+ 54   │ Where You Are        │ Q: onde você está? A: estou em...
+ 55   │ How You Feel         │ Q: como você está? A: estou...
 ──────┼──────────────────────┼─────────────────────────────────────────
       │ SECTION 8: ELE/ELA (Q&A) │
 ──────┼──────────────────────┼─────────────────────────────────────────
- 57   │ Their Name           │ Q: como ele/ela se chama? A: (ele/ela) se chama...
- 58   │ Where They Live      │ Q: onde ele/ela mora? A: (ele/ela) mora em...
- 59   │ Where They're From   │ Q: de onde ele/ela é? A: (ele/ela) é de...
- 60   │ What They Like       │ Q: de que ele/ela gosta? A: (ele/ela) gosta de...
- 61   │ Their Profession     │ Q: qual é a profissão dele/dela? A: (ele/ela) é...
- 62   │ Where They Work      │ Q: onde ele/ela trabalha? A: (ele/ela) trabalha em...
- 63   │ What They Have       │ Q: ele/ela tem...? A: (ele/ela) tem... / não tem...
- 64   │ Where They Are       │ Q: onde ele/ela está? A: (ele/ela) está em...
- 65   │ How They Feel        │ Q: como ele/ela está? A: (ele/ela) está...
+ 56   │ Their Name           │ Q: como ele/ela se chama? A: (ele/ela) se chama...
+ 57   │ Where They Live      │ Q: onde ele/ela mora? A: (ele/ela) mora em...
+ 58   │ Where They're From   │ Q: de onde ele/ela é? A: (ele/ela) é de...
+ 59   │ What They Like       │ Q: de que ele/ela gosta? A: (ele/ela) gosta de...
+ 60   │ Their Profession     │ Q: qual é a profissão dele/dela? A: (ele/ela) é...
+ 61   │ Where They Work      │ Q: onde ele/ela trabalha? A: (ele/ela) trabalha em...
+ 62   │ What They Have       │ Q: ele/ela tem...? A: (ele/ela) tem...
+ 63   │ Where They Are       │ Q: onde ele/ela está? A: (ele/ela) está em...
+ 64   │ How They Feel        │ Q: como ele/ela está? A: (ele/ela) está...
 ──────┼──────────────────────┼─────────────────────────────────────────
-      │ SECTION 9: NÓS       │
+      │ SECTION 9: NEGATION  │
+──────┼──────────────────────┼─────────────────────────────────────────
+ 65   │ Negation Patterns    │ não sou, não moro, não gosto, não trabalho, não tenho, não estou
+──────┼──────────────────────┼─────────────────────────────────────────
+      │ SECTION 10: NÓS      │
 ──────┼──────────────────────┼─────────────────────────────────────────
  66   │ Who We Are           │ nós somos + nationality/profession
  67   │ Where We're From     │ nós somos de/do/da + origin
@@ -133,7 +136,7 @@ Unit  │ Topic                │ Grammar / Key Vocabulary
  72   │ Where We Are         │ nós estamos em/no/na
  73   │ How We Feel          │ nós estamos + feelings
 ──────┼──────────────────────┼─────────────────────────────────────────
-      │ SECTION 10: DROP NÓS │
+      │ SECTION 11: DROP NÓS │
 ──────┼──────────────────────┼─────────────────────────────────────────
  74   │ Who We Are           │ somos + nationality/profession
  75   │ Where We're From     │ somos de/do/da + origin
@@ -144,14 +147,14 @@ Unit  │ Topic                │ Grammar / Key Vocabulary
  80   │ Where We Are         │ estamos em/no/na
  81   │ How We Feel          │ estamos + feelings
 ──────┼──────────────────────┼─────────────────────────────────────────
-      │ SECTION 11: NÓS JOIN SENTENCES │
+      │ SECTION 12: NÓS JOIN SENTENCES │
 ──────┼──────────────────────┼─────────────────────────────────────────
  82   │ Full Introduction    │ somos [nationality] e somos [profession]
  83   │ Origin + Location    │ somos de [origin] e moramos em [city]
  84   │ Profession + Work    │ somos [profession] e trabalhamos em/no/na
  85   │ Location + Feeling   │ estamos em/no/na [location] e estamos [feeling]
 ──────┼──────────────────────┼─────────────────────────────────────────
-      │ SECTION 12: ELES/ELAS │
+      │ SECTION 13: ELES/ELAS │
 ──────┼──────────────────────┼─────────────────────────────────────────
  86   │ Who They Are         │ eles/elas são + nationality/profession
  87   │ Where They're From   │ eles/elas são de/do/da + origin
@@ -162,14 +165,14 @@ Unit  │ Topic                │ Grammar / Key Vocabulary
  92   │ Where They Are       │ eles/elas estão em/no/na
  93   │ How They Feel        │ eles/elas estão + feelings
 ──────┼──────────────────────┼─────────────────────────────────────────
-      │ SECTION 13: ELES/ELAS JOIN SENTENCES │
+      │ SECTION 14: ELES/ELAS JOIN SENTENCES │
 ──────┼──────────────────────┼─────────────────────────────────────────
  94   │ Full Introduction    │ eles/elas são [nationality] e são [profession]
  95   │ Origin + Location    │ eles/elas são de [origin] e (eles/elas) moram em [city]
  96   │ Profession + Work    │ eles/elas são [profession] e (eles/elas) trabalham em/no/na
  97   │ Location + Feeling   │ eles/elas estão em/no/na [location] e estão [feeling]
 ──────┼──────────────────────┼─────────────────────────────────────────
-      │ SECTION 14: PLURAL Q&A │
+      │ SECTION 15: PLURAL Q&A │
 ──────┼──────────────────────┼─────────────────────────────────────────
  98   │ Vocês - Name         │ Q: como vocês se chamam? A: nos chamamos... / eu sou X e ele/ela é Y
  99   │ Vocês - Origin       │ Q: de onde vocês são? A: somos de...
@@ -177,14 +180,14 @@ Unit  │ Topic                │ Grammar / Key Vocabulary
 101   │ Vocês - Work         │ Q: onde vocês trabalham? A: trabalhamos em...
 102   │ Vocês - Likes        │ Q: de que vocês gostam? A: gostamos de...
 103   │ Vocês - Feeling      │ Q: como vocês estão? A: estamos...
-104   │ Vocês - Have         │ Q: vocês têm...? A: temos... / não temos...
+104   │ Vocês - Have         │ Q: vocês têm...? A: temos...
 105   │ Eles/Elas - Name     │ Q: como eles/elas se chamam? A: (eles/elas) se chamam...
 106   │ Eles/Elas - Origin   │ Q: de onde eles/elas são? A: (eles/elas) são de...
 107   │ Eles/Elas - Location │ Q: onde eles/elas moram? A: (eles/elas) moram em...
 108   │ Eles/Elas - Work     │ Q: onde eles/elas trabalham? A: (eles/elas) trabalham em...
 109   │ Eles/Elas - Likes    │ Q: de que eles/elas gostam? A: (eles/elas) gostam de...
 110   │ Eles/Elas - Feeling  │ Q: como eles/elas estão? A: (eles/elas) estão...
-111   │ Eles/Elas - Have     │ Q: eles/elas têm...? A: (eles/elas) têm... / não têm...
+111   │ Eles/Elas - Have     │ Q: eles/elas têm...? A: (eles/elas) têm...
 ```
 
 ---
@@ -194,19 +197,20 @@ Unit  │ Topic                │ Grammar / Key Vocabulary
 | Section | Focus | Units |
 |---------|-------|-------|
 | 1 | EU - First person with explicit pronoun | 1-14 |
-| 2 | DROP EU - First person without pronoun + negation | 15-26 |
-| 3 | JOIN SENTENCES - Combining patterns | 27-30 |
-| 4 | ELE/ELA - Third person singular | 31-42 |
-| 5 | ELE/ELA JOIN SENTENCES - Combining third person patterns | 43-46 |
-| 6 | QUESTION WORDS - Interrogatives | 47 |
-| 7 | VOCÊ (Q&A) - Questions and answers | 48-56 |
-| 8 | ELE/ELA (Q&A) - Questions about third person | 57-65 |
-| 9 | NÓS - First person plural with explicit pronoun | 66-73 |
-| 10 | DROP NÓS - First person plural without pronoun | 74-81 |
-| 11 | NÓS JOIN SENTENCES - Combining plural patterns | 82-85 |
-| 12 | ELES/ELAS - Third person plural | 86-93 |
-| 13 | ELES/ELAS JOIN SENTENCES - Combining third person plural | 94-97 |
-| 14 | PLURAL Q&A - Questions with vocês/eles/elas | 98-111 |
+| 2 | DROP EU - First person without pronoun | 15-25 |
+| 3 | JOIN SENTENCES - Combining patterns | 26-29 |
+| 4 | ELE/ELA - Third person singular | 30-41 |
+| 5 | ELE/ELA JOIN SENTENCES - Combining third person patterns | 42-45 |
+| 6 | QUESTION WORDS - Interrogatives | 46 |
+| 7 | VOCÊ (Q&A) - Questions and answers | 47-55 |
+| 8 | ELE/ELA (Q&A) - Questions about third person | 56-64 |
+| 9 | NEGATION - Negative patterns after Q&A context | 65 |
+| 10 | NÓS - First person plural with explicit pronoun | 66-73 |
+| 11 | DROP NÓS - First person plural without pronoun | 74-81 |
+| 12 | NÓS JOIN SENTENCES - Combining plural patterns | 82-85 |
+| 13 | ELES/ELAS - Third person plural | 86-93 |
+| 14 | ELES/ELAS JOIN SENTENCES - Combining third person plural | 94-97 |
+| 15 | PLURAL Q&A - Questions with vocês/eles/elas | 98-111 |
 
 ---
 
@@ -214,7 +218,7 @@ Unit  │ Topic                │ Grammar / Key Vocabulary
 
 ```
 SINGULAR:
-eu (explicit) → eu (dropped) + negation → join sentences → ele/ela → ele/ela join → question words → você (Q&A) → ele/ela (Q&A)
+eu (explicit) → eu (dropped) → join sentences → ele/ela → ele/ela join → question words → você (Q&A) → ele/ela (Q&A) → negation
 
 PLURAL:
 nós (explicit) → nós (dropped) → nós join sentences → eles/elas → eles/elas join → plural Q&A (vocês + eles/elas)
