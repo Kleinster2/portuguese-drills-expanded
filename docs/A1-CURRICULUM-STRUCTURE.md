@@ -28,7 +28,7 @@
 
 ---
 
-## Unit Structure (111 Units)
+## Unit Structure (113 Units)
 
 ```
 Unit  │ Topic                │ Grammar / Key Vocabulary
@@ -188,6 +188,11 @@ Unit  │ Topic                │ Grammar / Key Vocabulary
 109   │ Eles/Elas - Likes    │ Q: de que eles/elas gostam? A: (eles/elas) gostam de...
 110   │ Eles/Elas - Feeling  │ Q: como eles/elas estão? A: (eles/elas) estão...
 111   │ Eles/Elas - Have     │ Q: eles/elas têm...? A: (eles/elas) têm...
+──────┼──────────────────────┼─────────────────────────────────────────
+      │ SECTION 16: PLURAL NEGATION │
+──────┼──────────────────────┼─────────────────────────────────────────
+112   │ Negation Patterns    │ não somos, não moramos, não gostamos, não trabalhamos, não temos, não estamos
+113   │ Negation Patterns    │ não são, não moram, não gostam, não trabalham, não têm, não estão
 ```
 
 ---
@@ -211,6 +216,7 @@ Unit  │ Topic                │ Grammar / Key Vocabulary
 | 13 | ELES/ELAS - Third person plural | 86-93 |
 | 14 | ELES/ELAS JOIN SENTENCES - Combining third person plural | 94-97 |
 | 15 | PLURAL Q&A - Questions with vocês/eles/elas | 98-111 |
+| 16 | PLURAL NEGATION - Negative patterns for nós/eles/elas | 112-113 |
 
 ---
 
@@ -221,5 +227,5 @@ SINGULAR:
 eu (explicit) → eu (dropped) → join sentences → ele/ela → ele/ela join → question words → você (Q&A) → ele/ela (Q&A) → negation
 
 PLURAL:
-nós (explicit) → nós (dropped) → nós join sentences → eles/elas → eles/elas join → plural Q&A (vocês + eles/elas)
+nós (explicit) → nós (dropped) → nós join sentences → eles/elas → eles/elas join → plural Q&A (vocês + eles/elas) → plural negation
 ```
