@@ -2,6 +2,15 @@
 
 All notable changes to Portuguese Language Drills.
 
+## February 2025
+
+### New Drills
+- **Word Families B1** - Practice deriving nouns, adjectives, adverbs, verbs from common roots using regular patterns (-eza, -dade, -mente, -ção)
+- **Word Families B2** - Advanced derivation with prefixes (des-, re-, in-), complex suffixes (-ância/-ência, -ável/-ível), and irregular families
+
+### Tutor Tools
+- **Student Knowledge Base** - JSON-based system for tracking individual students (`config/students.json`)
+
 ## January 2025
 
 ### Pronunciation Lessons v2.0

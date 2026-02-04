@@ -1,0 +1,31 @@
+{
+  "students": {
+    "marvin": {
+      "name": "Marvin",
+      "level": "B2",
+      "variant": "European",
+      "addedAt": "2026-02-04",
+      "targetLevel": null,
+      "notes": "",
+      "strengths": [],
+      "weaknesses": [],
+      "goals": []
+    }
+  },
+  "sessions": {
+    "marvin": [
+      {
+        "date": "2026-02-03",
+        "topic": "Família de palavras (Word Families)",
+        "material": "Textbook p.204, exercise 15-6",
+        "skills": ["word derivation", "noun-adjective-adverb-verb conversion", "morphology"],
+        "notes": "No issues"
+      }
+    ]
+  },
+  "metadata": {
+    "createdAt": "2026-02-04",
+    "lastUpdated": "2026-02-04",
+    "version": "1.0"
+  }
+}
