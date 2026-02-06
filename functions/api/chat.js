@@ -465,7 +465,8 @@ Remember: Variety and randomization are KEY to maintaining user interest and pre
     'a1-simplifier',
     'a2-simplifier',
     'b1-simplifier',
-    'b2-simplifier'
+    'b2-simplifier',
+    'tutor-chat'
   ];
 
   if (excludeFromRandomization.includes(drillId)) {
