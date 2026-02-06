@@ -234,8 +234,7 @@ function addTutorMessage(sender, content, autoPlay = true) {
     `;
   } else {
     const messageId = 'tutor-msg-' + Date.now();
-    const portugueseText = extractPortuguese(content);
-    tutorMessageTexts[messageId] = portugueseText;
+    tutorMessageTexts[messageId] = content;
 
     messageDiv.innerHTML = `
       <div class="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -257,10 +256,10 @@ function addTutorMessage(sender, content, autoPlay = true) {
       </div>
     `;
 
-    // Auto-play Portuguese if enabled and not a typing indicator
-    if (autoPlay && tutorAutoPlayEnabled && content !== '...' && window.portugueseSpeech && portugueseText) {
+    // Auto-play if enabled and not a typing indicator
+    if (autoPlay && tutorAutoPlayEnabled && content !== '...' && window.portugueseSpeech) {
       setTimeout(() => {
-        window.portugueseSpeech.speak(portugueseText);
+        window.portugueseSpeech.speakMixed(content);
       }, 300);
     }
   }
@@ -270,42 +269,11 @@ function addTutorMessage(sender, content, autoPlay = true) {
   return messageDiv;
 }
 
-// Extract Portuguese text from AI response (skip English explanations)
-function extractPortuguese(text) {
-  // If text contains = or "means", it's likely an explanation - extract just the Portuguese
-  if (text.includes(' = ') || text.includes(' means ')) {
-    // Pattern: "word = translation" or explanations
-    // Try to extract Portuguese parts before = signs
-    const parts = text.split('\n');
-    const portugueseParts = [];
-    for (const part of parts) {
-      if (part.includes(' = ')) {
-        // Get the Portuguese part (before the =)
-        const ptPart = part.split(' = ')[0].trim();
-        if (ptPart && !ptPart.match(/^[a-z\s]+$/i)) { // Not pure English
-          portugueseParts.push(ptPart);
-        }
-      } else if (!part.match(/\b(means|is called|how|what|the|you|your)\b/i)) {
-        // Line doesn't look like English explanation
-        portugueseParts.push(part);
-      }
-    }
-    return portugueseParts.join(' ').trim() || text;
-  }
-
-  // If mostly Portuguese (no common English explanation words), return as-is
-  if (!text.match(/\b(means|is called|translation|English|mistake|correction)\b/i)) {
-    return text;
-  }
-
-  return text;
-}
-
 // Speak a specific tutor message
 function speakTutorMessage(messageId) {
   const text = tutorMessageTexts[messageId];
   if (text && window.portugueseSpeech) {
-    window.portugueseSpeech.speak(text);
+    window.portugueseSpeech.speakMixed(text);
   }
 }
 
