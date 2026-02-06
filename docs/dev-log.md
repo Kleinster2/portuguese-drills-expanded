@@ -52,6 +52,32 @@ Set up three-tier logging for the project.
 
 ---
 
+### Second Student Added
+Added Christian (B1, Brazilian Portuguese) to the knowledge base.
+
+---
+
+### Printable Worksheet System
+Created first printable worksheet for tutoring sessions.
+
+**Files created:**
+- `printables/preterite-worksheet-christian.html` - 70-exercise preterite tense worksheet
+
+**Features:**
+- Conjugation reference tables (regular + 12 irregular verbs)
+- Part A: 20 regular -AR verbs
+- Part B: 15 regular -ER/-IR verbs
+- Part C: 20 irregular verbs
+- Part D: 15 mixed practice
+- Answer key on separate page
+- Print-friendly CSS (~6-7 pages)
+
+**Notes:**
+- Christian knows the forms, needs practice choosing correct conjugations
+- Future: create preterite-vs-imperfect contrast drill
+
+---
+
 ## Template
 
 ```

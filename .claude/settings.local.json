@@ -62,7 +62,11 @@
       "Bash(npm update:*)",
       "Bash(npx playwright test:*)",
       "Bash(git checkout:*)",
-      "Bash(xargs:*)"
+      "Bash(xargs:*)",
+      "Bash(start \"\" \"C:\\\\Users\\\\klein\\\\Downloads\\\\palavra-worksheet-navy.html\")",
+      "Bash(start \"\" \"C:\\\\Users\\\\klein\\\\Downloads\\\\imperativo-worksheet-navy.html\")",
+      "Bash(start \"\" \"C:\\\\Users\\\\klein\\\\cascadeprojects\\\\portuguese-drills-expanded\\\\printables\\\\preterite-worksheet-christian.html\")",
+      "Bash(timeout:*)"
     ],
     "deny": [],
     "ask": []

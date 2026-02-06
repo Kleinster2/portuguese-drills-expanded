@@ -10,6 +10,28 @@
       "strengths": [],
       "weaknesses": [],
       "goals": []
+    },
+    "christian": {
+      "name": "Christian",
+      "level": "B1",
+      "variant": "Brazilian",
+      "addedAt": "2026-02-04",
+      "targetLevel": null,
+      "notes": "",
+      "strengths": [],
+      "weaknesses": [],
+      "goals": []
+    },
+    "amanda": {
+      "name": "Amanda",
+      "level": "B2",
+      "variant": "Brazilian",
+      "addedAt": "2026-02-04",
+      "targetLevel": null,
+      "notes": "",
+      "strengths": [],
+      "weaknesses": [],
+      "goals": []
     }
   },
   "sessions": {
@@ -21,7 +43,17 @@
         "skills": ["word derivation", "noun-adjective-adverb-verb conversion", "morphology"],
         "notes": "No issues"
       }
-    ]
+    ],
+    "christian": [
+      {
+        "date": "2026-02-04",
+        "topic": "Pretérito Perfeito (Simple Past)",
+        "material": "printables/preterite-worksheet-christian.html",
+        "skills": ["preterite conjugation", "regular verbs", "irregular verbs"],
+        "notes": "Completed 70-exercise worksheet"
+      }
+    ],
+    "amanda": []
   },
   "metadata": {
     "createdAt": "2026-02-04",
