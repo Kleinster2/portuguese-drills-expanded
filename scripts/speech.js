@@ -309,7 +309,9 @@ class PortugueseSpeech {
     return text
       .replace(/\s*=\s*/g, ', ')  // Replace = with comma pause
       .replace(/\s*→\s*/g, ', ')  // Replace → with comma pause
-      .replace(/\\/g, '')         // Remove backslashes
+      .replace(/\*\*/g, '')       // Remove bold markers
+      .replace(/\*/g, '')         // Remove italic markers
+      .replace(/[\\\/]/g, '')     // Remove backslashes and forward slashes
       .replace(/[""]/g, '')       // Remove curly quotes
       .replace(/["]/g, '')        // Remove straight quotes
       .trim();
