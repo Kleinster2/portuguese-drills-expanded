@@ -195,11 +195,25 @@ class PortugueseSpeech {
 
       // Check if line has "=" pattern (vocabulary breakdown)
       if (line.includes(' = ')) {
-        // Split into Portuguese and English parts
-        const parts = line.split(' = ');
-        if (parts.length >= 2) {
-          segments.push({ text: parts[0].trim(), lang: 'pt-BR' });
-          segments.push({ text: parts.slice(1).join(', ').trim(), lang: 'en-US' });
+        // Handle multiple word = translation pairs: "(já = already, visitou = visited)"
+        // Split by comma first, then handle each pair
+        const cleanLine = line.replace(/[()]/g, '').trim();
+        const pairs = cleanLine.split(/,\s*/);
+
+        for (const pair of pairs) {
+          if (pair.includes(' = ')) {
+            const [ptWord, enWord] = pair.split(' = ').map(s => s.trim());
+            if (ptWord) segments.push({ text: ptWord, lang: 'pt-BR' });
+            if (enWord) segments.push({ text: enWord, lang: 'en-US' });
+          } else if (pair.trim()) {
+            // No = sign, guess language
+            const trimmed = pair.trim();
+            if (this.isPortuguese(trimmed)) {
+              segments.push({ text: trimmed, lang: 'pt-BR' });
+            } else {
+              segments.push({ text: trimmed, lang: 'en-US' });
+            }
+          }
         }
       } else if (line.includes(' → ')) {
         // Arrow pattern: PT → EN
