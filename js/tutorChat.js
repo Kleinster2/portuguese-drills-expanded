@@ -6,9 +6,13 @@ let tutorMessages = [];
 let tutorAutoPlayEnabled = true;
 let tutorMessageTexts = {}; // Store message texts for speech
 
-function initTutorChat() {
+async function initTutorChat() {
+  // Load dictionary first (needed for hover tooltips)
+  await loadHoverDictionary();
+
   const input = document.getElementById('tutor-input');
   const sendBtn = document.getElementById('tutor-send-btn');
+  const messagesContainer = document.getElementById('tutor-messages');
 
   // Send on button click
   sendBtn.addEventListener('click', sendTutorMessage);
@@ -17,6 +21,18 @@ function initTutorChat() {
   input.addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
       sendTutorMessage();
+    }
+  });
+
+  // Mobile tap support for tooltips
+  messagesContainer.addEventListener('click', function(e) {
+    const tooltip = e.target.closest('.word-tooltip, .phrase-tooltip');
+    // Remove active from all other tooltips
+    document.querySelectorAll('.word-tooltip.active, .phrase-tooltip.active').forEach(el => {
+      if (el !== tooltip) el.classList.remove('active');
+    });
+    if (tooltip) {
+      tooltip.classList.toggle('active');
     }
   });
 
@@ -262,6 +278,20 @@ function addTutorMessage(sender, content, autoPlay = true) {
         window.portugueseSpeech.speakMixed(content);
       }, 300);
     }
+
+    // Fetch translations for unknown words in background, then update tooltips
+    if (content !== '...' && typeof extractUnknownWords === 'function') {
+      const unknownWords = extractUnknownWords(content);
+      if (unknownWords.length > 0) {
+        fetchUnknownTranslations(unknownWords).then(() => {
+          // Re-render message content with newly cached translations
+          const contentDiv = messageDiv.querySelector('.message-content');
+          if (contentDiv) {
+            contentDiv.innerHTML = formatTutorResponse(content);
+          }
+        });
+      }
+    }
   }
 
   messagesContainer.appendChild(messageDiv);
@@ -278,10 +308,17 @@ function speakTutorMessage(messageId) {
 }
 
 function formatTutorResponse(content) {
-  return escapeHtmlTutor(content)
+  let html = escapeHtmlTutor(content)
     .replace(/\n/g, '<br>')
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.*?)\*/g, '<em>$1</em>');
+
+  // Add hover tooltips for Portuguese words using shared module
+  if (isHoverDictionaryLoaded()) {
+    html = addHoverTooltips(html);
+  }
+
+  return html;
 }
 
 function escapeHtmlTutor(text) {

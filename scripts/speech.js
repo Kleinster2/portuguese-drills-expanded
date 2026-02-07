@@ -5,7 +5,7 @@ class PortugueseSpeech {
   constructor() {
     this.synthesis = window.speechSynthesis;
     this.defaultLang = 'pt-BR';
-    this.defaultRate = 0.90; // Slightly slower for learning
+    this.defaultRate = 1.0; // Normal speed
     this.defaultPitch = 1.0;
     this.currentUtterance = null;
 
@@ -271,15 +271,36 @@ class PortugueseSpeech {
       lastIndex = match.index + match[0].length;
     }
 
-    // Add remaining English text after last quote
+    // Add remaining text after last quote
     const remaining = text.slice(lastIndex).trim();
     if (remaining) {
-      segments.push({ text: remaining, lang: 'en-US' });
+      this.parseUnquotedMixed(remaining, segments);
     }
 
-    // If no quotes found, just add the whole line as English
+    // If no quotes found, parse for unquoted mixed content
     if (lastIndex === 0) {
-      segments.push({ text: text.trim(), lang: 'en-US' });
+      this.parseUnquotedMixed(text.trim(), segments);
+    }
+  }
+
+  // Parse unquoted text that may contain mixed English/Portuguese
+  parseUnquotedMixed(text, segments) {
+    // Split by comma or common punctuation that separates clauses
+    const parts = text.split(/([,;:]\s*)/);
+
+    for (let i = 0; i < parts.length; i++) {
+      const part = parts[i].trim();
+      if (!part) continue;
+
+      // Skip pure punctuation
+      if (/^[,;:]\s*$/.test(parts[i])) continue;
+
+      // Determine language of this segment
+      if (this.isPortuguese(part) && !this.isEnglish(part)) {
+        segments.push({ text: part, lang: 'pt-BR' });
+      } else {
+        segments.push({ text: part, lang: 'en-US' });
+      }
     }
   }
 
@@ -307,7 +328,7 @@ class PortugueseSpeech {
   // Detect English sentence structure (even if it contains PT words in quotes)
   isEnglishSentence(text) {
     // English sentence patterns that indicate this is an English sentence with embedded Portuguese
-    const englishStructures = /\b(means|it's|I'm|you're|we're|they're|he's|she's|this is|you can|would you|do you|is the|are the|how to|what is|that's|here's|let's|I'll|you'll|we'll|they'll|isn't|aren't|doesn't|don't|won't|can't|couldn't|shouldn't|wouldn't|I notice|would you like|could be|response|simple|practice|responding|repeatedly)\b/i;
+    const englishStructures = /\b(means|it's|I'm|you're|we're|they're|he's|she's|this is|you can|would you|do you|is the|are the|how to|what is|that's|here's|let's|I'll|you'll|we'll|they'll|isn't|aren't|doesn't|don't|won't|can't|couldn't|shouldn't|wouldn't|I notice|would you like|could be|response|simple|practice|responding|repeatedly|so,|now,|and |but |or |well,|ok,|yes,|no,|try |just )\b/i;
     return englishStructures.test(text);
   }
 
@@ -365,10 +386,8 @@ class PortugueseSpeech {
     }
 
     utterance.onend = () => {
-      // Small pause between segments
-      setTimeout(() => {
-        this.speakSegmentsQueue(segments, index + 1, options);
-      }, 50);
+      // No delay between segments for smoother flow
+      this.speakSegmentsQueue(segments, index + 1, options);
     };
 
     utterance.onerror = (event) => {

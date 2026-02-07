@@ -19,6 +19,73 @@
     <!-- Plausible Analytics -->
     <script async src="https://plausible.io/js/pa-A2kEULXGZtzUYXPsVOQwU.js"></script>
     <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
+    <style>
+        /* Hover translation tooltips */
+        .word-tooltip,
+        .phrase-tooltip {
+            position: relative;
+            cursor: help;
+            display: inline;
+        }
+        .word-tooltip:hover,
+        .phrase-tooltip:hover {
+            background-color: #dbeafe;
+            border-radius: 2px;
+        }
+        .word-tooltip::after,
+        .phrase-tooltip::after {
+            content: attr(data-translation);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #1e293b;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-style: italic;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+            z-index: 10;
+            pointer-events: none;
+        }
+        .word-tooltip::before,
+        .phrase-tooltip::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top-color: #1e293b;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+            z-index: 10;
+        }
+        .word-tooltip:hover::after,
+        .word-tooltip:hover::before,
+        .phrase-tooltip:hover::after,
+        .phrase-tooltip:hover::before {
+            opacity: 1;
+            visibility: visible;
+        }
+        /* Mobile: show on tap */
+        .word-tooltip.active::after,
+        .word-tooltip.active::before,
+        .phrase-tooltip.active::after,
+        .phrase-tooltip.active::before {
+            opacity: 1;
+            visibility: visible;
+        }
+        /* Messages need padding for tooltips */
+        .message-content {
+            padding-top: 0.5rem;
+        }
+    </style>
 </head>
 <body class="text-slate-800 bg-slate-50 flex flex-col h-screen">
 
@@ -68,6 +135,7 @@
 
     <!-- Scripts -->
     <script src="/js/dependencies.js"></script>
+    <script src="/js/hoverTranslations.js"></script>
     <script src="/scripts/speech.js"></script>
     <script src="/js/tutorChat.js"></script>
     <script src="/js/nav.js"></script>
