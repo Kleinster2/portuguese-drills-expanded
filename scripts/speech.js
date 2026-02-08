@@ -5,7 +5,8 @@ class PortugueseSpeech {
   constructor() {
     this.synthesis = window.speechSynthesis;
     this.defaultLang = 'pt-BR';
-    this.defaultRate = 1.0; // Normal speed
+    this.defaultRate = 1.0; // Normal speed (English)
+    this.defaultPTRate = 0.95; // Slightly slower for Portuguese
     this.defaultPitch = 1.0;
     this.currentUtterance = null;
 
@@ -189,7 +190,7 @@ class PortugueseSpeech {
   // Cloud TTS: speak text via /api/tts endpoint using Audio element
   cloudSpeak(text, options = {}) {
     const lang = options.lang || this.defaultLang;
-    const rate = options.rate || this.defaultRate;
+    const rate = options.rate || (lang.startsWith('pt') ? this.defaultPTRate : this.defaultRate);
     const preferFemale = options.preferFemale || false;
     const cacheKey = `${lang}|${rate}|${preferFemale}|${text}`;
 
@@ -291,8 +292,9 @@ class PortugueseSpeech {
     const utterance = new SpeechSynthesisUtterance(text);
 
     // Set properties
-    utterance.lang = options.lang || this.defaultLang;
-    utterance.rate = options.rate || this.defaultRate;
+    const lang = options.lang || this.defaultLang;
+    utterance.lang = lang;
+    utterance.rate = options.rate || (lang.startsWith('pt') ? this.defaultPTRate : this.defaultRate);
     utterance.pitch = options.pitch || this.defaultPitch;
     utterance.volume = options.volume || 1.0;
 
@@ -419,20 +421,29 @@ class PortugueseSpeech {
           segments.push({ text: parts.slice(1).join(' → ').trim(), lang: 'en-US' });
         }
       } else {
-        // Check if line has English sentence structure
-        const hasEnglish = this.isEnglishSentence(line);
-        const hasPT = this.isPortuguese(line);
-        console.log(`[Speech] Line: "${line.substring(0, 50)}..." hasEnglish=${hasEnglish}, hasPT=${hasPT}`);
+        // Split line into sentences, detect language per sentence
+        const sentences = line.match(/[^.!?]+[.!?]*/g) || [line];
+        for (const sentence of sentences) {
+          const trimmed = sentence.trim();
+          if (!trimmed) continue;
 
-        if (hasEnglish) {
-          // English sentence - parse for embedded Portuguese quotes
-          this.parseEnglishWithQuotes(line, segments);
-        } else if (hasPT) {
-          // Pure Portuguese
-          segments.push({ text: line.trim(), lang: 'pt-BR' });
-        } else {
-          // Default to English
-          segments.push({ text: line.trim(), lang: 'en-US' });
+          const hasEnglish = this.isEnglishSentence(trimmed);
+          const hasPT = this.isPortuguese(trimmed);
+          console.log(`[Speech] Line: "${trimmed.substring(0, 50)}..." hasEnglish=${hasEnglish}, hasPT=${hasPT}`);
+
+          if (hasEnglish && !hasPT) {
+            // Pure English sentence - parse for embedded Portuguese quotes
+            this.parseEnglishWithQuotes(trimmed, segments);
+          } else if (hasPT && !hasEnglish) {
+            // Pure Portuguese
+            segments.push({ text: trimmed, lang: 'pt-BR' });
+          } else if (hasPT && hasEnglish) {
+            // Mixed — use English parser to extract quoted PT
+            this.parseEnglishWithQuotes(trimmed, segments);
+          } else {
+            // Default to English
+            segments.push({ text: trimmed, lang: 'en-US' });
+          }
         }
       }
     }
@@ -517,7 +528,7 @@ class PortugueseSpeech {
       return true;
     }
     // Common Portuguese words
-    const ptPatterns = /\b(você|vocês|não|está|estou|estão|são|sou|tudo|bem|muito|obrigado|obrigada|bom|boa|como|onde|quando|porque|por que|aqui|ali|aí|lá|meu|minha|seu|sua|nosso|nossa|dele|dela|para|pelo|pela|com|sem|mais|menos|agora|hoje|amanhã|ontem|gosto|gosta|moro|mora|trabalho|trabalha|falo|fala|tenho|tem|quero|quer|posso|pode|vou|vai|sinto|sente|prazer|olá|oi|tchau|até|depois|antes|sempre|nunca|às vezes)\b/i;
+    const ptPatterns = /\b(você|vocês|não|está|estou|estão|são|sou|tudo|bem|muito|obrigado|obrigada|bom|boa|como|onde|quando|porque|por que|aqui|ali|aí|lá|meu|minha|seu|sua|nosso|nossa|dele|dela|para|pelo|pela|com|sem|mais|menos|agora|hoje|amanhã|ontem|gosto|gosta|moro|mora|trabalho|trabalha|falo|fala|tenho|tem|quero|quer|posso|pode|vou|vai|sinto|sente|prazer|olá|oi|tchau|até|depois|antes|sempre|nunca|às vezes|em|na|no|nas|nos|da|do|das|dos|uma|um|umas|uns|casa|dia|sim|isso|isto|aquilo|esse|essa|este|esta|ela|ele|elas|eles|nós|eu|que|qual|quais|se|já|também|ainda|só|todo|toda|tudo|cada|outro|outra|coisa|mesmo|mesma|gente|ser|ter|fazer|faz|ir|ver|dar|saber|dizer|querer|poder|dever|ficar|fica|fiquei|chamo|chama|nome|anos|legal|certo|certa|ótimo|ótima|claro|verdade|né)\b/i;
     return ptPatterns.test(text);
   }
 
@@ -545,6 +556,8 @@ class PortugueseSpeech {
       .replace(/[\\\/]/g, '')     // Remove backslashes and forward slashes
       .replace(/[""]/g, '')       // Remove curly quotes
       .replace(/["]/g, '')        // Remove straight quotes
+      .replace(/\[[^\]]*\]/g, '') // Remove [bracketed placeholders] like [word]
+      .replace(/\s{2,}/g, ' ')   // Collapse multiple spaces
       .trim();
   }
 
@@ -569,7 +582,7 @@ class PortugueseSpeech {
     if (useCloudForSegment) {
       this.cloudSpeak(cleanedText, {
         lang: segment.lang,
-        rate: options.rate || this.defaultRate,
+        rate: options.rate || (segment.lang === 'pt-BR' ? this.defaultPTRate : this.defaultRate),
         preferFemale: options.preferFemale || false,
         onStart: (index === 0 && options.onStart) ? options.onStart : undefined,
         onEnd: () => {
@@ -586,7 +599,7 @@ class PortugueseSpeech {
     const utterance = new SpeechSynthesisUtterance(cleanedText);
 
     utterance.lang = segment.lang;
-    utterance.rate = options.rate || this.defaultRate;
+    utterance.rate = options.rate || (segment.lang === 'pt-BR' ? this.defaultPTRate : this.defaultRate);
     utterance.pitch = options.pitch || this.defaultPitch;
     utterance.volume = options.volume || 1.0;
 
