@@ -120,8 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const drillParam = urlParams.get('drill');        // Single drill
     const drillsParam = urlParams.get('drills');      // Multiple drills (comma-separated)
-    const simplifierParam = urlParams.get('simplifier'); // Simplifier with level (a1 or a2)
-
     if (drillParam) {
         // Single drill mode
         setTimeout(() => {
@@ -165,33 +163,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }, 300);
         }
-    }
-
-    // Check for simplifier URL parameter
-    if (simplifierParam && ['a1', 'a2', 'b1', 'b2'].includes(simplifierParam)) {
-        setTimeout(() => {
-            // Open simplifier section if it's closed
-            const content = document.getElementById('simplifier-content');
-            const chevron = document.getElementById('simplifier-chevron');
-
-            if (content.classList.contains('hidden')) {
-                content.classList.remove('hidden');
-                chevron.classList.add('rotate-180');
-            }
-
-            // Select the appropriate level radio button
-            const radioButton = document.querySelector(`input[name="simplifier-level"][value="${simplifierParam}"]`);
-            if (radioButton) {
-                radioButton.checked = true;
-                // Update all labels and features to match selected level
-                updateSimplifierLabels();
-            }
-
-            // Scroll to simplifier section
-            const simplifierSection = content.closest('section');
-            if (simplifierSection) {
-                simplifierSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }, 300);
     }
 });
