@@ -9,6 +9,13 @@ class PortugueseSpeech {
     this.defaultPitch = 1.0;
     this.currentUtterance = null;
 
+    // Cloud TTS fallback state
+    this.cloudTTSRequired = false;
+    this.cloudTTSCache = new Map(); // cacheKey -> blobURL
+    this.cloudTTSCacheOrder = [];   // LRU tracking: oldest first
+    this.cloudTTSCacheMax = 50;
+    this.currentAudio = null;       // Audio element for cloud TTS
+
     // Check browser support
     this.supported = 'speechSynthesis' in window;
 
@@ -45,6 +52,22 @@ class PortugueseSpeech {
     if (enVoices.length > 0) {
       console.log(`[Speech] Found ${enVoices.length} English voices:`,
         enVoices.slice(0, 5).map(v => `${v.name} (${v.lang})`));
+    }
+
+    // Determine if cloud TTS is needed for Portuguese
+    if (!this.supported) {
+      this.cloudTTSRequired = true;
+    } else {
+      this.cloudTTSRequired = (this.getBestVoice(false) === null);
+    }
+
+    // Allow forced cloud mode for testing
+    if (window.FORCE_CLOUD_TTS) {
+      this.cloudTTSRequired = true;
+    }
+
+    if (this.cloudTTSRequired) {
+      console.log('[Speech] Cloud TTS will be used for Portuguese (no local pt-BR voices)');
     }
   }
 
@@ -115,8 +138,126 @@ class PortugueseSpeech {
     return null;
   }
 
+  // Cloud TTS: store blob URL in LRU cache
+  cloudCacheSet(key, blobURL) {
+    // Evict oldest if at capacity
+    if (this.cloudTTSCache.size >= this.cloudTTSCacheMax) {
+      const oldestKey = this.cloudTTSCacheOrder.shift();
+      if (oldestKey) {
+        const oldURL = this.cloudTTSCache.get(oldestKey);
+        if (oldURL) URL.revokeObjectURL(oldURL);
+        this.cloudTTSCache.delete(oldestKey);
+      }
+    }
+    this.cloudTTSCache.set(key, blobURL);
+    this.cloudTTSCacheOrder.push(key);
+  }
+
+  // Cloud TTS: get blob URL from cache (and promote in LRU)
+  cloudCacheGet(key) {
+    if (!this.cloudTTSCache.has(key)) return null;
+    // Promote to most-recently-used
+    const idx = this.cloudTTSCacheOrder.indexOf(key);
+    if (idx !== -1) {
+      this.cloudTTSCacheOrder.splice(idx, 1);
+      this.cloudTTSCacheOrder.push(key);
+    }
+    return this.cloudTTSCache.get(key);
+  }
+
+  // Cloud TTS: speak text via /api/tts endpoint using Audio element
+  cloudSpeak(text, options = {}) {
+    const lang = options.lang || this.defaultLang;
+    const rate = options.rate || this.defaultRate;
+    const preferFemale = options.preferFemale || false;
+    const cacheKey = `${lang}|${rate}|${preferFemale}|${text}`;
+
+    const cached = this.cloudCacheGet(cacheKey);
+    if (cached) {
+      console.log('[Speech] Cloud TTS cache hit');
+      this._playAudio(cached, options);
+      return;
+    }
+
+    // Fire onStart immediately so callers know speech is beginning
+    if (options.onStart) options.onStart();
+
+    fetch('/api/tts', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text, lang, preferFemale, rate })
+    })
+      .then(resp => {
+        if (!resp.ok) {
+          return resp.json().then(err => { throw new Error(err.error || 'TTS request failed'); });
+        }
+        return resp.blob();
+      })
+      .then(blob => {
+        const blobURL = URL.createObjectURL(blob);
+        this.cloudCacheSet(cacheKey, blobURL);
+        console.log(`[Speech] Cloud TTS: playing "${text.substring(0, 40)}..." (${lang})`);
+        this._playAudio(blobURL, options, true); // skipOnStart=true, already fired
+      })
+      .catch(err => {
+        console.error('[Speech] Cloud TTS error:', err);
+        if (options.onError) options.onError(err);
+        if (options.onEnd) options.onEnd();
+        this.currentAudio = null;
+      });
+  }
+
+  // Internal: play audio from a blob URL
+  _playAudio(blobURL, options = {}, skipOnStart = false) {
+    // Stop any currently playing audio
+    this._stopAudio();
+
+    const audio = new Audio(blobURL);
+    this.currentAudio = audio;
+
+    audio.addEventListener('playing', () => {
+      if (!skipOnStart && options.onStart) options.onStart();
+    }, { once: true });
+
+    audio.addEventListener('ended', () => {
+      this.currentAudio = null;
+      if (options.onEnd) options.onEnd();
+    }, { once: true });
+
+    audio.addEventListener('error', (e) => {
+      console.error('[Speech] Audio playback error:', e);
+      this.currentAudio = null;
+      if (options.onError) options.onError(e);
+      if (options.onEnd) options.onEnd();
+    }, { once: true });
+
+    audio.play().catch(err => {
+      console.error('[Speech] Audio play() rejected:', err);
+      this.currentAudio = null;
+      if (options.onError) options.onError(err);
+      if (options.onEnd) options.onEnd();
+    });
+  }
+
+  // Internal: stop cloud audio playback
+  _stopAudio() {
+    if (this.currentAudio) {
+      this.currentAudio.pause();
+      this.currentAudio.currentTime = 0;
+      this.currentAudio = null;
+    }
+  }
+
   // Main speak function
   speak(text, options = {}) {
+    // Route Portuguese to cloud TTS if no local voices
+    const lang = options.lang || this.defaultLang;
+    if (this.cloudTTSRequired && lang.startsWith('pt')) {
+      this.stop();
+      this.cloudSpeak(text, options);
+      return;
+    }
+
     if (!this.supported) {
       console.warn('[Speech] Cannot speak - Web Speech API not supported');
       return;
@@ -166,7 +307,7 @@ class PortugueseSpeech {
 
   // Speak mixed Portuguese/English content with appropriate voices
   speakMixed(text, options = {}) {
-    if (!this.supported) {
+    if (!this.supported && !this.cloudTTSRequired) {
       console.warn('[Speech] Cannot speak - Web Speech API not supported');
       return;
     }
@@ -400,6 +541,27 @@ class PortugueseSpeech {
       this.speakSegmentsQueue(segments, index + 1, options);
       return;
     }
+
+    // Route pt-BR segments to cloud TTS if needed
+    const useCloudForSegment = this.cloudTTSRequired && segment.lang === 'pt-BR';
+
+    if (useCloudForSegment) {
+      this.cloudSpeak(cleanedText, {
+        lang: segment.lang,
+        rate: options.rate || this.defaultRate,
+        preferFemale: options.preferFemale || false,
+        onStart: (index === 0 && options.onStart) ? options.onStart : undefined,
+        onEnd: () => {
+          this.speakSegmentsQueue(segments, index + 1, options);
+        },
+        onError: (err) => {
+          console.error('[Speech] Cloud TTS segment error:', err);
+          this.speakSegmentsQueue(segments, index + 1, options);
+        }
+      });
+      return;
+    }
+
     const utterance = new SpeechSynthesisUtterance(cleanedText);
 
     utterance.lang = segment.lang;
@@ -450,27 +612,37 @@ class PortugueseSpeech {
 
   // Stop current speech
   stop() {
+    // Stop Web Speech API
     if (this.synthesis.speaking) {
       this.synthesis.cancel();
       this.currentUtterance = null;
     }
+    // Stop cloud TTS Audio element
+    this._stopAudio();
   }
 
   // Check if currently speaking
   isSpeaking() {
+    if (this.currentAudio && !this.currentAudio.paused && !this.currentAudio.ended) {
+      return true;
+    }
     return this.synthesis.speaking;
   }
 
   // Pause speech
   pause() {
-    if (this.synthesis.speaking) {
+    if (this.currentAudio && !this.currentAudio.paused) {
+      this.currentAudio.pause();
+    } else if (this.synthesis.speaking) {
       this.synthesis.pause();
     }
   }
 
   // Resume speech
   resume() {
-    if (this.synthesis.paused) {
+    if (this.currentAudio && this.currentAudio.paused && !this.currentAudio.ended) {
+      this.currentAudio.play();
+    } else if (this.synthesis.paused) {
       this.synthesis.resume();
     }
   }
