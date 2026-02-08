@@ -102,7 +102,14 @@ class PortugueseSpeech {
     );
     if (msNatural) return msNatural;
 
-    // Third preference: Any Brazilian Portuguese voice (MUST be pt-BR)
+    // Third preference: Google Brazilian Portuguese (much better than basic Microsoft voices)
+    const googlePT = this.voices.find(voice =>
+      voice.name.includes('Google') &&
+      (voice.lang === 'pt-BR' || voice.lang === 'pt_BR')
+    );
+    if (googlePT) return googlePT;
+
+    // Fourth preference: Any Brazilian Portuguese voice (MUST be pt-BR)
     const ptBR = this.voices.find(voice =>
       (voice.lang === 'pt-BR' || voice.lang === 'pt_BR')
     );
