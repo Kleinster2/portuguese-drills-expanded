@@ -102,16 +102,29 @@ async function startTutorSession() {
     // Play both messages with a pause between them
     if (window.portugueseSpeech) {
       const introText = 'Welcome! Hover over Portuguese words to see translations. Click Listen to hear messages read aloud.';
-      setTimeout(() => {
+      const greetingText = data.response;
+
+      const playWelcome = () => {
         window.portugueseSpeech.speakMixed(introText, {
           onEnd: () => {
-            // Pause before greeting
             setTimeout(() => {
-              window.portugueseSpeech.speakMixed(data.response);
+              window.portugueseSpeech.speakMixed(greetingText);
             }, 800);
+          },
+          onBlocked: () => {
+            // Autoplay blocked by browser — retry after first user interaction
+            const retryOnce = () => {
+              document.removeEventListener('click', retryOnce);
+              document.removeEventListener('keydown', retryOnce);
+              setTimeout(playWelcome, 150);
+            };
+            document.addEventListener('click', retryOnce);
+            document.addEventListener('keydown', retryOnce);
           }
         });
-      }, 300);
+      };
+
+      setTimeout(playWelcome, 300);
     }
 
     // Enable input

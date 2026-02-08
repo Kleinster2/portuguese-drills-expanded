@@ -123,13 +123,27 @@ class PortugueseSpeech {
     );
     if (msNatural) return msNatural;
 
-    // Second preference: Any US English voice
+    // Second preference: Google US English (much better than basic Microsoft voices)
+    const googleUS = this.voices.find(voice =>
+      voice.name.includes('Google') &&
+      (voice.lang === 'en-US' || voice.lang === 'en_US')
+    );
+    if (googleUS) return googleUS;
+
+    // Third preference: Any Google English voice
+    const googleEN = this.voices.find(voice =>
+      voice.name.includes('Google') &&
+      voice.lang.startsWith('en')
+    );
+    if (googleEN) return googleEN;
+
+    // Fourth preference: Any US English voice
     const enUS = this.voices.find(voice =>
       voice.lang === 'en-US' || voice.lang === 'en_US'
     );
     if (enUS) return enUS;
 
-    // Third preference: Any English voice
+    // Fifth preference: Any English voice
     const en = this.voices.find(voice =>
       voice.lang.startsWith('en')
     );
@@ -588,7 +602,12 @@ class PortugueseSpeech {
 
     utterance.onerror = (event) => {
       console.error('[Speech] Error:', event.error);
-      // Continue to next segment even on error
+      if (event.error === 'not-allowed') {
+        // Autoplay blocked — notify caller so it can retry after user gesture
+        if (options.onBlocked) options.onBlocked();
+        return;
+      }
+      // Continue to next segment on other errors
       this.speakSegmentsQueue(segments, index + 1, options);
     };
 
