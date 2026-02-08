@@ -193,26 +193,60 @@ class PortugueseSpeech {
     for (const line of lines) {
       if (!line.trim()) continue;
 
-      // Check if line has "=" pattern (vocabulary breakdown)
-      if (line.includes(' = ')) {
-        // Handle multiple word = translation pairs: "(já = already, visitou = visited)"
-        // Split by comma first, then handle each pair
-        const cleanLine = line.replace(/[()]/g, '').trim();
-        const pairs = cleanLine.split(/,\s*/);
+      // Check if line has parenthetical vocabulary "(word = translation)"
+      if (line.includes(' = ') && line.includes('(')) {
+        // Extract text before, inside, and after parentheses
+        const match = line.match(/^(.*?)\(([^)]+)\)(.*)$/);
+        if (match) {
+          const [, before, inside, after] = match;
 
+          // Add text before parentheses (likely Portuguese)
+          if (before.trim()) {
+            if (this.isPortuguese(before)) {
+              segments.push({ text: before.trim(), lang: 'pt-BR' });
+            } else {
+              segments.push({ text: before.trim(), lang: 'en-US' });
+            }
+          }
+
+          // Handle vocab pairs inside parentheses
+          const pairs = inside.split(/,\s*/);
+          for (const pair of pairs) {
+            if (pair.includes(' = ')) {
+              const [ptWord, enWord] = pair.split(' = ').map(s => s.trim());
+              if (ptWord) segments.push({ text: ptWord, lang: 'pt-BR' });
+              if (enWord) segments.push({ text: enWord, lang: 'en-US' });
+            }
+          }
+
+          // Add text after parentheses (likely Portuguese)
+          if (after.trim()) {
+            if (this.isPortuguese(after)) {
+              segments.push({ text: after.trim(), lang: 'pt-BR' });
+            } else {
+              segments.push({ text: after.trim(), lang: 'en-US' });
+            }
+          }
+        } else {
+          // Fallback: old behavior for standalone vocab lines
+          const cleanLine = line.replace(/[()]/g, '').trim();
+          const pairs = cleanLine.split(/,\s*/);
+          for (const pair of pairs) {
+            if (pair.includes(' = ')) {
+              const [ptWord, enWord] = pair.split(' = ').map(s => s.trim());
+              if (ptWord) segments.push({ text: ptWord, lang: 'pt-BR' });
+              if (enWord) segments.push({ text: enWord, lang: 'en-US' });
+            }
+          }
+        }
+      } else if (line.includes(' = ')) {
+        // Standalone vocab line without parentheses
+        const pairs = line.split(/,\s*/);
         for (const pair of pairs) {
           if (pair.includes(' = ')) {
             const [ptWord, enWord] = pair.split(' = ').map(s => s.trim());
             if (ptWord) segments.push({ text: ptWord, lang: 'pt-BR' });
             if (enWord) segments.push({ text: enWord, lang: 'en-US' });
-          } else if (pair.trim()) {
-            // No = sign, guess language
-            const trimmed = pair.trim();
-            if (this.isPortuguese(trimmed)) {
-              segments.push({ text: trimmed, lang: 'pt-BR' });
-            } else {
-              segments.push({ text: trimmed, lang: 'en-US' });
-            }
           }
         }
       } else if (line.includes(' → ')) {
@@ -271,15 +305,15 @@ class PortugueseSpeech {
       lastIndex = match.index + match[0].length;
     }
 
-    // Add remaining text after last quote
-    const remaining = text.slice(lastIndex).trim();
-    if (remaining) {
-      this.parseUnquotedMixed(remaining, segments);
-    }
-
-    // If no quotes found, parse for unquoted mixed content
+    // If no quotes found, parse the whole text for mixed content
     if (lastIndex === 0) {
       this.parseUnquotedMixed(text.trim(), segments);
+    } else {
+      // Add remaining text after last quote
+      const remaining = text.slice(lastIndex).trim();
+      if (remaining) {
+        this.parseUnquotedMixed(remaining, segments);
+      }
     }
   }
 
@@ -310,7 +344,7 @@ class PortugueseSpeech {
     if (this.isPortuguese(text)) {
       return false;
     }
-    const englishPatterns = /\b(the|is|are|was|were|have|has|had|do|does|did|will|would|could|should|can|may|might|must|shall|this|that|these|those|what|which|who|whom|whose|where|when|why|how|if|then|than|because|although|however|therefore|means|called|translation|English|mistake|correction|literally|example|practice|want|like|need|try|know|think|say|said|make|made|go|went|get|got|see|saw|come|came|take|took|give|gave|find|found|tell|told|ask|asked|use|used|work|worked|seem|seemed|feel|felt|become|became|leave|left|put|keep|kept|let|begin|began|help|helped|show|showed|hear|heard|play|played|run|ran|move|moved|live|lived|believe|believed|hold|held|bring|brought|happen|happened|write|wrote|provide|provided|sit|sat|stand|stood|lose|lost|pay|paid|meet|met|include|included|continue|continued|set|learn|learned|change|changed|lead|led|understand|understood|watch|watched|follow|followed|stop|stopped|create|created|speak|spoke|read|allow|allowed|add|added|spend|spent|grow|grew|open|opened|walk|walked|win|won|offer|offered|remember|remembered|love|loved|consider|considered|appear|appeared|buy|bought|wait|waited|serve|served|die|died|send|sent|expect|expected|build|built|stay|stayed|fall|fell|cut|reach|reached|kill|killed|remain|remained|suggest|suggested|raise|raised|pass|passed|sell|sold|require|required|report|reported|decide|decided|pull|pulled)\b/i;
+    const englishPatterns = /\b(the|is|are|was|were|have|has|had|do|does|did|will|would|could|should|can|may|might|must|shall|this|that|these|those|what|which|who|whom|whose|where|when|why|how|if|then|than|because|although|however|therefore|means|called|translation|English|mistake|correction|literally|example|practice|want|like|need|try|know|think|say|said|make|made|go|went|get|got|see|saw|come|came|take|took|give|gave|find|found|tell|told|ask|asked|use|used|work|worked|seem|seemed|feel|felt|become|became|leave|left|put|keep|kept|let|begin|began|help|helped|show|showed|hear|heard|play|played|run|ran|move|moved|live|lived|believe|believed|hold|held|bring|brought|happen|happened|write|wrote|provide|provided|sit|sat|stand|stood|lose|lost|pay|paid|meet|met|include|included|continue|continued|set|learn|learned|change|changed|lead|led|understand|understood|watch|watched|follow|followed|stop|stopped|create|created|speak|spoke|read|allow|allowed|add|added|spend|spent|grow|grew|open|opened|walk|walked|win|won|offer|offered|remember|remembered|love|loved|consider|considered|appear|appeared|buy|bought|wait|waited|serve|served|die|died|send|sent|expect|expected|build|built|stay|stayed|fall|fell|cut|reach|reached|kill|killed|remain|remained|suggest|suggested|raise|raised|pass|passed|sell|sold|require|required|report|reported|decide|decided|pull|pulled|here|there|now|just|also|only|very|good|great|cool|nice|bad|new|old|big|small|long|short|high|low|first|last|next|same|other|more|most|some|any|all|both|each|every|many|much|few|little|own|such|even|still|already|always|never|often|again|away|back|down|off|over|under|up|out|about|after|before|between|through|during|into|onto|upon|within|without|above|below|around|along|across|against|among|behind|beside|beyond|inside|outside|near|far|left|right|front|behind)\b/i;
     return englishPatterns.test(text);
   }
 

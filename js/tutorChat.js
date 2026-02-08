@@ -92,7 +92,27 @@ async function startTutorSession() {
 
     // Show welcome message
     messagesContainer.innerHTML = '';
-    addTutorMessage('ai', data.response);
+
+    // Add intro message from tutor (no autoplay, will play combined)
+    addTutorMessage('ai', 'Welcome! Hover over Portuguese words to see translations. Click "Listen" to hear messages read aloud.', false);
+
+    // Add tutor greeting (no autoplay, will play combined)
+    addTutorMessage('ai', data.response, false);
+
+    // Play both messages with a pause between them
+    if (window.portugueseSpeech) {
+      const introText = 'Welcome! Hover over Portuguese words to see translations. Click Listen to hear messages read aloud.';
+      setTimeout(() => {
+        window.portugueseSpeech.speakMixed(introText, {
+          onEnd: () => {
+            // Pause before greeting
+            setTimeout(() => {
+              window.portugueseSpeech.speakMixed(data.response);
+            }, 800);
+          }
+        });
+      }, 300);
+    }
 
     // Enable input
     input.disabled = false;
@@ -283,7 +303,8 @@ function addTutorMessage(sender, content, autoPlay = true) {
     if (content !== '...' && typeof extractUnknownWords === 'function') {
       const unknownWords = extractUnknownWords(content);
       if (unknownWords.length > 0) {
-        fetchUnknownTranslations(unknownWords).then(() => {
+        // Pass the message content as context for better translations
+        fetchUnknownTranslations(unknownWords, content).then(() => {
           // Re-render message content with newly cached translations
           const contentDiv = messageDiv.querySelector('.message-content');
           if (contentDiv) {

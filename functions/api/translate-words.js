@@ -31,7 +31,7 @@ export async function onRequestPost({ request, env }) {
   const headers = corsHeaders(request);
 
   try {
-    const { words } = await request.json();
+    const { words, context } = await request.json();
 
     if (!words || !Array.isArray(words) || words.length === 0) {
       return new Response(JSON.stringify({ error: 'No words provided' }), {
@@ -53,20 +53,24 @@ export async function onRequestPost({ request, env }) {
 
     // Create prompt for Claude
     const wordList = batch.join(', ');
-    const systemPrompt = `You are a Portuguese-English dictionary. Translate each Portuguese word to English.
+    const systemPrompt = `You are a Portuguese-English dictionary. Translate each Portuguese word to English based on how it's used in context.
 
 Rules:
 - Return ONLY a JSON object with translations
 - Each key is the Portuguese word (lowercase)
 - Each value is a brief English translation (1-5 words)
-- For verbs, include "to" (e.g., "to eat")
+- Use the context to determine the correct meaning (e.g., "mora" as verb = "lives", not "blackberry")
+- For conjugated verbs, translate the meaning (e.g., "mora" = "lives", not "to live")
 - For multiple meanings, separate with semicolon
 - If a word is not Portuguese or you're unsure, use null
 - NO explanations, NO markdown, ONLY valid JSON`;
 
-    const userMessage = `Translate these Portuguese words to English. Return only JSON:
+    let userMessage = `Translate these Portuguese words to English. Return only JSON:\n\n${wordList}`;
 
-${wordList}`;
+    // Add context if provided
+    if (context) {
+      userMessage = `Context: "${context}"\n\nTranslate these Portuguese words as used in the context above. Return only JSON:\n\n${wordList}`;
+    }
 
     const resp = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',

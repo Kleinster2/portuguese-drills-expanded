@@ -204,17 +204,22 @@ function extractUnknownWords(text) {
 }
 
 // Fetch translations for unknown words from Claude API
-async function fetchUnknownTranslations(words) {
+async function fetchUnknownTranslations(words, context = null) {
   if (words.length === 0) return;
 
   const batch = words.slice(0, 30);
-  console.log('[HoverTranslations] Fetching translations for:', batch);
+  console.log('[HoverTranslations] Fetching translations for:', batch, context ? 'with context' : '');
 
   try {
+    const body = { words: batch };
+    if (context) {
+      body.context = context;
+    }
+
     const response = await fetch('/api/translate-words', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ words: batch })
+      body: JSON.stringify(body)
     });
 
     if (!response.ok) {
