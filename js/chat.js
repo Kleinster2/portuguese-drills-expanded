@@ -29,7 +29,10 @@ async function startNewSession() {
 
   // Clear the UI immediately
   const messagesContainer = document.getElementById('chat-messages');
-  messagesContainer.innerHTML = '<div class="flex items-start space-x-3"><div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"><span class="text-green-600 text-sm font-bold">AI</span></div><div class="bg-slate-100 rounded-2xl p-3 max-w-2xl"><div id="loading-message" class="text-slate-600">Starting fresh session...</div></div></div>';
+  const freshAvatarHtml = window.avatarController
+    ? window.avatarController.getInlineHtml('w-14 h-14')
+    : '<div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"><span class="text-green-600 text-sm font-bold">AI</span></div>';
+  messagesContainer.innerHTML = '<div class="flex items-start space-x-3">' + freshAvatarHtml + '<div class="bg-slate-100 rounded-2xl p-3 max-w-2xl"><div id="loading-message" class="text-slate-600">Starting fresh session...</div></div></div>';
 
   // Start completely new session
   setTimeout(() => {
@@ -292,11 +295,12 @@ async function openDrillChat(drillId) {
   sendButton.disabled = true;
 
   // Show loading message with spinner
+  const loadingAvatarHtml = window.avatarController
+    ? window.avatarController.getInlineHtml('w-14 h-14')
+    : '<div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"><span class="text-green-600 text-sm font-bold">AI</span></div>';
   messagesContainer.innerHTML = `
     <div class="flex items-start space-x-3">
-      <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-        <span class="text-green-600 text-sm font-bold">AI</span>
-      </div>
+      ${loadingAvatarHtml}
       <div class="bg-slate-100 rounded-2xl p-3 max-w-2xl">
         <div class="flex items-center gap-3">
           <div class="animate-spin rounded-full h-5 w-5 border-b-2 border-green-600"></div>
@@ -306,6 +310,7 @@ async function openDrillChat(drillId) {
       </div>
     </div>
   `;
+  if (window.avatarController) window.avatarController.setAllState('thinking');
 
   console.log('🔥 Set loading message and disabled input');
 
@@ -353,6 +358,7 @@ async function openDrillChat(drillId) {
     console.log('🔥 All sessions now:', JSON.stringify(drillSessions, null, 2));
 
     // Clear loading and show AI response
+    if (window.avatarController) window.avatarController.setAllState('idle');
     messagesContainer.innerHTML = '';
     addMessageToChat('ai', data.response);
 
@@ -382,7 +388,7 @@ async function openDrillChat(drillId) {
     const errorDiv = document.createElement('div');
     errorDiv.className = 'flex items-start space-x-3';
     errorDiv.innerHTML = `
-      <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+      <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
         <span class="text-red-600 text-sm font-bold">⚠️</span>
       </div>
       <div class="bg-red-50 border border-red-200 rounded-2xl p-4 max-w-2xl">
@@ -505,6 +511,7 @@ async function sendChatMessage(retryMessage = null, silent = false) {
 
   // Show typing indicator
   const typingIndicator = addMessageToChat('ai', '...');
+  if (window.avatarController) window.avatarController.setAllState('thinking');
 
   try {
 
@@ -541,6 +548,7 @@ async function sendChatMessage(retryMessage = null, silent = false) {
     const filterResult = filterCompletionMessages(data.response);
 
     // Remove typing indicator and add real response
+    if (window.avatarController) window.avatarController.setAllState('idle');
     typingIndicator.remove();
     addMessageToChat('ai', filterResult.text);
 
@@ -562,6 +570,7 @@ async function sendChatMessage(retryMessage = null, silent = false) {
     console.error('Error sending message:', error);
 
     // Remove typing indicator
+    if (window.avatarController) window.avatarController.setAllState('idle');
     typingIndicator.remove();
 
     // Determine error type
@@ -629,7 +638,7 @@ function addMessageToChat(sender, content) {
       <div class="bg-green-600 text-white rounded-2xl p-3 max-w-2xl">
         <div class="message-content">${escapeHtml(content)}</div>
       </div>
-      <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+      <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
         <span class="text-blue-600 text-sm font-bold">You</span>
       </div>
     `;
@@ -639,12 +648,19 @@ function addMessageToChat(sender, content) {
       ? removeChipsMarker(content)
       : content.replace(/\[CHIPS(-ROW[12])?:\s*[^\]]+\]/gi, '').trim();
 
+    const avatarHtml = window.avatarController
+      ? window.avatarController.getInlineHtml('w-14 h-14')
+      : '<div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"><span class="text-green-600 text-sm font-bold">AI</span></div>';
+
+    const listenBtnHtml = (content !== '...' && window.portugueseSpeech)
+      ? `<button onclick="speakDrillMessage(this)" data-msg-text="${escapeHtml(displayContent).replace(/"/g, '&quot;')}" class="mt-2 text-green-600 hover:text-green-800 text-sm flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg><span>Listen</span></button>`
+      : '';
+
     messageDiv.innerHTML = `
-      <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-        <span class="text-green-600 text-sm font-bold">AI</span>
-      </div>
+      ${avatarHtml}
       <div class="bg-slate-100 rounded-2xl p-3 max-w-2xl">
         <div class="message-content">${formatAIMessage(displayContent)}</div>
+        ${listenBtnHtml}
       </div>
     `;
   }
@@ -1113,4 +1129,12 @@ function updateChatTitle() {
   // Multiple drills - show as a list
   const drillNames = activeDrills.map(id => getDrillName(id));
   drillTitleContainer.textContent = drillNames.join(' • ');
+}
+
+// Speak a drill AI message when Listen button is clicked
+function speakDrillMessage(buttonEl) {
+  const text = buttonEl.getAttribute('data-msg-text');
+  if (text && window.portugueseSpeech) {
+    window.portugueseSpeech.speakMixed(text);
+  }
 }

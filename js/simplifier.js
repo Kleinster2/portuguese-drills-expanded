@@ -172,6 +172,13 @@ async function simplifyText() {
       })
     }).catch(err => console.log('Log error:', err));
 
+    // Show floating avatar
+    const floatingAvatar = document.getElementById('simplifier-avatar');
+    if (floatingAvatar && window.avatarController) {
+      floatingAvatar.innerHTML = window.avatarController.getInlineHtml('w-20 h-20');
+      floatingAvatar.classList.remove('hidden');
+    }
+
     // Show copy, speak, share, clear buttons, and hints
     copyBtn.classList.remove('hidden');
     const speakBtn = document.getElementById('speak-btn');
@@ -313,6 +320,10 @@ function clearSimplifier() {
     usageHint.classList.remove('opacity-100');
     usageHint.classList.add('opacity-0');
   }
+
+  // Hide floating avatar
+  const floatingAvatar = document.getElementById('simplifier-avatar');
+  if (floatingAvatar) floatingAvatar.classList.add('hidden');
 
   // Stop any ongoing speech
   if (typeof portugueseSpeech !== 'undefined') {

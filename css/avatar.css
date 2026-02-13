@@ -1,0 +1,124 @@
+/* Avatar Animations and Styles */
+
+/* Idle bob animation */
+@keyframes avatar-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1.5px); }
+}
+
+/* Eye blink animation */
+@keyframes avatar-blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+
+/* Legacy mouth open/close cycle (fallback if viseme system not loaded) */
+@keyframes avatar-mouth-1 {
+  0%, 100% { transform: scaleY(0.6) scaleX(0.8); }
+  50% { transform: scaleY(1.2) scaleX(1); }
+}
+
+@keyframes avatar-mouth-2 {
+  0%, 100% { transform: scaleY(1.1) scaleX(1); }
+  50% { transform: scaleY(0.5) scaleX(0.9); }
+}
+
+/* Thinking pulse */
+@keyframes avatar-think {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Avatar container */
+.avatar-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.avatar-container svg {
+  animation: avatar-bob 3s ease-in-out infinite;
+}
+
+/* Eye blink */
+.avatar-container .avatar-eyes {
+  animation: avatar-blink 4s ease-in-out infinite;
+}
+
+/* ── Viseme mouth shapes ── */
+
+/* All viseme groups hidden by default except rest */
+.avatar-container .avatar-viseme {
+  display: none;
+}
+.avatar-container .avatar-viseme-rest {
+  display: block;
+}
+
+/* Legacy mouth elements hidden by default (kept for fallback) */
+.avatar-container .avatar-mouth-open-1,
+.avatar-container .avatar-mouth-open-2 {
+  display: none;
+}
+
+/* ── Speaking state ── */
+
+/* When speaking, hide rest viseme (scheduler will show the active viseme via JS) */
+.avatar-container.speaking .avatar-viseme-rest {
+  display: none;
+}
+
+/* Legacy fallback: if viseme scheduler isn't running, show ee shape as default open mouth */
+.avatar-container.speaking .avatar-viseme-ee {
+  display: block;
+}
+
+/* Thinking state */
+.avatar-container.thinking svg {
+  animation: avatar-think 1.5s ease-in-out infinite;
+}
+
+/* Happy state - slightly bigger smile */
+.avatar-container.happy .avatar-viseme-rest {
+  transform: scaleX(1.15) scaleY(1.1);
+}
+
+/* Floating avatar for simplifier */
+.avatar-floating {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 40;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.avatar-floating.hidden {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+/* ── Reduced motion: disable all animations, static indicator ── */
+@media (prefers-reduced-motion: reduce) {
+  .avatar-container svg,
+  .avatar-container .avatar-eyes {
+    animation: none !important;
+  }
+
+  /* Static open mouth (ah shape) when speaking */
+  .avatar-container.speaking .avatar-viseme-rest {
+    display: none;
+  }
+  .avatar-container.speaking .avatar-viseme-ee {
+    display: none;
+  }
+  .avatar-container.speaking .avatar-viseme-ah {
+    display: block;
+  }
+
+  /* Hide legacy elements */
+  .avatar-container .avatar-mouth-open-1,
+  .avatar-container .avatar-mouth-open-2 {
+    display: none !important;
+  }
+}

@@ -53,9 +53,7 @@ async function startTutorSession() {
   // Show loading
   messagesContainer.innerHTML = `
     <div class="flex items-start space-x-3">
-      <div class="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0">
-        <span class="text-teal-600 text-sm font-bold">AI</span>
-      </div>
+      ${window.avatarController ? window.avatarController.getInlineHtml('w-14 h-14') : '<div class="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0"><span class="text-teal-600 text-sm font-bold">AI</span></div>'}
       <div class="bg-slate-100 rounded-2xl p-3 max-w-2xl">
         <div class="flex items-center gap-3">
           <div class="animate-spin rounded-full h-5 w-5 border-b-2 border-teal-600"></div>
@@ -139,7 +137,7 @@ async function startTutorSession() {
     const errorDiv = document.createElement('div');
     errorDiv.className = 'flex items-start space-x-3';
     errorDiv.innerHTML = `
-      <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+      <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
         <span class="text-red-600 text-sm font-bold">!</span>
       </div>
       <div class="bg-red-50 border border-red-200 rounded-2xl p-4 max-w-2xl">
@@ -181,6 +179,7 @@ async function sendTutorMessage() {
 
   // Show typing indicator
   const typingDiv = addTutorMessage('ai', '...');
+  if (window.avatarController) window.avatarController.setAllState('thinking');
 
   try {
     const controller = new AbortController();
@@ -208,6 +207,7 @@ async function sendTutorMessage() {
     const data = await response.json();
 
     // Remove typing indicator and show response
+    if (window.avatarController) window.avatarController.setAllState('idle');
     typingDiv.remove();
     addTutorMessage('ai', data.response);
 
@@ -216,6 +216,7 @@ async function sendTutorMessage() {
 
   } catch (error) {
     console.error('Error sending message:', error);
+    if (window.avatarController) window.avatarController.setAllState('idle');
     typingDiv.remove();
 
     let errorMessage = 'Connection error. ';
@@ -277,7 +278,7 @@ function addTutorMessage(sender, content, autoPlay = true) {
       <div class="bg-teal-600 text-white rounded-2xl p-3 max-w-2xl">
         <div class="message-content">${escapeHtmlTutor(content)}</div>
       </div>
-      <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+      <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
         <span class="text-blue-600 text-sm font-bold">You</span>
       </div>
     `;
@@ -286,9 +287,7 @@ function addTutorMessage(sender, content, autoPlay = true) {
     tutorMessageTexts[messageId] = content;
 
     messageDiv.innerHTML = `
-      <div class="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0">
-        <span class="text-teal-600 text-sm font-bold">AI</span>
-      </div>
+      ${window.avatarController ? window.avatarController.getInlineHtml('w-14 h-14') : '<div class="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0"><span class="text-teal-600 text-sm font-bold">AI</span></div>'}
       <div class="bg-slate-100 rounded-2xl p-3 max-w-2xl">
         <div class="message-content">${formatTutorResponse(content)}</div>
         ${content !== '...' ? `

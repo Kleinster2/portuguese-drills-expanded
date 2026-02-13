@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css?v=1764800000000">
+    <link rel="stylesheet" href="/css/avatar.css">
     <!-- Plausible Analytics -->
     <script async src="https://plausible.io/js/pa-A2kEULXGZtzUYXPsVOQwU.js"></script>
     <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
@@ -449,6 +450,9 @@
     <!-- Core Scripts -->
     <script src="/js/utils.js?v=1761210000000"></script>
     <script src="/scripts/speech.js"></script>
+    <script src="/js/visemes.js"></script>
+    <script src="/js/avatar.js"></script>
+    <script>if (window.avatarController && window.portugueseSpeech) avatarController.connectToSpeech(portugueseSpeech);</script>
     <script src="/js/chat.js?v=1761210000000"></script>
     <script src="/js/filters.js?v=1761210000000"></script>
     <script src="/js/conjugations.js?v=1761210000000"></script>

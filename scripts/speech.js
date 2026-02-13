@@ -292,7 +292,6 @@ class PortugueseSpeech {
     const utterance = new SpeechSynthesisUtterance(text);
 
     // Set properties
-    const lang = options.lang || this.defaultLang;
     utterance.lang = lang;
     utterance.rate = options.rate || (lang.startsWith('pt') ? this.defaultPTRate : this.defaultRate);
     utterance.pitch = options.pitch || this.defaultPitch;
@@ -357,20 +356,26 @@ class PortugueseSpeech {
     for (const line of lines) {
       if (!line.trim()) continue;
 
-      // Check if line has parenthetical vocabulary "(word = translation)"
-      if (line.includes(' = ') && line.includes('(')) {
+      // Strip simple parenthetical translations (no = inside) before further parsing
+      // e.g., "Ótimo! (great) O que você faz?" → "Ótimo! O que você faz?"
+      // But keep "(comer = to eat)" for the vocab pair handler below
+      let processedLine = line;
+      const hasVocabParens = /\([^)]*=[^)]*\)/.test(line);
+      if (!hasVocabParens && line.includes('(') && line.includes(')')) {
+        processedLine = line.replace(/\s*\([^)]*\)/g, '').trim();
+      }
+
+      if (processedLine.includes(' = ') && processedLine.includes('(')) {
         // Extract text before, inside, and after parentheses
         const match = line.match(/^(.*?)\(([^)]+)\)(.*)$/);
         if (match) {
           const [, before, inside, after] = match;
 
-          // Add text before parentheses (likely Portuguese)
+          // Add text before parentheses — default to Portuguese since
+          // the (word = translation) pattern means it's PT being translated
           if (before.trim()) {
-            if (this.isPortuguese(before)) {
-              segments.push({ text: before.trim(), lang: 'pt-BR' });
-            } else {
-              segments.push({ text: before.trim(), lang: 'en-US' });
-            }
+            const lang = this.isEnglishSentence(before) && !this.isPortuguese(before) ? 'en-US' : 'pt-BR';
+            segments.push({ text: before.trim(), lang });
           }
 
           // Handle vocab pairs inside parentheses
@@ -383,13 +388,10 @@ class PortugueseSpeech {
             }
           }
 
-          // Add text after parentheses (likely Portuguese)
+          // Add text after parentheses — default to Portuguese (same reasoning)
           if (after.trim()) {
-            if (this.isPortuguese(after)) {
-              segments.push({ text: after.trim(), lang: 'pt-BR' });
-            } else {
-              segments.push({ text: after.trim(), lang: 'en-US' });
-            }
+            const lang = this.isEnglishSentence(after) && !this.isPortuguese(after) ? 'en-US' : 'pt-BR';
+            segments.push({ text: after.trim(), lang });
           }
         } else {
           // Fallback: old behavior for standalone vocab lines
@@ -403,9 +405,9 @@ class PortugueseSpeech {
             }
           }
         }
-      } else if (line.includes(' = ')) {
+      } else if (processedLine.includes(' = ')) {
         // Standalone vocab line without parentheses
-        const pairs = line.split(/,\s*/);
+        const pairs = processedLine.split(/,\s*/);
         for (const pair of pairs) {
           if (pair.includes(' = ')) {
             const [ptWord, enWord] = pair.split(' = ').map(s => s.trim());
@@ -413,32 +415,33 @@ class PortugueseSpeech {
             if (enWord) segments.push({ text: enWord, lang: 'en-US' });
           }
         }
-      } else if (line.includes(' → ')) {
+      } else if (processedLine.includes(' → ')) {
         // Arrow pattern: PT → EN
-        const parts = line.split(' → ');
+        const parts = processedLine.split(' → ');
         if (parts.length >= 2) {
           segments.push({ text: parts[0].trim(), lang: 'pt-BR' });
           segments.push({ text: parts.slice(1).join(' → ').trim(), lang: 'en-US' });
         }
       } else {
         // Split line into sentences, detect language per sentence
-        const sentences = line.match(/[^.!?]+[.!?]*/g) || [line];
+        const sentences = processedLine.match(/[^.!?]+[.!?]*/g) || [processedLine];
         for (const sentence of sentences) {
           const trimmed = sentence.trim();
           if (!trimmed) continue;
 
           const hasEnglish = this.isEnglishSentence(trimmed);
           const hasPT = this.isPortuguese(trimmed);
-          console.log(`[Speech] Line: "${trimmed.substring(0, 50)}..." hasEnglish=${hasEnglish}, hasPT=${hasPT}`);
+          const hasQuotes = /[""\u201C\u201D]/.test(trimmed);
+          console.log(`[Speech] Line: "${trimmed.substring(0, 50)}..." hasEnglish=${hasEnglish}, hasPT=${hasPT}, hasQuotes=${hasQuotes}`);
 
-          if (hasEnglish && !hasPT) {
-            // Pure English sentence - parse for embedded Portuguese quotes
+          if (hasQuotes && (hasEnglish || hasPT)) {
+            // Quotes indicate mixed language — extract quoted PT from English context
             this.parseEnglishWithQuotes(trimmed, segments);
           } else if (hasPT && !hasEnglish) {
             // Pure Portuguese
             segments.push({ text: trimmed, lang: 'pt-BR' });
-          } else if (hasPT && hasEnglish) {
-            // Mixed — use English parser to extract quoted PT
+          } else if (hasEnglish) {
+            // English sentence
             this.parseEnglishWithQuotes(trimmed, segments);
           } else {
             // Default to English
@@ -535,7 +538,7 @@ class PortugueseSpeech {
   // Detect English sentence structure (even if it contains PT words in quotes)
   isEnglishSentence(text) {
     // English sentence patterns that indicate this is an English sentence with embedded Portuguese
-    const englishStructures = /\b(means|it's|I'm|you're|we're|they're|he's|she's|this is|you can|would you|do you|is the|are the|how to|what is|that's|here's|let's|I'll|you'll|we'll|they'll|isn't|aren't|doesn't|don't|won't|can't|couldn't|shouldn't|wouldn't|I notice|would you like|could be|response|simple|practice|responding|repeatedly|so,|now,|and |but |or |well,|ok,|yes,|no,|try |just )\b/i;
+    const englishStructures = /\b(means|meaning|it's|I'm|you're|we're|they're|he's|she's|this is|you can|you could|can also|could also|also say|also use|would you|do you|is the|are the|how to|what is|that's|here's|let's|I'll|you'll|we'll|they'll|isn't|aren't|doesn't|don't|won't|can't|couldn't|shouldn't|wouldn't|I notice|would you like|could be|response|simple|practice|responding|repeatedly|so,|now,|and |but |or |well,|ok,|yes,|no,|try |just |literally|basically|actually|remember|note|notice|correct|incorrect|instead|works|alternative)\b/i;
     return englishStructures.test(text);
   }
 
