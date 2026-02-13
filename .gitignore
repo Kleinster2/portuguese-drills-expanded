@@ -28,3 +28,11 @@ __pycache__/
 *.pyo
 *.pyd
 .Python
+
+# Test/temp files
+test*.mp3
+test*.bin
+nul
+
+# Student data
+Students/
