@@ -290,7 +290,7 @@ class AvatarController {
     const originalSpeak = speechInstance.speak.bind(speechInstance);
     speechInstance._originalSpeak = originalSpeak;
     speechInstance.speak = function(text, options = {}) {
-      if (avatar._scheduler) avatar._scheduler.clearLog();
+      if (avatar._scheduler && !options.preserveLog) avatar._scheduler.clearLog();
 
       const origOnStart = options.onStart;
       const origOnEnd = options.onEnd;

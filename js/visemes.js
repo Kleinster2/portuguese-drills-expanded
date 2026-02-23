@@ -450,8 +450,8 @@ class VisemeScheduler {
     wordChip.onclick = function() {
       const speech = window.portugueseSpeech;
       if (!speech) return;
-      // Use wrapped speak (not _originalSpeak) to trigger avatar visemes
-      speech.speak(this.dataset.word, { lang: 'pt-BR', rate: 0.7 });
+      // Use wrapped speak for avatar visemes, but preserve existing tags
+      speech.speak(this.dataset.word, { lang: 'pt-BR', rate: 0.7, preserveLog: true });
     };
     this._currentWordRow.appendChild(wordChip);
   }
