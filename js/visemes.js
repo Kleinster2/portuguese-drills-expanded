@@ -574,7 +574,7 @@ const VISEME_LABELS = {
 // Sample sounds for each viseme (short PT syllables for demo)
 const VISEME_SAMPLES = {
   ah:  'á',   uh:  'â',   eh:  'é',   eh2: 'ê',   oh:  'ó',   oh2: 'ô',
-  ee:  'ê',   oo:  'u',   w:   'ua',
+  ee:  'i',   oo:  'u',   w:   'ua',
   fv:  'fa',  mbp: 'ba',  sz:  'sa',  sh:  'cha',
   td:  'da',  l:   'la',  pal: 'lha', kg:  'ca',
   r:   'ra',
