@@ -358,6 +358,7 @@ class VisemeScheduler {
     this._lastLabelViseme = '';
     this._currentWordRow = null;
     this._currentWord = '';
+    this._suppressTags = false;
   }
 
   /**
@@ -561,6 +562,7 @@ class VisemeScheduler {
    * Separated from _setViseme so _flushAndStop can log without moving the avatar mouth.
    */
   _logVisemeTag(visemeId, nasal, grapheme, word) {
+    if (this._suppressTags) return;
     const labelEl = document.getElementById('viseme-label');
     if (!labelEl) return;
 

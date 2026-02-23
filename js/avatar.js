@@ -291,6 +291,7 @@ class AvatarController {
     speechInstance._originalSpeak = originalSpeak;
     speechInstance.speak = function(text, options = {}) {
       if (avatar._scheduler && !options.preserveLog) avatar._scheduler.clearLog();
+      if (avatar._scheduler && options.preserveLog) avatar._scheduler._suppressTags = true;
 
       const origOnStart = options.onStart;
       const origOnEnd = options.onEnd;
@@ -305,11 +306,13 @@ class AvatarController {
       options.onEnd = function() {
         stopVisemes();
         avatar.setAllState('idle');
+        if (avatar._scheduler) avatar._scheduler._suppressTags = false;
         if (origOnEnd) origOnEnd();
       };
       options.onError = function(e) {
         stopVisemes();
         avatar.setAllState('idle');
+        if (avatar._scheduler) avatar._scheduler._suppressTags = false;
         if (origOnError) origOnError(e);
       };
 
