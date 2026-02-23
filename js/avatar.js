@@ -73,6 +73,13 @@ class AvatarController {
           <line x1="27.5" y1="44" x2="36.5" y2="44" stroke="white" stroke-width="0.7" opacity="0.7"/>
         </g>
 
+        <!-- eh2: close-mid spread (ê [e]) — between eh and ee -->
+        <g class="avatar-viseme avatar-viseme-eh2">
+          <ellipse cx="32" cy="45" rx="5.5" ry="2.5" fill="#B35A3A"/>
+          <ellipse cx="32" cy="45" rx="4.5" ry="1.6" fill="#8B2F1A"/>
+          <line x1="27.5" y1="44.3" x2="36.5" y2="44.3" stroke="white" stroke-width="0.7" opacity="0.7"/>
+        </g>
+
         <!-- oh: open rounded (ó [ɔ]) -->
         <g class="avatar-viseme avatar-viseme-oh">
           <ellipse cx="32" cy="45.5" rx="3.5" ry="3.5" fill="#B35A3A"/>
@@ -85,7 +92,7 @@ class AvatarController {
           <ellipse cx="32" cy="45.5" rx="2" ry="2" fill="#8B2F1A"/>
         </g>
 
-        <!-- ee: wide horizontal (e, ê, i, í) -->
+        <!-- ee: wide horizontal (e, i, í) -->
         <g class="avatar-viseme avatar-viseme-ee">
           <ellipse cx="32" cy="45" rx="5.5" ry="2" fill="#B35A3A"/>
           <ellipse cx="32" cy="45" rx="4.5" ry="1.2" fill="#8B2F1A"/>
@@ -194,7 +201,7 @@ class AvatarController {
    * Set the viseme mouth shape on ALL avatars.
    * Shows the matching viseme group, hides all others.
    * Optionally toggles nasal overlay indicator.
-   * @param {string} visemeId - one of: rest, ah, uh, eh, oh, oh2, ee, oo, w, fv, mbp, sz, sh, td, l, pal, kg, r
+   * @param {string} visemeId - one of: rest, ah, uh, eh, eh2, oh, oh2, ee, oo, w, fv, mbp, sz, sh, td, l, pal, kg, r
    * @param {boolean} [nasal=false] - whether to show nasal overlay
    */
   setAllViseme(visemeId, nasal = false) {
