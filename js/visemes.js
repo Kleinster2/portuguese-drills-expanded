@@ -72,6 +72,15 @@ function textToVisemesPortuguese(text) {
   const lower = text.toLowerCase();
   let i = 0;
 
+  // Extract the word from original text at position pos
+  function extractWord(pos) {
+    let start = pos;
+    while (start > 0 && /[\p{L}]/u.test(text[start - 1])) start--;
+    let end = pos;
+    while (end + 1 < text.length && /[\p{L}]/u.test(text[end + 1])) end++;
+    return text.substring(start, end + 1);
+  }
+
   while (i < lower.length) {
     const ch = lower[i];
     const next = i + 1 < lower.length ? lower[i + 1] : '';
@@ -253,6 +262,13 @@ function textToVisemesPortuguese(text) {
     i++;
   }
 
+  // Post-process: add source word to each non-REST entry
+  for (const entry of result) {
+    if (entry.viseme !== VISEME.REST) {
+      entry.word = extractWord(entry.charIndex);
+    }
+  }
+
   return result;
 }
 
@@ -312,7 +328,7 @@ function estimateVisemeTiming(visemeSequence, rate = 1.0, lang = 'pt-BR') {
     if (prev && prev.viseme === viseme && prev.nasal === nasal) {
       prev.duration += duration;
     } else {
-      timeline.push({ viseme, time: currentTime, duration, nasal, grapheme: grapheme || '' });
+      timeline.push({ viseme, time: currentTime, duration, nasal, grapheme: grapheme || '', word: visemeSequence[i].word || '' });
     }
 
     currentTime += duration;
@@ -430,7 +446,7 @@ class VisemeScheduler {
     if (this._timeline && this._nextIdx !== undefined) {
       while (this._nextIdx < this._timeline.length) {
         const entry = this._timeline[this._nextIdx];
-        this._logVisemeTag(entry.viseme, entry.nasal, entry.grapheme);
+        this._logVisemeTag(entry.viseme, entry.nasal, entry.grapheme, entry.word);
         this._nextIdx++;
       }
     }
@@ -492,7 +508,7 @@ class VisemeScheduler {
       const entry = this._timeline[this._nextIdx];
       const entryTime = entry.time * scale;
       if (elapsed >= entryTime) {
-        this._setViseme(entry.viseme, entry.nasal, entry.grapheme);
+        this._setViseme(entry.viseme, entry.nasal, entry.grapheme, entry.word);
         this._nextIdx++;
       } else {
         break;
@@ -506,7 +522,7 @@ class VisemeScheduler {
    * @param {boolean} nasal - whether to show nasal overlay
    * @param {string} grapheme - source grapheme for click playback
    */
-  _setViseme(visemeId, nasal, grapheme) {
+  _setViseme(visemeId, nasal, grapheme, word) {
     if (visemeId === this._currentViseme && nasal === this._currentNasal) return;
     this._currentViseme = visemeId;
     this._currentNasal = nasal;
@@ -515,14 +531,14 @@ class VisemeScheduler {
       window.avatarController.setAllViseme(visemeId, nasal);
     }
 
-    this._logVisemeTag(visemeId, nasal, grapheme);
+    this._logVisemeTag(visemeId, nasal, grapheme, word);
   }
 
   /**
    * Append a viseme tag to the running log (skip rest and consecutive duplicates).
    * Separated from _setViseme so _flushAndStop can log without moving the avatar mouth.
    */
-  _logVisemeTag(visemeId, nasal, grapheme) {
+  _logVisemeTag(visemeId, nasal, grapheme, word) {
     const labelEl = document.getElementById('viseme-label');
     if (!labelEl) return;
 
@@ -547,6 +563,21 @@ class VisemeScheduler {
       row.className = 'viseme-word-row';
       labelEl.appendChild(row);
       this._currentWordRow = row;
+
+      // Add word chip at the start of the row
+      if (word) {
+        const wordChip = document.createElement('span');
+        wordChip.className = 'viseme-word-chip';
+        wordChip.textContent = word;
+        wordChip.dataset.word = word;
+        wordChip.onclick = function() {
+          const speech = window.portugueseSpeech;
+          if (!speech) return;
+          const origSpeak = speech._originalSpeak || speech.speak.bind(speech);
+          origSpeak(this.dataset.word, { lang: 'pt-BR', rate: 0.7 });
+        };
+        row.appendChild(wordChip);
+      }
     }
 
     const tag = document.createElement('span');
