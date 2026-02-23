@@ -302,8 +302,11 @@ function estimateVisemeTiming(visemeSequence, rate = 1.0, lang = 'pt-BR') {
   }
 
   // Base characters per second (adjusted by speech rate)
+  // TTS engines don't scale linearly at slow rates — they stretch vowels
+  // and add pauses. Use a power curve so slow rates get proportionally longer.
   const baseCharsPerSec = lang.startsWith('pt') ? 12 : 13;
-  const charsPerSec = baseCharsPerSec * rate;
+  const effectiveRate = rate < 1.0 ? Math.pow(rate, 0.8) : rate;
+  const charsPerSec = baseCharsPerSec * effectiveRate;
   const baseVisemeDuration = 1.0 / charsPerSec; // seconds per viseme
 
   // Coalesce consecutive identical visemes and build timeline
