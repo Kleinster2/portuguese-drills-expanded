@@ -1,10 +1,10 @@
 // Viseme Mapping System - Text-to-viseme conversion and scheduling for avatar lip-sync
 // Supports Brazilian Portuguese (primary) and English (simplified)
 
-// Viseme IDs: rest, ah, oh, ee, oo, fv, mbp, sz, sh, td, eh, l, pal, oh2, w, kg, r
+// Viseme IDs: rest, ah, uh, oh, ee, oo, fv, mbp, sz, sh, td, eh, l, pal, oh2, w, kg, r
 // Nasal flag: overlay indicator for nasal vowels (ã, õ)
 const VISEME = {
-  REST: 'rest', AH: 'ah', OH: 'oh', EE: 'ee', OO: 'oo', FV: 'fv', MBP: 'mbp',
+  REST: 'rest', AH: 'ah', UH: 'uh', OH: 'oh', EE: 'ee', OO: 'oo', FV: 'fv', MBP: 'mbp',
   SZ: 'sz', SH: 'sh', TD: 'td',
   EH: 'eh', L: 'l', PAL: 'pal', OH2: 'oh2', W: 'w', KG: 'kg', R: 'r'
 };
@@ -23,7 +23,7 @@ const PT_DIGRAPHS = {
 
 // Single character mappings for Portuguese
 const PT_VOWELS = {
-  'a': VISEME.AH, 'á': VISEME.AH, 'à': VISEME.AH, 'â': VISEME.AH, 'ã': VISEME.AH,
+  'a': VISEME.AH, 'á': VISEME.AH, 'à': VISEME.AH, 'â': VISEME.UH, 'ã': VISEME.UH,
   'e': VISEME.EE, 'é': VISEME.EH, 'ê': VISEME.EH,
   'i': VISEME.EE, 'í': VISEME.EE,
   'o': VISEME.OH, 'ó': VISEME.OH, 'ô': VISEME.OH2, 'õ': VISEME.OH2,
@@ -59,7 +59,7 @@ const PT_CONSONANTS = {
 const DEFAULT_CONSONANT = VISEME.EE;
 
 // Set of all vowel visemes (for duration adjustments)
-const VOWEL_VISEMES = new Set([VISEME.AH, VISEME.OH, VISEME.OO, VISEME.EE, VISEME.EH, VISEME.OH2]);
+const VOWEL_VISEMES = new Set([VISEME.AH, VISEME.UH, VISEME.OH, VISEME.OO, VISEME.EE, VISEME.EH, VISEME.OH2]);
 
 /**
  * Convert Portuguese text to a viseme sequence.
@@ -135,6 +135,24 @@ function textToVisemesPortuguese(text) {
         }
       }
 
+      // Pre-nasal 'e' → EH: unaccented 'e' before word-final m/n is [ẽ], not [i]
+      if (ch === 'e' && !isAccented(ch)) {
+        const wordEnd = findWordEnd(lower, i);
+        if (next && (next === 'm' || next === 'n') && (i + 1 === wordEnd)) {
+          viseme = VISEME.EH;
+          grapheme = 'e→ẽ';
+        }
+      }
+
+      // Pre-nasal 'a' → UH: unstressed 'a' before word-final m/n is [ɐ̃]
+      if (ch === 'a' && !isAccented(ch)) {
+        const wordEnd = findWordEnd(lower, i);
+        if (next && (next === 'm' || next === 'n') && (i + 1 === wordEnd)) {
+          viseme = VISEME.UH;
+          grapheme = 'a→ɐ';
+        }
+      }
+
       result.push({ viseme, charIndex: i, nasal, grapheme });
       i++;
       continue;
@@ -155,12 +173,30 @@ function textToVisemesPortuguese(text) {
       continue;
     }
 
-    // Word-final nasal m/n: nasalizes the preceding vowel, no consonant closure
+    // Word-final nasal m/n: nasalizes the preceding vowel + adds diphthong glide
     if (ch === 'm' || ch === 'n') {
       const wordEnd = findWordEnd(lower, i);
       if (i === wordEnd) {
-        if (result.length > 0 && VOWEL_VISEMES.has(result[result.length - 1].viseme)) {
-          result[result.length - 1].nasal = true;
+        // Nasalize the preceding vowel
+        const prev = result.length > 0 ? result[result.length - 1] : null;
+        if (prev && VOWEL_VISEMES.has(prev.viseme)) {
+          prev.nasal = true;
+
+          // Nasal diphthong glides:
+          //   -em/-en [ẽj̃] → glide to EE
+          //   -om/-on [õw̃] → glide to W
+          //   -um/-un [ũw̃] → glide to W
+          //   -am/-ãm [ɐ̃w̃] → glide to W
+          //   -im/-in [ĩ]  → no glide (already front closed)
+          const prevV = prev.viseme;
+          if (prevV === VISEME.EH || (prevV === VISEME.EE && prev.grapheme === 'e→ẽ')) {
+            // -em/-en: front glide [j̃]
+            result.push({ viseme: VISEME.EE, charIndex: i, nasal: true, grapheme: '→j̃' });
+          } else if (prevV === VISEME.OH || prevV === VISEME.OH2 || prevV === VISEME.OO || prevV === VISEME.AH || prevV === VISEME.UH) {
+            // -om/-on, -um/-un, -am: back/round glide [w̃]
+            result.push({ viseme: VISEME.W, charIndex: i, nasal: true, grapheme: '→w̃' });
+          }
+          // -im/-in: no glide needed (already EE)
         }
         i++;
         continue;
@@ -516,6 +552,7 @@ class VisemeScheduler {
 const VISEME_LABELS = {
   rest: '',
   ah:  'ah  (a, á)',
+  uh:  'uh  (â, ã, -am)',
   eh:  'eh  (é, ê)',
   oh:  'oh  (ó)',
   oh2: 'ô   (closed o)',
@@ -535,7 +572,7 @@ const VISEME_LABELS = {
 
 // Sample sounds for each viseme (short PT syllables for demo)
 const VISEME_SAMPLES = {
-  ah:  'á',   eh:  'é',   oh:  'ó',   oh2: 'ô',
+  ah:  'á',   uh:  'â',   eh:  'é',   oh:  'ó',   oh2: 'ô',
   ee:  'ê',   oo:  'u',   w:   'ua',
   fv:  'fa',  mbp: 'ba',  sz:  'sa',  sh:  'cha',
   td:  'da',  l:   'la',  pal: 'lha', kg:  'ca',
@@ -602,4 +639,4 @@ window.textToVisemesPortuguese = textToVisemesPortuguese;
 window.estimateVisemeTiming = estimateVisemeTiming;
 window.VisemeScheduler = VisemeScheduler;
 
-console.log('[Visemes] Viseme mapping system loaded (17 visemes + nasal overlay)');
+console.log('[Visemes] Viseme mapping system loaded (18 visemes + nasal overlay)');

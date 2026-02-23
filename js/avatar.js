@@ -52,11 +52,18 @@ class AvatarController {
           <path d="M26 44 Q32 49 38 44" stroke="#B35A3A" stroke-width="1.8" fill="none" stroke-linecap="round"/>
         </g>
 
-        <!-- ah: tall open oval (a, á, â, à) -->
+        <!-- ah: tall open oval (a, á, à) -->
         <g class="avatar-viseme avatar-viseme-ah">
           <ellipse cx="32" cy="45.5" rx="5" ry="4.5" fill="#B35A3A"/>
           <ellipse cx="32" cy="45.5" rx="4" ry="3.5" fill="#8B2F1A"/>
           <line x1="28" y1="44" x2="36" y2="44" stroke="white" stroke-width="0.8" opacity="0.7"/>
+        </g>
+
+        <!-- uh: schwa/reduced a ([ɐ]) — between ah and eh -->
+        <g class="avatar-viseme avatar-viseme-uh">
+          <ellipse cx="32" cy="45.2" rx="5.2" ry="3.7" fill="#B35A3A"/>
+          <ellipse cx="32" cy="45.2" rx="4.2" ry="2.7" fill="#8B2F1A"/>
+          <line x1="27.8" y1="44.2" x2="36.2" y2="44.2" stroke="white" stroke-width="0.7" opacity="0.7"/>
         </g>
 
         <!-- eh: open-mid spread (é [ɛ]) — between ah and ee -->
@@ -187,7 +194,7 @@ class AvatarController {
    * Set the viseme mouth shape on ALL avatars.
    * Shows the matching viseme group, hides all others.
    * Optionally toggles nasal overlay indicator.
-   * @param {string} visemeId - one of: rest, ah, eh, oh, oh2, ee, oo, w, fv, mbp, sz, sh, td, l, pal, kg, r
+   * @param {string} visemeId - one of: rest, ah, uh, eh, oh, oh2, ee, oo, w, fv, mbp, sz, sh, td, l, pal, kg, r
    * @param {boolean} [nasal=false] - whether to show nasal overlay
    */
   setAllViseme(visemeId, nasal = false) {
