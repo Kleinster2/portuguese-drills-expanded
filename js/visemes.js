@@ -551,7 +551,10 @@ class VisemeScheduler {
 
     const tag = document.createElement('span');
     tag.className = 'viseme-tag' + (nasal ? ' nasal' : '');
-    tag.textContent = VISEME_LABELS[visemeId] || visemeId;
+    // Show source grapheme before the viseme label (e.g. "d → t/d/n")
+    const label = VISEME_LABELS[visemeId] || visemeId;
+    const src = grapheme && !grapheme.startsWith('→') ? grapheme : '';
+    tag.textContent = src ? src + ' → ' + label : label;
     if (nasal) tag.textContent += ' ~nasal';
     tag.dataset.viseme = visemeId;
     tag.dataset.nasal = nasal ? '1' : '';
