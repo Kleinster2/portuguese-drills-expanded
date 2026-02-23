@@ -38,6 +38,13 @@ class AvatarController {
         <!-- Nose -->
         <ellipse cx="32" cy="39" rx="1.5" ry="1" fill="#E8C09A"/>
 
+        <!-- Nasal indicator: subtle nostril flare (shown during nasal vowels) -->
+        <g class="avatar-nasal">
+          <line x1="30.2" y1="39.2" x2="29" y2="40.2" stroke="#D4A088" stroke-width="0.7" stroke-linecap="round"/>
+          <line x1="33.8" y1="39.2" x2="35" y2="40.2" stroke="#D4A088" stroke-width="0.7" stroke-linecap="round"/>
+          <ellipse cx="32" cy="39" rx="2" ry="1.3" fill="none" stroke="#D4A088" stroke-width="0.4" opacity="0.5"/>
+        </g>
+
         <!-- Viseme mouth shapes (only rest visible by default) -->
 
         <!-- rest: closed smile -->
@@ -45,30 +52,49 @@ class AvatarController {
           <path d="M26 44 Q32 49 38 44" stroke="#B35A3A" stroke-width="1.8" fill="none" stroke-linecap="round"/>
         </g>
 
-        <!-- ah: tall open oval (a, á, ã) -->
+        <!-- ah: tall open oval (a, á, â, à) -->
         <g class="avatar-viseme avatar-viseme-ah">
           <ellipse cx="32" cy="45.5" rx="5" ry="4.5" fill="#B35A3A"/>
           <ellipse cx="32" cy="45.5" rx="4" ry="3.5" fill="#8B2F1A"/>
           <line x1="28" y1="44" x2="36" y2="44" stroke="white" stroke-width="0.8" opacity="0.7"/>
         </g>
 
-        <!-- oh: round circle (o, ó, ô, õ) -->
+        <!-- eh: open-mid spread (é [ɛ]) — between ah and ee -->
+        <g class="avatar-viseme avatar-viseme-eh">
+          <ellipse cx="32" cy="45" rx="5.5" ry="3" fill="#B35A3A"/>
+          <ellipse cx="32" cy="45" rx="4.5" ry="2" fill="#8B2F1A"/>
+          <line x1="27.5" y1="44" x2="36.5" y2="44" stroke="white" stroke-width="0.7" opacity="0.7"/>
+        </g>
+
+        <!-- oh: open rounded (ó [ɔ]) -->
         <g class="avatar-viseme avatar-viseme-oh">
           <ellipse cx="32" cy="45.5" rx="3.5" ry="3.5" fill="#B35A3A"/>
           <ellipse cx="32" cy="45.5" rx="2.5" ry="2.5" fill="#8B2F1A"/>
         </g>
 
-        <!-- ee: wide horizontal (e, é, i, í + most consonants) -->
+        <!-- oh2: close-mid rounded (ô [o]) — tighter than oh -->
+        <g class="avatar-viseme avatar-viseme-oh2">
+          <ellipse cx="32" cy="45.5" rx="3" ry="3" fill="#B35A3A"/>
+          <ellipse cx="32" cy="45.5" rx="2" ry="2" fill="#8B2F1A"/>
+        </g>
+
+        <!-- ee: wide horizontal (e, ê, i, í) -->
         <g class="avatar-viseme avatar-viseme-ee">
           <ellipse cx="32" cy="45" rx="5.5" ry="2" fill="#B35A3A"/>
           <ellipse cx="32" cy="45" rx="4.5" ry="1.2" fill="#8B2F1A"/>
           <line x1="27.5" y1="44.5" x2="36.5" y2="44.5" stroke="white" stroke-width="0.6" opacity="0.6"/>
         </g>
 
-        <!-- oo: tight small circle (u, ú, final -o) -->
+        <!-- oo: tight small circle (u, ú) -->
         <g class="avatar-viseme avatar-viseme-oo">
           <ellipse cx="32" cy="45.5" rx="2.5" ry="2.5" fill="#B35A3A"/>
           <ellipse cx="32" cy="45.5" rx="1.5" ry="1.5" fill="#8B2F1A"/>
+        </g>
+
+        <!-- w: transitional glide ([w]) — slightly wider than oo -->
+        <g class="avatar-viseme avatar-viseme-w">
+          <ellipse cx="32" cy="45.5" rx="2.8" ry="2.8" fill="#B35A3A"/>
+          <ellipse cx="32" cy="45.5" rx="1.8" ry="1.8" fill="#8B2F1A"/>
         </g>
 
         <!-- fv: lip bite (f, v) -->
@@ -80,6 +106,52 @@ class AvatarController {
         <!-- mbp: lips pressed shut (m, b, p) -->
         <g class="avatar-viseme avatar-viseme-mbp">
           <line x1="27" y1="45" x2="37" y2="45" stroke="#B35A3A" stroke-width="2.2" stroke-linecap="round"/>
+        </g>
+
+        <!-- sz: teeth close, narrow slit (s, z, ç) -->
+        <g class="avatar-viseme avatar-viseme-sz">
+          <ellipse cx="32" cy="45" rx="5" ry="1.2" fill="#B35A3A"/>
+          <line x1="27.5" y1="45" x2="36.5" y2="45" stroke="white" stroke-width="0.8" opacity="0.8"/>
+          <ellipse cx="32" cy="45" rx="4" ry="0.4" fill="#8B2F1A"/>
+        </g>
+
+        <!-- sh: lips protruded, slightly rounded (ch [ʃ], j [ʒ], ge/gi, ti, di) -->
+        <g class="avatar-viseme avatar-viseme-sh">
+          <ellipse cx="32" cy="45.5" rx="3.2" ry="2.8" fill="#B35A3A"/>
+          <ellipse cx="32" cy="45.5" rx="2.2" ry="1.8" fill="#8B2F1A"/>
+        </g>
+
+        <!-- td: slightly open, tongue hint (t, d, n) -->
+        <g class="avatar-viseme avatar-viseme-td">
+          <ellipse cx="32" cy="45" rx="4.5" ry="2.5" fill="#B35A3A"/>
+          <ellipse cx="32" cy="45" rx="3.5" ry="1.5" fill="#8B2F1A"/>
+          <ellipse cx="32" cy="43.8" rx="2" ry="0.6" fill="#E8A090" opacity="0.6"/>
+        </g>
+
+        <!-- l: lateral, tongue tip at ridge (initial l) -->
+        <g class="avatar-viseme avatar-viseme-l">
+          <ellipse cx="32" cy="45" rx="4" ry="2.5" fill="#B35A3A"/>
+          <ellipse cx="32" cy="45" rx="3" ry="1.5" fill="#8B2F1A"/>
+          <ellipse cx="32" cy="43.5" rx="1.2" ry="0.8" fill="#E8A090" opacity="0.7"/>
+        </g>
+
+        <!-- pal: palatal (lh [ʎ], nh [ɲ]) — wide with raised tongue body -->
+        <g class="avatar-viseme avatar-viseme-pal">
+          <ellipse cx="32" cy="45" rx="5" ry="3" fill="#B35A3A"/>
+          <ellipse cx="32" cy="45" rx="4" ry="2" fill="#8B2F1A"/>
+          <ellipse cx="32" cy="43.8" rx="2.5" ry="0.7" fill="#E8A090" opacity="0.5"/>
+        </g>
+
+        <!-- kg: velar stop (k, hard c, hard g) — slightly open, neutral -->
+        <g class="avatar-viseme avatar-viseme-kg">
+          <ellipse cx="32" cy="45" rx="4.5" ry="2" fill="#B35A3A"/>
+          <ellipse cx="32" cy="45" rx="3.5" ry="1" fill="#8B2F1A"/>
+        </g>
+
+        <!-- r: R sounds (tap [ɾ], guttural [h]/[x]) — slightly open -->
+        <g class="avatar-viseme avatar-viseme-r">
+          <ellipse cx="32" cy="45" rx="4" ry="2" fill="#B35A3A"/>
+          <ellipse cx="32" cy="45" rx="3" ry="1.2" fill="#8B2F1A"/>
         </g>
 
         <!-- Legacy mouth elements (hidden, kept for CSS fallback) -->
@@ -114,10 +186,13 @@ class AvatarController {
   /**
    * Set the viseme mouth shape on ALL avatars.
    * Shows the matching viseme group, hides all others.
-   * @param {string} visemeId - one of: rest, ah, oh, ee, oo, fv, mbp
+   * Optionally toggles nasal overlay indicator.
+   * @param {string} visemeId - one of: rest, ah, eh, oh, oh2, ee, oo, w, fv, mbp, sz, sh, td, l, pal, kg, r
+   * @param {boolean} [nasal=false] - whether to show nasal overlay
    */
-  setAllViseme(visemeId) {
+  setAllViseme(visemeId, nasal = false) {
     document.querySelectorAll('.avatar-container').forEach(el => {
+      // Toggle mouth shapes
       const visemeGroups = el.querySelectorAll('.avatar-viseme');
       visemeGroups.forEach(g => {
         if (g.classList.contains('avatar-viseme-' + visemeId)) {
@@ -126,6 +201,12 @@ class AvatarController {
           g.style.display = 'none';
         }
       });
+
+      // Toggle nasal indicator
+      const nasalEl = el.querySelector('.avatar-nasal');
+      if (nasalEl) {
+        nasalEl.style.display = nasal ? 'block' : 'none';
+      }
     });
   }
 
@@ -142,7 +223,7 @@ class AvatarController {
     }
 
     // Helper: generate viseme timeline and start scheduler for given text/lang
-    function startVisemes(text, lang, speechInst) {
+    function startVisemes(text, lang, speechInst, rateOverride) {
       if (!avatar._scheduler) return;
 
       // Skip very short text — use legacy fallback
@@ -154,7 +235,7 @@ class AvatarController {
         if (!isPT) return;
 
         const visemeSeq = textToVisemesPortuguese(text);
-        const rate = speechInst.defaultPTRate || 0.95;
+        const rate = rateOverride || speechInst.defaultPTRate || 0.95;
         const { timeline, estimatedDuration } = estimateVisemeTiming(visemeSeq, rate, lang);
 
         if (timeline.length === 0) return;
@@ -201,7 +282,7 @@ class AvatarController {
 
       options.onStart = function() {
         avatar.setAllState('speaking');
-        startVisemes(text, lang, speechInstance);
+        startVisemes(text, lang, speechInstance, options.rate);
         if (origOnStart) origOnStart();
       };
       options.onEnd = function() {
@@ -226,8 +307,7 @@ class AvatarController {
       const origOnBlocked = options.onBlocked;
 
       options.onStart = function() {
-        avatar.setAllState('speaking');
-        startVisemes(text, 'pt-BR', speechInstance);
+        // Don't set speaking state globally — per-segment callbacks handle it
         if (origOnStart) origOnStart();
       };
       options.onEnd = function() {
@@ -239,6 +319,22 @@ class AvatarController {
         stopVisemes();
         avatar.setAllState('idle');
         if (origOnBlocked) origOnBlocked();
+      };
+
+      // Per-segment callbacks: animate mouth only for Portuguese
+      const speechRate = options.rate;
+      options.onSegmentStart = function(segment) {
+        const isPT = segment.lang && segment.lang.startsWith('pt');
+        if (isPT) {
+          avatar.setAllState('speaking');
+          startVisemes(segment.text, segment.lang, speechInstance, speechRate);
+        } else {
+          stopVisemes();
+          avatar.setAllState('idle');
+        }
+      };
+      options.onSegmentEnd = function() {
+        stopVisemes();
       };
 
       originalSpeakMixed(text, options);

@@ -56,6 +56,11 @@
   display: block;
 }
 
+/* Nasal indicator hidden by default (toggled by JS) */
+.avatar-container .avatar-nasal {
+  display: none;
+}
+
 /* Legacy mouth elements hidden by default (kept for fallback) */
 .avatar-container .avatar-mouth-open-1,
 .avatar-container .avatar-mouth-open-2 {
@@ -96,6 +101,98 @@
   opacity: 0;
   transform: scale(0.8);
   pointer-events: none;
+}
+
+/* ── Hero avatar (video-call layout) ── */
+
+.avatar-hero {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0 0.5rem;
+}
+
+.avatar-hero .avatar-container {
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+}
+
+/* Responsive hero sizing */
+.avatar-hero svg {
+  width: 200px;
+  height: 200px;
+}
+
+@media (min-width: 640px) {
+  .avatar-hero svg {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .avatar-hero svg {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+/* Short screens: shrink hero avatar */
+@media (max-height: 500px) {
+  .avatar-hero svg {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Maximized chat: larger hero */
+.chat-maximized .avatar-hero svg {
+  width: 260px;
+  height: 260px;
+}
+
+@media (min-width: 640px) {
+  .chat-maximized .avatar-hero svg {
+    width: 340px;
+    height: 340px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .chat-maximized .avatar-hero svg {
+    width: 380px;
+    height: 380px;
+  }
+}
+
+/* Status indicator */
+.avatar-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0 0.5rem;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.avatar-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: status-pulse 2s ease-in-out infinite;
+}
+
+.avatar-status-dot.thinking {
+  background: #f59e0b;
+}
+
+.avatar-status-dot.speaking {
+  background: #22c55e;
+}
+
+@keyframes status-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
 }
 
 /* ── Reduced motion: disable all animations, static indicator ── */

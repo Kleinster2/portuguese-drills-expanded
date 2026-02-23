@@ -579,6 +579,9 @@ class PortugueseSpeech {
       return;
     }
 
+    // Per-segment callback (used by avatar for language-aware animation)
+    if (options.onSegmentStart) options.onSegmentStart(segment, index);
+
     // Route pt-BR segments to cloud TTS if needed
     const useCloudForSegment = this.cloudTTSRequired && segment.lang === 'pt-BR';
 
@@ -589,6 +592,7 @@ class PortugueseSpeech {
         preferFemale: options.preferFemale || false,
         onStart: (index === 0 && options.onStart) ? options.onStart : undefined,
         onEnd: () => {
+          if (options.onSegmentEnd) options.onSegmentEnd(segment, index);
           this.speakSegmentsQueue(segments, index + 1, options);
         },
         onError: (err) => {
@@ -619,6 +623,7 @@ class PortugueseSpeech {
     }
 
     utterance.onend = () => {
+      if (options.onSegmentEnd) options.onSegmentEnd(segment, index);
       // No delay between segments for smoother flow
       this.speakSegmentsQueue(segments, index + 1, options);
     };

@@ -29,10 +29,8 @@ async function startNewSession() {
 
   // Clear the UI immediately
   const messagesContainer = document.getElementById('chat-messages');
-  const freshAvatarHtml = window.avatarController
-    ? window.avatarController.getInlineHtml('w-14 h-14')
-    : '<div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"><span class="text-green-600 text-sm font-bold">AI</span></div>';
-  messagesContainer.innerHTML = '<div class="flex items-start space-x-3">' + freshAvatarHtml + '<div class="bg-slate-100 rounded-2xl p-3 max-w-2xl"><div id="loading-message" class="text-slate-600">Starting fresh session...</div></div></div>';
+  messagesContainer.innerHTML = '<div class="flex justify-center"><div class="bg-slate-100 rounded-2xl p-3 max-w-2xl"><div id="loading-message" class="text-slate-600">Starting fresh session...</div></div></div>';
+  updateAvatarStatus('thinking');
 
   // Start completely new session
   setTimeout(() => {
@@ -66,6 +64,12 @@ function startEmptySession() {
 
   // Show modal
   modal.classList.remove('hidden');
+
+  // Populate hero avatar (once per modal open)
+  const heroContainer = document.getElementById('chat-hero-avatar');
+  if (heroContainer && !heroContainer.hasChildNodes() && window.avatarController) {
+    heroContainer.innerHTML = window.avatarController.getInlineHtml('');
+  }
 
   // Update title
   updateChatTitle();
@@ -118,6 +122,12 @@ async function openDrillChat(drillId) {
 
   // Show modal
   modal.classList.remove('hidden');
+
+  // Populate hero avatar (once per modal open)
+  const heroContainer = document.getElementById('chat-hero-avatar');
+  if (heroContainer && !heroContainer.hasChildNodes() && window.avatarController) {
+    heroContainer.innerHTML = window.avatarController.getInlineHtml('');
+  }
 
   // Update current drill and set title
   currentDrillId = drillId;
@@ -295,12 +305,8 @@ async function openDrillChat(drillId) {
   sendButton.disabled = true;
 
   // Show loading message with spinner
-  const loadingAvatarHtml = window.avatarController
-    ? window.avatarController.getInlineHtml('w-14 h-14')
-    : '<div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"><span class="text-green-600 text-sm font-bold">AI</span></div>';
   messagesContainer.innerHTML = `
-    <div class="flex items-start space-x-3">
-      ${loadingAvatarHtml}
+    <div class="flex justify-center">
       <div class="bg-slate-100 rounded-2xl p-3 max-w-2xl">
         <div class="flex items-center gap-3">
           <div class="animate-spin rounded-full h-5 w-5 border-b-2 border-green-600"></div>
@@ -311,6 +317,7 @@ async function openDrillChat(drillId) {
     </div>
   `;
   if (window.avatarController) window.avatarController.setAllState('thinking');
+  updateAvatarStatus('thinking');
 
   console.log('🔥 Set loading message and disabled input');
 
@@ -359,6 +366,7 @@ async function openDrillChat(drillId) {
 
     // Clear loading and show AI response
     if (window.avatarController) window.avatarController.setAllState('idle');
+    updateAvatarStatus('idle');
     messagesContainer.innerHTML = '';
     addMessageToChat('ai', data.response);
 
@@ -385,12 +393,10 @@ async function openDrillChat(drillId) {
     // Clear loading and show error
     messagesContainer.innerHTML = '';
 
+    updateAvatarStatus('idle');
     const errorDiv = document.createElement('div');
-    errorDiv.className = 'flex items-start space-x-3';
+    errorDiv.className = 'flex justify-center';
     errorDiv.innerHTML = `
-      <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-        <span class="text-red-600 text-sm font-bold">⚠️</span>
-      </div>
       <div class="bg-red-50 border border-red-200 rounded-2xl p-4 max-w-2xl">
         <div class="text-red-800 font-semibold mb-2">Failed to Start Session</div>
         <div class="text-red-700 text-sm mb-3">
@@ -512,6 +518,7 @@ async function sendChatMessage(retryMessage = null, silent = false) {
   // Show typing indicator
   const typingIndicator = addMessageToChat('ai', '...');
   if (window.avatarController) window.avatarController.setAllState('thinking');
+  updateAvatarStatus('thinking');
 
   try {
 
@@ -549,6 +556,7 @@ async function sendChatMessage(retryMessage = null, silent = false) {
 
     // Remove typing indicator and add real response
     if (window.avatarController) window.avatarController.setAllState('idle');
+    updateAvatarStatus('idle');
     typingIndicator.remove();
     addMessageToChat('ai', filterResult.text);
 
@@ -571,6 +579,7 @@ async function sendChatMessage(retryMessage = null, silent = false) {
 
     // Remove typing indicator
     if (window.avatarController) window.avatarController.setAllState('idle');
+    updateAvatarStatus('idle');
     typingIndicator.remove();
 
     // Determine error type
@@ -630,16 +639,12 @@ function smartScrollToBottom(container, force = false) {
 function addMessageToChat(sender, content) {
   const messagesContainer = document.getElementById('chat-messages');
   const messageDiv = document.createElement('div');
-  messageDiv.className = 'flex items-start space-x-3';
 
   if (sender === 'user') {
-    messageDiv.className += ' justify-end';
+    messageDiv.className = 'flex justify-end';
     messageDiv.innerHTML = `
       <div class="bg-green-600 text-white rounded-2xl p-3 max-w-2xl">
         <div class="message-content">${escapeHtml(content)}</div>
-      </div>
-      <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-        <span class="text-blue-600 text-sm font-bold">You</span>
       </div>
     `;
   } else {
@@ -648,16 +653,13 @@ function addMessageToChat(sender, content) {
       ? removeChipsMarker(content)
       : content.replace(/\[CHIPS(-ROW[12])?:\s*[^\]]+\]/gi, '').trim();
 
-    const avatarHtml = window.avatarController
-      ? window.avatarController.getInlineHtml('w-14 h-14')
-      : '<div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"><span class="text-green-600 text-sm font-bold">AI</span></div>';
-
+    const escapedText = escapeHtml(displayContent).replace(/"/g, '&quot;');
     const listenBtnHtml = (content !== '...' && window.portugueseSpeech)
-      ? `<button onclick="speakDrillMessage(this)" data-msg-text="${escapeHtml(displayContent).replace(/"/g, '&quot;')}" class="mt-2 text-green-600 hover:text-green-800 text-sm flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg><span>Listen</span></button>`
+      ? `<div class="mt-2 flex items-center gap-3"><button onclick="speakDrillMessage(this)" data-msg-text="${escapedText}" class="text-green-600 hover:text-green-800 text-sm flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg><span>Listen</span></button><button onclick="speakDrillMessage(this, 0.65)" data-msg-text="${escapedText}" class="text-green-600 hover:text-green-800 text-sm flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Slow</span></button></div>`
       : '';
 
+    messageDiv.className = 'flex';
     messageDiv.innerHTML = `
-      ${avatarHtml}
       <div class="bg-slate-100 rounded-2xl p-3 max-w-2xl">
         <div class="message-content">${formatAIMessage(displayContent)}</div>
         ${listenBtnHtml}
@@ -712,7 +714,7 @@ function toggleMaximizeChat() {
   if (container.classList.contains('max-w-3xl')) {
     // Maximize
     container.classList.remove('max-w-3xl', 'h-[90vh]', 'rounded-2xl');
-    container.classList.add('max-w-full', 'h-full', 'rounded-none');
+    container.classList.add('max-w-full', 'h-full', 'rounded-none', 'chat-maximized');
     modal.classList.remove('p-2');
     modal.classList.add('p-0');
 
@@ -721,7 +723,7 @@ function toggleMaximizeChat() {
     minimizeIcon.classList.remove('hidden');
   } else {
     // Minimize (restore to normal)
-    container.classList.remove('max-w-full', 'h-full', 'rounded-none');
+    container.classList.remove('max-w-full', 'h-full', 'rounded-none', 'chat-maximized');
     container.classList.add('max-w-3xl', 'h-[90vh]', 'rounded-2xl');
     modal.classList.remove('p-0');
     modal.classList.add('p-2');
@@ -1131,10 +1133,31 @@ function updateChatTitle() {
   drillTitleContainer.textContent = drillNames.join(' • ');
 }
 
-// Speak a drill AI message when Listen button is clicked
-function speakDrillMessage(buttonEl) {
+// Update hero avatar status indicator (thinking, speaking, idle)
+function updateAvatarStatus(status) {
+  const statusEl = document.getElementById('chat-avatar-status');
+  if (!statusEl) return;
+  const dot = statusEl.querySelector('.avatar-status-dot');
+  const label = statusEl.querySelector('span:last-child');
+  if (!dot || !label) return;
+
+  dot.className = 'avatar-status-dot';
+  if (status === 'thinking') {
+    dot.classList.add('thinking');
+    label.textContent = 'Thinking...';
+  } else if (status === 'speaking') {
+    dot.classList.add('speaking');
+    label.textContent = 'Speaking...';
+  } else {
+    label.textContent = 'Portuguese Tutor';
+  }
+}
+
+// Speak a drill AI message when Listen/Slow button is clicked
+function speakDrillMessage(buttonEl, rate) {
   const text = buttonEl.getAttribute('data-msg-text');
   if (text && window.portugueseSpeech) {
-    window.portugueseSpeech.speakMixed(text);
+    const options = rate ? { rate } : {};
+    window.portugueseSpeech.speakMixed(text, options);
   }
 }

@@ -50,10 +50,15 @@ async function startTutorSession() {
   const input = document.getElementById('tutor-input');
   const sendBtn = document.getElementById('tutor-send-btn');
 
+  // Populate hero avatar
+  const heroContainer = document.getElementById('tutor-hero-avatar');
+  if (heroContainer && !heroContainer.hasChildNodes() && window.avatarController) {
+    heroContainer.innerHTML = window.avatarController.getInlineHtml('');
+  }
+
   // Show loading
   messagesContainer.innerHTML = `
-    <div class="flex items-start space-x-3">
-      ${window.avatarController ? window.avatarController.getInlineHtml('w-14 h-14') : '<div class="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0"><span class="text-teal-600 text-sm font-bold">AI</span></div>'}
+    <div class="flex justify-center">
       <div class="bg-slate-100 rounded-2xl p-3 max-w-2xl">
         <div class="flex items-center gap-3">
           <div class="animate-spin rounded-full h-5 w-5 border-b-2 border-teal-600"></div>
@@ -62,6 +67,7 @@ async function startTutorSession() {
       </div>
     </div>
   `;
+  updateTutorAvatarStatus('thinking');
 
   try {
     const controller = new AbortController();
@@ -89,6 +95,7 @@ async function startTutorSession() {
     tutorMessages = [{ role: 'assistant', content: data.response }];
 
     // Show welcome message
+    updateTutorAvatarStatus('idle');
     messagesContainer.innerHTML = '';
 
     // Add intro message from tutor (no autoplay, will play combined)
@@ -97,7 +104,7 @@ async function startTutorSession() {
     // Add tutor greeting (no autoplay, will play combined)
     addTutorMessage('ai', data.response, false);
 
-    // Play both messages with a pause between them
+    // Play intro then greeting (mouth animates only for Portuguese segments)
     if (window.portugueseSpeech) {
       const introText = 'Welcome! Hover over Portuguese words to see translations. Click Listen to hear messages read aloud.';
       const greetingText = data.response;
@@ -132,14 +139,12 @@ async function startTutorSession() {
 
   } catch (error) {
     console.error('Error starting tutor session:', error);
+    updateTutorAvatarStatus('idle');
     messagesContainer.innerHTML = '';
 
     const errorDiv = document.createElement('div');
-    errorDiv.className = 'flex items-start space-x-3';
+    errorDiv.className = 'flex justify-center';
     errorDiv.innerHTML = `
-      <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-        <span class="text-red-600 text-sm font-bold">!</span>
-      </div>
       <div class="bg-red-50 border border-red-200 rounded-2xl p-4 max-w-2xl">
         <div class="text-red-800 font-semibold mb-2">Failed to Start Session</div>
         <div class="text-red-700 text-sm mb-3">
@@ -180,6 +185,7 @@ async function sendTutorMessage() {
   // Show typing indicator
   const typingDiv = addTutorMessage('ai', '...');
   if (window.avatarController) window.avatarController.setAllState('thinking');
+  updateTutorAvatarStatus('thinking');
 
   try {
     const controller = new AbortController();
@@ -208,6 +214,7 @@ async function sendTutorMessage() {
 
     // Remove typing indicator and show response
     if (window.avatarController) window.avatarController.setAllState('idle');
+    updateTutorAvatarStatus('idle');
     typingDiv.remove();
     addTutorMessage('ai', data.response);
 
@@ -217,6 +224,7 @@ async function sendTutorMessage() {
   } catch (error) {
     console.error('Error sending message:', error);
     if (window.avatarController) window.avatarController.setAllState('idle');
+    updateTutorAvatarStatus('idle');
     typingDiv.remove();
 
     let errorMessage = 'Connection error. ';
@@ -270,36 +278,43 @@ function retryTutorMessage() {
 function addTutorMessage(sender, content, autoPlay = true) {
   const messagesContainer = document.getElementById('tutor-messages');
   const messageDiv = document.createElement('div');
-  messageDiv.className = 'flex items-start space-x-3';
 
   if (sender === 'user') {
-    messageDiv.className += ' justify-end';
+    messageDiv.className = 'flex justify-end';
     messageDiv.innerHTML = `
       <div class="bg-teal-600 text-white rounded-2xl p-3 max-w-2xl">
         <div class="message-content">${escapeHtmlTutor(content)}</div>
-      </div>
-      <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-        <span class="text-blue-600 text-sm font-bold">You</span>
       </div>
     `;
   } else {
     const messageId = 'tutor-msg-' + Date.now();
     tutorMessageTexts[messageId] = content;
 
+    messageDiv.className = 'flex';
     messageDiv.innerHTML = `
-      ${window.avatarController ? window.avatarController.getInlineHtml('w-14 h-14') : '<div class="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0"><span class="text-teal-600 text-sm font-bold">AI</span></div>'}
       <div class="bg-slate-100 rounded-2xl p-3 max-w-2xl">
         <div class="message-content">${formatTutorResponse(content)}</div>
         ${content !== '...' ? `
-        <button
-          onclick="speakTutorMessage('${messageId}')"
-          class="mt-2 text-teal-600 hover:text-teal-800 text-sm flex items-center gap-1"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
-          </svg>
-          <span>Listen</span>
-        </button>
+        <div class="mt-2 flex items-center gap-3">
+          <button
+            onclick="speakTutorMessage('${messageId}')"
+            class="text-teal-600 hover:text-teal-800 text-sm flex items-center gap-1"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+            </svg>
+            <span>Listen</span>
+          </button>
+          <button
+            onclick="speakTutorMessage('${messageId}', 0.65)"
+            class="text-teal-600 hover:text-teal-800 text-sm flex items-center gap-1"
+          >
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Slow</span>
+          </button>
+        </div>
         ` : ''}
       </div>
     `;
@@ -332,11 +347,12 @@ function addTutorMessage(sender, content, autoPlay = true) {
   return messageDiv;
 }
 
-// Speak a specific tutor message
-function speakTutorMessage(messageId) {
+// Speak a specific tutor message (optional rate for slow playback)
+function speakTutorMessage(messageId, rate) {
   const text = tutorMessageTexts[messageId];
   if (text && window.portugueseSpeech) {
-    window.portugueseSpeech.speakMixed(text);
+    const options = rate ? { rate } : {};
+    window.portugueseSpeech.speakMixed(text, options);
   }
 }
 
@@ -358,6 +374,26 @@ function escapeHtmlTutor(text) {
   const div = document.createElement('div');
   div.textContent = text;
   return div.innerHTML;
+}
+
+// Update tutor hero avatar status indicator
+function updateTutorAvatarStatus(status) {
+  const statusEl = document.getElementById('tutor-avatar-status');
+  if (!statusEl) return;
+  const dot = statusEl.querySelector('.avatar-status-dot');
+  const label = statusEl.querySelector('span:last-child');
+  if (!dot || !label) return;
+
+  dot.className = 'avatar-status-dot';
+  if (status === 'thinking') {
+    dot.classList.add('thinking');
+    label.textContent = 'Thinking...';
+  } else if (status === 'speaking') {
+    dot.classList.add('speaking');
+    label.textContent = 'Speaking...';
+  } else {
+    label.textContent = 'Portuguese Tutor';
+  }
 }
 
 function scrollTutorToBottom(container) {
