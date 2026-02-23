@@ -580,12 +580,18 @@ const VISEME_SAMPLES = {
   r:   'ra',
 };
 
+// Phonetic symbols → speakable Portuguese equivalents (for TTS)
+const PHONETIC_TO_SPEAKABLE = { 'ẽ': 'ê', 'ɐ': 'â', 'j̃': 'i', 'w̃': 'u' };
+
 // Build a speakable sample from a grapheme
 function graphemeToSample(grapheme, visemeId) {
   if (!grapheme) return VISEME_SAMPLES[visemeId] || '';
 
   // Strip reduction arrows for speech (o→u → u, o→ô → ô, l→u → u, etc.)
   const clean = grapheme.includes('→') ? grapheme.split('→').pop() : grapheme;
+
+  // Phonetic symbols that TTS can't handle → speakable equivalents
+  if (PHONETIC_TO_SPEAKABLE[clean]) return PHONETIC_TO_SPEAKABLE[clean];
 
   // Vowels: speak the character itself
   if (PT_VOWELS[clean] !== undefined || /^[aáàâãeéêiíoóôõuúü]$/i.test(clean)) {
