@@ -195,6 +195,49 @@
   50% { opacity: 0.5; }
 }
 
+/* Viseme label log */
+.viseme-label {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 8px;
+  padding: 0.5rem 1rem;
+  min-height: 0;
+  max-height: 8rem;
+  overflow-y: auto;
+}
+
+.viseme-tag {
+  display: inline-block;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #475569;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 4px 10px;
+  white-space: nowrap;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.viseme-tag:hover {
+  background: #dbeafe;
+  border-color: #93c5fd;
+}
+
+.viseme-tag.nasal {
+  border-color: #c4b5fd;
+  background: #f5f3ff;
+}
+
+.viseme-tag:last-child {
+  background: #dbeafe;
+  border-color: #93c5fd;
+}
+
 /* ── Reduced motion: disable all animations, static indicator ── */
 @media (prefers-reduced-motion: reduce) {
   .avatar-container svg,

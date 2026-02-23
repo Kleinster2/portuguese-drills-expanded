@@ -268,13 +268,16 @@ class AvatarController {
 
     function stopVisemes() {
       if (avatar._scheduler) {
-        avatar._scheduler.stop();
+        avatar._scheduler._flushAndStop();
       }
     }
 
-    // Wrap speak()
+    // Wrap speak() — store original for direct use (e.g. viseme sample playback)
     const originalSpeak = speechInstance.speak.bind(speechInstance);
+    speechInstance._originalSpeak = originalSpeak;
     speechInstance.speak = function(text, options = {}) {
+      if (avatar._scheduler) avatar._scheduler.clearLog();
+
       const origOnStart = options.onStart;
       const origOnEnd = options.onEnd;
       const origOnError = options.onError;
@@ -302,12 +305,14 @@ class AvatarController {
     // Wrap speakMixed()
     const originalSpeakMixed = speechInstance.speakMixed.bind(speechInstance);
     speechInstance.speakMixed = function(text, options = {}) {
+      // Clear viseme log from previous message (synchronous, before any segments start)
+      if (avatar._scheduler) avatar._scheduler.clearLog();
+
       const origOnStart = options.onStart;
       const origOnEnd = options.onEnd;
       const origOnBlocked = options.onBlocked;
 
       options.onStart = function() {
-        // Don't set speaking state globally — per-segment callbacks handle it
         if (origOnStart) origOnStart();
       };
       options.onEnd = function() {

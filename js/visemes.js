@@ -1,29 +1,37 @@
 // Viseme Mapping System - Text-to-viseme conversion and scheduling for avatar lip-sync
 // Supports Brazilian Portuguese (primary) and English (simplified)
 
-// Viseme IDs: rest, ah, oh, ee, oo, fv, mbp
-const VISEME = { REST: 'rest', AH: 'ah', OH: 'oh', EE: 'ee', OO: 'oo', FV: 'fv', MBP: 'mbp' };
+// Viseme IDs: rest, ah, oh, ee, oo, fv, mbp, sz, sh, td, eh, l, pal, oh2, w, kg, r
+// Nasal flag: overlay indicator for nasal vowels (ã, õ)
+const VISEME = {
+  REST: 'rest', AH: 'ah', OH: 'oh', EE: 'ee', OO: 'oo', FV: 'fv', MBP: 'mbp',
+  SZ: 'sz', SH: 'sh', TD: 'td',
+  EH: 'eh', L: 'l', PAL: 'pal', OH2: 'oh2', W: 'w', KG: 'kg', R: 'r'
+};
 
 // ── Portuguese grapheme-to-viseme mapping ──
 
 // Digraphs that should be consumed as pairs (order matters: check digraphs before single chars)
 const PT_DIGRAPHS = {
-  'lh': VISEME.EE,
-  'nh': VISEME.EE,
-  'ch': VISEME.EE,
-  'rr': VISEME.EE,
-  'ss': VISEME.EE,
+  'lh': VISEME.PAL,   // palatal lateral [ʎ]
+  'nh': VISEME.PAL,   // palatal nasal [ɲ]
+  'ch': VISEME.SH,    // postalveolar [ʃ]
+  'rr': VISEME.R,     // guttural/uvular [h]/[x]
+  'ss': VISEME.SZ,    // voiceless sibilant [s]
   // qu/gu handled dynamically in textToVisemesPortuguese (u is pronounced [w] before a/o)
 };
 
 // Single character mappings for Portuguese
 const PT_VOWELS = {
   'a': VISEME.AH, 'á': VISEME.AH, 'à': VISEME.AH, 'â': VISEME.AH, 'ã': VISEME.AH,
-  'e': VISEME.EE, 'é': VISEME.AH, 'ê': VISEME.EE,
+  'e': VISEME.EE, 'é': VISEME.EH, 'ê': VISEME.EH,
   'i': VISEME.EE, 'í': VISEME.EE,
-  'o': VISEME.OH, 'ó': VISEME.OH, 'ô': VISEME.OH, 'õ': VISEME.OH,
+  'o': VISEME.OH, 'ó': VISEME.OH, 'ô': VISEME.OH2, 'õ': VISEME.OH2,
   'u': VISEME.OO, 'ú': VISEME.OO, 'ü': VISEME.OO,
 };
+
+// Nasal vowel characters (triggers nasal overlay)
+const NASAL_VOWELS = new Set(['ã', 'õ']);
 
 const PT_CONSONANTS = {
   // m is handled separately (word-final m nasalizes the vowel, no lip closure)
@@ -31,6 +39,18 @@ const PT_CONSONANTS = {
   'p': VISEME.MBP,
   'f': VISEME.FV,
   'v': VISEME.FV,
+  's': VISEME.SZ,
+  'z': VISEME.SZ,
+  'ç': VISEME.SZ,
+  'x': VISEME.SH,    // most common pronunciation [ʃ]
+  'j': VISEME.SH,
+  't': VISEME.TD,
+  'd': VISEME.TD,
+  'n': VISEME.TD,
+  'k': VISEME.KG,
+  'r': VISEME.R,
+  'w': VISEME.W,
+  // c, g: context-dependent, handled dynamically below
   // l is handled separately (syllable-final l → [u] vocalization)
   // All other consonants → EE (neutral open)
 };
@@ -38,11 +58,14 @@ const PT_CONSONANTS = {
 // Default consonant viseme
 const DEFAULT_CONSONANT = VISEME.EE;
 
+// Set of all vowel visemes (for duration adjustments)
+const VOWEL_VISEMES = new Set([VISEME.AH, VISEME.OH, VISEME.OO, VISEME.EE, VISEME.EH, VISEME.OH2]);
+
 /**
  * Convert Portuguese text to a viseme sequence.
  * Rules-based grapheme-to-viseme for Brazilian Portuguese.
  * @param {string} text
- * @returns {Array<{viseme: string, charIndex: number}>}
+ * @returns {Array<{viseme: string, charIndex: number, nasal: boolean}>}
  */
 function textToVisemesPortuguese(text) {
   const result = [];
@@ -56,14 +79,14 @@ function textToVisemesPortuguese(text) {
 
     // Spaces → REST
     if (ch === ' ') {
-      result.push({ viseme: VISEME.REST, charIndex: i });
+      result.push({ viseme: VISEME.REST, charIndex: i, nasal: false, grapheme: ' ' });
       i++;
       continue;
     }
 
     // Sentence punctuation → REST (longer pause handled in timing)
     if (/[.!?;:,\n\r]/.test(ch)) {
-      result.push({ viseme: VISEME.REST, charIndex: i });
+      result.push({ viseme: VISEME.REST, charIndex: i, nasal: false, grapheme: ch });
       i++;
       continue;
     }
@@ -76,7 +99,7 @@ function textToVisemesPortuguese(text) {
 
     // Check digraphs first
     if (next && PT_DIGRAPHS[digraph] !== undefined) {
-      result.push({ viseme: PT_DIGRAPHS[digraph], charIndex: i });
+      result.push({ viseme: PT_DIGRAPHS[digraph], charIndex: i, nasal: false, grapheme: digraph });
       i += 2;
       continue;
     }
@@ -85,13 +108,11 @@ function textToVisemesPortuguese(text) {
     if ((ch === 'q' || ch === 'g') && next === 'u') {
       const afterU = i + 2 < lower.length ? lower[i + 2] : '';
       if (afterU === 'a' || afterU === 'o' || afterU === 'á' || afterU === 'à' || afterU === 'â' || afterU === 'ã' || afterU === 'ó' || afterU === 'ô' || afterU === 'õ') {
-        // u is pronounced [w] → EE for q/g, then OO for the rounded [w]
-        result.push({ viseme: VISEME.EE, charIndex: i });
-        result.push({ viseme: VISEME.OO, charIndex: i + 1 });
+        result.push({ viseme: VISEME.KG, charIndex: i, nasal: false, grapheme: ch });
+        result.push({ viseme: VISEME.W, charIndex: i + 1, nasal: false, grapheme: 'u' });
         i += 2;
       } else {
-        // qu/gu before e/i: u is silent → consume as single EE
-        result.push({ viseme: VISEME.EE, charIndex: i });
+        result.push({ viseme: VISEME.KG, charIndex: i, nasal: false, grapheme: ch + 'u' });
         i += 2;
       }
       continue;
@@ -100,14 +121,21 @@ function textToVisemesPortuguese(text) {
     // Vowels
     if (PT_VOWELS[ch] !== undefined) {
       let viseme = PT_VOWELS[ch];
+      let grapheme = ch;
+      const nasal = NASAL_VOWELS.has(ch);
 
-      // Final unstressed -o → OO (common in BR Portuguese)
-      if (ch === 'o' && i === findWordEnd(lower, i) && !isAccented(ch)) {
-        viseme = VISEME.OO;
+      // Unstressed 'o' rules (BR Portuguese):
+      if (ch === 'o' && !isAccented(ch)) {
+        if (i === findWordEnd(lower, i)) {
+          viseme = VISEME.OO;
+          grapheme = 'o→u';  // show the reduction
+        } else {
+          viseme = VISEME.OH2;
+          grapheme = 'o→ô';
+        }
       }
-      // Final unstressed -e → EE (already EE, but explicit for clarity)
 
-      result.push({ viseme, charIndex: i });
+      result.push({ viseme, charIndex: i, nasal, grapheme });
       i++;
       continue;
     }
@@ -118,41 +146,74 @@ function textToVisemesPortuguese(text) {
       const isWordFinal = (i === wordEnd);
       const nextIsConsonant = next && /[\p{L}]/u.test(next) && !PT_VOWELS[next];
       if (isWordFinal || nextIsConsonant) {
-        // Syllable-final l vocalizes to [u] → OO viseme
-        result.push({ viseme: VISEME.OO, charIndex: i });
+        result.push({ viseme: VISEME.W, charIndex: i, nasal: false, grapheme: 'l→u' });
         i++;
         continue;
       }
-      // Syllable-initial l stays [l] → EE (default consonant)
-      result.push({ viseme: DEFAULT_CONSONANT, charIndex: i });
+      result.push({ viseme: VISEME.L, charIndex: i, nasal: false, grapheme: 'l' });
       i++;
       continue;
     }
 
-    // Word-final nasal m: nasalizes the vowel, lips don't close (Rule 5)
-    if (ch === 'm') {
+    // Word-final nasal m/n: nasalizes the preceding vowel, no consonant closure
+    if (ch === 'm' || ch === 'n') {
       const wordEnd = findWordEnd(lower, i);
       if (i === wordEnd) {
-        // Word-final m: skip the MBP viseme — the nasal is absorbed into the vowel
-        // Don't produce any mouth movement (the preceding vowel shape holds)
+        if (result.length > 0 && VOWEL_VISEMES.has(result[result.length - 1].viseme)) {
+          result[result.length - 1].nasal = true;
+        }
         i++;
         continue;
       }
-      // Non-final m: normal bilabial closure
-      result.push({ viseme: VISEME.MBP, charIndex: i });
+      if (ch === 'm') {
+        result.push({ viseme: VISEME.MBP, charIndex: i, nasal: false, grapheme: 'm' });
+      } else {
+        result.push({ viseme: VISEME.TD, charIndex: i, nasal: false, grapheme: 'n' });
+      }
+      i++;
+      continue;
+    }
+
+    // Context-dependent consonants (Brazilian Portuguese)
+
+    // c before e/i → [s] → SZ; otherwise [k] → KG
+    if (ch === 'c') {
+      if (next && /[eiéêí]/.test(next)) {
+        result.push({ viseme: VISEME.SZ, charIndex: i, nasal: false, grapheme: 'c→s' });
+      } else {
+        result.push({ viseme: VISEME.KG, charIndex: i, nasal: false, grapheme: 'c' });
+      }
+      i++;
+      continue;
+    }
+
+    // g before e/i → [ʒ] → SH; otherwise [g] → KG (gu handled above)
+    if (ch === 'g') {
+      if (next && /[eiéêí]/.test(next)) {
+        result.push({ viseme: VISEME.SH, charIndex: i, nasal: false, grapheme: 'g→j' });
+      } else {
+        result.push({ viseme: VISEME.KG, charIndex: i, nasal: false, grapheme: 'g' });
+      }
+      i++;
+      continue;
+    }
+
+    // t/d before i → [tʃ]/[dʒ] → SH (BR Portuguese palatalization)
+    if ((ch === 't' || ch === 'd') && next && /[ií]/.test(next)) {
+      result.push({ viseme: VISEME.SH, charIndex: i, nasal: false, grapheme: ch + '→' + (ch === 't' ? 'tch' : 'dj') });
       i++;
       continue;
     }
 
     // Consonants with specific visemes
     if (PT_CONSONANTS[ch] !== undefined) {
-      result.push({ viseme: PT_CONSONANTS[ch], charIndex: i });
+      result.push({ viseme: PT_CONSONANTS[ch], charIndex: i, nasal: false, grapheme: ch });
       i++;
       continue;
     }
 
     // All other consonants → EE (neutral open)
-    result.push({ viseme: DEFAULT_CONSONANT, charIndex: i });
+    result.push({ viseme: DEFAULT_CONSONANT, charIndex: i, nasal: false, grapheme: ch });
     i++;
   }
 
@@ -178,10 +239,10 @@ function isAccented(ch) {
 
 /**
  * Estimate viseme timing based on sequence, speech rate, and language.
- * @param {Array<{viseme: string, charIndex: number}>} visemeSequence
+ * @param {Array<{viseme: string, charIndex: number, nasal: boolean}>} visemeSequence
  * @param {number} rate - Speech rate (1.0 = normal)
  * @param {string} lang - 'pt-BR' or 'en-US'
- * @returns {{timeline: Array<{viseme: string, time: number, duration: number}>, estimatedDuration: number}}
+ * @returns {{timeline: Array<{viseme: string, time: number, duration: number, nasal: boolean}>, estimatedDuration: number}}
  */
 function estimateVisemeTiming(visemeSequence, rate = 1.0, lang = 'pt-BR') {
   if (!visemeSequence || visemeSequence.length === 0) {
@@ -198,26 +259,24 @@ function estimateVisemeTiming(visemeSequence, rate = 1.0, lang = 'pt-BR') {
   let currentTime = 0;
 
   for (let i = 0; i < visemeSequence.length; i++) {
-    const { viseme } = visemeSequence[i];
+    const { viseme, nasal, grapheme } = visemeSequence[i];
 
     // Duration adjustments
     let duration = baseVisemeDuration;
     if (viseme === VISEME.REST) {
-      // Check if this is punctuation (longer pause) vs space (short pause)
       duration = baseVisemeDuration * 1.5;
-    } else if (viseme === VISEME.AH || viseme === VISEME.OH || viseme === VISEME.OO || viseme === VISEME.EE) {
-      // Vowels slightly longer
+    } else if (VOWEL_VISEMES.has(viseme)) {
       duration = baseVisemeDuration * 1.2;
     } else {
-      // Consonants slightly shorter
       duration = baseVisemeDuration * 0.8;
     }
 
-    // Coalesce with previous if same viseme
-    if (timeline.length > 0 && timeline[timeline.length - 1].viseme === viseme) {
-      timeline[timeline.length - 1].duration += duration;
+    // Coalesce with previous if same viseme and same nasal state
+    const prev = timeline.length > 0 ? timeline[timeline.length - 1] : null;
+    if (prev && prev.viseme === viseme && prev.nasal === nasal) {
+      prev.duration += duration;
     } else {
-      timeline.push({ viseme, time: currentTime, duration });
+      timeline.push({ viseme, time: currentTime, duration, nasal, grapheme: grapheme || '' });
     }
 
     currentTime += duration;
@@ -241,17 +300,21 @@ class VisemeScheduler {
     this._rafId = null;
     this._running = false;
     this._currentViseme = VISEME.REST;
+    this._currentNasal = false;
     this._reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Viseme label log: accumulates tags during speech
+    this._lastLabelViseme = '';
   }
 
   /**
    * Prepare a viseme timeline for playback.
-   * @param {Array<{viseme: string, time: number, duration: number}>} timeline
+   * @param {Array<{viseme: string, time: number, duration: number, nasal: boolean}>} timeline
    * @param {number} estimatedDuration
    */
   schedule(timeline, estimatedDuration) {
     this._timeline = timeline;
     this._estimatedDuration = estimatedDuration;
+    this._nextIdx = 0; // sequential index for guaranteed tag display
   }
 
   /**
@@ -263,10 +326,11 @@ class VisemeScheduler {
     this.stop();
     this._audioElement = audioElement;
     this._running = true;
+    this._nextIdx = 0;
 
     if (this._reducedMotion) {
       // Static open mouth for reduced motion
-      this._setViseme(VISEME.AH);
+      this._setViseme(VISEME.AH, false);
       return;
     }
 
@@ -283,9 +347,10 @@ class VisemeScheduler {
     this._audioElement = null;
     this._startTime = performance.now();
     this._running = true;
+    this._nextIdx = 0;
 
     if (this._reducedMotion) {
-      this._setViseme(VISEME.AH);
+      this._setViseme(VISEME.AH, false);
       return;
     }
 
@@ -315,7 +380,31 @@ class VisemeScheduler {
       this._rafId = null;
     }
     this._audioElement = null;
-    this._setViseme(VISEME.REST);
+    this._setViseme(VISEME.REST, false);
+    // Don't clear viseme log here — it persists until next message
+  }
+
+  /**
+   * Flush any remaining unvisited timeline entries (so tags are never lost),
+   * then stop the scheduler.
+   */
+  _flushAndStop() {
+    // Emit tags for any timeline entries not yet visited
+    if (this._timeline && this._nextIdx !== undefined) {
+      while (this._nextIdx < this._timeline.length) {
+        const entry = this._timeline[this._nextIdx];
+        this._logVisemeTag(entry.viseme, entry.nasal, entry.grapheme);
+        this._nextIdx++;
+      }
+    }
+    this.stop();
+  }
+
+  // Clear the accumulated viseme label log
+  clearLog() {
+    this._lastLabelViseme = '';
+    const labelEl = document.getElementById('viseme-label');
+    if (labelEl) labelEl.innerHTML = '';
   }
 
   // ── Internal tick loops ──
@@ -325,65 +414,97 @@ class VisemeScheduler {
 
     const audio = this._audioElement;
     if (!audio || audio.paused || audio.ended) {
-      // Audio stopped — keep ticking briefly in case it resumes
       this._rafId = requestAnimationFrame(this._tickAudio.bind(this));
       return;
     }
 
     const elapsed = audio.currentTime;
     const totalDuration = audio.duration || this._estimatedDuration;
-
-    // Scale estimated timeline to actual audio duration
     const scale = this._estimatedDuration > 0 ? totalDuration / this._estimatedDuration : 1;
-    const viseme = this._findVisemeAt(elapsed, scale);
 
-    this._setViseme(viseme);
+    // Advance sequentially — never skip timeline entries
+    this._advanceTo(elapsed, scale);
     this._rafId = requestAnimationFrame(this._tickAudio.bind(this));
   }
 
   _tickEstimated() {
     if (!this._running) return;
 
-    const elapsed = (performance.now() - this._startTime) / 1000; // seconds
+    const elapsed = (performance.now() - this._startTime) / 1000;
 
     if (elapsed > this._estimatedDuration + 0.5) {
-      // Past the end — stop
-      this.stop();
+      // Past the end — flush remaining entries then stop
+      this._flushAndStop();
       return;
     }
 
-    const viseme = this._findVisemeAt(elapsed, 1);
-    this._setViseme(viseme);
+    // Advance sequentially — never skip timeline entries
+    this._advanceTo(elapsed, 1);
     this._rafId = requestAnimationFrame(this._tickEstimated.bind(this));
   }
 
   /**
-   * Find which viseme should be active at a given elapsed time.
+   * Advance through timeline entries up to the given elapsed time.
+   * Processes entries one by one so no viseme is ever skipped.
    * @param {number} elapsed - seconds
    * @param {number} scale - time scale factor (for audio sync)
-   * @returns {string} viseme ID
    */
-  _findVisemeAt(elapsed, scale) {
-    for (let i = this._timeline.length - 1; i >= 0; i--) {
-      const entry = this._timeline[i];
+  _advanceTo(elapsed, scale) {
+    while (this._nextIdx < this._timeline.length) {
+      const entry = this._timeline[this._nextIdx];
       const entryTime = entry.time * scale;
       if (elapsed >= entryTime) {
-        return entry.viseme;
+        this._setViseme(entry.viseme, entry.nasal, entry.grapheme);
+        this._nextIdx++;
+      } else {
+        break;
       }
     }
-    return VISEME.REST;
   }
 
   /**
-   * Set the current viseme on all avatars, only if changed.
+   * Set the current viseme on all avatars and log the tag, only if changed.
    * @param {string} visemeId
+   * @param {boolean} nasal - whether to show nasal overlay
+   * @param {string} grapheme - source grapheme for click playback
    */
-  _setViseme(visemeId) {
-    if (visemeId === this._currentViseme) return;
+  _setViseme(visemeId, nasal, grapheme) {
+    if (visemeId === this._currentViseme && nasal === this._currentNasal) return;
     this._currentViseme = visemeId;
+    this._currentNasal = nasal;
 
     if (window.avatarController && typeof window.avatarController.setAllViseme === 'function') {
-      window.avatarController.setAllViseme(visemeId);
+      window.avatarController.setAllViseme(visemeId, nasal);
+    }
+
+    this._logVisemeTag(visemeId, nasal, grapheme);
+  }
+
+  /**
+   * Append a viseme tag to the running log (skip rest and consecutive duplicates).
+   * Separated from _setViseme so _flushAndStop can log without moving the avatar mouth.
+   */
+  _logVisemeTag(visemeId, nasal, grapheme) {
+    if (visemeId !== VISEME.REST && visemeId !== this._lastLabelViseme) {
+      this._lastLabelViseme = visemeId;
+      const labelEl = document.getElementById('viseme-label');
+      if (labelEl) {
+        // Remove highlight from previous last tag
+        const prev = labelEl.querySelector('.viseme-tag:last-child');
+        if (prev) prev.style.background = '';
+
+        const tag = document.createElement('span');
+        tag.className = 'viseme-tag' + (nasal ? ' nasal' : '');
+        tag.textContent = VISEME_LABELS[visemeId] || visemeId;
+        if (nasal) tag.textContent += ' ~nasal';
+        tag.dataset.viseme = visemeId;
+        tag.dataset.nasal = nasal ? '1' : '';
+        tag.dataset.grapheme = grapheme || '';
+        tag.onclick = function() { playViseme(this.dataset.viseme, !!this.dataset.nasal, this.dataset.grapheme); };
+        labelEl.appendChild(tag);
+        // Auto-scroll to latest
+        labelEl.scrollTop = labelEl.scrollHeight;
+      }
     }
   }
 }
@@ -391,9 +512,94 @@ class VisemeScheduler {
 
 // ── Exports ──
 
+// Human-readable viseme labels for student display
+const VISEME_LABELS = {
+  rest: '',
+  ah:  'ah  (a, á)',
+  eh:  'eh  (é, ê)',
+  oh:  'oh  (ó)',
+  oh2: 'ô   (closed o)',
+  ee:  'ee  (i)',
+  oo:  'oo  (u, ú)',
+  w:   'w   (u glide)',
+  fv:  'f/v (lip bite)',
+  mbp: 'm/b/p (lips shut)',
+  sz:  's/z (teeth close)',
+  sh:  'sh  (ch, j)',
+  td:  't/d/n (tongue tip)',
+  l:   'l   (tongue lateral)',
+  pal: 'lh/nh (palatal)',
+  kg:  'k/g (velar)',
+  r:   'r   (tap/guttural)',
+};
+
+// Sample sounds for each viseme (short PT syllables for demo)
+const VISEME_SAMPLES = {
+  ah:  'á',   eh:  'é',   oh:  'ó',   oh2: 'ô',
+  ee:  'ê',   oo:  'u',   w:   'ua',
+  fv:  'fa',  mbp: 'ba',  sz:  'sa',  sh:  'cha',
+  td:  'da',  l:   'la',  pal: 'lha', kg:  'ca',
+  r:   'ra',
+};
+
+// Build a speakable sample from a grapheme
+function graphemeToSample(grapheme, visemeId) {
+  if (!grapheme) return VISEME_SAMPLES[visemeId] || '';
+
+  // Strip reduction arrows for speech (o→u → u, o→ô → ô, l→u → u, etc.)
+  const clean = grapheme.includes('→') ? grapheme.split('→').pop() : grapheme;
+
+  // Vowels: speak the character itself
+  if (PT_VOWELS[clean] !== undefined || /^[aáàâãeéêiíoóôõuúü]$/i.test(clean)) {
+    return clean;
+  }
+
+  // Digraphs and multi-char: add vowel
+  if (clean.length > 1) return clean + 'a';
+
+  // Single consonants: add 'a' to make speakable
+  return clean + 'a';
+}
+
+// Play a single viseme: show mouth shape + speak the actual phoneme
+function playViseme(visemeId, nasal, grapheme) {
+  const avatar = window.avatarController;
+  const speech = window.portugueseSpeech;
+  if (!avatar || !speech) return;
+
+  // Show the mouth shape
+  avatar.setAllState('speaking');
+  avatar.setAllViseme(visemeId, nasal);
+
+  // Speak the actual phoneme
+  const sample = graphemeToSample(grapheme, visemeId);
+  if (sample) {
+    const origSpeak = speech._originalSpeak || speech.speak.bind(speech);
+    origSpeak(sample, {
+      lang: 'pt-BR',
+      rate: 0.6,
+      onEnd: () => {
+        avatar.setAllViseme('rest', false);
+        avatar.setAllState('idle');
+      },
+      onError: () => {
+        avatar.setAllViseme('rest', false);
+        avatar.setAllState('idle');
+      }
+    });
+  } else {
+    setTimeout(() => {
+      avatar.setAllViseme('rest', false);
+      avatar.setAllState('idle');
+    }, 500);
+  }
+}
+
 window.VISEME = VISEME;
+window.VISEME_LABELS = VISEME_LABELS;
+window.playViseme = playViseme;
 window.textToVisemesPortuguese = textToVisemesPortuguese;
 window.estimateVisemeTiming = estimateVisemeTiming;
 window.VisemeScheduler = VisemeScheduler;
 
-console.log('[Visemes] Viseme mapping system loaded');
+console.log('[Visemes] Viseme mapping system loaded (17 visemes + nasal overlay)');

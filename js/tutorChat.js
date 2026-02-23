@@ -98,8 +98,8 @@ async function startTutorSession() {
     updateTutorAvatarStatus('idle');
     messagesContainer.innerHTML = '';
 
-    // Add intro message from tutor (no autoplay, will play combined)
-    addTutorMessage('ai', 'Welcome! Hover over Portuguese words to see translations. Click "Listen" to hear messages read aloud.', false);
+    // Add intro message from tutor (no autoplay, no listen buttons)
+    addTutorMessage('ai', 'Welcome! Hover over Portuguese words to see translations. Click "Listen" to hear messages read aloud.', false, true);
 
     // Add tutor greeting (no autoplay, will play combined)
     addTutorMessage('ai', data.response, false);
@@ -275,7 +275,7 @@ function retryTutorMessage() {
   }
 }
 
-function addTutorMessage(sender, content, autoPlay = true) {
+function addTutorMessage(sender, content, autoPlay = true, hideButtons = false) {
   const messagesContainer = document.getElementById('tutor-messages');
   const messageDiv = document.createElement('div');
 
@@ -294,7 +294,7 @@ function addTutorMessage(sender, content, autoPlay = true) {
     messageDiv.innerHTML = `
       <div class="bg-slate-100 rounded-2xl p-3 max-w-2xl">
         <div class="message-content">${formatTutorResponse(content)}</div>
-        ${content !== '...' ? `
+        ${content !== '...' && !hideButtons ? `
         <div class="mt-2 flex items-center gap-3">
           <button
             onclick="speakTutorMessage('${messageId}')"
@@ -313,6 +313,24 @@ function addTutorMessage(sender, content, autoPlay = true) {
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
             <span>Slow</span>
+          </button>
+          <button
+            onclick="speakTutorMessage('${messageId}', 0.45)"
+            class="text-teal-600 hover:text-teal-800 text-sm flex items-center gap-1"
+          >
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Slower</span>
+          </button>
+          <button
+            onclick="speakTutorMessage('${messageId}', 0.3)"
+            class="text-teal-600 hover:text-teal-800 text-sm flex items-center gap-1"
+          >
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span>Slowest</span>
           </button>
         </div>
         ` : ''}
