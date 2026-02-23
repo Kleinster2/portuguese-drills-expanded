@@ -340,6 +340,7 @@ class VisemeScheduler {
     this._reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     // Viseme label log: accumulates tags during speech
     this._lastLabelViseme = '';
+    this._currentWordRow = null;
   }
 
   /**
@@ -439,6 +440,7 @@ class VisemeScheduler {
   // Clear the accumulated viseme label log
   clearLog() {
     this._lastLabelViseme = '';
+    this._currentWordRow = null;
     const labelEl = document.getElementById('viseme-label');
     if (labelEl) labelEl.innerHTML = '';
   }
@@ -521,27 +523,43 @@ class VisemeScheduler {
    * Separated from _setViseme so _flushAndStop can log without moving the avatar mouth.
    */
   _logVisemeTag(visemeId, nasal, grapheme) {
-    if (visemeId !== VISEME.REST && visemeId !== this._lastLabelViseme) {
-      this._lastLabelViseme = visemeId;
-      const labelEl = document.getElementById('viseme-label');
-      if (labelEl) {
-        // Remove highlight from previous last tag
-        const prev = labelEl.querySelector('.viseme-tag:last-child');
-        if (prev) prev.style.background = '';
+    const labelEl = document.getElementById('viseme-label');
+    if (!labelEl) return;
 
-        const tag = document.createElement('span');
-        tag.className = 'viseme-tag' + (nasal ? ' nasal' : '');
-        tag.textContent = VISEME_LABELS[visemeId] || visemeId;
-        if (nasal) tag.textContent += ' ~nasal';
-        tag.dataset.viseme = visemeId;
-        tag.dataset.nasal = nasal ? '1' : '';
-        tag.dataset.grapheme = grapheme || '';
-        tag.onclick = function() { playViseme(this.dataset.viseme, !!this.dataset.nasal, this.dataset.grapheme); };
-        labelEl.appendChild(tag);
-        // Auto-scroll to latest
-        labelEl.scrollTop = labelEl.scrollHeight;
-      }
+    // REST → start a new word row
+    if (visemeId === VISEME.REST) {
+      this._lastLabelViseme = '';
+      this._currentWordRow = null;
+      return;
     }
+
+    // Skip consecutive duplicate visemes
+    if (visemeId === this._lastLabelViseme) return;
+    this._lastLabelViseme = visemeId;
+
+    // Create a word row if we don't have one
+    if (!this._currentWordRow) {
+      // Remove highlight from previous last tag
+      const prevTag = labelEl.querySelector('.viseme-tag:last-child');
+      if (prevTag) prevTag.style.background = '';
+
+      const row = document.createElement('div');
+      row.className = 'viseme-word-row';
+      labelEl.appendChild(row);
+      this._currentWordRow = row;
+    }
+
+    const tag = document.createElement('span');
+    tag.className = 'viseme-tag' + (nasal ? ' nasal' : '');
+    tag.textContent = VISEME_LABELS[visemeId] || visemeId;
+    if (nasal) tag.textContent += ' ~nasal';
+    tag.dataset.viseme = visemeId;
+    tag.dataset.nasal = nasal ? '1' : '';
+    tag.dataset.grapheme = grapheme || '';
+    tag.onclick = function() { playViseme(this.dataset.viseme, !!this.dataset.nasal, this.dataset.grapheme); };
+    this._currentWordRow.appendChild(tag);
+    // Auto-scroll to latest
+    labelEl.scrollTop = labelEl.scrollHeight;
   }
 }
 

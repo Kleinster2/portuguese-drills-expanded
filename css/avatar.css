@@ -198,13 +198,20 @@
 /* Viseme label log */
 .viseme-label {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 6px 8px;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
   padding: 0.5rem 1rem;
   min-height: 0;
   max-height: 8rem;
   overflow-y: auto;
+}
+
+.viseme-word-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 6px;
 }
 
 .viseme-tag {
