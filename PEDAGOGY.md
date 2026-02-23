@@ -24,6 +24,30 @@ I will then internalize all principles and be ready to apply them to any questio
 
 ---
 
+## Variant Tagging (MANDATORY)
+
+Every drill, worksheet, and exercise must be tagged with its Portuguese variant: **BP** (Brazilian) or **EP** (European). The platform defaults to BP.
+
+**Why this matters:** BP and EP diverge in grammar, not just pronunciation. Teaching the wrong variant's forms confuses students and builds habits they'll have to unlearn.
+
+### Rules:
+1. **Tag everything.** Every drill JSON should have a `variant` field ("BP" or "EP"). Every printed worksheet should state the variant in the header.
+2. **Never mix variants.** A BP drill contains zero EP forms. An EP drill contains zero BP forms. No contrastive exercises. No "in Brazil they say X, in Portugal they say Y." Completely separate tracks.
+3. **Apply the variant's usage patterns.** Key divergences:
+   - Politeness forms (condicional in BP vs imperfeito in EP — see Native Usage Filter below)
+   - Gerúndio vs a + infinitivo ("estou fazendo" BP vs "estou a fazer" EP)
+   - Tu conjugations (standard in EP, rarely drilled in BP)
+   - Pronoun placement (proclisis default in BP, enclisis default in EP)
+   - Vocabulary (ônibus/autocarro, trem/comboio, celular/telemóvel, etc.)
+4. **Student variants:** Marvin = EP. All other students = BP. Default platform drills = BP. Always check before creating content.
+
+### For printed worksheets:
+- Header must state: "Português Europeu" or "Português Brasileiro"
+- All example sentences, vocabulary, grammar, and answer keys must be 100% in that variant
+- No footnotes about the other variant. No comparisons. Clean separation.
+
+---
+
 ## Core Pedagogical Principles
 
 ### 1. **Self-Introduction First ("eu" before all others)**
@@ -363,8 +387,71 @@ When making changes to questions or units, ask:
 
 ---
 
+## Native Usage Filter (MANDATORY)
+
+**Rule: Never teach a form that a native speaker wouldn't use in conversation.**
+
+When generating drills or worksheets, every verb form, expression, and construction must pass this test:
+
+> "Would an educated native EP speaker actually say this in real life?"
+
+If the answer is no — even if the form is prescriptively correct — **do not include it in a drill without an explicit usage note.**
+
+### Key cases where prescriptive grammar ≠ EP usage:
+
+| Prescriptive form | What EP speakers actually say | Context |
+|-------------------|-------------------------------|---------|
+| eu **quereria** (condicional) | eu **queria** (imperfeito) | Polite requests, hypotheticals |
+| eu **poderia** (condicional) | eu **podia** (imperfeito) | Ability, permission |
+| eu **deveria** (condicional) | eu **devia** (imperfeito) | Obligation, advice |
+| tu **haverias de** (condicional) | tu **havias de** (imperfeito) | Futurity/intention |
+| futuro do indicativo (eu farei) | ir + infinitivo (eu vou fazer) | Future actions (spoken) |
+
+**In EP, the imperfeito has largely replaced the condicional for querer, poder, dever, and haver de.** The condicional forms exist grammatically but sound overly formal/literary. Teaching them without this context misleads students into learning forms they'll never hear.
+
+### The imperfeito-condicional overlap as a teaching moment
+
+The EP use of imperfeito in place of the condicional is **not colloquial or informal** — it is standard spoken Portuguese at all registers. This should be taught explicitly, not avoided:
+
+**What to teach:**
+1. The condicional form exists (quereria, poderia, deveria) — students should recognize it in writing and formal contexts
+2. In speech, EP speakers use the imperfeito instead (queria, podia, devia) — this is the default, not a shortcut
+3. This means the imperfeito carries **double duty** in EP: past habitual ("quando era criança, queria ser médico") AND polite/hypothetical ("queria um café, por favor")
+4. Context disambiguates — students need to learn to read context, not rely on the verb form alone
+5. The condicional still has distinct uses in EP: counterfactuals with "se" clauses ("se eu fosse rico, **compraria** uma casa"), formal writing, and news attribution ("o ministro **teria** dito que...")
+
+### Content creator reference: EP vs BP divergence table
+
+**This is for Gil and AI content generators only. Never expose this to students.**
+
+| Feature | BP (Christian, platform default) | EP (Marvin) |
+|---------|----------------------------------|-------------|
+| Polite requests | Condicional: gostaria, poderia, deveria | Imperfeito: gostava, podia, devia |
+| Progressive | Gerúndio: estou fazendo | a + infinitivo: estou a fazer |
+| Tu forms | Regional (drill você) | Standard (drill tu) |
+| Pronoun placement | Proclisis default: me diga | Enclisis default: diga-me |
+| "Eu queria um café" | ✅ Works | ✅ Works (one of few crossovers) |
+| "Eu gostava de ir" | ❌ Past tense only | ✅ Standard polite |
+| "Eu gostaria de ir" | ✅ Standard polite | ⚠️ Overly formal |
+| Bus | ônibus | autocarro |
+| Phone | celular | telemóvel |
+| Train | trem | comboio |
+
+**Drill design implication for EP:** The best exercise isn't "conjugate querer in the condicional" — it's "here are 5 situations, which form would a Portuguese speaker use and why?" For BP, the condicional forms (gostaria, poderia, deveria) are the standard polite forms and should be drilled normally.
+
+### Worksheet generation checklist:
+1. ✅ Is every verb form one a native speaker would actually use?
+2. ✅ If teaching a formal/literary form, is there an explicit usage note?
+3. ✅ Are example sentences things a real person would say (not textbook artifacts)?
+4. ✅ For EP worksheets: have you checked imperfeito vs condicional usage?
+5. ✅ For EP worksheets: have you checked futuro simples vs ir + infinitivo?
+
+**Origin of this rule:** Feb 2026 — a condicional worksheet included "quereria" as a drill item. While prescriptively correct, no Portuguese speaker uses this form. Students should learn what people actually say.
+
+---
+
 ## Teaching Philosophy Summary
 
-> "Start with self. Master singular. Teach in context. Prioritize frequency. Build systematically."
+> "Start with self. Master singular. Teach in context. Prioritize frequency. Build systematically. **Never teach a form nobody uses.**"
 
 The student should be able to introduce themselves completely and confidently before learning to talk about others. Every grammatical concept should serve this communicative goal, taught in order of universal applicability and daily usage frequency.

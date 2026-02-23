@@ -66,7 +66,20 @@
       "Bash(start \"\" \"C:\\\\Users\\\\klein\\\\Downloads\\\\palavra-worksheet-navy.html\")",
       "Bash(start \"\" \"C:\\\\Users\\\\klein\\\\Downloads\\\\imperativo-worksheet-navy.html\")",
       "Bash(start \"\" \"C:\\\\Users\\\\klein\\\\cascadeprojects\\\\portuguese-drills-expanded\\\\printables\\\\preterite-worksheet-christian.html\")",
-      "Bash(timeout:*)"
+      "Bash(timeout:*)",
+      "Bash(ping:*)",
+      "Bash(npx wrangler pages secret put:*)",
+      "Bash(powershell -Command \"\n$content = @''\nWhatsApp chat history: Gil Klein ↔ Christian Loubeau\nExtracted: 2026-02-11\nMessages: 181 \\(text only; images, audio, and video excluded\\)\nDate range: 5/20/2025 – 2/5/2026\nURLs redacted with [link]\n\n---\n\n[7:29 PM, 5/20/2025] Christian Loubeau: Muito brigado pela aula, Gil!\n[7:29 PM, 5/20/2025] Christian Loubeau: Por favor, envie-me sua conta do Venmo quando ter um momento. Espero vê-lo novamente em 3 de junho.\n[3:22 AM, 5/22/2025] Gil Klein: Olá Christian! Obrigado a você. Muito prazer! Até dia 3 de junho! Abraços, Gil\n[1:42 PM, 5/22/2025] Christian Loubeau: Olá! Qual é sua conta venmo?\n[12:47 AM, 5/23/2025] Gil Klein: Thank you for the Venmo.\n[12:47 AM, 5/23/2025] Gil Klein: Here are some exercises, for when you have the time:\n[12:49 AM, 5/23/2025] Gil Klein: [Exercises: ser + de preposition fill-in-the-blank]\n[9:48 PM, 5/23/2025] Christian Loubeau: Magina! Até amanhã\n[9:50 PM, 5/23/2025] Christian Loubeau: Podemos começar com a tarefa amanhã?\n[9:50 PM, 5/23/2025] Gil Klein: Lógico! Podemos, sim.\n[9:51 PM, 5/23/2025] Christian Loubeau: Brigado!\n[9:51 PM, 5/23/2025] Gil Klein: De nada! Até amanhã! G\n[9:52 PM, 5/23/2025] Christian Loubeau: Boa noite!\n[9:52 PM, 5/23/2025] Gil Klein: Para você também!\n''@\n$content | Out-File -FilePath ''C:\\\\Users\\\\klein\\\\cascadeprojects\\\\portuguese-drills-expanded\\\\Students\\\\Christian-whatsapp-chat.txt'' -Encoding utf8\nWrite-Host ''Partial write test OK''\n\")",
+      "Bash(\"/c/Program Files/PowerShell/7/pwsh\" -Command \"Write-Host ''hello''\")",
+      "Bash(pip show:*)",
+      "Bash(gswin64c:*)",
+      "Bash(gswin32c:*)",
+      "Bash(gs --version:*)",
+      "Bash(tree:*)",
+      "Bash(for f in config/prompts/preterite-regular-ar.json config/prompts/preterite-regular-er-ir.json config/prompts/preterite-irregular-essential.json config/prompts/preterite-irregular-common.json config/prompts/preterite-irregular-additional.json)",
+      "Bash(do echo \"=== $f ===\")",
+      "Bash(done)",
+      "Bash(start \"\" \"C:\\\\Users\\\\klein\\\\cascadeprojects\\\\portuguese-drills-expanded\\\\printables\\\\preterite-worksheet-christian-2.html\")"
     ],
     "deny": [],
     "ask": []

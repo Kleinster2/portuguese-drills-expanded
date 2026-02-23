@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/Kleinster2/portuguese-drills-expanded#readme",
   "dependencies": {
-    "wrangler": "^4.57.0"
+    "wrangler": "^4.67.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.57.0",
