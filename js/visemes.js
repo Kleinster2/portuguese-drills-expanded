@@ -644,7 +644,7 @@ const VISEME_SAMPLES = {
 };
 
 // Phonetic symbols → speakable Portuguese equivalents (for TTS)
-const PHONETIC_TO_SPEAKABLE = { 'ẽ': 'ê', 'ɐ': 'â', 'j̃': 'i', 'w̃': 'u' };
+const PHONETIC_TO_SPEAKABLE = { 'e': 'i', 'ẽ': 'ê', 'ɐ': 'â', 'j̃': 'i', 'w̃': 'u' };
 
 // Build a speakable sample from a grapheme
 function graphemeToSample(grapheme, visemeId) {
