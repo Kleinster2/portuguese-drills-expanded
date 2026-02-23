@@ -357,6 +357,7 @@ class VisemeScheduler {
     // Viseme label log: accumulates tags during speech
     this._lastLabelViseme = '';
     this._currentWordRow = null;
+    this._currentWord = '';
   }
 
   /**
@@ -438,6 +439,24 @@ class VisemeScheduler {
   }
 
   /**
+   * Append a word chip to the end of the current word row.
+   */
+  _finalizeWordRow() {
+    if (!this._currentWordRow || !this._currentWord) return;
+    const wordChip = document.createElement('span');
+    wordChip.className = 'viseme-word-chip';
+    wordChip.textContent = this._currentWord;
+    wordChip.dataset.word = this._currentWord;
+    wordChip.onclick = function() {
+      const speech = window.portugueseSpeech;
+      if (!speech) return;
+      const origSpeak = speech._originalSpeak || speech.speak.bind(speech);
+      origSpeak(this.dataset.word, { lang: 'pt-BR', rate: 0.7 });
+    };
+    this._currentWordRow.appendChild(wordChip);
+  }
+
+  /**
    * Flush any remaining unvisited timeline entries (so tags are never lost),
    * then stop the scheduler.
    */
@@ -450,6 +469,8 @@ class VisemeScheduler {
         this._nextIdx++;
       }
     }
+    // Finalize last word row (no trailing REST to trigger it)
+    this._finalizeWordRow();
     this.stop();
   }
 
@@ -457,6 +478,7 @@ class VisemeScheduler {
   clearLog() {
     this._lastLabelViseme = '';
     this._currentWordRow = null;
+    this._currentWord = '';
     const labelEl = document.getElementById('viseme-label');
     if (labelEl) labelEl.innerHTML = '';
   }
@@ -542,10 +564,12 @@ class VisemeScheduler {
     const labelEl = document.getElementById('viseme-label');
     if (!labelEl) return;
 
-    // REST → start a new word row
+    // REST → finalize current word row (add word chip at end), then start fresh
     if (visemeId === VISEME.REST) {
+      this._finalizeWordRow();
       this._lastLabelViseme = '';
       this._currentWordRow = null;
+      this._currentWord = '';
       return;
     }
 
@@ -555,29 +579,11 @@ class VisemeScheduler {
 
     // Create a word row if we don't have one
     if (!this._currentWordRow) {
-      // Remove highlight from previous last tag
-      const prevTag = labelEl.querySelector('.viseme-tag:last-child');
-      if (prevTag) prevTag.style.background = '';
-
       const row = document.createElement('div');
       row.className = 'viseme-word-row';
       labelEl.appendChild(row);
       this._currentWordRow = row;
-
-      // Add word chip at the start of the row
-      if (word) {
-        const wordChip = document.createElement('span');
-        wordChip.className = 'viseme-word-chip';
-        wordChip.textContent = word;
-        wordChip.dataset.word = word;
-        wordChip.onclick = function() {
-          const speech = window.portugueseSpeech;
-          if (!speech) return;
-          const origSpeak = speech._originalSpeak || speech.speak.bind(speech);
-          origSpeak(this.dataset.word, { lang: 'pt-BR', rate: 0.7 });
-        };
-        row.appendChild(wordChip);
-      }
+      this._currentWord = word || '';
     }
 
     const tag = document.createElement('span');

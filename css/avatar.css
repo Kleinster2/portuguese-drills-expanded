@@ -261,10 +261,6 @@
   background: #f5f3ff;
 }
 
-.viseme-tag:last-child {
-  background: #dbeafe;
-  border-color: #93c5fd;
-}
 
 /* ── Reduced motion: disable all animations, static indicator ── */
 @media (prefers-reduced-motion: reduce) {
