@@ -383,7 +383,7 @@ class PortugueseSpeech {
           for (const pair of pairs) {
             if (pair.includes(' = ')) {
               const [ptWord, enWord] = pair.split(' = ').map(s => s.trim());
-              if (ptWord) segments.push({ text: ptWord, lang: 'pt-BR' });
+              if (ptWord) this.parseUnquotedMixed(ptWord, segments);
               if (enWord) segments.push({ text: enWord, lang: 'en-US' });
             }
           }
@@ -400,7 +400,7 @@ class PortugueseSpeech {
           for (const pair of pairs) {
             if (pair.includes(' = ')) {
               const [ptWord, enWord] = pair.split(' = ').map(s => s.trim());
-              if (ptWord) segments.push({ text: ptWord, lang: 'pt-BR' });
+              if (ptWord) this.parseUnquotedMixed(ptWord, segments);
               if (enWord) segments.push({ text: enWord, lang: 'en-US' });
             }
           }
@@ -411,7 +411,7 @@ class PortugueseSpeech {
         for (const pair of pairs) {
           if (pair.includes(' = ')) {
             const [ptWord, enWord] = pair.split(' = ').map(s => s.trim());
-            if (ptWord) segments.push({ text: ptWord, lang: 'pt-BR' });
+            if (ptWord) this.parseUnquotedMixed(ptWord, segments);
             if (enWord) segments.push({ text: enWord, lang: 'en-US' });
           }
         }
@@ -494,32 +494,38 @@ class PortugueseSpeech {
   }
 
   // Parse unquoted text that may contain mixed English/Portuguese
+  // Uses word-level language detection to group consecutive same-language words
   parseUnquotedMixed(text, segments) {
-    // Split by comma or common punctuation that separates clauses
-    const parts = text.split(/([,;:]\s*)/);
+    const words = text.split(/\s+/).filter(w => w.length > 0);
+    if (words.length === 0) return;
 
-    for (let i = 0; i < parts.length; i++) {
-      const part = parts[i].trim();
-      if (!part) continue;
+    let currentLang = null;
+    let currentWords = [];
 
-      // Skip pure punctuation
-      if (/^[,;:]\s*$/.test(parts[i])) continue;
+    for (const word of words) {
+      // Strip punctuation for language detection (keep original for speech)
+      const clean = word.replace(/^[,;:!?.""\"\'()\[\]]+|[,;:!?.""\"\'()\[\]]+$/g, '');
 
-      // Determine language of this segment
-      if (this.isPortuguese(part) && !this.isEnglish(part)) {
-        segments.push({ text: part, lang: 'pt-BR' });
-      } else {
-        segments.push({ text: part, lang: 'en-US' });
+      // Detect language: Portuguese if it has PT indicators, else English
+      const lang = (clean && this.isPortuguese(clean)) ? 'pt-BR' : 'en-US';
+
+      if (lang !== currentLang && currentWords.length > 0) {
+        segments.push({ text: currentWords.join(' '), lang: currentLang });
+        currentWords = [];
       }
+      currentLang = lang;
+      currentWords.push(word);
+    }
+
+    if (currentWords.length > 0) {
+      segments.push({ text: currentWords.join(' '), lang: currentLang });
     }
   }
 
   // Simple heuristic to detect if text is English
+  // Note: returns true if English indicators are found, INDEPENDENT of Portuguese.
+  // Callers should check both isEnglish() and isPortuguese() separately for mixed text.
   isEnglish(text) {
-    // First check for Portuguese indicators
-    if (this.isPortuguese(text)) {
-      return false;
-    }
     const englishPatterns = /\b(the|is|are|was|were|have|has|had|do|does|did|will|would|could|should|can|may|might|must|shall|this|that|these|those|what|which|who|whom|whose|where|when|why|how|if|then|than|because|although|however|therefore|means|called|translation|English|mistake|correction|literally|example|practice|want|like|need|try|know|think|say|said|make|made|go|went|get|got|see|saw|come|came|take|took|give|gave|find|found|tell|told|ask|asked|use|used|work|worked|seem|seemed|feel|felt|become|became|leave|left|put|keep|kept|let|begin|began|help|helped|show|showed|hear|heard|play|played|run|ran|move|moved|live|lived|believe|believed|hold|held|bring|brought|happen|happened|write|wrote|provide|provided|sit|sat|stand|stood|lose|lost|pay|paid|meet|met|include|included|continue|continued|set|learn|learned|change|changed|lead|led|understand|understood|watch|watched|follow|followed|stop|stopped|create|created|speak|spoke|read|allow|allowed|add|added|spend|spent|grow|grew|open|opened|walk|walked|win|won|offer|offered|remember|remembered|love|loved|consider|considered|appear|appeared|buy|bought|wait|waited|serve|served|die|died|send|sent|expect|expected|build|built|stay|stayed|fall|fell|cut|reach|reached|kill|killed|remain|remained|suggest|suggested|raise|raised|pass|passed|sell|sold|require|required|report|reported|decide|decided|pull|pulled|here|there|now|just|also|only|very|good|great|cool|nice|bad|new|old|big|small|long|short|high|low|first|last|next|same|other|more|most|some|any|all|both|each|every|many|much|few|little|own|such|even|still|already|always|never|often|again|away|back|down|off|over|under|up|out|about|after|before|between|through|during|into|onto|upon|within|without|above|below|around|along|across|against|among|behind|beside|beyond|inside|outside|near|far|left|right|front|behind)\b/i;
     return englishPatterns.test(text);
   }
