@@ -34,5 +34,4 @@ test*.mp3
 test*.bin
 nul
 
-# Student data
-Students/
+# Student data (tracked — repo is private)
