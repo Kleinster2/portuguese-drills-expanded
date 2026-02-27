@@ -4,7 +4,7 @@
 
 **Full name:** Dexter Mayo
 **Email:** dextermayo4@gmail.com
-**Status:** Prospective — first lesson Thu 3/5 at 6:30pm at Frog (503 Nostrand Ave)
+**Status:** Prospective — first lesson Thu 3/5 at 6:30pm at Frog (358 Marcus Garvey Blvd)
 **Referral:** Unknown (no mention of source)
 
 ---
@@ -53,7 +53,7 @@
   - Commune NYC — Lexington Ave & Monroe St (cafe/wine bar, open till 10pm weeknights)
   - Therapy Wine Bar — 1159 Bedford Ave
   - Barb's — 380 Marcus Garvey Blvd
-  - Frog (wine bar) — 503 Nostrand Ave
+  - Frog (wine bar) — 358 Marcus Garvey Blvd
   - ~~Dynaco~~ — closed
   - ~~Casablanca Cocktail Lounge~~ — closed
   - ~~Cocktail Bedstuy~~ — not ideal
