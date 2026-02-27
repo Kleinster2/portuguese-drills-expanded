@@ -36,6 +36,7 @@
 | 2026-02-25 | Gil replied; confirmed Thu 3/5 at 6:30pm; suggested 4 spots (Commune NYC, Therapy Wine Bar, Barb's, Frog); invited Dexter to suggest his own spot |
 | 2026-02-25 | Dexter replied; chose Frog; asked if he should bring anything |
 | 2026-02-26 | Gil replied; confirmed Frog; told him just bring yourself, Gil will have everything needed |
+| 2026-02-26 | Gil replied; corrected Frog address (358 Marcus Garvey Blvd, not 503 Nostrand Ave); offered to meet elsewhere if less convenient |
 
 ---
 
@@ -165,6 +166,19 @@ Dexter
 Oi Dexter,
 
 Frog works. Let's meet there. Just bring yourself. I'll have everything we need for the lesson.
+
+See you Thursday at 6:30!
+
+Abraços,
+Gil
+
+### 2026-02-26 — Gil → Dexter
+
+Oi Dexter,
+
+I gave you the wrong address for Frog in my earlier email — sorry about that.
+It's actually at 358 Marcus Garvey Blvd, not 503 Nostrand Ave.
+If that's less convenient for you, we can meet elsewhere — just let me know.
 
 See you Thursday at 6:30!
 
