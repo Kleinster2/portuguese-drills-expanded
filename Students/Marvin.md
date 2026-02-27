@@ -85,6 +85,8 @@
 | 2026-02-03 | Session | Shared ChatGPT group chat, Verbo chegar drill |
 | 2026-02-08 | Discussion | Portuguese elections, inundações videos |
 | 2026-02-10 Tue | Imperativo | Brooklyn Navy Yard; imperative drills using [worksheet](imperativo-worksheet-navy.html) — affirmative & negative commands with irregular verbs |
+| 2026-02-20 Thu | Condicional | Handed Marvin the [condicional worksheet](condicional-worksheet-marvin.html); discussed issues with conditional usage in spoken EP (imperfeito replacing condicional for querer/poder/dever) |
+| 2026-02-26 Thu | Condicional review | Worked through [corrected worksheet](condicional-worksheet-marvin-2.html) together in session; remaining exercises assigned as homework |
 
 ---
 
