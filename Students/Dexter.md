@@ -4,7 +4,7 @@
 
 **Full name:** Dexter Mayo
 **Email:** dextermayo4@gmail.com
-**Status:** Prospective — first lesson Thu 3/5 at 6:30pm, awaiting venue confirmation
+**Status:** Prospective — first lesson Thu 3/5 at 6:30pm at Frog (503 Nostrand Ave)
 **Referral:** Unknown (no mention of source)
 
 ---
@@ -34,6 +34,8 @@
 | 2026-02-24 | Gil replied; offered 6pm or 6:30pm weeknight starts; first session is a regular lesson (no separate trial); meets at quiet spot convenient to student; asked for neighborhood and available dates next week |
 | 2026-02-24 | Dexter replied; lives in Bed-Stuy, Brooklyn; available Wed 3/4 or Thu 3/5 at 6:30pm; doesn't know late-night spots near him, open to Gil's suggestion |
 | 2026-02-25 | Gil replied; confirmed Thu 3/5 at 6:30pm; suggested 4 spots (Commune NYC, Therapy Wine Bar, Barb's, Frog); invited Dexter to suggest his own spot |
+| 2026-02-25 | Dexter replied; chose Frog; asked if he should bring anything |
+| 2026-02-26 | Gil replied; confirmed Frog; told him just bring yourself, Gil will have everything needed |
 
 ---
 
@@ -145,6 +147,26 @@ Thanks for getting back to me. Let's do Thursday, 3/5, at 6:30 pm. Here are a fe
 - Frog — 503 Nostrand Ave
 
 If you have somewhere else in mind — a cafe, a bar, whatever works — I'm open. I'm about 20 minutes away on the J train, so anywhere in the neighborhood works for me.
+
+Abraços,
+Gil
+
+### 2026-02-25 — Dexter → Gil
+
+Hi Gil,
+
+Let's meet at Frog! Is there anything specific I should bring?
+
+Thanks,
+Dexter
+
+### 2026-02-26 — Gil → Dexter
+
+Oi Dexter,
+
+Frog works. Let's meet there. Just bring yourself. I'll have everything we need for the lesson.
+
+See you Thursday at 6:30!
 
 Abraços,
 Gil
