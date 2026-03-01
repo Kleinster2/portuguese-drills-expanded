@@ -126,10 +126,11 @@
     },
     "Conditional": {
       "drills": [
-        "conditional-tense"
+        "conditional-tense-bp",
+        "conditional-tense-ep"
       ],
       "coverage": "full",
-      "notes": "Dedicated conditional drill"
+      "notes": "Split into BP and EP drills — different imperfeito/condicional usage patterns"
     },
     "Past Future": {
       "drills": [],

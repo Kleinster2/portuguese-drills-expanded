@@ -22,7 +22,7 @@
       "name": "Future & Conditional",
       "description": "Talk about future plans and hypotheticals",
       "color": "#8B5CF6",
-      "drills": ["immediate-future", "future-tense", "conditional-tense"]
+      "drills": ["immediate-future", "future-tense", "conditional-tense-bp", "conditional-tense-ep"]
     },
     "verbs-subjunctive": {
       "name": "Subjunctive Mood",
@@ -161,7 +161,7 @@
       "level": "A2",
       "difficulty": 5,
       "prerequisites": ["preterite-tense"],
-      "unlocks": ["conditional-tense", "imperfect-subjunctive"],
+      "unlocks": ["conditional-tense-bp", "conditional-tense-ep", "imperfect-subjunctive"],
       "estimatedTime": "40 min"
     },
     "immediate-future": {
@@ -175,10 +175,17 @@
       "level": "A2",
       "difficulty": 4,
       "prerequisites": ["regular-ar", "regular-er", "regular-ir", "immediate-future"],
-      "unlocks": ["conditional-tense", "future-subjunctive"],
+      "unlocks": ["conditional-tense-bp", "conditional-tense-ep", "future-subjunctive"],
       "estimatedTime": "35 min"
     },
-    "conditional-tense": {
+    "conditional-tense-bp": {
+      "level": "B1",
+      "difficulty": 5,
+      "prerequisites": ["future-tense", "imperfect-tense"],
+      "unlocks": ["present-subjunctive"],
+      "estimatedTime": "35 min"
+    },
+    "conditional-tense-ep": {
       "level": "B1",
       "difficulty": 5,
       "prerequisites": ["future-tense", "imperfect-tense"],
@@ -188,7 +195,7 @@
     "present-subjunctive": {
       "level": "B1",
       "difficulty": 7,
-      "prerequisites": ["irregular-verbs", "conditional-tense"],
+      "prerequisites": ["irregular-verbs", "conditional-tense-bp"],
       "unlocks": ["imperfect-subjunctive", "future-subjunctive"],
       "estimatedTime": "50 min"
     },
@@ -431,7 +438,8 @@
         "reflexive-verbs",
         "object-pronouns",
         "future-tense",
-        "conditional-tense",
+        "conditional-tense-bp",
+        "conditional-tense-ep",
         "imperative",
         "por-vs-para",
         "contractions-de",
