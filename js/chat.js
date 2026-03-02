@@ -654,15 +654,30 @@ function addMessageToChat(sender, content) {
       : content.replace(/\[CHIPS(-ROW[12])?:\s*[^\]]+\]/gi, '').trim();
 
     const escapedText = escapeHtml(displayContent).replace(/"/g, '&quot;');
-    const listenBtnHtml = (content !== '...' && window.portugueseSpeech)
-      ? `<div class="mt-2 flex items-center gap-3"><button onclick="speakDrillMessage(this)" data-msg-text="${escapedText}" class="text-green-600 hover:text-green-800 text-sm flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg><span>Listen</span></button><button onclick="speakDrillMessage(this, 0.65)" data-msg-text="${escapedText}" class="text-green-600 hover:text-green-800 text-sm flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Slow</span></button><button onclick="speakDrillMessage(this, 0.45)" data-msg-text="${escapedText}" class="text-green-600 hover:text-green-800 text-sm flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Slower</span></button><button onclick="speakDrillMessage(this, 0.3)" data-msg-text="${escapedText}" class="text-green-600 hover:text-green-800 text-sm flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Slowest</span></button></div>`
-      : '';
+    let formattedContent = formatAIMessage(displayContent);
+
+    // Inject listen buttons right after the "Full sentence:" line
+    const hasSentence = content !== '...' && !content.includes('______') || content.toLowerCase().includes('sentence:');
+    if (hasSentence && window.portugueseSpeech) {
+      const listenBtnHtml = `<div class="mt-1 mb-1 flex items-center gap-3"><button onclick="speakDrillMessage(this)" data-msg-text="${escapedText}" class="text-green-600 hover:text-green-800 text-sm flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg><span>Listen</span></button><button onclick="speakDrillMessage(this, 0.65)" data-msg-text="${escapedText}" class="text-green-600 hover:text-green-800 text-sm flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Slow</span></button><button onclick="speakDrillMessage(this, 0.45)" data-msg-text="${escapedText}" class="text-green-600 hover:text-green-800 text-sm flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Slower</span></button><button onclick="speakDrillMessage(this, 0.3)" data-msg-text="${escapedText}" class="text-green-600 hover:text-green-800 text-sm flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Slowest</span></button></div>`;
+      // Insert after the line containing "Full sentence:" and its Portuguese text
+      formattedContent = formattedContent.replace(
+        /(<strong>.*?[Ff]ull(?:\s+correct)?\s+sentence:.*?<\/strong>.*?)(<br>)/i,
+        '$1' + listenBtnHtml + '$2'
+      );
+      // Fallback: if "Full sentence:" isn't bolded, match plain text
+      if (!formattedContent.includes('speakDrillMessage')) {
+        formattedContent = formattedContent.replace(
+          /([Ff]ull(?:\s+correct)?\s+sentence:\s*.+?)(<br>)/i,
+          '$1' + listenBtnHtml + '$2'
+        );
+      }
+    }
 
     messageDiv.className = 'flex';
     messageDiv.innerHTML = `
       <div class="bg-slate-100 rounded-2xl p-3 max-w-2xl">
-        <div class="message-content">${formatAIMessage(displayContent)}</div>
-        ${listenBtnHtml}
+        <div class="message-content">${formattedContent}</div>
       </div>
     `;
   }
@@ -1157,7 +1172,10 @@ function updateAvatarStatus(status) {
 function speakDrillMessage(buttonEl, rate) {
   const text = buttonEl.getAttribute('data-msg-text');
   if (text && window.portugueseSpeech) {
+    // Extract just the Portuguese sentence from "Full sentence:" or "Full correct sentence:" line
+    const match = text.match(/[Ff]ull(?:\s+correct)?\s+sentence:\s*(.+?)(?:\n|\(|$)/);
+    const sentence = match ? match[1].trim() : text;
     const options = rate ? { rate } : {};
-    window.portugueseSpeech.speakMixed(text, options);
+    window.portugueseSpeech.speakMixed(sentence, options);
   }
 }
