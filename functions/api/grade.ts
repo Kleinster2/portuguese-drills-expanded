@@ -80,7 +80,7 @@ async function callAnthropic(apiKey: string, systemMessage: string, userMessage:
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      model: 'claude-opus-4-5-20251101',
+      model: 'claude-opus-4-6',
       temperature: 0.2,
       max_tokens: 250,
       system: systemMessage,
