@@ -8,6 +8,7 @@
 **Current level:** [[Phase 1 - A1]] (upper — writes comfortably in Portuguese with minor errors)
 **Session frequency:** Weekly (flexible — typically Wed/Thu/Fri)
 **Location:** NYC area (meets at cafés: PlantShed, Café Kitsuné, Toby's Estate, Air Mail)
+**Rate:** $60/session (90 min)
 **Payment:** Cash or Venmo
 **Referral:** Idlewild (direct introduction via email, Mar 17, 2022)
 
@@ -24,6 +25,7 @@
 ## Current focus
 
 - Adv Beg 9 worksheet (reflexive/reciprocal verbs, superlatives, ouvir/pedir, acabar de, mal+verbo, precisar/ter que/ter de)
+- BP Condicional worksheet (started Feb 27)
 
 ---
 
@@ -95,6 +97,8 @@
 | 2026-01-27 Tue | Check-in | Fumigation completed, apartment cleared; requested lessons week of Feb 9 |
 | 2026-01-30 Thu | Check-in | Told Gil about bed bug dogs: Matcha and Trooper |
 | 2026-02-11 Wed | Session + Materials | Met at Toby's Estate 2:30 PM; handed Adv Beg 9 worksheet; discussed bedbug infestation |
+| 2026-02-27 Fri | Session | Toby's Estate; 3 PM; worked BP condicional worksheet (generated that day); sent name etymology follow-up (Jacob/Ya'akov → Tiago/James/Santiago/Iago) |
+| 2026-03-05 Thu | Session | Toby's Estate; 11:30 AM |
 
 ---
 

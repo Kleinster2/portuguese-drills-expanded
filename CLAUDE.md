@@ -4,6 +4,18 @@ AI-powered Portuguese language learning. Brazilian Portuguese by default, Europe
 
 **[Live Site](https://portuguese-drills-expanded.pages.dev)** | **[Changelog](CHANGELOG.md)**
 
+## Core Integrations
+
+This is a teaching platform, not just a code project. These integrations are central to how it operates:
+
+- **Google Calendar (Gilberto Aulas)**: Scheduling, session tracking, student confirmations. Calendar ID: `fmn4i9pf5s3ile6hbl5d9rngeg@group.calendar.google.com`. Always check all calendars, not just primary.
+- **WhatsApp**: Primary communication channel with students.
+- **Student files** (`Students/`): One file per student — profile, session log, notes, communications.
+
+When any student-related topic comes up, proactively check: student file, WhatsApp, and the Aulas calendar. Don't wait to be asked.
+
+All student sessions are **90 minutes**. Calendar events with attendees must not contain internal notes in the description (attendees can see it).
+
 ## Features
 
 ### 1. Diagnostic Test
