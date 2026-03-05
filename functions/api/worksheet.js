@@ -88,7 +88,7 @@ export async function onRequestPost({ request, env }) {
       },
       body: JSON.stringify({
         model: 'claude-opus-4-6',
-        max_tokens: 8000,
+        max_tokens: 12000,
         temperature: 0.7,
         system: systemPrompt,
         messages: [

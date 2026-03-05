@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Imperfeito de Dupla Fun&ccedil;&atilde;o: Desambigua&ccedil;&atilde;o</title>
+<style>
+    @page { margin: 0.5in; }
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      padding: 20px;
+      color: #1a1a6e;
+    }
+    h1 { font-size: 20px; margin: 0 0 6px 0; font-weight: bold; }
+    h2 { font-size: 16px; margin: 20px 0 12px 0; font-weight: bold; }
+    h3 { font-size: 14px; margin: 16px 0 8px 0; font-weight: bold; font-style: italic; }
+    .subtitle { font-size: 12px; font-style: italic; margin-bottom: 18px; color: #444; }
+    .grammar-box {
+      border: 1.5px solid #1a1a6e;
+      padding: 10px 14px;
+      margin-bottom: 18px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .grammar-box b { color: #1a1a6e; }
+    .usage-box {
+      border: 1.5px solid #b45309;
+      background: #fffbeb;
+      padding: 10px 14px;
+      margin-bottom: 18px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .usage-box b { color: #92400e; }
+    .item { margin-bottom: 14px; }
+    .prompt { margin-bottom: 4px; }
+    .line {
+      border-bottom: 1px solid #1a1a6e;
+      height: 22px;
+      margin-bottom: 4px;
+    }
+    .example { font-style: italic; font-size: 13px; color: #555; margin-bottom: 14px; }
+    .page-break { page-break-before: always; }
+    .footer-note {
+      text-align: right;
+      font-style: italic;
+      font-size: 11px;
+      margin-top: 30px;
+    }
+    .section-note {
+      font-size: 12px;
+      font-style: italic;
+      color: #666;
+      margin-bottom: 12px;
+    }
+    .answer-key {
+      page-break-before: always;
+      margin-top: 30px;
+    }
+    .answer-key h2 {
+      background: #1a1a6e;
+      color: white;
+      padding: 5px 10px;
+    }
+    .answers {
+      columns: 3;
+      column-gap: 20px;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .answer-item {
+      margin-bottom: 4px;
+      break-inside: avoid;
+    }
+    .answer-item .tag {
+      font-size: 10px;
+      color: #666;
+      font-style: italic;
+    }
+    .open-answers {
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .open-answers .answer-item {
+      margin-bottom: 6px;
+    }
+    .teacher-notes {
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .teacher-notes h1 {
+      font-size: 18px;
+      color: #4338ca;
+      border-bottom: 2px solid #6366f1;
+      padding-bottom: 8px;
+    }
+    .teacher-notes h2 {
+      font-size: 15px;
+      color: #4338ca;
+    }
+    .teacher-notes .callout {
+      background: #e0e7ff;
+      border-left: 3px solid #4338ca;
+      padding: 8px 12px;
+      margin: 10px 0;
+    }
+    @media print {
+      body { padding: 0.4in; }
+      .no-print { display: none !important; }
+    }
+    table.clue-table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 8px 0;
+      font-size: 12px;
+    }
+    table.clue-table th, table.clue-table td {
+      border: 1px solid #1a1a6e;
+      padding: 5px 8px;
+      text-align: left;
+    }
+    table.clue-table th {
+      background: #e8e8f4;
+      font-weight: bold;
+    }
+    table.gradient-table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 8px 0;
+      font-size: 12px;
+    }
+    table.gradient-table th, table.gradient-table td {
+      border: 1px solid #b45309;
+      padding: 5px 8px;
+      text-align: left;
+    }
+    table.gradient-table th {
+      background: #fef3c7;
+      font-weight: bold;
+      color: #92400e;
+    }
+</style>
+</head>
+<body>
+
+<h1>Imperfeito de Dupla Fun&ccedil;&atilde;o: Desambigua&ccedil;&atilde;o</h1>
+<div class="subtitle">Portugu&ecirc;s Brasileiro &bull; Student: Student &bull; Date: _______________</div>
+
+<!-- GRAMMAR BOX -->
+<div class="grammar-box">
+<b>The Double-Duty Problem:</b> In Brazilian Portuguese, the <b>imperfeito</b> form carries <b>two distinct meanings</b> depending on context:<br>
+&bull; <b>Past habitual</b> (&ldquo;used to&rdquo;): <i>Eu <b>queria</b> ser astronauta.</i> = &ldquo;I <b>used to want</b> to be an astronaut.&rdquo;<br>
+&bull; <b>Polite / softened</b> (&ldquo;would&rdquo;): <i>Eu <b>queria</b> um caf&eacute;, por favor.</i> = &ldquo;I <b>would like</b> a coffee, please.&rdquo;<br><br>
+<b>Same conjugation, two meanings. Context is everything.</b><br><br>
+
+<table class="clue-table">
+<tr><th>Past Habitual Signals</th><th>Polite / Conditional Signals</th></tr>
+<tr><td>quando era crian&ccedil;a / quando era jovem</td><td>por favor</td></tr>
+<tr><td>antes / antigamente / naquela &eacute;poca</td><td>para mim / para voc&ecirc;</td></tr>
+<tr><td>todo dia / sempre / geralmente (past context)</td><td>hoje / agora / amanh&atilde; (present/future)</td></tr>
+<tr><td>Other imperfeito verbs in the sentence (era, estava, mor&aacute;vamos&hellip;)</td><td>Question intonation with &ldquo;voc&ecirc;&rdquo; as subject</td></tr>
+<tr><td>Narrative past context</td><td>No other past-tense markers in the sentence</td></tr>
+</table>
+
+<b>High-ambiguity verbs:</b> querer (<i>queria</i>), poder (<i>podia</i>), dever (<i>devia</i>), ter (<i>tinha</i>) &mdash; these freely carry both meanings.<br>
+<b>Low-ambiguity verbs:</b> gostar (<i>gostava</i> &rarr; almost always past), saber (<i>sabia</i> &rarr; leans past), preferir (<i>preferia</i> &rarr; leans past).
+</div>
+
+<!-- USAGE BOX -->
+<div class="usage-box">
+<b>The Gradient as a Disambiguation Mechanism:</b><br><br>
+<table class="gradient-table">
+<tr><th>Verb</th><th>Polite Form Used</th><th>Why?</th></tr>
+<tr><td>querer</td><td><b>queria</b> (imperfeito ~100%)</td><td>Context easily disambiguates; &ldquo;quereria&rdquo; is dead in BP</td></tr>
+<tr><td>poder</td><td><b>podia / poderia</b> (~50/50)</td><td>Both sound natural; condicional adds extra formality</td></tr>
+<tr><td>dever</td><td><b>devia / deveria</b> (~50/50)</td><td>Both common; &ldquo;deveria&rdquo; slightly more formal</td></tr>
+<tr><td>ter</td><td><b>tinha</b> (imperfeito common)</td><td>Context usually disambiguates</td></tr>
+<tr><td>gostar</td><td><b>gostaria</b> (condicional ~100%)</td><td>&ldquo;Gostava&rdquo; reads as past habitual &mdash; too ambiguous</td></tr>
+<tr><td>saber</td><td><b>saberia</b> (condicional preferred)</td><td>&ldquo;Sabia&rdquo; leans strongly past</td></tr>
+<tr><td>preferir</td><td><b>preferiria</b> (condicional preferred)</td><td>&ldquo;Preferia&rdquo; leans past</td></tr>
+</table>
+<b>Key insight:</b> Verbs that can be easily disambiguated by context use the imperfeito for polite speech. Verbs where the imperfeito would almost always be read as past habitual keep the condicional &mdash; <b>the gradient exists because of the disambiguation problem</b>.
+</div>
+
+<!-- SECTION A -->
+<h2>A. Side-by-Side Pairs: Identify the Meaning</h2>
+<div class="section-note">For each pair, both sentences use the same verb form. Identify the meaning in each: write <b>&ldquo;past habitual&rdquo;</b> or <b>&ldquo;polite/conditional&rdquo;</b> and give the English equivalent of the bolded verb.</div>
+
+<div class="example">
+<b>Example:</b><br>
+A) Quando eu era crian&ccedil;a, eu <b>queria</b> ser astronauta.<br>
+B) Eu <b>queria</b> um caf&eacute;, por favor.<br>
+&rarr; A = past habitual &mdash; &ldquo;used to want&rdquo; (signal: <i>quando era crian&ccedil;a</i>)<br>
+&rarr; B = polite &mdash; &ldquo;would like&rdquo; (signal: <i>por favor</i>, present-moment ordering)
+</div>
+
+<div class="item">
+<div class="prompt">1. A) Quando eu era jovem, eu <b>queria</b> morar no Rio de Janeiro.</div>
+<div class="line"></div>
+<div class="prompt">&nbsp;&nbsp;&nbsp;B) Eu <b>queria</b> trocar esse produto, por favor.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">2. A) Antes, eu <b>podia</b> correr 10 km sem parar.</div>
+<div class="line"></div>
+<div class="prompt">&nbsp;&nbsp;&nbsp;B) Voc&ecirc; <b>podia</b> me ajudar com essa mala?</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">3. A) Ele <b>devia</b> muito dinheiro ao banco naquela &eacute;poca.</div>
+<div class="line"></div>
+<div class="prompt">&nbsp;&nbsp;&nbsp;B) Voc&ecirc; <b>devia</b> descansar mais hoje.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">4. A) Eu <b>tinha</b> um cachorro quando morava em Belo Horizonte.</div>
+<div class="line"></div>
+<div class="prompt">&nbsp;&nbsp;&nbsp;B) Voc&ecirc; <b>tinha</b> troco para mim?</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">5. A) Antigamente, a gente <b>queria</b> viajar para o exterior todo ano.</div>
+<div class="line"></div>
+<div class="prompt">&nbsp;&nbsp;&nbsp;B) A gente <b>queria</b> reservar uma mesa para quatro, por favor.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">6. A) Naquela &eacute;poca, ela <b>podia</b> comer de tudo sem engordar.</div>
+<div class="line"></div>
+<div class="prompt">&nbsp;&nbsp;&nbsp;B) Voc&ecirc; <b>podia</b> fechar a janela, por favor?</div>
+<div class="line"></div>
+</div>
+
+<!-- SECTION B -->
+<h2>B. Identify the Meaning: Single Sentences</h2>
+<div class="section-note">For each sentence, identify whether the bolded imperfeito form means <b>&ldquo;past habitual&rdquo;</b> or <b>&ldquo;polite/conditional&rdquo;</b>. Write the English meaning of the bolded word and identify the context clue(s) that reveal the meaning.</div>
+
+<div class="example">
+<b>Example:</b> Eu <b>queria</b> falar com o gerente, por favor.<br>
+&rarr; Polite &mdash; &ldquo;would like&rdquo; &mdash; Clue: <i>por favor</i>, present-moment request.
+</div>
+
+<div class="item">
+<div class="prompt">7. Quando eu era crian&ccedil;a, eu <b>queria</b> ser jogador de futebol.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">8. Eu <b>queria</b> dois p&atilde;es de queijo, por favor.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">9. Antes, ele <b>podia</b> trabalhar 12 horas por dia sem problema.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">10. Voc&ecirc; <b>podia</b> me passar o card&aacute;pio?</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">11. Ela sempre <b>devia</b> favores para todo mundo no bairro.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">12. Voc&ecirc; <b>devia</b> ligar para a sua m&atilde;e hoje.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">13. Antigamente, a gente <b>tinha</b> mais tempo para se divertir.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">14. Voc&ecirc; <b>tinha</b> um minuto para mim agora?</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">15. Quando eu morava em S&atilde;o Paulo, eu <b>queria</b> mudar de emprego todo m&ecirc;s.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">16. Eu <b>queria</b> saber o pre&ccedil;o desse celular, por favor.</div>
+<div class="line"></div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- SECTION C -->
+<h2>C. Explain the Gradient</h2>
+<div class="section-note">Answer each question in English. Explain <b>why</b> the gradient exists for that verb, connecting it to the disambiguation problem. Write 2&ndash;3 sentences.</div>
+
+<div class="example">
+<b>Example:</b> Why do Brazilians say &ldquo;gostaria de um cappuccino&rdquo; instead of &ldquo;gostava de um cappuccino&rdquo;?<br>
+&rarr; Because &ldquo;gostava&rdquo; would almost always be read as &ldquo;used to like&rdquo; &mdash; the past habitual meaning is too strong. The condicional &ldquo;gostaria&rdquo; keeps the polite meaning clear and avoids ambiguity.
+</div>
+
+<div class="item">
+<div class="prompt">17. Why can Brazilians say &ldquo;Eu queria um caf&eacute;&rdquo; for a polite request, but NOT &ldquo;Eu gostava de um caf&eacute;&rdquo;?</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">18. Why is &ldquo;poderia&rdquo; equally as natural as &ldquo;podia&rdquo; for polite requests, while &ldquo;quereria&rdquo; is essentially dead in BP?</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">19. Why does &ldquo;saber&rdquo; prefer the condicional (&ldquo;saberia&rdquo;) for polite/hypothetical meaning rather than the imperfeito (&ldquo;sabia&rdquo;)?</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">20. A student says: &ldquo;If context always disambiguates, why doesn&rsquo;t every verb just use the imperfeito for polite speech?&rdquo; How would you respond?</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">21. Why does &ldquo;preferir&rdquo; lean toward the condicional (&ldquo;preferiria&rdquo;) for polite use, similar to &ldquo;gostar&rdquo;?</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">22. Explain why &ldquo;ter&rdquo; can use &ldquo;tinha&rdquo; for both meanings relatively freely, like &ldquo;querer.&rdquo;</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<!-- SECTION D -->
+<h2>D. Rewrite for Clarity</h2>
+<div class="section-note">Each sentence below is <b>ambiguous</b>. Rewrite it to clearly express the meaning indicated in brackets. You may add time markers, change the verb form, or restructure the sentence.</div>
+
+<div class="example">
+<b>Example:</b> <i>Ela queria morar no Rio.</i> &rarr; [Make it clearly PAST HABITUAL]<br>
+&rarr; <i>Quando era jovem, ela queria morar no Rio.</i>
+</div>
+
+<div class="item">
+<div class="prompt">23. <i>Eu queria falar com voc&ecirc;.</i> &rarr; [Make it clearly POLITE / present request]</div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">24. <i>Eu queria falar com voc&ecirc;.</i> &rarr; [Make it clearly PAST HABITUAL]</div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">25. <i>Eu podia fazer isso.</i> &rarr; [Make it clearly PAST HABITUAL &mdash; &ldquo;used to be able to&rdquo;]</div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">26. <i>Eu podia fazer isso.</i> &rarr; [Make it clearly POLITE &mdash; &ldquo;I could do that (for you)&rdquo;]</div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">27. <i>Ela devia estudar mais.</i> &rarr; [Make it clearly ADVICE &mdash; &ldquo;she should&rdquo;]</div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">28. <i>Ele tinha um carro bom.</i> &rarr; [Make it clearly PAST HABITUAL]</div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- SECTION E -->
+<h2>E. Choose the Correct Form</h2>
+<div class="section-note">For each sentence, choose the best form from the options in parentheses. Consider whether the context is past habitual or polite, and whether the verb&rsquo;s position on the gradient allows the imperfeito for polite use.</div>
+
+<div class="example">
+<b>Example:</b> Eu ___________ (gostava / gostaria) de experimentar esse prato.<br>
+&rarr; <b>gostaria</b> &mdash; polite request; &ldquo;gostava&rdquo; would read as &ldquo;used to like.&rdquo;
+</div>
+
+<div class="item">
+<div class="prompt">29. Eu ___________ (queria / quereria) um suco de laranja, por favor.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">30. Antigamente, ela ___________ (gostava / gostaria) muito de samba.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">31. Voc&ecirc; ___________ (sabia / saberia) me dizer onde fica a esta&ccedil;&atilde;o de &ocirc;nibus?</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">32. Naquela &eacute;poca, eu ___________ (sabia / saberia) falar franc&ecirc;s fluentemente.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">33. Eu ___________ (preferia / preferiria) o lugar perto da janela, por favor.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">34. Quando era crian&ccedil;a, ela ___________ (preferia / preferiria) brincar sozinha.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">35. Voc&ecirc; ___________ (podia / poderia) me emprestar uma caneta? (Both are acceptable &mdash; explain why.)</div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<!-- SECTION F -->
+<h2>F. Translation &amp; Free Response</h2>
+<div class="section-note">Translate the English sentences into Brazilian Portuguese. Pay attention to whether the imperfeito or condicional is appropriate, and use context clues to make the meaning clear.</div>
+
+<div class="example">
+<b>Example:</b> &ldquo;I would like a glass of water, please.&rdquo;<br>
+&rarr; <i>Eu queria um copo d&rsquo;&aacute;gua, por favor.</i> (imperfeito &mdash; querer uses imperfeito for polite)
+</div>
+
+<div class="item">
+<div class="prompt">36. &ldquo;When I was young, I used to want to be a doctor.&rdquo;</div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">37. &ldquo;Could you help me with this, please?&rdquo;</div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">38. &ldquo;We would like to make a reservation for tonight.&rdquo; (Use &ldquo;a gente&rdquo;)</div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">39. &ldquo;I used to like this neighborhood, but it changed a lot.&rdquo;</div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">40. &ldquo;Would you know how to get to Copacabana from here?&rdquo;</div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+
+<div class="footer-note">Imperfeito de Dupla Fun&ccedil;&atilde;o &bull; Portugu&ecirc;s Brasileiro &bull; Level 3: Disambiguation</div>
+
+<!-- ANSWER KEY -->
+<div class="answer-key">
+<h2>Answer Key</h2>
+
+<h3>A. Side-by-Side Pairs</h3>
+<div class="open-answers">
+<div class="answer-item"><b>1.</b> A) Past habitual &mdash; &ldquo;used to want&rdquo; <span class="tag">(clue: &ldquo;quando eu era jovem&rdquo;)</span><br>
+&nbsp;&nbsp;&nbsp;B) Polite &mdash; &ldquo;would like&rdquo; <span class="tag">(clue: &ldquo;por favor&rdquo;, present-moment exchange)</span></div>
+
+<div class="answer-item"><b>2.</b> A) Past habitual &mdash; &ldquo;used to be able to&rdquo; <span class="tag">(clue: &ldquo;antes&rdquo;)</span><br>
+&nbsp;&nbsp;&nbsp;B) Polite &mdash; &ldquo;could you&rdquo; <span class="tag">(clue: question with &ldquo;voc&ecirc;&rdquo;, present-moment request)</span></div>
+
+<div class="answer-item"><b>3.</b> A) Past habitual &mdash; &ldquo;owed&rdquo; / &ldquo;used to owe&rdquo; <span class="tag">(clue: &ldquo;naquela &eacute;poca&rdquo;)</span><br>
+&nbsp;&nbsp;&nbsp;B) Polite/advice &mdash; &ldquo;should&rdquo; <span class="tag">(clue: &ldquo;hoje&rdquo;, present-moment advice)</span></div>
+
+<div class="answer-item"><b>4.</b> A) Past habitual &mdash; &ldquo;had&rdquo; / &ldquo;used to have&rdquo; <span class="tag">(clue: &ldquo;quando morava em BH&rdquo;)</span><br>
+&nbsp;&nbsp;&nbsp;B) Polite &mdash; &ldquo;would you have&rdquo; <span class="tag">(clue: &ldquo;para mim&rdquo;, present-moment request)</span></div>
+
+<div class="answer-item"><b>5.</b> A) Past habitual &mdash; &ldquo;used to want&rdquo; <span class="tag">(clue: &ldquo;antigamente&rdquo;)</span><br>
+&nbsp;&nbsp;&nbsp;B) Polite &mdash; &ldquo;would like&rdquo; <span class="tag">(clue: &ldquo;por favor&rdquo;, present-moment reservation)</span></div>
+
+<div class="answer-item"><b>6.</b> A) Past habitual &mdash; &ldquo;used to be able to&rdquo; <span class="tag">(clue: &ldquo;naquela &eacute;poca&rdquo;)</span><br>
+&nbsp;&nbsp;&nbsp;B) Polite &mdash; &ldquo;could you&rdquo; <span class="tag">(clue: &ldquo;por favor&rdquo;, question with &ldquo;voc&ecirc;&rdquo;)</span></div>
+</div>
+
+<h3>B. Identify the Meaning: Single Sentences</h3>
+<div class="open-answers">
+<div class="answer-item"><b>7.</b> Past habitual &mdash; &ldquo;used to want&rdquo; <span class="tag">(clue: &ldquo;quando eu era crian&ccedil;a&rdquo;)</span></div>
+<div class="answer-item"><b>8.</b> Polite &mdash; &ldquo;would like&rdquo; <span class="tag">(clue: &ldquo;por favor&rdquo;, ordering food)</span></div>
+<div class="answer-item"><b>9.</b> Past habitual &mdash; &ldquo;used to be able to&rdquo; <span class="tag">(clue: &ldquo;antes&rdquo;)</span></div>
+<div class="answer-item"><b>10.</b> Polite &mdash; &ldquo;could you&rdquo; <span class="tag">(clue: question with &ldquo;voc&ecirc;&rdquo;, present-moment request, no past markers)</span></div>
+<div class="answer-item"><b>11.</b> Past habitual &mdash; &ldquo;used to owe&rdquo; <span class="tag">(clue: &ldquo;sempre&rdquo; with past context)</span></div>
+<div class="answer-item"><b>12.</b> Polite/advice &mdash; &ldquo;should&rdquo; <span class="tag">(clue: &ldquo;hoje&rdquo;, present-moment advice)</span></div>
+<div class="answer-item"><b>13.</b> Past habitual &mdash; &ldquo;used to have&rdquo; <span class="tag">(clue: &ldquo;antigamente&rdquo;)</span></div>
+<div class="answer-item"><b>14.</b> Polite &mdash; &ldquo;would you have&rdquo; <span class="tag">(clue: &ldquo;para mim&rdquo;, &ldquo;agora&rdquo;, present-moment request)</span></div>
+<div class="answer-item"><b>15.</b> Past habitual &mdash; &ldquo;used to want&rdquo; <span class="tag">(clue: &ldquo;quando eu morava em S&atilde;o Paulo&rdquo;)</span></div>
+<div class="answer-item"><b>16.</b> Polite &mdash; &ldquo;would like&rdquo; <span class="tag">(clue: &ldquo;por favor&rdquo;, present-moment inquiry)</span></div>
+</div>
+
+<h3>C. Explain the Gradient</h3>
+<div class="open-answers">
+<div class="answer-item"><b>17.</b> &ldquo;Queria&rdquo; in a present-moment context (ordering at a caf&eacute;) is clearly polite &mdash; the context disambiguates. But &ldquo;gostava&rdquo; in that same context would still sound like &ldquo;used to like&rdquo; (past habitual), so speakers use &ldquo;gostaria&rdquo; to keep the polite meaning clear.</div>
+
+<div class="answer-item"><b>18.</b> &ldquo;Poder&rdquo; sits at roughly 50/50 on the gradient &mdash; both &ldquo;podia&rdquo; and &ldquo;poderia&rdquo; sound perfectly natural for polite requests. But &ldquo;querer&rdquo; went almost 100% imperfeito for polite use &mdash; &ldquo;quereria&rdquo; simply fell out of usage. If a more formal alternative to &ldquo;queria&rdquo; is needed, speakers use &ldquo;gostaria de&rdquo; instead.</div>
+
+<div class="answer-item"><b>19.</b> &ldquo;Sabia&rdquo; leans very strongly toward the past habitual meaning (&ldquo;used to know&rdquo;). If you said &ldquo;Voc&ecirc; sabia me dizer onde fica...?&rdquo; it would likely be misread as &ldquo;Did you used to know how to tell me...?&rdquo; which makes no sense. &ldquo;Saberia&rdquo; keeps the polite/hypothetical meaning clear.</div>
+
+<div class="answer-item"><b>20.</b> Context does NOT always disambiguate. For verbs like &ldquo;gostar,&rdquo; &ldquo;saber,&rdquo; and &ldquo;preferir,&rdquo; the imperfeito form is so strongly associated with past habitual meaning that even in present-moment contexts, listeners default to the past reading. The gradient exists precisely because some verbs need the condicional to stay unambiguous, while others (like &ldquo;querer&rdquo;) don&rsquo;t.</div>
+
+<div class="answer-item"><b>21.</b> Like &ldquo;gostar,&rdquo; &ldquo;preferia&rdquo; is strongly associated with past habitual meaning (&ldquo;used to prefer&rdquo;). Saying &ldquo;Eu preferia o lugar perto da janela&rdquo; would likely be read as &ldquo;I used to prefer the seat by the window.&rdquo; The condicional &ldquo;preferiria&rdquo; keeps the polite/present meaning clear.</div>
+
+<div class="answer-item"><b>22.</b> &ldquo;Ter&rdquo; behaves like &ldquo;querer&rdquo; in that context clues usually disambiguate easily. &ldquo;Voc&ecirc; tinha troco para mim?&rdquo; is clearly a present-moment request (polite), while &ldquo;Eu tinha um cachorro quando era crian&ccedil;a&rdquo; is clearly past. The verb&rsquo;s meaning is concrete enough that the surrounding context reliably signals which reading is intended.</div>
+</div>
+
+<h3>D. Rewrite for Clarity</h3>
+<div class="open-answers">
+<div class="answer-item"><b>23.</b> <i>Eu queria falar com voc&ecirc;, por favor.</i> OR <i>Eu queria falar com voc&ecirc; agora, se poss&iacute;vel.</i> <span class="tag">(Adding present-moment anchors: &ldquo;por favor,&rdquo; &ldquo;agora&rdquo;)</span></div>
+
+<div class="answer-item"><b>24.</b> <i>Quando eu era crian&ccedil;a, eu sempre queria falar com voc&ecirc;.</i> OR <i>Antigamente, eu queria falar com voc&ecirc;.</i> <span class="tag">(Adding past-time markers)</span></div>
+
+<div class="answer-item"><b>25.</b> <i>Antes, eu podia fazer isso.</i> OR <i>Naquela &eacute;poca, eu podia fazer isso.</i> <span class="tag">(Adding past-time marker)</span></div>
+
+<div class="answer-item"><b>26.</b> <i>Eu podia fazer isso para voc&ecirc;, se quiser.</i> OR <i>Eu poderia fazer isso para voc&ecirc;.</i> <span class="tag">(Adding present-moment anchor &ldquo;para voc&ecirc;, se quiser&rdquo; or switching to condicional)</span></div>
+
+<div class="answer-item"><b>27.</b> <i>Ela devia estudar mais &mdash; a prova &eacute; amanh&atilde;.</i> OR <i>Ela deveria estudar mais.</i> <span class="tag">(Adding present/future anchor or switching to condicional)</span></div>
+
+<div class="answer-item"><b>28.</b> <i>Naquela &eacute;poca, ele tinha um carro bom.</i> OR <i>Quando morava em Curitiba, ele tinha um carro bom.</i> <span class="tag">(Adding past-time marker)</span></div>
+</div>
+
+<h3>E. Choose the Correct Form</h3>
+<div class="open-answers">
+<div class="answer-item"><b>29.</b> <b>queria</b> <span class="tag">(&ldquo;Quereria&rdquo; is dead in BP; querer uses imperfeito ~100% for polite speech. Context &ldquo;por favor&rdquo; disambiguates.)</span></div>
+
+<div class="answer-item"><b>30.</b> <b>gostava</b> <span class="tag">(Past habitual &mdash; &ldquo;antigamente&rdquo; signals past. &ldquo;Gostaria&rdquo; would be wrong here as this is not a polite request.)</span></div>
+
+<div class="answer-item"><b>31.</b> <b>saberia</b> <span class="tag">(Polite request; &ldquo;sabia&rdquo; would read as &ldquo;did you used to know&rdquo; &mdash; too ambiguous. Saber keeps condicional for polite use.)</span></div>
+
+<div class="answer-item"><b>32.</b> <b>sabia</b> <span class="tag">(Past habitual &mdash; &ldquo;naquela &eacute;poca&rdquo; signals past. &ldquo;Used to know.&rdquo;)</span></div>
+
+<div class="answer-item"><b>33.</b> <b>preferiria</b> <span class="tag">(Polite request; &ldquo;preferia&rdquo; would lean toward &ldquo;used to prefer.&rdquo; Preferir keeps condicional for polite use.)</span></div>
+
+<div class="answer-item"><b>34.</b> <b>preferia</b> <span class="tag">(Past habitual &mdash; &ldquo;quando era crian&ccedil;a&rdquo; signals past. &ldquo;Used to prefer.&rdquo;)</span></div>
+
+<div class="answer-item"><b>35.</b> Both <b>podia</b> and <b>poderia</b> are acceptable. <span class="tag">Poder sits at ~50/50 on the gradient. &ldquo;Podia&rdquo; is slightly more informal/common; &ldquo;poderia&rdquo; is slightly more formal. Both are clearly polite here due to the question format and &ldquo;voc&ecirc;&rdquo; subject with no past markers.)</span></div>
+</div>
+
+<h3>F. Translation &amp; Free Response</h3>
+<div class="open-answers">
+<div class="answer-item"><b>36.</b> <i>Quando eu era jovem, eu queria ser m&eacute;dico(a).</i> <span class="tag">(Imperfeito &mdash; past habitual, signaled by &ldquo;quando eu era jovem&rdquo;)</span></div>
+
+<div class="answer-item"><b>37.</b> <i>Voc&ecirc; podia me ajudar com isso, por favor?</i> OR <i>Voc&ecirc; poderia me ajudar com isso, por favor?</i> <span class="tag">(Both acceptable &mdash; poder is ~50/50 on the gradient. Note BP proclisis: &ldquo;me ajudar.&rdquo;)</span></div>
+
+<div class="answer-item"><b>38.</b> <i>A gente queria fazer uma reserva para hoje &agrave; noite.</i> OR <i>A gente gostaria de fazer uma reserva para hoje &agrave; noite.</i> <span class="tag">(Both work: &ldquo;queria&rdquo; with imperfeito is natural for querer; &ldquo;gostaria&rdquo; uses condicional as gostar requires it for polite use.)</span></div>
+
+<div class="answer-item"><b>39.</b> <i>Eu gostava desse bairro, mas ele mudou muito.</i> <span class="tag">(Imperfeito &mdash; past habitual &ldquo;used to like.&rdquo; &ldquo;Gostava&rdquo; is correct here because this IS past habitual, not polite.)</span></div>
+
+<div class="answer-item"><b>40.</b> <i>Voc&ecirc; saberia me dizer como chegar &agrave; Copacabana daqui?</i> <span class="tag">(Condicional &mdash; saber keeps condicional for polite/hypothetical; &ldquo;sabia&rdquo; would read as &ldquo;did you used to know.&rdquo;)</span></div>
+</div>
+
+</div>
+
+<!-- TEACHER NOTES -->
+<div class="page-break"></div>
+<div class="teacher-notes">
+<h1>Teacher Notes</h1>
+
+<h2>Student Profile</h2>
+<p>This worksheet is designed for an intermediate-level student of Brazilian Portuguese who has already completed:</p>
+<ul>
+<li><b>Level 1:</b> Conditional tense conjugation (knows how to form the condicional)</li>
+<li><b>Level 2:</b> Conditional usage &amp; the imperfeito/condicional gradient (knows which verbs lean which way in polite speech)</li>
+</ul>
+<p>The student is now ready to tackle the <b>disambiguation problem</b>: understanding that the same imperfeito form carries two distinct meanings and learning to use context clues to identify and produce the intended meaning.</p>
+
+<h2>Key Pedagogical Points</h2>
+
+<div class="callout">
+<b>Core Concept:</b> The imperfeito does &ldquo;double duty&rdquo; in BP &mdash; it expresses both past habitual (&ldquo;used to&rdquo;) and polite/softened requests (&ldquo;would&rdquo;). This is a feature, not a bug &mdash; context clues reliably disambiguate for high-frequency verbs like <i>querer, poder, dever,</i> and <i>ter</i>.
+</div>
+
+<div class="callout">
+<b>The Gradient IS the Disambiguation Mechanism:</b> The reason some verbs (gostar, saber, preferir) keep the condicional for polite speech is precisely BECAUSE their imperfeito forms would be misread as past habitual. The gradient from Level 2 is not arbitrary &mdash; it exists to solve the ambiguity problem. This is the key insight students should internalize.
+</div>
+
+<h2>Section-by-Section Notes</h2>
+
+<p><b>Section A (Side-by-Side Pairs):</b> The most scaffolded exercise type. Presenting the same form in two contexts makes the double-duty problem immediately visible. Start here to build awareness. If a student struggles, have them underline the context clues in each sentence before identifying the meaning.</p>
+
+<p><b>Section B (Single Sentences):</b> Removes the scaffolding of the pair. The student must identify context clues independently. Watch for students who default to one meaning &mdash; they may not be reading the full sentence. Encourage them to look for time markers first.</p>
+
+<p><b>Section C (Explain the Gradient):</b> The most cognitively demanding section. Students must articulate WHY the system works the way it does. Accept any answer that demonstrates understanding of the disambiguation principle, even if the wording differs from the answer key. Questions 18 and 20 are particularly good discussion starters.</p>
+
+<p><b>Section D (Rewrite for Clarity):</b> Tests productive disambiguation. Students must add context clues to make an ambiguous sentence clear. This is the highest-value skill &mdash; if they can do this, they understand the system.</p>
+
+<p><b>Section E (Context Clue Analysis):</b> Explicit practice identifying signals. Good diagnostic for whether the student has internalized the framework or is still guessing.</p>
+
+<p><b>Section F (Free Production):</b> The ultimate test. Creating pairs from scratch requires full mastery. The gostar bonus question (#40) ties everything together by forcing the student to explain why the gradient exists.</p>
+
+</div>
+</body>
+</html>
