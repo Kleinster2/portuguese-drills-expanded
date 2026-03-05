@@ -1,7 +1,7 @@
 # Portuguese Drills Pedagogy & Design Principles
 
 **Author:** Klein
-**Last Updated:** 2025-01-06
+**Last Updated:** 2026-03-04
 **Status:** Living Document
 
 ---
@@ -53,6 +53,15 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 ### 1. **Self-Introduction First ("eu" before all others)**
 
 **Principle:** Start with "eu" (first person) and use that to introduce a series of units around prepositions, ser/estar, regular verbs, etc. Only after mastering "eu" do we introduce other subjects.
+
+**Self-introduction sequence (absolute beginners):**
+1. **Name**: Eu sou o/a [name] — NOT "Meu nome é" (too formal, not how Brazilians actually introduce themselves)
+2. **Origin**: Eu sou de [city] / Eu sou do/da [country]
+3. **Residence**: Eu moro em [city]
+4. **Work/Status**: Eu sou professor / Eu trabalho em/como...
+5. **Languages**: Eu falo [language] — last, because it's subordinate to the other identity-forming statements
+
+**No nationalities.** "Eu sou de Nova York" and "Eu sou dos Estados Unidos" cover origin completely. Nationality adjectives (americano, brasileiro, etc.) are a closed vocabulary set that doesn't teach transferable patterns — "de + place" does.
 
 **Progression:**
 1. **Phase 1:** Pure "eu" focus - complete self-introduction toolkit
@@ -106,7 +115,33 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 ---
 
-### 4. **Each Subject Introduction is Its Own Unit**
+### 4. **Yes/No Answer Pattern (Verb Echo)**
+
+**Principle:** Portuguese answers yes/no questions by echoing the verb, not by saying "sim" or "não" alone. This is non-obvious to English speakers and must be taught explicitly from the first lesson.
+
+**The pattern:**
+- **Yes:** Sim, [verb]. — "Você mora em Nova York?" → "Sim, moro." (or just "Moro.")
+- **No:** Não, não [verb]. — "Você mora em Nova York?" → "Não, não moro."
+
+**Key points to teach:**
+1. A bare "sim" or "não" is grammatically possible but sounds incomplete — like answering "Do you live in New York?" with just "Yes." instead of "Yes, I do."
+2. The verb echo carries the real confirmation/denial. In casual speech, the "sim" is often dropped entirely: just "Moro." or "Não moro."
+3. **The verb conjugates for the answerer's subject, not the questioner's.** "Você mora?" → "Moro." (eu), not "Mora." This is the critical point — the echo is the same verb but shifted to first person. Same applies in reverse: "Eu estou atrasado?" → "Está." (você).
+4. Negative answers use "não" twice: once as the interjection ("no"), once as the verb negator ("not"). English speakers will resist this — it feels redundant to them.
+5. This pattern applies to all verbs, all tenses. It's structural, not vocabulary.
+
+**Teaching sequence:**
+1. Introduce with full form: "Sim, eu moro." / "Não, eu não moro."
+2. Then drop the pronoun (connects to Principle 3): "Sim, moro." / "Não, não moro."
+3. Practice extensively through Q&A pairs using self-introduction verbs (morar, falar, trabalhar)
+
+**Anti-Pattern:** Teaching "sim = yes, não = no" as standalone vocabulary without the verb echo. This produces students who answer "Sim." to everything, which sounds unnatural.
+
+**Rationale:** This is one of the first structural differences between Portuguese and English that beginners encounter. Getting it right early prevents fossilized English-transfer habits.
+
+---
+
+### 5. **Each Subject Introduction is Its Own Unit**
 
 **Principle:** Each new pronoun/subject type deserves dedicated introduction in its own unit.
 
@@ -120,7 +155,7 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 ---
 
-### 5. **Grammar in Service of Communication**
+### 6. **Grammar in Service of Communication**
 
 **Principle:** Don't teach grammar mechanics in isolation. Always contextualize within meaningful communication goals.
 
@@ -135,7 +170,7 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 ---
 
-### 6. **Centrality Ranking for Vocabulary**
+### 7. **Centrality Ranking for Vocabulary**
 
 **Principle:** Prioritize universal, high-frequency vocabulary over situational vocabulary.
 
@@ -150,11 +185,13 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 **Application:** Units 7-9 form the trinity with dedicated, parallel structure. Less central verbs come after or are deprioritized.
 
+**This applies to all vocabulary, not just verbs.** Every noun, adjective, and expression in exercises must pass the centrality test. "Professor" and "escola" are universal — everyone knows teachers and schools. "Engenheiro" and "firma" are niche — they waste a vocabulary slot on words the student is unlikely to use or encounter in basic conversation.
+
 **Rationale:** Teach what everyone needs first, situational vocabulary second.
 
 ---
 
-### 7. **Parallel Unit Structure for Related Concepts**
+### 8. **Parallel Unit Structure for Related Concepts**
 
 **Principle:** When teaching related concepts, use parallel structure across units.
 
@@ -170,7 +207,7 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 ---
 
-### 8. **Frequency Over Grammar Complexity**
+### 9. **Frequency Over Grammar Complexity**
 
 **Principle:** "Gostar" (to like) is more important than "precisar" (to need) even though both use "de".
 
@@ -185,7 +222,7 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 ---
 
-### 9. **Pure Phase Focus**
+### 10. **Pure Phase Focus**
 
 **Principle:** Each phase should have clear, unified focus without violations.
 
@@ -198,7 +235,7 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 ---
 
-### 10. **Show All Main Meanings**
+### 11. **Show All Main Meanings**
 
 **Principle:** When introducing vocabulary, always show all main meanings of a word, not just the one used in the current context.
 
@@ -215,7 +252,7 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 ---
 
-### 11. **All Portuguese Text Should Be Hoverable**
+### 12. **All Portuguese Text Should Be Hoverable**
 
 **Principle:** Every Portuguese word or phrase in a lesson should benefit from the hover dictionary, not just example sentences.
 
@@ -237,14 +274,15 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 ---
 
-### 12. **Pronunciation Must Be Audible**
+### 13. **Pronunciation Must Be Audible and At Point of Use**
 
-**Principle:** Any time a phoneme, sound, or pronunciation is mentioned in text, a speaker button must be immediately available to hear it.
+**Principle:** Any time a phoneme, sound, or pronunciation is mentioned in text, a speaker button must be immediately available to hear it. Pronunciation guides belong **at the point of first use**, not in a separate section pages earlier.
 
 **Application:**
 - Pronunciation notes (e.g., "'de' sounds like 'djee'") must include a speaker button
 - Phonetic explanations should let students hear the sound instantly
 - Don't describe a sound without providing a way to hear it
+- When a word like "de" or "em" first appears in an exercise, include its pronunciation inline — don't assume the student remembers a pronunciation section from earlier
 
 **Example:**
 ```html
@@ -258,7 +296,41 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 ---
 
-### 13. **Comprehension Before Production (But Not Too Much)**
+### 14. **Vocabulary Scaffolding (Define Before You Use, Never Repeat)**
+
+**Principle:** Never use a Portuguese word in an exercise that hasn't been explicitly defined. Every word appearing in a prompt, question, or exercise must have been introduced — either in a vocabulary box, inline definition, or prior section. And never repeat vocabulary across exercises — each exercise should introduce or test different words.
+
+**Application:**
+- Add **vocabulary boxes** immediately before each exercise section containing every new word that section uses
+- Even simple function words (onde, em, de, mas, porque) need explicit introduction for absolute beginners
+- If a section uses "Onde você mora?", the student must have seen "onde = where" before reaching that exercise
+- **Every exercise uses different vocabulary.** If exercise 1 uses "aeroporto", no other exercise in that section uses "aeroporto". This maximizes exposure to new words and prevents lazy repetition.
+
+**Anti-Patterns:**
+- Using "Qual é o seu nome?" in exercise B when "qual" was never introduced. The student stares at an unknown word and can't engage with the exercise.
+- Using "contente" in exercises 7 and 10 of the same section. That's a wasted slot — exercise 10 should introduce a different word.
+
+**Rationale:** Undefined vocabulary creates a wall. Repeated vocabulary wastes exposure. Every exercise slot is a chance to teach something new.
+
+---
+
+### 15. **Pronunciation Examples Should Preview Later Vocabulary**
+
+**Principle:** Don't use throwaway examples in pronunciation sections that never reappear. Instead, seed vocabulary from upcoming exercises so students encounter each word twice — once as a sound example, once in context.
+
+**Application:**
+- T palatalization: use **contente**, **quente** (not noite, arte)
+- D palatalization: use **dinheiro**, **cidade** (not just dia)
+- R/RR: use **Rio** (not carro, if carro never appears)
+- Soft R: use **mora**, **para**
+- Final -o: use **obrigado** (not lado)
+- -em nasal: use **contente** (not cem)
+
+**Rationale:** Every example is a teaching opportunity. If a student learns the "chee" sound through "contente" and then meets "contente" in an exercise five minutes later, the double exposure reinforces both pronunciation and meaning. Throwaway examples waste that opportunity.
+
+---
+
+### 16. **Comprehension Before Production (But Not Too Much)**
 
 **Principle:** Balance comprehension and production appropriately for level.
 
@@ -371,6 +443,16 @@ Convert when it violates Phase 1's "pure eu" focus:
 3. -ar verb restructuring (The Trinity established)
 4. Ficar deprioritization (centrality ranking applied)
 
+**2026-03-04:**
+1. Added self-introduction sequence with specific ordering (name → nationality → origin → residence → work → languages)
+2. "Eu sou o/a" replaces "Meu nome é" as BP default (native usage filter)
+3. New Principle 4: Yes/No Answer Pattern — verb echo (sim, moro / não, não moro), not bare sim/não
+4. New Principle 14: Vocabulary Scaffolding — define every word before exercises use it
+5. New Principle 15: Pronunciation examples should preview later vocabulary (double exposure)
+6. Pronunciation at point of first use added to Principle 13
+7. Expanded worksheet checklist with 4 new items (scaffolding, preview seeding, title rule, Eu sou)
+8. All principles renumbered (4→5, 5→6, etc.) to accommodate new additions
+
 ---
 
 ## Quick Reference: Decision Framework
@@ -445,6 +527,11 @@ The EP use of imperfeito in place of the condicional is **not colloquial or info
 3. ✅ Are example sentences things a real person would say (not textbook artifacts)?
 4. ✅ For EP worksheets: have you checked imperfeito vs condicional usage?
 5. ✅ For EP worksheets: have you checked futuro simples vs ir + infinitivo?
+6. ✅ Is every Portuguese word defined before its first use in exercises? (Principle 14)
+7. ✅ Does each exercise use different vocabulary — no repeated words across exercises in the same section? (Principle 14)
+8. ✅ Do pronunciation examples preview vocabulary from later sections? (Principle 15)
+9. ✅ Does the title describe content, not lesson sequence? No "Primeira Aula", "Lesson 1", etc.
+10. ✅ Does the self-introduction use "Eu sou o/a" (not "Meu nome é") for BP?
 
 **Origin of this rule:** Feb 2026 — a condicional worksheet included "quereria" as a drill item. While prescriptively correct, no Portuguese speaker uses this form. Students should learn what people actually say.
 
