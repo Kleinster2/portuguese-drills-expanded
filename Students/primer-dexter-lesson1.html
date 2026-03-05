@@ -99,13 +99,28 @@
     line-height: 1.6;
   }
   .answer-item {
-    margin-bottom: 4px;
+    margin-bottom: 3px;
     break-inside: avoid;
   }
   .answer-item .tag {
     font-size: 10px;
     color: #666;
     font-style: italic;
+  }
+  .answer-key-grid {
+    column-count: 2;
+    column-gap: 24px;
+  }
+  .answer-section {
+    break-inside: avoid;
+    margin-bottom: 10px;
+  }
+  .answer-section h3 {
+    margin: 0 0 4px 0;
+    font-size: 13px;
+  }
+  .grammar-box, .usage-box, .spanish-box, .item, .two-col {
+    break-inside: avoid;
   }
   @media print {
     body { padding: 0; }
@@ -360,6 +375,8 @@
 <div class="item"><div class="prompt">9. Ela _________ inteligente. (She is intelligent)</div></div>
 <div class="item"><div class="prompt">10. Ela _________ aqui agora. (She is here now)</div></div>
 
+<div class="page-break"></div>
+
 <!-- ==================== SECTION 6: DIALOGUE ==================== -->
 
 <h2>6. Di&aacute;logo &mdash; Complete Marcelo&rsquo;s Lines</h2>
@@ -368,7 +385,7 @@
   <b>Vocabulary for this dialogue:</b><br>
   <b>bom dia</b> = good morning &bull; <b>bem</b> = well &bull; <b>obrigado</b> = thank you (masc.)<br>
   <b>n&atilde;o sou</b> = I&rsquo;m not &bull; <b>m&eacute;dico</b> = doctor &bull; <b>novo/a</b> = new<br>
-  <b>escola</b> = school &bull; <b>novo/a</b> = new &bull; <b>boa sorte</b> = good luck
+  <b>escola</b> = school &bull; <b>boa sorte</b> = good luck
 </div>
 
 <div class="section-note">Read what Luis says, then write what Marcelo must have said. Use everything you&rsquo;ve learned.</div>
@@ -391,68 +408,81 @@
 <div class="answer-key">
 <h2>Answer Key</h2>
 
+<div class="answer-key-grid">
+
+<div class="answer-section">
 <h3>A. De onde voc&ecirc; &eacute;?</h3>
 <div class="answers">
-  <div class="answer-item">1. Eu sou <b>de</b> Nova York. <span class="tag">city = no article</span></div>
-  <div class="answer-item">2. Eu sou <b>do</b> Brasil. <span class="tag">de + o (masc. country)</span></div>
-  <div class="answer-item">3. Ela &eacute; <b>da</b> Argentina. <span class="tag">de + a (fem. country)</span></div>
-  <div class="answer-item">4. Ele &eacute; <b>dos</b> Estados Unidos. <span class="tag">de + os (masc. plural)</span></div>
-  <div class="answer-item">5. Eu sou <b>de</b> Portugal. <span class="tag">no article (neutral country)</span></div>
-  <div class="answer-item">6. Eu sou <b>da</b> Calif&oacute;rnia. <span class="tag">de + a (fem. state)</span></div>
-  <div class="answer-item">7. Ele &eacute; <b>do</b> Rio de Janeiro. <span class="tag">de + o (masc. city exception)</span></div>
-  <div class="answer-item">8. Ela &eacute; <b>da</b> Espanha. <span class="tag">de + a (fem. country)</span></div>
+  <div class="answer-item">1. <b>de</b> Nova York <span class="tag">city = no article</span></div>
+  <div class="answer-item">2. <b>do</b> Brasil <span class="tag">de + o</span></div>
+  <div class="answer-item">3. <b>da</b> Argentina <span class="tag">de + a</span></div>
+  <div class="answer-item">4. <b>dos</b> Estados Unidos <span class="tag">de + os</span></div>
+  <div class="answer-item">5. <b>de</b> Portugal <span class="tag">no article</span></div>
+  <div class="answer-item">6. <b>da</b> Calif&oacute;rnia <span class="tag">de + a</span></div>
+  <div class="answer-item">7. <b>do</b> Rio de Janeiro <span class="tag">city exception</span></div>
+  <div class="answer-item">8. <b>da</b> Espanha <span class="tag">de + a</span></div>
+</div>
 </div>
 
+<div class="answer-section">
 <h3>B. Onde voc&ecirc; mora?</h3>
 <div class="answers">
-  <div class="answer-item">1. Eu moro <b>em</b> Nova York. <span class="tag">city = no article</span></div>
-  <div class="answer-item">2. Eu moro <b>no</b> Brooklyn. <span class="tag">em + o (masc. neighborhood)</span></div>
-  <div class="answer-item">3. Ele mora <b>no</b> Jap&atilde;o. <span class="tag">em + o (masc. country)</span></div>
-  <div class="answer-item">4. Ela mora <b>na</b> rua Grand. <span class="tag">em + a (rua is feminine)</span></div>
-  <div class="answer-item">5. Eu moro <b>nos</b> Estados Unidos. <span class="tag">em + os (masc. plural)</span></div>
-  <div class="answer-item">6. Eu moro <b>na</b> It&aacute;lia. <span class="tag">em + a (fem. country)</span></div>
-  <div class="answer-item">7. Ele mora <b>na</b> avenida Brasil. <span class="tag">em + a (avenida is feminine)</span></div>
-  <div class="answer-item">8. Ela mora <b>em</b> Boston. <span class="tag">city = no article</span></div>
+  <div class="answer-item">1. <b>em</b> Nova York <span class="tag">city = no article</span></div>
+  <div class="answer-item">2. <b>no</b> Brooklyn <span class="tag">em + o</span></div>
+  <div class="answer-item">3. <b>no</b> Jap&atilde;o <span class="tag">em + o</span></div>
+  <div class="answer-item">4. <b>na</b> rua Grand <span class="tag">rua is fem.</span></div>
+  <div class="answer-item">5. <b>nos</b> Estados Unidos <span class="tag">em + os</span></div>
+  <div class="answer-item">6. <b>na</b> It&aacute;lia <span class="tag">em + a</span></div>
+  <div class="answer-item">7. <b>na</b> avenida Brasil <span class="tag">avenida is fem.</span></div>
+  <div class="answer-item">8. <b>em</b> Boston <span class="tag">city = no article</span></div>
+</div>
 </div>
 
+<div class="answer-section">
 <h3>C. Traduzir</h3>
 <div class="answers">
-  <div class="answer-item">1. Eu sou professor/a. <span class="tag">(or: Sou professor)</span></div>
-  <div class="answer-item">2. Eu sou de Nova York. <span class="tag">(city = no article)</span></div>
+  <div class="answer-item">1. Eu sou professor/a.</div>
+  <div class="answer-item">2. Eu sou de Nova York.</div>
   <div class="answer-item">3. Eu falo ingl&ecirc;s e espanhol.</div>
-  <div class="answer-item">4. Eu moro no Brooklyn. <span class="tag">(em + o)</span></div>
-  <div class="answer-item">5. Ela &eacute; de S&atilde;o Paulo. Ela mora no Brasil. <span class="tag">(city = no article; em + o)</span></div>
+  <div class="answer-item">4. Eu moro no Brooklyn.</div>
+  <div class="answer-item">5. Ela &eacute; de S&atilde;o Paulo. Ela mora no Brasil.</div>
   <div class="answer-item">6. Ele fala portugu&ecirc;s e um pouco de franc&ecirc;s.</div>
-  <div class="answer-item">7. Eu trabalho no Brooklyn. <span class="tag">(em + o)</span></div>
-  <div class="answer-item">8. Ela mora na rua Bleecker. <span class="tag">(em + a, rua is fem.)</span></div>
+  <div class="answer-item">7. Eu trabalho no Brooklyn.</div>
+  <div class="answer-item">8. Ela mora na rua Bleecker.</div>
+</div>
 </div>
 
+<div class="answer-section">
 <h3>D. Ser ou Estar?</h3>
 <div class="answers">
   <div class="answer-item">1. <b>estou</b> <span class="tag">location</span></div>
   <div class="answer-item">2. <b>est&aacute;</b> ... <b>est&aacute;</b> <span class="tag">location</span></div>
-  <div class="answer-item">3. <b>&eacute;</b> <span class="tag">profession = permanent</span></div>
+  <div class="answer-item">3. <b>&eacute;</b> <span class="tag">profession</span></div>
   <div class="answer-item">4. <b>&eacute;</b> <span class="tag">inherent quality</span></div>
-  <div class="answer-item">5. <b>sou</b> ... <b>&eacute;</b> <span class="tag">status = permanent</span></div>
+  <div class="answer-item">5. <b>sou</b> ... <b>&eacute;</b> <span class="tag">status</span></div>
   <div class="answer-item">6. <b>est&aacute;</b> ... <b>est&aacute;</b> <span class="tag">location</span></div>
-  <div class="answer-item">7. <b>est&aacute;</b> ... <b>estou</b> <span class="tag">temporary state; answer shifts to 1st person</span></div>
-  <div class="answer-item">8. <b>est&aacute;</b> <span class="tag">temporary condition (weather today)</span></div>
+  <div class="answer-item">7. <b>est&aacute;</b> ... <b>estou</b> <span class="tag">state; 1st person answer</span></div>
+  <div class="answer-item">8. <b>est&aacute;</b> <span class="tag">weather today</span></div>
   <div class="answer-item">9. <b>&eacute;</b> <span class="tag">inherent quality</span></div>
-  <div class="answer-item">10. <b>est&aacute;</b> <span class="tag">location (here now)</span></div>
+  <div class="answer-item">10. <b>est&aacute;</b> <span class="tag">location</span></div>
+</div>
 </div>
 
-<h3>E. Di&aacute;logo (sample answers &mdash; variations accepted)</h3>
+<div class="answer-section">
+<h3>E. Di&aacute;logo</h3>
 <div class="answers">
   <div class="answer-item">1. Bom dia! / Ol&aacute;!</div>
   <div class="answer-item">2. Como voc&ecirc; est&aacute;? / Tudo bem?</div>
   <div class="answer-item">3. Bem, obrigado. / Estou bem.</div>
-  <div class="answer-item">4. De onde voc&ecirc; &eacute;? <span class="tag">(echoing the question)</span></div>
+  <div class="answer-item">4. De onde voc&ecirc; &eacute;?</div>
   <div class="answer-item">5. Onde voc&ecirc; mora?</div>
-  <div class="answer-item">6. Voc&ecirc; &eacute; m&eacute;dico? / Voc&ecirc; &eacute; professor?</div>
+  <div class="answer-item">6. Voc&ecirc; &eacute; m&eacute;dico?</div>
   <div class="answer-item">7. Sou, sim. Sou professor.</div>
   <div class="answer-item">8. Obrigado!</div>
 </div>
+</div>
 
+</div><!-- end answer-key-grid -->
 </div>
 
 </body>
