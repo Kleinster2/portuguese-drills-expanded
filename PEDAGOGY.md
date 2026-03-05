@@ -535,6 +535,14 @@ The EP use of imperfeito in place of the condicional is **not colloquial or info
 
 **Origin of this rule:** Feb 2026 — a condicional worksheet included "quereria" as a drill item. While prescriptively correct, no Portuguese speaker uses this form. Students should learn what people actually say.
 
+### Worksheet layout rules:
+1. **Answer keys in 2 columns.** All answer keys use a 2-column CSS grid layout so they fit on a single printed page.
+2. **Page breaks never split a box.** Every grammar-box, usage-box, vocab box, two-column layout, and exercise item must have `break-inside: avoid`. The browser pushes the entire box to the next page rather than cutting it in half.
+3. **Page breaks between major sections.** Place explicit page breaks between logical sections (e.g., between exercises and ser/estar, between ser/estar and dialogue). Each section should start at the top of a page, not mid-page after unrelated content.
+4. **Titles describe content, not sequence.** No "Primeira Aula", "Lesson 1", "Week 3". The student knows what lesson they're in.
+5. **No repeated vocabulary across exercises.** Each exercise slot is a chance to teach a new word. If exercise 1 uses "aeroporto", no other exercise in that section uses it.
+6. **Only useful vocabulary.** Every word in exercises must pass the centrality test — would a beginner actually encounter or need this word? "Professor" and "escola" yes. "Engenheiro" and "firma" no.
+
 ---
 
 ## Teaching Philosophy Summary
