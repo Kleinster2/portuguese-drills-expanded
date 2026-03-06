@@ -450,8 +450,13 @@ Convert when it violates Phase 1's "pure eu" focus:
 4. New Principle 14: Vocabulary Scaffolding — define every word before exercises use it
 5. New Principle 15: Pronunciation examples should preview later vocabulary (double exposure)
 6. Pronunciation at point of first use added to Principle 13
-7. Expanded worksheet checklist with 4 new items (scaffolding, preview seeding, title rule, Eu sou)
-8. All principles renumbered (4→5, 5→6, etc.) to accommodate new additions
+7. All principles renumbered (4→5, 5→6, etc.) to accommodate new additions
+
+**2026-03-06:**
+1. Removed nationalities from beginner materials — "de + place" is transferable, nationality adjectives are a closed set
+2. Self-intro sequence updated: name → origin → residence → work/status → languages (no nationality)
+3. Centrality ranking extended to all vocabulary, not just verbs
+4. Worksheet checklist and layout rules moved to skills (`/worksheet-review`, `/worksheet-layout`) to keep PEDAGOGY.md focused on methodology
 
 ---
 
@@ -521,27 +526,10 @@ The EP use of imperfeito in place of the condicional is **not colloquial or info
 
 **Drill design implication for EP:** The best exercise isn't "conjugate querer in the condicional" — it's "here are 5 situations, which form would a Portuguese speaker use and why?" For BP, the condicional forms (gostaria, poderia, deveria) are the standard polite forms and should be drilled normally.
 
-### Worksheet generation checklist:
-1. ✅ Is every verb form one a native speaker would actually use?
-2. ✅ If teaching a formal/literary form, is there an explicit usage note?
-3. ✅ Are example sentences things a real person would say (not textbook artifacts)?
-4. ✅ For EP worksheets: have you checked imperfeito vs condicional usage?
-5. ✅ For EP worksheets: have you checked futuro simples vs ir + infinitivo?
-6. ✅ Is every Portuguese word defined before its first use in exercises? (Principle 14)
-7. ✅ Does each exercise use different vocabulary — no repeated words across exercises in the same section? (Principle 14)
-8. ✅ Do pronunciation examples preview vocabulary from later sections? (Principle 15)
-9. ✅ Does the title describe content, not lesson sequence? No "Primeira Aula", "Lesson 1", etc.
-10. ✅ Does the self-introduction use "Eu sou o/a" (not "Meu nome é") for BP?
+### Worksheet quality
 
-**Origin of this rule:** Feb 2026 — a condicional worksheet included "quereria" as a drill item. While prescriptively correct, no Portuguese speaker uses this form. Students should learn what people actually say.
-
-### Worksheet layout rules:
-1. **Answer keys in 2 columns.** All answer keys use a 2-column CSS grid layout so they fit on a single printed page.
-2. **Page breaks never split a box.** Every grammar-box, usage-box, vocab box, two-column layout, and exercise item must have `break-inside: avoid`. The browser pushes the entire box to the next page rather than cutting it in half.
-3. **Page breaks between major sections.** Place explicit page breaks between logical sections (e.g., between exercises and ser/estar, between ser/estar and dialogue). Each section should start at the top of a page, not mid-page after unrelated content.
-4. **Titles describe content, not sequence.** No "Primeira Aula", "Lesson 1", "Week 3". The student knows what lesson they're in.
-5. **No repeated vocabulary across exercises.** Each exercise slot is a chance to teach a new word. If exercise 1 uses "aeroporto", no other exercise in that section uses it.
-6. **Only useful vocabulary.** Every word in exercises must pass the centrality test — would a beginner actually encounter or need this word? "Professor" and "escola" yes. "Engenheiro" and "firma" no.
+Use `/worksheet-review` for the full content and dialogue checklist.
+Use `/worksheet-layout` for CSS and print formatting rules.
 
 ---
 

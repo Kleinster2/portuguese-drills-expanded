@@ -1,10 +1,11 @@
-#student #prospective
+#student #active
 
 # Dexter Mayo
 
 **Full name:** Dexter Mayo
 **Email:** dextermayo4@gmail.com
-**Status:** Prospective — first lesson Thu 3/5 at 6:30pm at Frog (358 Marcus Garvey Blvd)
+**Gender:** Female
+**Status:** Active — first lesson completed Thu 3/5 at Frog (358 Marcus Garvey Blvd)
 **Referral:** Unknown (no mention of source)
 
 ---
@@ -37,6 +38,7 @@
 | 2026-02-25 | Dexter replied; chose Frog; asked if he should bring anything |
 | 2026-02-26 | Gil replied; confirmed Frog; told him just bring yourself, Gil will have everything needed |
 | 2026-02-26 | Gil replied; corrected Frog address (358 Marcus Garvey Blvd, not 503 Nostrand Ave); offered to meet elsewhere if less convenient |
+| 2026-03-05 | First lesson at Frog. Went well — Dexter is very nice. |
 
 ---
 
