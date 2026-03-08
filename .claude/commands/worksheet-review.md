@@ -18,11 +18,13 @@ Review a worksheet or handout against the full quality checklist. Run this after
 
 ## Dialogue checklist
 
-12. In a two-column dialogue, read each row as: left speaks FIRST, right RESPONDS. The student's line in row N must answer whatever the other speaker asked at the end of row N-1.
-13. Write out the full conversation in sequence before finalizing — if any answer doesn't follow from the previous question, the alignment is wrong.
-14. Both speakers must share information (reciprocity). A dialogue where one person only asks and never answers is an interview, not a conversation.
-15. Names happen at the greeting ("Oi, sou o/a [name]") or are already known. Nobody volunteers their name after "how are you?"
-16. Answer key must have one entry per dialogue row — count them.
+Use `/dialogue-generate` when creating dialogues from scratch. For review, verify:
+
+12. Left speaks FIRST, right RESPONDS. The student's line in row N answers whatever the other speaker asked at the end of row N-1.
+13. No implied knowledge — a speaker can only react to what they've been told.
+14. Both speakers share information (reciprocity).
+15. Names at the greeting, not after "how are you?"
+16. Answer key has one entry per table row — count them.
 
 ## Final pass
 
