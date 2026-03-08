@@ -235,7 +235,26 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 ---
 
-### 11. **Show All Main Meanings**
+### 11. **Economicity and Atomicity**
+
+**Principle:** Do not overload a unit or lesson with content that could be left to another unit. Each lesson teaches exactly what is needed for its target exercise — nothing more.
+
+**Rules:**
+- If a word, structure, or phoneme isn't required by the lesson's exercises or dialogue, don't introduce it
+- Don't teach exceptions before teaching the rule (e.g., don't teach "countries without articles" before the student has practiced countries WITH articles)
+- If a concept can live in its own unit, it should — even if it's related to the current topic
+- Vocabulary in exercises should come from the lesson's teaching sections, not appear for the first time in the exercise
+
+**Examples:**
+- A lesson on self-introduction with ser/morar/trabalhar does NOT need ser vs estar — estar gets its own unit
+- A lesson practicing "de + article" contractions does NOT need to mention that some countries lack articles — that's a separate unit
+- A dialogue should use only vocabulary already defined in the worksheet, not introduce new words for flavor
+
+**Rationale:** Overloading dilutes focus and overwhelms beginners. A tight lesson with fewer concepts practiced well beats a comprehensive lesson where nothing sticks.
+
+---
+
+### 12. **Show All Main Meanings**
 
 **Principle:** When introducing vocabulary, always show all main meanings of a word, not just the one used in the current context.
 
@@ -252,7 +271,7 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 ---
 
-### 12. **All Portuguese Text Should Be Hoverable**
+### 13. **All Portuguese Text Should Be Hoverable**
 
 **Principle:** Every Portuguese word or phrase in a lesson should benefit from the hover dictionary, not just example sentences.
 
@@ -274,7 +293,7 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 ---
 
-### 13. **Pronunciation Must Be Audible and At Point of Use**
+### 14. **Pronunciation Must Be Audible and At Point of Use**
 
 **Principle:** Any time a phoneme, sound, or pronunciation is mentioned in text, a speaker button must be immediately available to hear it. Pronunciation guides belong **at the point of first use**, not in a separate section pages earlier.
 
@@ -296,7 +315,7 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 ---
 
-### 14. **Vocabulary Scaffolding (Define Before You Use, Never Repeat)**
+### 15. **Vocabulary Scaffolding (Define Before You Use, Never Repeat)**
 
 **Principle:** Never use a Portuguese word in an exercise that hasn't been explicitly defined. Every word appearing in a prompt, question, or exercise must have been introduced — either in a vocabulary box, inline definition, or prior section. And never repeat vocabulary across exercises — each exercise should introduce or test different words.
 
@@ -314,7 +333,7 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 ---
 
-### 15. **Pronunciation Examples Should Preview Later Vocabulary**
+### 16. **Pronunciation Examples Should Preview Later Vocabulary**
 
 **Principle:** Don't use throwaway examples in pronunciation sections that never reappear. Instead, seed vocabulary from upcoming exercises so students encounter each word twice — once as a sound example, once in context.
 
@@ -330,7 +349,7 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 ---
 
-### 16. **Comprehension Before Production (But Not Too Much)**
+### 17. **Comprehension Before Production (But Not Too Much)**
 
 **Principle:** Balance comprehension and production appropriately for level.
 
