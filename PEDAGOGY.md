@@ -50,30 +50,25 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 ## Core Pedagogical Principles
 
-### 1. **Self-Introduction First ("eu" before all others)**
+### 1. **Eu/Você First, Then Ele/Ela, Then Plural**
 
-**Principle:** Start with "eu" (first person) and use that to introduce a series of units around prepositions, ser/estar, regular verbs, etc. Only after mastering "eu" do we introduce other subjects.
+**Principle:** Start with "eu" and "você" together — because any real conversation requires both. Use self-introduction dialogues to teach both forms from the start. Only after mastering eu/você do we introduce other subjects.
 
 **Self-introduction sequence (absolute beginners):**
 1. **Name**: Eu sou o/a [name] — NOT "Meu nome é" (too formal, not how Brazilians actually introduce themselves)
-2. **Origin**: Eu sou de [city] / Eu sou do/da [country]
-3. **Residence**: Eu moro em [city]
-4. **Work/Status**: Eu sou professor / Eu trabalho em/como...
-5. **Languages**: Eu falo [language] — last, because it's subordinate to the other identity-forming statements
-
-**No nationalities.** "Eu sou de Nova York" and "Eu sou dos Estados Unidos" cover origin completely. Nationality adjectives (americano, brasileiro, etc.) are a closed vocabulary set that doesn't teach transferable patterns — "de + place" does.
+2. **Nationality**: Eu sou brasileiro/a, americano/a — adjective agreement (o/a) previews a pattern used everywhere
+3. **Origin**: Eu sou de [city] / Eu sou do/da [country]
+4. **Residence**: Eu moro em [city]
+5. **Work/Status**: Eu sou professor / Eu trabalho em/como...
+6. **Languages**: Eu falo [language] — last, because it's subordinate to the other identity-forming statements
 
 **Progression:**
-1. **Phase 1:** Pure "eu" focus - complete self-introduction toolkit
-2. **Phase 2+:** Introduce other subjects in order:
-   - "ele/ela" - describing others' introductions
-   - "você" - addressing others directly
-   - "a gente" - group activities (informal "we")
-   - "nós" - formal "we"
-   - "vocês" - you all
-   - "eles/elas" - they
+1. **Phase 1:** eu/você — self-introduction and addressing others directly. These are inseparable in a dialogue: "Eu sou de Brasília. E você?" requires both forms.
+2. **Phase 2:** ele/ela — describing others ("Ele é do Brasil. Ela mora em São Paulo.")
+3. **Phase 3:** a gente — informal "we" (conjugates as 3rd person singular)
+4. **Phase 4:** Plural subjects — nós, vocês, eles/elas
 
-**Rationale:** Students move from self-introduction → describing others → addressing others naturally.
+**Rationale:** You can't have a conversation with just "eu." Every dialogue requires "você" — questions, redirects ("E você?"), verb echo answers. Teaching eu/você together reflects how language actually works: two people talking.
 
 ---
 
@@ -227,11 +222,11 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 **Principle:** Each phase should have clear, unified focus without violations.
 
 **Phase 1 Achievement:**
-- 100% "eu" focus (32/32 questions)
-- 0% violations (no você/ele/ela/generic nouns in core content)
-- Complete self-introduction toolkit
+- 100% eu/você focus
+- 0% violations (no ele/ela/generic nouns in core content)
+- Complete self-introduction toolkit with dialogue capability
 
-**Rationale:** Mixed subjects break learning narrative and violate "self-introduction first" principle.
+**Rationale:** Mixed subjects break learning narrative and dilute focus.
 
 ---
 
@@ -365,6 +360,58 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 ---
 
+### 18. **Interleaved Structure (Teach Then Immediately Exercise)**
+
+**Principle:** After teaching a concept, exercise it immediately — before moving to the next concept. Don't batch all teaching sections first and all exercises second.
+
+**Structure:**
+- Teach topic A → Exercise A
+- Teach topic B → Exercise B
+- Teach topic C → Exercise C
+- Synthesis exercises (translation, dialogue) come last
+
+**Anti-Pattern:** Teaching prepositions, contractions, verb echo, and residence all upfront, then presenting exercises A–D at the end. By the time the student reaches Exercise A, they've forgotten the preposition rules under the weight of everything else.
+
+**Rationale:** Immediate practice reinforces the concept while it's fresh. Batching creates cognitive overload and forces students to page back to the teaching section.
+
+---
+
+### 19. **Dialogue-First Worksheet Design**
+
+**Principle:** When building a worksheet around a dialogue, write the dialogue first. The dialogue defines the worksheet's scope — only teach vocabulary, grammar, and phonemes that appear in the dialogue.
+
+**Process:**
+1. Write the dialogue (use `/dialogue-generate`)
+2. Extract every word, structure, and sound the dialogue uses
+3. Build teaching sections for exactly those items
+4. Build exercises that practice exactly those items
+5. The dialogue is the culminating exercise
+
+**Anti-Pattern:** Writing teaching sections first, then trying to build a dialogue that uses everything taught. This produces bloated worksheets where the dialogue can't possibly cover all the material, or overstuffed dialogues that feel unnatural.
+
+**Rationale:** The dialogue is the communicative goal. Everything else in the worksheet exists to prepare the student for it. This enforces economicity (Principle 11) naturally.
+
+---
+
+### 20. **Cloze Format for Dialogue Exercises**
+
+**Principle:** Dialogue exercises should use cloze (fill-in-the-blank) format, not fully blank lines. Provide the sentence structure with specific words blanked out — targeting the grammar points being tested.
+
+**Example (good — cloze):**
+- Eu sou _________ Brasília. Eu sou _________ Ana!
+- (tests: de, a — preposition and article)
+
+**Example (bad — fully blank):**
+- _________________________________ (student must guess the entire line)
+
+**Scaffolding difficulty:**
+- Easier: one blank per sentence ("Não, não _________ .")
+- Harder: multiple blanks ("Não, _________ _________ . Eu estudo direito, _________ universidade _________ Califórnia.")
+
+**Rationale:** Fully blank lines require clairvoyance — the student must guess what the speaker would say with no structural support. Cloze format focuses attention on the target grammar while the surrounding text provides context. It also allows graduated difficulty by controlling the number and type of blanks.
+
+---
+
 ## Design Guidelines
 
 ### Question Design
@@ -476,6 +523,13 @@ Convert when it violates Phase 1's "pure eu" focus:
 2. Self-intro sequence updated: name → origin → residence → work/status → languages (no nationality)
 3. Centrality ranking extended to all vocabulary, not just verbs
 4. Worksheet checklist and layout rules moved to skills (`/worksheet-review`, `/worksheet-layout`) to keep PEDAGOGY.md focused on methodology
+
+**2026-03-08:**
+1. New Principle 11: Economicity and Atomicity — don't overload units with content that belongs elsewhere
+2. New Principle 18: Interleaved Structure — teach then immediately exercise, don't batch
+3. New Principle 19: Dialogue-First Worksheet Design — dialogue defines scope, worksheet serves it
+4. New Principle 20: Cloze Format for Dialogues — partial sentences with targeted blanks, not fully blank lines
+5. Total principles: 20 (was 17)
 
 ---
 
