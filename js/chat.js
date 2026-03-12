@@ -162,17 +162,26 @@ async function openDrillChat(drillId) {
     case 'contractions-articles':
       drillTitle.textContent = 'Contractions with Articles (de/em)';
       break;
-    case 'reflexive-verbs':
-      drillTitle.textContent = 'Reflexive Verbs Drill';
+    case 'reflexive-verbs-bp':
+      drillTitle.textContent = 'Reflexive Verbs — BP';
+      break;
+    case 'reflexive-verbs-ep':
+      drillTitle.textContent = 'Reflexive Verbs — EP';
       break;
     case 'immediate-future':
       drillTitle.textContent = 'Immediate Future Drill';
       break;
-    case 'present-continuous':
-      drillTitle.textContent = 'Present Continuous Tense Drill';
+    case 'present-continuous-bp':
+      drillTitle.textContent = 'Present Continuous — BP';
       break;
-    case 'imperfect-tense':
-      drillTitle.textContent = 'Imperfect Tense Drill';
+    case 'present-continuous-ep':
+      drillTitle.textContent = 'Present Continuous — EP';
+      break;
+    case 'imperfect-tense-bp':
+      drillTitle.textContent = 'Imperfect Tense — BP';
+      break;
+    case 'imperfect-tense-ep':
+      drillTitle.textContent = 'Imperfect Tense — EP';
       break;
     case 'future-tense':
       drillTitle.textContent = 'Future Tense Drill';
@@ -1101,10 +1110,13 @@ function getDrillName(drillId) {
     'ir-verbs': 'Regular -ir Verbs',
     'irregular-verbs': 'Irregular Verbs',
     'ser-estar': 'Ser vs. Estar',
-    'reflexive-verbs': 'Reflexive Verbs',
+    'reflexive-verbs-bp': 'Reflexive Verbs — BP',
+    'reflexive-verbs-ep': 'Reflexive Verbs — EP',
     'immediate-future': 'Immediate Future',
-    'present-continuous': 'Present Continuous',
-    'imperfect-tense': 'Imperfect Tense',
+    'present-continuous-bp': 'Present Continuous — BP',
+    'present-continuous-ep': 'Present Continuous — EP',
+    'imperfect-tense-bp': 'Imperfect Tense — BP',
+    'imperfect-tense-ep': 'Imperfect Tense — EP',
     'future-tense': 'Future Tense',
     'conditional-tense': 'Conditional Tense',
     'present-subjunctive': 'Present Subjunctive',

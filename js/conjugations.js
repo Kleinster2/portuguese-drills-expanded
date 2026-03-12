@@ -8,8 +8,8 @@ function shouldShowConjugationButtons(content, activeDrills) {
   // List of verb drills that support conjugation buttons (or subject buttons)
   const verbDrills = [
     'regular-ar', 'regular-er', 'regular-ir',
-    'irregular-verbs', 'ser-estar', 'reflexive-verbs',
-    'imperfect-tense', 'future-tense', 'conditional-tense',
+    'irregular-verbs', 'ser-estar', 'reflexive-verbs-bp', 'reflexive-verbs-ep',
+    'imperfect-tense-bp', 'imperfect-tense-ep', 'future-tense', 'conditional-tense',
     'present-subjunctive', 'imperfect-subjunctive', 'future-subjunctive',
     'imperative', 'subject-identification'
   ];
@@ -400,7 +400,8 @@ function getAllConjugations(infinitive, activeDrills = []) {
 
   // Map drills to their respective tenses
   const drillToTense = {
-    'imperfect-tense': 'imperfect',
+    'imperfect-tense-bp': 'imperfect',
+    'imperfect-tense-ep': 'imperfect',
     'future-tense': 'future',
     'conditional-tense': 'conditional',
     'present-subjunctive': 'present-subjunctive',
@@ -419,7 +420,7 @@ function getAllConjugations(infinitive, activeDrills = []) {
 
   // If no specific tense drill, or if present/past drills are active, include present and past
   if (!hasSpecificTense ||
-      activeDrills.some(d => ['regular-ar', 'regular-er', 'regular-ir', 'irregular-verbs', 'ser-estar', 'reflexive-verbs'].includes(d))) {
+      activeDrills.some(d => ['regular-ar', 'regular-er', 'regular-ir', 'irregular-verbs', 'ser-estar', 'reflexive-verbs-bp', 'reflexive-verbs-ep'].includes(d))) {
     tenses.push('present', 'past');
   }
 
@@ -459,7 +460,7 @@ function addConjugationButtons(messagesContainer, content, activeDrills = []) {
   }
 
   // Check if this is a reflexive verbs drill (asking for pronouns, not verbs)
-  if (activeDrills.includes('reflexive-verbs')) {
+  if (activeDrills.includes('reflexive-verbs-bp') || activeDrills.includes('reflexive-verbs-ep')) {
     addReflexivePronounButtons(messagesContainer, content);
     return;
   }
