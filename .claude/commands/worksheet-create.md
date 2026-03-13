@@ -9,10 +9,19 @@ Before writing anything, confirm:
 - **Topic**: what grammar/vocabulary is being practiced?
 - **Level**: CEFR level (A1, A2, B1, B2)?
 - **Context**: why this topic now? What did the student just finish? What errors have they been making?
+- **Matching drills**: check `config/prompts/` for existing drills on the same topic. Read them — they contain curated vocabulary, example sentences, error cases, and BP/EP distinctions that the worksheet should stay consistent with. Don't contradict what the drill teaches.
 
-## 2. Load pedagogy
+## 2. Load pedagogy and best practices
 
 Run `/pedagogy` to load PEDAGOGY.md. All content decisions must follow it.
+
+Also review [DRILL_BEST_PRACTICES.md](docs/drills/DRILL_BEST_PRACTICES.md) — these principles apply to printed worksheets too:
+- **Grammatical Isolation**: each blank tests ONE concept. Don't require the student to get two things right to fill one blank.
+- **Real-World Contexts**: sentences should be things a real person would say, not textbook artifacts.
+- **Approved vocabulary**: use high-frequency, centrality-tested words. Check the student's level and known vocabulary.
+- **First Question Rule**: start each section with the easiest example to build confidence.
+
+If the worksheet includes a dialogue, follow **Principle 19 (Dialogue as Synthesis Exercise)**: determine the lesson's target capabilities first, build teaching sections and exercises, then write the dialogue last as the culminating exercise. The dialogue must only use vocabulary and structures already taught in the lesson. Use `/dialogue-generate` for dialogue creation after the teaching sections are finalized.
 
 ## 3. Draft exercises
 

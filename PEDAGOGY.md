@@ -376,20 +376,20 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 ---
 
-### 19. **Dialogue-First Worksheet Design**
+### 19. **Dialogue as Synthesis Exercise**
 
-**Principle:** When building a worksheet around a dialogue, write the dialogue first. The dialogue defines the worksheet's scope — only teach vocabulary, grammar, and phonemes that appear in the dialogue.
+**Principle:** The dialogue is the culminating exercise of a lesson, not the starting point of its design. First determine what the lesson should teach (based on the previous lesson's capability inventory), then build teaching sections and exercises, then write a dialogue that synthesizes everything taught.
 
 **Process:**
-1. Write the dialogue (use `/dialogue-generate`)
-2. Extract every word, structure, and sound the dialogue uses
-3. Build teaching sections for exactly those items
-4. Build exercises that practice exactly those items
-5. The dialogue is the culminating exercise
+1. Review the previous lesson's capability inventory (what the student can/can't do)
+2. Determine the lesson's target capabilities — what should the student be able to do after this lesson?
+3. Build teaching sections and exercises for exactly those capabilities (interleaved per Principle 18)
+4. Write a dialogue that uses everything taught — the dialogue is the final exercise
+5. Verify: every word in the dialogue was defined in the lesson; every target structure appears in the dialogue
 
-**Anti-Pattern:** Writing teaching sections first, then trying to build a dialogue that uses everything taught. This produces bloated worksheets where the dialogue can't possibly cover all the material, or overstuffed dialogues that feel unnatural.
+**Anti-Pattern:** Writing the dialogue first and deriving the lesson from it. This over-constrains the lesson's scope to what fits naturally in one conversation, and may miss capabilities the student needs.
 
-**Rationale:** The dialogue is the communicative goal. Everything else in the worksheet exists to prepare the student for it. This enforces economicity (Principle 11) naturally.
+**Rationale:** The lesson serves the student's progression, not the dialogue. The dialogue serves the lesson — it's a synthesis exercise that proves the student can combine everything in a real conversation.
 
 ---
 
