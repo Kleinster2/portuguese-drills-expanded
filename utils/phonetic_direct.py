@@ -17,7 +17,8 @@ NASAL_DIPHTHONGS = ['ão', 'ãe', 'õe', 'ãi', 'õi']
 # Valid consonant clusters (onsets)
 VALID_ONSETS = ['pr', 'br', 'tr', 'dr', 'cr', 'gr', 'fr',
                 'pl', 'bl', 'cl', 'gl', 'fl',
-                'qu', 'gu', 'ch', 'lh', 'nh']
+                'qu', 'gu', 'ch', 'lh', 'nh',
+                'rr', 'ss']  # digraphs that stay together
 
 # Exception dictionary for irregular pronunciations
 # Only for words where algorithmic approach produces incorrect output
@@ -43,6 +44,29 @@ PHONETIC_EXCEPTIONS = {
     'nascimento': 'nah-see-MÊN-too',  # SC → S (not /sk/)
     'exceção': 'eh-seh-SÁHN',         # XC → SS, nasal ending
     'piscina': 'pee-SEE-nah',         # SC → S (not /sk/)
+
+    # Fixed vowel quality (no context disambiguation needed)
+    'selo': 'SÊH-loo',               # Always closed ê
+
+    # Verb conjugation: stem O opens in stressed forms (eu/tu/ele/eles)
+    'posso': 'PÓH-ssoo',
+    'pode': 'PÓH-jee',
+    'podes': 'PÓH-jees',
+    'podem': 'PÓH-dẽm',
+    'movo': 'MÓH-voo',
+    'move': 'MÓH-vee',
+    'moves': 'MÓH-vees',
+    'movem': 'MÓH-vẽm',
+    'dorme': 'DÓHR-mee',
+    'dormes': 'DÓHR-mees',
+    'dormem': 'DÓHR-mẽm',
+    'corro': 'KÓH-hoo',
+    'corre': 'KÓH-hee',
+    'corres': 'KÓH-hees',
+    'correm': 'KÓH-hẽm',
+    'morro': 'MÓH-hoo',
+    'morre': 'MÓH-hee',
+    'morrem': 'MÓH-hẽm',
 }
 
 
@@ -180,7 +204,7 @@ def syllabify(word):
     return syllables
 
 
-def determine_o_quality(word, syllable, syl_index, is_stressed):
+def determine_o_quality(word, syllable, syl_index, is_stressed, syllables=None):
     """
     Determine if O should be ó (open) or ô (closed).
 
@@ -229,9 +253,19 @@ def determine_o_quality(word, syllable, syl_index, is_stressed):
     if re.search(r'ol', syl_lower):
         return 'ó'
 
-    # Rule 5b: O before R (stressed) → open
-    if re.search(r'o[rR]', syl_lower) and is_stressed:
+    # Rule 5b: Plural metaphony — singular -o (closed ô) → plural -os (open ó)
+    # postos, portos, fogos, jogos, ovos, ossos, etc.
+    # Must come before O-before-R rule so "portos" opens correctly
+    if is_stressed and word_lower.endswith('os') and 'o' in syl_lower:
         return 'ó'
+
+    # Rule 5c: Stressed O before R — depends on word ending
+    # porta/corpo (end in -a) → open ó; porto/forno (end in -o) → closed ô
+    if re.search(r'or', syl_lower) and is_stressed:
+        if word_lower.endswith('a') or word_lower.endswith('as'):
+            return 'ó'
+        else:
+            return 'ô'
 
     # Rule 6: Stressed O in open syllable (ends with vowel)
     # Plural vs Singular distinction:
@@ -248,6 +282,14 @@ def determine_o_quality(word, syllable, syl_index, is_stressed):
             # (e.g., jogo → jo-go, first syllable "jo" has closed ô)
             elif word_lower.endswith('o') and syl_index < len([s for s in word_lower if s in vowels]) - 1:
                 return 'ô'
+            # Syllable ends with O before vowel hiatus (boa → bo-a) → closed
+            elif syl_lower.endswith('o') and syllables and syl_index + 1 < len(syllables):
+                next_syl = syllables[syl_index + 1].lower()
+                vowels_set = 'aeiouãõáéíóúâêô'
+                if len(next_syl) > 0 and next_syl[0] in vowels_set:
+                    return 'ô'
+                else:
+                    return 'ó'
             # Otherwise (bola, rosa, etc.), open it
             else:
                 return 'ó'
@@ -413,7 +455,7 @@ def get_x_sound(word, index):
     return 'sh'
 
 
-def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syllables=None):
+def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syllables=None, force_open_o=False, force_open_e=False, force_closed_e=False, force_unstressed=False):
     """
     Convert a single syllable to dictionary-style phonetic.
 
@@ -435,14 +477,21 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
 
     # Determine if this syllable is stressed
     # Function words (articles, prepositions, conjunctions) remain unstressed
-    function_words = ['o', 'a', 'os', 'as', 'de', 'em', 'e', 'que', 'se', 'te', 'me', 'lhe', 'nos']
+    function_words = ['o', 'a', 'os', 'as', 'de', 'em', 'e', 'que', 'se', 'te', 'me', 'lhe',
+                       'no', 'na', 'nos', 'nas',   # em + articles
+                       'do', 'da', 'dos', 'das',   # de + articles
+                       'ao', 'aos',                 # a + articles
+                       'pelo', 'pela', 'pelos', 'pelas']  # por + articles
     word_lower = word.lower()
 
     is_stressed = False
-    if total_syls == 1:
-        # Single syllable words are stressed UNLESS they're function words
-        if word_lower not in function_words:
-            is_stressed = True
+    if force_unstressed:
+        is_stressed = False
+    elif word_lower in function_words:
+        # Function words are always unstressed
+        is_stressed = False
+    elif total_syls == 1:
+        is_stressed = True
     elif stress_type == 'accent':
         is_stressed = any(has_accent(c) for c in syllable)
     elif stress_type == 'penultimate':
@@ -457,57 +506,57 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
         # Check for diphthongs FIRST (atomic units)
         found_diphthong = False
 
-        # EU diphthong → ÊH-oo (first part capitalized, second part stays lowercase)
+        # EU diphthong → ÊH.oo (dot = diphthong glide)
         if syl[i:i+2] == 'eu':
-            result += 'êh-<oo>'
+            result += 'êh.<oo>'
             i += 2
             found_diphthong = True
 
-        # OU diphthong → ÔH (closed O, single sound)
+        # OU diphthong → ÔH.oo (closed O glides to oo)
         elif syl[i:i+2] == 'ou':
-            result += 'ôh'
+            result += 'ôh.<oo>'
             i += 2
             found_diphthong = True
 
-        # EI diphthong → closed ê sound
+        # EI diphthong → ÊH.ee (closed ê glides to ee)
         elif syl[i:i+2] == 'ei':
-            result += 'Êh'
+            result += 'êh.<ee>'
             i += 2
             found_diphthong = True
 
-        # AI diphthong → AH-ee (first part capitalized, second part stays lowercase)
+        # AI diphthong → AH.ee
         elif syl[i:i+2] == 'ai':
-            result += 'ah-<ee>'
+            result += 'ah.<ee>'
             i += 2
             found_diphthong = True
 
-        # OI diphthong → OH-ee (first part capitalized, second part stays lowercase)
+        # OI diphthong → ÔH.ee (closed ô glides to ee)
         elif syl[i:i+2] == 'oi':
-            result += 'oh-<ee>'
+            result += 'ôh.<ee>'
             i += 2
             found_diphthong = True
 
-        # AU diphthong → AH-oo (first part capitalized, second part stays lowercase)
+        # AU diphthong → AH.oo
         elif syl[i:i+2] == 'au':
-            result += 'ah-<oo>'
+            result += 'ah.<oo>'
             i += 2
             found_diphthong = True
 
-        # ÃO nasal diphthong → ÃH-oo (nasal, first part capitalized, second lowercase)
+        # ÃO nasal diphthong → ÃH.oo
         elif syl[i:i+2] == 'ão':
-            result += 'ãh-<oo>'
+            result += 'ãh.<oo>'
             i += 2
             found_diphthong = True
 
-        # ÃE nasal diphthong → ÃH-ee (nasal, first part capitalized, second lowercase)
+        # ÃE nasal diphthong → ÃH.ee
         elif syl[i:i+2] == 'ãe':
-            result += 'ãh-<ee>'
+            result += 'ãh.<ee>'
             i += 2
             found_diphthong = True
 
-        # ÕE nasal diphthong → ÕH-ee (nasal, first part capitalized, second lowercase)
+        # ÕE nasal diphthong → ÕH.ee
         elif syl[i:i+2] == 'õe':
-            result += 'õh-<ee>'
+            result += 'õh.<ee>'
             i += 2
             found_diphthong = True
 
@@ -517,31 +566,38 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
         # Not a diphthong - process character by character
         char = syl[i]
 
-        # Palatalization: d/t + e/i → j/ch + ee (only when e/i is NOT part of a diphthong)
+        # Palatalization: d/t + e/i → j/ch + ee
+        # d+i / t+i → always palatalize (any position)
+        # d+e / t+e → only in UNSTRESSED FINAL position (cidade → jee, noite → chee)
+        # NOT d+e/t+e in stressed syllables (devo → DEH, not JEE)
         if char == 'd':
             if i + 1 < len(syl) and syl[i+1] in 'ei':
-                # Check if e/i is part of a diphthong (ei, eu, etc.)
                 is_diphthong = False
                 if i + 2 < len(syl):
                     if syl[i+1:i+3] in ['ei', 'eu']:
                         is_diphthong = True
 
-                # Only palatalize if NOT a diphthong, and e/i is final or before vowel
-                if not is_diphthong and (i + 2 >= len(syl) or syl[i+2] in 'aeiouãõáéíóúâêô'):
+                is_i = syl[i+1] == 'i'
+                at_end = i + 2 >= len(syl)
+                is_final_unstressed = at_end and syl_index == total_syls - 1 and not is_stressed
+
+                if not is_diphthong and (is_i or is_final_unstressed):
                     result += 'jee'
                     i += 2
                     continue
             result += 'd'
         elif char == 't':
             if i + 1 < len(syl) and syl[i+1] in 'ei':
-                # Check if e/i is part of a diphthong (ei, eu, etc.)
                 is_diphthong = False
                 if i + 2 < len(syl):
                     if syl[i+1:i+3] in ['ei', 'eu']:
                         is_diphthong = True
 
-                # Only palatalize if NOT a diphthong, e/i is at end of syllable, AND it's the final syllable of word
-                if not is_diphthong and i + 2 >= len(syl) and syl_index == total_syls - 1:
+                is_i = syl[i+1] == 'i'
+                at_end = i + 2 >= len(syl)
+                is_final_unstressed = at_end and syl_index == total_syls - 1 and not is_stressed
+
+                if not is_diphthong and (is_i or is_final_unstressed):
                     result += 'chee'
                     i += 2
                     continue
@@ -584,15 +640,12 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
             elif i == len(syl) - 1:
                 # Syllable-final L
                 if syl_index == total_syls - 1:
-                    # Word-final L → vocalization to /w/ glide
-                    # Special case: after U, don't add -oo (U already represents that sound)
+                    # Word-final L → vocalization as dot-diphthong with .oo
+                    # al → AH.oo, el → ÉH.oo, il → EE.oo, ol → ÔH.oo, ul → (merges)
                     if i > 0 and syl[i-1] in 'uúũ':
-                        # After U: L vocalizes but merges with U sound
-                        pass  # Don't add anything, U already covers it
+                        pass  # After U: merges, no extra sound
                     else:
-                        # After other vowels: add -oo for vocalization
-                        # Use special marker <> to keep this lowercase even in stressed syllables
-                        result += '-<oo>'
+                        result += '.<oo>'
                 else:
                     # Syllable-final but not word-final → keep as l
                     result += 'l'
@@ -603,7 +656,7 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
         elif char == 'n':
             # Check for NH digraph first
             if i + 1 < len(syl) and syl[i+1] == 'h':
-                result += 'ñ'
+                result += 'ny'
                 i += 1  # Skip the H
             else:
                 result += 'n'
@@ -616,13 +669,27 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
             else:
                 result += 'k'
         elif char == 'r':
-            # Strong R only at word-initial position
-            # All other positions (including syllable-initial after first syllable) = flap r
-            if i == 0 and syl_index == 0:
-                # Word-initial R = strong R
-                result += 'H'
+            # R pronunciation in BP:
+            # 1. RR digraph → guttural (h), skip second r
+            # 2. Word-initial R → guttural (h)
+            # 3. Coda R (end of syllable) → guttural (h)
+            # 4. Otherwise (intervocalic single R) → flap (r)
+            if i + 1 < len(syl) and syl[i+1] == 'r':
+                # RR digraph → guttural, skip both
+                result += 'h'
+                i += 1  # skip second r
+            elif i > 0 and syl[i-1] == 'r':
+                # Second r of rr already handled above — skip
+                pass
+            elif i == 0 and syl_index == 0:
+                # Word-initial R = guttural
+                result += 'h'
+            elif i == len(syl) - 1:
+                # Coda R (syllable-final) → written as 'r' in output
+                # (guttural in BP speech, but 'r' avoids confusion with vowel 'h' notation)
+                result += 'r'
             else:
-                # All other positions = flap r
+                # Intervocalic or other = flap r
                 result += 'r'
         elif char == 's':
             # S between vowels → Z
@@ -661,9 +728,9 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
 
         # Vowels (not in diphthongs)
         elif char in 'aáàã':
-            # Check if followed by m/n in same syllable (nasalization)
+            # A before m/n — nasality shown by following m/n
             if i + 1 < len(syl) and syl[i+1] in 'mn':
-                result += 'ãh'
+                result += 'ah'
             else:
                 result += 'ah'
         elif char in 'eéêè':
@@ -673,21 +740,25 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
             if is_final_e:
                 # Final unstressed -e → ee
                 result += 'ee'
-            # Check if followed by m/n in same syllable (nasalization)
+            # E before m/n — nasality shown by following m/n
             elif i + 1 < len(syl) and syl[i+1] in 'mn':
-                # Nasal E → ẽ
-                result += 'ẽ'
+                result += 'êh'
             else:
                 # Apply E quality rules
-                quality = determine_e_quality(word, syllable, syl_index, is_stressed, syllables)
-                if char == 'é' or quality == 'é':
+                if force_open_e and is_stressed:
                     result += 'Éh'
-                else:  # ê or default
+                elif force_closed_e and is_stressed:
                     result += 'Êh'
+                else:
+                    quality = determine_e_quality(word, syllable, syl_index, is_stressed, syllables)
+                    if char == 'é' or quality == 'é':
+                        result += 'Éh'
+                    else:  # ê or default
+                        result += 'Êh'
         elif char in 'iíĩ':
-            # Check if followed by m/n in same syllable (nasalization)
+            # I before m/n — nasality shown by following m/n
             if i + 1 < len(syl) and syl[i+1] in 'mn':
-                result += 'ĩ'
+                result += 'ee'
             else:
                 result += 'ee'
         elif char in 'oóôõ':
@@ -700,16 +771,19 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
                 # Final unstressed -o or -os → oo (closed, no quality marker needed)
                 result += 'oo'
             else:
-                # Check if followed by m/n in same syllable (nasalization)
+                # O before m/n — nasality shown by following m/n
                 if i + 1 < len(syl) and syl[i+1] in 'mn':
-                    result += 'õh'
+                    result += 'ôh'
                 else:
                     # Determine quality: ó (open) vs ô (closed)
-                    quality = determine_o_quality(word, syllable, syl_index, is_stressed)
-                    if char == 'ó' or quality == 'ó':
+                    if force_open_o and is_stressed:
                         result += 'Óh'
-                    else:  # ô or default
-                        result += 'Ôh'
+                    else:
+                        quality = determine_o_quality(word, syllable, syl_index, is_stressed, syllables)
+                        if char == 'ó' or quality == 'ó':
+                            result += 'Óh'
+                        else:  # ô or default
+                            result += 'Ôh'
         elif char in 'uúũ':
             # Check if U is silent (after g/q before e/i)
             if char == 'u' and i > 0 and syl[i-1] in 'gq':
@@ -717,11 +791,8 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
                     # Silent U in GU/QU digraph - skip
                     i += 1
                     continue
-            # Check if followed by m/n in same syllable (nasalization)
-            if i + 1 < len(syl) and syl[i+1] in 'mn':
-                result += 'ũ'
-            else:
-                result += 'oo'
+            # U is always 'oo' — nasality shown by following m/n
+            result += 'oo'
 
         i += 1
 
@@ -852,22 +923,108 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
     return result
 
 
-def portuguese_to_phonetic(word):
+def portuguese_to_phonetic(word, prev_word=None, next_word=None):
     """
     Convert Portuguese word to dictionary-style phonetic transcription.
 
     Checks exception dictionary first, then falls back to algorithmic generation.
+    Uses prev_word/next_word for context-dependent disambiguation (e.g., noun vs verb).
 
     Args:
         word: Portuguese word
+        prev_word: Previous word in sentence (for context)
+        next_word: Next word in sentence (for context)
 
     Returns:
-        str: Dictionary-style phonetic (e.g., "brah-zee-LÉI-roo")
+        str: Dictionary-style phonetic (e.g., "brah-zee-LÊH.ee-roo")
     """
     # 0. Check exception dictionary first (for truly irregular words)
     word_lower = word.lower()
     if word_lower in PHONETIC_EXCEPTIONS:
         return PHONETIC_EXCEPTIONS[word_lower]
+
+    # 0b. Context-aware noun/verb disambiguation
+    # Words with different O quality as noun (closed ô) vs verb (open ó):
+    #   o jogo (noun) → closed ô  |  eu jogo (verb) → open ó
+    # Heuristic: check prev_word to guess noun vs verb
+    prev_lower = prev_word.lower() if prev_word else None
+    next_lower = next_word.lower() if next_word else None
+
+    # O alternation: noun (closed ô) vs verb (open ó)
+    ambiguous_o = {'jogo', 'gosto', 'acordo', 'almoço',
+                   'namoro', 'governo', 'rolo', 'toco', 'troco'}
+    # E alternation: noun/adj (closed ê) vs verb (open é)
+    ambiguous_e = {'começo', 'emprego', 'seco', 'peso'}
+
+    # Signals that the word is a VERB (prev_word)
+    verb_signals_prev = {
+        # Subject pronouns
+        'eu', 'tu', 'ele', 'ela', 'nós', 'eles', 'elas', 'você', 'vocês',
+        # Adverbs (modify verbs)
+        'não', 'já', 'também', 'ainda', 'sempre', 'nunca', 'só',
+        'bem', 'mal', 'muito', 'quase', 'realmente',
+        # Conjunctions / relative pronouns (often introduce verb clauses)
+        'que', 'quando', 'onde', 'como', 'porque', 'se',
+    }
+
+    # Signals that the word is a NOUN (prev_word)
+    noun_signals_prev = {
+        # Articles
+        'o', 'a', 'os', 'as', 'um', 'uma', 'uns', 'umas',
+        # Demonstratives
+        'este', 'esta', 'estes', 'estas', 'esse', 'essa', 'esses', 'essas',
+        'aquele', 'aquela', 'aqueles', 'aquelas',
+        # Possessives
+        'meu', 'minha', 'meus', 'minhas', 'seu', 'sua', 'seus', 'suas',
+        'nosso', 'nossa', 'nossos', 'nossas', 'teu', 'tua', 'teus', 'tuas',
+        # Prepositions (nouns follow prepositions)
+        'de', 'do', 'da', 'dos', 'das', 'no', 'na', 'nos', 'nas',
+        'em', 'com', 'pelo', 'pela', 'pelos', 'pelas', 'ao', 'aos',
+        # Adjectives commonly before nouns
+        'bom', 'bons', 'boa', 'boas', 'grande', 'grandes',
+        'primeiro', 'primeira', 'último', 'última',
+        'melhor', 'pior', 'novo', 'nova', 'próprio', 'própria',
+    }
+
+    # Signals that the word is a NOUN (next_word)
+    # "jogo de futebol" → noun + preposition
+    noun_signals_next = {
+        'de', 'do', 'da', 'dos', 'das',
+    }
+
+    def _is_verb_usage():
+        """Determine if ambiguous word is being used as verb."""
+        # Prev word is a verb signal → verb
+        if prev_lower in verb_signals_prev:
+            return True
+        # Prev word is a noun signal → noun
+        if prev_lower in noun_signals_prev:
+            return False
+        # Next word is a preposition → noun phrase ("jogo de futebol")
+        if next_lower in noun_signals_next:
+            return False
+        # No context at all → default noun
+        if prev_lower is None and next_lower is None:
+            return False
+        # Has next word but no prev signal → likely verb ("jogo futebol")
+        if prev_lower is None and next_lower is not None:
+            return True
+        # Fallback: default noun
+        return False
+
+    force_open_o = False
+    force_open_e = False
+    force_closed_e = False
+    force_unstressed = False
+    if word_lower in ambiguous_o:
+        if _is_verb_usage():
+            force_open_o = True
+    if word_lower in ambiguous_e:
+        if _is_verb_usage():
+            force_open_e = True
+        else:
+            force_closed_e = True
+
 
     # 1. Syllabify
     syllables = syllabify(word)
@@ -878,7 +1035,7 @@ def portuguese_to_phonetic(word):
     # 3. Convert each syllable
     phonetic_syllables = []
     for i, syl in enumerate(syllables):
-        phon = syllable_to_phonetic(word, syl, i, len(syllables), stress_info, syllables)
+        phon = syllable_to_phonetic(word, syl, i, len(syllables), stress_info, syllables, force_open_o, force_open_e, force_closed_e, force_unstressed)
         phonetic_syllables.append(phon)
 
     # 4. Join with hyphens
@@ -897,9 +1054,11 @@ if __name__ == '__main__':
         text = ' '.join(sys.argv[1:])
         words = text.replace('.', '').replace(',', '').replace('?', '').replace('!', '').split()
         results = []
-        for word in words:
+        for idx, word in enumerate(words):
+            prev = words[idx - 1] if idx > 0 else None
+            nxt = words[idx + 1] if idx + 1 < len(words) else None
             try:
-                results.append(portuguese_to_phonetic(word))
+                results.append(portuguese_to_phonetic(word, prev_word=prev, next_word=nxt))
             except Exception as e:
                 results.append(f'[{word}?]')
         print(' '.join(results))
