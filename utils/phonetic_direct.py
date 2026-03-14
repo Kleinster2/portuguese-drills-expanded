@@ -199,6 +199,12 @@ def determine_o_quality(word, syllable, syl_index, is_stressed):
     syl_lower = syllable.lower()
     word_lower = word.lower()
 
+    # Rule 0: Respect explicit accent marks in the original word
+    if 'ô' in syl_lower:
+        return 'ô'
+    if 'ó' in syl_lower:
+        return 'ó'
+
     # Rule 1: O before nasal (m, n) - in same syllable or if next syllable starts with m/n
     if re.search(r'o[mn]', syl_lower):
         return 'ô'
@@ -266,6 +272,12 @@ def determine_e_quality(word, syllable, syl_index, is_stressed, syllables=None):
     """
     syl_lower = syllable.lower()
     word_lower = word.lower()
+
+    # Rule 0: Respect explicit accent marks in the original word
+    if 'ê' in syl_lower:
+        return 'ê'
+    if 'é' in syl_lower:
+        return 'é'
 
     # Rule 1: E before nasal (including next syllable starting with nasal)
     if re.search(r'e[mn]', syl_lower):
@@ -457,9 +469,9 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
             i += 2
             found_diphthong = True
 
-        # EI diphthong → ÉI (open E + I)
+        # EI diphthong → closed ê sound
         elif syl[i:i+2] == 'ei':
-            result += 'éi'
+            result += 'Êh'
             i += 2
             found_diphthong = True
 
