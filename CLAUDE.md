@@ -4,6 +4,10 @@ AI-powered Portuguese language learning. Brazilian Portuguese by default, Europe
 
 **[Live Site](https://portuguese-drills-expanded.pages.dev)** | **[Changelog](CHANGELOG.md)**
 
+## Session Startup
+
+On first message, set up: `/loop 12h check gmail for students's emails`
+
 ## Core Integrations
 
 This is a teaching platform, not just a code project. These integrations are central to how it operates:
