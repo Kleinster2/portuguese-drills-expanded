@@ -1,8 +1,10 @@
 """
 Pipeline C: LLM-based Dictionary Pronunciation
 
+DEPRECATED: Superseded by phonetic_direct.py (algorithmic, deterministic, no API cost).
+Kept as a reference oracle for comparison testing only. Do not use in production.
+
 Uses Claude to generate English-style pronunciation guides for Portuguese text.
-This is more accurate than pattern matching for unknown words.
 
 Usage:
     python utils/llm_pronunciation.py "Eu sou brasileiro de São Paulo."
@@ -113,8 +115,9 @@ def format_llm_pronunciation(text: str) -> str:
     client = anthropic.Anthropic(api_key=api_key)
 
     message = client.messages.create(
-        model="claude-sonnet-4-20250514",
-        max_tokens=1024,
+        model="claude-sonnet-4-6",
+        max_tokens=16000,
+        thinking={"type": "enabled", "budget_tokens": 10000},
         system=PHONETIC_CONVENTIONS,
         messages=[
             {
@@ -124,7 +127,10 @@ def format_llm_pronunciation(text: str) -> str:
         ]
     )
 
-    return message.content[0].text.strip()
+    for block in message.content:
+        if block.type == "text":
+            return block.text.strip()
+    return ""
 
 
 def main():
