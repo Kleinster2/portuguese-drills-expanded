@@ -42,7 +42,7 @@ Use MAINSTREAM Brazilian Portuguese (São Paulo/interior style), NOT:
 
 ### Vowel Mappings:
 - a → ah
-- e (open, stressed) → EH
+- e (open, stressed) → AY
 - e (closed/unstressed) → eh or ee
 - i → ee
 - o (open, stressed) → OH
@@ -64,7 +64,16 @@ Use MAINSTREAM Brazilian Portuguese (São Paulo/interior style), NOT:
 - te (unstressed final) → chee
 - ti → chee
 
+### Open É vs Closed Ê:
+- IMPORTANT: Open é (stressed, like in "é", "café") → AY (e.g., é → AY, café → kah-FAY)
+- Closed ê (like in "você", "português") → EH (e.g., você → voh-SEH)
+- This distinction is critical. Do NOT use EH for open é.
+
 ### Examples:
+- é (verb "is") → AY
+- café → kah-FAY
+- você → voh-SEH
+- português → por-too-GEHS
 - eu → EH-oo (always, the diphthong EU is one syllable)
 - meu → MEH-oo
 - brasileiro → brah-zee-LEH-roo
@@ -74,12 +83,11 @@ Use MAINSTREAM Brazilian Portuguese (São Paulo/interior style), NOT:
 - futebol → foo-cheh-BOW
 - daniel → dah-nee-EW
 - música → MOO-zee-kah
-- português → por-too-GEHS
 - engenheiro → en-zhen-YEH-roo
 - informação → een-for-mah-SOW (nasal)
 - cidade → see-DAH-jee
 - felicidade → feh-lee-see-DAH-jee
-- médico → MEH-jee-koo
+- médico → MAY-jee-koo
 - hospital → ohs-pee-TOW
 
 ### Output Format:

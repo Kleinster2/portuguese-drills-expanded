@@ -546,7 +546,7 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
             if i + 1 < len(syl) and syl[i+1] == 'h':
                 result += 'sh'
                 i += 1  # Skip the H
-            elif i + 1 < len(syl) and syl[i+1] in 'ei':
+            elif i + 1 < len(syl) and syl[i+1] in 'eiéêíî':
                 result += 's'
             else:
                 result += 'k'
@@ -880,24 +880,27 @@ if __name__ == '__main__':
     import sys
     sys.stdout.reconfigure(encoding='utf-8')
 
-    test_words = [
-        'eu',
-        'sou',
-        'brasileiro',
-        'de',
-        'daniel',
-        'inglês',
-        'português',
-        'contente',
-        'gato',
-        'casa',
-    ]
-
-    print('100% ALGORITHMIC PHONETIC CONVERSION\n')
-    print('=' * 60)
-    for word in test_words:
-        try:
-            phonetic = portuguese_to_phonetic(word)
-            print(f'{word:15} → {phonetic}')
-        except Exception as e:
-            print(f'{word:15} → ERROR: {e}')
+    if len(sys.argv) > 1:
+        # Process CLI input: split into words, convert each
+        text = ' '.join(sys.argv[1:])
+        words = text.replace('.', '').replace(',', '').replace('?', '').replace('!', '').split()
+        results = []
+        for word in words:
+            try:
+                results.append(portuguese_to_phonetic(word))
+            except Exception as e:
+                results.append(f'[{word}?]')
+        print(' '.join(results))
+    else:
+        test_words = [
+            'eu', 'sou', 'brasileiro', 'de', 'daniel',
+            'inglês', 'português', 'contente', 'gato', 'casa',
+        ]
+        print('100% ALGORITHMIC PHONETIC CONVERSION\n')
+        print('=' * 60)
+        for word in test_words:
+            try:
+                phonetic = portuguese_to_phonetic(word)
+                print(f'{word:15} → {phonetic}')
+            except Exception as e:
+                print(f'{word:15} → ERROR: {e}')
