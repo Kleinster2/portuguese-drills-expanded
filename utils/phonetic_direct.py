@@ -18,7 +18,7 @@ NASAL_DIPHTHONGS = ['ão', 'ãe', 'õe', 'ãi', 'õi']
 VALID_ONSETS = ['pr', 'br', 'tr', 'dr', 'cr', 'gr', 'fr',
                 'pl', 'bl', 'cl', 'gl', 'fl',
                 'qu', 'gu', 'ch', 'lh', 'nh',
-                'rr', 'ss']  # digraphs that stay together
+                'rr']  # RR stays together so digraph→guttural rule fires
 
 # Function words — always unstressed
 FUNCTION_WORDS = {
@@ -97,6 +97,7 @@ PHONETIC_EXCEPTIONS = {
 
     # Fixed vowel quality (no context disambiguation needed)
     'selo': 'SÊH-loo',               # Always closed ê
+    'moro': 'MÓH-roo',               # -ar verb (morar), always open ó
 
     # Verb conjugation: stem O opens in stressed forms (eu/tu/ele/eles)
     'posso': 'PÓH-ssoo',
