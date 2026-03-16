@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portuguese Word Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .word-card {
+            animation: fadeIn 0.3s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .glass {
+            background: rgba(255,255,255,0.7);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-rose-50 via-white to-pink-50">
+    <div class="max-w-2xl mx-auto px-4 py-12">
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <a href="/index.html" class="text-sm text-slate-500 hover:text-slate-700 mb-4 inline-block">&larr; Back to Platform</a>
+            <h1 class="text-3xl font-bold text-slate-900">Gerador de Palavras</h1>
+            <p class="mt-2 text-slate-600">A tiny GPT (4,608 parameters) trained on 43K Portuguese words</p>
+            <p class="text-sm text-slate-400 mt-1">Based on Andrej Karpathy's MicroGPT &mdash; same architecture as ChatGPT, just smaller</p>
+        </header>
+
+        <!-- Controls -->
+        <div class="glass rounded-2xl p-6 border border-slate-200 shadow-sm mb-8">
+            <div class="flex flex-col sm:flex-row gap-4 items-end">
+                <div class="flex-1">
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Temperature</label>
+                    <div class="flex items-center gap-3">
+                        <input type="range" id="temperature" min="0.2" max="1.2" step="0.1" value="0.5"
+                               class="flex-1 h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-rose-500">
+                        <span id="temp-display" class="text-sm font-mono text-slate-600 w-8">0.5</span>
+                    </div>
+                    <div class="flex justify-between text-xs text-slate-400 mt-1">
+                        <span>conservador</span>
+                        <span>criativo</span>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Quantidade</label>
+                    <select id="count" class="px-3 py-2 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-rose-500 focus:outline-none">
+                        <option value="5">5 palavras</option>
+                        <option value="10" selected>10 palavras</option>
+                        <option value="20">20 palavras</option>
+                        <option value="50">50 palavras</option>
+                    </select>
+                </div>
+                <button id="generate-btn" onclick="generate()"
+                        class="px-6 py-2 bg-rose-500 text-white font-semibold rounded-lg hover:bg-rose-600 active:scale-95 transition-all shadow-sm disabled:opacity-50 disabled:cursor-not-allowed">
+                    Gerar
+                </button>
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div id="loading" class="text-center py-12">
+            <div class="inline-block w-8 h-8 border-4 border-rose-200 border-t-rose-500 rounded-full animate-spin"></div>
+            <p class="mt-3 text-slate-600">Loading model weights...</p>
+        </div>
+
+        <!-- Results -->
+        <div id="results" class="hidden">
+            <div id="words" class="flex flex-wrap gap-3 justify-center"></div>
+        </div>
+
+        <!-- How it works -->
+        <details class="mt-12 glass rounded-2xl border border-slate-200 shadow-sm">
+            <summary class="px-6 py-4 cursor-pointer text-sm font-semibold text-slate-700 hover:text-slate-900">
+                Como funciona?
+            </summary>
+            <div class="px-6 pb-6 text-sm text-slate-600 space-y-3">
+                <p>This is a <strong>real neural network</strong> running in your browser &mdash; not a random letter shuffler. It's a GPT transformer (the same architecture behind ChatGPT) with:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>4,608 learned parameters</li>
+                    <li>1 transformer layer, 4 attention heads</li>
+                    <li>16-dimensional embeddings, 16-token context</li>
+                    <li>Trained on 43,532 Portuguese words (2,000 steps)</li>
+                </ul>
+                <p>The model learned Portuguese phonotactics &mdash; which character sequences are natural in Portuguese (consonant clusters like <em>nh</em>, <em>lh</em>, <em>ção</em>; vowel patterns with accents; common endings like <em>-mente</em>, <em>-eiro</em>, <em>-ação</em>). It generates new words character by character, picking the next letter based on learned probabilities.</p>
+                <p><strong>Temperature</strong> controls randomness: low = safe, common patterns; high = creative, unusual combinations.</p>
+                <p class="text-xs text-slate-400">Based on Andrej Karpathy's MicroGPT (Feb 2026). Pre-trained in Python, inference ported to JavaScript.</p>
+            </div>
+        </details>
+    </div>
+
+    <script>
+    let model = null;
+
+    // Load model weights
+    async function loadModel() {
+        try {
+            const resp = await fetch('/data/microgpt_pt_weights.json');
+            model = await resp.json();
+            document.getElementById('loading').classList.add('hidden');
+            document.getElementById('results').classList.remove('hidden');
+            document.getElementById('generate-btn').disabled = false;
+            generate(); // auto-generate first batch
+        } catch (e) {
+            document.getElementById('loading').innerHTML =
+                '<p class="text-red-500">Failed to load model. Run <code>python scripts/microgpt_pt.py</code> first.</p>';
+        }
+    }
+
+    // Math helpers
+    function linear(x, w) {
+        return w.map(wo => wo.reduce((sum, wi, i) => sum + wi * x[i], 0));
+    }
+
+    function softmax(logits) {
+        const maxVal = Math.max(...logits);
+        const exps = logits.map(v => Math.exp(v - maxVal));
+        const total = exps.reduce((a, b) => a + b, 0);
+        return exps.map(e => e / total);
+    }
+
+    function rmsnorm(x) {
+        const ms = x.reduce((s, xi) => s + xi * xi, 0) / x.length;
+        const scale = 1.0 / Math.sqrt(ms + 1e-5);
+        return x.map(xi => xi * scale);
+    }
+
+    // GPT forward pass (inference only, no autograd needed)
+    function gptForward(tokenId, posId, keys, values) {
+        const { weights, n_layer, n_embd, n_head } = model;
+        const headDim = n_embd / n_head;
+
+        // Token + position embedding
+        let x = weights.wte[tokenId].map((t, i) => t + weights.wpe[posId][i]);
+        x = rmsnorm(x);
+
+        for (let li = 0; li < n_layer; li++) {
+            // Attention
+            const xRes = [...x];
+            x = rmsnorm(x);
+            const q = linear(x, weights[`layer${li}.attn_wq`]);
+            const k = linear(x, weights[`layer${li}.attn_wk`]);
+            const v = linear(x, weights[`layer${li}.attn_wv`]);
+
+            keys[li].push(k);
+            values[li].push(v);
+
+            const xAttn = [];
+            for (let h = 0; h < n_head; h++) {
+                const hs = h * headDim;
+                const qH = q.slice(hs, hs + headDim);
+                const kH = keys[li].map(ki => ki.slice(hs, hs + headDim));
+                const vH = values[li].map(vi => vi.slice(hs, hs + headDim));
+
+                const attnLogits = kH.map(kt =>
+                    qH.reduce((s, qj, j) => s + qj * kt[j], 0) / Math.sqrt(headDim)
+                );
+                const attnWeights = softmax(attnLogits);
+
+                for (let j = 0; j < headDim; j++) {
+                    let val = 0;
+                    for (let t = 0; t < vH.length; t++) val += attnWeights[t] * vH[t][j];
+                    xAttn.push(val);
+                }
+            }
+
+            x = linear(xAttn, weights[`layer${li}.attn_wo`]);
+            x = x.map((a, i) => a + xRes[i]);
+
+            // MLP
+            const xRes2 = [...x];
+            x = rmsnorm(x);
+            x = linear(x, weights[`layer${li}.mlp_fc1`]);
+            x = x.map(xi => Math.max(0, xi)); // ReLU
+            x = linear(x, weights[`layer${li}.mlp_fc2`]);
+            x = x.map((a, i) => a + xRes2[i]);
+        }
+
+        return linear(x, weights.lm_head);
+    }
+
+    // Weighted random sampling
+    function sampleFrom(probs) {
+        let r = Math.random();
+        for (let i = 0; i < probs.length; i++) {
+            r -= probs[i];
+            if (r <= 0) return i;
+        }
+        return probs.length - 1;
+    }
+
+    // Generate one word
+    function generateWord(temperature) {
+        const { uchars, vocab_size, n_layer, block_size } = model;
+        const BOS = uchars.length;
+
+        const keys = Array.from({ length: n_layer }, () => []);
+        const values = Array.from({ length: n_layer }, () => []);
+
+        let tokenId = BOS;
+        const chars = [];
+
+        for (let pos = 0; pos < block_size; pos++) {
+            const logits = gptForward(tokenId, pos, keys, values);
+            const scaled = logits.map(l => l / temperature);
+            const probs = softmax(scaled);
+            tokenId = sampleFrom(probs);
+
+            if (tokenId === BOS) break;
+            chars.push(uchars[tokenId]);
+        }
+
+        return chars.join('');
+    }
+
+    // Generate batch
+    function generate() {
+        if (!model) return;
+
+        const temperature = parseFloat(document.getElementById('temperature').value);
+        const count = parseInt(document.getElementById('count').value);
+        const container = document.getElementById('words');
+        container.innerHTML = '';
+
+        for (let i = 0; i < count; i++) {
+            const word = generateWord(temperature);
+            if (word.length < 2) { i--; continue; } // skip single chars
+
+            const el = document.createElement('span');
+            el.className = 'word-card inline-block px-4 py-2 bg-white border border-slate-200 rounded-full text-lg text-slate-800 shadow-sm hover:shadow-md hover:border-rose-300 transition-all cursor-default';
+            el.style.animationDelay = `${i * 50}ms`;
+            el.textContent = word;
+            container.appendChild(el);
+        }
+    }
+
+    // Temperature slider display
+    document.getElementById('temperature').addEventListener('input', (e) => {
+        document.getElementById('temp-display').textContent = e.target.value;
+    });
+
+    // Init
+    loadModel();
+    </script>
+</body>
+</html>
