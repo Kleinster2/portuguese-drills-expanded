@@ -4,6 +4,7 @@
 
 **Full name:** Julian Massarani
 **Email:** julianma95@gmail.com
+**Phone:** +1 (203) 767-5428
 **Started:** May 17, 2023 (first class, online with Ben)
 **Current level:** [[Phase 1 - A1]]
 **Session frequency:** Group class with Ben; originally twice/week (Wed 5pm + Thu 6pm/6:30pm)

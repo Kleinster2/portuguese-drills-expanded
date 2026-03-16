@@ -4,6 +4,8 @@
 
 **Full name:** Amanda Hynynen Pilnik
 **Email:** ashpilnik@gmail.com
+**Phone:** +1 989-600-9149
+**Address:** 100 Bank St, New York, NY 10014
 **Started:** Apr 12, 2022 (first in-person class); current stretch from Feb 2025
 **Current level:** [[Phase 1 - A1]] (upper — writes comfortably in Portuguese with minor errors)
 **Session frequency:** Weekly (flexible — typically Wed/Thu/Fri)

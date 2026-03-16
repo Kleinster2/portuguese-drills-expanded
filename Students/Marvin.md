@@ -4,6 +4,7 @@
 
 **Full name:** Marvin Michel
 **Email:** marvinmichel92@gmail.com
+**Phone:** +1 (347) 756-8570
 **Started:** Apr 1, 2025 (first in-person class)
 **Current level:** ~A2-B1 (European Portuguese focus)
 **Session frequency:** Weekly (Tuesdays, sometimes Thursdays), 1.5 hours, in-person (Brooklyn Navy Yard / Essex Market / Manhattan)

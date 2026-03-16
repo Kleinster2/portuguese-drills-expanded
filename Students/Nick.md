@@ -4,6 +4,7 @@
 
 **Full name:** Nick Curran
 **Email:** ncurran17@gmail.com
+**Phone:** (914) 629-1686
 **Started:** Apr 3, 2025 (first Zoom class)
 **Current level:** [[Phase 1 - A1]] (writes in Portuguese — mixed with English)
 **Session frequency:** Weekly, typically Thursday mornings via Zoom (adjusting due to new work schedule)

@@ -4,7 +4,8 @@
 
 **Full name:** Dexter Mayo
 **Email:** dextermayo4@gmail.com
-**Gender:** Female
+**LinkedIn:** linkedin.com/in/dexter-mayo
+**Gender:** Female (she/her)
 **Status:** Active — first lesson completed Thu 3/5 at Frog (358 Marcus Garvey Blvd)
 **Referral:** Unknown (no mention of source)
 
@@ -39,6 +40,13 @@
 | 2026-02-26 | Gil replied; confirmed Frog; told him just bring yourself, Gil will have everything needed |
 | 2026-02-26 | Gil replied; corrected Frog address (358 Marcus Garvey Blvd, not 503 Nostrand Ave); offered to meet elsewhere if less convenient |
 | 2026-03-05 | First lesson at Frog. Went well — Dexter is very nice. |
+| 2026-03-09 | Gil emailed: sent "First Steps in Brazilian Portuguese" worksheet (PDF); proposed meeting Tuesday in Brooklyn Navy Yard area; awaiting reply |
+| 2026-03-09 | Dexter replied: Tuesday doesn't work; free most evenings next week; asks about TV show Gil mentioned; asks for Venmo/Zelle to pay for two sessions |
+| 2026-03-09 | Gil replied: recommended Coisa Mais Linda (Girls from Ipanema) on Netflix; sent link |
+| 2026-03-09 | Dexter replied: will watch it; Wed or Thu next week after 6pm; will research non-bar spots |
+| 2026-03-10 | Gil replied: Thursday next week sounds good; sent Venmo request to @Dexter-Mayo |
+| 2026-03-10 | Dexter replied: confirmed Venmo, completed payment (2 sessions); will research late-night non-bar spots; asked "You live off of the J?" |
+| 2026-03-11 | Gil replied: thanked for payment; mentioned coming from Brooklyn Navy Yard | |
 
 ---
 
@@ -51,7 +59,9 @@
 - Prefers weeknights, 6-7pm start
 - Works 9-5, sometimes later
 - Lives in Bed-Stuy, Brooklyn
-- Scheduling first lesson: Thu 3/5 at 6:30pm
+- First lesson: Thu 3/5 at 6:30pm at Frog
+- Second lesson: Thu 3/19 at 6:30pm, Bed-Stuy (exact spot TBD — Dexter researching non-bar options)
+- Payment: Venmo (@Dexter-Mayo), paid for 2 sessions
 - **Bed-Stuy spots researched (Feb 2026):**
   - Commune NYC — Lexington Ave & Monroe St (cafe/wine bar, open till 10pm weeknights)
   - Therapy Wine Bar — 1159 Bedford Ave
@@ -186,6 +196,84 @@ See you Thursday at 6:30!
 
 Abraços,
 Gil
+
+### 2026-03-09 — Gil → Dexter
+
+Olá Dexter,
+
+Tudo bem? I hope you had a good weekend.
+
+It was a pleasure meeting you last week. You have a solid foundation, and I am confident you will progress quickly.
+
+Would you like to meet this Tuesday? I will be in the Brooklyn Navy Yard area. Let me know if that is convenient for you. If this Tuesday doesn't work, we can schedule our next session for next week.
+
+I have attached some additional material for your review. Please let me know if you have any questions.
+
+Um abraço!
+Gil
+
+**Attachment:** First Steps in Brazilian Portuguese.pdf
+
+### 2026-03-09 — Dexter → Gil
+
+Olá Gil,
+
+It was very nice to meet you as well. I am excited to embark on my Portuguese journey. Can you remind me of that TV show you mentioned?
+
+Unfortunately tomorrow evening I am busy. Let me know your schedule next week – I am free most evenings as of now.
+
+Also let me know your Venmo/Zelle, or we can exchange next time we meet and I can pay you for two sessions.
+
+Obrigada!
+Dexter
+
+### 2026-03-09 — Gil → Dexter
+
+Oi Dexter,
+
+Thanks for getting back to me.
+
+The show is Coisa Mais Linda — it's called Girls from Ipanema on Netflix. Set in late 1950s Rio, right when bossa nova was born. It follows a group of women who open a music club. Two seasons, and the dialogue is natural and not too fast — good for getting your ear used to the rhythm of the language. Here's the link: https://www.netflix.com/title/80208298
+
+Let me know which evening works best, and we'll set it up.
+
+Abraços,
+Gil
+
+### 2026-03-09 — Dexter → Gil
+
+Great, obrigada! I'll watch it.
+
+Next week Wednesday and Thursday look good for me, after 6pm start time again. Maybe Wednesday will be quieter? I can try to find a more pub/restaurant/late night cafe that might be better to meet at.
+
+Dexter
+
+### 2026-03-10 — Gil → Dexter
+
+Olá Dexter,
+
+Thursday next week sounds good.
+
+I sent a Venmo request to @Dexter-Mayo. Is that you?
+
+Gil
+
+### 2026-03-10 — Dexter → Gil
+
+Yes that's me, I just completed the request. I will do some research on some places open late night that aren't necessarily a bar, and get back to you. You live off of the J?
+
+Obrigada,
+Dexter
+
+### 2026-03-11 — Gil → Dexter
+
+Thank you very much. Muito obrigado.
+
+I'll be coming from the Brooklyn Navy Yard, where I have a student.
+
+Looking forward to it.
+
+-Gil
 
 ---
 
