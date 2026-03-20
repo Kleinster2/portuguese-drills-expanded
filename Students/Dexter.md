@@ -46,7 +46,10 @@
 | 2026-03-09 | Dexter replied: will watch it; Wed or Thu next week after 6pm; will research non-bar spots |
 | 2026-03-10 | Gil replied: Thursday next week sounds good; sent Venmo request to @Dexter-Mayo |
 | 2026-03-10 | Dexter replied: confirmed Venmo, completed payment (2 sessions); will research late-night non-bar spots; asked "You live off of the J?" |
-| 2026-03-11 | Gil replied: thanked for payment; mentioned coming from Brooklyn Navy Yard | |
+| 2026-03-11 | Gil replied: thanked for payment; mentioned coming from Brooklyn Navy Yard |
+| 2026-03-16 | Dexter replied: offered to come to Navy Yard; suggested Playground (1114 Bedford Ave), Cordelia (942 Bergen St), Colina Cuervo (759 Nostrand Ave) — all open late |
+| 2026-03-18 | Gil replied: confirmed Cordelia, "See you tomorrow!" |
+| 2026-03-19 | Gil emailed: apologized for last-minute change; Cordelia seems too reservation-oriented; suggested Playground Coffee Shop instead; awaiting reply |
 
 ---
 
@@ -60,7 +63,7 @@
 - Works 9-5, sometimes later
 - Lives in Bed-Stuy, Brooklyn
 - First lesson: Thu 3/5 at 6:30pm at Frog
-- Second lesson: Thu 3/19 at 6:30pm, Bed-Stuy (exact spot TBD — Dexter researching non-bar options)
+- Second lesson: Thu 3/19 at 6:30pm, Cordelia (942 Bergen St, Bed-Stuy)
 - Payment: Venmo (@Dexter-Mayo), paid for 2 sessions
 - **Bed-Stuy spots researched (Feb 2026):**
   - Commune NYC — Lexington Ave & Monroe St (cafe/wine bar, open till 10pm weeknights)
@@ -274,6 +277,27 @@ I'll be coming from the Brooklyn Navy Yard, where I have a student.
 Looking forward to it.
 
 -Gil
+
+### 2026-03-16 — Dexter → Gil
+
+Hi Gil, I can come to the Navy Yard if that's more convenient for you. Otherwise Playground (1114 Bedford Ave), Cordelia (942 Bergen St), and Colina Cuervo (759 Nostrand Ave) seem to be open late.
+
+### 2026-03-18 — Gil → Dexter
+
+Hi Dexter, Sorry for the late reply. Let's meet at Cordelia. See you tomorrow! Gil
+
+### 2026-03-19 — Gil → Dexter (scheduled)
+
+Oi Dexter,
+
+Sorry for the last-minute change — I looked into Cordelia, and it seems more of a reservation/wine bar spot, which might not be ideal for a lesson.
+
+How about Playground Coffee Shop instead?
+
+Let me know if that works!
+
+Abraços,
+Gil
 
 ---
 
