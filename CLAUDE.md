@@ -8,6 +8,16 @@ AI-powered Portuguese language learning. Brazilian Portuguese by default, Europe
 
 On first message, set up: `/loop 12h check gmail for students's emails`
 
+## Related Repos
+
+Part of a multi-repo ecosystem. Full map in `~/.claude/CLAUDE.md`.
+
+- **Brazil vault** (`~/obsidian/brazil/`) — Brazilian culture, politics, institutions. Context for teaching materials and cultural references in drills.
+- **Business vault** (`~/obsidian/business/`) — Tutoring business operations (invoicing, scheduling, revenue). Student profiles live HERE in `Students/`, not in business vault.
+- **financial-charts** (`~/financial-charts/`) — Gil's market research system. Separate domain but same ecosystem.
+
+---
+
 ## Core Integrations
 
 This is a teaching platform, not just a code project. These integrations are central to how it operates:
