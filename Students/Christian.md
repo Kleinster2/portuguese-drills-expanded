@@ -93,6 +93,7 @@
 | 2026-02-11 Wed | Session | Brookfield Place; finished simple past (pretérito perfeito) material; conversation: sister-in-law, trip to Philadelphia, Valentine's Day dinner at a brasserie |
 | 2026-02-18 Tue | Materials | Sent [preterite worksheet 2](../printables/preterite-worksheet-christian-2.html) as homework; next class in ~2 weeks |
 | 2026-03-11 Wed | Session | Brookfield Place 5:30pm; [contractions worksheet](../printables/contractions-worksheet-christian.html) — covered Parts A-B (de + artigo, em + artigo) in class; Parts C-G assigned as homework |
+| 2026-03-18 Wed | Session | Brookfield Place 5:30pm (per calendar); no WhatsApp confirmation exchanged; no post-session notes |
 
 ---
 

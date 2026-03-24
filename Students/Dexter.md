@@ -50,6 +50,10 @@
 | 2026-03-16 | Dexter replied: offered to come to Navy Yard; suggested Playground (1114 Bedford Ave), Cordelia (942 Bergen St), Colina Cuervo (759 Nostrand Ave) — all open late |
 | 2026-03-18 | Gil replied: confirmed Cordelia, "See you tomorrow!" |
 | 2026-03-19 | Gil emailed: apologized for last-minute change; Cordelia seems too reservation-oriented; suggested Playground Coffee Shop instead; awaiting reply |
+| 2026-03-19 | Dexter replied: "No worries! See you tonight at Playground." |
+| 2026-03-19 | Gil replied: "See you then!" |
+| 2026-03-19 | Second lesson at Playground Coffee Shop (1114 Bedford Ave, Bed-Stuy) |
+| 2026-03-23 | Gil emailed: proposed ZACA Cafe (426 Marcus Garvey Blvd) for Thu 3/26; awaiting reply |
 
 ---
 
@@ -63,18 +67,19 @@
 - Works 9-5, sometimes later
 - Lives in Bed-Stuy, Brooklyn
 - First lesson: Thu 3/5 at 6:30pm at Frog
-- Second lesson: Thu 3/19 at 6:30pm, Cordelia (942 Bergen St, Bed-Stuy)
+- Second lesson: Thu 3/19 at 6:30pm, Playground (1114 Bedford Ave, Bed-Stuy) — changed from Cordelia last minute. Playground is a coffee shop by day (closes 5 PM), wine bar in the evening. Music was a bit loud for a lesson.
 - Payment: Venmo (@Dexter-Mayo), paid for 2 sessions
 - **Bed-Stuy spots researched (Feb 2026):**
   - Commune NYC — Lexington Ave & Monroe St (cafe/wine bar, open till 10pm weeknights)
   - Therapy Wine Bar — 1159 Bedford Ave
   - Barb's — 380 Marcus Garvey Blvd
-  - Frog (wine bar) — 358 Marcus Garvey Blvd
+  - Frog (wine bar) — 358 Marcus Garvey Blvd (used for first lesson)
+  - Playground Coffee Shop — 1114 Bedford Ave (wine bar evenings, music too loud for lessons)
   - ~~Dynaco~~ — closed
   - ~~Casablanca Cocktail Lounge~~ — closed
   - ~~Cocktail Bedstuy~~ — not ideal
   - ~~For All Things Good~~ — restaurant, not a lesson spot
-  - ~~Zaca Cafe~~ — restaurant, not a cafe
+  - ZACA Cafe — 426 Marcus Garvey Blvd (cafe, open till 9 PM, 4.5 stars). Proposed for 3/26 session.
   - ~~Briu Crafty~~ — catering company, not a cafe
   - ~~Fiction Bar/Cafe~~ — Williamsburg, not Bed-Stuy
   - ~~Che~~ — evening hours Fri-Sun only, closed Thu evening

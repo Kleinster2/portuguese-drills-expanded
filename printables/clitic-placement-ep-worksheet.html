@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Coloca&ccedil;&atilde;o dos Pronomes &mdash; &Ecirc;nclise e Pr&oacute;clise</title>
+<style>
+    @page { margin: 0.5in; }
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      padding: 20px;
+      color: #1a1a6e;
+    }
+    h1 { font-size: 20px; margin: 0 0 6px 0; font-weight: bold; }
+    h2 { font-size: 16px; margin: 20px 0 12px 0; font-weight: bold; }
+    .subtitle { font-size: 12px; font-style: italic; margin-bottom: 18px; color: #444; }
+    .grammar-box {
+      border: 1.5px solid #1a1a6e;
+      padding: 10px 14px;
+      margin-bottom: 18px;
+      font-size: 13px;
+      line-height: 1.6;
+      break-inside: avoid;
+    }
+    .grammar-box b { color: #1a1a6e; }
+    .pattern-box {
+      border: 1.5px solid #047857;
+      background: #ecfdf5;
+      padding: 10px 14px;
+      margin-bottom: 14px;
+      font-size: 13px;
+      line-height: 1.6;
+      break-inside: avoid;
+    }
+    .pattern-box b { color: #065f46; }
+    .usage-box {
+      border: 1.5px solid #b45309;
+      background: #fffbeb;
+      padding: 10px 14px;
+      margin-bottom: 14px;
+      font-size: 13px;
+      line-height: 1.6;
+      break-inside: avoid;
+    }
+    .usage-box b { color: #92400e; }
+    .item { margin-bottom: 12px; break-inside: avoid; }
+    .prompt { margin-bottom: 4px; }
+    .line {
+      border-bottom: 1px solid #1a1a6e;
+      height: 22px;
+      margin-bottom: 4px;
+    }
+    .example { font-style: italic; font-size: 13px; color: #555; margin-bottom: 14px; }
+    .page-break { page-break-before: always; }
+    .section-note {
+      font-size: 12px;
+      font-style: italic;
+      color: #666;
+      margin-bottom: 12px;
+    }
+    .answer-key {
+      page-break-before: always;
+      margin-top: 30px;
+    }
+    .answer-key h2 {
+      background: #1a1a6e;
+      color: white;
+      padding: 5px 10px;
+    }
+    .answers {
+      columns: 2;
+      column-gap: 24px;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    .answer-section {
+      break-inside: avoid;
+      margin-bottom: 14px;
+    }
+    .answer-item {
+      margin-bottom: 4px;
+      break-inside: avoid;
+    }
+    .answer-item .tag {
+      font-size: 10px;
+      color: #666;
+      font-style: italic;
+    }
+    .teacher-notes {
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .teacher-notes h1 {
+      font-size: 18px;
+      color: #4338ca;
+      border-bottom: 2px solid #6366f1;
+      padding-bottom: 8px;
+    }
+    .teacher-notes h2 {
+      font-size: 15px;
+      color: #4338ca;
+    }
+    .teacher-notes .callout {
+      background: #e0e7ff;
+      border-left: 3px solid #4338ca;
+      padding: 8px 12px;
+      margin: 10px 0;
+    }
+    @media print {
+      body { padding: 0.4in; }
+      .no-print { display: none !important; }
+    }
+    table.ref-table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 8px 0;
+      font-size: 12px;
+    }
+    table.ref-table th, table.ref-table td {
+      border: 1px solid #1a1a6e;
+      padding: 4px 8px;
+      text-align: left;
+    }
+    table.ref-table th {
+      background: #e8e8f4;
+      font-weight: bold;
+    }
+    .vocab-list {
+      font-size: 12px;
+      color: #333;
+      margin: 6px 0 10px 0;
+      line-height: 1.8;
+    }
+    .footer-note {
+      text-align: right;
+      font-style: italic;
+      font-size: 11px;
+      margin-top: 30px;
+    }
+    .ak-section {
+      font-size: 14px;
+      font-style: italic;
+      font-weight: bold;
+      margin: 16px 0 8px 0;
+    }
+    .transform-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
+      margin-bottom: 16px;
+    }
+    .transform-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      break-inside: avoid;
+    }
+    .transform-item .arrow { color: #047857; font-weight: bold; }
+    .transform-item .blank {
+      border-bottom: 1px solid #1a1a6e;
+      display: inline-block;
+      width: 100px;
+      height: 20px;
+    }
+</style>
+</head>
+<body>
+
+<h1>Coloca&ccedil;&atilde;o dos Pronomes &mdash; &Ecirc;nclise e Pr&oacute;clise</h1>
+<div class="subtitle">Portugu&ecirc;s Europeu &bull; N&iacute;vel A2-B1 &bull; Aluno: _______________ &bull; Data: _______________</div>
+
+<!-- PRONOUN REFERENCE TABLE -->
+<div class="grammar-box">
+<b>Pronomes pessoais &aacute;tonos (Object Pronouns)</b>
+<table class="ref-table">
+<tr><th></th><th>Objeto direto</th><th>Objeto indireto</th></tr>
+<tr><td>eu</td><td>me <i>(me)</i></td><td>me <i>(to me)</i></td></tr>
+<tr><td>tu</td><td>te <i>(you)</i></td><td>te <i>(to you)</i></td></tr>
+<tr><td>ele/ela/voc&ecirc;</td><td>o/a <i>(him/her/it)</i></td><td>lhe <i>(to him/her/you)</i></td></tr>
+<tr><td>n&oacute;s</td><td>nos <i>(us)</i></td><td>nos <i>(to us)</i></td></tr>
+<tr><td>eles/elas</td><td>os/as <i>(them)</i></td><td>lhes <i>(to them)</i></td></tr>
+</table>
+<b>Nota:</b> o/a agree in gender with the noun they replace. <i>O livro</i> &rarr; <b>o</b> &bull; <i>A casa</i> &rarr; <b>a</b>
+</div>
+
+<!-- ==================== SECTION A ==================== -->
+
+<h2>A. &Ecirc;nclise &mdash; Pronome depois do verbo [AFFIRMATIVE]</h2>
+
+<div class="pattern-box">
+<b>Regra:</b> Em frases afirmativas, o pronome vem <b>depois</b> do verbo, ligado por h&iacute;fen.<br>
+<b>Padr&atilde;o:</b> verbo + h&iacute;fen + pronome<br><br>
+Amo-<b>te</b>. <i>(I love you.)</i> &bull;
+Vi-<b>a</b> ontem. <i>(I saw her yesterday.)</i> &bull;
+Disse-<b>lhe</b> a verdade. <i>(I told him the truth.)</i>
+</div>
+
+<div class="section-note">Preenche com o pronome correto.</div>
+<div class="example">Exemplo: I saw him. &rarr; Vi-<b>o</b>. <i>(o &mdash; direct object, masculine)</i></div>
+
+<div class="item">
+<div class="prompt">1. I love you. &rarr; Amo-______. <i>(te / me / nos)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">2. She called me. &rarr; Chamou-______. <i>(me / te / nos)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">3. I saw her yesterday. &rarr; Vi-______ ontem. <i>(a / o / lhe)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">4. He helped us. &rarr; Ajudou-______. <i>(nos / me / lhes)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">5. I told him the truth. &rarr; Disse-______ a verdade. <i>(lhe / o / me)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">6. She sent you the message. &rarr; Enviou-______ a mensagem. <i>(te / me / lhe)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">7. He invited them. &rarr; Convidou-______. <i>(os / as / lhes)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">8. I know him. &rarr; Conhe&ccedil;o-______. <i>(o / a / lhe)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">9. She found them (f). &rarr; Encontrou-______. <i>(as / os / lhes)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">10. He showed me the photos. &rarr; Mostrou-______ as fotos. <i>(me / te / lhe)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">11. I asked you. &rarr; Perguntei-______. <i>(te / me / lhe)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">12. She wrote to them. &rarr; Escreveu-______. <i>(lhes / nos / me)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">13. He heard us. &rarr; Ouviu-______. <i>(nos / me / te)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">14. I gave her the book. &rarr; Dei-______ o livro. <i>(lhe / a / me)</i></div>
+</div>
+
+<!-- ==================== SECTION B ==================== -->
+<div class="page-break"></div>
+
+<h2>B. Pr&oacute;clise &mdash; Pronome antes do verbo [TRIGGERED CONTEXTS]</h2>
+
+<div class="pattern-box">
+<b>Regra:</b> Certas palavras <b>puxam</b> o pronome para <b>antes</b> do verbo.<br>
+<b>Padr&atilde;o:</b> [palavra gatilho] + pronome + verbo<br><br>
+<b>Palavras gatilho:</b><br>
+&bull; <b>Nega&ccedil;&atilde;o:</b> n&atilde;o, nunca, ningu&eacute;m, nada, nem<br>
+&bull; <b>Conjun&ccedil;&otilde;es:</b> que, se, quando, porque, embora, como, onde<br>
+&bull; <b>Adv&eacute;rbios:</b> j&aacute;, ainda, tamb&eacute;m, sempre, s&oacute;, talvez, tudo, todos
+</div>
+
+<div class="usage-box">
+<b>Compara:</b><br>
+Afirmativa: Vejo-<b>te</b>. <i>(I see you.)</i><br>
+Negativa: N&atilde;o <b>te</b> vejo. <i>(I don't see you.)</i><br>
+Com conjun&ccedil;&atilde;o: Sei que <b>te</b> vejo. <i>(I know that I see you.)</i>
+</div>
+
+<div class="section-note">Preenche com o pronome correto na posi&ccedil;&atilde;o indicada (antes do verbo).</div>
+<div class="example">Exemplo: I don't see him. &rarr; N&atilde;o <b>o</b> vejo. <i>(o &mdash; direct object, before verb after n&atilde;o)</i></div>
+
+<div class="item">
+<div class="prompt">1. I don't see you. &rarr; N&atilde;o ______ vejo. <i>(te / me / nos)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">2. Nobody heard me. &rarr; Ningu&eacute;m ______ ouviu. <i>(me / te / nos)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">3. I already told her. &rarr; J&aacute; ______ disse. <i>(lhe / o / a)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">4. When do you call her? &rarr; Quando ______ chamas? <i>(a / lhe / o)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">5. If he asks me... &rarr; Se ______ perguntar... <i>(me / te / lhe)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">6. I know that she helped him. &rarr; Sei que ______ ajudou. <i>(o / lhe / a)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">7. He never told us. &rarr; Nunca ______ contou. <i>(nos / lhes / me)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">8. I also invited them (f). &rarr; Tamb&eacute;m ______ convidei. <i>(as / os / lhes)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">9. I don't know her. &rarr; N&atilde;o ______ conhe&ccedil;o. <i>(a / o / lhe)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">10. He still hasn't found us. &rarr; Ainda n&atilde;o ______ encontrou. <i>(nos / me / lhes)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">11. Nobody showed him the way. &rarr; Ningu&eacute;m ______ mostrou o caminho. <i>(lhe / o / me)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">12. She only gave me one. &rarr; S&oacute; ______ deu um. <i>(me / te / nos)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">13. I know that he loves you. &rarr; Sei que ______ ama. <i>(te / me / a)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">14. Who taught him? &rarr; Quem ______ ensinou? <i>(o / lhe / a)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">15. She always writes to me. &rarr; Sempre ______ escreve. <i>(me / te / lhe)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">16. Perhaps he forgives me. &rarr; Talvez ______ perdoe. <i>(me / te / lhe)</i></div>
+</div>
+
+<!-- ==================== SECTION C ==================== -->
+<div class="page-break"></div>
+
+<h2>C. Infinitivo + Pronome &mdash; A regra do -lo/-la</h2>
+
+<div class="pattern-box">
+<b>Regra:</b> Quando os pronomes <b>o/a/os/as</b> se juntam a uma forma verbal terminada em <b>-r</b>:<br>
+1. O <b>-r</b> cai<br>
+2. O pronome muda: o &rarr; <b>lo</b>, a &rarr; <b>la</b>, os &rarr; <b>los</b>, as &rarr; <b>las</b><br>
+3. Acrescenta-se acento na vogal final do verbo<br><br>
+<b>Exemplos:</b><br>
+dar + o = d<b>&aacute;</b>-<b>lo</b> &bull;
+ver + a = v<b>&ecirc;</b>-<b>la</b> &bull;
+fazer + o = faz<b>&ecirc;</b>-<b>lo</b> &bull;
+p&ocirc;r + as = p<b>&ocirc;</b>-<b>las</b>
+</div>
+
+<div class="usage-box">
+<b>Acentos por conjuga&ccedil;&atilde;o:</b><br>
+&bull; Verbos em <b>-ar</b>: acento agudo (<b>&aacute;</b>) &mdash; compr<b>&aacute;</b>-lo, d<b>&aacute;</b>-lo<br>
+&bull; Verbos em <b>-er</b>: acento circunflexo (<b>&ecirc;</b>) &mdash; faz<b>&ecirc;</b>-lo, v<b>&ecirc;</b>-la<br>
+&bull; Verbos em <b>-ir</b>: sem acento necess&aacute;rio &mdash; parti-lo, abri-la
+</div>
+
+<div class="section-note"><b>Parte 1:</b> Escreve a forma combinada.</div>
+<div class="example">Exemplo: dar + o = <b>d&aacute;-lo</b></div>
+
+<div class="transform-grid">
+  <div class="transform-item">1. dar + o = <span class="blank"></span></div>
+  <div class="transform-item">2. ver + a = <span class="blank"></span></div>
+  <div class="transform-item">3. fazer + os = <span class="blank"></span></div>
+  <div class="transform-item">4. comprar + a = <span class="blank"></span></div>
+  <div class="transform-item">5. dizer + o = <span class="blank"></span></div>
+  <div class="transform-item">6. p&ocirc;r + as = <span class="blank"></span></div>
+  <div class="transform-item">7. abrir + a = <span class="blank"></span></div>
+  <div class="transform-item">8. trazer + o = <span class="blank"></span></div>
+  <div class="transform-item">9. escrever + os = <span class="blank"></span></div>
+  <div class="transform-item">10. vender + a = <span class="blank"></span></div>
+  <div class="transform-item">11. levar + as = <span class="blank"></span></div>
+  <div class="transform-item">12. conhecer + o = <span class="blank"></span></div>
+</div>
+
+<div class="section-note"><b>Parte 2:</b> Completa a frase com a forma correta.</div>
+<div class="example">Exemplo: I want to give it (m). &rarr; Quero <b>d&aacute;-lo</b>. <i>(d&aacute;-lo / dar-o / da-lo)</i></div>
+
+<div class="item">
+<div class="prompt">1. I want to buy it (m). &rarr; Quero ______. <i>(compr&aacute;-lo / comprar-o / compra-lo)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">2. Can you help her? &rarr; Podes ______? <i>(ajud&aacute;-la / ajudar-a / ajuda-la)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">3. I'm going to do it. &rarr; Vou ______. <i>(faz&ecirc;-lo / fazer-o / faze-lo)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">4. She wants to see them (m). &rarr; Quer ______. <i>(v&ecirc;-los / ver-os / ve-los)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">5. I need to read it (f). &rarr; Preciso de ______. <i>(l&ecirc;-la / ler-a / le-la)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">6. He wants to give them (f). &rarr; Quer ______. <i>(d&aacute;-las / dar-as / da-las)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">7. I'm going to bring it (m). &rarr; Vou ______. <i>(traz&ecirc;-lo / trazer-o / traze-lo)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">8. Can you sell them (m)? &rarr; Podes ______? <i>(vend&ecirc;-los / vender-os / vende-los)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">9. She wants to open it (f). &rarr; Quer ______. <i>(abri-la / abrir-a / abra-la)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">10. I need to write them (m). &rarr; Preciso de ______. <i>(escrev&ecirc;-los / escrever-os / escreve-los)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">11. He wants to take it (f). &rarr; Quer ______. <i>(lev&aacute;-la / levar-a / leva-la)</i></div>
+</div>
+
+<div class="item">
+<div class="prompt">12. I'm going to meet him. &rarr; Vou ______. <i>(conhec&ecirc;-lo / conhecer-o / conhece-lo)</i></div>
+</div>
+
+<!-- ==================== SECTION D ==================== -->
+<div class="page-break"></div>
+
+<h2>D. Exerc&iacute;cio misto &mdash; Onde colocar o pronome?</h2>
+
+<div class="grammar-box">
+<b>Resume:</b><br>
+&bull; Frase afirmativa &rarr; <b>&ecirc;nclise</b> (pronome depois do verbo): <i>Ajudou-me.</i><br>
+&bull; Nega&ccedil;&atilde;o / conjun&ccedil;&atilde;o / adv&eacute;rbio &rarr; <b>pr&oacute;clise</b> (pronome antes do verbo): <i>N&atilde;o me ajudou.</i><br>
+&bull; Infinitivo + o/a/os/as &rarr; regra do <b>-lo/-la</b>: <i>Quero ajud&aacute;-lo.</i><br>
+&bull; Infinitivo + me/te/lhe/nos/lhes &rarr; h&iacute;fen direto: <i>Quero ajudar-te.</i>
+</div>
+
+<div class="section-note">Reescreve a frase colocando o pronome [entre par&ecirc;nteses retos] na posi&ccedil;&atilde;o correta.</div>
+<div class="example">Exemplo: Ele [me] ajudou. &rarr; <b>Ele ajudou-me.</b> <i>(afirmativa &rarr; &ecirc;nclise)</i></div>
+
+<div class="item">
+<div class="prompt">1. Ela [te] chamou.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">2. N&atilde;o [te] vejo.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">3. Quando [nos] procurou?</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">4. [lhe] Contei tudo.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">5. Ningu&eacute;m [me] viu.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">6. J&aacute; [o] vi.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">7. Quero ajudar [te].</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">8. Sei que ele [a] conhece.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">9. Ela [nos] encontrou.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">10. Nunca [lhe] escrevi.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">11. Quero comprar [o].</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">12. Tamb&eacute;m [me] perguntou.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">13. [lhes] Mostrei as fotos.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">14. Se [te] convidarem...</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">15. Posso dar [as].</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">16. Ningu&eacute;m [o] ouviu.</div>
+<div class="line"></div>
+</div>
+
+<div class="page-break"></div>
+
+<h2>D. Exerc&iacute;cio misto &mdash; continua&ccedil;&atilde;o</h2>
+
+<div class="item">
+<div class="prompt">17. Ela [me] acordou cedo.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">18. N&atilde;o [lhe] disse nada.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">19. Quero levar [a].</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">20. Embora [o] respeite...</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">21. [nos] Telefonou ontem.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">22. Talvez [te] envie amanh&atilde;.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">23. Preciso de ler [o].</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">24. Nada [me] assusta.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">25. [lhe] Pedi um favor.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">26. Sempre [nos] tratou bem.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">27. Vou apresentar [te].</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">28. Onde [a] deixaste?</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">29. [lhes] Expliquei o problema.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">30. Nem [me] cumprimentou.</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">31. Posso trazer [os].</div>
+<div class="line"></div>
+</div>
+
+<div class="item">
+<div class="prompt">32. Como [o] perdeste?</div>
+<div class="line"></div>
+</div>
+
+<!-- ==================== ANSWER KEY ==================== -->
+<div class="answer-key">
+<h2>Chave de respostas</h2>
+<div class="answers">
+
+<div class="answer-section">
+<div class="ak-section">A. &Ecirc;nclise</div>
+<div class="answer-item">1. <b>te</b> <span class="tag">&mdash; direct, &ldquo;you&rdquo;</span></div>
+<div class="answer-item">2. <b>me</b> <span class="tag">&mdash; direct, &ldquo;me&rdquo;</span></div>
+<div class="answer-item">3. <b>a</b> <span class="tag">&mdash; direct, fem. &ldquo;her&rdquo;</span></div>
+<div class="answer-item">4. <b>nos</b> <span class="tag">&mdash; direct, &ldquo;us&rdquo;</span></div>
+<div class="answer-item">5. <b>lhe</b> <span class="tag">&mdash; indirect, &ldquo;to him&rdquo;</span></div>
+<div class="answer-item">6. <b>te</b> <span class="tag">&mdash; indirect, &ldquo;to you&rdquo;</span></div>
+<div class="answer-item">7. <b>os</b> <span class="tag">&mdash; direct, masc. &ldquo;them&rdquo;</span></div>
+<div class="answer-item">8. <b>o</b> <span class="tag">&mdash; direct, masc. &ldquo;him&rdquo;</span></div>
+<div class="answer-item">9. <b>as</b> <span class="tag">&mdash; direct, fem. &ldquo;them&rdquo;</span></div>
+<div class="answer-item">10. <b>me</b> <span class="tag">&mdash; indirect, &ldquo;to me&rdquo;</span></div>
+<div class="answer-item">11. <b>te</b> <span class="tag">&mdash; indirect, &ldquo;to you&rdquo;</span></div>
+<div class="answer-item">12. <b>lhes</b> <span class="tag">&mdash; indirect, &ldquo;to them&rdquo;</span></div>
+<div class="answer-item">13. <b>nos</b> <span class="tag">&mdash; direct, &ldquo;us&rdquo;</span></div>
+<div class="answer-item">14. <b>lhe</b> <span class="tag">&mdash; indirect, &ldquo;to her&rdquo;</span></div>
+</div>
+
+<div class="answer-section">
+<div class="ak-section">B. Pr&oacute;clise</div>
+<div class="answer-item">1. <b>te</b> <span class="tag">&mdash; n&atilde;o</span></div>
+<div class="answer-item">2. <b>me</b> <span class="tag">&mdash; ningu&eacute;m</span></div>
+<div class="answer-item">3. <b>lhe</b> <span class="tag">&mdash; j&aacute;</span></div>
+<div class="answer-item">4. <b>a</b> <span class="tag">&mdash; quando</span></div>
+<div class="answer-item">5. <b>me</b> <span class="tag">&mdash; se</span></div>
+<div class="answer-item">6. <b>o</b> <span class="tag">&mdash; que</span></div>
+<div class="answer-item">7. <b>nos</b> <span class="tag">&mdash; nunca</span></div>
+<div class="answer-item">8. <b>as</b> <span class="tag">&mdash; tamb&eacute;m</span></div>
+<div class="answer-item">9. <b>a</b> <span class="tag">&mdash; n&atilde;o</span></div>
+<div class="answer-item">10. <b>nos</b> <span class="tag">&mdash; ainda n&atilde;o</span></div>
+<div class="answer-item">11. <b>lhe</b> <span class="tag">&mdash; ningu&eacute;m</span></div>
+<div class="answer-item">12. <b>me</b> <span class="tag">&mdash; s&oacute;</span></div>
+<div class="answer-item">13. <b>te</b> <span class="tag">&mdash; que</span></div>
+<div class="answer-item">14. <b>o</b> <span class="tag">&mdash; quem</span></div>
+<div class="answer-item">15. <b>me</b> <span class="tag">&mdash; sempre</span></div>
+<div class="answer-item">16. <b>me</b> <span class="tag">&mdash; talvez</span></div>
+</div>
+
+<div class="answer-section">
+<div class="ak-section">C. Parte 1 &mdash; Formas</div>
+<div class="answer-item">1. <b>d&aacute;-lo</b></div>
+<div class="answer-item">2. <b>v&ecirc;-la</b></div>
+<div class="answer-item">3. <b>faz&ecirc;-los</b></div>
+<div class="answer-item">4. <b>compr&aacute;-la</b></div>
+<div class="answer-item">5. <b>diz&ecirc;-lo</b></div>
+<div class="answer-item">6. <b>p&ocirc;-las</b></div>
+<div class="answer-item">7. <b>abri-la</b></div>
+<div class="answer-item">8. <b>traz&ecirc;-lo</b></div>
+<div class="answer-item">9. <b>escrev&ecirc;-los</b></div>
+<div class="answer-item">10. <b>vend&ecirc;-la</b></div>
+<div class="answer-item">11. <b>lev&aacute;-las</b></div>
+<div class="answer-item">12. <b>conhec&ecirc;-lo</b></div>
+</div>
+
+<div class="answer-section">
+<div class="ak-section">C. Parte 2 &mdash; Frases</div>
+<div class="answer-item">1. <b>compr&aacute;-lo</b></div>
+<div class="answer-item">2. <b>ajud&aacute;-la</b></div>
+<div class="answer-item">3. <b>faz&ecirc;-lo</b></div>
+<div class="answer-item">4. <b>v&ecirc;-los</b></div>
+<div class="answer-item">5. <b>l&ecirc;-la</b></div>
+<div class="answer-item">6. <b>d&aacute;-las</b></div>
+<div class="answer-item">7. <b>traz&ecirc;-lo</b></div>
+<div class="answer-item">8. <b>vend&ecirc;-los</b></div>
+<div class="answer-item">9. <b>abri-la</b></div>
+<div class="answer-item">10. <b>escrev&ecirc;-los</b></div>
+<div class="answer-item">11. <b>lev&aacute;-la</b></div>
+<div class="answer-item">12. <b>conhec&ecirc;-lo</b></div>
+</div>
+
+<div class="answer-section">
+<div class="ak-section">D. Exerc&iacute;cio misto</div>
+<div class="answer-item">1. <b>Ela chamou-te.</b> <span class="tag">&mdash; afirmativa &rarr; &ecirc;nclise</span></div>
+<div class="answer-item">2. <b>N&atilde;o te vejo.</b> <span class="tag">&mdash; n&atilde;o &rarr; pr&oacute;clise</span></div>
+<div class="answer-item">3. <b>Quando nos procurou?</b> <span class="tag">&mdash; quando &rarr; pr&oacute;clise</span></div>
+<div class="answer-item">4. <b>Contei-lhe tudo.</b> <span class="tag">&mdash; afirmativa &rarr; &ecirc;nclise</span></div>
+<div class="answer-item">5. <b>Ningu&eacute;m me viu.</b> <span class="tag">&mdash; ningu&eacute;m &rarr; pr&oacute;clise</span></div>
+<div class="answer-item">6. <b>J&aacute; o vi.</b> <span class="tag">&mdash; j&aacute; &rarr; pr&oacute;clise</span></div>
+<div class="answer-item">7. <b>Quero ajudar-te.</b> <span class="tag">&mdash; infinitivo &rarr; &ecirc;nclise</span></div>
+<div class="answer-item">8. <b>Sei que ele a conhece.</b> <span class="tag">&mdash; que &rarr; pr&oacute;clise</span></div>
+<div class="answer-item">9. <b>Ela encontrou-nos.</b> <span class="tag">&mdash; afirmativa &rarr; &ecirc;nclise</span></div>
+<div class="answer-item">10. <b>Nunca lhe escrevi.</b> <span class="tag">&mdash; nunca &rarr; pr&oacute;clise</span></div>
+<div class="answer-item">11. <b>Quero compr&aacute;-lo.</b> <span class="tag">&mdash; infinitivo + o &rarr; -lo</span></div>
+<div class="answer-item">12. <b>Tamb&eacute;m me perguntou.</b> <span class="tag">&mdash; tamb&eacute;m &rarr; pr&oacute;clise</span></div>
+<div class="answer-item">13. <b>Mostrei-lhes as fotos.</b> <span class="tag">&mdash; afirmativa &rarr; &ecirc;nclise</span></div>
+<div class="answer-item">14. <b>Se te convidarem...</b> <span class="tag">&mdash; se &rarr; pr&oacute;clise</span></div>
+<div class="answer-item">15. <b>Posso d&aacute;-las.</b> <span class="tag">&mdash; infinitivo + as &rarr; -las</span></div>
+<div class="answer-item">16. <b>Ningu&eacute;m o ouviu.</b> <span class="tag">&mdash; ningu&eacute;m &rarr; pr&oacute;clise</span></div>
+</div>
+
+<div class="answer-section">
+<div class="ak-section">D. Exerc&iacute;cio misto &mdash; continua&ccedil;&atilde;o</div>
+<div class="answer-item">17. <b>Ela acordou-me cedo.</b> <span class="tag">&mdash; afirmativa &rarr; &ecirc;nclise</span></div>
+<div class="answer-item">18. <b>N&atilde;o lhe disse nada.</b> <span class="tag">&mdash; n&atilde;o &rarr; pr&oacute;clise</span></div>
+<div class="answer-item">19. <b>Quero lev&aacute;-la.</b> <span class="tag">&mdash; infinitivo + a &rarr; -la</span></div>
+<div class="answer-item">20. <b>Embora o respeite...</b> <span class="tag">&mdash; embora &rarr; pr&oacute;clise</span></div>
+<div class="answer-item">21. <b>Telefonou-nos ontem.</b> <span class="tag">&mdash; afirmativa &rarr; &ecirc;nclise</span></div>
+<div class="answer-item">22. <b>Talvez te envie amanh&atilde;.</b> <span class="tag">&mdash; talvez &rarr; pr&oacute;clise</span></div>
+<div class="answer-item">23. <b>Preciso de l&ecirc;-lo.</b> <span class="tag">&mdash; infinitivo + o &rarr; -lo</span></div>
+<div class="answer-item">24. <b>Nada me assusta.</b> <span class="tag">&mdash; nada &rarr; pr&oacute;clise</span></div>
+<div class="answer-item">25. <b>Pedi-lhe um favor.</b> <span class="tag">&mdash; afirmativa &rarr; &ecirc;nclise</span></div>
+<div class="answer-item">26. <b>Sempre nos tratou bem.</b> <span class="tag">&mdash; sempre &rarr; pr&oacute;clise</span></div>
+<div class="answer-item">27. <b>Vou apresentar-te.</b> <span class="tag">&mdash; infinitivo &rarr; &ecirc;nclise</span></div>
+<div class="answer-item">28. <b>Onde a deixaste?</b> <span class="tag">&mdash; onde &rarr; pr&oacute;clise</span></div>
+<div class="answer-item">29. <b>Expliquei-lhes o problema.</b> <span class="tag">&mdash; afirmativa &rarr; &ecirc;nclise</span></div>
+<div class="answer-item">30. <b>Nem me cumprimentou.</b> <span class="tag">&mdash; nem &rarr; pr&oacute;clise</span></div>
+<div class="answer-item">31. <b>Posso traz&ecirc;-los.</b> <span class="tag">&mdash; infinitivo + os &rarr; -los</span></div>
+<div class="answer-item">32. <b>Como o perdeste?</b> <span class="tag">&mdash; como &rarr; pr&oacute;clise</span></div>
+</div>
+
+</div><!-- .answers -->
+</div><!-- .answer-key -->
+
+<!-- ==================== TEACHER NOTES ==================== -->
+<div class="page-break"></div>
+<div class="teacher-notes">
+
+<h1>Teacher Notes &mdash; Clitic Placement (Marvin)</h1>
+
+<h2>Why this topic, why now</h2>
+<p>Marvin just completed the gender agreement worksheet (3/19). Clitic placement is a natural next step: object pronouns (o/a/os/as) depend on gender agreement, which he's now practiced. His specific error &mdash; "quero dar-los" instead of "quero d&aacute;-los" &mdash; shows he partially understands the -lo form but doesn't drop the -r or add the accent.</p>
+
+<h2>Error analysis</h2>
+<div class="callout">
+<b>Recorded error:</b> "quero dar-los" &rarr; should be "quero d&aacute;-los"<br>
+<b>What he gets right:</b> los (not os) &mdash; he knows the pronoun changes form after a verb.<br>
+<b>What he misses:</b> (1) The -r must drop. (2) An accent must appear on the final vowel.<br>
+<b>Root cause:</b> Likely treating the infinitive as a fixed unit. Section C targets this directly.
+</div>
+
+<h2>Session plan</h2>
+<p><b>In class (priority order):</b></p>
+<ol>
+  <li>Review gender worksheet &mdash; check answers, reinforce tricky items (5-10 min)</li>
+  <li>Section A (enclisis) &mdash; warm up with basic placement; should be mostly familiar (10 min)</li>
+  <li>Section B (proclisis) &mdash; teach the trigger words; contrast with Section A (15 min)</li>
+  <li>Section C (infinitive + pronoun) &mdash; this is the core target; spend the most time here (20 min)</li>
+  <li>Section D (mixed) &mdash; work through together as oral practice if time allows (10 min)</li>
+</ol>
+
+<p><b>Homework:</b> Any sections not completed in class. Section D is ideal as take-home since it synthesizes all three rules.</p>
+
+<h2>What to watch for</h2>
+<ul>
+  <li>Does he place the pronoun correctly in affirmatives vs negatives? (Sections A &amp; B)</li>
+  <li>Does he remember to drop the -r AND add the accent? (Section C)</li>
+  <li>Does he confuse direct (o/a) and indirect (lhe) pronouns? (All sections)</li>
+  <li>In Section D, watch whether he defaults to proclisis (BP influence from exposure) or correctly uses enclisis in affirmatives</li>
+</ul>
+
+<h2>Next steps after this worksheet</h2>
+<ul>
+  <li>If enclisis/proclisis placement is solid: move to combined pronouns (mo, to, lho)</li>
+  <li>If the -lo/-la rule clicks: introduce the -s rule (fazes + o = f&aacute;-lo) and -z rule (faz + o = f&aacute;-lo)</li>
+  <li>If direct/indirect confusion persists: dedicated worksheet on direct vs indirect object identification</li>
+</ul>
+
+</div><!-- .teacher-notes -->
+
+<div class="footer-note">Worksheet generated March 2026</div>
+
+</body>
+</html>

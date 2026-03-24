@@ -101,6 +101,8 @@
 | 2026-02-11 Wed | Session + Materials | Met at Toby's Estate 2:30 PM; handed Adv Beg 9 worksheet; discussed bedbug infestation |
 | 2026-02-27 Fri | Session | Toby's Estate; 3 PM; worked BP condicional worksheet (generated that day); sent name etymology follow-up (Jacob/Ya'akov → Tiago/James/Santiago/Iago) |
 | 2026-03-05 Thu | Session | Toby's Estate; 11:30 AM |
+| 2026-03-20 Fri | Cancelled | Amanda sick — woke up feeling unwell; rescheduled via WhatsApp |
+| 2026-03-25 Wed | Scheduled | Toby's Estate; 1:00 PM; confirmed 3/23 via WhatsApp |
 
 ---
 

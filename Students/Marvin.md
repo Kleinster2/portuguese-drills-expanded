@@ -90,6 +90,8 @@
 | 2026-02-26 Thu | Condicional review | Worked through [corrected worksheet](condicional-worksheet-marvin-2.html) together in session; remaining exercises assigned as homework |
 | 2026-03-05 Thu | Imperfeito de cortesia | EP usage of imperfeito instead of condicional for polite requests |
 | 2026-03-10 Tue | Imperfeito de cortesia | Continued polite imperfeito practice |
+| 2026-03-19 Thu | Gender worksheet | Brooklyn Navy Yard, 2:30-4:00pm; worked through [gender agreement worksheet](../printables/gender-agreement-worksheet.html) |
+| 2026-03-24 Tue | Clitic placement (prep) | Topic chosen as natural follow-up to gender worksheet — object pronouns (o/a/os/as) depend on gender agreement just practiced. Addresses recorded error: "quero dar-los" → "quero dá-los" (keeps -r, misses accent). Plan: review gender answers first, then Sections A-C of [clitic placement worksheet](../printables/clitic-placement-ep-worksheet.html), Section D as homework. Also considered ser/estar but clitic placement is higher priority given the error pattern. |
 
 ---
 
