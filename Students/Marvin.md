@@ -23,7 +23,8 @@
 
 ## Current focus
 
-- Imperfeito de cortesia (EP usage of imperfeito instead of condicional for polite requests)
+- Travel-ready EP for May 2026 Portugal trip (Açores → Algarve → Lisboa)
+- Recent: clitic placement (3/25), gender agreement (3/19), imperfeito de cortesia
 
 ---
 
@@ -91,7 +92,8 @@
 | 2026-03-05 Thu | Imperfeito de cortesia | EP usage of imperfeito instead of condicional for polite requests |
 | 2026-03-10 Tue | Imperfeito de cortesia | Continued polite imperfeito practice |
 | 2026-03-19 Thu | Gender worksheet | Brooklyn Navy Yard, 2:30-4:00pm; worked through [gender agreement worksheet](../printables/gender-agreement-worksheet.html) |
-| 2026-03-24 Tue | Clitic placement (prep) | Topic chosen as natural follow-up to gender worksheet — object pronouns (o/a/os/as) depend on gender agreement just practiced. Addresses recorded error: "quero dar-los" → "quero dá-los" (keeps -r, misses accent). Plan: review gender answers first, then Sections A-C of [clitic placement worksheet](../printables/clitic-placement-ep-worksheet.html), Section D as homework. Also considered ser/estar but clitic placement is higher priority given the error pattern. |
+| 2026-03-24 | Clitic placement (prep) | Topic chosen as natural follow-up to gender worksheet — object pronouns (o/a/os/as) depend on gender agreement just practiced. Addresses recorded error: "quero dar-los" → "quero dá-los" (keeps -r, misses accent). Plan: review gender answers first, then Sections A-C of [clitic placement worksheet](../printables/clitic-placement-ep-worksheet.html), Section D as homework. Also considered ser/estar but clitic placement is higher priority given the error pattern. |
+| 2026-03-25 Tue | Clitic placement | Worked through [clitic placement worksheet](../printables/clitic-placement-ep-worksheet.html) — ênclise, próclise, infinitive -lo/-la rules |
 
 ---
 
@@ -109,6 +111,7 @@
 - Communicates scheduling mostly in Portuguese (good sign of comfort)
 - Has been sent many ChatGPT drill links and PDFs (subjunctive, imperfect, irregular verbs, demonstratives, contractions, ser vs estar)
 - Interested in Portuguese culture (shared Aquarela do Brasil song, discussed PT elections)
+- **May 2026 trip to Portugal:** Açores → Lagos (Algarve) → Lisboa → fly home from Lisbon
 - Full WhatsApp chat history saved: [Marvin-whatsapp-chat.txt](Marvin-whatsapp-chat.txt)
 
 ---
