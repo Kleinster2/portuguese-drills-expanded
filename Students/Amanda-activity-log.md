@@ -10,3 +10,4 @@
 | 2026-03-22 | WhatsApp | Gil proposed Tuesday; Amanda asked about afternoon; Gil said latest start is 1 PM on Tuesday |
 | 2026-03-23 | WhatsApp | Amanda proposed Wednesday instead — available all day after 11 AM. Confirmed Wed 3/25 at 1 PM. Gil shared Chappell Roan article; Amanda replied "Sério !" |
 | 2026-03-23 | Calendar | Session for 3/25 Wed at 1:00-2:30 PM already on calendar at Toby's Estate |
+| 2026-03-25 | Materials | Created BP clitic pronouns worksheet ([clitic-placement-bp-worksheet.html](../printables/clitic-placement-bp-worksheet.html)) — 47 exercises across 5 sections: A (choose pronoun), B (me vs mim), C (noun→pronoun substitution), D (dialogue), E (mixed). Targets Amanda's "para me" → "para mim" error. Verified all 47 exercises against .com.br sources. |
