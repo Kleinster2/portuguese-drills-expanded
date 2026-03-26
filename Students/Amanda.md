@@ -26,8 +26,9 @@
 
 ## Current focus
 
-- Adv Beg 9 worksheet (reflexive/reciprocal verbs, superlatives, ouvir/pedir, acabar de, mal+verbo, precisar/ter que/ter de)
-- BP Condicional worksheet (started Feb 27)
+- BP Clitic pronouns worksheet ([clitic-placement-bp-worksheet.html](../printables/clitic-placement-bp-worksheet.html)) — scheduled for next session
+- Targets me/mim distinction (documented error: "para me" → "para mim"), direct vs indirect object pronouns
+- Prior: Adv Beg 9 worksheet, BP Condicional worksheet (started Feb 27)
 
 ---
 
