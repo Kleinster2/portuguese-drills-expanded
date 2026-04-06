@@ -333,7 +333,7 @@ async function openDrillChat(drillId) {
   try {
     // Start new chat session with timeout
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
+    const timeoutId = setTimeout(() => controller.abort(), 60000); // 60 second timeout for session start
 
     const response = await fetch('/api/chat', {
       method: 'POST',
