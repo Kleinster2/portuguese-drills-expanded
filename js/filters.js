@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cefrFilterControls = document.getElementById('cefr-filter-controls');
     const topicFilterControls = document.getElementById('topic-filter-controls');
+    const variantFilterControls = document.getElementById('variant-filter-controls');
     const drillCards = document.querySelectorAll('.drill-card');
     const searchInput = document.getElementById('search-input');
     const noResultsMessage = document.getElementById('no-results');
@@ -14,20 +15,23 @@ document.addEventListener('DOMContentLoaded', () => {
     function filterAndSearch() {
         const activeCefrFilter = cefrFilterControls.querySelector('.active').dataset.filter;
         const activeTopicFilter = topicFilterControls.querySelector('.active').dataset.filter;
+        const activeVariantFilter = variantFilterControls.querySelector('.active').dataset.filter;
         const searchTerm = searchInput.value.toLowerCase().trim();
         let visibleCount = 0;
 
         drillCards.forEach(card => {
             const cardCefr = card.dataset.cefr;
             const cardTopic = card.dataset.topic;
+            const cardVariant = card.dataset.variant;
             const cardTitle = card.querySelector('h2').textContent.toLowerCase();
             const cardDescription = card.querySelector('p').textContent.toLowerCase();
 
             const matchesCefr = activeCefrFilter === 'all' || cardCefr === activeCefrFilter;
             const matchesTopic = activeTopicFilter === 'all' || cardTopic === activeTopicFilter;
+            const matchesVariant = activeVariantFilter === 'all' || cardVariant === activeVariantFilter;
             const matchesSearch = cardTitle.includes(searchTerm) || cardDescription.includes(searchTerm);
 
-            if (matchesCefr && matchesTopic && matchesSearch) {
+            if (matchesCefr && matchesTopic && matchesVariant && matchesSearch) {
                 card.classList.remove('hidden');
                 visibleCount++;
             } else {
@@ -62,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setupFilter('cefr-filter-controls', 'cefr-filter-btn', 'bg-indigo-600');
     setupFilter('topic-filter-controls', 'topic-filter-btn', 'bg-blue-600');
+    setupFilter('variant-filter-controls', 'variant-filter-btn', 'bg-emerald-600');
 
     searchInput.addEventListener('input', filterAndSearch);
 
