@@ -321,7 +321,7 @@ async function openDrillChat(drillId) {
           <div class="animate-spin rounded-full h-5 w-5 border-b-2 border-green-600"></div>
           <div id="loading-message" class="text-slate-600">Starting your drill session...</div>
         </div>
-        <div class="text-xs text-slate-500 mt-2">This may take up to 30 seconds...</div>
+        <div class="text-xs text-slate-500 mt-2">This may take up to 60 seconds...</div>
       </div>
     </div>
   `;
@@ -410,7 +410,7 @@ async function openDrillChat(drillId) {
         <div class="text-red-800 font-semibold mb-2">Failed to Start Session</div>
         <div class="text-red-700 text-sm mb-3">
           ${error.name === 'AbortError'
-            ? 'The request timed out after 30 seconds. The AI service might be experiencing heavy load.'
+            ? 'The request timed out after 60 seconds. The AI service might be experiencing heavy load.'
             : error.message.includes('Failed to fetch')
             ? 'Network error: Could not connect to the server. Please check your internet connection.'
             : 'Sorry, there was an error starting the session: ' + error.message}
