@@ -395,3 +395,39 @@
 [12:44 PM, 3/18/2026] Marvin: Começar as 2:30
 [1:10 PM, 3/18/2026] Gil Klein: Olá Marvin. Sem problemas. Até amanhã às duas e meia!
 [2:32 PM, 3/19/2026] Marvin: Estou aqui
+[10:11 AM, 3/24/2026] Marvin: Ola Gil
+[10:11 AM, 3/24/2026] Gil Klein: [OpenClaw bot message — access not configured]
+[10:11 AM, 3/24/2026] [Voice call]
+[3:50 PM, 3/24/2026] Gil Klein: Olá
+[3:51 PM, 3/24/2026] Marvin: Como vais
+[3:53 PM, 3/24/2026] Gil Klein: oi
+[3:54 PM, 3/24/2026] Marvin: Olá
+[3:55 PM, 3/24/2026] Marvin: Quais são as notícias de Portugal?
+[3:57 PM, 3/24/2026] Gil Klein: [Bot-generated Portugal news summary — energy crisis, real estate, Sines, seleção, politics]
+[3:59 PM, 3/24/2026] Marvin: Tens boas notícias?
+[4:05 PM, 3/24/2026] Gil Klein: [Bot-generated positive Portugal news — renewables, Sines investment, António Costa EU budget]
+[3:32 PM, 3/26/2026] Gil Klein: Estou aqui
+[1:46 PM, 3/29/2026] Gil Klein: [deleted message]
+[12:50 AM, 3/31/2026] Gil Klein: Olá Marvin. Tudo bem? Estamos confirmados para hoje às 3:30 no Navy Yard?
+[7:18 AM, 3/31/2026] Marvin: Sim até logo
+[9:12 AM, 3/31/2026] Gil Klein: Até logo!
+[12:29 PM, 3/31/2026] Gil Klein: [sent PDF: ep-travel-hotel-worksheet.pdf]
+[12:29 PM, 3/31/2026] Gil Klein: [sent PDF: ep-travel-restaurante-worksheet.pdf]
+[3:03 PM, 3/31/2026] Gil Klein: Olá Marvin. Estou aqui no Transmitter Brewing. Nas mesas do lado de fora (outside). Vamos encontrar aqui? G
+[3:05 PM, 3/31/2026] Marvin: Ok
+[3:34 PM, 3/31/2026] Marvin: Estou aqui
+[3:36 PM, 3/31/2026] Gil Klein: Onde?
+[3:37 PM, 3/31/2026] Marvin: Não posso te ver
+[3:37 PM, 3/31/2026] Marvin: Em frente de transmitter
+[3:38 PM, 3/31/2026] Gil Klein: Entras no Transmitter e vai até o pátio. Eles têm um pátio.
+[5:00 PM, 3/31/2026] Gil Klein: @Meta AI Baretto New York
+[10:16 AM, 4/7/2026] Marvin: Olá. Tenho um encontro médico nas 2:00 e eu acho que vai durar perto demais de nossa aula
+[10:17 AM, 4/7/2026] Marvin: Queres encontrar mais tarde ou um outra dia?
+[10:18 AM, 4/7/2026] Gil Klein: Quinta-feira?
+[10:24 AM, 4/7/2026] Marvin: Sem problemas
+[10:26 AM, 4/7/2026] Gil Klein: Ótimo. Até quinta então!
+[10:27 AM, 4/7/2026] Gil Klein: Ignora o Clawd. 😅
+[3:36 PM, 4/9/2026] Gil Klein: Olá Marvin. Tu estás cá?
+[3:36 PM, 4/9/2026] Marvin: Estou a vir desculpe
+[3:36 PM, 4/9/2026] Gil Klein: Sem pressa. Até logo.
+[5:15 PM, 4/9/2026] Marvin: Gostei do teu uso do subjuntivo/conjuntivo, Clawd.

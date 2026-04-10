@@ -25,7 +25,7 @@
 
 - Simple past (pretérito perfeito) — completed
 - Contractions (preposition + article) — in progress; Parts A-B done, C-G homework
-- Next: imperfeito (once contractions are solid)
+- Imperfeito — [worksheet](../printables/imperfeito-worksheet-christian.html) prepared for Wed Apr 8 session; covers regular -AR/-ER/-IR, 4 irregulars (ser/ter/vir/pôr), past continuous (estava + gerúndio), past intent (ia + infinitivo)
 
 ---
 
@@ -48,6 +48,9 @@
 - "Ate na 10 minutos" → Até em 10 minutos
 - "estou muito atrasado mais" → mas (mais vs mas confusion)
 - "Sem!" (intended "Sim!") — occasional false cognate/typo
+- Missing infinitive after preposition: "antes de entra" → "antes de entrar" (Mar 2026)
+- Spanish interference: "o mismo hora" → "no mesmo horário" (mismo→mesmo, missing contraction; Mar 2026)
+- Missing accents: "voce" → "você", "Abracos" → "Abraços" (Mar 2026)
 
 ---
 
@@ -94,6 +97,10 @@
 | 2026-02-18 Tue | Materials | Sent [preterite worksheet 2](../printables/preterite-worksheet-christian-2.html) as homework; next class in ~2 weeks |
 | 2026-03-11 Wed | Session | Brookfield Place 5:30pm; [contractions worksheet](../printables/contractions-worksheet-christian.html) — covered Parts A-B (de + artigo, em + artigo) in class; Parts C-G assigned as homework |
 | 2026-03-18 Wed | Session | Brookfield Place 5:30pm (per calendar); no WhatsApp confirmation exchanged; no post-session notes |
+| 2026-03-30 Mon | Scheduling | Gil asked about Thu/Fri availability; Christian agreed to Thursday same time; also offered lunchtime near office |
+| 2026-04-02 Thu | Session | Brookfield Place; ~5:45 PM (Gil late, originally 5:30); extra session rescheduled from Wed; no post-session notes |
+| 2026-04-04 Sat | Scheduling | Gil asked about meeting another day this week; Christian offered Monday; Gil corrected himself, offered Monday or Wednesday; Christian chose Wednesday; confirmed Wed Apr 8 |
+| 2026-04-08 Wed | Session | Brookfield Place; Christian 10 min late ("Estou chegando em 10 minutos. Disculpa"); Gil: "Não tem problema." |
 
 ---
 

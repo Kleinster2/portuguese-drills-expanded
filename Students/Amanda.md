@@ -8,8 +8,8 @@
 **Address:** 100 Bank St, New York, NY 10014
 **Started:** Apr 12, 2022 (first in-person class); current stretch from Feb 2025
 **Current level:** [[Phase 1 - A1]] (upper — writes comfortably in Portuguese with minor errors)
-**Session frequency:** Weekly (flexible — typically Wed/Thu/Fri)
-**Location:** NYC area (meets at cafés: PlantShed, Café Kitsuné, Toby's Estate, Air Mail)
+**Session frequency:** Ad hoc (typically Wed/Thu/Fri when scheduled; calendar entries are placeholders)
+**Location:** Toby's Estate, 550 Hudson St (default); also PlantShed, Café Kitsuné, Air Mail
 **Rate:** $60/session (90 min)
 **Payment:** Cash or Venmo
 **Referral:** Idlewild (direct introduction via email, Mar 17, 2022)
@@ -45,7 +45,10 @@
 ## Trouble spots
 
 - Minor spelling: "voçe" (should be "você"), "boms" (should be "bons"), "días" (Spanish influence — should be "dias"), "brigada" (should be "obrigada")
-- Occasional gender/number agreement slips
+- Occasional gender/number agreement slips (e.g., "Bem-vindo!" about a female dog → "Bem-vinda!", Apr 2026)
+- Missing definite article before names: "Como vai Katie?" → "Como vai a Katie?" (Apr 2026)
+- Double gender slip with masculine nouns: "na minha horário" → "no meu horário" (Apr 2026)
+- Missing grave accent in time expressions: "As 3?" → "Às 3?" (Apr 2026)
 - Preposition usage: "Perfeito para me!" → "para mim"
 - "no segundo" → "na segunda" (weekday gender)
 - "veo" → "vejo" (irregular verb ver)
@@ -103,7 +106,10 @@
 | 2026-02-27 Fri | Session | Toby's Estate; 3 PM; worked BP condicional worksheet (generated that day); sent name etymology follow-up (Jacob/Ya'akov → Tiago/James/Santiago/Iago) |
 | 2026-03-05 Thu | Session | Toby's Estate; 11:30 AM |
 | 2026-03-20 Fri | Cancelled | Amanda sick — woke up feeling unwell; rescheduled via WhatsApp |
-| 2026-03-25 Wed | Scheduled | Toby's Estate; 1:00 PM; confirmed 3/23 via WhatsApp |
+| 2026-03-25 Wed | Session | Toby's Estate; 1:00 PM; confirmed 3/23 via WhatsApp |
+| 2026-04-02 Thu | Session | Toby's Estate; ~3:45 PM (originally 3:00→3:30→3:45, both running late); ad hoc — Amanda requested via WhatsApp; covered [gender agreement worksheet](../printables/gender-agreement-bp-worksheet.html); targets her recurring gender slips (bem-vindo/vinda, na minha horário) |
+| 2026-04-07 Mon | Scheduling | Amanda asked about Friday lesson via WhatsApp; Gil confirmed availability, awaiting time |
+| 2026-04-08 Wed | Scheduling | Amanda proposed Fri 10:30; then bathroom workers forced change — rescheduled to Mon 4/13 at 10:30 at Toby's Estate; "Perfeito! Obrigada 🥰🥰" |
 
 ---
 

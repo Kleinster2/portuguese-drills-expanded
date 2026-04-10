@@ -24,7 +24,7 @@
 ## Current focus
 
 - Travel-ready EP for May 2026 Portugal trip (Açores → Algarve → Lisboa)
-- Recent: clitic placement (3/25), gender agreement (3/19), imperfeito de cortesia
+- Recent: clitic placement (3/26), gender agreement (3/19), imperfeito de cortesia
 
 ---
 
@@ -93,7 +93,10 @@
 | 2026-03-10 Tue | Imperfeito de cortesia | Continued polite imperfeito practice |
 | 2026-03-19 Thu | Gender worksheet | Brooklyn Navy Yard, 2:30-4:00pm; worked through [gender agreement worksheet](../printables/gender-agreement-worksheet.html) |
 | 2026-03-24 | Clitic placement (prep) | Topic chosen as natural follow-up to gender worksheet — object pronouns (o/a/os/as) depend on gender agreement just practiced. Addresses recorded error: "quero dar-los" → "quero dá-los" (keeps -r, misses accent). Plan: review gender answers first, then Sections A-C of [clitic placement worksheet](../printables/clitic-placement-ep-worksheet.html), Section D as homework. Also considered ser/estar but clitic placement is higher priority given the error pattern. |
-| 2026-03-25 Tue | Clitic placement | Worked through [clitic placement worksheet](../printables/clitic-placement-ep-worksheet.html) — ênclise, próclise, infinitive -lo/-la rules |
+| 2026-03-26 Thu | Clitic placement | Worked through [clitic placement worksheet](../printables/clitic-placement-ep-worksheet.html) — ênclise, próclise, infinitive -lo/-la rules |
+| 2026-03-31 Tue | Clitic placement + Hotel | Transmitter Brewery outdoor patio (BNY area), 3:30-5:00pm. Continued [clitic placement worksheet](../printables/clitic-placement-ep-worksheet.html) (enclisis), then started [hotel worksheet](../printables/ep-travel-hotel-worksheet.html) |
+| 2026-04-07 Tue | Rescheduled | Marvin has medical appointment at 2:00; moved to Thursday |
+| 2026-04-09 Thu | Travel EP | Brooklyn Navy Yard, 3:30-5:00pm. Worked through [restaurante worksheet](../printables/ep-travel-restaurante-worksheet.html) and [direções worksheet](../printables/ep-travel-direcoes-worksheet.html) — continuing Portugal trip prep |
 
 ---
 
@@ -105,6 +108,7 @@
 - Previous study at POLI Institute, Manhattan (European Portuguese group classes)
 - Referred by Idlewild ~early 2024; contacted Gil Mar 2025 when outgrowing POLI
 - First class location: Peckish cafe, Willoughby St; then moved to Brooklyn Navy Yard food hall (141 Flushing Ave)
+- Transmitter Brewery — outdoor patio, BNY area. Used 3/31. Good lesson spot.
 - Gil suggested taking NYC Ferry from Wall St Pier 11 to reach BNY
 - European Portuguese focus — uses tu-form conjugations
 - In-person sessions, usually Tuesdays; Brooklyn Navy Yard, occasionally Essex Market or Manhattan

@@ -53,7 +53,18 @@
 | 2026-03-19 | Dexter replied: "No worries! See you tonight at Playground." |
 | 2026-03-19 | Gil replied: "See you then!" |
 | 2026-03-19 | Second lesson at Playground Coffee Shop (1114 Bedford Ave, Bed-Stuy) |
-| 2026-03-23 | Gil emailed: proposed ZACA Cafe (426 Marcus Garvey Blvd) for Thu 3/26; awaiting reply |
+| 2026-03-23 | Gil emailed: proposed ZACA Cafe (426 Marcus Garvey Blvd) for Thu 3/26 |
+| 2026-03-23 | Dexter replied: confirmed ZACA for Thursday |
+| 2026-03-25 | Gil confirmed: "Confirmado! Até amanhã!" |
+| 2026-03-26 | Third lesson at ZACA Cafe (426 Marcus Garvey Blvd, Bed-Stuy) |
+| 2026-03-26 | Gil emailed lesson materials (large attachment ~3.3MB) |
+| 2026-03-29 | Dexter emailed: asked to meet Tue 3/31 or Wed 4/1, 6:30-8pm |
+| 2026-03-29 | Gil replied: Tuesday works |
+| 2026-03-29 | Dexter replied: "Great. ZACA again? Obrigada!" |
+| 2026-03-31 | Dexter emailed: cancelled this week (under the weather); proposed Tue or Thu next week |
+| 2026-03-31 | Gil replied: melhoras, Tuesday at ZACA works |
+| 2026-04-06 | Dexter emailed: still feeling sick, postpone to Tue Apr 14 at 6:30; apologized |
+| 2026-04-06 | Gil replied: "No problem, feel better!" |
 
 ---
 
@@ -68,7 +79,8 @@
 - Lives in Bed-Stuy, Brooklyn
 - First lesson: Thu 3/5 at 6:30pm at Frog
 - Second lesson: Thu 3/19 at 6:30pm, Playground (1114 Bedford Ave, Bed-Stuy) — changed from Cordelia last minute. Playground is a coffee shop by day (closes 5 PM), wine bar in the evening. Music was a bit loud for a lesson.
-- Payment: Venmo (@Dexter-Mayo), paid for 2 sessions
+- Payment: Venmo (@Dexter-Mayo). Paid for 2 sessions on 3/10, paid again by 3/31. Current balance: settled.
+- Third lesson: Thu 3/26 at 6:30pm, ZACA Cafe (426 Marcus Garvey Blvd, Bed-Stuy) — good spot for lessons
 - **Bed-Stuy spots researched (Feb 2026):**
   - Commune NYC — Lexington Ave & Monroe St (cafe/wine bar, open till 10pm weeknights)
   - Therapy Wine Bar — 1159 Bedford Ave
@@ -303,6 +315,87 @@ Let me know if that works!
 
 Abraços,
 Gil
+
+### 2026-03-19 — Dexter → Gil
+
+No worries! See you tonight at Playground.
+
+### 2026-03-19 — Gil → Dexter
+
+See you then!
+
+### 2026-03-23 — Gil → Dexter
+
+Olá Dexter,
+
+Tudo bem? For Thursday, how about ZACA Cafe? It's at 426 Marcus Garvey Blvd, open until 9 PM. Might be a better fit than Playground for a lesson.
+
+Let me know if that works!
+
+Abraços,
+Gil
+
+### 2026-03-23 — Dexter → Gil
+
+Olá Gil,
+
+Tudo ótimo! E você? ZACA works for me. See you Thursday.
+
+Obrigada,
+Dexter
+
+### 2026-03-25 — Gil → Dexter
+
+Confirmado! Até amanhã!
+
+### 2026-03-26 — Gil → Dexter
+
+[Lesson materials sent — large attachment ~3.3MB]
+
+### 2026-03-29 — Dexter → Gil
+
+Olá Gil,
+
+Could we meet on Tuesday or Wednesday this week (3/31 or 4/1)? 6:30-8pm is still a good time for me.
+
+Obrigada,
+Dexter
+
+### 2026-03-29 — Gil → Dexter
+
+Oi Dexter. Tuesday works.
+
+### 2026-03-29 — Dexter → Gil
+
+Great. ZACA again? Obrigada!
+
+### 2026-03-31 — Dexter → Gil
+
+Olá Gil,
+
+I apologize but I'm going to have to cancel this week's lesson. I feel a bit under the weather. For next week, Tuesday or Thursday should work well.
+
+Obrigada,
+Dexter
+
+### 2026-03-31 — Gil → Dexter
+
+Oi Dexter,
+
+No worries at all. Melhoras! (That means "get better.")
+
+Tuesday at ZACA works. Same time?
+
+Abraços,
+Gil
+
+### 2026-04-06 — Dexter → Gil
+
+Olá Gil, Unfortunately I'm still feeling a bit sick and think I should take it easy this week. Can we postpone to next week? Tuesday April 14th at 6:30. My apologies!! Dexter
+
+### 2026-04-06 — Gil → Dexter
+
+No problem, feel better!
 
 ---
 
