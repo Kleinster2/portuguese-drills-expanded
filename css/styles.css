@@ -1,195 +1,785 @@
 /**
- * Custom Styles for Portuguese Language Drills
- * V6.0 - Notion Design System
+ * Tropical Modernism — Portuguese Learning Platform
+ * Design system inspired by Brazilian modernist aesthetics
  */
 
+/* ================================================================
+   1. DESIGN TOKENS
+   ================================================================ */
+
+:root {
+  /* Backgrounds */
+  --bg-primary: #FAF7F2;
+  --bg-secondary: #F0EBE3;
+  --bg-card: #FFFFFF;
+
+  /* Text */
+  --text-primary: #1F1B16;
+  --text-secondary: #6B6560;
+  --text-muted: #9A9490;
+
+  /* Accent Colors */
+  --terracotta: #C24D2C;
+  --terracotta-light: #FCF0EB;
+  --forest: #1B7A68;
+  --forest-light: #EEF6F4;
+  --gold: #C29020;
+  --gold-light: #FBF3E0;
+  --ocean: #2B6090;
+  --ocean-light: #EDF3F8;
+  --plum: #7B5087;
+  --plum-light: #F5EFF7;
+  --teal: #2A9D8F;
+  --teal-light: #EDF7F6;
+  --coral: #D4795C;
+  --coral-light: #FDF2EE;
+
+  /* CEFR Level Colors */
+  --cefr-a1: var(--terracotta);
+  --cefr-a1-light: var(--terracotta-light);
+  --cefr-a2: var(--gold);
+  --cefr-a2-light: var(--gold-light);
+  --cefr-b1: var(--forest);
+  --cefr-b1-light: var(--forest-light);
+  --cefr-b2: var(--ocean);
+  --cefr-b2-light: var(--ocean-light);
+
+  /* Borders & Shadows */
+  --border: rgba(31, 27, 22, 0.08);
+  --border-strong: rgba(31, 27, 22, 0.15);
+  --shadow-sm: 0 1px 2px rgba(31, 27, 22, 0.04);
+  --shadow: 0 2px 8px rgba(31, 27, 22, 0.06);
+  --shadow-md: 0 4px 16px rgba(31, 27, 22, 0.08);
+  --shadow-lg: 0 8px 30px rgba(31, 27, 22, 0.1);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-display: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+
+/* ================================================================
+   2. BASE STYLES
+   ================================================================ */
+
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    scroll-behavior: smooth;
-    /* Notion-style warm background */
-    background: #fbfbfa;
-    min-height: 100vh;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-body) !important;
+  background: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Notion-style modal container */
-.glassmorphic-card {
-    background: #ffffff;
-    border: none;
-    box-shadow: rgba(15, 15, 15, 0.05) 0px 0px 0px 1px,
-                rgba(15, 15, 15, 0.1) 0px 3px 6px,
-                rgba(15, 15, 15, 0.2) 0px 9px 24px;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-body);
+  color: var(--text-primary);
 }
 
-/* Notion-style panel (for question cards) */
-.glass-panel {
-    background: #ffffff;
-    border: 1px solid rgba(55, 53, 47, 0.09);
-    box-shadow: none;
-    transition: background 0.2s ease-in-out;
+
+/* ================================================================
+   3. HERO SECTION
+   ================================================================ */
+
+.hero-section {
+  position: relative;
+  text-align: center;
+  padding: 3rem 0 2rem;
+  overflow: hidden;
 }
 
-.glass-panel:hover {
-    background: rgba(55, 53, 47, 0.03);
+/* Large warm radial glow — top right */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -15%;
+  width: 50vw;
+  height: 50vw;
+  max-width: 600px;
+  max-height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(194, 77, 44, 0.05) 0%, transparent 70%);
+  pointer-events: none;
 }
 
-/* Enhanced chip/button */
-.glass-chip {
-    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
-    border: 1.5px solid rgba(0, 0, 0, 0.12);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08),
-                0 1px 2px rgba(0, 0, 0, 0.06);
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    font-weight: 500;
-    color: #1a1a1a;
+/* Smaller green glow — bottom left */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 35vw;
+  height: 35vw;
+  max-width: 400px;
+  max-height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(27, 122, 104, 0.04) 0%, transparent 70%);
+  pointer-events: none;
 }
 
-.glass-chip:hover {
-    background: linear-gradient(to bottom, #f0f7ff, #e3f2ff);
-    border-color: #3b82f6;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15),
-                0 2px 6px rgba(59, 130, 246, 0.1);
-    transform: translateY(-2px);
-    color: #1e40af;
+.hero-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeInUp 0.6s var(--ease-out) 0.1s forwards;
 }
 
-/* Notion-style callout boxes */
-.glass-info {
-    background: #faf5ed;
-    border: 1px solid rgba(55, 53, 47, 0.09);
-    border-left: 3px solid #d9730d;
-    box-shadow: none;
+.hero-heading {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  line-height: 0.95;
+  color: var(--text-primary);
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeInUp 0.8s var(--ease-out) 0.2s forwards;
 }
 
-.glass-success {
-    background: #edf3ec;
-    border: 1px solid rgba(55, 53, 47, 0.09);
-    border-left: 3px solid #448361;
-    box-shadow: none;
+.hero-heading em {
+  font-style: italic;
+  color: var(--terracotta);
 }
 
-/* Notion-style drill card */
+.hero-description {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 30rem;
+  margin: 1.5rem auto 0;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeInUp 0.6s var(--ease-out) 0.5s forwards;
+}
+
+/* Floating geometric decorations */
+.hero-geo {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border: 2px solid rgba(194, 77, 44, 0.12);
+  border-radius: 50%;
+  top: 20%;
+  left: 8%;
+  z-index: 0;
+  animation: heroFloat 6s ease-in-out infinite;
+}
+
+.hero-geo-2 {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: rgba(194, 144, 32, 0.1);
+  border-radius: 4px;
+  bottom: 25%;
+  right: 12%;
+  z-index: 0;
+  transform: rotate(45deg);
+  animation: heroFloat 8s ease-in-out infinite reverse;
+}
+
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+@media (max-width: 640px) {
+  .hero-geo, .hero-geo-2 { display: none; }
+}
+
+
+/* ================================================================
+   4. FEATURE CARDS (via #feature-cards section)
+   ================================================================ */
+
+#feature-cards a {
+  background: var(--bg-card) !important;
+  background-image: none !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.35s var(--ease-out) !important;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeInUp 0.5s var(--ease-out) forwards;
+}
+
+#feature-cards a:nth-child(1) { animation-delay: 0.05s; }
+#feature-cards a:nth-child(2) { animation-delay: 0.1s; }
+#feature-cards a:nth-child(3) { animation-delay: 0.15s; }
+#feature-cards a:nth-child(4) { animation-delay: 0.2s; }
+#feature-cards a:nth-child(5) { animation-delay: 0.25s; }
+#feature-cards a:nth-child(6) { animation-delay: 0.3s; }
+#feature-cards a:nth-child(7) { animation-delay: 0.35s; }
+
+#feature-cards a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.02) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.35s var(--ease-out);
+  pointer-events: none;
+}
+
+#feature-cards a:hover {
+  box-shadow: var(--shadow-md) !important;
+  transform: translateY(-3px) !important;
+  border-color: var(--border-strong) !important;
+}
+
+#feature-cards a:hover::after {
+  opacity: 1;
+}
+
+/* Override Tailwind's hover:scale */
+#feature-cards a:hover {
+  --tw-scale-x: 1 !important;
+  --tw-scale-y: 1 !important;
+}
+
+/* Icon container refinement */
+#feature-cards a > div:first-child {
+  border-radius: var(--radius-sm) !important;
+  transition: transform 0.35s var(--ease-out);
+}
+
+#feature-cards a:hover > div:first-child {
+  transform: scale(1.05);
+}
+
+/* Feature card text */
+#feature-cards a h3 {
+  font-family: var(--font-body) !important;
+  font-weight: 700 !important;
+  color: var(--text-primary) !important;
+  transition: color 0.2s !important;
+}
+
+#feature-cards a:hover h3 {
+  color: var(--terracotta) !important;
+}
+
+#feature-cards a p {
+  color: var(--text-secondary) !important;
+}
+
+
+/* ================================================================
+   5. FILTER CONTROLS
+   ================================================================ */
+
+.topic-filter-btn,
+.cefr-filter-btn,
+.variant-filter-btn,
+.path-btn {
+  background: var(--bg-card) !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-full) !important;
+  padding: 0.5rem 1.25rem !important;
+  font-family: var(--font-body) !important;
+  font-weight: 500 !important;
+  font-size: 0.875rem !important;
+  box-shadow: none !important;
+  transition: all 0.25s var(--ease-out) !important;
+}
+
+.topic-filter-btn:hover,
+.cefr-filter-btn:hover,
+.variant-filter-btn:hover,
+.path-btn:hover {
+  border-color: var(--border-strong) !important;
+  color: var(--text-primary) !important;
+  background: var(--bg-secondary) !important;
+}
+
+/* Active states */
+.topic-filter-btn.active {
+  background: var(--terracotta) !important;
+  color: white !important;
+  border-color: var(--terracotta) !important;
+}
+
+.cefr-filter-btn.active {
+  background: var(--ocean) !important;
+  color: white !important;
+  border-color: var(--ocean) !important;
+}
+
+.cefr-filter-btn.active[data-filter="a1"] { background: var(--cefr-a1) !important; border-color: var(--cefr-a1) !important; }
+.cefr-filter-btn.active[data-filter="a2"] { background: var(--cefr-a2) !important; border-color: var(--cefr-a2) !important; }
+.cefr-filter-btn.active[data-filter="b1"] { background: var(--cefr-b1) !important; border-color: var(--cefr-b1) !important; }
+.cefr-filter-btn.active[data-filter="b2"] { background: var(--cefr-b2) !important; border-color: var(--cefr-b2) !important; }
+
+.variant-filter-btn.active {
+  background: var(--forest) !important;
+  color: white !important;
+  border-color: var(--forest) !important;
+}
+
+.path-btn.active {
+  background: var(--plum) !important;
+  color: white !important;
+  border-color: var(--plum) !important;
+}
+
+/* Filter section labels */
+#topic-filter-controls > span,
+#cefr-filter-controls > span,
+#variant-filter-controls > span,
+#path-triggers > span {
+  color: var(--text-muted) !important;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Search input */
+#search-input {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-full) !important;
+  font-family: var(--font-body) !important;
+  color: var(--text-primary) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.25s var(--ease-out) !important;
+}
+
+#search-input:focus {
+  border-color: var(--terracotta) !important;
+  box-shadow: 0 0 0 3px rgba(194, 77, 44, 0.1) !important;
+  outline: none !important;
+}
+
+#search-input::placeholder {
+  color: var(--text-muted);
+}
+
+
+/* ================================================================
+   6. DRILL CARDS
+   ================================================================ */
+
 .drill-card {
-    visibility: visible;
-    opacity: 1;
-    transition: background 0.2s ease-in-out;
-    background: #ffffff;
-    border: 1px solid rgba(55, 53, 47, 0.09);
-    box-shadow: none;
+  position: relative;
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-left: 3px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.35s var(--ease-out) !important;
 }
+
+.drill-card:hover {
+  box-shadow: var(--shadow-md) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* CEFR-colored left border */
+.drill-card[data-cefr="a1"] { border-left-color: var(--cefr-a1) !important; }
+.drill-card[data-cefr="a2"] { border-left-color: var(--cefr-a2) !important; }
+.drill-card[data-cefr="b1"] { border-left-color: var(--cefr-b1) !important; }
+.drill-card[data-cefr="b2"] { border-left-color: var(--cefr-b2) !important; }
+
+/* Hover border matches CEFR color */
+.drill-card[data-cefr="a1"]:hover { border-color: var(--cefr-a1-light) !important; border-left-color: var(--cefr-a1) !important; }
+.drill-card[data-cefr="a2"]:hover { border-color: var(--cefr-a2-light) !important; border-left-color: var(--cefr-a2) !important; }
+.drill-card[data-cefr="b1"]:hover { border-color: var(--cefr-b1-light) !important; border-left-color: var(--cefr-b1) !important; }
+.drill-card[data-cefr="b2"]:hover { border-color: var(--cefr-b2-light) !important; border-left-color: var(--cefr-b2) !important; }
+
+/* CEFR badge via pseudo-element */
+.drill-card[data-cefr]::after {
+  content: attr(data-cefr);
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.drill-card[data-cefr="a1"]::after { color: var(--cefr-a1); background: var(--cefr-a1-light); }
+.drill-card[data-cefr="a2"]::after { color: var(--cefr-a2); background: var(--cefr-a2-light); }
+.drill-card[data-cefr="b1"]::after { color: var(--cefr-b1); background: var(--cefr-b1-light); }
+.drill-card[data-cefr="b2"]::after { color: var(--cefr-b2); background: var(--cefr-b2-light); }
 
 .drill-card.hidden {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
 }
 
 .drill-card.highlight {
-    background: #ffffff;
-    border-color: rgba(35, 131, 226, 0.28);
-    box-shadow: rgba(35, 131, 226, 0.14) 0px 0px 0px 1px inset;
+  border-color: var(--terracotta) !important;
+  box-shadow: 0 0 0 2px rgba(194, 77, 44, 0.12) !important;
 }
 
 .drill-card.highlight:hover {
-    background: rgba(35, 131, 226, 0.04);
+  background: rgba(194, 77, 44, 0.02) !important;
 }
 
-/* Screen Reader Only */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
+/* Drill card typography */
+.drill-card h2 {
+  font-family: var(--font-body) !important;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 1.05rem !important;
+  line-height: 1.35;
 }
 
-/* Learning Path Animations */
+.drill-card p {
+  color: var(--text-secondary);
+  font-size: 0.875rem !important;
+  line-height: 1.5;
+}
+
+/* Topic badges */
+.drill-card span[class*="inline-block"] {
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.03em;
+  border-radius: var(--radius-full) !important;
+}
+
+/* Drill card footer */
+.drill-card > div:last-child {
+  background: var(--bg-secondary) !important;
+  border-top: 1px solid var(--border);
+}
+
+/* Start button */
+.drill-card > div:last-child > button:first-child {
+  background: var(--forest) !important;
+  border-radius: var(--radius-sm) !important;
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  transition: all 0.2s var(--ease-out) !important;
+}
+
+.drill-card > div:last-child > button:first-child:hover {
+  background: #156858 !important;
+  box-shadow: 0 2px 8px rgba(27, 122, 104, 0.2);
+}
+
+/* Secondary buttons (Copy Link, Worksheet, etc.) */
+.drill-card > div:last-child > button:not(:first-child) {
+  background: transparent !important;
+  color: var(--text-muted) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-sm) !important;
+  font-family: var(--font-body) !important;
+  transition: all 0.2s var(--ease-out) !important;
+}
+
+.drill-card > div:last-child > button:not(:first-child):hover {
+  background: var(--bg-card) !important;
+  color: var(--text-secondary) !important;
+  border-color: var(--border-strong) !important;
+}
+
+/* No results */
+#no-results h3 {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+
+/* ================================================================
+   7. CHAT MODAL & COMPONENTS
+   ================================================================ */
+
+.glassmorphic-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-lg) !important;
+}
+
+.glass-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: background 0.2s var(--ease-out);
+}
+
+.glass-panel:hover {
+  background: var(--bg-secondary);
+}
+
+.glass-chip {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-strong);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s var(--ease-out);
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+}
+
+.glass-chip:hover {
+  background: var(--forest-light);
+  border-color: var(--forest);
+  box-shadow: 0 2px 8px rgba(27, 122, 104, 0.12);
+  transform: translateY(-1px);
+  color: var(--forest);
+}
+
+.glass-info {
+  background: var(--gold-light);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius-sm);
+  box-shadow: none;
+}
+
+.glass-success {
+  background: var(--forest-light);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--forest);
+  border-radius: var(--radius-sm);
+  box-shadow: none;
+}
+
+/* Chat header area */
+#chat-modal .border-b,
+#chat-modal .border-t {
+  border-color: var(--border) !important;
+}
+
+/* Chat messages background */
+#chat-messages {
+  background: var(--bg-primary);
+}
+
+/* Chat input */
+#chat-input {
+  font-family: var(--font-body) !important;
+  border-color: var(--border) !important;
+  border-radius: var(--radius-full) !important;
+  transition: all 0.2s var(--ease-out) !important;
+}
+
+#chat-input:focus {
+  border-color: var(--forest) !important;
+  box-shadow: 0 0 0 3px rgba(27, 122, 104, 0.1) !important;
+  outline: none !important;
+}
+
+/* Send button */
+#chat-send-btn {
+  background: var(--forest) !important;
+  border-radius: var(--radius-full) !important;
+  font-family: var(--font-body) !important;
+  transition: all 0.2s var(--ease-out) !important;
+}
+
+#chat-send-btn:hover:not(:disabled) {
+  background: #156858 !important;
+}
+
+/* Active drills badge area */
+#active-drills-container {
+  background: var(--bg-secondary) !important;
+  border-color: var(--border) !important;
+}
+
+/* Drill selector modal */
+#drill-selector-modal .bg-white {
+  background: var(--bg-card) !important;
+}
+
+#drill-selector-modal .border-b {
+  border-color: var(--border) !important;
+}
+
+
+/* ================================================================
+   8. LEARNING PATHS
+   ================================================================ */
+
 #path-display-container .learning-path {
-    opacity: 0;
-    transform: translateY(10px);
-    animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.5s var(--ease-out) forwards;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Learning Path Structure */
 .learning-path ol {
-    position: relative;
-    padding-left: 2rem;
-    list-style: none;
+  position: relative;
+  padding-left: 2rem;
+  list-style: none;
 }
 
 .learning-path > ol > li {
-    position: relative;
-    padding-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 1.5rem;
 }
 
 .learning-path > ol > li:last-child {
-    padding-bottom: 0;
+  padding-bottom: 0;
 }
 
-/* Node style (the circle) for TOP-LEVEL items only */
 .learning-path > ol > li::before {
-    content: '';
-    position: absolute;
-    left: -1.75rem;
-    top: 0.4rem;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 9999px;
-    background-color: #fff;
-    border: 3px solid #6366f1; /* indigo-600 */
-    z-index: 1;
+  content: '';
+  position: absolute;
+  left: -1.75rem;
+  top: 0.4rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  background-color: var(--bg-card);
+  border: 3px solid var(--terracotta);
+  z-index: 1;
 }
 
-/* Connecting line for TOP-LEVEL items only */
 .learning-path > ol > li::after {
-    content: '';
-    position: absolute;
-    left: -1.2rem;
-    top: 0.5rem;
-    bottom: -0.5rem;
-    width: 2px;
-    background-color: #6366f1; /* Solid indigo for core path */
+  content: '';
+  position: absolute;
+  left: -1.2rem;
+  top: 0.5rem;
+  bottom: -0.5rem;
+  width: 2px;
+  background-color: var(--terracotta);
 }
 
 .learning-path > ol > li:last-child::after {
-    display: none;
+  display: none;
 }
 
-/* Style for supplemental path nodes (TOP-LEVEL) */
 .learning-path > ol > li.supplemental-step::before {
-    background-color: #f8fafc; /* bg-slate-50 */
-    border: 2px dashed #94a3b8; /* slate-400 */
+  background-color: var(--bg-primary);
+  border: 2px dashed var(--text-muted);
 }
 
 .learning-path > ol > li.supplemental-step::after {
-    background-image: linear-gradient(to bottom, #94a3b8 60%, transparent 40%);
-    background-size: 2px 8px;
-    background-repeat: repeat-y;
-    background-color: transparent; /* Remove solid color */
+  background-image: linear-gradient(to bottom, var(--text-muted) 60%, transparent 40%);
+  background-size: 2px 8px;
+  background-repeat: repeat-y;
+  background-color: transparent;
 }
 
-/* Learning Bundles */
 .learning-bundle {
-    background-color: #f8fafc; /* slate-50 */
-    border: 1px solid #e2e8f0; /* slate-200 */
-    border-radius: 0.75rem;
-    padding: 1rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
 }
 
 .learning-bundle-title {
-    font-weight: 600;
-    color: #475569; /* slate-600 */
-    margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+
+/* ================================================================
+   9. FOOTER
+   ================================================================ */
+
+footer,
+footer.bg-slate-100 {
+  background: var(--bg-secondary) !important;
+  border-top-color: var(--border) !important;
+}
+
+footer p {
+  color: var(--text-muted) !important;
+  font-family: var(--font-body);
+}
+
+
+/* ================================================================
+   10. ANIMATIONS
+   ================================================================ */
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-label,
+  .hero-heading,
+  .hero-description,
+  #feature-cards a,
+  #path-display-container .learning-path {
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .hero-geo,
+  .hero-geo-2 {
+    animation: none !important;
+  }
+}
+
+
+/* ================================================================
+   11. UTILITIES
+   ================================================================ */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+
+/* ================================================================
+   12. DIAGNOSTIC TEST PAGE OVERRIDES
+   ================================================================ */
+
+/* Diagnostic chat header gradient — warmer */
+.bg-gradient-to-r.from-blue-600.to-purple-600 {
+  background: linear-gradient(135deg, var(--terracotta), var(--plum)) !important;
 }

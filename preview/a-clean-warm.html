@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Option A: Clean Warm</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#FAF7F2;--card:#FFF;--text:#1F1B16;--text2:#6B6560;--text3:#9A9490;
+  --terra:#C24D2C;--forest:#1B7A68;--gold:#C29020;--ocean:#2B6090;--plum:#7B5087;
+  --border:rgba(31,27,22,.08);--border2:rgba(31,27,22,.15);
+  --shadow:0 2px 8px rgba(31,27,22,.06);--shadowMd:0 4px 16px rgba(31,27,22,.08);
+  --f:'DM Sans',system-ui,sans-serif;
+}
+body{font-family:var(--f);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+
+/* Nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(250,247,242,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(31,27,22,.06)}
+.nav-in{max-width:80rem;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:3.5rem}
+.logo{text-decoration:none;display:flex;align-items:baseline;gap:.35rem}
+.logo b{font-size:1.3rem;color:var(--terra);font-weight:700}
+.logo span{font-size:.875rem;color:var(--text);font-weight:600}
+.nav-links{display:flex;gap:.25rem}
+.nav-links a{text-decoration:none;padding:.375rem .625rem;border-radius:8px;font-size:.8125rem;font-weight:500;color:var(--text2);transition:all .2s}
+.nav-links a:hover{color:var(--text);background:rgba(31,27,22,.04)}
+.nav-links a.active{color:var(--terra);background:rgba(194,77,44,.06)}
+
+/* Hero */
+.hero{text-align:center;padding:4rem 1rem 2.5rem}
+.hero-label{font-size:.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--text3);margin-bottom:1rem}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:700;line-height:1.1;color:var(--text)}
+.hero h1 span{color:var(--terra)}
+.hero p{margin-top:1rem;font-size:1.05rem;color:var(--text2);max-width:28rem;margin-left:auto;margin-right:auto;line-height:1.6}
+
+/* Feature cards */
+.features{max-width:72rem;margin:0 auto;padding:0 2rem 2rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.fc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;text-decoration:none;color:inherit;transition:all .3s}
+.fc:hover{box-shadow:var(--shadowMd);transform:translateY(-2px);border-color:var(--border2)}
+.fc-icon{width:2.75rem;height:2.75rem;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:.75rem;font-size:1.1rem}
+.fc h3{font-weight:700;font-size:.9rem;margin-bottom:.2rem}
+.fc p{font-size:.8rem;color:var(--text2)}
+
+/* Drill section */
+.drills{max-width:72rem;margin:0 auto;padding:1rem 2rem 3rem}
+.drills h2{font-size:1.1rem;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;font-size:.75rem;margin-bottom:1.5rem;text-align:center}
+.drill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.dc{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all .3s;border-left:3px solid var(--border)}
+.dc:hover{box-shadow:var(--shadowMd);transform:translateY(-2px)}
+.dc[data-cefr="a1"]{border-left-color:var(--terra)}
+.dc[data-cefr="a2"]{border-left-color:var(--gold)}
+.dc[data-cefr="b1"]{border-left-color:var(--forest)}
+.dc-body{padding:1.25rem;position:relative}
+.cefr-badge{position:absolute;top:1rem;right:1rem;font-size:.65rem;font-weight:700;text-transform:uppercase;padding:.15rem .5rem;border-radius:4px}
+.dc[data-cefr="a1"] .cefr-badge{color:var(--terra);background:#FCF0EB}
+.dc[data-cefr="a2"] .cefr-badge{color:var(--gold);background:#FBF3E0}
+.dc[data-cefr="b1"] .cefr-badge{color:var(--forest);background:#EEF6F4}
+.topic{display:inline-block;font-size:.7rem;font-weight:600;padding:.2rem .6rem;border-radius:99px;margin-bottom:.5rem}
+.topic-verb{background:#DBEAFE;color:#1E40AF}
+.topic-tense{background:#CFFAFE;color:#155E75}
+.dc h3{font-size:1rem;font-weight:700;margin-bottom:.35rem}
+.dc p.desc{font-size:.85rem;color:var(--text2);line-height:1.45}
+.dc-foot{padding:1rem 1.25rem;background:var(--bg);border-top:1px solid var(--border);display:flex;flex-direction:column;gap:.5rem}
+.btn-start{background:var(--forest);color:#fff;border:none;border-radius:8px;padding:.6rem;font-family:var(--f);font-weight:600;font-size:.875rem;cursor:pointer;transition:background .2s}
+.btn-start:hover{background:#156858}
+.btn-sec{background:transparent;color:var(--text3);border:1px solid var(--border);border-radius:8px;padding:.45rem;font-family:var(--f);font-size:.8rem;cursor:pointer;transition:all .2s}
+.btn-sec:hover{border-color:var(--border2);color:var(--text2)}
+
+footer{background:#F0EBE3;border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--text3);font-size:.85rem}
+.tag{position:fixed;top:4.5rem;right:1rem;background:var(--terra);color:#fff;padding:.5rem 1rem;border-radius:8px;font-weight:600;font-size:.8rem;z-index:99}
+</style>
+</head>
+<body>
+<div class="tag">Option A: Clean Warm</div>
+<nav><div class="nav-in">
+  <a href="#" class="logo"><b>PT</b><span>Tutor</span></a>
+  <div class="nav-links">
+    <a href="#" class="active">Home</a><a href="#">Diagnostic</a><a href="#">Drills</a><a href="#">Tutor</a><a href="#">Simplifier</a><a href="#">Curriculum</a>
+  </div>
+</div></nav>
+
+<header class="hero">
+  <div class="hero-label">Brazilian Portuguese &bull; A1 to B2</div>
+  <h1>Portuguese Learning <span>Platform</span></h1>
+  <p>AI-powered drills, pronunciation tools, and 90 structured lessons to guide your journey.</p>
+</header>
+
+<section class="features">
+  <a href="#" class="fc"><div class="fc-icon" style="background:#FBF3E0;color:#C29020">&#9997;</div><h3>Diagnostic Test</h3><p>Assess your level</p></a>
+  <a href="#" class="fc"><div class="fc-icon" style="background:#EEF6F4;color:#1B7A68">&#9733;</div><h3>AI Drills</h3><p>73 interactive exercises</p></a>
+  <a href="#" class="fc"><div class="fc-icon" style="background:#EDF3F8;color:#2B6090">&#9998;</div><h3>Text Simplifier</h3><p>Read at your level</p></a>
+  <a href="#" class="fc"><div class="fc-icon" style="background:#F5EFF7;color:#7B5087">&#9776;</div><h3>Curriculum</h3><p>90 structured lessons</p></a>
+</section>
+
+<section class="drills">
+  <h2>Practice Drills</h2>
+  <div class="drill-grid">
+    <div class="dc" data-cefr="a1">
+      <div class="dc-body"><span class="cefr-badge">A1</span><span class="topic topic-verb">Core Verbs</span><h3>Regular -ar Verb Drill</h3><p class="desc">Practice the present and simple past of -ar verbs.</p></div>
+      <div class="dc-foot"><button class="btn-start">Start</button><button class="btn-sec">Copy Link</button></div>
+    </div>
+    <div class="dc" data-cefr="a2">
+      <div class="dc-body"><span class="cefr-badge">A2</span><span class="topic topic-verb">Core Verbs</span><h3>Reflexive Verbs &mdash; BP</h3><p class="desc">Brazilian Portuguese reflexive verbs. Pronoun before the verb.</p></div>
+      <div class="dc-foot"><button class="btn-start">Start</button><button class="btn-sec">Copy Link</button></div>
+    </div>
+    <div class="dc" data-cefr="b1">
+      <div class="dc-body"><span class="cefr-badge">B1</span><span class="topic topic-tense">Tenses</span><h3>Subjunctive Present</h3><p class="desc">Master the present subjunctive for wishes, doubts, and emotions.</p></div>
+      <div class="dc-foot"><button class="btn-start">Start</button><button class="btn-sec">Copy Link</button></div>
+    </div>
+  </div>
+</section>
+
+<footer>&copy; 2025 Gil Klein. Made in New York City.</footer>
+</body>
+</html>

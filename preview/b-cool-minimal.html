@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Option B: Cool Minimal</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F8FAFB;--card:#FFF;--text:#0F172A;--text2:#475569;--text3:#94A3B8;
+  --accent:#0D9488;--accent-l:#CCFBF1;--red:#DC2626;--amber:#D97706;--blue:#2563EB;
+  --border:rgba(15,23,42,.06);--border2:rgba(15,23,42,.12);
+  --shadow:0 1px 3px rgba(15,23,42,.04);--shadowMd:0 4px 12px rgba(15,23,42,.07);
+  --f:'Plus Jakarta Sans',system-ui,sans-serif;
+}
+body{font-family:var(--f);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(248,250,251,.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-in{max-width:76rem;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:3.25rem}
+.logo{text-decoration:none;display:flex;align-items:center;gap:.4rem}
+.logo b{font-size:1.1rem;color:var(--accent);font-weight:800;letter-spacing:-.02em}
+.logo span{font-size:.8rem;color:var(--text2);font-weight:600}
+.nav-links{display:flex;gap:.125rem}
+.nav-links a{text-decoration:none;padding:.3rem .6rem;border-radius:6px;font-size:.8rem;font-weight:500;color:var(--text3);transition:all .15s}
+.nav-links a:hover{color:var(--text);background:rgba(15,23,42,.04)}
+.nav-links a.active{color:var(--accent);background:rgba(13,148,136,.06)}
+
+.hero{text-align:center;padding:4.5rem 1rem 2rem}
+.hero-label{font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem}
+.hero h1{font-size:clamp(2rem,5vw,3.25rem);font-weight:800;line-height:1.1;color:var(--text);letter-spacing:-.03em}
+.hero p{margin-top:1rem;font-size:1rem;color:var(--text2);max-width:26rem;margin-left:auto;margin-right:auto;line-height:1.6}
+
+.features{max-width:72rem;margin:0 auto;padding:0 2rem 2rem;display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem}
+.fc{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.25rem;text-decoration:none;color:inherit;transition:all .2s}
+.fc:hover{box-shadow:var(--shadowMd);border-color:var(--border2)}
+.fc-icon{width:2.25rem;height:2.25rem;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:.75rem;font-size:1rem}
+.fc h3{font-weight:700;font-size:.85rem;margin-bottom:.15rem;letter-spacing:-.01em}
+.fc p{font-size:.75rem;color:var(--text3)}
+
+.drills{max-width:72rem;margin:0 auto;padding:1rem 2rem 3rem}
+.drills h2{font-size:.7rem;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:1.5rem;text-align:center}
+.drill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.dc{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:all .2s}
+.dc:hover{box-shadow:var(--shadowMd)}
+.dc[data-cefr="a1"]{border-left:2px solid var(--red)}
+.dc[data-cefr="a2"]{border-left:2px solid var(--amber)}
+.dc[data-cefr="b1"]{border-left:2px solid var(--accent)}
+.dc-body{padding:1.25rem;position:relative}
+.cefr-badge{position:absolute;top:1rem;right:1rem;font-size:.6rem;font-weight:700;text-transform:uppercase;padding:.15rem .45rem;border-radius:4px;letter-spacing:.03em}
+.dc[data-cefr="a1"] .cefr-badge{color:var(--red);background:#FEF2F2}
+.dc[data-cefr="a2"] .cefr-badge{color:var(--amber);background:#FFFBEB}
+.dc[data-cefr="b1"] .cefr-badge{color:var(--accent);background:var(--accent-l)}
+.topic{display:inline-block;font-size:.65rem;font-weight:600;padding:.15rem .5rem;border-radius:99px;margin-bottom:.5rem;background:#F1F5F9;color:#475569}
+.dc h3{font-size:.95rem;font-weight:700;margin-bottom:.3rem;letter-spacing:-.01em}
+.dc p.desc{font-size:.8rem;color:var(--text2);line-height:1.45}
+.dc-foot{padding:.75rem 1.25rem;background:#FAFBFC;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:.4rem}
+.btn-start{background:var(--accent);color:#fff;border:none;border-radius:6px;padding:.55rem;font-family:var(--f);font-weight:600;font-size:.8rem;cursor:pointer;transition:background .15s}
+.btn-start:hover{background:#0F766E}
+.btn-sec{background:transparent;color:var(--text3);border:1px solid var(--border);border-radius:6px;padding:.4rem;font-family:var(--f);font-size:.75rem;cursor:pointer;transition:all .15s}
+.btn-sec:hover{border-color:var(--border2);color:var(--text2)}
+
+footer{background:#F1F5F9;border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--text3);font-size:.8rem}
+.tag{position:fixed;top:4rem;right:1rem;background:var(--accent);color:#fff;padding:.5rem 1rem;border-radius:8px;font-weight:600;font-size:.8rem;z-index:99}
+</style>
+</head>
+<body>
+<div class="tag">Option B: Cool Minimal</div>
+<nav><div class="nav-in">
+  <a href="#" class="logo"><b>PT</b><span>Tutor</span></a>
+  <div class="nav-links">
+    <a href="#" class="active">Home</a><a href="#">Diagnostic</a><a href="#">Drills</a><a href="#">Tutor</a><a href="#">Simplifier</a><a href="#">Curriculum</a>
+  </div>
+</div></nav>
+
+<header class="hero">
+  <div class="hero-label">Brazilian Portuguese &bull; A1 to B2</div>
+  <h1>Portuguese Learning Platform</h1>
+  <p>AI-powered drills, pronunciation tools, and 90 structured lessons to guide your journey.</p>
+</header>
+
+<section class="features">
+  <a href="#" class="fc"><div class="fc-icon" style="background:#CCFBF1;color:#0D9488">&#9997;</div><h3>Diagnostic Test</h3><p>Assess your level</p></a>
+  <a href="#" class="fc"><div class="fc-icon" style="background:#CCFBF1;color:#0D9488">&#9733;</div><h3>AI Drills</h3><p>73 interactive exercises</p></a>
+  <a href="#" class="fc"><div class="fc-icon" style="background:#E0F2FE;color:#0369A1">&#9998;</div><h3>Text Simplifier</h3><p>Read at your level</p></a>
+  <a href="#" class="fc"><div class="fc-icon" style="background:#F1F5F9;color:#475569">&#9776;</div><h3>Curriculum</h3><p>90 structured lessons</p></a>
+</section>
+
+<section class="drills">
+  <h2>Practice Drills</h2>
+  <div class="drill-grid">
+    <div class="dc" data-cefr="a1">
+      <div class="dc-body"><span class="cefr-badge">A1</span><span class="topic">Core Verbs</span><h3>Regular -ar Verb Drill</h3><p class="desc">Practice the present and simple past of -ar verbs.</p></div>
+      <div class="dc-foot"><button class="btn-start">Start</button><button class="btn-sec">Copy Link</button></div>
+    </div>
+    <div class="dc" data-cefr="a2">
+      <div class="dc-body"><span class="cefr-badge">A2</span><span class="topic">Core Verbs</span><h3>Reflexive Verbs &mdash; BP</h3><p class="desc">Brazilian Portuguese reflexive verbs. Pronoun before the verb.</p></div>
+      <div class="dc-foot"><button class="btn-start">Start</button><button class="btn-sec">Copy Link</button></div>
+    </div>
+    <div class="dc" data-cefr="b1">
+      <div class="dc-body"><span class="cefr-badge">B1</span><span class="topic">Tenses</span><h3>Subjunctive Present</h3><p class="desc">Master the present subjunctive for wishes, doubts, and emotions.</p></div>
+      <div class="dc-foot"><button class="btn-start">Start</button><button class="btn-sec">Copy Link</button></div>
+    </div>
+  </div>
+</section>
+
+<footer>&copy; 2025 Gil Klein. Made in New York City.</footer>
+</body>
+</html>
