@@ -105,6 +105,9 @@ async function startDiagnosticTest() {
   }
 }
 
+const QUESTIONS_PER_TOPIC = 2;
+const PHASE_PASS_THRESHOLD = 0.70;
+
 /**
  * Start a Phase (A1, A2, etc.)
  */
@@ -116,7 +119,7 @@ function startPhase(phaseNum) {
 
   // 1. Get all questions for this phase
   let rawQuestions = questionBank.questions.filter(q => q.phase === phaseNum);
-  
+
   // 2. Initialize Topic State
   rawQuestions.forEach(q => {
     if (!topicState[q.unitName]) {
@@ -124,9 +127,18 @@ function startPhase(phaseNum) {
     }
   });
 
-  // 3. Group by Topic to ensure we don't scatter them too wildly (optional, but better for flow)
-  // For now, random shuffle is fine, the engine handles skipping.
-  phaseQuestions = shuffleArray(rawQuestions);
+  // 3. Sample N questions per topic for a manageable test length
+  const byTopic = {};
+  rawQuestions.forEach(q => {
+    if (!byTopic[q.unitName]) byTopic[q.unitName] = [];
+    byTopic[q.unitName].push(q);
+  });
+  let sampled = [];
+  for (const [topic, questions] of Object.entries(byTopic)) {
+    const shuffled = shuffleArray(questions);
+    sampled.push(...shuffled.slice(0, QUESTIONS_PER_TOPIC));
+  }
+  phaseQuestions = shuffleArray(sampled);
 
   console.log(`Starting Phase ${phaseNum} with ${phaseQuestions.length} questions across ${Object.keys(topicState).length} topics.`);
 
@@ -342,31 +354,59 @@ async function logTestProgress(isComplete = false) {
 }
 
 function evaluatePhaseCompletion() {
-  // Record phase results (no pass/fail - pure diagnostic)
   console.log(`Phase ${currentPhase} complete: ${Object.keys(topicState).length} topics tested`);
+
+  // Calculate phase score
+  let totalCorrect = 0;
+  let totalAnswered = 0;
+  for (const [topic, stats] of Object.entries(topicState)) {
+    totalCorrect += stats.correct;
+    totalAnswered += stats.total;
+  }
+  const phaseScore = totalAnswered > 0 ? totalCorrect / totalAnswered : 0;
 
   completedPhases.push({
     phase: currentPhase,
-    topics: { ...topicState } // Clone to preserve state
+    topics: { ...topicState },
+    score: phaseScore
   });
 
-  // Log progress after each phase (tracks dropouts)
+  // Log progress after each phase
   logTestProgress(false);
 
-  // Always continue to next phase (no gating)
-  if (currentPhase < 4) {
-    showPhaseTransition(currentPhase + 1);
+  // Phase gating: stop if below threshold (this is their level)
+  if (phaseScore < PHASE_PASS_THRESHOLD && currentPhase < 4) {
+    showPhaseGateResult(phaseScore);
+  } else if (currentPhase < 4) {
+    showPhaseTransition(currentPhase + 1, phaseScore);
   } else {
     finishTest();
   }
 }
 
-function showPhaseTransition(nextPhase) {
+function showPhaseGateResult(score) {
   const container = document.getElementById('chat-messages');
   const phaseNames = { 1: 'A1', 2: 'A2', 3: 'B1', 4: 'B2' };
+  const level = phaseNames[currentPhase];
+  const pct = Math.round(score * 100);
+  container.insertAdjacentHTML('beforeend', `
+    <div class="my-4 p-5 bg-amber-50/80 backdrop-blur-sm border border-amber-200 text-amber-900 rounded-xl text-center">
+      <p class="font-bold text-lg mb-1">${level} complete: ${pct}%</p>
+      <p class="text-sm">This is where we'll focus your learning. Finishing up the assessment now.</p>
+    </div>
+  `);
+  container.scrollTop = container.scrollHeight;
+  setTimeout(() => finishTest(), 1500);
+}
+
+function showPhaseTransition(nextPhase, score) {
+  const container = document.getElementById('chat-messages');
+  const phaseNames = { 1: 'A1', 2: 'A2', 3: 'B1', 4: 'B2' };
+  const level = phaseNames[currentPhase];
+  const pct = Math.round(score * 100);
   container.insertAdjacentHTML('beforeend', `
     <div class="my-4 p-4 glass-info text-blue-800 rounded-xl text-center font-bold">
-      Phase complete. Moving to ${phaseNames[nextPhase]}...
+      ${level} complete: ${pct}%. Moving to ${phaseNames[nextPhase]}...
     </div>
   `);
   container.scrollTop = container.scrollHeight;

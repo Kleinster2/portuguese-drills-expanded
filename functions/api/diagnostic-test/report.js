@@ -164,10 +164,10 @@ export async function onRequestPost({ request, env }) {
     }
 
     // Generate report
-    const report = generateReport(answers, topics);
+    const report = generateReport(answers, completedPhases);
 
-    // Calculate statistics
-    const stats = calculateStats(completedPhases);
+    // Calculate statistics (include in-progress phase answers)
+    const stats = calculateStats(completedPhases, answers);
 
     // Get country from Cloudflare headers
     const country = request.cf?.country || 'unknown';
@@ -222,16 +222,33 @@ export async function onRequestPost({ request, env }) {
 }
 
 /**
- * Calculate test statistics
+ * Calculate test statistics from both completedPhases and raw answers.
+ * completedPhases only covers finished phases; answers includes in-progress work.
  */
-function calculateStats(completedPhases) {
-  if (!completedPhases || completedPhases.length === 0) {
+function calculateStats(completedPhases, answers) {
+  // Derive stats from answers (the complete record) when available
+  if (answers && answers.length > 0) {
+    let totalCorrect = 0;
+    let totalWrong = 0;
+    let totalSkipped = 0;
+
+    answers.forEach(a => {
+      if (a.r === 'correct') totalCorrect++;
+      else if (a.r === 'skipped') totalSkipped++;
+      else totalWrong++;
+    });
+
     return {
-      phasesCompleted: 0,
-      totalCorrect: 0,
-      totalWrong: 0,
-      totalSkipped: 0
+      phasesCompleted: completedPhases ? completedPhases.length : 0,
+      totalCorrect,
+      totalWrong,
+      totalSkipped
     };
+  }
+
+  // Fallback to completedPhases only
+  if (!completedPhases || completedPhases.length === 0) {
+    return { phasesCompleted: 0, totalCorrect: 0, totalWrong: 0, totalSkipped: 0 };
   }
 
   let totalCorrect = 0;
@@ -239,10 +256,10 @@ function calculateStats(completedPhases) {
   let totalSkipped = 0;
 
   completedPhases.forEach(p => {
-    for (const [topic, stats] of Object.entries(p.topics || {})) {
-      totalCorrect += stats.correct || 0;
-      totalWrong += stats.wrong || 0;
-      totalSkipped += stats.skipped || 0;
+    for (const [topic, s] of Object.entries(p.topics || {})) {
+      totalCorrect += s.correct || 0;
+      totalWrong += s.wrong || 0;
+      totalSkipped += s.skipped || 0;
     }
   });
 
@@ -255,85 +272,49 @@ function calculateStats(completedPhases) {
 }
 
 /**
- * Generate formatted diagnostic report
+ * Generate formatted diagnostic report from completedPhases data
  */
-function generateReport(answers, topics) {
-  // Group answers by topic
-  const topicScores = {};
-
-  answers.forEach(answer => {
-    if (!topicScores[answer.topic]) {
-      const topicInfo = topics.find(t => t.code === answer.topic);
-      topicScores[answer.topic] = {
-        code: answer.topic,
-        name: topicInfo ? topicInfo.name : answer.topic,
-        level: topicInfo ? topicInfo.level : 'Unknown',
-        correct: 0,
-        total: 0
-      };
-    }
-    topicScores[answer.topic].total++;
-    if (answer.correct) {
-      topicScores[answer.topic].correct++;
-    }
-  });
-
-  // Build report string
+function generateReport(answers, completedPhases) {
+  const phaseNames = { 1: 'A1', 2: 'A2', 3: 'B1', 4: 'B2' };
   let report = 'PORTUGUESE DIAGNOSTIC TEST\n\n';
 
-  // Helper to get topics by level in correct order
-  const getTopicsByLevel = (level) => {
-    return topics
-      .filter(t => t.level === level)
-      .map(t => topicScores[t.code])
-      .filter(Boolean); // Filter out any undefined
-  };
-
-  // A1 LEVEL
-  const a1Topics = getTopicsByLevel('A1');
-  if (a1Topics.length > 0) {
-    report += 'A1 LEVEL\n';
-    a1Topics.forEach((topic, idx) => {
-      const prefix = idx === a1Topics.length - 1 ? '└─' : '├─';
-      report += `${prefix} ${topic.name}: ${topic.correct}/${topic.total}\n`;
+  if (!completedPhases || completedPhases.length === 0) {
+    // Fallback: build from answers array
+    const byPhase = {};
+    answers.forEach(a => {
+      const phase = a.p || 1;
+      const unit = a.u || a.unit || 'Unknown';
+      if (!byPhase[phase]) byPhase[phase] = {};
+      if (!byPhase[phase][unit]) byPhase[phase][unit] = { correct: 0, total: 0 };
+      byPhase[phase][unit].total++;
+      if (a.r === 'correct') byPhase[phase][unit].correct++;
     });
-    report += '\n';
-  }
 
-  // A2 LEVEL
-  const a2Topics = getTopicsByLevel('A2');
-  if (a2Topics.length > 0) {
-    report += 'A2 LEVEL\n';
-    a2Topics.forEach((topic, idx) => {
-      const prefix = idx === a2Topics.length - 1 ? '└─' : '├─';
-      report += `${prefix} ${topic.name}: ${topic.correct}/${topic.total}\n`;
+    for (const phase of Object.keys(byPhase).sort()) {
+      const level = phaseNames[phase] || `Phase ${phase}`;
+      report += `${level} LEVEL\n`;
+      const topics = Object.entries(byPhase[phase]);
+      topics.forEach(([name, stats], idx) => {
+        const prefix = idx === topics.length - 1 ? '└─' : '├─';
+        report += `${prefix} ${name}: ${stats.correct}/${stats.total}\n`;
+      });
+      report += '\n';
+    }
+  } else {
+    completedPhases.forEach(p => {
+      const level = phaseNames[p.phase] || `Phase ${p.phase}`;
+      report += `${level} LEVEL\n`;
+      const topics = Object.entries(p.topics || {});
+      topics.forEach(([name, stats], idx) => {
+        const prefix = idx === topics.length - 1 ? '└─' : '├─';
+        const skip = stats.skipped || 0;
+        const skipText = skip > 0 ? ` (${skip} skipped)` : '';
+        report += `${prefix} ${name}: ${stats.correct}/${stats.total}${skipText}\n`;
+      });
+      report += '\n';
     });
-    report += '\n';
-  }
-
-  // B1 LEVEL
-  const b1Topics = getTopicsByLevel('B1');
-  if (b1Topics.length > 0) {
-    report += 'B1 LEVEL\n';
-    b1Topics.forEach((topic, idx) => {
-      const prefix = idx === b1Topics.length - 1 ? '└─' : '├─';
-      report += `${prefix} ${topic.name}: ${topic.correct}/${topic.total}\n`;
-    });
-    report += '\n';
-  }
-
-  // B2 LEVEL
-  const b2Topics = getTopicsByLevel('B2');
-  if (b2Topics.length > 0) {
-    report += 'B2 LEVEL\n';
-    b2Topics.forEach((topic, idx) => {
-      const prefix = idx === b2Topics.length - 1 ? '└─' : '├─';
-      report += `${prefix} ${topic.name}: ${topic.correct}/${topic.total}\n`;
-    });
-    report += '\n';
   }
 
   report += 'Send this report to your instructor.';
-
   return report;
 }

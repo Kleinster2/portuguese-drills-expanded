@@ -4,9 +4,9 @@
     "title": "Portuguese Diagnostic Assessment - Production-Only",
     "description": "Comprehensive diagnostic test with granular topic tracking (A1→B2)",
     "variant": "pt-BR",
-    "totalQuestions": 295,
-    "estimatedMinutes": 25,
-    "structure": "Full diagnostic - all questions asked per phase with 70% topic pass for promotion",
+    "totalQuestions": 350,
+    "estimatedMinutes": 20,
+    "structure": "Sampled diagnostic - 2 questions per topic, 70% phase gating. ~32-162 questions depending on level.",
     "assessmentTypes": {
       "production": "146 questions - English to Portuguese with strategic chip options"
     },
@@ -14,7 +14,7 @@
     "scenarioCoverage": "Strategic - contextual where beneficial, removed for basic drills",
     "questionTypes": "Production (EN→PT with chips) and Multi-step only",
     "approach": "No hints, clear gender markers, separated article types, proper scenarios",
-    "diagnosticMode": "Full diagnostic - asks all phase questions, tracks topic performance, 70% pass threshold for next phase"
+    "diagnosticMode": "Sampled diagnostic with gating - 2 questions per topic, 70% phase score required to advance"
   },
   "phases": [
     {
@@ -2993,7 +2993,7 @@
       "scenario": "Saying something will last forever."
     },
     {
-      "id": 200,
+      "id": 549,
       "unit": 90,
       "unitName": "Existential Ter (BP)",
       "phase": 1,
