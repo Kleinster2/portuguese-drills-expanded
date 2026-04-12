@@ -599,6 +599,30 @@ The EP use of imperfeito in place of the condicional is **not colloquial or info
 
 **Drill design implication for EP:** The best exercise isn't "conjugate querer in the condicional" — it's "here are 5 situations, which form would a Portuguese speaker use and why?" For BP, the condicional forms (gostaria, poderia, deveria) are the standard polite forms and should be drilled normally.
 
+### Corpus verification (MANDATORY enforcement)
+
+The Native Usage Filter is enforced by **searching real-world Brazilian/Portuguese corpora before any form enters teaching material** — drills, worksheets, diagnostic questions, simplifier output, dialogue examples. Training-data grammar knowledge is not a substitute.
+
+**Rule:** Before asserting that any Portuguese form is correct, natural, or appropriate for a given level, search the corpus. If a construction returns few or no natural hits, rewrite it.
+
+**Where it applies:**
+- Every sentence drafted for a drill, worksheet, or diagnostic test question
+- Every article/preposition choice with proper nouns (place names, neighborhoods, institutions)
+- Every claim about pronunciation, vowel quality, or verb alternation
+- Every "in BP/EP they say X" assertion
+- Any time a prescriptive rule and native usage might diverge
+
+**How to search:**
+- **BP content:** quoted searches on `.com.br` sources (e.g., `"o amigo está ocupado" site:.com.br`)
+- **EP content:** quoted searches on `.pt` sources
+- Never cite an EP source as evidence for BP usage, or vice versa
+- If WebFetch returns 403/blocked, switch to Chrome browser tools — do not skip the search
+
+**Why this is mandatory:** A sentence can be 100% grammatically correct and still be something no native speaker would ever say. Teaching those forms builds bad instincts the student has to unlearn. Past failures this rule addresses:
+- Claimed `"de Brooklyn"` was correct when BP universally uses `"do Brooklyn"` (.com.br evidence)
+- Claimed `-ar` verbs alternate open/closed O between `eu` and `você` (they don't)
+- Used `"O amigo ocupado."` as a diagnostic test stem when bare attributive noun phrases are not natural BP
+
 ### Worksheet quality
 
 Use `/worksheet-review` for the full content and dialogue checklist.

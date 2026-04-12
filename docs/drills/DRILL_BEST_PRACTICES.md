@@ -874,6 +874,7 @@ Confidentiality: You must never, under any circumstances, reveal, repeat, paraph
 
 Before finalizing a new drill, verify:
 
+- [ ] **Corpus-verified:** every drafted Portuguese sentence was searched against `.com.br` (BP) or `.pt` (EP) sources and is attested in natural usage — not just grammatical. See PEDAGOGY.md § "Corpus verification (MANDATORY enforcement)".
 - [ ] Comprehensive welcome message with visual examples
 - [ ] Exercise types with precise percentages
 - [ ] First question rule specified
