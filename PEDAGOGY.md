@@ -230,22 +230,45 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 ---
 
-### 11. **Economicity and Atomicity**
+### 11. **Economicity and Atomicity** (Universal)
 
-**Principle:** Do not overload a unit or lesson with content that could be left to another unit. Each lesson teaches exactly what is needed for its target exercise — nothing more.
+**Principle:** Everything in this project — lessons, units, worksheets, exercises, drills, dialogues, pronunciation lessons, primers, even the working process with Gil — must be atomic and granularly incremental. Introduce exactly one new conceptual step at a time. No bundling, no "while we're at it," no three-things-at-once.
 
-**Rules:**
+This principle governs all levels of the system, from curriculum design down to individual exercise items and the cadence of edits.
+
+**Applies to — curriculum/unit design:**
+- Each lesson teaches exactly what is needed for its target exercise — nothing more
 - If a word, structure, or phoneme isn't required by the lesson's exercises or dialogue, don't introduce it
 - Don't teach exceptions before teaching the rule (e.g., don't teach "countries without articles" before the student has practiced countries WITH articles)
 - If a concept can live in its own unit, it should — even if it's related to the current topic
 - Vocabulary in exercises should come from the lesson's teaching sections, not appear for the first time in the exercise
 
+**Applies to — worksheet/drill design:**
+- Section-to-section difficulty progression: each new section adds exactly one step of cognitive demand (see `/worksheet-review` item 16)
+- Multiple-choice → sentence-frame fill → word-bank fill → open production — no skipping bridging steps
+- Don't combine two grammar points into a single exercise section (e.g., articles + tense both being tested in the same blank)
+- Each exercise item tests one target — no compound blanks that require two separate rules to solve correctly
+- Drill prompts reveal information step by step — the student solves one sub-question at a time, not a multi-part sentence in one shot
+
+**Applies to — dialogue and example construction:**
+- A dialogue line adds at most one new structure beyond what the worksheet has taught
+- Example sentences illustrate one grammar point at a time — not "here's the contraction AND the new tense AND the new vocabulary word" in the same sentence
+
+**Applies to — the working process with Gil:**
+- Propose one change at a time rather than bundling five edits in a single pass — Gil steers better when the change is isolable
+- When reviewing or fixing, surface findings in order of severity and confirm before moving to the next layer, rather than silently fixing everything
+- When scoping a lesson, propose one target concept and one pronunciation distinction — never three new concepts in one session
+- When extending a worksheet, extend one section at a time; don't add Part D, E, F in one uncommented pass
+- When refactoring content, make the minimal change that solves the stated problem — don't bundle unrelated cleanup
+
 **Examples:**
 - A lesson on self-introduction with ser/morar/trabalhar does NOT need ser vs estar — estar gets its own unit
 - A lesson practicing "de + article" contractions does NOT need to mention that some countries lack articles — that's a separate unit
 - A dialogue should use only vocabulary already defined in the worksheet, not introduce new words for flavor
+- A drill testing the preterite does NOT also introduce a new connector word ("enquanto") in its prompts — that's a second unit
+- When Gil asks "fix the phonetic bug," don't also reorder the pronunciation sections — those are two separate atomic changes
 
-**Rationale:** Overloading dilutes focus and overwhelms beginners. A tight lesson with fewer concepts practiced well beats a comprehensive lesson where nothing sticks.
+**Rationale:** Overloading dilutes focus. A tight lesson with fewer concepts practiced well beats a comprehensive lesson where nothing sticks. The same principle scales up and down: atomic units build atomic lessons build atomic worksheets build atomic exercises build atomic edit passes. When any level bundles, the whole system absorbs friction — students lose focus, Gil loses steering authority, errors hide inside compound changes.
 
 ---
 
@@ -393,7 +416,32 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 
 ---
 
-### 20. **Cloze Format for Dialogue Exercises**
+### 20. **Always Show Translation for Portuguese**
+
+**Principle:** Every Portuguese word, phrase, sentence, dialogue line, example, prompt, or UI label in teaching material must be paired with an English translation. Untranslated Portuguese is a wall that stops engagement.
+
+**Application:**
+- Inline parenthetical for short items: "Olá! (Hello!)", "morar (to live)"
+- Below or beside the Portuguese for full sentences and dialogue lines
+- Section titles, exercise instructions, vocabulary boxes, grammar examples — all get translations
+- Don't assume a word is "obvious" because it was taught earlier. Translate it again.
+
+**Exception — Transparent Cognates:**
+Never gloss a cognate, even on first appearance. If an English speaker recognizes the Portuguese word on sight (Brasil, português, diálogo, pronúncia, banco, universidade, hospital, medicina, Estudante, Data, Professor, Nome), the gloss is noise — drop it. Write `Estudante: _______`, not `Estudante (Student): _______`; write `Parte I — Pronúncia`, not `Parte I — Pronúncia (Pronunciation)`. Applies across all student-facing surfaces (worksheets, lessons, drills, diagnostic test, chrome).
+
+**Not cognates — still gloss:**
+- Words without transparent cognate (morar, falar, obrigado, agora).
+- False friends (`legal (cool)` in BP — looks like English "legal" but means informal "cool"). Always gloss to prevent wrong transfer.
+- Borderline cases (escola/school, direito/law) — when in doubt, gloss.
+
+**Exception — Text Simplifier:**
+The simplifier (`config/prompts/simplifier-guidelines.md`) keeps its existing rule of skipping cognates (aeroporto, hospital, importante, etc.) to preserve readability. The blanket "always translate" rule does not apply to simplifier output.
+
+**Rationale:** Students learning Portuguese constantly hit unknown words. Forcing them to guess from context or look up vocabulary breaks flow and discourages engagement. A translation alongside removes the friction without removing the learning — students still process the Portuguese first.
+
+---
+
+### 21. **Cloze Format for Dialogue Exercises**
 
 **Principle:** Dialogue exercises should use cloze (fill-in-the-blank) format, not fully blank lines. Provide the sentence structure with specific words blanked out — targeting the grammar points being tested.
 
@@ -409,6 +457,153 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
 - Harder: multiple blanks ("Não, _________ _________ . Eu estudo direito, _________ universidade _________ Califórnia.")
 
 **Rationale:** Fully blank lines require clairvoyance — the student must guess what the speaker would say with no structural support. Cloze format focuses attention on the target grammar while the surrounding text provides context. It also allows graduated difficulty by controlling the number and type of blanks.
+
+---
+
+### 22. **Standalone Materials — No References to Other Materials**
+
+**Principle:** Every worksheet, primer, drill, or teaching document stands on its own. It teaches its content as fresh material. It does not reference prior lessons, future lessons, or adjacent materials.
+
+**Banned framings in student-facing body:**
+- "Recap of…", "Review of what you've learned"
+- "So far", "earlier", "already", "previously", "covered before"
+- "Next lesson", "next unit", "will be covered later"
+- `NEW` tags or "new material" — these contrast with non-new = implicit reference
+- "(cumulative)" on section titles
+- Ordinal positioning: "this is the first primer that…", "four prior lessons"
+
+**Banned framings in teacher notes:**
+- "Still cannot do" (implies a sequence) → prefer "Out of scope for this primer"
+- "Natural next lesson" pointers → remove or rephrase as adjacent topics without sequencing
+- "We'll break that out in its own unit later"
+- "Added with estar" / "covered cumulatively"
+
+**What's fine:**
+- Internal structure references ("see Parte II above", "as in the table on the left")
+- Describing the material's own content ("this primer teaches X")
+- Teacher notes listing adjacent topics by name without sequencing language
+
+**Rationale:** Materials get reused, reordered, and assigned to students at different points. A primer that says "recap of what you've learned so far" breaks the moment it's given to a new student. A worksheet that says "next lesson covers X" makes sequence assumptions that may not hold. Sequencing belongs in curriculum docs and lesson plans, never inside the student-facing material.
+
+**Procedural check:** Before declaring any material done, grep the file for: `so far`, `recap`, `Recap`, `earlier`, `next lesson`, `next unit`, `previously`, `already`, `covered before`, `prior`, `NEW`, `cumulative`. Any hit must be reframed or removed.
+
+---
+
+### 23. **Example Parsimony**
+
+**Principle:** Each teaching example contains only the words needed to demonstrate the point being taught. Extra words are cut.
+
+**Application:**
+- Pronunciation contrast: show only the two sounds side by side, not a full sentence around them.
+  - Bad: `Você é do Brasil? — closed ê, then open é.` (drags in `do`, `Brasil`, a question, an intonation pattern — none of which teach the ê/é contrast)
+  - Good: `você é — closed ê, then open é.`
+- Grammar rule: show the minimal pair or minimal sentence that exercises the rule.
+  - Bad: `Eu moro no Brooklyn com a minha família. — shows em + o = no.` (family vocab, personal context — irrelevant to the contraction rule)
+  - Good: `Eu moro no Brasil. — em + o = no.`
+- Verb conjugation: show the bare form, not a story sentence.
+
+**Relationship to Atomicity (§11):** §11 keeps a teaching *unit* to one concept; §23 keeps each *example within that unit* to the minimum words that exercise the concept. Both apply together — a unit can be atomic but its examples still bloated.
+
+**Rationale:** Every extra word in an example (a) adds cognitive load, (b) may introduce vocabulary the student hasn't learned (scaffolding violation), and (c) dilutes the teaching signal so the student has to work harder to see what the example is actually showing. A minimum-viable example makes the point unmistakably — the contrast or rule is right there, with nothing else to decode.
+
+**Procedural check:** For each teaching example, ask: if I delete any single word, does the example still demonstrate the point? If yes, delete it. Repeat until the example can't be cut further.
+
+---
+
+### 24. **No Fake Accents — Use Real Spellings Only**
+
+**Principle:** Every Portuguese word is written with its real spelling. Never add a pedagogical acute or circumflex to a word that doesn't carry one, even to visually mark open vs closed vowel quality.
+
+**Why:** The Portuguese acute/circumflex appears only when (a) stress falls on a non-default syllable (*você*, *português*, *avó*) or (b) a minimal pair needs disambiguating (*pôde* vs *pode*). Most stressed E and O sounds are written without any accent, and their open/closed quality is learned word by word. A primer that writes `móro`, `gósto`, or `cômo` teaches the student a false rule — "accent = open/closed marker" — which collapses the moment they see `moro`, `gosto`, or `como` in any real text. It also trains them to misread real texts: they see no accent and assume no sound distinction.
+
+**Application:**
+
+- Banned in all student-facing materials (primers, worksheets, lessons, drills, exercise items, answer keys, vocab boxes):
+  - `móro`, `móra` → real: *moro*, *mora*
+  - `gósto`, `gósta` → real: *gosto*, *gosta*
+  - `cômo` (from *comer*) → real: *como*
+  - `cóme` → real: *come*
+  - `êle`, `éla`, `êsse`, `éssa` → real: *ele*, *ela*, *esse*, *essa*
+  - `tôdo`, `tôdos`, `espôsa` → real: *todo*, *todos*, *esposa*
+  - Any italicized PT token in a pronunciation-teaching context with an accent that isn't part of the real spelling
+- Banned in teacher notes and internal memory files for the same reason — the convention has to stay clean in authoring habit, not just in student output.
+- **Real accents are kept:** *você*, *português*, *café*, *ótimo*, *avó*, *avô*, *pôde* — all stay as written. Disambiguating accents (*pôr* vs *por*) stay.
+- **Phonetic transliterations are a separate notation system and are fine.** `is-KÓH-lah`, `MÓH-roo`, `KÔH-moo` — ALL-CAPS or hyphenated respellings are pronunciation guides, not word spellings. Accents inside them mark stress and vowel quality. Keep the notation visually distinct from actual PT words (caps + hyphens is the current convention).
+
+**How to teach open/closed on unaccented words (the honest replacement):**
+- Use the real spelling.
+- State the sound directly: *"In* moro *and* gosto *the O is open (law-sound), even though no accent is written."*
+- Anchor on a real-accent minimal pair if one exists (*avó* vs *avô*) to establish the contrast, then explicitly note: "most stressed Os have no accent in writing — the sound has to be learned word by word."
+
+**Caught Apr 2026 (primer-lessons-1-4, primer-dexter-lesson2, lessons/lesson-2):** Open-O teaching was using `móro`, `móra`, `gósto`, `gósta` as visual shorthand, and the -er/-ir alternation note used `cômo vs cóme`. All replaced with real spellings (*moro*, *mora*, *gosto*, *gosta*, *como* [I eat, closed], *come* [you eat, open]). The teaching box was rewritten to honestly state "spelling doesn't always tell you which sound" rather than implying the accent does.
+
+**Procedural check:** After writing any material, grep for common fake-accent patterns — `móro`, `móra`, `gósto`, `gósta`, `cômo`, `cóme`, `êle`, `éla`, `tôdo`, `espôsa` — and fix any hits. Also inspect every italicized PT token next to an open/closed pronunciation label; if the accent isn't part of the real spelling, remove it.
+
+---
+
+### 25. **One Teaching Block, One Claim (with Category-Consistent Examples)**
+
+**Principle:** Each explanatory paragraph or teaching block makes exactly one point. Supporting examples for that point must all belong to the same phonological/grammatical category so they illustrate the same rule, not overlapping rules.
+
+**Two sub-rules:**
+
+**25a. Single-claim blocks.** When drafting a teaching paragraph, name the one fact it's teaching before you write. If you can't reduce the paragraph's content to one sentence, split it into two blocks or cut the secondary material.
+
+- Bad: *"Spelling doesn't always tell you which sound. The acute (ó) and circumflex (ô) are written only when the word needs a stress mark. Most stressed Os have no accent — you learn the sound word by word. In sou and como the O is closed; in moro and gosto it's open. Same spelling pattern, different sounds."* (Three claims: when accents appear, most Os unaccented, contrast examples. Each one competes for attention.)
+- Good: *"You can't always tell from the spelling. When an O has no accent mark, it could be either sound. Como (how) is closed; moro (I live) is open. Neither word is marked — you learn the sound along with the word."* (One claim: unaccented Os can be either sound. Minimal contrast. Done.)
+
+**25b. Category-consistent contrast examples.** When a teaching block uses examples to illustrate a contrast, every example must sit in the same phonological (or grammatical) context. Pulling an example from an adjacent-but-different category teaches an over-broad or incorrect generalization.
+
+- Bad: Using *sou* and *como* together as examples of "closed O." *Sou*'s closed sound comes from the **ou** diphthong; *como*'s comes from an **interior stressed O**. Different phonological contexts, different rules. A student generalizing from both walks away thinking the rule applies across contexts when it doesn't.
+- Good: Contrast *como* (closed interior O) with *moro* (open interior O). Both are interior stressed Os with no written accent — the contrast isolates exactly the distinction being taught.
+
+**Test:** After drafting a teaching block, ask: *"If a reader asked what I just taught them, can I answer in one sentence?"* If no, the block is overloaded. Then ask: *"Do all my examples sit in the same phonological/grammatical slot?"* If no, at least one example is from the wrong category.
+
+**Relationship to §11 and §23:**
+- §11 (Atomicity) — one concept per curriculum unit.
+- §23 (Example Parsimony) — minimum words within each example.
+- §25 — one claim per explanatory block; all within-block examples share category.
+
+Each operates at a different scale (unit → example → paragraph). All three must be satisfied simultaneously.
+
+**Rationale:** Overloaded paragraphs force the student to parse three teaching signals simultaneously and pick the one that matters. Mixed-category examples train the student on a wider rule than the one being taught — which they then misapply. Both failures compound: a three-claim paragraph with a miscategorized example in it is a triple confusion. Clean paragraphs and clean contrast sets are how teaching parsimony extends from individual examples up to full explanatory prose.
+
+**Caught Apr 2026 (primer-lessons-1-4 Open/Closed O box):** The teaching paragraph crammed three claims together and used *sou* (ou-diphthong closed O) in a contrast set aimed at interior stressed Os (*como*, *moro*, *gosto*). Replaced with a single-claim paragraph using only interior Os: *como* (closed) vs *moro* (open), no *sou*.
+
+---
+
+### 26. **Show the Phonetic Pronunciation, Don't Just Label It**
+
+**Principle:** When teaching any pronunciation distinction in writing, the phonetic respelling is the primary teaching device — not an optional decoration around a label. Labels ("closed", "open", "nasal", "reduced") name the category; respellings deliver the sound.
+
+**Why:** "*Como* is closed" is an abstraction. The student has to mentally translate "closed" into a sound they've never produced, applied to a word they haven't heard. "*Como* = **KÔH**-moo" shows the sound directly. Without the respelling, the student is studying categories. With it, they're studying sounds.
+
+**How to apply:**
+
+- Any teaching block describing a pronunciation feature (open/closed vowel, nasal, diphthong, consonant quality, reduced vowel, silent letter) includes the phonetic respelling **in the block** — not after it, not in a separate reference, not implied.
+- Format: real PT spelling in italics + phonetic respelling in ALL-CAPS with the stressed syllable marked. Accents inside the respelling mark open/closed and stress — this is the transliteration notation (separate from PT orthography) permitted under §24.
+  - *escola* = is-**KÓH**-lah
+  - *como* = **KÔH**-moo
+- When contrasting two sounds, place the respellings side by side so the contrast scans at a glance:
+  - *como* (how) = **KÔH**-moo — stressed O is **closed**
+  - *moro* (I live) = **MÓH**-roo — stressed O is **open**
+- The label stays — it names the category. But the respelling is what teaches the sound.
+
+**When a respelling is not needed:**
+- Words whose pronunciation is fully determined by the real spelling — regular cognates, or minimal pairs whose accents already disambiguate (*avó* vs *avô*, *pôde* vs *pode*). The written accent does the work.
+- **Derived/applied references** where the sound isn't the teaching. If an earlier block in the same material already taught the sound with respellings, downstream references (verb-pattern footnotes, exercise prompts, review bullets) don't need to repeat them. Respellings live at the *point of sound teaching*, not every mention.
+  - Example: a Closed/Open O box teaches *como* = **KÔH**-moo / *moro* = **MÓH**-roo with respellings. A follow-up note like *"In -ar verbs the stressed O stays open: eu moro / você mora"* is a pattern fact, not a sound lesson — no respellings needed.
+- Adding respellings outside the point of teaching creates visual noise that competes with the actual teaching point of that block (see §25 — one claim per block).
+
+**Broader application:** not limited to vowel quality. Any time you're teaching *how something sounds* — consonant clusters (*nh*, *lh*), nasal vowels (*ão*, *em*, *im*), reduced vowels (final *-o* → "oo", final *-e* → "ee"), silent letters, diphthongs — lead with the respelling. A student who can read the respelling knows what to say; a student with only a label knows only what to call it.
+
+**Relationship to §14 and §24:**
+- §14 (Audio) — pronunciation must be audible at point of use (speaker buttons). §26 operates on the written axis: a respelling serves the same function when the student is offline (printed worksheet, primer). Both should be present when possible.
+- §24 (No Fake Accents) — real PT spelling never gets invented accents. Phonetic respellings are a *different notation system* (ALL-CAPS, hyphens) and can use accents inside to mark open/closed without violating §24.
+
+**Test:** After drafting any teaching block that mentions a sound, check: *Is the sound on the page, or only its label?* If only its label, add the respelling.
+
+**Caught Apr 2026 (primer-lessons-1-4 Open/Closed O box):** The box first taught "*como* is closed; *moro* is open" in flat prose — ambiguous (two Os per word) and abstract. Bolding the stressed letter wasn't enough. The working fix was adding the respelling: *como* = **KÔH**-moo; *moro* = **MÓH**-roo. The respelling points at the stressed syllable and carries its quality on its face. Gil's validation: *"that is a good approach"* — specifically pointing at the respelling as the key move.
 
 ---
 
@@ -451,6 +646,23 @@ Every drill, worksheet, and exercise must be tagged with its Portuguese variant:
    - Not all numbers 1-21 need to exist
    - Gaps allow for future expansion
    - Focus on logical grouping, not sequential numbering
+
+### Pronunciation Reference Words (BP)
+
+When describing a Portuguese vowel by analogy to an English word, use the canonical reference words below. Consistency across materials matters: a student who learns `ê = "bait"` in one primer should never encounter `ê = "say"` in another.
+
+| Portuguese vowel | English reference | Example |
+|---|---|---|
+| closed **ê** | `"ai" in "bait"` | *você*, *português* |
+| open **é** | `"e" in "bed"` | *é*, *café* |
+| closed **ô** | `"oh" in "go"` | *sou*, *como* |
+| open **ó** | `"aw" in "law"` | *ótimo*, *móra* |
+
+**Teaching order — closed before open:** when a primer introduces the open/closed contrast, lead with the closed vowel. Closed ê [eɪ] and closed ô [oʊ] are the defaults an English ear already hears; they're also the sounds carried by the highest-frequency self-introduction tokens (*você*, *português*, *sou*, *como*). Anchoring on the familiar sound first, then introducing the open vowel as the contrast, is easier than the reverse. Apr 2026 decision — earlier primers listed open first by dictionary convention; flipped because the closed sound is both more familiar and more frequent.
+
+**Why "bait" and not "say" for closed ê:** both English words share the [eɪ] diphthong, so phonetically they're equivalent, but "bait" has a final /t/ that cuts off the glide earlier — students tend to stretch the vowel less, landing closer to the Portuguese pure /e/. Decided Apr 2026 after a "say" reference was introduced in a newer primer and flagged as inconsistent with the older BP primer's standard.
+
+**EP materials may use different reference words** (e.g., `closed ô = "boat"`, `open ó = "bought"` in the existing EP primer). That's fine — EP and BP are separate tracks (§2) and need not share phonetic analogies. Consistency is required *within* a variant, not across variants.
 
 ---
 
@@ -530,6 +742,11 @@ Convert when it violates Phase 1's "pure eu" focus:
 3. New Principle 19: Dialogue-First Worksheet Design — dialogue defines scope, worksheet serves it
 4. New Principle 20: Cloze Format for Dialogues — partial sentences with targeted blanks, not fully blank lines
 5. Total principles: 20 (was 17)
+
+**2026-04-12:**
+1. New Principle 20: Always Show Translation for Portuguese — every PT word/phrase/sentence in teaching material gets an English translation. Cloze Format renumbered 20 → 21.
+2. Simplifier exempted: the text simplifier continues to skip cognates per its existing guidelines.
+3. Total principles: 21 (was 20)
 
 ---
 
