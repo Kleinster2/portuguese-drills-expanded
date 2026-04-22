@@ -68,6 +68,15 @@
 
 ---
 
+## Session log
+
+| Date | Type | Notes |
+|------|------|-------|
+| 2026-04-14 | Cancelled | Same-day cancellation — had to stay late at work; proposed Wed/Thu next week |
+| 2026-04-20 | Confirmed | Thursday Apr 23, ZACA Cafe, 6:30 PM |
+
+---
+
 ## Notes
 
 - Very recent inquiry — still actionable
