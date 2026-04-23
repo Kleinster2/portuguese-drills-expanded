@@ -13,6 +13,7 @@
 **Rate:** $60/session (90 min)
 **Payment:** Cash or Venmo
 **Referral:** Idlewild (direct introduction via email, Mar 17, 2022)
+**Next session:** None scheduled — ad hoc cadence (student-initiated via WhatsApp)
 
 ---
 
@@ -110,6 +111,8 @@
 | 2026-04-02 Thu | Session | Toby's Estate; ~3:45 PM (originally 3:00→3:30→3:45, both running late); ad hoc — Amanda requested via WhatsApp; covered [gender agreement worksheet](../printables/gender-agreement-bp-worksheet.html); targets her recurring gender slips (bem-vindo/vinda, na minha horário) |
 | 2026-04-07 Mon | Scheduling | Amanda asked about Friday lesson via WhatsApp; Gil confirmed availability, awaiting time |
 | 2026-04-08 Wed | Scheduling | Amanda proposed Fri 10:30; then bathroom workers forced change — rescheduled to Mon 4/13 at 10:30 at Toby's Estate; "Perfeito! Obrigada 🥰🥰" |
+| 2026-04-13 Mon | Session | Toby's Estate; 10:45 AM (bumped from 10:30); Amanda confirmed "Podemos!" at 8:59 AM, "Estou indo!" at 10:53 AM |
+| 2026-04-15 Wed | Contact | Gil shared Pop Base post (Jorginho/Chappell Roan) Tue 4/14 PM; Amanda replied "KKKK 😂x9" Wed 11:45 AM. No lesson discussion since. |
 
 ---
 

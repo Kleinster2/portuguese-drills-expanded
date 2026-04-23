@@ -7,6 +7,7 @@
 **LinkedIn:** linkedin.com/in/dexter-mayo
 **Gender:** Female (she/her)
 **Status:** Active — first lesson completed Thu 3/5 at Frog (358 Marcus Garvey Blvd)
+**Next session:** Thu 2026-04-23 at 6:30 PM, ZACA Cafe (426 Marcus Garvey Blvd, Bed-Stuy)
 **Referral:** Unknown (no mention of source)
 
 ---
@@ -65,6 +66,12 @@
 | 2026-03-31 | Gil replied: melhoras, Tuesday at ZACA works |
 | 2026-04-06 | Dexter emailed: still feeling sick, postpone to Tue Apr 14 at 6:30; apologized |
 | 2026-04-06 | Gil replied: "No problem, feel better!" |
+| 2026-04-14 | Dexter cancelled day-of: "asked to stay late at work"; proposed Wed/Thu next week (best) or Tue |
+| 2026-04-14 | Gil replied: "Tuesday works!" (setting up Tue 4/21 pencil) |
+| 2026-04-20 | Dexter confirmed "Tuesday works!" (Tue 4/21 had been penciled) |
+| 2026-04-20 | Gil asked if Thursday would work instead; Dexter: "Thursday works great." |
+| 2026-04-20 | Gil: confirmed ZACA Thu 4/23 at 6:30; Dexter: "6:30 is great. Obrigada!" |
+| 2026-04-20 | Gil: "Great! See you Thursday!" |
 
 ---
 
@@ -396,6 +403,14 @@ Olá Gil, Unfortunately I'm still feeling a bit sick and think I should take it 
 ### 2026-04-06 — Gil → Dexter
 
 No problem, feel better!
+
+### 2026-04-14 — Dexter → Gil
+
+Cancelled day-of — asked to stay late at work. Proposed Wed or Thu next week as best options, Tuesday as fallback. Apologized.
+
+### 2026-04-14 — Gil → Dexter
+
+Tuesday works!
 
 ---
 

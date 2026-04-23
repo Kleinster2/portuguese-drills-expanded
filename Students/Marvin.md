@@ -10,6 +10,7 @@
 **Session frequency:** Weekly (Tuesdays, sometimes Thursdays), 1.5 hours, in-person (Brooklyn Navy Yard / Essex Market / Manhattan)
 **Rate:** $60/session (up to 90 min, cancel anytime)
 **Referral:** Idlewild (referred ~early 2024, contacted Gil Mar 2025)
+**Next session:** None scheduled — last session 2026-04-21; next confirmation pending (default Tue rhythm)
 
 ---
 

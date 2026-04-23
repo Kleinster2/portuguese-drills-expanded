@@ -10,6 +10,7 @@
 **Session frequency:** Weekly, typically Thursday mornings via Zoom (adjusting due to new work schedule)
 **Rate:** $60/class (up to 90 min); offered 5% off for 5-class package, 10% off for 10-class package
 **Referral:** Idlewild
+**Next session:** None scheduled — on hold since 2026-01-14
 
 ---
 

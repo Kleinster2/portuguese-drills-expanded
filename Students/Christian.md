@@ -11,6 +11,7 @@
 **Rate:** $60/class (up to 90 min)
 **Payment:** Venmo
 **Referral:** Idlewild class listing
+**Next session:** None scheduled — Christian unavailable week of 2026-04-27; resume week of 2026-05-04
 
 ---
 
@@ -101,6 +102,12 @@
 | 2026-04-02 Thu | Session | Brookfield Place; ~5:45 PM (Gil late, originally 5:30); extra session rescheduled from Wed; no post-session notes |
 | 2026-04-04 Sat | Scheduling | Gil asked about meeting another day this week; Christian offered Monday; Gil corrected himself, offered Monday or Wednesday; Christian chose Wednesday; confirmed Wed Apr 8 |
 | 2026-04-08 Wed | Session | Brookfield Place; Christian 10 min late ("Estou chegando em 10 minutos. Disculpa"); Gil: "Não tem problema." |
+| 2026-04-12 Sun | Payment | Christian confirmed Venmo sent with a day's delay; Gil confirmed received, wished good vacation (croissant reference — France trip with Fernanda) |
+| 2026-04-15 Wed | Skipped | No session — Christian on vacation in France |
+| 2026-04-19 Sun | Scheduling | Christian back from France; Gil asked for availability other than Wed 4/22 |
+| 2026-04-20 Mon | Scheduling confirmed | Christian offered Tue 4/21 (Thu 4/23 he's in DC); Gil confirmed Tue; both said "Até amanhã!" |
+| 2026-04-21 Tue | Session | Brookfield Place 5:30 PM; conversation-only — Christian wanted to talk about France trip with Fernanda. Imperfeito/preterite worksheets deferred. |
+| 2026-04-27 week | No session | Christian unavailable next week (confirmed in-session). Resume week of 5/4. |
 
 ---
 
