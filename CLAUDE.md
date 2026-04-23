@@ -6,7 +6,12 @@ AI-powered Portuguese language learning. Brazilian Portuguese by default, Europe
 
 ## Session Startup
 
-On first message, set up: `/loop 12h check gmail for students's emails`
+On first message, run both unconditionally — do not wait for a trigger:
+
+1. **Active-roster pre-flight.** Invoke `/roster` (skill at `.claude/skills/roster/SKILL.md`). Establishes the working roster from `Students/*.md` + calendar + WhatsApp cross-ref. Catches WhatsApp-only students (Amanda) that the calendar misses.
+2. **Gmail loop.** Set up `/loop 12h check gmail for students's emails`.
+
+For any question about one specific student, invoke `/student <name>`. Never answer student-status questions from the calendar alone.
 
 ## Related Repos
 
