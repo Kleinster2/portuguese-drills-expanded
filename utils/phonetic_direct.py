@@ -63,8 +63,9 @@ NOUN_SIGNALS = {
 NOUN_SIGNALS_NEXT = {'de', 'do', 'da', 'dos', 'das'}
 
 # Diphthong → phonetic mapping (dot = glide within diphthong)
+# Note: 'ou' monophthongizes to [o] in BP (sou = SOH, not SÔH.oo)
 DIPHTHONG_MAP = {
-    'eu': 'êh.<oo>',    'ou': 'ôh.<oo>',
+    'eu': 'êh.<oo>',    'ou': 'ôh',
     'ei': 'êh.<ee>',    'ai': 'ah.<ee>',
     'oi': 'ôh.<ee>',    'au': 'ah.<oo>',
     'ão': 'ãh.<oo>',    'ãe': 'ãh.<ee>',    'õe': 'õh.<ee>',
@@ -728,10 +729,18 @@ def syllable_to_phonetic(word, syllable, syl_index, total_syls, stress_info, syl
         elif char in 'aáàã':
             result += 'ah'
         elif char in 'eéêè':
+            # Initial unstressed "es" syllable → BP reduces to [is]
+            # e.g., Estados → is-TAH-doos (not êhs-TAH-doos), estou → is-TÔH
+            is_initial_es = (syl_index == 0 and i == 0 and char == 'e'
+                             and not is_stressed and syl == 'es')
+
             # Check if this is final unstressed -e (becomes 'ee')
             is_final_e = (i == len(syl) - 1 or (i == len(syl) - 2 and syl[i+1] == 's')) and (syl_index == total_syls - 1) and not is_stressed and char == 'e'
 
-            if is_final_e:
+            if is_initial_es:
+                # Replace 'e' with 'i'; the 's' will be processed by normal s-handling
+                result += 'i'
+            elif is_final_e:
                 # Final unstressed -e → ee
                 result += 'ee'
             # E before m/n — nasality shown by following m/n
