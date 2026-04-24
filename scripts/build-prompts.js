@@ -14,7 +14,11 @@ const crypto = require('crypto');
 
 const PROMPTS_DIR = path.join(__dirname, '..', 'config', 'prompts');
 const OUTPUT_PATH = path.join(__dirname, '..', 'utils', 'promptData.generated.js');
+const DASHBOARD_PATH = path.join(__dirname, '..', 'config', 'dashboard.json');
+const INDEX_PATH = path.join(__dirname, '..', 'index.html');
 const REQUIRED_FIELDS = ['id', 'name', 'description', 'systemPrompt'];
+const DRILLS_START = '<!-- BEGIN-GENERATED-DRILLS -->';
+const DRILLS_END = '<!-- END-GENERATED-DRILLS -->';
 
 console.log('🔨 Building promptData.generated.js from config/prompts/*.json\n');
 
@@ -77,3 +81,85 @@ const sizeKB = (Buffer.byteLength(output) / 1024).toFixed(1);
 console.log(`\n✅ Successfully generated utils/promptData.generated.js`);
 console.log(`📦 File size: ${sizeKB} KB (${files.length} prompts)`);
 console.log(`🔑 Source hash: ${sourceHash}`);
+
+// ============================================================================
+// Dashboard generation: render drill cards into index.html from config/dashboard.json
+// ============================================================================
+
+console.log('\n🎨 Building dashboard cards from config/dashboard.json\n');
+
+let dashboard;
+try {
+  dashboard = JSON.parse(fs.readFileSync(DASHBOARD_PATH, 'utf8'));
+} catch (err) {
+  console.error(`❌ Failed to read ${DASHBOARD_PATH}: ${err.message}`);
+  process.exit(1);
+}
+
+// Build an id → drill-config lookup from the bundle (keyed by path, but drills have their own id)
+const byId = {};
+for (const cfg of Object.values(bundle)) {
+  byId[cfg.id] = cfg;
+}
+
+// Validate every dashboard entry maps to a bundled drill
+const missingFromBundle = dashboard.drills.filter(d => !byId[d.id]).map(d => d.id);
+if (missingFromBundle.length > 0) {
+  console.error(`❌ Dashboard references drills with no matching JSON:`);
+  missingFromBundle.forEach(id => console.error(`     - ${id}`));
+  process.exit(1);
+}
+
+// Validate topic map covers every drill's topic
+const unknownTopics = [...new Set(dashboard.drills.map(d => d.topic).filter(t => !dashboard.topics[t]))];
+if (unknownTopics.length > 0) {
+  console.error(`❌ Drills reference topics not in topics map: ${unknownTopics.join(', ')}`);
+  process.exit(1);
+}
+
+function esc(str) {
+  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function renderCard(entry) {
+  const cfg = byId[entry.id];
+  const topic = dashboard.topics[entry.topic];
+  return `                <div id="drill-${esc(entry.id)}" class="drill-card flex flex-col bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1" data-topic="${esc(entry.topic)}" data-cefr="${esc(entry.cefr)}" data-variant="${esc(cfg.variant || 'dual')}"><div class="p-6 flex-grow"><span class="inline-block ${topic.bg} ${topic.text} text-xs font-semibold px-3 py-1 rounded-full mb-3">${esc(topic.label)}</span><h2 class="text-xl font-bold text-slate-900 mb-2">${esc(entry.icon)} ${esc(cfg.name)}</h2><p class="text-slate-600 text-base flex-grow">${esc(cfg.description)}</p></div><div class="p-6 bg-slate-50">
+                        <button onclick="openDrillChat('${esc(entry.id)}')" class="w-full text-center bg-green-600 text-white rounded-lg px-4 py-2.5 font-semibold hover:bg-green-700 transition-colors text-sm mb-2">Start</button>
+                        <button onclick="copyDrillLink('${esc(entry.id)}', this)" class="w-full text-center bg-slate-200 text-slate-700 rounded-lg px-4 py-2 font-medium hover:bg-slate-300 transition-colors text-sm">🔗 Copy Link</button>
+                    </div></div>`;
+}
+
+const cardsHtml = dashboard.drills.map(renderCard).join('\n');
+const blockHtml = `${DRILLS_START}\n${cardsHtml}\n                ${DRILLS_END}`;
+
+// Inject into index.html between sentinels
+let html;
+try {
+  html = fs.readFileSync(INDEX_PATH, 'utf8');
+} catch (err) {
+  console.error(`❌ Failed to read ${INDEX_PATH}: ${err.message}`);
+  process.exit(1);
+}
+
+const sentinelRe = new RegExp(`${DRILLS_START}[\\s\\S]*?${DRILLS_END}`);
+if (!sentinelRe.test(html)) {
+  console.error(`❌ index.html is missing the sentinel block (${DRILLS_START} ... ${DRILLS_END})`);
+  process.exit(1);
+}
+
+const updated = html.replace(sentinelRe, blockHtml);
+if (updated === html) {
+  console.log('  (no dashboard changes)');
+} else {
+  fs.writeFileSync(INDEX_PATH, updated, 'utf8');
+  console.log(`✅ Injected ${dashboard.drills.length} drill cards into index.html`);
+}
+
+// Report orphans (drills in bundle not on dashboard) — informational, not fatal
+const sidecarIds = new Set(dashboard.drills.map(d => d.id));
+const orphans = Object.keys(byId).filter(id => !sidecarIds.has(id));
+if (orphans.length > 0) {
+  console.log(`\nℹ️  ${orphans.length} drills in bundle are not on the dashboard (likely intentional — simplifiers, tutor-chat, diagnostic-test, etc.):`);
+  orphans.forEach(id => console.log(`     - ${id}`));
+}

@@ -1,0 +1,636 @@
+{
+  "topics": {
+    "verbs": {
+      "label": "Core Verbs",
+      "bg": "bg-blue-100",
+      "text": "text-blue-800"
+    },
+    "vocabulary": {
+      "label": "Vocabulary",
+      "bg": "bg-green-100",
+      "text": "text-green-800"
+    },
+    "tenses": {
+      "label": "Tenses & Structures",
+      "bg": "bg-cyan-100",
+      "text": "text-cyan-800"
+    },
+    "grammar": {
+      "label": "Grammar & Prepositions",
+      "bg": "bg-purple-100",
+      "text": "text-purple-800"
+    },
+    "pronunciation": {
+      "label": "Pronunciation",
+      "bg": "bg-orange-100",
+      "text": "text-orange-800"
+    },
+    "conversation": {
+      "label": "Conversational Skills",
+      "bg": "bg-teal-100",
+      "text": "text-teal-800"
+    }
+  },
+  "drills": [
+    {
+      "id": "regular-ar",
+      "topic": "verbs",
+      "cefr": "a1",
+      "icon": "📚"
+    },
+    {
+      "id": "regular-er",
+      "topic": "verbs",
+      "cefr": "a1",
+      "icon": "📚"
+    },
+    {
+      "id": "regular-ir",
+      "topic": "verbs",
+      "cefr": "a1",
+      "icon": "📚"
+    },
+    {
+      "id": "irregular-verbs",
+      "topic": "verbs",
+      "cefr": "a1",
+      "icon": "📚"
+    },
+    {
+      "id": "ser-estar",
+      "topic": "verbs",
+      "cefr": "a1",
+      "icon": "📚"
+    },
+    {
+      "id": "greetings",
+      "topic": "vocabulary",
+      "cefr": "a1",
+      "icon": "👋"
+    },
+    {
+      "id": "family",
+      "topic": "vocabulary",
+      "cefr": "a1",
+      "icon": "👨‍👩‍👧‍👦"
+    },
+    {
+      "id": "telling-time",
+      "topic": "vocabulary",
+      "cefr": "a1",
+      "icon": "🕐"
+    },
+    {
+      "id": "reflexive-verbs-bp",
+      "topic": "verbs",
+      "cefr": "a2",
+      "icon": "📚"
+    },
+    {
+      "id": "reflexive-verbs-ep",
+      "topic": "verbs",
+      "cefr": "a2",
+      "icon": "📚"
+    },
+    {
+      "id": "subject-identification",
+      "topic": "verbs",
+      "cefr": "a2",
+      "icon": "🎯"
+    },
+    {
+      "id": "saber-conhecer",
+      "topic": "verbs",
+      "cefr": "a2",
+      "icon": "🧠"
+    },
+    {
+      "id": "immediate-future",
+      "topic": "tenses",
+      "cefr": "a1",
+      "icon": "💡"
+    },
+    {
+      "id": "present-continuous-bp",
+      "topic": "tenses",
+      "cefr": "a2",
+      "icon": "💡"
+    },
+    {
+      "id": "present-continuous-ep",
+      "topic": "tenses",
+      "cefr": "a2",
+      "icon": "💡"
+    },
+    {
+      "id": "preterite-tense",
+      "topic": "tenses",
+      "cefr": "a2",
+      "icon": "⏮️"
+    },
+    {
+      "id": "preterite-regular-ar",
+      "topic": "tenses",
+      "cefr": "a2",
+      "icon": "⏮️"
+    },
+    {
+      "id": "preterite-regular-er-ir",
+      "topic": "tenses",
+      "cefr": "a2",
+      "icon": "⏮️"
+    },
+    {
+      "id": "preterite-irregular-essential",
+      "topic": "tenses",
+      "cefr": "a2",
+      "icon": "⏮️"
+    },
+    {
+      "id": "preterite-irregular-common",
+      "topic": "tenses",
+      "cefr": "a2",
+      "icon": "⏮️"
+    },
+    {
+      "id": "preterite-irregular-additional",
+      "topic": "tenses",
+      "cefr": "a2",
+      "icon": "⏮️"
+    },
+    {
+      "id": "imperfect-tense-bp",
+      "topic": "tenses",
+      "cefr": "b1",
+      "icon": "💡"
+    },
+    {
+      "id": "imperfect-tense-ep",
+      "topic": "tenses",
+      "cefr": "b1",
+      "icon": "💡"
+    },
+    {
+      "id": "preterite-vs-imperfect",
+      "topic": "tenses",
+      "cefr": "a2",
+      "icon": "⚖️"
+    },
+    {
+      "id": "compound-tenses",
+      "topic": "tenses",
+      "cefr": "b1",
+      "icon": "💡"
+    },
+    {
+      "id": "future-tense",
+      "topic": "tenses",
+      "cefr": "b1",
+      "icon": "💡"
+    },
+    {
+      "id": "conditional-tense-bp",
+      "topic": "tenses",
+      "cefr": "a2",
+      "icon": "💡"
+    },
+    {
+      "id": "conditional-usage-bp",
+      "topic": "tenses",
+      "cefr": "b1",
+      "icon": "💡"
+    },
+    {
+      "id": "conditional-advanced-bp",
+      "topic": "tenses",
+      "cefr": "b2",
+      "icon": "💡"
+    },
+    {
+      "id": "conditional-tense-ep",
+      "topic": "tenses",
+      "cefr": "a2",
+      "icon": "💡"
+    },
+    {
+      "id": "conditional-usage-ep",
+      "topic": "tenses",
+      "cefr": "b1",
+      "icon": "💡"
+    },
+    {
+      "id": "present-subjunctive",
+      "topic": "tenses",
+      "cefr": "b1",
+      "icon": "💡"
+    },
+    {
+      "id": "imperfect-subjunctive",
+      "topic": "tenses",
+      "cefr": "b2",
+      "icon": "💡"
+    },
+    {
+      "id": "future-subjunctive",
+      "topic": "tenses",
+      "cefr": "b2",
+      "icon": "💡"
+    },
+    {
+      "id": "imperative-bp",
+      "topic": "tenses",
+      "cefr": "a2",
+      "icon": "💡"
+    },
+    {
+      "id": "imperative-ep",
+      "topic": "tenses",
+      "cefr": "a2",
+      "icon": "💡"
+    },
+    {
+      "id": "articles",
+      "topic": "grammar",
+      "cefr": "a1",
+      "icon": "📄"
+    },
+    {
+      "id": "noun-plurals",
+      "topic": "grammar",
+      "cefr": "a1",
+      "icon": "🔗"
+    },
+    {
+      "id": "adjective-agreement",
+      "topic": "grammar",
+      "cefr": "a1",
+      "icon": "🔗"
+    },
+    {
+      "id": "numbers",
+      "topic": "grammar",
+      "cefr": "a1",
+      "icon": "🔢"
+    },
+    {
+      "id": "colors",
+      "topic": "grammar",
+      "cefr": "a1",
+      "icon": "🎨"
+    },
+    {
+      "id": "days-of-week",
+      "topic": "grammar",
+      "cefr": "a1",
+      "icon": "📅"
+    },
+    {
+      "id": "time-expressions",
+      "topic": "grammar",
+      "cefr": "a1",
+      "icon": "🕐"
+    },
+    {
+      "id": "possessives",
+      "topic": "grammar",
+      "cefr": "a1",
+      "icon": "👤"
+    },
+    {
+      "id": "personal-pronouns",
+      "topic": "grammar",
+      "cefr": "a1",
+      "icon": "🗣️"
+    },
+    {
+      "id": "todo-tudo",
+      "topic": "grammar",
+      "cefr": "a2",
+      "icon": "✨"
+    },
+    {
+      "id": "muito",
+      "topic": "grammar",
+      "cefr": "a1",
+      "icon": "📊"
+    },
+    {
+      "id": "demonstratives",
+      "topic": "grammar",
+      "cefr": "b1",
+      "icon": "🔗"
+    },
+    {
+      "id": "interrogatives",
+      "topic": "grammar",
+      "cefr": "a2",
+      "icon": "❓"
+    },
+    {
+      "id": "e-que-questions",
+      "topic": "grammar",
+      "cefr": "a2",
+      "icon": "💬"
+    },
+    {
+      "id": "manner-adverbs",
+      "topic": "grammar",
+      "cefr": "a2",
+      "icon": "📖"
+    },
+    {
+      "id": "conjunctions",
+      "topic": "grammar",
+      "cefr": "a2",
+      "icon": "🔗"
+    },
+    {
+      "id": "work-professions",
+      "topic": "vocabulary",
+      "cefr": "a2",
+      "icon": "💼"
+    },
+    {
+      "id": "ir-transportation",
+      "topic": "grammar",
+      "cefr": "a1",
+      "icon": "🔗 '"
+    },
+    {
+      "id": "por-vs-para",
+      "topic": "grammar",
+      "cefr": "a2",
+      "icon": "⚖️"
+    },
+    {
+      "id": "common-prepositions",
+      "topic": "grammar",
+      "cefr": "a1",
+      "icon": "🔤"
+    },
+    {
+      "id": "question-words",
+      "topic": "grammar",
+      "cefr": "a1",
+      "icon": "❓"
+    },
+    {
+      "id": "advanced-demonstratives",
+      "topic": "grammar",
+      "cefr": "b2",
+      "icon": "🔗"
+    },
+    {
+      "id": "crase",
+      "topic": "grammar",
+      "cefr": "b1",
+      "icon": "🔗"
+    },
+    {
+      "id": "relative-pronouns",
+      "topic": "grammar",
+      "cefr": "b1",
+      "icon": "🔗"
+    },
+    {
+      "id": "contractions-de",
+      "topic": "grammar",
+      "cefr": "a2",
+      "icon": "🔗"
+    },
+    {
+      "id": "contractions-em",
+      "topic": "grammar",
+      "cefr": "a2",
+      "icon": "🔗"
+    },
+    {
+      "id": "contractions-articles",
+      "topic": "grammar",
+      "cefr": "a1",
+      "icon": "🔗"
+    },
+    {
+      "id": "syllable-stress",
+      "topic": "pronunciation",
+      "cefr": "b1",
+      "icon": "🔊"
+    },
+    {
+      "id": "phonetics-br",
+      "topic": "pronunciation",
+      "cefr": "b2",
+      "icon": "🔊"
+    },
+    {
+      "id": "colloquial-speech",
+      "topic": "conversation",
+      "cefr": "b2",
+      "icon": "💬"
+    },
+    {
+      "id": "conversational-answers",
+      "topic": "conversation",
+      "cefr": "a2",
+      "icon": "💬"
+    },
+    {
+      "id": "self-introduction",
+      "topic": "conversation",
+      "cefr": "a1",
+      "icon": "💬"
+    },
+    {
+      "id": "portuguese-for-spanish",
+      "topic": "conversation",
+      "cefr": "b1",
+      "icon": "💬"
+    },
+    {
+      "id": "aspectual-shift-saber",
+      "topic": "grammar",
+      "cefr": "b1",
+      "icon": "🔀"
+    },
+    {
+      "id": "aspectual-shift-conhecer",
+      "topic": "grammar",
+      "cefr": "b1",
+      "icon": "🔀"
+    },
+    {
+      "id": "aspectual-shift-poder",
+      "topic": "grammar",
+      "cefr": "b1",
+      "icon": "🔀"
+    },
+    {
+      "id": "aspectual-shift-querer",
+      "topic": "grammar",
+      "cefr": "b1",
+      "icon": "🔀"
+    },
+    {
+      "id": "subjunctive-triggers",
+      "topic": "grammar",
+      "cefr": "b1",
+      "icon": "🎯"
+    },
+    {
+      "id": "ter-derivatives",
+      "topic": "grammar",
+      "cefr": "b1",
+      "icon": "🌿"
+    },
+    {
+      "id": "vir-derivatives",
+      "topic": "grammar",
+      "cefr": "b1",
+      "icon": "🌿"
+    },
+    {
+      "id": "passive-voice",
+      "topic": "grammar",
+      "cefr": "b1",
+      "icon": "🔄"
+    },
+    {
+      "id": "reported-speech",
+      "topic": "grammar",
+      "cefr": "b1",
+      "icon": "🗣️"
+    },
+    {
+      "id": "register-formal-informal",
+      "topic": "conversation",
+      "cefr": "b1",
+      "icon": "🎩"
+    },
+    {
+      "id": "expressing-opinions",
+      "topic": "conversation",
+      "cefr": "b1",
+      "icon": "💭"
+    },
+    {
+      "id": "narration-storytelling",
+      "topic": "conversation",
+      "cefr": "b1",
+      "icon": "📖"
+    },
+    {
+      "id": "common-expressions",
+      "topic": "vocabulary",
+      "cefr": "b1",
+      "icon": "🧩"
+    },
+    {
+      "id": "personal-infinitive",
+      "topic": "grammar",
+      "cefr": "b2",
+      "icon": "🔑"
+    },
+    {
+      "id": "conditional-sentences",
+      "topic": "grammar",
+      "cefr": "b2",
+      "icon": "🔀"
+    },
+    {
+      "id": "subjunctive-all-tenses",
+      "topic": "grammar",
+      "cefr": "b2",
+      "icon": "🎯"
+    },
+    {
+      "id": "double-participles",
+      "topic": "grammar",
+      "cefr": "b2",
+      "icon": "📝"
+    },
+    {
+      "id": "concessive-clauses",
+      "topic": "grammar",
+      "cefr": "b2",
+      "icon": "🔗"
+    },
+    {
+      "id": "purpose-result-clauses",
+      "topic": "grammar",
+      "cefr": "b2",
+      "icon": "🎯"
+    },
+    {
+      "id": "compound-tenses-advanced",
+      "topic": "tenses",
+      "cefr": "b2",
+      "icon": "🔄"
+    },
+    {
+      "id": "progressive-all-tenses",
+      "topic": "tenses",
+      "cefr": "b2",
+      "icon": "🔄"
+    },
+    {
+      "id": "bp-vs-ep",
+      "topic": "conversation",
+      "cefr": "b2",
+      "icon": "🇧🇷🇵🇹"
+    },
+    {
+      "id": "argumentation",
+      "topic": "conversation",
+      "cefr": "b2",
+      "icon": "⚖️"
+    },
+    {
+      "id": "false-cognates",
+      "topic": "vocabulary",
+      "cefr": "b2",
+      "icon": "⚠️"
+    },
+    {
+      "id": "conditional-conjunctions",
+      "topic": "grammar",
+      "cefr": "b2",
+      "icon": "🔗"
+    },
+    {
+      "id": "academic-portuguese",
+      "topic": "conversation",
+      "cefr": "b2",
+      "icon": "🎓"
+    },
+    {
+      "id": "business-portuguese",
+      "topic": "conversation",
+      "cefr": "b2",
+      "icon": "💼"
+    },
+    {
+      "id": "media-current-events",
+      "topic": "conversation",
+      "cefr": "b2",
+      "icon": "📰"
+    },
+    {
+      "id": "idioms-proverbs",
+      "topic": "vocabulary",
+      "cefr": "b2",
+      "icon": "🗣️"
+    },
+    {
+      "id": "preposition-collocations",
+      "topic": "grammar",
+      "cefr": "b2",
+      "icon": "🔗"
+    },
+    {
+      "id": "cohesion-coherence",
+      "topic": "grammar",
+      "cefr": "b2",
+      "icon": "📎"
+    }
+  ]
+}

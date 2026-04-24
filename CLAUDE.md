@@ -113,12 +113,20 @@ The pedagogy also includes a **BP vs EP divergence table** for content generator
 
 **Drill prompts are BUNDLED.** The app loads from `utils/promptData.generated.js`, NOT directly from the JSON files.
 
-After editing ANY file in `config/prompts/`:
+After editing ANY file in `config/prompts/` or `config/dashboard.json`:
 
 ```bash
-npm run build    # Regenerate the bundle from JSON files
+npm run build    # Regenerate bundle + inject drill cards into index.html
 npx wrangler pages deploy . --project-name=portuguese-drills-expanded
 ```
+
+**What the build does:**
+1. Reads `config/prompts/*.json` → writes `utils/promptData.generated.js` (the drill bundle).
+2. Reads `config/dashboard.json` (dashboard sidecar: which drills appear, their topic/cefr/icon) and the bundle.
+3. Validates every sidecar entry has a matching bundle drill. Fails the build on mismatch.
+4. Regenerates the drill cards inside `index.html` between `<!-- BEGIN-GENERATED-DRILLS -->` and `<!-- END-GENERATED-DRILLS -->`. Drill `name`/`description` come from the bundle; `topic`/`cefr`/`icon` come from the sidecar.
+
+Do not edit the sentinel block in `index.html` by hand — it's overwritten on every build. To add a new drill to the dashboard: create the JSON file, add an entry to `config/dashboard.json`, run `npm run build`.
 
 **If you skip `npm run build`, your changes will NOT appear on the live site!**
 
