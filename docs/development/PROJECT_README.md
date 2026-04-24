@@ -40,10 +40,11 @@ Runs on Cloudflare Workers - each request may hit a different instance:
 | Component | Location | Purpose |
 |-----------|----------|---------|
 | Nav bar | `js/nav.js` | Sticky navigation on all pages |
-| Drill configs | `config/prompts/*.json` | 48 JSON files defining drill behavior |
+| Drill configs | `config/prompts/*.json` | 131 JSON files defining drill behavior |
+| Dashboard sidecar | `config/dashboard.json` | Which drills appear on the homepage, with topic/cefr/icon/order |
 | Answer chips | `js/answerChips.js` | Clickable answer options |
-| Chat API | `functions/api/chat.ts` | Serverless Claude API proxy |
-| Build script | `scripts/build-prompts.js` | Syncs JSON → `promptData.generated.js` |
+| Chat API | `functions/api/chat.js` | Serverless Claude API proxy |
+| Build script | `scripts/build-prompts.js` | Generates `utils/promptData.generated.js` bundle and injects drill cards into `index.html` |
 
 ## Project Structure
 
@@ -54,7 +55,8 @@ Runs on Cloudflare Workers - each request may hit a different instance:
 ├── syllabus.html           # Pronunciation lessons
 │
 ├── config/
-│   ├── prompts/            # 48 drill JSON configs
+│   ├── prompts/            # 131 drill JSON configs
+│   ├── dashboard.json      # Dashboard sidecar: drill order + topic/cefr/icon
 │   ├── dictionary.json     # Portuguese-English dictionary
 │   └── diagnostic-test-*.json
 │
@@ -101,7 +103,12 @@ npx playwright test tests/ui.spec.js  # UI tests
 
 **Edit a drill:**
 1. Edit `config/prompts/[drill-id].json`
-2. Run `npm run build`
+2. Run `npm run build` (regenerates the drill bundle AND injects cards into `index.html` from `config/dashboard.json`)
+3. Deploy: `npx wrangler pages deploy .`
+
+**Add or reorder a drill on the dashboard:**
+1. Edit `config/dashboard.json` (array of `{id, topic, cefr, icon}` — order is dashboard order)
+2. Run `npm run build` (build fails if a sidecar entry has no matching drill JSON)
 3. Deploy: `npx wrangler pages deploy .`
 
 **JSON format rules:**

@@ -1,7 +1,7 @@
 // Portuguese Drills - Service Worker
 // Version 1.0.0 - PWA Offline Support
 
-const CACHE_NAME = 'portuguese-drills-v10-avatar-speech';
+const CACHE_NAME = 'portuguese-drills-v11-dashboard';
 const OFFLINE_URL = '/offline.html';
 
 // Assets to cache on install
@@ -32,14 +32,13 @@ const STATIC_ASSETS = [
 const DOCUMENTATION_ASSETS = [
   '/SYLLABUS_PHASE_1.md',
   '/PRONUNCIATION_RULES.md',
-  '/PEDAGOGY.md',
-  '/ANNOTATOR_FEATURE_SUMMARY.md'
+  '/PEDAGOGY.md'
 ];
 
 // Configuration files to cache
 const CONFIG_ASSETS = [
   '/config/diagnostic-test-questions-v10.9-no-hints.json',
-  '/config/diagnostic-test-production-questions.json'
+  '/config/diagnostic-test-questions-vocabulary-v1.0.json'
 ];
 
 // Install event - cache static assets
