@@ -607,6 +607,77 @@ Each operates at a different scale (unit → example → paragraph). All three m
 
 ---
 
+### 27. **Phonemic Integrity — Sound Contrasts Require Minimal Pairs**
+
+**Principle:** Before teaching any sound contrast (open/closed, nasal/oral, reduced/full), verify it is a real phonemic distinction in the target variant — minimal pair exists, meaning changes. Labels like "open á" or "closed u" are only legitimate if removing the distinction changes word identity.
+
+**Why:** Portuguese accents serve at least three different jobs: (a) stress location (*está* — stress falls on the last syllable), (b) vowel quality (*avó* vs *avô* — open vs closed O, different grandparent), (c) syllable or word disambiguation (*pôde* vs *pode* — tense differentiation). Teaching all three as "the accent tells you the sound" collapses distinct phenomena into one category and trains the student to listen for non-existent contrasts.
+
+**How to apply:**
+
+- **Before labeling a contrast:** produce a minimal pair. *avó/avô* justifies "open vs closed O." *sé/sê* justifies "open vs closed E." No minimal pair exists for "open vs closed A" in BP — the acute on *está* marks stress, not quality. Drop the label.
+- **When an accent is a stress marker only:** teach stress position, not vowel quality. *está* is "is-TAH" (stress on last syllable); the á is just the normal open low /a/ that appears in *casa, fala, mora, nada*.
+- **Exemplar discipline:** every word in a pronunciation block must be pulling its weight on phonetic grounds. Diagnostic: *remove the word — does any phonetic rule become under-exemplified?* If no, the word is there for grammar, not sound, and the block is cross-purposed.
+- **Check adjacent categories aren't being smuggled in.** If a block is nominally about vowel quality but an example demonstrates a stress pattern or a reduction phenomenon, split the block.
+
+**Test:** For every "open/closed X" or "nasal/oral X" label in the material, ask: *what's the minimal pair?* If you can't produce one, the label is cosmetic — remove it and teach the sound directly via respelling (§26).
+
+**Relationship to §25 and §26:**
+- §25 requires category-consistent examples within a block.
+- §26 requires the sound on the page, not just the label.
+- §27 is upstream of both: the *category itself* must be phonemically real before §25 can enforce consistency or §26 can attach a respelling.
+
+**Caught Apr 2026 (primer-BP Part I estou/está):** Exercise A and its answer key taught *está* as an "open á" example, parallel to *café* (open é) and *avó* (open ó). But no "closed á" exists in BP to contrast against — the acute marks stress, not quality. Removing the row (and the whole *estou/está* block) eliminated a three-way category claim where only two legs were real.
+
+---
+
+### 28. **No Previews — Phase Discipline Is Absolute**
+
+**Principle:** Earlier parts of a primer or curriculum must not anticipate material scheduled for later parts. Previews that feel "helpful" — giving the student a day-one payoff by seeding a grammar form early — fracture the phase discipline established by §10 and force the later part to un-teach assumptions.
+
+**Why:** Phase discipline (eu → você → ele/ela → plural) is not a stylistic preference; it's a load-bearing constraint that lets each part stand on a closed set of forms. A preview breaks that closure: the student's mental model now contains a half-taught form introduced out of order, and the part that was supposed to *teach* it has to renegotiate with an existing impression. The "day-one payoff" can almost always be delivered with material that doesn't anticipate later grammar.
+
+**How to apply:**
+
+- **When tempted to preview, search for a no-morphology alternative first.** Before introducing *Estou bem* in Part I, ask: is there a canonical response that doesn't require a verb? (*Tudo bem* echo — same three words as the question, zero grammar imported from Part IV.)
+- **Distinguish passive exemplification from active teaching.** A word can appear in an earlier part as a byproduct of a phonetic rule without being actively taught. *estou* as the ou→ô diphthong exemplar in Part I is passive exposure; a full "*eu estou* / *você está*" box with verb-meaning glosses is active teaching and violates the phase.
+- **Vocabulary seeding is fine; morphology seeding is not.** Nationality adjectives (*brasileiro/americano*) seeded in Part II as vocabulary, then formalized as an agreement system in Part XI, is legitimate staging — no grammar import. Verb forms smuggled in from a later part are not.
+- **If no no-morphology alternative exists and the material genuinely must appear early, the phase boundary is wrong.** Move the material's home, don't preview it.
+
+**Test:** For every teaching block, ask: *does this block teach a form that is the subject of a later part?* If yes, either (a) remove it and find a no-morphology alternative, or (b) accept that the part boundary has drifted and restructure the phase.
+
+**Relationship to §10:**
+- §10 establishes the phase order (eu → você → ele/ela → plural).
+- §28 enforces that the phase order is inviolable: a preview is a silent violation of §10 even if every part individually looks disciplined.
+
+**Caught Apr 2026 (primer-BP Part I estou/está block):** An entire *estou/está* teaching block lived in Part I (nominally Pronunciation), delivering the greeting response *Estou bem* four parts before estar was formally introduced in Part IV. It passed review because Part IV still "owned" ser/estar — but Part IV had to open by teaching forms the student had been reading for five sections. Replacing *Estou bem* with the *Tudo bem* echo response in Part IV restored the phase and made Part IV's estar introduction clean.
+
+---
+
+### 29. **Answer Keys Are Primary Content**
+
+**Principle:** An answer key is not a support artifact — it's the most authoritative teaching document in the material. Every content edit triggers a mandatory answer-key review pass. A claim in an answer key is categorical; the same claim in a grammar box can be hedged.
+
+**Why:** Students treat answer keys as ground truth. A hedge in a grammar paragraph ("*como* is usually closed — you learn this word by word") reads as teaching and invites the student to listen. The same claim in an answer key ("*como* — **closed** (ô)") reads as fact and settles the question. When an answer key contains an error — a miscategorization, a form not actually used by natives, a claim that contradicts §24/§25/§27 — the error reaches the student with full authority, and the student has no hedge to push against.
+
+**How to apply:**
+
+- **Every edit to teaching content triggers an answer-key pass.** If you change an example, a rule, a phonetic claim, or a vocabulary item, open the answer key and check every reference. If you remove a row from an exercise, remove the corresponding answer-key row.
+- **Apply the same audits to keys as to grammar boxes.** §24 (no fake accents), §25 (one claim per block), §26 (respellings at point of teaching), §27 (phonemic reality) — all apply inside answer keys.
+- **Dead references in answer keys are errors.** An answer referencing an exercise item that no longer exists, or a grammar box that has been rewritten, misleads the student about what was taught.
+- **Answer keys must match the variant of the material.** A BP worksheet's answer key must never use EP forms (enclisis, *tu* forms, *gostava* for polite requests) or vice versa.
+
+**Test:** After any content edit, read the answer key section-by-section against the current exercise text. Ask: *does every answer still correspond to a live exercise item? is every claim in the answer still supported by current teaching? does every form pass the Native Usage Filter?*
+
+**Relationship to all prior principles:**
+- §27 (phonemic integrity) applies to answer keys the same way it applies to teaching boxes.
+- §22 (standalone materials) extends: a worksheet's answer key must also be standalone — no references to removed exercises, earlier versions, or other materials.
+- Native Usage Filter (below) applies categorically inside answer keys; a "correct" answer that no native would produce is a teaching failure.
+
+**Caught Apr 2026 (primer-BP Exercise A answer key):** When the *estou/está* pronunciation block was removed from Part I, the answer key for Exercise A still listed *está — **open** (á)* and *estou — **closed** (ô)*. The first line propagated the rejected "open á" claim as categorical fact; the second referenced a removed exercise row. Both had to be deleted as part of the same edit — the answer-key sweep caught what a grammar-only pass would have missed.
+
+---
+
 ## Design Guidelines
 
 ### Question Design
@@ -815,6 +886,20 @@ The EP use of imperfeito in place of the condicional is **not colloquial or info
 | Train | trem | comboio |
 
 **Drill design implication for EP:** The best exercise isn't "conjugate querer in the condicional" — it's "here are 5 situations, which form would a Portuguese speaker use and why?" For BP, the condicional forms (gostaria, poderia, deveria) are the standard polite forms and should be drilled normally.
+
+### Lead with the unmarked response
+
+The Native Usage Filter is usually described as "reject forms natives don't use." It also has a second, quieter application: **among forms that natives do use, lead with the most frequent / unmarked variant.**
+
+**The distinction:** "Correct but unused" forms (like EP *quereria*) are banned outright. "Correct and used but non-default" forms (like *Tudo ótimo* as a response to *Tudo bem?*) are fine to teach — but only after the unmarked default. Students should meet the modal response first; variants and ornaments come second.
+
+**How to apply:**
+
+- For every communicative function (greeting, agreement, thanks, polite request), identify the single most frequent real-world response in the target variant and lead with it.
+- Layer ornaments on top of the default, never in place of it. Tiered structure helps: *Tudo bem* (echo, neutral) → *Estou bem* (estar + adj) → *Estou cansado / com fome* (specific state).
+- When in doubt about frequency, search `.com.br` or `.pt` corpora for the function itself, not just the form. Quoted searches for *"tudo bem, e você"* vs *"tudo ótimo, e você"* reveal the modal response.
+
+**Caught Apr 2026 (primer-BP Part IV greeting exchange):** The original box led with *Tudo bem? — Tudo ótimo! E você?* as the canonical exchange. Both parts are grammatical and both are used — but *Tudo bem* echo is the statistically unmarked response, and leading with *Tudo ótimo* taught a slightly enthusiastic variant as if it were default. Restructured as an explicit three-tier ladder (*Tudo bem* → *Estou bem* → *Estou cansado/com fome*) with the unmarked response on top.
 
 ### Corpus verification (MANDATORY enforcement)
 
