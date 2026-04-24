@@ -48,7 +48,15 @@ const testSentences = [
     "Eu bebo café.",
     "A casa é verde.",
     "Eu gosto de ler um livro.",
-    "Eu sou feliz."
+    "Eu sou feliz.",
+    // Regression: \b\w+X\b patterns with accented chars mid-word
+    "Eu sou o João.",
+    "Tenho um coágulo.",
+    "Os irmãos estão aqui.",
+    "Ela põe a mesa.",
+    "Eu moro em São Paulo.",
+    "Eu gosto de mãos limpas.",
+    "Eu amo Moçambique."
 ];
 
 async function runConsistencyTests() {

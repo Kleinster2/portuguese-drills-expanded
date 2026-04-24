@@ -57,11 +57,11 @@ const RULE_7B_WORDS = {
 
 const BORROWED_WORDS = {
     // Epenthetic + palatalization (ends in -t or -d)
-    'internet': 'Internet/chi/',
-    'ipad': 'iPad/ji/',
+    'internet': '/chi/',
+    'ipad': '/ji/',
     // Epenthetic only (other consonants)
-    'facebook': 'Facebook/i/',
-    'whatsapp': 'Whatsapp/i/'
+    'facebook': '/i/',
+    'whatsapp': '/i/'
 };
 
 // ============================================================================
@@ -113,7 +113,7 @@ function restoreAnnotations(text, replacements) {
 function applyRule7b(text) {
     // Rule 7b: Mid-word syllable-final L (dictionary)
     for (const [word, annotated] of Object.entries(RULE_7B_WORDS)) {
-        const pattern = new RegExp(`\\b${word}\\b`, 'gi');
+        const pattern = new RegExp(`\\b${word}\\b`, 'giu');
         text = text.replace(pattern, annotated);
     }
     return text;
@@ -132,7 +132,7 @@ function applyRule7a(text) {
     };
 
     // Match words ending in 'l' (not followed by /)
-    text = text.replace(/\b\w+l\b(?!\/)/gi, replaceFinalL);
+    text = text.replace(/(?<!\p{L})[\p{L}_]+l(?![\p{L}\/])/giu, replaceFinalL);
 
     return text;
 }
@@ -142,20 +142,20 @@ function applyRule5(text) {
 
     // Rule 5a: -em → /eyn/
     // Short words (show full syllable)
-    text = text.replace(/\b(tem)(?!\/)\b/gi, (m, p1) => `${p1}/teyn/`);
-    text = text.replace(/\b(quem)(?!\/)\b/gi, (m, p1) => `${p1}/keyn/`);
-    text = text.replace(/\b(sem)(?!\/)\b/gi, (m, p1) => `${p1}/seyn/`);
-    text = text.replace(/\b(bem)(?!\/)\b/gi, (m, p1) => `${p1}/beyn/`);
-    text = text.replace(/\b(cem)(?!\/)\b/gi, (m, p1) => `${p1}/seyn/`);
-    text = text.replace(/\b(nem)(?!\/)\b/gi, (m, p1) => `${p1}/neyn/`);
+    text = text.replace(/\b(tem)(?!\/)\b/giu, (m, p1) => `${p1}/teyn/`);
+    text = text.replace(/\b(quem)(?!\/)\b/giu, (m, p1) => `${p1}/keyn/`);
+    text = text.replace(/\b(sem)(?!\/)\b/giu, (m, p1) => `${p1}/seyn/`);
+    text = text.replace(/\b(bem)(?!\/)\b/giu, (m, p1) => `${p1}/beyn/`);
+    text = text.replace(/\b(cem)(?!\/)\b/giu, (m, p1) => `${p1}/seyn/`);
+    text = text.replace(/\b(nem)(?!\/)\b/giu, (m, p1) => `${p1}/neyn/`);
 
     // Generic -em (not already annotated)
-    text = text.replace(/\b(em)(?!\/)\b/g, 'em/eyn/');
+    text = text.replace(/\b(em)(?!\/)\b/gu, 'em/eyn/');
 
     // Long words (show ending only)
-    text = text.replace(/\b(também)(?!\/)\b/gi, (m, p1) => `${p1}/eyn/`);
-    text = text.replace(/\b(alguém)(?!\/)\b/gi, (m, p1) => `${p1}/eyn/`);
-    text = text.replace(/\b(ninguém)(?!\/)\b/gi, (m, p1) => `${p1}/eyn/`);
+    text = text.replace(/\b(também)(?!\/)\b/giu, (m, p1) => `${p1}/eyn/`);
+    text = text.replace(/\b(alguém)(?!\/)\b/giu, (m, p1) => `${p1}/eyn/`);
+    text = text.replace(/\b(ninguém)(?!\/)\b/giu, (m, p1) => `${p1}/eyn/`);
 
     // Rule 5b: -am → /ãwn/ (verb endings, not already annotated)
     const annotateAm = (match) => {
@@ -165,36 +165,36 @@ function applyRule5(text) {
         }
         return word + '/ãwn/';
     };
-    text = text.replace(/\b(\w+am)\b(?!\/)/g, annotateAm);
+    text = text.replace(/(?<!\p{L})([\p{L}_]+am)(?![\p{L}\/])/gu, annotateAm);
 
     // Rule 5c: -im → /ing/
     // Short words
-    text = text.replace(/\b(sim)(?!\/)\b/gi, (m, p1) => `${p1}/sing/`);
-    text = text.replace(/\b(assim)(?!\/)\b/gi, (m, p1) => `${p1}/ssing/`);
+    text = text.replace(/\b(sim)(?!\/)\b/giu, (m, p1) => `${p1}/sing/`);
+    text = text.replace(/\b(assim)(?!\/)\b/giu, (m, p1) => `${p1}/ssing/`);
     // Long words
-    text = text.replace(/\b(jardim)(?!\/)\b/gi, (m, p1) => `${p1}/ing/`);
+    text = text.replace(/\b(jardim)(?!\/)\b/giu, (m, p1) => `${p1}/ing/`);
 
     // Rule 5d: -om → /oun/
-    text = text.replace(/\b(com)(?!\/)\b/g, 'com/coun/');
-    text = text.replace(/\b(som)(?!\/)\b/gi, (m, p1) => `${p1}/soun/`);
-    text = text.replace(/\b(bom)(?!\/)\b/gi, (m, p1) => `${p1}/boun/`);
+    text = text.replace(/\b(com)(?!\/)\b/gu, 'com/coun/');
+    text = text.replace(/\b(som)(?!\/)\b/giu, (m, p1) => `${p1}/soun/`);
+    text = text.replace(/\b(bom)(?!\/)\b/giu, (m, p1) => `${p1}/boun/`);
 
     // Rule 5e: um/uma → /ũm///ũma/ (case-insensitive for sentence start)
-    text = text.replace(/\b(um)(?!\/)\b/gi, (m, p1) => `${p1}/ũm/`);
-    text = text.replace(/\b(uma)(?!\/)\b/gi, (m, p1) => `${p1}/ũma/`);
-    text = text.replace(/\b(algum)(?!\/)\b/gi, (m, p1) => `${p1}/ũm/`);
-    text = text.replace(/\b(alguma)(?!\/)\b/gi, (m, p1) => `${p1}/ũma/`);
-    text = text.replace(/\b(nenhum)(?!\/)\b/gi, (m, p1) => `${p1}/ũm/`);
-    text = text.replace(/\b(nenhuma)(?!\/)\b/gi, (m, p1) => `${p1}/ũma/`);
+    text = text.replace(/\b(um)(?!\/)\b/giu, (m, p1) => `${p1}/ũm/`);
+    text = text.replace(/\b(uma)(?!\/)\b/giu, (m, p1) => `${p1}/ũma/`);
+    text = text.replace(/\b(algum)(?!\/)\b/giu, (m, p1) => `${p1}/ũm/`);
+    text = text.replace(/\b(alguma)(?!\/)\b/giu, (m, p1) => `${p1}/ũma/`);
+    text = text.replace(/\b(nenhum)(?!\/)\b/giu, (m, p1) => `${p1}/ũm/`);
+    text = text.replace(/\b(nenhuma)(?!\/)\b/giu, (m, p1) => `${p1}/ũma/`);
 
     return text;
 }
 
 function applyRule4(text) {
     // Rule 4: Epenthetic /i/ on consonant-final borrowed words
-    for (const [word, annotated] of Object.entries(BORROWED_WORDS)) {
-        const pattern = new RegExp(`\\b${word}\\b`, 'gi');
-        text = text.replace(pattern, annotated);
+    for (const [word, suffix] of Object.entries(BORROWED_WORDS)) {
+        const pattern = new RegExp(`\\b${word}\\b`, 'giu');
+        text = text.replace(pattern, (m) => m + suffix);
     }
     return text;
 }
@@ -203,7 +203,7 @@ function applyRule3(text) {
     // Rule 3: Palatalization
 
     // Rule 3a: de → de/dji/ (ALWAYS, but not if already annotated)
-    text = text.replace(/\b(de)(?!\/)\b/g, 'de/dji/');
+    text = text.replace(/\b(de)(?!\/)\b/gu, 'de/dji/');
 
     // Rule 3b: Words ending in -te → /tchi/ (unstressed final -te palatalization)
     // This must run BEFORE Rule 2 (final -e) to prevent -te words from getting /i/
@@ -224,7 +224,7 @@ function applyRule3(text) {
         // Apply: word ending in te → word/tchi/
         return word + '/tchi/';
     };
-    text = text.replace(/\b\w+te\b(?!\/)/gi, annotateTe);
+    text = text.replace(/(?<!\p{L})[\p{L}_]+te(?![\p{L}\/])/giu, annotateTe);
 
     // Rule 3c: Words ending in -de → /dji/ (unstressed final -de palatalization)
     // This must run BEFORE Rule 2 (final -e) to prevent -de words from getting /i/
@@ -245,7 +245,7 @@ function applyRule3(text) {
         // Apply: word ending in de → word/dji/
         return word + '/dji/';
     };
-    text = text.replace(/\b\w+de\b(?!\/)/gi, annotateDe);
+    text = text.replace(/(?<!\p{L})[\p{L}_]+de(?![\p{L}\/])/giu, annotateDe);
 
     return text;
 }
@@ -254,7 +254,7 @@ function applyRule2(text) {
     // Rule 2: Final unstressed -e → /i/, plural -es → /is/
 
     // Conjunction 'e' (and) - but not 'de' (already handled by Rule 3)
-    text = text.replace(/\b(e)(?!\/)\b/g, 'e/i/');
+    text = text.replace(/(?<!\p{L})(e)(?!\/)(?!\p{L})/gu, 'e/i/');
 
     // Plural words ending in -es → /is/ (must come before singular -e)
     const replacePluralEs = (match) => {
@@ -280,7 +280,7 @@ function applyRule2(text) {
     };
 
     // Match words ending in 'es' followed by word boundary (not followed by /)
-    text = text.replace(/\b\w+es\b(?!\/)/g, replacePluralEs);
+    text = text.replace(/(?<!\p{L})[\p{L}_]+es(?![\p{L}\/])/gu, replacePluralEs);
 
     // Singular words ending in -e (but not stressed, not tilde, not already annotated)
     const replaceFinalE = (match) => {
@@ -303,7 +303,7 @@ function applyRule2(text) {
     };
 
     // Match words ending in 'e' followed by word boundary (not followed by /)
-    text = text.replace(/\b\w+e\b(?!\/)/g, replaceFinalE);
+    text = text.replace(/(?<!\p{L})[\p{L}_]+e(?![\p{L}\/])/gu, replaceFinalE);
 
     return text;
 }
@@ -317,17 +317,17 @@ function applyRule1(text) {
 
     // Function words (specific patterns to avoid over-matching)
     // Use capture group to preserve case
-    result = result.replace(/\b(o)\b/gi, '$1/u/');  // Article 'o/O'
-    result = result.replace(/\b(do)\b/gi, '$1/u/');  // Contraction de+o
-    result = result.replace(/\b(no)\b/gi, '$1/u/');  // Contraction em+o
-    result = result.replace(/\b(ao)\b/gi, '$1/u/');  // Contraction a+o
-    result = result.replace(/\b(como)\b/gi, '$1/u/');  // 'as/like'
+    result = result.replace(/(?<!\p{L})(o)(?!\p{L})/giu, '$1/u/');  // Article 'o/O'
+    result = result.replace(/\b(do)\b/giu, '$1/u/');  // Contraction de+o
+    result = result.replace(/\b(no)\b/giu, '$1/u/');  // Contraction em+o
+    result = result.replace(/\b(ao)\b/giu, '$1/u/');  // Contraction a+o
+    result = result.replace(/\b(como)\b/giu, '$1/u/');  // 'as/like'
 
     // Plural forms (preserve case with capture group)
-    result = result.replace(/\b(os)\b/gi, '$1/us/');  // Article 'os/Os'
-    result = result.replace(/\b(dos)\b/gi, '$1/us/');  // Contraction de+os
-    result = result.replace(/\b(nos)\b/gi, '$1/us/');  // Contraction em+os
-    result = result.replace(/\b(aos)\b/gi, '$1/us/');  // Contraction a+os
+    result = result.replace(/(?<!\p{L})(os)(?!\p{L})/giu, '$1/us/');  // Article 'os/Os'
+    result = result.replace(/\b(dos)\b/giu, '$1/us/');  // Contraction de+os
+    result = result.replace(/\b(nos)\b/giu, '$1/us/');  // Contraction em+os
+    result = result.replace(/\b(aos)\b/giu, '$1/us/');  // Contraction a+os
 
     // Words ending in -o (but not stressed, not tilde, not already annotated)
     const replaceFinalO = (match) => {
@@ -340,7 +340,7 @@ function applyRule1(text) {
     };
 
     // Match words ending in 'o' (not followed by /)
-    result = result.replace(/\b\w+o\b(?!\/)/gi, replaceFinalO);
+    result = result.replace(/(?<!\p{L})[\p{L}_]+o(?![\p{L}\/])/giu, replaceFinalO);
 
     // Words ending in -os → /us/ (not tilde, not already annotated)
     const replaceFinalOs = (match) => {
@@ -351,7 +351,7 @@ function applyRule1(text) {
         return word + '/us/';
     };
 
-    result = result.replace(/\b\w+os\b(?!\/)/gi, replaceFinalOs);
+    result = result.replace(/(?<!\p{L})[\p{L}_]+os(?![\p{L}\/])/giu, replaceFinalOs);
 
     // Restore protected content
     return restoreAnnotations(result, replacements);

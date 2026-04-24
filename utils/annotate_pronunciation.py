@@ -78,12 +78,12 @@ RULE_7B_WORDS = {
 
 BORROWED_WORDS = {
     # Epenthetic + palatalization (ends in -t or -d)
-    'Internet': 'Internet/chi/',
-    'iPad': 'iPad/ji/',
+    'internet': '/chi/',
+    'ipad': '/ji/',
 
     # Epenthetic only (other consonants)
-    'Facebook': 'Facebook/i/',
-    'Whatsapp': 'Whatsapp/i/',
+    'facebook': '/i/',
+    'whatsapp': '/i/',
 }
 
 # ============================================================================
@@ -211,9 +211,9 @@ def apply_rule_5(text: str) -> str:
 
 def apply_rule_4(text: str) -> str:
     """Rule 4: Epenthetic /i/ on consonant-final borrowed words."""
-    for word, annotated in BORROWED_WORDS.items():
+    for word, suffix in BORROWED_WORDS.items():
         pattern = r'\b' + word + r'\b'
-        text = re.sub(pattern, annotated, text)
+        text = re.sub(pattern, lambda m: m.group(0) + suffix, text, flags=re.IGNORECASE)
     return text
 
 # ============================================================================
