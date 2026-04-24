@@ -631,6 +631,126 @@
       "topic": "grammar",
       "cefr": "b2",
       "icon": "📎"
+    },
+    {
+      "id": "months",
+      "topic": "vocabulary",
+      "cefr": "a1",
+      "icon": "🗓️"
+    },
+    {
+      "id": "dates",
+      "topic": "vocabulary",
+      "cefr": "a1",
+      "icon": "📅"
+    },
+    {
+      "id": "weather",
+      "topic": "vocabulary",
+      "cefr": "a1",
+      "icon": "☀️"
+    },
+    {
+      "id": "food-meals",
+      "topic": "vocabulary",
+      "cefr": "a1",
+      "icon": "🍽️"
+    },
+    {
+      "id": "house-rooms",
+      "topic": "vocabulary",
+      "cefr": "a1",
+      "icon": "🏠"
+    },
+    {
+      "id": "body-parts",
+      "topic": "vocabulary",
+      "cefr": "a1",
+      "icon": "🧍"
+    },
+    {
+      "id": "emotions",
+      "topic": "vocabulary",
+      "cefr": "a1",
+      "icon": "😊"
+    },
+    {
+      "id": "clothing",
+      "topic": "vocabulary",
+      "cefr": "a1",
+      "icon": "👕"
+    },
+    {
+      "id": "hobbies",
+      "topic": "vocabulary",
+      "cefr": "a1",
+      "icon": "⚽"
+    },
+    {
+      "id": "directions",
+      "topic": "vocabulary",
+      "cefr": "a2",
+      "icon": "🧭"
+    },
+    {
+      "id": "shopping",
+      "topic": "vocabulary",
+      "cefr": "a2",
+      "icon": "🛒"
+    },
+    {
+      "id": "health-medical",
+      "topic": "vocabulary",
+      "cefr": "a2",
+      "icon": "🏥"
+    },
+    {
+      "id": "technology",
+      "topic": "vocabulary",
+      "cefr": "a2",
+      "icon": "💻"
+    },
+    {
+      "id": "demonstratives-basic",
+      "topic": "grammar",
+      "cefr": "a1",
+      "icon": "👉"
+    },
+    {
+      "id": "frequency-adverbs",
+      "topic": "grammar",
+      "cefr": "a1",
+      "icon": "🔄"
+    },
+    {
+      "id": "comparatives",
+      "topic": "grammar",
+      "cefr": "a2",
+      "icon": "⚖️"
+    },
+    {
+      "id": "superlatives",
+      "topic": "grammar",
+      "cefr": "a2",
+      "icon": "🏆"
+    },
+    {
+      "id": "object-pronouns-bp",
+      "topic": "grammar",
+      "cefr": "b1",
+      "icon": "🎯"
+    },
+    {
+      "id": "object-pronouns-ep",
+      "topic": "grammar",
+      "cefr": "b1",
+      "icon": "🎯"
+    },
+    {
+      "id": "subjunctive-intro",
+      "topic": "grammar",
+      "cefr": "b1",
+      "icon": "🎲"
     }
   ]
 }
