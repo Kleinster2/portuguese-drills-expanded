@@ -4,7 +4,7 @@
 
 - **Frontend**: Vanilla JavaScript, Tailwind CSS (CDN)
 - **Backend**: Cloudflare Pages Functions (Serverless)
-- **AI**: Anthropic Claude Sonnet 4.5
+- **AI**: Anthropic Claude Opus 4.7
 - **Deployment**: Cloudflare Pages (no build step)
 - **Testing**: Playwright
 

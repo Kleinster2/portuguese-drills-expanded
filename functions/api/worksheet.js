@@ -87,7 +87,7 @@ export async function onRequestPost({ request, env }) {
         'anthropic-version': '2023-06-01'
       },
       body: JSON.stringify({
-        model: 'claude-opus-4-6',
+        model: 'claude-opus-4-7',
         max_tokens: 12000,
         temperature: 0.7,
         system: systemPrompt,

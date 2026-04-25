@@ -8,17 +8,14 @@ test.describe('Navigation Bar', () => {
     await page.goto(BASE_URL);
     const nav = page.locator('nav');
     await expect(nav).toBeVisible();
-    await expect(nav.locator('text=PT Tutor')).toBeVisible();
+    await expect(nav.locator('.nav-logo')).toBeVisible();
   });
 
-  test('nav bar only appears on dashboard', async ({ page }) => {
-    // Nav should appear on dashboard
+  test('nav bar does not appear on standalone tool pages', async ({ page }) => {
     await page.goto(BASE_URL);
     await expect(page.locator('nav')).toBeVisible({ timeout: 10000 });
 
-    // Feature pages are standalone (no nav)
     const standalonePages = [
-      '/diagnostic-test.html',
       '/simplifier.html',
       '/annotator.html',
       '/syllabus.html'
@@ -37,9 +34,9 @@ test.describe('Dashboard', () => {
 
     // Check dashboard cards section
     const cards = page.locator('section').filter({ hasText: 'Diagnostic Test' });
-    await expect(cards.locator('text=Diagnostic Test')).toBeVisible();
-    await expect(cards.locator('text=AI Drills')).toBeVisible();
-    await expect(cards.locator('text=Text Simplifier')).toBeVisible();
+    await expect(cards.locator('h3:text("Diagnostic Test")')).toBeVisible();
+    await expect(cards.locator('h3:text("AI Drills")')).toBeVisible();
+    await expect(cards.locator('h3:text("Text Simplifier")')).toBeVisible();
     await expect(cards.locator('h3:text("Annotator")')).toBeVisible();
     await expect(cards.locator('h3:text("Curriculum")')).toBeVisible();
   });
