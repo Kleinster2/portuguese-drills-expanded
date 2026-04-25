@@ -74,6 +74,7 @@
 | 2026-04-20 | Gil: confirmed ZACA Thu 4/23 at 6:30; Dexter: "6:30 is great. Obrigada!" |
 | 2026-04-20 | Gil: "Great! See you Thursday!" |
 | 2026-04-23 | Fourth lesson at ZACA Cafe. Primer coverage cumulative through Part VIII (ter + age + family + possessives + dele/dela). Next is Part IX (poder, querer, gostar de). |
+| 2026-04-23 | Dexter emailed 6:10pm: running ~10 min late; Gil: "No worries, thanks for the heads up!" |
 
 ---
 
@@ -414,6 +415,48 @@ Cancelled day-of — asked to stay late at work. Proposed Wed or Thu next week a
 
 Tuesday works!
 
+### 2026-04-20 — Gil → Dexter
+
+Oi Dexter. Tudo bem?
+
+We had penciled tomorrow (Tuesday). Would Thursday also work for you?
+
+Abraço,
+Gil
+
+### 2026-04-20 — Dexter → Gil
+
+Olá Gil! Thursday works great.
+
+### 2026-04-20 — Gil → Dexter
+
+Ótimo!
+
+We'll meet at Zaca on Thursday.
+
+Is 6:30 still the best time for you?
+
+Gil
+
+### 2026-04-20 — Dexter → Gil
+
+6:30 is great. Obrigada!
+
+### 2026-04-20 — Gil → Dexter
+
+Great! See you Thursday!
+
+### 2026-04-23 — Dexter → Gil
+
+Olá Gil,
+
+I'm running about 10 minutes late. I'll see you soon.
+
+Dexter
+
+### 2026-04-23 — Gil → Dexter
+
+No worries, thanks for the heads up!
 ---
 
 Related: [[Index]]
