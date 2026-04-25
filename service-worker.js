@@ -200,49 +200,4 @@ async function syncProgressToServer() {
   console.log('[Service Worker] Background sync triggered');
 }
 
-// Push notification (optional - for future use)
-self.addEventListener('push', (event) => {
-  const options = {
-    body: event.data ? event.data.text() : 'Time to practice Portuguese!',
-    icon: '/icons/icon-192.png',
-    badge: '/icons/badge-72.png',
-    vibrate: [200, 100, 200],
-    data: {
-      dateOfArrival: Date.now(),
-      primaryKey: 1
-    },
-    actions: [
-      {
-        action: 'start-drill',
-        title: 'Start Drill',
-        icon: '/icons/action-drill.png'
-      },
-      {
-        action: 'close',
-        title: 'Close',
-        icon: '/icons/action-close.png'
-      }
-    ]
-  };
-
-  event.waitUntil(
-    self.registration.showNotification('Portuguese Drills', options)
-  );
-});
-
-// Notification click handler
-self.addEventListener('notificationclick', (event) => {
-  event.notification.close();
-
-  if (event.action === 'start-drill') {
-    event.waitUntil(
-      clients.openWindow('/?action=start-session')
-    );
-  } else {
-    event.waitUntil(
-      clients.openWindow('/')
-    );
-  }
-});
-
 console.log('[Service Worker] Script loaded');
