@@ -37,4 +37,8 @@ test*.mp3
 test*.bin
 nul
 
+# Playwright artifacts
+test-results/
+playwright-report/
+
 # Student data (tracked — repo is private)
