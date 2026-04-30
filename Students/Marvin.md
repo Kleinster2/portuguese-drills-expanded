@@ -98,6 +98,7 @@
 | 2026-03-31 Tue | Clitic placement + Hotel | Transmitter Brewery outdoor patio (BNY area), 3:30-5:00pm. Continued [clitic placement worksheet](../printables/clitic-placement-ep-worksheet.html) (enclisis), then started [hotel worksheet](../printables/ep-travel-hotel-worksheet.html) |
 | 2026-04-07 Tue | Rescheduled | Marvin has medical appointment at 2:00; moved to Thursday |
 | 2026-04-09 Thu | Travel EP | Brooklyn Navy Yard, 3:30-5:00pm. Worked through [restaurante worksheet](../printables/ep-travel-restaurante-worksheet.html) and [direções worksheet](../printables/ep-travel-direcoes-worksheet.html) — continuing Portugal trip prep |
+| 2026-04-28 Tue | Session | Confirmed by Venmo payment ($60, 'Aula do dia 28 de abril. Obrigado!'). Venue not specified in record; Brooklyn Navy Yard / Essex Market (default venues). |
 
 ---
 
