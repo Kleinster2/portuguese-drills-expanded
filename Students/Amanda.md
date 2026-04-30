@@ -113,6 +113,7 @@
 | 2026-04-08 Wed | Scheduling | Amanda proposed Fri 10:30; then bathroom workers forced change — rescheduled to Mon 4/13 at 10:30 at Toby's Estate; "Perfeito! Obrigada 🥰🥰" |
 | 2026-04-13 Mon | Session | Toby's Estate; 10:45 AM (bumped from 10:30); Amanda confirmed "Podemos!" at 8:59 AM, "Estou indo!" at 10:53 AM |
 | 2026-04-15 Wed | Contact | Gil shared Pop Base post (Jorginho/Chappell Roan) Tue 4/14 PM; Amanda replied "KKKK 😂x9" Wed 11:45 AM. No lesson discussion since. |
+| 2026-04-29 Wed | Session | Confirmed by Venmo payment ("Aula April 29!" — $60). Venue not specified in record; likely Toby's Estate (default). |
 
 ---
 
