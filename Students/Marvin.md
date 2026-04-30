@@ -10,7 +10,7 @@
 **Session frequency:** Weekly (Tuesdays, sometimes Thursdays), 1.5 hours, in-person (Brooklyn Navy Yard / Essex Market / Manhattan)
 **Rate:** $60/session (up to 90 min, cancel anytime)
 **Referral:** Idlewild (referred ~early 2024, contacted Gil Mar 2025)
-**Next session:** None scheduled — last session 2026-04-21; next confirmation pending (default Tue rhythm)
+**Next session:** None scheduled — last session 2026-04-28; default Tue rhythm → 2026-05-05 at 3:30 PM @ BNY (recurring; awaiting confirmation).
 
 ---
 
@@ -98,7 +98,9 @@
 | 2026-03-31 Tue | Clitic placement + Hotel | Transmitter Brewery outdoor patio (BNY area), 3:30-5:00pm. Continued [clitic placement worksheet](../printables/clitic-placement-ep-worksheet.html) (enclisis), then started [hotel worksheet](../printables/ep-travel-hotel-worksheet.html) |
 | 2026-04-07 Tue | Rescheduled | Marvin has medical appointment at 2:00; moved to Thursday |
 | 2026-04-09 Thu | Travel EP | Brooklyn Navy Yard, 3:30-5:00pm. Worked through [restaurante worksheet](../printables/ep-travel-restaurante-worksheet.html) and [direções worksheet](../printables/ep-travel-direcoes-worksheet.html) — continuing Portugal trip prep |
-| 2026-04-28 Tue | Session | Confirmed by Venmo payment ($60, 'Aula do dia 28 de abril. Obrigado!'). Venue not specified in record; Brooklyn Navy Yard / Essex Market (default venues). |
+| 2026-04-14 Tue | Travel EP | Transmitter Brewery patio (BNY), Gil ~5 min late. Covered [transportes worksheet](../printables/ep-travel-transportes-worksheet.html) and [cortesia worksheet](../printables/ep-travel-cortesia-worksheet.html). |
+| 2026-04-21 Tue | Travel EP | BNY, 3:00–4:30 PM (rescheduled from 3:30 for tighter logistics). Covered [farmácia+aeroporto worksheet](../printables/ep-travel-farmacia-aeroporto-worksheet.html) and [compras worksheet](../printables/ep-travel-compras-worksheet.html). |
+| 2026-04-28 Tue | Restaurante + Compras | BNY, 3:30 scheduled; Marvin ~20 min late ("Vou estar atrasado" 3:30 PM). Worked through the merged [restaurante worksheet](../printables/ep-travel-restaurante-worksheet.html) (full ementa literacy + ordering + dose/meia dose/couvert + 8 pratos típicos + cooking methods) and revisited the [compras worksheet](../printables/ep-travel-compras-worksheet.html). Trip prep continuing — May Portugal trip. Payment confirmed via Venmo ($60, "Aula do dia 28 de abril. Obrigado!"). |
 
 ---
 
