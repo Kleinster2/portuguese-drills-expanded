@@ -4,7 +4,7 @@
 
 **Full name:** Ana Nogueira
 **Email:** ananogi2@gmail.com
-**Status:** Prospective — Gil replied, no response from Ana
+**Status:** Prospective — followed up 2026-05-02; wants lessons before June Brazil trip; requested a call
 **Referral:** Idlewild
 
 ---
@@ -30,7 +30,15 @@
 |------|-------|
 | 2025-09-18 | Ana emailed asking about one-on-one tutoring or classes in NYC/Brooklyn |
 | 2025-09-22 | Gil replied (4-day delay); confirmed private sessions up to 90 min, in-person or online; offered a call |
-| | No response from Ana |
+| 2026-05-02 | Ana followed up (7+ months later); work trip to Brazil in June; wants weekly lessons; asked to schedule a call |
+
+---
+
+## Session log
+
+| Date | Type | Notes |
+|------|------|-------|
+| 2026-05-02 | Scheduling | Ana emailed to resume after 7+ months; work trip to Brazil in June; wants weekly lessons; requested a call to discuss goals. |
 
 ---
 
@@ -39,7 +47,7 @@
 - Brazilian surname (Nogueira) — father from Brazil
 - Open to in-person or online
 - Gil's reply was warm and prompt relative to other inquiries
-- No follow-up from Ana — may have found another option or lost interest
+- Ana re-engaged May 2026 with a clear motivation (upcoming Brazil trip)
 
 ---
 
