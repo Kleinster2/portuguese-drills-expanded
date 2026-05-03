@@ -1,0 +1,14 @@
+{
+  "expectations": [
+    {"text": "Output is valid JSON with id, name, description, variant, systemPrompt fields", "passed": true, "evidence": "All five fields present and well-formed"},
+    {"text": "variant field is set to BP or bp (not EP)", "passed": true, "evidence": "variant: \"BP\""},
+    {"text": "Drill restricts to BP only (no tu, no enclisis, no EP forms in the system prompt or examples)", "passed": true, "evidence": "Explicit: 'Brazilian Portuguese only — no European Portuguese forms, no tu, no enclisis, no comparisons across variants'"},
+    {"text": "Fixed 5-question opener uses singular subjects only (eu, voce, ele/ela) — no plural forms (nos, eles, vocês conjugations) per A1 atomic-focus principle", "passed": true, "evidence": "All 5 fixed exercises use eu/você/ele only; chips are [moro, mora, vivo, vive] — no plural forms"},
+    {"text": "morar examples target residence contexts (city, address, where you live)", "passed": true, "evidence": "Q1 (eu + São Paulo), Q3 (você + onde), Q4 (ele + com os pais)"},
+    {"text": "viver examples target being-alive or quality-of-life contexts (not residence)", "passed": true, "evidence": "Q2 (avó + ainda — being alive), Q5 (ele vive bem — quality of life)"},
+    {"text": "All Portuguese example sentences include English translations or glosses", "passed": true, "evidence": "Every PT line in feedback templates is followed by English translation in parens"},
+    {"text": "No fake accents on Portuguese words (no spurious accents like *moro vs móro, no ele vs êle)", "passed": true, "evidence": "All spellings real: moro, mora, vivo, vive, avó, anos, etc."},
+    {"text": "Includes vocabulary scaffolding (defines connector words like em, onde, com before use)", "passed": true, "evidence": "Explicit VOCABULARY SCAFFOLDING section listing em, onde, com, os pais, bem, ainda, noventa, avó, tem, anos"}
+  ],
+  "summary": {"passed": 9, "failed": 0, "total": 9, "pass_rate": 1.0}
+}

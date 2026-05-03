@@ -1,0 +1,22 @@
+[
+  {"query": "make a quick A1 BP drill on possessive adjectives — meu/minha/nosso/nossa, ~8 fill-in-blank items, save to config/prompts/possessives.json", "should_trigger": true},
+  {"query": "fix the typo in the morar-vs-viver drill — Q3 has 'eu mora' instead of 'eu moro' in the answer key", "should_trigger": true},
+  {"query": "draft a dialogue section for the new restaurant worksheet, A2 EP, ordering at a tasca, 6-8 lines", "should_trigger": true},
+  {"query": "rewrite the open/closed E primer — current version mixes paulista and carioca respellings", "should_trigger": true},
+  {"query": "add 3 more diagnostic questions on A2 verbs (preterite vs imperfect)", "should_trigger": true},
+  {"query": "i'm drafting a primer section explaining contractions in BP (na, no, da, do) — give me a first cut for an A1 student", "should_trigger": true},
+  {"query": "look over this primer section i just wrote and tell me if anything's off pedagogically", "should_trigger": true},
+  {"query": "the café worksheet uses 'gostaria' but it's marked EP — flag and fix anything else like this in the file", "should_trigger": true},
+  {"query": "convert the BP morar-vs-viver drill into an EP version, keeping the same 5 fixed exercises", "should_trigger": true},
+  {"query": "i'm about to draft a unit on the personal infinitive — what's the right way to teach it for a B1 BP student", "should_trigger": true},
+  {"query": "what time is amanda's lesson today", "should_trigger": false},
+  {"query": "did marvin reply to last night's email about saturday", "should_trigger": false},
+  {"query": "translate this WhatsApp i'm sending to amanda into casual BP: 'hey, can we move our lesson to 11 instead of 10?'", "should_trigger": false},
+  {"query": "remind me what we covered in christian's last lesson", "should_trigger": false},
+  {"query": "rebuild the drill bundle and deploy to cloudflare", "should_trigger": false},
+  {"query": "what's the cron schedule for the Gmail student check routine", "should_trigger": false},
+  {"query": "list all students who haven't replied this week — i need to follow up", "should_trigger": false},
+  {"query": "draft a WhatsApp to amanda confirming Saturday at Toby's", "should_trigger": false},
+  {"query": "what's the best route from grand st to chelsea this evening", "should_trigger": false},
+  {"query": "fix the bug in the simplifier where popup translation shows the wrong gender for nouns", "should_trigger": false}
+]

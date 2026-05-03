@@ -1,0 +1,13 @@
+{
+  "expectations": [
+    {"text": "Uses paulista pronunciation (not carioca; closed Ê has no Y-glide like SÊY)", "passed": false, "evidence": "Respells você as 'vo-SÊY', três as 'TRÊYS', mês as 'MÊYS', bebê as 'be-BÊY' — all add a Y-glide (diphthong) to closed Ê. This is carioca/diphthongized, not paulista pure vowel."},
+    {"text": "All Portuguese words are real spellings — no invented entries like *éste*, no fake circumflex on words that lack one (e.g., not *SÊR* for ser)", "passed": false, "evidence": "Invents 'éste' (rare/nonexistent in modern BP) as the open counterpart to 'este'. Renders ser as '(SÊR)' with a fake circumflex (ser has no accent). Claims gelo has two distinct pronunciations (ZHÉH-loo vs ZHÊY-loo) — gelo is closed in standard usage."},
+    {"text": "Includes phonetic respellings for both É and Ê example words", "passed": true, "evidence": "ka-FÉH, PÉH, ÉH, ma-NÉH for open; vo-SÊY, TRÊYS, MÊYS, be-BÊY for closed"},
+    {"text": "All non-cognate Portuguese words are translated to English", "passed": true, "evidence": "Every example has English in parens: café (coffee), você (you), três (three), mês (month), etc."},
+    {"text": "Leads with the more familiar/higher-frequency sound (closed Ê), per the centrality principle", "passed": false, "evidence": "Opens with side-by-side IPA table giving both sounds equal billing. Does not establish closed Ê as the more common/familiar anchor — treats them as parallel topics from the start."},
+    {"text": "Contrast pairs share phonological category (one-claim-per-block: doesn't mix closed-stressed with closed-unstressed without flagging)", "passed": false, "evidence": "Minimal Pairs section mixes a fabricated pair (éste/este) with a real distinction (sede/sede) and a misattributed pair (gelo/gelo). Different categories — invention, real homograph, dubious — presented as one block."},
+    {"text": "Phonetic respellings are present and concrete (the respelling IS the teaching, not just labels like 'closed' / 'open')", "passed": true, "evidence": "Respellings throughout"},
+    {"text": "Stays within the open/closed E topic (does not balloon into unstressed E reduction, ser-conjugation, nasal vowels as primary content)", "passed": false, "evidence": "Adds 'When There's No Accent Mark' patterns (-er/-ez/-ês), ser-conjugation tangent, full 'Unstressed E' section ending in -e reduction (NOY-chi, LAY-chi), and nasal também (tahm-BÃYM). Scope creep beyond the requested topic."}
+  ],
+  "summary": {"passed": 4, "failed": 4, "total": 8, "pass_rate": 0.5}
+}

@@ -1,0 +1,13 @@
+{
+  "expectations": [
+    {"text": "Uses paulista pronunciation (not carioca; closed Ê has no Y-glide like SÊY)", "passed": true, "evidence": "você respelled as 'vo-SEH' (no Y-glide). português as 'poor-too-GEHS'. Pure vowel quality, no diphthong."},
+    {"text": "All Portuguese words are real spellings — no invented entries like *éste*, no fake circumflex on words that lack one (e.g., not *SÊR* for ser)", "passed": true, "evidence": "Words listed: você, é, café, português, mesa, festa — all real spellings, no invented forms"},
+    {"text": "Includes phonetic respellings for both É and Ê example words", "passed": true, "evidence": "Closed: vo-SEH, MEH-zah, poor-too-GEHS. Open: EH, ka-FEH, FEHS-tah."},
+    {"text": "All non-cognate Portuguese words are translated to English", "passed": true, "evidence": "você (you), é (is), café (coffee), português (Portuguese), mesa (table), festa (party) all glossed"},
+    {"text": "Leads with the more familiar/higher-frequency sound (closed Ê), per the centrality principle", "passed": true, "evidence": "Explicit: 'Lead with the closed sound. It's the one your English ear already hears in você and português, and it appears in the highest-frequency words.'"},
+    {"text": "Contrast pairs share phonological category (one-claim-per-block: doesn't mix closed-stressed with closed-unstressed without flagging)", "passed": true, "evidence": "Sections are atomic: accented-tells-you, no-accent-still-quality, what-accents-aren't. mesa/festa contrast is within same context (stressed plain e, no accent mark)"},
+    {"text": "Phonetic respellings are present and concrete (the respelling IS the teaching, not just labels like 'closed' / 'open')", "passed": true, "evidence": "Every example word includes its respelling alongside the label, not just the label alone"},
+    {"text": "Stays within the open/closed E topic (does not balloon into unstressed E reduction, ser-conjugation, nasal vowels as primary content)", "passed": true, "evidence": "Tight scope: only stressed open/closed E. No detour into unstressed reduction, ser conjugation, or nasals."}
+  ],
+  "summary": {"passed": 8, "failed": 0, "total": 8, "pass_rate": 1.0}
+}

@@ -1,0 +1,13 @@
+{
+  "expectations": [
+    {"text": "Is European Portuguese: uses 'queria' (and/or 'era') as the polite request form, NOT 'gostaria' (BP) or 'quereria' (textbook EP nobody uses)", "passed": true, "evidence": "Dialogue uses 'Queria uma bica e um pastel de nata, se faz favor' — correct EP polite request"},
+    {"text": "No BP forms slip in: no você (as the subject pronoun), no gerúndio for ongoing action (estar a + inf is EP)", "passed": true, "evidence": "Uses tu address ('encontras', 'podes', 'lembra-te', 'troca'); no você as subject; no gerúndio"},
+    {"text": "All non-cognate Portuguese words are translated to English", "passed": false, "evidence": "Vocabulary table has translations, but the dialogue lines themselves (Bom dia! Faz favor? / Com certeza. É para tomar aqui ou para levar? / São dois euros e vinte. / Aqui tem. Obrigado!) have NO line-by-line English glosses. Learner sees raw Portuguese without translation in the dialogue."},
+    {"text": "Uses 'Estudante' / 'Data' headers (worksheet conventions per project), or at least Portuguese cognate headers (not 'Student' / 'Date')", "passed": false, "evidence": "No student-info header block at top. Jumps from title straight into Introdução. Missing the Estudante/Data convention."},
+    {"text": "No fake accents on Portuguese words (real spellings only)", "passed": true, "evidence": "All spellings real"},
+    {"text": "Generic learner audience — no specific roster student name (Marvin, Christian, Amanda, etc.)", "passed": true, "evidence": "Dialogue speakers labeled 'Empregado' and 'Cliente' — no proper names"},
+    {"text": "Includes a 4-6 line dialogue", "passed": true, "evidence": "Dialogue has 6 lines (3 from each speaker)"},
+    {"text": "Lisbon-specific vocabulary present (bica, galão, pastel de nata, se faz favor) and explained", "passed": true, "evidence": "Vocabulary table includes bica, meia de leite, galão, pastel de nata, se faz favor with English translations"}
+  ],
+  "summary": {"passed": 6, "failed": 2, "total": 8, "pass_rate": 0.75}
+}

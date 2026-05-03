@@ -1,0 +1,437 @@
+{
+  "metadata": {
+    "skill_name": "pedagogy",
+    "skill_path": "C:/Users/klein/portuguese/.claude/skills/pedagogy",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-05-03T04:13:53Z",
+    "evals_run": [
+      1,
+      2,
+      3
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 9,
+        "failed": 0,
+        "total": 9,
+        "time_seconds": 101.175,
+        "tokens": 79427,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output is valid JSON with id, name, description, variant, systemPrompt fields",
+          "passed": true,
+          "evidence": "All five fields present and well-formed"
+        },
+        {
+          "text": "variant field is set to BP or bp (not EP)",
+          "passed": true,
+          "evidence": "variant: \"BP\""
+        },
+        {
+          "text": "Drill restricts to BP only (no tu, no enclisis, no EP forms in the system prompt or examples)",
+          "passed": true,
+          "evidence": "Explicit: 'Brazilian Portuguese only — no European Portuguese forms, no tu, no enclisis, no comparisons across variants'"
+        },
+        {
+          "text": "Fixed 5-question opener uses singular subjects only (eu, voce, ele/ela) — no plural forms (nos, eles, vocês conjugations) per A1 atomic-focus principle",
+          "passed": true,
+          "evidence": "All 5 fixed exercises use eu/você/ele only; chips are [moro, mora, vivo, vive] — no plural forms"
+        },
+        {
+          "text": "morar examples target residence contexts (city, address, where you live)",
+          "passed": true,
+          "evidence": "Q1 (eu + São Paulo), Q3 (você + onde), Q4 (ele + com os pais)"
+        },
+        {
+          "text": "viver examples target being-alive or quality-of-life contexts (not residence)",
+          "passed": true,
+          "evidence": "Q2 (avó + ainda — being alive), Q5 (ele vive bem — quality of life)"
+        },
+        {
+          "text": "All Portuguese example sentences include English translations or glosses",
+          "passed": true,
+          "evidence": "Every PT line in feedback templates is followed by English translation in parens"
+        },
+        {
+          "text": "No fake accents on Portuguese words (no spurious accents like *moro vs móro, no ele vs êle)",
+          "passed": true,
+          "evidence": "All spellings real: moro, mora, vivo, vive, avó, anos, etc."
+        },
+        {
+          "text": "Includes vocabulary scaffolding (defines connector words like em, onde, com before use)",
+          "passed": true,
+          "evidence": "Explicit VOCABULARY SCAFFOLDING section listing em, onde, com, os pais, bem, ainda, noventa, avó, tem, anos"
+        }
+      ],
+      "notes": [],
+      "eval_name": "morar-vs-viver-drill"
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 26.681,
+        "tokens": 64034,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Uses paulista pronunciation (not carioca; closed Ê has no Y-glide like SÊY)",
+          "passed": true,
+          "evidence": "você respelled as 'vo-SEH' (no Y-glide). português as 'poor-too-GEHS'. Pure vowel quality, no diphthong."
+        },
+        {
+          "text": "All Portuguese words are real spellings — no invented entries like *éste*, no fake circumflex on words that lack one (e.g., not *SÊR* for ser)",
+          "passed": true,
+          "evidence": "Words listed: você, é, café, português, mesa, festa — all real spellings, no invented forms"
+        },
+        {
+          "text": "Includes phonetic respellings for both É and Ê example words",
+          "passed": true,
+          "evidence": "Closed: vo-SEH, MEH-zah, poor-too-GEHS. Open: EH, ka-FEH, FEHS-tah."
+        },
+        {
+          "text": "All non-cognate Portuguese words are translated to English",
+          "passed": true,
+          "evidence": "você (you), é (is), café (coffee), português (Portuguese), mesa (table), festa (party) all glossed"
+        },
+        {
+          "text": "Leads with the more familiar/higher-frequency sound (closed Ê), per the centrality principle",
+          "passed": true,
+          "evidence": "Explicit: 'Lead with the closed sound. It's the one your English ear already hears in você and português, and it appears in the highest-frequency words.'"
+        },
+        {
+          "text": "Contrast pairs share phonological category (one-claim-per-block: doesn't mix closed-stressed with closed-unstressed without flagging)",
+          "passed": true,
+          "evidence": "Sections are atomic: accented-tells-you, no-accent-still-quality, what-accents-aren't. mesa/festa contrast is within same context (stressed plain e, no accent mark)"
+        },
+        {
+          "text": "Phonetic respellings are present and concrete (the respelling IS the teaching, not just labels like 'closed' / 'open')",
+          "passed": true,
+          "evidence": "Every example word includes its respelling alongside the label, not just the label alone"
+        },
+        {
+          "text": "Stays within the open/closed E topic (does not balloon into unstressed E reduction, ser-conjugation, nasal vowels as primary content)",
+          "passed": true,
+          "evidence": "Tight scope: only stressed open/closed E. No detour into unstressed reduction, ser conjugation, or nasals."
+        }
+      ],
+      "notes": [],
+      "eval_name": "open-closed-e-primer"
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 55.934,
+        "tokens": 65445,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Is European Portuguese: uses 'queria' (and/or 'era') as the polite request form, NOT 'gostaria' (BP) or 'quereria' (textbook EP nobody uses)",
+          "passed": true,
+          "evidence": "Lead form is *Queria*. Also introduces *Era* alternative. Explicitly flags *quereria* as 'grammatically correct but never heard at a counter' — applies Native Usage Filter."
+        },
+        {
+          "text": "No BP forms slip in: no você (as the subject pronoun), no gerúndio for ongoing action (estar a + inf is EP)",
+          "passed": true,
+          "evidence": "Teacher notes explicit: 'EP only. Zero BP forms — gostaria, gostaria de, você, gerúndio all banned.' Dialogue uses no você or gerúndio."
+        },
+        {
+          "text": "All non-cognate Portuguese words are translated to English",
+          "passed": true,
+          "evidence": "Every dialogue line and vocabulary entry has parenthetical English translation"
+        },
+        {
+          "text": "Uses 'Estudante' / 'Data' headers (worksheet conventions per project), or at least Portuguese cognate headers (not 'Student' / 'Date')",
+          "passed": true,
+          "evidence": "Both 'Estudante:' and 'Data:' header lines present at top with blanks"
+        },
+        {
+          "text": "No fake accents on Portuguese words (real spellings only)",
+          "passed": true,
+          "evidence": "Teacher notes confirm: 'No accent inventions (P24): all spellings are real EP — queria, café, água, galão, pastel, obrigada.'"
+        },
+        {
+          "text": "Generic learner audience — no specific roster student name (Marvin, Christian, Amanda, etc.)",
+          "passed": true,
+          "evidence": "Dialogue character is 'Ana' (generic). No reference to any roster student."
+        },
+        {
+          "text": "Includes a 4-6 line dialogue",
+          "passed": true,
+          "evidence": "Dialogue is exactly 6 lines (3 from Empregado, 3 from Ana)"
+        },
+        {
+          "text": "Lisbon-specific vocabulary present (bica, galão, pastel de nata, se faz favor) and explained",
+          "passed": true,
+          "evidence": "Vocabulary section includes bica, galão, meia de leite, pastel de nata, se faz favor — all defined inline"
+        }
+      ],
+      "notes": [],
+      "eval_name": "ep-cafe-worksheet"
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.889,
+        "passed": 8,
+        "failed": 1,
+        "total": 9,
+        "time_seconds": 96.632,
+        "tokens": 59511,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output is valid JSON with id, name, description, variant, systemPrompt fields",
+          "passed": true,
+          "evidence": "All five fields present and well-formed"
+        },
+        {
+          "text": "variant field is set to BP or bp (not EP)",
+          "passed": true,
+          "evidence": "variant: \"bp\""
+        },
+        {
+          "text": "Drill restricts to BP only (no tu, no enclisis, no EP forms in the system prompt or examples)",
+          "passed": true,
+          "evidence": "Explicit: 'NEVER use tu', 'BP only'"
+        },
+        {
+          "text": "Fixed 5-question opener uses singular subjects only (eu, voce, ele/ela) — no plural forms (nos, eles, vocês conjugations) per A1 atomic-focus principle",
+          "passed": false,
+          "evidence": "Q3 in the FIXED 5-question opener uses 'Nós ______ moramos' and Q4 uses 'Eles ______ vivem' — both plural conjugations introduced in the A1 fixed opener, violating singular-before-plural"
+        },
+        {
+          "text": "morar examples target residence contexts (city, address, where you live)",
+          "passed": true,
+          "evidence": "Q1 (São Paulo), Q3 (Copacabana apt), Q5 (where you live)"
+        },
+        {
+          "text": "viver examples target being-alive or quality-of-life contexts (not residence)",
+          "passed": true,
+          "evidence": "Q2 (lifespan), Q4 (felizes juntos)"
+        },
+        {
+          "text": "All Portuguese example sentences include English translations or glosses",
+          "passed": true,
+          "evidence": "Every PT example in welcome message and feedback has English in parens"
+        },
+        {
+          "text": "No fake accents on Portuguese words (no spurious accents like *moro vs móro, no ele vs êle)",
+          "passed": true,
+          "evidence": "All spellings real"
+        },
+        {
+          "text": "Includes vocabulary scaffolding (defines connector words like em, onde, com before use)",
+          "passed": true,
+          "evidence": "Welcome message defines key constructions (morar + em + place, viver + bem/feliz/com), conjugation tables provided"
+        }
+      ],
+      "notes": [],
+      "eval_name": "morar-vs-viver-drill"
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 4,
+        "failed": 4,
+        "total": 8,
+        "time_seconds": 41.126,
+        "tokens": 39545,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Uses paulista pronunciation (not carioca; closed Ê has no Y-glide like SÊY)",
+          "passed": false,
+          "evidence": "Respells você as 'vo-SÊY', três as 'TRÊYS', mês as 'MÊYS', bebê as 'be-BÊY' — all add a Y-glide (diphthong) to closed Ê. This is carioca/diphthongized, not paulista pure vowel."
+        },
+        {
+          "text": "All Portuguese words are real spellings — no invented entries like *éste*, no fake circumflex on words that lack one (e.g., not *SÊR* for ser)",
+          "passed": false,
+          "evidence": "Invents 'éste' (rare/nonexistent in modern BP) as the open counterpart to 'este'. Renders ser as '(SÊR)' with a fake circumflex (ser has no accent). Claims gelo has two distinct pronunciations (ZHÉH-loo vs ZHÊY-loo) — gelo is closed in standard usage."
+        },
+        {
+          "text": "Includes phonetic respellings for both É and Ê example words",
+          "passed": true,
+          "evidence": "ka-FÉH, PÉH, ÉH, ma-NÉH for open; vo-SÊY, TRÊYS, MÊYS, be-BÊY for closed"
+        },
+        {
+          "text": "All non-cognate Portuguese words are translated to English",
+          "passed": true,
+          "evidence": "Every example has English in parens: café (coffee), você (you), três (three), mês (month), etc."
+        },
+        {
+          "text": "Leads with the more familiar/higher-frequency sound (closed Ê), per the centrality principle",
+          "passed": false,
+          "evidence": "Opens with side-by-side IPA table giving both sounds equal billing. Does not establish closed Ê as the more common/familiar anchor — treats them as parallel topics from the start."
+        },
+        {
+          "text": "Contrast pairs share phonological category (one-claim-per-block: doesn't mix closed-stressed with closed-unstressed without flagging)",
+          "passed": false,
+          "evidence": "Minimal Pairs section mixes a fabricated pair (éste/este) with a real distinction (sede/sede) and a misattributed pair (gelo/gelo). Different categories — invention, real homograph, dubious — presented as one block."
+        },
+        {
+          "text": "Phonetic respellings are present and concrete (the respelling IS the teaching, not just labels like 'closed' / 'open')",
+          "passed": true,
+          "evidence": "Respellings throughout"
+        },
+        {
+          "text": "Stays within the open/closed E topic (does not balloon into unstressed E reduction, ser-conjugation, nasal vowels as primary content)",
+          "passed": false,
+          "evidence": "Adds 'When There's No Accent Mark' patterns (-er/-ez/-ês), ser-conjugation tangent, full 'Unstressed E' section ending in -e reduction (NOY-chi, LAY-chi), and nasal também (tahm-BÃYM). Scope creep beyond the requested topic."
+        }
+      ],
+      "notes": [],
+      "eval_name": "open-closed-e-primer"
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.75,
+        "passed": 6,
+        "failed": 2,
+        "total": 8,
+        "time_seconds": 24.105,
+        "tokens": 38200,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Is European Portuguese: uses 'queria' (and/or 'era') as the polite request form, NOT 'gostaria' (BP) or 'quereria' (textbook EP nobody uses)",
+          "passed": true,
+          "evidence": "Dialogue uses 'Queria uma bica e um pastel de nata, se faz favor' — correct EP polite request"
+        },
+        {
+          "text": "No BP forms slip in: no você (as the subject pronoun), no gerúndio for ongoing action (estar a + inf is EP)",
+          "passed": true,
+          "evidence": "Uses tu address ('encontras', 'podes', 'lembra-te', 'troca'); no você as subject; no gerúndio"
+        },
+        {
+          "text": "All non-cognate Portuguese words are translated to English",
+          "passed": false,
+          "evidence": "Vocabulary table has translations, but the dialogue lines themselves (Bom dia! Faz favor? / Com certeza. É para tomar aqui ou para levar? / São dois euros e vinte. / Aqui tem. Obrigado!) have NO line-by-line English glosses. Learner sees raw Portuguese without translation in the dialogue."
+        },
+        {
+          "text": "Uses 'Estudante' / 'Data' headers (worksheet conventions per project), or at least Portuguese cognate headers (not 'Student' / 'Date')",
+          "passed": false,
+          "evidence": "No student-info header block at top. Jumps from title straight into Introdução. Missing the Estudante/Data convention."
+        },
+        {
+          "text": "No fake accents on Portuguese words (real spellings only)",
+          "passed": true,
+          "evidence": "All spellings real"
+        },
+        {
+          "text": "Generic learner audience — no specific roster student name (Marvin, Christian, Amanda, etc.)",
+          "passed": true,
+          "evidence": "Dialogue speakers labeled 'Empregado' and 'Cliente' — no proper names"
+        },
+        {
+          "text": "Includes a 4-6 line dialogue",
+          "passed": true,
+          "evidence": "Dialogue has 6 lines (3 from each speaker)"
+        },
+        {
+          "text": "Lisbon-specific vocabulary present (bica, galão, pastel de nata, se faz favor) and explained",
+          "passed": true,
+          "evidence": "Vocabulary table includes bica, meia de leite, galão, pastel de nata, se faz favor with English translations"
+        }
+      ],
+      "notes": [],
+      "eval_name": "ep-cafe-worksheet"
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 61.2633,
+        "stddev": 37.5319,
+        "min": 26.681,
+        "max": 101.175
+      },
+      "tokens": {
+        "mean": 69635.3333,
+        "stddev": 8509.1294,
+        "min": 64034,
+        "max": 79427
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.713,
+        "stddev": 0.1971,
+        "min": 0.5,
+        "max": 0.889
+      },
+      "time_seconds": {
+        "mean": 53.9543,
+        "stddev": 37.9271,
+        "min": 24.105,
+        "max": 96.632
+      },
+      "tokens": {
+        "mean": 45752.0,
+        "stddev": 11934.6059,
+        "min": 38200,
+        "max": 59511
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.29",
+      "time_seconds": "+7.3",
+      "tokens": "+23883"
+    }
+  },
+  "notes": [
+    "Pass-rate delta is +29 pp (with-skill 100% vs without-skill 71%). The skill helped most where pedagogy details are non-obvious from general knowledge.",
+    "Eval 2 (open/closed E primer) shows the largest gap (+50 pp). Without the skill, the model invented forms (*éste*, fake circumflex on *ser*, *gelo* split into two pronunciations) and used carioca-style Y-glides (vo-SÊY) instead of paulista. With the skill, all forms were real and respellings were paulista.",
+    "Eval 3 (EP café worksheet) gap (+25 pp) was driven by project-specific worksheet conventions (Estudante/Data headers) and line-by-line dialogue glossing — both PEDAGOGY rules that general EP knowledge alone doesn't cover.",
+    "Eval 1 (morar vs viver drill) gap (+11 pp) was small. Both runs knew the verb distinction; the difference was that the baseline put plural conjugations (Nós moramos, Eles vivem) in the A1 fixed opener, violating singular-before-plural.",
+    "Non-discriminating assertions (passed in both configurations): 'valid JSON', 'Lisbon vocabulary present', 'no fake accents' for non-phonetic evals, 'generic audience'. These check baseline competence, not pedagogy depth.",
+    "Cost: with-skill adds ~7s average runtime and ~24k tokens (reading PEDAGOGY.md). Material but not prohibitive for content-creation tasks.",
+    "Caveat: only 1 run per configuration per eval, so variance is unmeasured. The directional finding is clear but exact deltas would tighten with 3 runs."
+  ]
+}

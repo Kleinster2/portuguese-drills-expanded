@@ -1,0 +1,15 @@
+{
+  "eval_id": 3,
+  "eval_name": "ep-cafe-worksheet",
+  "prompt": "Draft a worksheet introduction for ordering food in a Lisbon café — A1 European Portuguese. Include a short dialogue (4-6 lines). Output as plain markdown to outputs/worksheet.md.",
+  "assertions": [
+    {"text": "Is European Portuguese: uses 'queria' (and/or 'era') as the polite request form, NOT 'gostaria' (BP) or 'quereria' (textbook EP nobody uses)"},
+    {"text": "No BP forms slip in: no você (as the subject pronoun), no gerúndio for ongoing action (estar a + inf is EP)"},
+    {"text": "All non-cognate Portuguese words are translated to English"},
+    {"text": "Uses 'Estudante' / 'Data' headers (worksheet conventions per project), or at least Portuguese cognate headers (not 'Student' / 'Date')"},
+    {"text": "No fake accents on Portuguese words (real spellings only)"},
+    {"text": "Generic learner audience — no specific roster student name (Marvin, Christian, Amanda, etc.)"},
+    {"text": "Includes a 4-6 line dialogue"},
+    {"text": "Lisbon-specific vocabulary present (bica, galão, pastel de nata, se faz favor) and explained"}
+  ]
+}

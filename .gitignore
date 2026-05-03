@@ -1,5 +1,7 @@
-# Claude Code local config
-.claude/
+# Claude Code local config (track .claude/skills/, keep the rest local)
+.claude/commands/
+.claude/scheduled_tasks.lock
+.claude/settings.local.json
 
 # Environment variables
 .dev.vars

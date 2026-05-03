@@ -1,0 +1,16 @@
+{
+  "eval_id": 1,
+  "eval_name": "morar-vs-viver-drill",
+  "prompt": "Create a 5-question fill-in-the-blank drill teaching when to use 'morar' vs 'viver' in Brazilian Portuguese, A1 level. Use the JSON format that matches the other drills in config/prompts/. Save the JSON to outputs/drill.json.",
+  "assertions": [
+    {"text": "Output is valid JSON with id, name, description, variant, systemPrompt fields"},
+    {"text": "variant field is set to BP or bp (not EP)"},
+    {"text": "Drill restricts to BP only (no tu, no enclisis, no EP forms in the system prompt or examples)"},
+    {"text": "Fixed 5-question opener uses singular subjects only (eu, voce, ele/ela) — no plural forms (nos, eles, vocês conjugations) per A1 atomic-focus principle"},
+    {"text": "morar examples target residence contexts (city, address, where you live)"},
+    {"text": "viver examples target being-alive or quality-of-life contexts (not residence)"},
+    {"text": "All Portuguese example sentences include English translations or glosses"},
+    {"text": "No fake accents on Portuguese words (no spurious accents like *moro vs móro, no ele vs êle)"},
+    {"text": "Includes vocabulary scaffolding (defines connector words like em, onde, com before use)"}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "expectations": [
+    {"text": "Is European Portuguese: uses 'queria' (and/or 'era') as the polite request form, NOT 'gostaria' (BP) or 'quereria' (textbook EP nobody uses)", "passed": true, "evidence": "Lead form is *Queria*. Also introduces *Era* alternative. Explicitly flags *quereria* as 'grammatically correct but never heard at a counter' — applies Native Usage Filter."},
+    {"text": "No BP forms slip in: no você (as the subject pronoun), no gerúndio for ongoing action (estar a + inf is EP)", "passed": true, "evidence": "Teacher notes explicit: 'EP only. Zero BP forms — gostaria, gostaria de, você, gerúndio all banned.' Dialogue uses no você or gerúndio."},
+    {"text": "All non-cognate Portuguese words are translated to English", "passed": true, "evidence": "Every dialogue line and vocabulary entry has parenthetical English translation"},
+    {"text": "Uses 'Estudante' / 'Data' headers (worksheet conventions per project), or at least Portuguese cognate headers (not 'Student' / 'Date')", "passed": true, "evidence": "Both 'Estudante:' and 'Data:' header lines present at top with blanks"},
+    {"text": "No fake accents on Portuguese words (real spellings only)", "passed": true, "evidence": "Teacher notes confirm: 'No accent inventions (P24): all spellings are real EP — queria, café, água, galão, pastel, obrigada.'"},
+    {"text": "Generic learner audience — no specific roster student name (Marvin, Christian, Amanda, etc.)", "passed": true, "evidence": "Dialogue character is 'Ana' (generic). No reference to any roster student."},
+    {"text": "Includes a 4-6 line dialogue", "passed": true, "evidence": "Dialogue is exactly 6 lines (3 from Empregado, 3 from Ana)"},
+    {"text": "Lisbon-specific vocabulary present (bica, galão, pastel de nata, se faz favor) and explained", "passed": true, "evidence": "Vocabulary section includes bica, galão, meia de leite, pastel de nata, se faz favor — all defined inline"}
+  ],
+  "summary": {"passed": 8, "failed": 0, "total": 8, "pass_rate": 1.0}
+}

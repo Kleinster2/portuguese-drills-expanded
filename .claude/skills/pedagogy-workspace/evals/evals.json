@@ -1,0 +1,26 @@
+{
+  "skill_name": "pedagogy",
+  "evals": [
+    {
+      "id": 1,
+      "name": "morar-vs-viver-drill",
+      "prompt": "Create a 5-question fill-in-the-blank drill teaching when to use 'morar' vs 'viver' in Brazilian Portuguese, A1 level. Use the JSON format that matches the other drills in config/prompts/ (look at one or two for reference). Save the JSON to the path I give you.",
+      "expected_output": "A drill JSON with 5 fill-in-the-blank items that respect the native usage filter (morar = address/residence, viver = abstract life), each blank forced (only one verb fits), no fake accents, BP variant, English glosses for each PT word.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "open-closed-e-primer",
+      "prompt": "Write a primer section explaining the open É vs closed Ê distinction in Brazilian Portuguese for an A2 learner. Include phonetic respellings. Output as plain markdown.",
+      "expected_output": "A primer section with paulista-only respellings, real spellings only (no fake accents like 'êle'), one claim per teaching block, contrast examples that share phonological category, English translations for every PT word.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "ep-cafe-worksheet",
+      "prompt": "Draft a worksheet introduction for ordering food in a Lisbon café — A1 European Portuguese. Include a short dialogue (4-6 lines). Output as plain markdown.",
+      "expected_output": "An EP (not BP) worksheet intro: uses 'tu' and EP verb forms, EP vocabulary (bica/imperial/se faz favor), generic learner audience (no specific student name), every PT line glossed in English, no fake accents.",
+      "files": []
+    }
+  ]
+}

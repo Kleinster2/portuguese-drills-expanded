@@ -1,0 +1,15 @@
+{
+  "eval_id": 2,
+  "eval_name": "open-closed-e-primer",
+  "prompt": "Write a primer section explaining the open É vs closed Ê distinction in Brazilian Portuguese for an A2 learner. Include phonetic respellings. Output as plain markdown to outputs/primer.md.",
+  "assertions": [
+    {"text": "Uses paulista pronunciation (not carioca; closed Ê has no Y-glide like SÊY)"},
+    {"text": "All Portuguese words are real spellings — no invented entries like *éste*, no fake circumflex on words that lack one (e.g., not *SÊR* for ser)"},
+    {"text": "Includes phonetic respellings for both É and Ê example words"},
+    {"text": "All non-cognate Portuguese words are translated to English"},
+    {"text": "Leads with the more familiar/higher-frequency sound (closed Ê), per the centrality principle"},
+    {"text": "Contrast pairs share phonological category (one-claim-per-block: doesn't mix closed-stressed with closed-unstressed without flagging)"},
+    {"text": "Phonetic respellings are present and concrete (the respelling IS the teaching, not just labels like 'closed' / 'open')"},
+    {"text": "Stays within the open/closed E topic (does not balloon into unstressed E reduction, ser-conjugation, nasal vowels as primary content)"}
+  ]
+}
