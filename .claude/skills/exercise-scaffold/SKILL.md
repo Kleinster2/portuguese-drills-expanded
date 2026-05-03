@@ -9,7 +9,9 @@ disable-model-invocation: true
 
 Plan the structure of exercises before writing any. This step prevents structural problems that are hard to fix later — missing concept explanations, unscaffolded answers, aimless section structure, worksheets that are too long or too short.
 
-**Prerequisites:** PEDAGOGY.md must be loaded (run `/pedagogy` first). Student file and matching drills from `config/prompts/` should already be reviewed.
+**Mandatory precondition:** invoke the `pedagogy` skill via the Skill tool before any other step. This loads the hard rules (no fake accents, BP/EP separation, paulista pronunciation, native usage filter) and PEDAGOGY.md. Skipping this is the #1 cause of past pedagogy violations.
+
+**Other prerequisites:** Student file and matching drills from `config/prompts/` should already be reviewed.
 
 ---
 

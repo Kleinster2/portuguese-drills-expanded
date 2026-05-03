@@ -9,6 +9,8 @@ disable-model-invocation: true
 
 Step-by-step process for creating a two-column dialogue exercise. Follow these steps in order — do not skip to the table format.
 
+**Mandatory precondition:** invoke the `pedagogy` skill via the Skill tool before any other step. This loads the hard rules (no fake accents, BP/EP separation, paulista pronunciation, native usage filter) and PEDAGOGY.md. Skipping this is the #1 cause of past pedagogy violations.
+
 ## 1. Define the scene
 
 Before writing any lines, establish:

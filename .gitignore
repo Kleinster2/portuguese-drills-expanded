@@ -1,7 +1,8 @@
-# Claude Code local config (track .claude/skills/, keep the rest local)
+# Claude Code local config (track .claude/skills/ and .claude/hooks/, keep the rest local)
 .claude/commands/
 .claude/scheduled_tasks.lock
 .claude/settings.local.json
+.claude/.pedagogy-loaded
 
 # Environment variables
 .dev.vars

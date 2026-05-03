@@ -9,9 +9,10 @@ disable-model-invocation: true
 
 Write exercises, deduplicate across sections, build the answer key. This skill assumes `/exercise-scaffold` has already run and produced a concept inventory, answer inventory, variant confirmation, and name choices.
 
-**Prerequisites:**
+**Mandatory precondition:** invoke the `pedagogy` skill via the Skill tool before any other step. This loads the hard rules (no fake accents, BP/EP separation, paulista pronunciation, native usage filter) and PEDAGOGY.md. Skipping this is the #1 cause of past pedagogy violations.
+
+**Other prerequisites:**
 - `/exercise-scaffold` output (concept inventory, answer inventory, variant, names)
-- PEDAGOGY.md loaded
 - Student context if applicable
 
 **After this skill:** Run `/exercise-verify` to check every sentence against real-world usage.

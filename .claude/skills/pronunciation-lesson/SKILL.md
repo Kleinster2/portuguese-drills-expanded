@@ -8,8 +8,9 @@ argument-hint: "[phoneme or rule, variant (BP/EP)]"
 
 Create a pronunciation lesson for a specific sound or rule.
 
-**Prerequisites:**
-- `/pedagogy` loaded
+**Mandatory precondition:** invoke the `pedagogy` skill via the Skill tool before any other step. This loads the hard rules (no fake accents, BP/EP separation, paulista pronunciation, native usage filter) and PEDAGOGY.md. Skipping this is the #1 cause of past pedagogy violations.
+
+**Other prerequisites:**
 - Read `PRONUNCIATION_RULES.md` (the 6 rules) and `docs/pronunciation/QUICK_REFERENCE.md`
 - Review `project_phonetic-tool-strategy` — the algorithmic tool (`utils/phonetic_direct.py`) is the long-term standard, with LLM tool (`utils/llm_pronunciation.py`) as reference until algorithmic bugs are fixed
 

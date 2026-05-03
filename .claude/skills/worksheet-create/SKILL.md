@@ -9,6 +9,8 @@ disable-model-invocation: true
 
 Step-by-step process for generating a student-facing worksheet. Follow in order.
 
+**Mandatory precondition:** invoke the `pedagogy` skill via the Skill tool before any other step. This loads the hard rules (no fake accents, BP/EP separation, paulista pronunciation, native usage filter) and PEDAGOGY.md, which inform scoping, drafting, and review. Skipping this is the #1 cause of past pedagogy violations.
+
 ## 1. Inputs
 
 Before writing anything, confirm:
@@ -19,11 +21,9 @@ Before writing anything, confirm:
 - **Context**: why this topic now? What did the student just finish? What errors have they been making?
 - **Matching drills**: check `config/prompts/` for existing drills on the same topic. Read them — they contain curated vocabulary, example sentences, error cases, and BP/EP distinctions that the worksheet should stay consistent with. Don't contradict what the drill teaches.
 
-## 2. Load pedagogy and best practices
+## 2. Load best practices
 
-Run `/pedagogy` to load PEDAGOGY.md. All content decisions must follow it.
-
-Also review [DRILL_BEST_PRACTICES.md](docs/drills/DRILL_BEST_PRACTICES.md) — these principles apply to printed worksheets too:
+Review [DRILL_BEST_PRACTICES.md](docs/drills/DRILL_BEST_PRACTICES.md) — these principles apply to printed worksheets too:
 - **Grammatical Isolation**: each blank tests ONE concept. Don't require the student to get two things right to fill one blank.
 - **Real-World Contexts**: sentences should be things a real person would say, not textbook artifacts.
 - **Approved vocabulary**: use high-frequency, centrality-tested words. Check the student's level and known vocabulary.

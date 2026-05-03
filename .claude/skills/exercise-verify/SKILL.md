@@ -9,6 +9,8 @@ disable-model-invocation: true
 
 Check that every exercise sentence reflects how native speakers actually write and speak — not just what grammar rules permit. This skill can run after `/exercise-draft` or independently on any existing exercises.
 
+**Mandatory precondition:** invoke the `pedagogy` skill via the Skill tool before any other step. This loads the hard rules (no fake accents, BP/EP separation, paulista pronunciation, native usage filter) and PEDAGOGY.md. Skipping this is the #1 cause of past pedagogy violations.
+
 **This step is not optional.** Grammar rules generate infinite valid sentences, but only a subset are natural. Teaching idiosyncratic constructions builds bad instincts.
 
 ---

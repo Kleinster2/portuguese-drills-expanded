@@ -8,8 +8,9 @@ argument-hint: "[topic, CEFR level (A1/A2/B1/B2), variant (BP/EP/dual)]"
 
 Create a new drill — one of the 131 JSON prompts in `config/prompts/` that power the drills feature.
 
-**Prerequisites:**
-- `/pedagogy` loaded if first drill this session
+**Mandatory precondition:** invoke the `pedagogy` skill via the Skill tool before any other step. This loads the hard rules (no fake accents, BP/EP separation, paulista pronunciation, native usage filter) and PEDAGOGY.md. Skipping this is the #1 cause of past pedagogy violations.
+
+**Other prerequisites:**
 - Reference: `config/prompts/common-prepositions.json` (gold standard)
 - Template: `docs/drills/DRILL_TEMPLATE.md`
 - Best practices: `docs/drills/DRILL_BEST_PRACTICES.md`
