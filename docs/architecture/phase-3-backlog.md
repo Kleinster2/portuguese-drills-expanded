@@ -16,12 +16,12 @@ Cross-reference: `docs/known-trap-topics.md` documents which topics have produce
 
 These run alongside cluster work, not as a separate phase:
 
-- **A2.20 conjunctions atomization.** MS6 covers only "e" but its `cefr_legacy` includes A2.20 (Basic Conjunctions). The remaining conjunctions (ou, mas, porque, quando, se, como) need their own units. Pedagogy-aligned answer: split into `a2-conjuncoes-coordenativas` (e, ou, mas) and `a2-conjuncoes-subordinativas` (porque, quando, se, como). Do this when authoring touches A2 grammar.
-- **Sequence-position normalization.** Each cluster touches CEFR-only placeholders currently at 200–500.xx range positions. As authoring lands, move them into proper interleaved decimals (e.g., `a2-pret-vs-imp` from 300.04 → 46.5 to sit right after the imperfect units). The 200–500.xx range is for unauthored placeholders only; authored content lives in proper MS-sequence interleave.
+- ~~**A2.20 conjunctions atomization.**~~ → **DONE (Phase 3.5):** split into `a2-conjuncoes-coordenativas` (33.5) and `a2-conjuncoes-subordinativas` (33.7). Pedagogy-preferred (b) split applied.
+- **Sequence-position normalization.** Each cluster touches CEFR-only placeholders currently at 200–500.xx range positions. As authoring lands, move them into proper interleaved decimals. → **Phase 3.5 audit closed this** for the missed Cluster 3 cleanup (`b2-condicionais-sistema` deleted as redundant — Cluster 3 had fully replaced its content with 3 type-specific units). Remaining 13 placeholder-range positions are unenriched CEFR-only units (no Phase 3 cluster ownership; pre-Phase-6 backlog).
 - **Prereq backfill.** Phase 2 left every unit's `prereqs: []`. As each cluster authors, prereqs get populated for the new unit AND for the prerequisite chain leading to it (where pedagogically obvious). Don't try to backfill the entire corpus at once.
-- **Pôr / vir present-tense parent units (Cluster 6 carryover).** The corpus has units for ter's present (`a1-ter-idade`, `a1-ter-posse`) but no dedicated present-tense introduction for pôr (`ponho/pões/põe/pomos/põem`) or vir (`venho/vens/vem/vimos/vêm`). Cluster 6 worked around this by including parent paradigm tables inside the derivative units. A future side task could author dedicated `a1-por-presente-introducao` and `a1-vir-presente-introducao` micro-units to fill the gap properly. Not blocking; nice-to-have for prereq honesty.
-- **`a1-ser-identity` article enrichment (Cluster 7 follow-up).** The unit carries the `definite-articles` concept tag but its body coverage is thin: Vocabulary lists *o* and *a* once; Grammar mentions articles only with proper names. Missing: plural articles (*os/as*), article-noun gender agreement (*o livro / a casa*), required-vs-omitted-article rules (countries, professions, abstracts). Cluster 7 used `a1-ser-identity` as the prereq target for `b1-relativo-cujo`; the link is conceptually accurate but pedagogically thin. Side task: expand the Vocabulary and Grammar sections of `a1-ser-identity` to actually teach the article system, not just reference it. Don't extract into a new unit — preserves the productive-unit pedagogy.
-- **Particípios (past participles) introduction unit (Cluster 8 follow-up).** The corpus has no dedicated past-participle introduction unit. Particípios are used productively across all compound-tense units (`b1-mais-que-perfeito-ind`, `b1-pret-perfeito-composto-bp/ep`, `b2-mais-que-perfeito-subj`, `b2-condicional-composto-bp`, `b2-futuro-composto-ind/subj`, `b1-passiva-ser`) but no unit teaches participle formation in isolation. Cluster 8 used `b1-mais-que-perfeito-ind` as the participle anchor for the passive units; same pattern as Cluster 6's parent-verb workaround. Side task: author `b1-particípios-introducao` covering regular formation rules (-ar → -ado, -er/-ir → -ido) + the irregular set (*dito, feito, posto, visto, escrito, aberto, ganho, gasto, aceito, eleito*). Sequence position should sit before the first compound-tense use (current first compound is `b1-mais-que-perfeito-ind` at 46.93), so something like 46.85 or 46.5x. Pairs naturally with `b2-participios-duplos` (Phase 2 placeholder).
+- ~~**Pôr / vir present-tense parent units (Cluster 6 carryover).**~~ → **DONE (Phase 3.5):** authored `a1-por-presente-introducao` (19.5) and `a1-vir-presente-introducao` (19.7).
+- ~~**`a1-ser-identity` article enrichment (Cluster 7 follow-up).**~~ → **DONE (Phase 3.5):** expanded within the productive unit. Vocabulary now includes singular + plural articles; Grammar has full article-noun agreement table + required/omitted rules.
+- ~~**Particípios (past participles) introduction unit (Cluster 8 follow-up).**~~ → **DONE (Phase 3.5):** authored `b1-participios-introducao` (46.85) covering regular + irregular forms + agreement rules across compound, passive, adjectival contexts. `b1-passiva-ser` prereq updated to point at the new unit.
 
 ## Architectural decisions locked
 
@@ -52,16 +52,16 @@ These run alongside cluster work, not as a separate phase:
 | 12 | Advanced clauses | 4 (2 new + 2 enriched) | ✓ |
 | 13 | Discourse / argumentation / register | 5 (2 new + 3 enriched) | ✓ |
 
-### Side tasks remaining (carryover to Phase 4 or beyond)
+### Side tasks status (Phase 3.5 closeout)
 
-These items were logged during Phase 3 but didn't block any cluster. They can be picked up as opportunistic enrichments after Phase 4 (generators) lands:
+All 6 deferred Phase 3 side tasks completed in Phase 3.5 (2026-05-04). Plus 1 missed-cleanup item surfaced by the audit:
 
-1. **A2.20 conjunctions atomization** — split MS6's coverage into `a2-conjuncoes-coordenativas` and `a2-conjuncoes-subordinativas`.
-2. **Pôr/vir present-tense parent units** — author dedicated `a1-por-presente-introducao` and `a1-vir-presente-introducao` micro-units.
-3. **`a1-ser-identity` article enrichment** — expand article coverage (plural, gender agreement, required-vs-omitted) within the existing productive unit. Don't extract into a new unit.
-4. **`b1-particípios-introducao`** — author dedicated past-participle introduction unit (sequence position ~46.85, before first compound use at 46.93).
-5. **Bidirectional cross-link enrichment** — `b1-subj-trigger-impessoal` should mention the personal-infinitive alternative (one-paragraph addition) to balance Cluster 10's cross-link from `b2-infinitivo-pessoal-uso`.
-6. **Sequence-position normalization audit** — verify all units that should have moved out of 200-500.xx placeholder positions did so. The few remaining (likely some Phase 2 placeholders that no Phase 3 cluster touched) can either be reseated opportunistically or remain as placeholders pending future authoring.
+1. ~~**A2.20 conjunctions atomization**~~ ✓ — split into `a2-conjuncoes-coordenativas` + `a2-conjuncoes-subordinativas`.
+2. ~~**Pôr/vir present-tense parent units**~~ ✓ — `a1-por-presente-introducao` (19.5) + `a1-vir-presente-introducao` (19.7).
+3. ~~**`a1-ser-identity` article enrichment**~~ ✓ — Vocabulary + Grammar expanded with full article system within the productive unit.
+4. ~~**`b1-particípios-introducao`**~~ ✓ — authored at 46.85; `b1-passiva-ser` prereq updated to point at it.
+5. ~~**Bidirectional cross-link enrichment**~~ ✓ — `b1-subj-trigger-impessoal` Grammar section now includes a Personal-infinitive-alternative subsection with cross-link to `b2-infinitivo-pessoal-uso`.
+6. ~~**Sequence-position normalization audit**~~ ✓ — see `docs/architecture/phase-3-side-tasks-audit.md`. Surfaced 1 missed cleanup: `b2-condicionais-sistema` placeholder deleted (Cluster 3 had structurally replaced it with 3 type-specific conditional units but never removed the placeholder).
 
 ### What's next
 

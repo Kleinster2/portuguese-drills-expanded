@@ -7,7 +7,7 @@ topic: grammar
 variant: shared
 status: published
 concepts: [passive-voice]
-prereqs: [a1-ser-identity, b1-mais-que-perfeito-ind]
+prereqs: [a1-ser-identity, b1-participios-introducao]
 ms_legacy: null
 cefr_legacy: [B1.17]
 ---

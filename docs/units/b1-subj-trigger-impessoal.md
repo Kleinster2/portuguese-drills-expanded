@@ -64,9 +64,19 @@ The subjunctive is triggered when the impersonal expression introduces a *judgme
 - *É possível que ele **esteja** cansado.* — He might be tired. (subjuntivo: possibility)
 - *É evidente que ele **está** cansado.* — He's clearly tired. (indicative: assertion)
 
+### Personal-infinitive alternative
+
+Many impersonal expressions also accept a **personal infinitive** in place of the subjuntivo *que*-clause. Both forms are correct; the choice is register-driven (personal infinitive is more economical, slightly more formal in writing):
+
+- *É importante **que vocês saibam** disso.* (subjuntivo)
+- *É importante **vocês saberem** disso.* (personal infinitive — see [[b2-infinitivo-pessoal-uso]])
+
+The personal-infinitive path skips the *que* and inflects the infinitive for person/number directly. Same set of triggers (importante, necessário, melhor, possível, pena, convém, basta, pode ser) accepts both. See [[b2-infinitivo-pessoal-uso]] for the full inflection paradigm and the choice rules.
+
 ## Drills & artifacts
 
 <!-- TODO: link existing subjuntivo drills; pair with conditional system in Cluster 3. -->
+- Cross-link: see [[b2-infinitivo-pessoal-uso]] for the personal-infinitive alternative to impersonal-expression subjuntivo.
 
 ## Traps
 
