@@ -7,7 +7,7 @@ topic: tenses
 variant: shared
 status: published
 concepts: [subjunctive-triggers, subjunctive-present, relative-pronouns]
-prereqs: [b1-subj-pres-regular, b1-subj-pres-irregular, b1-relativos]
+prereqs: [b1-subj-pres-regular, b1-subj-pres-irregular, b1-relativo-que]
 ms_legacy: null
 cefr_legacy: [B1.11]
 ---
@@ -57,11 +57,11 @@ The same relative pronoun (*que*) takes indicative when the antecedent is real a
 
 ## Drills & artifacts
 
-<!-- TODO: this unit and b1-relativos (placeholder, Cluster 7 will replace with b1-rel-que etc.) should cross-link once Cluster 7 lands. The mood-distinction drill belongs here; the pronoun-form drill belongs in Cluster 7. -->
+<!-- TODO: cross-link with the relative-pronoun cluster (b1-relativo-que, b1-relativo-quem, b1-relativo-cujo, b1-relativo-formal-locativo). The mood-distinction drill belongs here; the pronoun-form drills belong in those units. -->
 
 ## Traps
 
 - **Don't apply subjuntivo to definite-antecedent clauses.** *O homem que **mora** ao lado é simpático* — indicative, because the man is real and specific. *Subjuntivo* is wrong here.
 - **Negation often forces subjuntivo.** *Não há ninguém que entenda* (subjuntivo, because no one is being asserted to exist). *Há alguém que entende* (could be either, depending on whether the speaker means a specific person).
 - **Procurar + alguém que** — almost always subjuntivo, because *procurar* implies the person isn't yet identified. *Encontrei alguém que entende* — indicative, because the person is now identified.
-- **Cluster 7 will refine the relative-pronoun system.** This unit assumes the student has at least basic *que* / *quem* / *onde* — covered (sparsely) by `b1-relativos`. When Cluster 7 lands, the prereq link can update to point at a more specific relative-pronoun unit.
+- **Relative-pronoun foundation.** This unit assumes the student knows the basic relative-pronoun system: `b1-relativo-que` (default), `b1-relativo-quem` ([+human] post-preposition), `b1-relativo-cujo` (possessive), `b1-relativo-formal-locativo` (*o qual* / *onde*). The mood-distinction taught here builds on those forms.
