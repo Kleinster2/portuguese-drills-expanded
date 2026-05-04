@@ -1,23 +1,17 @@
 #!/usr/bin/env python3
 """
-validate-units.py — Phase 2 minimal validator for docs/units/*.md.
+validate-units.py - Phase 4 full validator for docs/units/*.md.
 
-Hard-fail rules per docs/architecture/curriculum-canonical.md:
-  1. File <-> id consistency
-  2. Required frontmatter fields present
-  3. Enum values valid
-  4. Slug format (regex + length cap, variant-suffix discipline)
-  5. Concept refs exist in docs/concepts.md
-  6. Prereq refs exist as unit files
-  7. Cross-variant prereq prohibition (bp != ep)
-  8. Sequence-position variant-set rule per (cefr_level, sequence_position)
-  9. No prereq cycles
- 10. Legacy field shape (ms_legacy null|1..90, cefr_legacy [str matching /^(A1|A2|B1|B2)\\.\\d+$/])
+Hard-fail rules (rules 1-10) per docs/architecture/curriculum-canonical.md.
+Soft warnings (rules 11-13 + Phase 4 additions) surface to stderr; --strict
+promotes them to errors.
 
-Phase 4 will add soft warnings (empty published bodies, B2 -> A1 prereqs, concept count > 5).
+Usage:
+  python scripts/validate-units.py [--units-dir docs/units] [--concepts docs/concepts.md] [--strict]
 
-Usage: python scripts/validate-units.py [--units-dir docs/units] [--concepts docs/concepts.md]
-Exit codes: 0 = clean, 1 = hard-fail violations found.
+Exit codes:
+  0 = clean
+  1 = hard-fail violations found (or warnings present with --strict)
 """
 
 import argparse
@@ -41,10 +35,17 @@ TOPICS = {"verbs", "vocabulary", "tenses", "grammar", "pronunciation", "conversa
 VARIANTS = {"bp", "ep", "shared"}
 STATUSES = {"draft", "published", "archived"}
 
+REQUIRED_BODY_SECTIONS = ["Outcomes", "Vocabulary", "Grammar", "Drills & artifacts", "Traps"]
+
 SLUG_RE = re.compile(r"^(a1|a2|b1|b2)-[a-z0-9-]+$")
 SLUG_MAX_LEN = 40
 CEFR_LEGACY_RE = re.compile(r"^(A1|A2|B1|B2)\.\d+$")
 VARIANT_SUFFIX_RE = re.compile(r"-(bp|ep)$")
+SECTION_HEADER_RE = re.compile(r"^##\s+(.+?)\s*$", re.MULTILINE)
+
+# Phase 4 thresholds
+SOFT_PREREQ_COUNT_LIMIT = 10
+SOFT_CONCEPT_COUNT_LIMIT = 5
 
 
 def load_concepts(concepts_path: Path) -> set[str]:
@@ -55,34 +56,32 @@ def load_concepts(concepts_path: Path) -> set[str]:
     if start < 0 or end < 0:
         raise SystemExit(f"concepts.md missing BEGIN/END markers")
     body = text[start:end]
-    # Concept slugs are backtick-wrapped. Most live on their own bullet line
-    # (- `slug` — desc), but the vocabulary section bundles many per line as
-    # comma-separated backticks. Grab every backtick-wrapped slug.
     return set(re.findall(r"`([a-z0-9-]+)`", body))
 
 
-def parse_unit(path: Path) -> tuple[dict, list[str]]:
-    """Parse a unit file. Returns (frontmatter_dict, errors_list).
-    If errors are present, the dict may be partially populated or empty."""
+def parse_unit(path: Path) -> tuple[dict, str, list[str]]:
+    """Parse a unit file. Returns (frontmatter_dict, body_text, errors_list).
+    body_text is the full body after frontmatter (empty string if parse failed)."""
     errors: list[str] = []
     text = path.read_text(encoding="utf-8")
     if not text.startswith("---\n"):
-        return {}, [f"{path.name}: missing YAML frontmatter (no leading '---')"]
+        return {}, "", [f"{path.name}: missing YAML frontmatter (no leading '---')"]
     end = text.find("\n---\n", 4)
     if end < 0:
-        return {}, [f"{path.name}: unterminated YAML frontmatter (no closing '---')"]
+        return {}, "", [f"{path.name}: unterminated YAML frontmatter (no closing '---')"]
     fm_text = text[4:end]
+    body_text = text[end + 5:]  # after "\n---\n"
     try:
         fm = yaml.safe_load(fm_text)
     except yaml.YAMLError as exc:
-        return {}, [f"{path.name}: YAML parse error: {exc}"]
+        return {}, "", [f"{path.name}: YAML parse error: {exc}"]
     if not isinstance(fm, dict):
-        return {}, [f"{path.name}: frontmatter must be a YAML mapping"]
-    return fm, errors
+        return {}, "", [f"{path.name}: frontmatter must be a YAML mapping"]
+    return fm, body_text, errors
 
 
 def validate_unit(path: Path, fm: dict, concepts: set[str]) -> list[str]:
-    """Per-file checks (rules 1-5 + 10). Cross-file checks happen in main."""
+    """Per-file hard-fail checks (rules 1-5 + 10)."""
     errors: list[str] = []
     name = path.name
     stem = path.stem
@@ -91,8 +90,7 @@ def validate_unit(path: Path, fm: dict, concepts: set[str]) -> list[str]:
     missing = REQUIRED_FIELDS - fm.keys()
     if missing:
         errors.append(f"{name}: missing required fields: {sorted(missing)}")
-        # Bail early — most other checks need these fields
-        return errors
+        return errors  # Bail early
 
     unknown = fm.keys() - REQUIRED_FIELDS - OPTIONAL_FIELDS
     if unknown:
@@ -173,7 +171,6 @@ def check_prereq_refs(units: dict[str, dict]) -> list[str]:
             if p not in all_ids:
                 errors.append(f"{uid}: dangling prereq ref '{p}'")
                 continue
-            # Rule 7: cross-variant prohibition
             if fm["variant"] in ("bp", "ep"):
                 pre_variant = units[p]["variant"]
                 if pre_variant in ("bp", "ep") and pre_variant != fm["variant"]:
@@ -185,7 +182,7 @@ def check_prereq_refs(units: dict[str, dict]) -> list[str]:
 
 
 def check_no_cycles(units: dict[str, dict]) -> list[str]:
-    """Rule 9: prereq DAG, no cycles."""
+    """Rule 9."""
     errors = []
     WHITE, GRAY, BLACK = 0, 1, 2
     color = {uid: WHITE for uid in units}
@@ -210,8 +207,7 @@ def check_no_cycles(units: dict[str, dict]) -> list[str]:
 
 
 def check_position_variant_rule(units: dict[str, dict]) -> list[str]:
-    """Rule 8: per (cefr_level, sequence_position), the variant set must be one of
-    {shared}, {bp}, {ep}, or {bp, ep}."""
+    """Rule 8."""
     errors = []
     bucket: dict[tuple[str, float], list[tuple[str, str]]] = defaultdict(list)
     for uid, fm in units.items():
@@ -223,7 +219,6 @@ def check_position_variant_rule(units: dict[str, dict]) -> list[str]:
         if len(entries) == 1:
             continue
         variants = {v for _, v in entries}
-        # Duplicate within same variant is always a violation
         seen = defaultdict(list)
         for uid, v in entries:
             seen[v].append(uid)
@@ -243,10 +238,125 @@ def check_position_variant_rule(units: dict[str, dict]) -> list[str]:
     return errors
 
 
+# ---------- Soft warnings (Phase 4) ----------
+
+def parse_body_sections(body: str) -> dict[str, str]:
+    """Extract H2 sections from body. Returns {section_name: section_text}."""
+    sections: dict[str, str] = {}
+    matches = list(SECTION_HEADER_RE.finditer(body))
+    for i, m in enumerate(matches):
+        name = m.group(1)
+        start = m.end()
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(body)
+        sections[name] = body[start:end].strip()
+    return sections
+
+
+def section_is_empty(section_text: str) -> bool:
+    """A section is empty if its content is blank, only whitespace, or only an HTML comment placeholder."""
+    if not section_text.strip():
+        return True
+    stripped = re.sub(r"<!--.*?-->", "", section_text, flags=re.DOTALL).strip()
+    return not stripped
+
+
+def section_has_todo_marker(section_text: str) -> bool:
+    """True if the section's raw text contains an HTML comment whose first word is 'TODO'."""
+    return bool(re.search(r"<!--\s*TODO\b.*?-->", section_text, re.DOTALL))
+
+
+# Sections where empty + TODO marker is acceptable (known placeholder convention).
+# Substantive sections (Outcomes / Vocabulary / Grammar) always warn on emptiness.
+TODO_TOLERANT_SECTIONS = {"Drills & artifacts", "Traps"}
+
+
+def check_soft_warnings(units: dict[str, dict], bodies: dict[str, str]) -> list[str]:
+    """All soft warnings combined. Returns list of warning strings."""
+    warnings = []
+
+    # Rule 11: empty body section in published unit (TODO-marker-aware for Drills/Traps)
+    # Rule 11 sub: missing required body headers
+    for uid, fm in units.items():
+        if fm.get("status") != "published":
+            continue
+        body = bodies.get(uid, "")
+        sections = parse_body_sections(body)
+
+        # Missing required headers (always warn — header itself absent is structural drift)
+        missing_headers = [h for h in REQUIRED_BODY_SECTIONS if h not in sections]
+        if missing_headers:
+            warnings.append(
+                f"{uid}: missing required body sections: {missing_headers}"
+            )
+
+        # Empty sections — TODO-marker-tolerant for Drills & artifacts + Traps only
+        empty_sections = []
+        for h in REQUIRED_BODY_SECTIONS:
+            if h not in sections:
+                continue
+            if not section_is_empty(sections[h]):
+                continue
+            if h in TODO_TOLERANT_SECTIONS and section_has_todo_marker(sections[h]):
+                continue  # Known placeholder convention; suppress warning
+            empty_sections.append(h)
+        if empty_sections:
+            warnings.append(
+                f"{uid}: published unit has empty body section(s): {empty_sections}"
+            )
+
+    # Rule 12: B2 unit with A1 prereq (level skipping)
+    for uid, fm in units.items():
+        if fm.get("cefr_level") != "B2":
+            continue
+        prereqs = fm.get("prereqs", [])
+        a1_prereqs = [
+            p for p in prereqs
+            if p in units and units[p].get("cefr_level") == "A1"
+        ]
+        if a1_prereqs:
+            warnings.append(
+                f"{uid}: B2 unit with A1 prereq(s) {a1_prereqs} - "
+                f"possible level-skipping (assume transitive coverage)"
+            )
+
+    # Rule 13: concept count > 5
+    for uid, fm in units.items():
+        concepts = fm.get("concepts", [])
+        if isinstance(concepts, list) and len(concepts) > SOFT_CONCEPT_COUNT_LIMIT:
+            warnings.append(
+                f"{uid}: concept count {len(concepts)} > {SOFT_CONCEPT_COUNT_LIMIT} - "
+                f"likely under-atomized"
+            )
+
+    # Phase 4: prereq count > 10
+    for uid, fm in units.items():
+        prereqs = fm.get("prereqs", [])
+        if isinstance(prereqs, list) and len(prereqs) > SOFT_PREREQ_COUNT_LIMIT:
+            warnings.append(
+                f"{uid}: prereq count {len(prereqs)} > {SOFT_PREREQ_COUNT_LIMIT} - "
+                f"atypical, surface for review"
+            )
+
+    # Phase 4: sequence position in placeholder range (>= 100)
+    # Authored content should sit in MS-sequence interleave (1-90.x range).
+    # Positions in 200-500.xx are reserved for unauthored placeholders.
+    for uid, fm in units.items():
+        sp = fm.get("sequence_position")
+        if isinstance(sp, (int, float)) and sp >= 100:
+            warnings.append(
+                f"{uid}: sequence_position {sp} in placeholder range (>= 100) - "
+                f"reseat to MS-sequence interleave"
+            )
+
+    return warnings
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--units-dir", type=Path, default=REPO_ROOT / "docs" / "units")
     parser.add_argument("--concepts", type=Path, default=REPO_ROOT / "docs" / "concepts.md")
+    parser.add_argument("--strict", action="store_true",
+                        help="Treat soft warnings as errors (exit 1)")
     args = parser.parse_args()
 
     if not args.units_dir.exists():
@@ -262,9 +372,10 @@ def main() -> int:
 
     all_errors: list[str] = []
     units: dict[str, dict] = {}
+    bodies: dict[str, str] = {}
 
     for path in unit_paths:
-        fm, parse_errs = parse_unit(path)
+        fm, body, parse_errs = parse_unit(path)
         all_errors.extend(parse_errs)
         if not fm:
             continue
@@ -275,19 +386,37 @@ def main() -> int:
                 all_errors.append(f"duplicate id '{fm['id']}' across files")
             else:
                 units[fm["id"]] = fm
+                bodies[fm["id"]] = body
 
     all_errors.extend(check_prereq_refs(units))
     all_errors.extend(check_no_cycles(units))
     all_errors.extend(check_position_variant_rule(units))
 
+    warnings = check_soft_warnings(units, bodies)
+
     print(f"Validated {len(unit_paths)} unit files ({len(units)} parsed cleanly).")
+
     if all_errors:
         print(f"\nFAIL: {len(all_errors)} hard-fail violations:\n")
         for err in all_errors:
             print(f"  - {err}")
+        # Print warnings to stderr too
+        if warnings:
+            print(f"\nAlso {len(warnings)} soft warnings (see stderr).", file=sys.stderr)
+            for w in warnings:
+                print(f"  WARN: {w}", file=sys.stderr)
         return 1
 
-    print("OK: all hard-fail rules pass.")
+    if warnings:
+        print(f"\nOK: all hard-fail rules pass. {len(warnings)} soft warnings:\n", file=sys.stderr)
+        for w in warnings:
+            print(f"  WARN: {w}", file=sys.stderr)
+        if args.strict:
+            print(f"\n--strict: treating warnings as errors. Exit 1.", file=sys.stderr)
+            return 1
+        return 0
+
+    print("OK: all hard-fail rules pass. No soft warnings.")
     return 0
 
 
