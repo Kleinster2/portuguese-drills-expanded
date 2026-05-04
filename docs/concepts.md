@@ -110,7 +110,9 @@ When you need a new concept, add it here first (with a one-line description), th
 - `conditional-sentences` — if-then constructions
 - `conditional-conjunctions` — caso, se, embora
 - `concessive-clauses` — embora, mesmo que
-- `purpose-result-clauses` — para que, de modo que
+- `purpose-clauses` — para que, a fim de que (subjuntivo)
+- `result-clauses` — tão/tanto … que (consecutive, indicative)
+- `purpose-result-clauses` — legacy combined tag (deprecated; use `purpose-clauses` or `result-clauses`)
 - `reported-speech` — direct vs indirect speech
 - `tense-backshift` — tense shifts in reported speech (presente → imperfeito, etc.)
 - `indirect-questions` — yes/no via *se*, content via wh-words, no inversion
