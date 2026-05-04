@@ -6,7 +6,7 @@
 **Email:** dextermayo4@gmail.com
 **LinkedIn:** linkedin.com/in/dexter-mayo
 **Gender:** Female (she/her)
-**Status:** Active — four lessons completed; last was Thu 4/23 at ZACA
+**Status:** Active — five lessons completed; last was Thu 4/30 at ZACA
 **Next session:** Thursday 2026-04-30 at 6:30 PM, ZACA Cafe (426 Marcus Garvey Blvd, Bed-Stuy)
 **Primer progress:** Through Part VIII (ter + age + family + possessives). Next: Part IX (poder, querer, gostar de).
 **Referral:** Unknown (no mention of source)
@@ -78,6 +78,7 @@
 | 2026-04-28 | Gil emailed: asked to confirm tonight (Tue 4/28) or Thursday — confirmed preference for Thursday |
 | 2026-04-28 | Dexter replied: prefers Thursday; will bring her packet |
 | 2026-04-28 | Gil confirmed: Thursday 4/30 at ZACA. "Até quinta-feira!" |
+| 2026-04-30 | Session confirmed by Venmo payment ($70.00, 'Aula do dia 30 de abril. Obrigado!'). Venue: ZACA Cafe (default from profile). |
 
 ---
 
