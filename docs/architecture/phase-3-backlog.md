@@ -113,12 +113,14 @@ Pairs to create:
 
 **Additional EP twins added by Cluster 3 (conditional system):**
 
-- `b1-cond-real-bp` + `b1-cond-real-ep` (Type 1 — largely shared, but EP usage of futuro do subjuntivo in Pattern 1b differs subtly)
-- `b2-cond-irreal-bp` + `b2-cond-irreal-ep` (Type 2 — EP commonly uses imperfeito do indicativo where BP uses condicional simples)
-- `b2-cond-contra-bp` + `b2-cond-contra-ep` (Type 3 — EP commonly substitutes mais-que-perfeito do indicativo for condicional composto)
-- `b2-condicional-composto-bp` + `b2-condicional-composto-ep` (form prereq — EP often substitutes the indicative form in spoken usage)
+- ~~`b1-cond-real-bp` + `b1-cond-real-ep`~~ → **shipped** (Cluster 5b)
+- ~~`b2-cond-irreal-bp` + `b2-cond-irreal-ep`~~ → **shipped** (Cluster 5b — register-split as core content)
+- ~~`b2-cond-contra-bp` + `b2-cond-contra-ep`~~ → **shipped** (Cluster 5b — register-split as core content; Option C prereq slate selected)
+- ~~`b2-condicional-composto-bp` + `b2-condicional-composto-ep`~~ → **shipped** (Cluster 5b)
 
-4 additional `-ep` units (the original Cluster 3 list of 5 minus mais-que-perfeito-subj-ep — Cluster 4 reclassified `b2-mais-que-perfeito-subj` to shared, removing the EP-twin need). Total Cluster 5 scope: **11 new EP units**. Cluster 5 now covers the entire BP/EP variant-discipline backlog including conditional-system divergences.
+4 additional `-ep` units (the original Cluster 3 list of 5 minus mais-que-perfeito-subj-ep — Cluster 4 reclassified `b2-mais-que-perfeito-subj` to shared, removing the EP-twin need). Total Cluster 5 scope: **11 new EP units**.
+
+**Cluster 5 fully resolved (2026-05-04).** All 11 BP/EP variant-discipline twins shipped: 7 from Phase-2 split candidates (Cluster 5a) + 4 from Cluster 3 (Cluster 5b). 0 pending.
 
 **Cluster 4 also added an EP-paired authoring outside the Cluster 5 model:**
 

@@ -12,11 +12,6 @@ ms_legacy: null
 cefr_legacy: [B2.3]
 ---
 
-<!-- TODO: Future cluster — create EP twin (b2-cond-contra-ep). EP-divergent:
-     EP commonly substitutes mais-que-perfeito do indicativo (tinha falado) for
-     the condicional composto (teria falado), especially in spoken usage.
-     Examples and forms differ. -->
-
 ## Outcomes
 
 After this unit, the student can:

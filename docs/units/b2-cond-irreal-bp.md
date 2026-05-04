@@ -12,11 +12,6 @@ ms_legacy: null
 cefr_legacy: [B2.3]
 ---
 
-<!-- TODO: Future cluster — create EP twin (b2-cond-irreal-ep). EP-divergent:
-     EP commonly uses imperfeito do indicativo where BP uses condicional simples
-     (se ela soubesse, dizia em EP vs se ela soubesse, diria em BP). Examples and
-     forms differ. -->
-
 ## Outcomes
 
 After this unit, the student can:

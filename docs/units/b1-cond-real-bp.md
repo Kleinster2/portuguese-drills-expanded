@@ -12,10 +12,6 @@ ms_legacy: null
 cefr_legacy: [B2.3]
 ---
 
-<!-- TODO: Future cluster — create EP twin (b1-cond-real-ep / b2-cond-irreal-ep /
-     b2-cond-contra-ep). EP-divergent: Type 2 commonly uses imperfeito do indicativo
-     in EP where BP uses condicional simples. Examples and forms differ. -->
-
 ## Outcomes
 
 After this unit, the student can:
