@@ -191,13 +191,20 @@ Curriculum follows CEFR levels (A1-B2). See:
 Two levels of classification across all teaching content:
 
 - **Topic** (coarse) — 6 buckets in `config/dashboard.json`: verbs / vocabulary / tenses / grammar / pronunciation / conversation. Drives the dashboard filter pills.
-- **Concept** (granular) — 109 atomic concept slugs in `docs/concepts.md`. Each represents one skill the student can practice independently. Every drill is tagged with one concept; trap-inventory entries carry a `Concept:` line.
+- **Concept** (granular) — ~110 atomic concept slugs in `docs/concepts.md`. Each represents one skill the student can practice independently.
 
-**Querying:** `python scripts/topic-query.py <concept-slug>` lists matching drills + trap-inventory entries. Also supports `--list`, `--orphans` (concepts referenced but undeclared), `--uncovered` (declared but no drill).
+**Sources tagged with concepts:**
+- `config/dashboard.json` — every drill has a single `concept` field (120 drills).
+- `docs/content-manifest.json` — every worksheet, primer, and lesson page has a `concepts` array (multi-concept allowed; 24 worksheets + 1 primer so far).
+- `docs/known-trap-topics.md` — topic-specific trap entries have a `Concept:` line.
+
+**Querying:** `python scripts/topic-query.py <concept-slug>` lists matching drills + worksheets + primers + trap-inventory entries. Also supports `--list`, `--orphans` (concepts referenced but undeclared), `--uncovered` (declared but no artifact tagged).
 
 **Adding a new concept:** add the slug to `docs/concepts.md` first (between the BEGIN/END CONCEPT LIST markers), then start tagging artifacts. The query script validates against the canonical list.
 
-**Skipped for v1** — worksheets (HTML), curriculum primers (markdown narratives), diagnostic questions. Extend later if cross-referencing those proves valuable.
+**Adding a new artifact** (worksheet/primer/lesson page): append an entry to `docs/content-manifest.json` with path, variant, cefr, concepts. Use `--orphans` to confirm no undeclared concepts slipped in.
+
+**Not yet tagged:** diagnostic test questions (`config/diagnostic-test-questions-v10.9-no-hints.json`). Could extend later — ~25 questions, low priority.
 
 ### For Developers
 | Document | Description |

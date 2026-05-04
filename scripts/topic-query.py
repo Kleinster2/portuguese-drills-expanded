@@ -22,6 +22,7 @@ REPO = Path(__file__).resolve().parent.parent
 CONCEPTS_MD = REPO / "docs" / "concepts.md"
 DASHBOARD_JSON = REPO / "config" / "dashboard.json"
 TRAPS_MD = REPO / "docs" / "known-trap-topics.md"
+MANIFEST_JSON = REPO / "docs" / "content-manifest.json"
 
 
 def parse_canonical_concepts():
@@ -62,6 +63,20 @@ def parse_trap_entries():
     return entries
 
 
+def load_manifest():
+    """Return dict with worksheets, primers, lesson_pages keys (each a list)."""
+    if not MANIFEST_JSON.exists():
+        return {"worksheets": [], "primers": [], "lesson_pages": []}
+    with MANIFEST_JSON.open("r", encoding="utf-8") as f:
+        data = json.load(f)
+    # Normalize: all entries have a `concepts` array (manifest schema), drills use single `concept`.
+    return {
+        "worksheets": data.get("worksheets", []),
+        "primers": data.get("primers", []),
+        "lesson_pages": data.get("lesson_pages", []),
+    }
+
+
 def query_concept(slug):
     canonical = parse_canonical_concepts()
     if slug not in canonical:
@@ -71,6 +86,9 @@ def query_concept(slug):
 
     drills = [d for d in load_drills() if d.get("concept") == slug]
     traps = [(h, c) for (h, c) in parse_trap_entries() if c == slug]
+    manifest = load_manifest()
+    worksheets = [w for w in manifest["worksheets"] if slug in w.get("concepts", [])]
+    primers = [p for p in manifest["primers"] if slug in p.get("concepts", [])]
 
     print(f"=== Concept: {slug} ===")
     print()
@@ -83,6 +101,28 @@ def query_concept(slug):
             print(f"  [{cefr}] {d['id']}  ({topic})")
     else:
         print("Drills: none")
+    print()
+
+    if worksheets:
+        print(f"Worksheets ({len(worksheets)}):")
+        for w in sorted(worksheets, key=lambda x: x["path"]):
+            cefr = w.get("cefr", "?").upper()
+            variant = w.get("variant", "?").upper()
+            print(f"  [{variant} {cefr}] {w['path']}")
+            print(f"           {w['title']}")
+    else:
+        print("Worksheets: none")
+    print()
+
+    if primers:
+        print(f"Primers ({len(primers)}):")
+        for p in sorted(primers, key=lambda x: x["path"]):
+            cefr = p.get("cefr", "?").upper()
+            variant = p.get("variant", "?").upper()
+            print(f"  [{variant} {cefr}] {p['path']}")
+            print(f"           {p['title']}")
+    else:
+        print("Primers: none")
     print()
 
     if traps:
@@ -101,34 +141,50 @@ def list_concepts():
 
 
 def find_orphans():
-    """Concepts referenced in dashboard.json but not declared in concepts.md."""
+    """Concepts referenced in any artifact source but not declared in concepts.md."""
     canonical = parse_canonical_concepts()
     drills = load_drills()
+    manifest = load_manifest()
+
     used = {d.get("concept") for d in drills if d.get("concept")}
+    for w in manifest["worksheets"]:
+        used.update(w.get("concepts", []))
+    for p in manifest["primers"]:
+        used.update(p.get("concepts", []))
+
+    used.discard(None)
     orphans = sorted(used - canonical)
     if orphans:
-        print(f"Concepts in dashboard.json without an entry in concepts.md ({len(orphans)}):")
+        print(f"Concepts referenced by artifacts without an entry in concepts.md ({len(orphans)}):")
         for slug in orphans:
             print(f"  {slug}")
     else:
-        print("No orphans. Every drill concept is declared in docs/concepts.md.")
+        print("No orphans. Every concept used by drills, worksheets, or primers is declared in docs/concepts.md.")
 
 
 def find_uncovered():
-    """Concepts declared in concepts.md but not used by any drill."""
+    """Concepts declared in concepts.md but not used by any artifact (drills + manifest)."""
     canonical = parse_canonical_concepts()
     drills = load_drills()
+    manifest = load_manifest()
+
     used = {d.get("concept") for d in drills if d.get("concept")}
+    for w in manifest["worksheets"]:
+        used.update(w.get("concepts", []))
+    for p in manifest["primers"]:
+        used.update(p.get("concepts", []))
+    used.discard(None)
+
     uncovered = sorted(canonical - used)
     if uncovered:
-        print(f"Concepts in concepts.md with no drill ({len(uncovered)}):")
+        print(f"Concepts in concepts.md with no artifact tagged ({len(uncovered)}):")
         for slug in uncovered:
             print(f"  {slug}")
         print()
-        print("These may be intentional (covered by worksheets/primers/trap notes only)")
+        print("These may be intentional (covered only in trap notes or pedagogy doctrine)")
         print("or may indicate a gap to fill.")
     else:
-        print("Every concept in concepts.md has at least one drill.")
+        print("Every concept in concepts.md is tagged on at least one drill, worksheet, or primer.")
 
 
 def main():

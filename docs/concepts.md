@@ -124,7 +124,7 @@ When you need a new concept, add it here first (with a one-line description), th
 
 ## vocabulary
 
-- `body-parts`, `clothing`, `emotions`, `family`, `food-meals`, `greetings`, `hobbies`, `house-rooms`, `weather`, `directions`, `shopping`, `health-medical`, `technology`, `work-professions`, `common-expressions`, `false-cognates`, `idioms-proverbs`
+- `body-parts`, `clothing`, `emotions`, `family`, `food-meals`, `greetings`, `hobbies`, `house-rooms`, `weather`, `directions`, `shopping`, `health-medical`, `technology`, `work-professions`, `common-expressions`, `false-cognates`, `idioms-proverbs`, `lodging`
 
 ## pronunciation
 

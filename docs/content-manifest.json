@@ -1,0 +1,212 @@
+{
+  "_doc": "Content manifest — every static teaching artifact (worksheets, primers, lesson pages) tagged with variant, CEFR, and concept slug(s) from docs/concepts.md. Drilled artifacts (config/prompts/) live in config/dashboard.json instead. Diagnostic questions are not yet tagged here. Maintained by hand; new artifacts get added at creation time.",
+  "worksheets": [
+    {
+      "path": "printables/bp-artigos-tempo-crase-worksheet.html",
+      "title": "Detalhes em BP — Artigos, Partes do Dia e Crase nas Horas",
+      "variant": "bp",
+      "cefr": "b1",
+      "concepts": ["definite-articles", "time-expressions", "crase"]
+    },
+    {
+      "path": "printables/clitic-placement-bp-worksheet.html",
+      "title": "Pronomes Pessoais — Objeto Direto e Indireto",
+      "variant": "bp",
+      "cefr": "a1-a2",
+      "concepts": ["object-pronouns"]
+    },
+    {
+      "path": "printables/clitic-placement-ep-worksheet.html",
+      "title": "Colocação dos Pronomes — Ênclise e Próclise",
+      "variant": "ep",
+      "cefr": "a2-b1",
+      "concepts": ["object-pronouns"]
+    },
+    {
+      "path": "printables/conditional-advanced-bp-worksheet.html",
+      "title": "Imperfeito de Dupla Função: Desambiguação",
+      "variant": "bp",
+      "cefr": "b2",
+      "concepts": ["conditional-usage", "preterite-imperfect"]
+    },
+    {
+      "path": "printables/conditional-tense-bp-worksheet.html",
+      "title": "Futuro do Pretérito — O Condicional em Português Brasileiro",
+      "variant": "bp",
+      "cefr": "a2-b1",
+      "concepts": ["conditional-formation"]
+    },
+    {
+      "path": "printables/conditional-tense-ep-worksheet.html",
+      "title": "O Condicional — Conjugação, Hipotéticas e Futuro do Passado",
+      "variant": "ep",
+      "cefr": "a2-b1",
+      "concepts": ["conditional-formation", "conditional-usage"]
+    },
+    {
+      "path": "printables/conditional-usage-bp-worksheet.html",
+      "title": "Imperfeito vs Condicional: Fala Educada no Português Brasileiro",
+      "variant": "bp",
+      "cefr": "b1",
+      "concepts": ["conditional-usage", "preterite-imperfect"]
+    },
+    {
+      "path": "printables/conditional-usage-ep-worksheet.html",
+      "title": "Imperfeito vs. Condicional — Uso e Desambiguação (PE)",
+      "variant": "ep",
+      "cefr": "b1",
+      "concepts": ["conditional-usage", "preterite-imperfect"]
+    },
+    {
+      "path": "printables/contractions-worksheet.html",
+      "title": "Contrações — Preposição + Artigo",
+      "variant": "bp",
+      "cefr": "a1",
+      "concepts": ["preposition-article-contractions"]
+    },
+    {
+      "path": "printables/crase-articles-bp-worksheet.html",
+      "title": "Crase, Artigos e Contrações — a, à, ao, às, aos, àquele",
+      "variant": "bp",
+      "cefr": "b1",
+      "concepts": ["crase", "definite-articles", "preposition-article-contractions"]
+    },
+    {
+      "path": "printables/de-vs-do-worksheet.html",
+      "title": "Genérico ou Específico? — \"de\" vs \"do/da\"",
+      "variant": "bp",
+      "cefr": "a2",
+      "concepts": ["preposition-article-contractions"]
+    },
+    {
+      "path": "printables/ep-travel-compras-worksheet.html",
+      "title": "Compras — Roupa, sapatos, mercados e pagar em Portugal",
+      "variant": "ep",
+      "cefr": "a2",
+      "concepts": ["shopping", "clothing"]
+    },
+    {
+      "path": "printables/ep-travel-cortesia-worksheet.html",
+      "title": "Cortesia — Pedir, agradecer, tratar por senhor ou por tu",
+      "variant": "ep",
+      "cefr": "a2",
+      "concepts": ["register-formal-informal"]
+    },
+    {
+      "path": "printables/ep-travel-direcoes-worksheet.html",
+      "title": "Direções e Transportes — Mover-se em Portugal",
+      "variant": "ep",
+      "cefr": "a2",
+      "concepts": ["directions", "ir-transportation"]
+    },
+    {
+      "path": "printables/ep-travel-farmacia-aeroporto-worksheet.html",
+      "title": "Farmácia e Aeroporto — Pedir medicamentos, fazer check-in, resolver problemas",
+      "variant": "ep",
+      "cefr": "a2",
+      "concepts": ["health-medical"]
+    },
+    {
+      "path": "printables/ep-travel-hotel-worksheet.html",
+      "title": "No Hotel — Alojamento em Portugal",
+      "variant": "ep",
+      "cefr": "a2",
+      "concepts": ["lodging"]
+    },
+    {
+      "path": "printables/ep-travel-pessoas-worksheet.html",
+      "title": "Conhecer Pessoas — Conversar em Portugal",
+      "variant": "ep",
+      "cefr": "a2",
+      "concepts": ["self-introduction"]
+    },
+    {
+      "path": "printables/ep-travel-restaurante-worksheet.html",
+      "title": "No Restaurante — Ler a Ementa, Pedir e Pagar em Portugal",
+      "variant": "ep",
+      "cefr": "a2",
+      "concepts": ["food-meals"]
+    },
+    {
+      "path": "printables/ep-travel-transportes-worksheet.html",
+      "title": "Transportes — Comprar bilhetes, alugar carros, apanhar ferries",
+      "variant": "ep",
+      "cefr": "a2",
+      "concepts": ["ir-transportation"]
+    },
+    {
+      "path": "printables/gender-agreement-bp-worksheet.html",
+      "title": "Masculino ou Feminino? — Concordância de Gênero",
+      "variant": "bp",
+      "cefr": "a2-b1",
+      "concepts": ["adjective-agreement"]
+    },
+    {
+      "path": "printables/gender-agreement-worksheet.html",
+      "title": "Masculino ou Feminino? — Concordância de Género",
+      "variant": "ep",
+      "cefr": "a2-b1",
+      "concepts": ["adjective-agreement"]
+    },
+    {
+      "path": "printables/imperfeito-worksheet-christian.html",
+      "title": "Imperfeito — Worksheet",
+      "variant": "bp",
+      "cefr": "b1",
+      "concepts": ["preterite-imperfect"],
+      "notes": "Student name in filename — generic-audience violation; archive or rename"
+    },
+    {
+      "path": "printables/preterite-worksheet-christian.html",
+      "title": "Pretérito Perfeito (Simple Past)",
+      "variant": "bp",
+      "cefr": "a2",
+      "concepts": ["preterite-regular"],
+      "notes": "Student name in filename — generic-audience violation; archive or rename"
+    },
+    {
+      "path": "printables/preterite-worksheet-christian-2.html",
+      "title": "Pretérito Perfeito — Worksheet 2",
+      "variant": "bp",
+      "cefr": "a2",
+      "concepts": ["preterite-regular"],
+      "notes": "Student name in filename — generic-audience violation; archive or rename"
+    }
+  ],
+  "primers": [
+    {
+      "path": "Students/primer-BP.html",
+      "title": "Primer Completo — Português Brasileiro para Iniciantes",
+      "variant": "bp",
+      "cefr": "a1-a2",
+      "concepts": [
+        "regular-ar-conjugation",
+        "regular-er-conjugation",
+        "regular-ir-conjugation",
+        "ser-vs-estar",
+        "subject-identification",
+        "personal-pronouns",
+        "preposition-article-contractions",
+        "common-prepositions",
+        "future-immediate",
+        "question-words",
+        "interrogatives",
+        "irregular-verb-conjugation",
+        "possessives",
+        "numbers",
+        "family",
+        "ir-transportation",
+        "adjective-agreement",
+        "self-introduction",
+        "open-vs-closed-vowels",
+        "nasal-vowels",
+        "palatalization-d-t",
+        "final-l",
+        "lh-nh",
+        "phonetics-broad"
+      ],
+      "notes": "Multi-concept consolidated primer (12 parts). Source of truth for BP foundation as of 2026-04-23. EP equivalent pending."
+    }
+  ],
+  "lesson_pages": []
+}
