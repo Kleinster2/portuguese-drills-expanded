@@ -183,6 +183,21 @@ Curriculum follows CEFR levels (A1-B2). See:
 | [Drill Best Practices](docs/drills/DRILL_BEST_PRACTICES.md) | 10 codified practices for drill design |
 | [Drill Template](docs/drills/DRILL_TEMPLATE.md) | Ready-to-copy template implementing all best practices |
 | [Micro-Sequence Syllabus](docs/drills/syllabus-micro-sequence.md) | 90 units with per-unit vocabulary, grammar, outcomes |
+| [Concept Taxonomy](docs/concepts.md) | Granular concept slugs for cross-referencing teaching content |
+| [Known Trap Topics](docs/known-trap-topics.md) | Inventory of trap-prone topics with documented past failures |
+
+## Concept Taxonomy
+
+Two levels of classification across all teaching content:
+
+- **Topic** (coarse) — 6 buckets in `config/dashboard.json`: verbs / vocabulary / tenses / grammar / pronunciation / conversation. Drives the dashboard filter pills.
+- **Concept** (granular) — 109 atomic concept slugs in `docs/concepts.md`. Each represents one skill the student can practice independently. Every drill is tagged with one concept; trap-inventory entries carry a `Concept:` line.
+
+**Querying:** `python scripts/topic-query.py <concept-slug>` lists matching drills + trap-inventory entries. Also supports `--list`, `--orphans` (concepts referenced but undeclared), `--uncovered` (declared but no drill).
+
+**Adding a new concept:** add the slug to `docs/concepts.md` first (between the BEGIN/END CONCEPT LIST markers), then start tagging artifacts. The query script validates against the canonical list.
+
+**Skipped for v1** — worksheets (HTML), curriculum primers (markdown narratives), diagnostic questions. Extend later if cross-referencing those proves valuable.
 
 ### For Developers
 | Document | Description |

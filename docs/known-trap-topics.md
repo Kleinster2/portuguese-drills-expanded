@@ -18,6 +18,7 @@ When you hit a new failure on an unlisted topic, add an entry. When entries on a
 ## Topics with documented failures
 
 ### Preposition + article contractions (de+o=do, em+a=na)
+- **Concept:** `preposition-article-contractions`
 - **Skill:** `/exercise-draft-contractions`
 - **Traps:**
   - Generic nouns don't force contractions: *Eu gosto de café* (generic) is correct; the blank doesn't require *do*.
@@ -26,6 +27,7 @@ When you hit a new failure on an unlisted topic, add an entry. When entries on a
 - **Past failures:** Christian's contractions worksheet (Mar 2026) — *Eu gosto ___ café com leite* with answer *do* was broken because generic.
 
 ### Pronoun contractions (dele, nele, deles)
+- **Concept:** `pronoun-contractions`
 - **Skill:** none yet — separate from preposition+article above.
 - **Traps:**
   - Existing drills `contractions-de.json` and `contractions-em.json` cover the surface but no drafting skill exists.
@@ -34,6 +36,7 @@ When you hit a new failure on an unlisted topic, add an entry. When entries on a
 - **Past failures:** none documented yet — but distinct enough from preposition+article to warrant separate trap notes.
 
 ### Imperatives (BP você-form vs EP tu-form)
+- **Concept:** `imperative-mood`
 - **Skill:** none.
 - **Traps:**
   - BP instructions: *Complete, Escolha, Substitua, Reescreva, Preencha*.
@@ -43,6 +46,7 @@ When you hit a new failure on an unlisted topic, add an entry. When entries on a
 - **Past failures:** Amanda's clitic worksheet (Mar 2026) — used tu-form imperatives copied from an EP template.
 
 ### Crase (à, às)
+- **Concept:** `crase`
 - **Skill:** none.
 - **Traps:**
   - Wrong/right contrast pairs need surrounding text to lock the syntactic role.
@@ -52,6 +56,7 @@ When you hit a new failure on an unlisted topic, add an entry. When entries on a
 - **Past failures:** Amanda's crase worksheet (Apr 2026) — decontextualized *"Como vai Mariana?"* error pair.
 
 ### Place name articles (BP)
+- **Concept:** `place-name-articles`
 - **Skill:** none.
 - **Traps:**
   - Brazilian usage routinely overrides prescriptive rules.
@@ -61,6 +66,7 @@ When you hit a new failure on an unlisted topic, add an entry. When entries on a
 - **Past failures:** Christian's contractions worksheet audit (Mar 2026) — *no Brooklyn* falsely flagged as wrong by applying prescriptive rules.
 
 ### Open/closed vowel labels — phonemic integrity
+- **Concept:** `open-vs-closed-vowels`
 - **Skill:** none — covered by PEDAGOGY §27 and worksheet-review item 15b.
 - **Traps:**
   - Every "open/closed" or "nasal/oral" label needs a minimal pair in the target variant.
@@ -70,6 +76,7 @@ When you hit a new failure on an unlisted topic, add an entry. When entries on a
 - **Past failures:** primer-BP Part I (Apr 2026) — taught *está* as "open á" parallel to *café*/*avó*; same error propagated into the answer key as categorical fact.
 
 ### -ar verb vowel quality
+- **Concept:** `regular-ar-conjugation` (also relates to `open-vs-closed-vowels`)
 - **Skill:** none — covered by PEDAGOGY native-usage notes.
 - **Traps:**
   - **-ar verbs have NO open/closed O alternation.** *moro* and *mora* are both open.

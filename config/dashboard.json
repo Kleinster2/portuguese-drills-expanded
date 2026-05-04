@@ -36,721 +36,841 @@
       "id": "regular-ar",
       "topic": "verbs",
       "cefr": "a1",
-      "icon": "📚"
+      "icon": "📚",
+      "concept": "regular-ar-conjugation"
     },
     {
       "id": "regular-er",
       "topic": "verbs",
       "cefr": "a1",
-      "icon": "📚"
+      "icon": "📚",
+      "concept": "regular-er-conjugation"
     },
     {
       "id": "regular-ir",
       "topic": "verbs",
       "cefr": "a1",
-      "icon": "📚"
+      "icon": "📚",
+      "concept": "regular-ir-conjugation"
     },
     {
       "id": "irregular-verbs",
       "topic": "verbs",
       "cefr": "a1",
-      "icon": "📚"
+      "icon": "📚",
+      "concept": "irregular-verb-conjugation"
     },
     {
       "id": "ser-estar",
       "topic": "verbs",
       "cefr": "a1",
-      "icon": "📚"
+      "icon": "📚",
+      "concept": "ser-vs-estar"
     },
     {
       "id": "greetings",
       "topic": "vocabulary",
       "cefr": "a1",
-      "icon": "👋"
+      "icon": "👋",
+      "concept": "greetings"
     },
     {
       "id": "family",
       "topic": "vocabulary",
       "cefr": "a1",
-      "icon": "👨‍👩‍👧‍👦"
+      "icon": "👨‍👩‍👧‍👦",
+      "concept": "family"
     },
     {
       "id": "telling-time",
       "topic": "vocabulary",
       "cefr": "a1",
-      "icon": "🕐"
+      "icon": "🕐",
+      "concept": "time-expressions"
     },
     {
       "id": "reflexive-verbs-bp",
       "topic": "verbs",
       "cefr": "a2",
-      "icon": "📚"
+      "icon": "📚",
+      "concept": "reflexive-verbs"
     },
     {
       "id": "reflexive-verbs-ep",
       "topic": "verbs",
       "cefr": "a2",
-      "icon": "📚"
+      "icon": "📚",
+      "concept": "reflexive-verbs"
     },
     {
       "id": "subject-identification",
       "topic": "verbs",
       "cefr": "a2",
-      "icon": "🎯"
+      "icon": "🎯",
+      "concept": "subject-identification"
     },
     {
       "id": "saber-conhecer",
       "topic": "verbs",
       "cefr": "a2",
-      "icon": "🧠"
+      "icon": "🧠",
+      "concept": "saber-vs-conhecer"
     },
     {
       "id": "immediate-future",
       "topic": "tenses",
       "cefr": "a1",
-      "icon": "💡"
+      "icon": "💡",
+      "concept": "future-immediate"
     },
     {
       "id": "present-continuous-bp",
       "topic": "tenses",
       "cefr": "a2",
-      "icon": "💡"
+      "icon": "💡",
+      "concept": "present-continuous"
     },
     {
       "id": "present-continuous-ep",
       "topic": "tenses",
       "cefr": "a2",
-      "icon": "💡"
+      "icon": "💡",
+      "concept": "present-continuous"
     },
     {
       "id": "preterite-tense",
       "topic": "tenses",
       "cefr": "a2",
-      "icon": "⏮️"
+      "icon": "⏮️",
+      "concept": "preterite-regular"
     },
     {
       "id": "preterite-regular-ar",
       "topic": "tenses",
       "cefr": "a2",
-      "icon": "⏮️"
+      "icon": "⏮️",
+      "concept": "preterite-regular"
     },
     {
       "id": "preterite-regular-er-ir",
       "topic": "tenses",
       "cefr": "a2",
-      "icon": "⏮️"
+      "icon": "⏮️",
+      "concept": "preterite-regular"
     },
     {
       "id": "preterite-irregular-essential",
       "topic": "tenses",
       "cefr": "a2",
-      "icon": "⏮️"
+      "icon": "⏮️",
+      "concept": "preterite-irregular"
     },
     {
       "id": "preterite-irregular-common",
       "topic": "tenses",
       "cefr": "a2",
-      "icon": "⏮️"
+      "icon": "⏮️",
+      "concept": "preterite-irregular"
     },
     {
       "id": "preterite-irregular-additional",
       "topic": "tenses",
       "cefr": "a2",
-      "icon": "⏮️"
+      "icon": "⏮️",
+      "concept": "preterite-irregular"
     },
     {
       "id": "imperfect-tense-bp",
       "topic": "tenses",
       "cefr": "b1",
-      "icon": "💡"
+      "icon": "💡",
+      "concept": "preterite-imperfect"
     },
     {
       "id": "imperfect-tense-ep",
       "topic": "tenses",
       "cefr": "b1",
-      "icon": "💡"
+      "icon": "💡",
+      "concept": "preterite-imperfect"
     },
     {
       "id": "preterite-vs-imperfect",
       "topic": "tenses",
       "cefr": "a2",
-      "icon": "⚖️"
+      "icon": "⚖️",
+      "concept": "preterite-vs-imperfect-aspect"
     },
     {
       "id": "compound-tenses",
       "topic": "tenses",
       "cefr": "b1",
-      "icon": "💡"
+      "icon": "💡",
+      "concept": "compound-tenses"
     },
     {
       "id": "future-tense",
       "topic": "tenses",
       "cefr": "b1",
-      "icon": "💡"
+      "icon": "💡",
+      "concept": "future-tense"
     },
     {
       "id": "conditional-tense-bp",
       "topic": "tenses",
       "cefr": "a2",
-      "icon": "💡"
+      "icon": "💡",
+      "concept": "conditional-formation"
     },
     {
       "id": "conditional-usage-bp",
       "topic": "tenses",
       "cefr": "b1",
-      "icon": "💡"
+      "icon": "💡",
+      "concept": "conditional-usage"
     },
     {
       "id": "conditional-advanced-bp",
       "topic": "tenses",
       "cefr": "b2",
-      "icon": "💡"
+      "icon": "💡",
+      "concept": "conditional-formation"
     },
     {
       "id": "conditional-tense-ep",
       "topic": "tenses",
       "cefr": "a2",
-      "icon": "💡"
+      "icon": "💡",
+      "concept": "conditional-formation"
     },
     {
       "id": "conditional-usage-ep",
       "topic": "tenses",
       "cefr": "b1",
-      "icon": "💡"
+      "icon": "💡",
+      "concept": "conditional-usage"
     },
     {
       "id": "present-subjunctive",
       "topic": "tenses",
       "cefr": "b1",
-      "icon": "💡"
+      "icon": "💡",
+      "concept": "subjunctive-present"
     },
     {
       "id": "imperfect-subjunctive",
       "topic": "tenses",
       "cefr": "b2",
-      "icon": "💡"
+      "icon": "💡",
+      "concept": "subjunctive-imperfect"
     },
     {
       "id": "future-subjunctive",
       "topic": "tenses",
       "cefr": "b2",
-      "icon": "💡"
+      "icon": "💡",
+      "concept": "subjunctive-future"
     },
     {
       "id": "imperative-bp",
       "topic": "tenses",
       "cefr": "a2",
-      "icon": "💡"
+      "icon": "💡",
+      "concept": "imperative-mood"
     },
     {
       "id": "imperative-ep",
       "topic": "tenses",
       "cefr": "a2",
-      "icon": "💡"
+      "icon": "💡",
+      "concept": "imperative-mood"
     },
     {
       "id": "articles",
       "topic": "grammar",
       "cefr": "a1",
-      "icon": "📄"
+      "icon": "📄",
+      "concept": "articles-broad"
     },
     {
       "id": "noun-plurals",
       "topic": "grammar",
       "cefr": "a1",
-      "icon": "🔗"
+      "icon": "🔗",
+      "concept": "noun-plurals"
     },
     {
       "id": "adjective-agreement",
       "topic": "grammar",
       "cefr": "a1",
-      "icon": "🔗"
+      "icon": "🔗",
+      "concept": "adjective-agreement"
     },
     {
       "id": "numbers",
       "topic": "grammar",
       "cefr": "a1",
-      "icon": "🔢"
+      "icon": "🔢",
+      "concept": "numbers"
     },
     {
       "id": "colors",
       "topic": "grammar",
       "cefr": "a1",
-      "icon": "🎨"
+      "icon": "🎨",
+      "concept": "colors"
     },
     {
       "id": "days-of-week",
       "topic": "grammar",
       "cefr": "a1",
-      "icon": "📅"
+      "icon": "📅",
+      "concept": "days-of-week"
     },
     {
       "id": "time-expressions",
       "topic": "grammar",
       "cefr": "a1",
-      "icon": "🕐"
+      "icon": "🕐",
+      "concept": "time-expressions"
     },
     {
       "id": "possessives",
       "topic": "grammar",
       "cefr": "a1",
-      "icon": "👤"
+      "icon": "👤",
+      "concept": "possessives"
     },
     {
       "id": "personal-pronouns",
       "topic": "grammar",
       "cefr": "a1",
-      "icon": "🗣️"
+      "icon": "🗣️",
+      "concept": "personal-pronouns"
     },
     {
       "id": "todo-tudo",
       "topic": "grammar",
       "cefr": "a2",
-      "icon": "✨"
+      "icon": "✨",
+      "concept": "todo-vs-tudo"
     },
     {
       "id": "muito",
       "topic": "grammar",
       "cefr": "a1",
-      "icon": "📊"
+      "icon": "📊",
+      "concept": "muito"
     },
     {
       "id": "demonstratives",
       "topic": "grammar",
       "cefr": "b1",
-      "icon": "🔗"
+      "icon": "🔗",
+      "concept": "demonstratives"
     },
     {
       "id": "interrogatives",
       "topic": "grammar",
       "cefr": "a2",
-      "icon": "❓"
+      "icon": "❓",
+      "concept": "interrogatives"
     },
     {
       "id": "e-que-questions",
       "topic": "grammar",
       "cefr": "a2",
-      "icon": "💬"
+      "icon": "💬",
+      "concept": "e-que-questions"
     },
     {
       "id": "manner-adverbs",
       "topic": "grammar",
       "cefr": "a2",
-      "icon": "📖"
+      "icon": "📖",
+      "concept": "adverbs-manner"
     },
     {
       "id": "conjunctions",
       "topic": "grammar",
       "cefr": "a2",
-      "icon": "🔗"
+      "icon": "🔗",
+      "concept": "conjunctions"
     },
     {
       "id": "work-professions",
       "topic": "vocabulary",
       "cefr": "a2",
-      "icon": "💼"
+      "icon": "💼",
+      "concept": "work-professions"
     },
     {
       "id": "ir-transportation",
       "topic": "grammar",
       "cefr": "a1",
-      "icon": "🔗 '"
+      "icon": "🔗 '",
+      "concept": "ir-transportation"
     },
     {
       "id": "por-vs-para",
       "topic": "grammar",
       "cefr": "a2",
-      "icon": "⚖️"
+      "icon": "⚖️",
+      "concept": "por-vs-para"
     },
     {
       "id": "common-prepositions",
       "topic": "grammar",
       "cefr": "a1",
-      "icon": "🔤"
+      "icon": "🔤",
+      "concept": "common-prepositions"
     },
     {
       "id": "question-words",
       "topic": "grammar",
       "cefr": "a1",
-      "icon": "❓"
+      "icon": "❓",
+      "concept": "question-words"
     },
     {
       "id": "advanced-demonstratives",
       "topic": "grammar",
       "cefr": "b2",
-      "icon": "🔗"
+      "icon": "🔗",
+      "concept": "demonstratives"
     },
     {
       "id": "crase",
       "topic": "grammar",
       "cefr": "b1",
-      "icon": "🔗"
+      "icon": "🔗",
+      "concept": "crase"
     },
     {
       "id": "relative-pronouns",
       "topic": "grammar",
       "cefr": "b1",
-      "icon": "🔗"
+      "icon": "🔗",
+      "concept": "relative-pronouns"
     },
     {
       "id": "contractions-de",
       "topic": "grammar",
       "cefr": "a2",
-      "icon": "🔗"
+      "icon": "🔗",
+      "concept": "preposition-article-contractions"
     },
     {
       "id": "contractions-em",
       "topic": "grammar",
       "cefr": "a2",
-      "icon": "🔗"
+      "icon": "🔗",
+      "concept": "preposition-article-contractions"
     },
     {
       "id": "contractions-articles",
       "topic": "grammar",
       "cefr": "a1",
-      "icon": "🔗"
+      "icon": "🔗",
+      "concept": "preposition-article-contractions"
     },
     {
       "id": "syllable-stress",
       "topic": "pronunciation",
       "cefr": "b1",
-      "icon": "🔊"
+      "icon": "🔊",
+      "concept": "syllable-stress"
     },
     {
       "id": "phonetics-br",
       "topic": "pronunciation",
       "cefr": "b2",
-      "icon": "🔊"
+      "icon": "🔊",
+      "concept": "phonetics-broad"
     },
     {
       "id": "colloquial-speech",
       "topic": "conversation",
       "cefr": "b2",
-      "icon": "💬"
+      "icon": "💬",
+      "concept": "colloquial-speech"
     },
     {
       "id": "conversational-answers",
       "topic": "conversation",
       "cefr": "a2",
-      "icon": "💬"
+      "icon": "💬",
+      "concept": "conversational-answers"
     },
     {
       "id": "self-introduction",
       "topic": "conversation",
       "cefr": "a1",
-      "icon": "💬"
+      "icon": "💬",
+      "concept": "self-introduction"
     },
     {
       "id": "portuguese-for-spanish",
       "topic": "conversation",
       "cefr": "b1",
-      "icon": "💬"
+      "icon": "💬",
+      "concept": "portuguese-for-spanish"
     },
     {
       "id": "aspectual-shift-saber",
       "topic": "grammar",
       "cefr": "b1",
-      "icon": "🔀"
+      "icon": "🔀",
+      "concept": "aspectual-shift-saber"
     },
     {
       "id": "aspectual-shift-conhecer",
       "topic": "grammar",
       "cefr": "b1",
-      "icon": "🔀"
+      "icon": "🔀",
+      "concept": "aspectual-shift-conhecer"
     },
     {
       "id": "aspectual-shift-poder",
       "topic": "grammar",
       "cefr": "b1",
-      "icon": "🔀"
+      "icon": "🔀",
+      "concept": "aspectual-shift-poder"
     },
     {
       "id": "aspectual-shift-querer",
       "topic": "grammar",
       "cefr": "b1",
-      "icon": "🔀"
+      "icon": "🔀",
+      "concept": "aspectual-shift-querer"
     },
     {
       "id": "subjunctive-triggers",
       "topic": "grammar",
       "cefr": "b1",
-      "icon": "🎯"
+      "icon": "🎯",
+      "concept": "subjunctive-triggers"
     },
     {
       "id": "ter-derivatives",
       "topic": "grammar",
       "cefr": "b1",
-      "icon": "🌿"
+      "icon": "🌿",
+      "concept": "ter-derivatives"
     },
     {
       "id": "vir-derivatives",
       "topic": "grammar",
       "cefr": "b1",
-      "icon": "🌿"
+      "icon": "🌿",
+      "concept": "vir-derivatives"
     },
     {
       "id": "passive-voice",
       "topic": "grammar",
       "cefr": "b1",
-      "icon": "🔄"
+      "icon": "🔄",
+      "concept": "passive-voice"
     },
     {
       "id": "reported-speech",
       "topic": "grammar",
       "cefr": "b1",
-      "icon": "🗣️"
+      "icon": "🗣️",
+      "concept": "reported-speech"
     },
     {
       "id": "register-formal-informal",
       "topic": "conversation",
       "cefr": "b1",
-      "icon": "🎩"
+      "icon": "🎩",
+      "concept": "register-formal-informal"
     },
     {
       "id": "expressing-opinions",
       "topic": "conversation",
       "cefr": "b1",
-      "icon": "💭"
+      "icon": "💭",
+      "concept": "expressing-opinions"
     },
     {
       "id": "narration-storytelling",
       "topic": "conversation",
       "cefr": "b1",
-      "icon": "📖"
+      "icon": "📖",
+      "concept": "narration-storytelling"
     },
     {
       "id": "common-expressions",
       "topic": "vocabulary",
       "cefr": "b1",
-      "icon": "🧩"
+      "icon": "🧩",
+      "concept": "common-expressions"
     },
     {
       "id": "personal-infinitive",
       "topic": "grammar",
       "cefr": "b2",
-      "icon": "🔑"
+      "icon": "🔑",
+      "concept": "personal-infinitive"
     },
     {
       "id": "conditional-sentences",
       "topic": "grammar",
       "cefr": "b2",
-      "icon": "🔀"
+      "icon": "🔀",
+      "concept": "conditional-sentences"
     },
     {
       "id": "subjunctive-all-tenses",
       "topic": "grammar",
       "cefr": "b2",
-      "icon": "🎯"
+      "icon": "🎯",
+      "concept": "subjunctive-broad"
     },
     {
       "id": "double-participles",
       "topic": "grammar",
       "cefr": "b2",
-      "icon": "📝"
+      "icon": "📝",
+      "concept": "double-participles"
     },
     {
       "id": "concessive-clauses",
       "topic": "grammar",
       "cefr": "b2",
-      "icon": "🔗"
+      "icon": "🔗",
+      "concept": "concessive-clauses"
     },
     {
       "id": "purpose-result-clauses",
       "topic": "grammar",
       "cefr": "b2",
-      "icon": "🎯"
+      "icon": "🎯",
+      "concept": "purpose-result-clauses"
     },
     {
       "id": "compound-tenses-advanced",
       "topic": "tenses",
       "cefr": "b2",
-      "icon": "🔄"
+      "icon": "🔄",
+      "concept": "compound-tenses"
     },
     {
       "id": "progressive-all-tenses",
       "topic": "tenses",
       "cefr": "b2",
-      "icon": "🔄"
+      "icon": "🔄",
+      "concept": "progressive-broad"
     },
     {
       "id": "bp-vs-ep",
       "topic": "conversation",
       "cefr": "b2",
-      "icon": "🇧🇷🇵🇹"
+      "icon": "🇧🇷🇵🇹",
+      "concept": "bp-vs-ep-distinctions"
     },
     {
       "id": "argumentation",
       "topic": "conversation",
       "cefr": "b2",
-      "icon": "⚖️"
+      "icon": "⚖️",
+      "concept": "argumentation"
     },
     {
       "id": "false-cognates",
       "topic": "vocabulary",
       "cefr": "b2",
-      "icon": "⚠️"
+      "icon": "⚠️",
+      "concept": "false-cognates"
     },
     {
       "id": "conditional-conjunctions",
       "topic": "grammar",
       "cefr": "b2",
-      "icon": "🔗"
+      "icon": "🔗",
+      "concept": "conditional-conjunctions"
     },
     {
       "id": "academic-portuguese",
       "topic": "conversation",
       "cefr": "b2",
-      "icon": "🎓"
+      "icon": "🎓",
+      "concept": "academic-portuguese"
     },
     {
       "id": "business-portuguese",
       "topic": "conversation",
       "cefr": "b2",
-      "icon": "💼"
+      "icon": "💼",
+      "concept": "business-portuguese"
     },
     {
       "id": "media-current-events",
       "topic": "conversation",
       "cefr": "b2",
-      "icon": "📰"
+      "icon": "📰",
+      "concept": "media-current-events"
     },
     {
       "id": "idioms-proverbs",
       "topic": "vocabulary",
       "cefr": "b2",
-      "icon": "🗣️"
+      "icon": "🗣️",
+      "concept": "idioms-proverbs"
     },
     {
       "id": "preposition-collocations",
       "topic": "grammar",
       "cefr": "b2",
-      "icon": "🔗"
+      "icon": "🔗",
+      "concept": "preposition-collocations"
     },
     {
       "id": "cohesion-coherence",
       "topic": "grammar",
       "cefr": "b2",
-      "icon": "📎"
+      "icon": "📎",
+      "concept": "cohesion-coherence"
     },
     {
       "id": "months",
       "topic": "vocabulary",
       "cefr": "a1",
-      "icon": "🗓️"
+      "icon": "🗓️",
+      "concept": "months"
     },
     {
       "id": "dates",
       "topic": "vocabulary",
       "cefr": "a1",
-      "icon": "📅"
+      "icon": "📅",
+      "concept": "dates"
     },
     {
       "id": "weather",
       "topic": "vocabulary",
       "cefr": "a1",
-      "icon": "☀️"
+      "icon": "☀️",
+      "concept": "weather"
     },
     {
       "id": "food-meals",
       "topic": "vocabulary",
       "cefr": "a1",
-      "icon": "🍽️"
+      "icon": "🍽️",
+      "concept": "food-meals"
     },
     {
       "id": "house-rooms",
       "topic": "vocabulary",
       "cefr": "a1",
-      "icon": "🏠"
+      "icon": "🏠",
+      "concept": "house-rooms"
     },
     {
       "id": "body-parts",
       "topic": "vocabulary",
       "cefr": "a1",
-      "icon": "🧍"
+      "icon": "🧍",
+      "concept": "body-parts"
     },
     {
       "id": "emotions",
       "topic": "vocabulary",
       "cefr": "a1",
-      "icon": "😊"
+      "icon": "😊",
+      "concept": "emotions"
     },
     {
       "id": "clothing",
       "topic": "vocabulary",
       "cefr": "a1",
-      "icon": "👕"
+      "icon": "👕",
+      "concept": "clothing"
     },
     {
       "id": "hobbies",
       "topic": "vocabulary",
       "cefr": "a1",
-      "icon": "⚽"
+      "icon": "⚽",
+      "concept": "hobbies"
     },
     {
       "id": "directions",
       "topic": "vocabulary",
       "cefr": "a2",
-      "icon": "🧭"
+      "icon": "🧭",
+      "concept": "directions"
     },
     {
       "id": "shopping",
       "topic": "vocabulary",
       "cefr": "a2",
-      "icon": "🛒"
+      "icon": "🛒",
+      "concept": "shopping"
     },
     {
       "id": "health-medical",
       "topic": "vocabulary",
       "cefr": "a2",
-      "icon": "🏥"
+      "icon": "🏥",
+      "concept": "health-medical"
     },
     {
       "id": "technology",
       "topic": "vocabulary",
       "cefr": "a2",
-      "icon": "💻"
+      "icon": "💻",
+      "concept": "technology"
     },
     {
       "id": "demonstratives-basic",
       "topic": "grammar",
       "cefr": "a1",
-      "icon": "👉"
+      "icon": "👉",
+      "concept": "demonstratives"
     },
     {
       "id": "frequency-adverbs",
       "topic": "grammar",
       "cefr": "a1",
-      "icon": "🔄"
+      "icon": "🔄",
+      "concept": "adverbs-frequency"
     },
     {
       "id": "comparatives",
       "topic": "grammar",
       "cefr": "a2",
-      "icon": "⚖️"
+      "icon": "⚖️",
+      "concept": "adjective-comparison"
     },
     {
       "id": "superlatives",
       "topic": "grammar",
       "cefr": "a2",
-      "icon": "🏆"
+      "icon": "🏆",
+      "concept": "adjective-comparison"
     },
     {
       "id": "object-pronouns-bp",
       "topic": "grammar",
       "cefr": "b1",
-      "icon": "🎯"
+      "icon": "🎯",
+      "concept": "object-pronouns"
     },
     {
       "id": "object-pronouns-ep",
       "topic": "grammar",
       "cefr": "b1",
-      "icon": "🎯"
+      "icon": "🎯",
+      "concept": "object-pronouns"
     },
     {
       "id": "subjunctive-intro",
       "topic": "grammar",
       "cefr": "b1",
-      "icon": "🎲"
+      "icon": "🎲",
+      "concept": "subjunctive-broad"
     }
   ]
 }
