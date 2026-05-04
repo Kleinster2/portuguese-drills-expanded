@@ -115,7 +115,8 @@ When you need a new concept, add it here first (with a one-line description), th
 - `cohesion-coherence` — discourse-level connectors
 
 ### advanced
-- `passive-voice` — active vs passive
+- `passive-voice` — active vs passive (default ser-passive transformation)
+- `passive-se` — impersonal/passive *se* construction (Vendem-se livros)
 - `personal-infinitive` — inflected infinitive
 - `double-participles` — verbs with two participles (e.g., aceito/aceitado)
 
