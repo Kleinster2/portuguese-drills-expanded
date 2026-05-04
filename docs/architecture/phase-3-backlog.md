@@ -25,7 +25,49 @@ These run alongside cluster work, not as a separate phase:
 
 ## Architectural decisions locked
 
-- **Shared condicional anchor (Cluster 9 decision).** When a `variant: shared` unit needs to prereq condicional content, **prereq `b1-condicional` (the shared form anchor at 76.95)**, not `b1-condicional-bp` or `b1-condicional-ep`. The form anchor is lean — form table + irregular stems + minimal examples — and points readers to the variant units for usage detail. This locks in for upcoming Clusters 12 (concessive/purpose/result clauses use subjuntivo + condicional pairs) and 13 (argumentation register uses condicional). Don't re-litigate the choice in those clusters; just reference `b1-condicional` and move on. The variant units (`b1-condicional-bp` / `b1-condicional-ep`) remain the targets when a `variant: bp` or `variant: ep` unit needs a condicional prereq.
+- **Shared condicional anchor (Cluster 9 decision).** When a `variant: shared` unit needs to prereq condicional content, **prereq `b1-condicional` (the shared form anchor at 76.95)**, not `b1-condicional-bp` or `b1-condicional-ep`. The form anchor is lean — form table + irregular stems + minimal examples — and points readers to the variant units for usage detail. **Validated downstream by Clusters 12 (b2-conj-condicionais) and 13 (b2-argumentacao)**: both prereq `b1-condicional` cleanly. The variant units (`b1-condicional-bp` / `b1-condicional-ep`) remain the targets when a `variant: bp` or `variant: ep` unit needs a condicional prereq.
+- **Shared synthesis units list both bp and ep prereqs directly (Cluster 11 decision).** When a shared synthesis unit is explicitly ABOUT variant divergence, list both bp and ep counterparts as direct prereqs. Validator rule 7 (cross-variant prereq prohibition) only restricts bp ↔ ep chains; shared units may freely list both. Used by `b2-bp-ep-clitica-tempos` (16-prereq array spanning all Cluster 5 twins) and `b2-bp-ep-vocabulario-regional`. This pattern complements (does not overlap with) the shared-anchor pattern.
+- **Combined media+business register unit (Cluster 13 decision).** When two CEFR cells share enough formulaic conventions (B2.21 Business + B2.22 Media), one combined `b2-registro-midia-empresarial` unit covers both economically. The unit's `cefr_legacy` carries both cell IDs (`[B2.21, B2.22]`). Use this pattern when CEFR atomization is finer than pedagogically warranted; the inverse (one CEFR cell → multiple units) is more common in this corpus, but the consolidation case is also valid.
+
+## Phase 3 closeout (2026-05-04)
+
+**Main authoring complete.** All 13 clusters shipped. Final corpus: **164 units** (started Phase 2 at 129 → +35 net new through Phase 3). Within the 150-170 target.
+
+### Cluster-by-cluster outcomes
+
+| Cluster | Topic | Units shipped | Status |
+|---|---|---|---|
+| 1 | Aspectual shifts | 4 | ✓ |
+| 2 | Subjuntivo triggers | 7 | ✓ |
+| 3 | Conditional system | 5 (3 + 2 form prereqs) | ✓ |
+| 4 | Compound tenses | 7 (5 new + 2 enriched) | ✓ |
+| 5a | EP twins (Phase 2 split candidates) | 7 | ✓ |
+| 5b | EP twins (Cluster 3+4 conditionals) | 4 | ✓ |
+| 6 | Pôr/Ter/Vir derivatives | 3 | ✓ |
+| 7 | Relative pronouns | 4 | ✓ |
+| 8 | Passive voice | 2 | ✓ |
+| 9 | Reported speech + shared condicional anchor | 3 | ✓ |
+| 10 | Personal infinitive | 2 | ✓ |
+| 11 | BP vs EP deep dive | 3 | ✓ |
+| 12 | Advanced clauses | 4 (2 new + 2 enriched) | ✓ |
+| 13 | Discourse / argumentation / register | 5 (2 new + 3 enriched) | ✓ |
+
+### Side tasks remaining (carryover to Phase 4 or beyond)
+
+These items were logged during Phase 3 but didn't block any cluster. They can be picked up as opportunistic enrichments after Phase 4 (generators) lands:
+
+1. **A2.20 conjunctions atomization** — split MS6's coverage into `a2-conjuncoes-coordenativas` and `a2-conjuncoes-subordinativas`.
+2. **Pôr/vir present-tense parent units** — author dedicated `a1-por-presente-introducao` and `a1-vir-presente-introducao` micro-units.
+3. **`a1-ser-identity` article enrichment** — expand article coverage (plural, gender agreement, required-vs-omitted) within the existing productive unit. Don't extract into a new unit.
+4. **`b1-particípios-introducao`** — author dedicated past-participle introduction unit (sequence position ~46.85, before first compound use at 46.93).
+5. **Bidirectional cross-link enrichment** — `b1-subj-trigger-impessoal` should mention the personal-infinitive alternative (one-paragraph addition) to balance Cluster 10's cross-link from `b2-infinitivo-pessoal-uso`.
+6. **Sequence-position normalization audit** — verify all units that should have moved out of 200-500.xx placeholder positions did so. The few remaining (likely some Phase 2 placeholders that no Phase 3 cluster touched) can either be reseated opportunistically or remain as placeholders pending future authoring.
+
+### What's next
+
+- **Phase 4 (generators)**: Build `scripts/validate-units.py` (full version with soft warnings), `scripts/generate-cefr-primer.py`, `scripts/generate-ms-sequence.py`, `scripts/rename-unit.py`.
+- **Phase 5 (decommission)**: Move legacy `docs/drills/[A1-B2]-curriculum-primer.md` and `docs/drills/syllabus-micro-sequence.md` to `docs/archive/`. Update `add-syllabus-concept-tags.py` to read from `docs/units/`.
+- **Phase 6 (pronunciation)**: Migrate the 4-phase pronunciation curriculum into `docs/units/` under `topic: pronunciation`. Until Phase 6 lands, no `topic: pronunciation` units exist in the corpus (all current 164 units are `verbs` / `tenses` / `grammar` / `vocabulary` / `conversation`).
 
 ---
 

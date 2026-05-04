@@ -117,6 +117,7 @@ When you need a new concept, add it here first (with a one-line description), th
 - `tense-backshift` — tense shifts in reported speech (presente → imperfeito, etc.)
 - `indirect-questions` — yes/no via *se*, content via wh-words, no inversion
 - `cohesion-coherence` — discourse-level connectors
+- `textual-connectives` — additive / contrastive / consequential / enumerative / summative connectives (além disso, contudo, por conseguinte, em primeiro lugar, em suma)
 
 ### advanced
 - `passive-voice` — active vs passive (default ser-passive transformation)
