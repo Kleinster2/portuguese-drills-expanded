@@ -109,7 +109,17 @@ Pairs to create:
 - `a2-imperativo-bp` + `a2-imperativo-ep` (você-form vs tu-form commands)
 - `b1-condicional-bp` + `b1-condicional-ep` (EP imperfeito de cortesia substitution)
 
-7 new `-ep` units. The 7 existing `-bp` units have their TODO markers removed.
+7 new `-ep` units from the Phase 2 split candidates. The 7 existing `-bp` units have their TODO markers removed.
+
+**Additional EP twins added by Cluster 3 (conditional system):**
+
+- `b1-cond-real-bp` + `b1-cond-real-ep` (Type 1 — largely shared, but EP usage of futuro do subjuntivo in Pattern 1b differs subtly)
+- `b2-cond-irreal-bp` + `b2-cond-irreal-ep` (Type 2 — EP commonly uses imperfeito do indicativo where BP uses condicional simples)
+- `b2-cond-contra-bp` + `b2-cond-contra-ep` (Type 3 — EP commonly substitutes mais-que-perfeito do indicativo for condicional composto)
+- `b2-mais-que-perfeito-subj-bp` + `b2-mais-que-perfeito-subj-ep` (form prereq — usage frequency differs even where forms align)
+- `b2-condicional-composto-bp` + `b2-condicional-composto-ep` (form prereq — EP often substitutes the indicative form in spoken usage)
+
+5 additional `-ep` units, total Cluster 5 scope: **12 new EP units**. Cluster 5 now covers the entire BP/EP variant-discipline backlog including conditional-system divergences.
 
 ---
 
