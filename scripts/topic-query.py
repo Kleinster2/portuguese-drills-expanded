@@ -24,6 +24,7 @@ DASHBOARD_JSON = REPO / "config" / "dashboard.json"
 TRAPS_MD = REPO / "docs" / "known-trap-topics.md"
 MANIFEST_JSON = REPO / "docs" / "content-manifest.json"
 DIAGNOSTIC_UNITS_JSON = REPO / "config" / "diagnostic-test-unit-concepts.json"
+SYLLABUS_UNITS_JSON = REPO / "docs" / "syllabus-units.json"
 
 
 def parse_canonical_concepts():
@@ -86,6 +87,14 @@ def load_diagnostic_units():
         return json.load(f).get("units", [])
 
 
+def load_syllabus_units():
+    """Return list of CEFR curriculum units with concept tags."""
+    if not SYLLABUS_UNITS_JSON.exists():
+        return []
+    with SYLLABUS_UNITS_JSON.open("r", encoding="utf-8") as f:
+        return json.load(f).get("units", [])
+
+
 def query_concept(slug):
     canonical = parse_canonical_concepts()
     if slug not in canonical:
@@ -99,6 +108,7 @@ def query_concept(slug):
     worksheets = [w for w in manifest["worksheets"] if slug in w.get("concepts", [])]
     primers = [p for p in manifest["primers"] if slug in p.get("concepts", [])]
     diag_units = [u for u in load_diagnostic_units() if slug in u.get("concepts", [])]
+    syllabus_units = [u for u in load_syllabus_units() if slug in u.get("concepts", [])]
 
     print(f"=== Concept: {slug} ===")
     print()
@@ -146,6 +156,16 @@ def query_concept(slug):
         print("Diagnostic test units: none")
     print()
 
+    if syllabus_units:
+        print(f"CEFR curriculum units ({len(syllabus_units)}):")
+        for u in sorted(syllabus_units, key=lambda x: (x["level"], x["unit"])):
+            level = u["level"].upper()
+            section = u.get("section", "?")
+            print(f"  [{level} #{u['unit']:>2}] {u['name']}  ({section})")
+    else:
+        print("CEFR curriculum units: none")
+    print()
+
     if traps:
         print(f"Trap inventory entries ({len(traps)}):")
         for heading, _ in traps:
@@ -175,6 +195,8 @@ def find_orphans():
         used.update(p.get("concepts", []))
     for u in diag_units:
         used.update(u.get("concepts", []))
+    for u in load_syllabus_units():
+        used.update(u.get("concepts", []))
 
     used.discard(None)
     orphans = sorted(used - canonical)
@@ -183,7 +205,7 @@ def find_orphans():
         for slug in orphans:
             print(f"  {slug}")
     else:
-        print("No orphans. Every concept used by drills, worksheets, primers, or diagnostic units is declared in docs/concepts.md.")
+        print("No orphans. Every concept used by drills, worksheets, primers, diagnostic units, or syllabus units is declared in docs/concepts.md.")
 
 
 def find_uncovered():
@@ -200,6 +222,8 @@ def find_uncovered():
         used.update(p.get("concepts", []))
     for u in diag_units:
         used.update(u.get("concepts", []))
+    for u in load_syllabus_units():
+        used.update(u.get("concepts", []))
     used.discard(None)
 
     uncovered = sorted(canonical - used)
@@ -211,7 +235,7 @@ def find_uncovered():
         print("These may be intentional (covered only in trap notes or pedagogy doctrine)")
         print("or may indicate a gap to fill.")
     else:
-        print("Every concept in concepts.md is tagged on at least one drill, worksheet, primer, or diagnostic unit.")
+        print("Every concept in concepts.md is tagged on at least one artifact.")
 
 
 def main():

@@ -84,6 +84,7 @@ When you need a new concept, add it here first (with a one-line description), th
 ### derivative verbs
 - `ter-derivatives` — manter, conter, obter, deter
 - `vir-derivatives` — convir, intervir, sobrevir
+- `por-derivatives` — propor, repor, dispor, compor, expor, impor, opor, supor, depor, transpor
 
 ### adverbs
 - `adverbs-frequency` — sempre, nunca, às vezes
