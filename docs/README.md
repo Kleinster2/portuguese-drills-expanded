@@ -16,11 +16,12 @@ docs/
 
 | Document | Description |
 |----------|-------------|
-| [A1 Curriculum](drills/A1-curriculum-primer.md) | What each A1 drill teaches |
+| [Curriculum Schema](architecture/curriculum-canonical.md) | Canonical source: `docs/units/*.md` (164 units). Frontmatter spec + slug rules. |
+| [Generated CEFR Primers](drills/) | Per-level per-variant primers: `[A1\|A2\|B1\|B2]-curriculum-primer-[bp\|ep].md` (8 files) |
+| [Generated MS Sequence](drills/) | Per-variant: `syllabus-micro-sequence-[bp\|ep].md` (2 files) |
 | [Drill Template](drills/DRILL_TEMPLATE.md) | Template for creating new drills |
 | [Best Practices](drills/DRILL_BEST_PRACTICES.md) | Guidelines for quality prompts |
 | [Shareable Links](drills/SHAREABLE_LINKS.md) | How to share drill URLs |
-| [Syllabus Sequence](drills/syllabus-micro-sequence.md) | Micro-lesson sequencing |
 
 ## Pronunciation
 

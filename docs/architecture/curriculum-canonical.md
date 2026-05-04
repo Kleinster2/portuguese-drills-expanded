@@ -233,15 +233,44 @@ Note: legacy `syllabus-micro-sequence.md` is variant-mixed; the new generator em
 
 ## Migration phases
 
-| Phase | Action |
-|---|---|
-| 0 | Discovery — alignment table built |
-| 1 | **This doc — schema lock** |
-| 2 | Mechanical migration: 90 MS + 105 CEFR primer units → per-unit files. Use Phase 0 alignment table to merge the N:M cases. |
-| 3 | Author missing B1/B2 sequence-form units (~60–80, MS-grain expansion of CEFR-only material). **Pronunciation-topic units are out of scope for Phase 3** — deferred to Phase 6 with the 4-phase pronunciation-syllabus migration. |
-| 4 | Build `validate-units.py`, `generate-cefr-primer.py`, `generate-ms-sequence.py`, `rename-unit.py` |
-| 5 | Move legacy `docs/drills/[A1-B2]-curriculum-primer.md` and `docs/drills/syllabus-micro-sequence.md` to `docs/archive/`; update `add-syllabus-concept-tags.py` to read from `docs/units/` |
-| 6 | Migrate the 4-phase pronunciation curriculum (`SYLLABUS_PHASE_1.md` and the pronunciation lesson pages under `lessons/`) into `docs/units/` with `topic: pronunciation`. Until Phase 6 lands, no `topic: pronunciation` units exist in the corpus. |
+| Phase | Action | Status |
+|---|---|---|
+| 0 | Discovery — alignment table built | ✓ |
+| 1 | **This doc — schema lock** | ✓ |
+| 2 | Mechanical migration: 90 MS + 105 CEFR primer units → per-unit files | ✓ |
+| 3 | Author missing B1/B2 sequence-form units (13 clusters; ~35 net new) | ✓ |
+| 4 | Build validator + rename + 2 generators | ✓ |
+| 5 | Archive legacy primers + MS sequence; deprecate `add-syllabus-concept-tags.py` (consumer `topic-query.py` updated to read from `docs/units/`) | ✓ |
+| 6 | Migrate 4-phase pronunciation curriculum into `docs/units/` with `topic: pronunciation` | pending |
+
+## Phase 5 closeout (2026-05-04)
+
+Single canonical source of truth: **`docs/units/*.md`** (164 units).
+
+### Archived
+
+Moved to `docs/archive/` with git history preserved:
+- `A1-curriculum-primer.md`, `A2-curriculum-primer.md`, `B1-curriculum-primer.md`, `B2-curriculum-primer.md` (legacy CEFR primers)
+- `syllabus-micro-sequence.md` (legacy mixed-variant MS sequence)
+
+### Deleted
+
+- `docs/syllabus-units.json` (derived artifact, replaced by direct read from `docs/units/*.md` frontmatter)
+- `scripts/add-syllabus-concept-tags.py` (producer of the deleted JSON)
+- `restructure_curriculum*.py`, `test_parse.py`, `debug_parse.py` (5 inert one-shot scripts from Mar 2026 that mutated the legacy MS sequence; their effects are baked into the corpus, git history preserves them via commit `fd2f91b`)
+
+### Updated
+
+- `scripts/topic-query.py` — replaced `load_syllabus_units()` (read JSON) with `load_canonical_units()` (parse `docs/units/*.md` frontmatter). Display shows level + position + variant + slug + section.
+- `CLAUDE.md` — curriculum sections point at `docs/units/*.md` as canonical, generated CEFR primers (8 files) + MS sequences (2 files) as artifacts.
+- `docs/README.md` — same.
+- This doc — Phase 5 closeout section + migration phases status updates.
+
+### Generated artifacts (refresh on demand)
+
+Run `python scripts/generate-cefr-primer.py --all` after editing units → produces 8 `docs/drills/[level]-curriculum-primer-[variant].md` files.
+
+Run `python scripts/generate-ms-sequence.py --all` → produces 2 `docs/drills/syllabus-micro-sequence-[variant].md` files.
 
 Final corpus target: ~150–170 units.
 

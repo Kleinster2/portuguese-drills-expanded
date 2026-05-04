@@ -160,11 +160,14 @@ Each unit should target ONE specific concept. When in doubt, split rather than c
 - Units can be combined in multi-drill sessions when broader practice is needed
 
 ### CEFR Alignment
-Curriculum follows CEFR levels (A1-B2). See:
-- [A1 Curriculum](docs/drills/A1-curriculum-primer.md) - 27 units
-- [A2 Curriculum](docs/drills/A2-curriculum-primer.md) - 31 units
-- [B1 Curriculum](docs/drills/B1-curriculum-primer.md) - 24 units
-- [B2 Curriculum](docs/drills/B2-curriculum-primer.md) - 23 units
+Curriculum follows CEFR levels (A1-B2). Canonical source is `docs/units/*.md` (164 unit files; single source of truth as of Phase 5). Per-level CEFR primers are now generated artifacts at `docs/drills/[level]-curriculum-primer-[bp|ep].md` (8 files: A1/A2/B1/B2 × BP/EP). Run `python scripts/generate-cefr-primer.py --all` to regenerate. Legacy primers archived at `docs/archive/`.
+
+| Level | BP primer | EP primer |
+|-------|-----------|-----------|
+| A1 | [A1 BP](docs/drills/A1-curriculum-primer-bp.md) | [A1 EP](docs/drills/A1-curriculum-primer-ep.md) |
+| A2 | [A2 BP](docs/drills/A2-curriculum-primer-bp.md) | [A2 EP](docs/drills/A2-curriculum-primer-ep.md) |
+| B1 | [B1 BP](docs/drills/B1-curriculum-primer-bp.md) | [B1 EP](docs/drills/B1-curriculum-primer-ep.md) |
+| B2 | [B2 BP](docs/drills/B2-curriculum-primer-bp.md) | [B2 EP](docs/drills/B2-curriculum-primer-ep.md) |
 
 ## Documentation
 
@@ -182,7 +185,8 @@ Curriculum follows CEFR levels (A1-B2). See:
 | [Pedagogy](PEDAGOGY.md) | **Governing document** — teaching methodology, variant rules, native usage filter |
 | [Drill Best Practices](docs/drills/DRILL_BEST_PRACTICES.md) | 10 codified practices for drill design |
 | [Drill Template](docs/drills/DRILL_TEMPLATE.md) | Ready-to-copy template implementing all best practices |
-| [Micro-Sequence Syllabus](docs/drills/syllabus-micro-sequence.md) | 90 units with per-unit vocabulary, grammar, outcomes |
+| Micro-Sequence Syllabus | Generated: [BP](docs/drills/syllabus-micro-sequence-bp.md) (152 units) · [EP](docs/drills/syllabus-micro-sequence-ep.md) (147 units). Source: `docs/units/*.md`. Legacy mixed-variant single-file archived at `docs/archive/`. |
+| [Curriculum Canonical Schema](docs/architecture/curriculum-canonical.md) | The frontmatter spec + slug rules + validator rules for `docs/units/*.md` |
 | [Concept Taxonomy](docs/concepts.md) | Granular concept slugs for cross-referencing teaching content |
 | [Known Trap Topics](docs/known-trap-topics.md) | Inventory of trap-prone topics with documented past failures |
 
@@ -198,9 +202,9 @@ Two levels of classification across all teaching content:
 - `docs/content-manifest.json` — every worksheet, primer, and lesson page has a `concepts` array (21 worksheets + 1 primer; 3 archived).
 - `docs/known-trap-topics.md` — topic-specific trap entries have a `Concept:` line.
 - `config/diagnostic-test-unit-concepts.json` — 66/74 diagnostic test units tagged. One unit covers ~4–12 questions, transitively tagging ~300 of the 350 questions.
-- `docs/syllabus-units.json` — 104/105 CEFR curriculum units tagged (the only untagged is the B2 "Capstone Synthesis" meta unit). Generated from the 4 primer markdown files in `docs/drills/` by `scripts/add-syllabus-concept-tags.py`.
+- `docs/units/*.md` — 164 canonical curriculum units, each with `concepts:` array in frontmatter (Phase 5 source-of-truth; replaced the legacy `docs/syllabus-units.json`).
 
-**Querying:** `python scripts/topic-query.py <concept-slug>` lists matching drills + worksheets + primers + diagnostic units + CEFR curriculum units + trap-inventory entries. Also supports `--list`, `--orphans` (concepts referenced but undeclared), `--uncovered` (declared but no artifact tagged).
+**Querying:** `python scripts/topic-query.py <concept-slug>` lists matching drills + worksheets + primers + diagnostic units + curriculum units + trap-inventory entries. Also supports `--list`, `--orphans` (concepts referenced but undeclared), `--uncovered` (declared but no artifact tagged).
 
 **Adding a new concept:** add the slug to `docs/concepts.md` first (between the BEGIN/END CONCEPT LIST markers), then start tagging artifacts. The query script validates against the canonical list.
 
@@ -208,7 +212,7 @@ Two levels of classification across all teaching content:
 
 **Adding a new diagnostic unit:** add an entry to the `units` array in `config/diagnostic-test-unit-concepts.json` (run `scripts/add-diagnostic-concept-tags.py` to regenerate from the question source).
 
-**Adding a new CEFR curriculum unit:** add it to the relevant `docs/drills/[LEVEL]-curriculum-primer.md`, then update the MAPPING in `scripts/add-syllabus-concept-tags.py` and re-run the script to refresh `docs/syllabus-units.json`.
+**Adding a new curriculum unit:** create a file at `docs/units/[slug].md` per the schema in `docs/architecture/curriculum-canonical.md`. Run `python scripts/validate-units.py` to check it. Run `python scripts/generate-cefr-primer.py --all` and `python scripts/generate-ms-sequence.py --all` to refresh the generated artifacts in `docs/drills/`.
 
 ### For Developers
 | Document | Description |

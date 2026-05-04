@@ -3,19 +3,24 @@
 Usage:
     python scripts/topic-query.py <concept-slug>      # show everything for one concept
     python scripts/topic-query.py --list              # list all canonical concepts
-    python scripts/topic-query.py --orphans           # concepts in dashboard.json not in concepts.md
-    python scripts/topic-query.py --uncovered         # concepts in concepts.md with no drills
+    python scripts/topic-query.py --orphans           # concepts referenced by artifacts but missing from concepts.md
+    python scripts/topic-query.py --uncovered         # concepts in concepts.md with no artifact tagged
 
 Sources:
     docs/concepts.md            -- canonical concept list
+    docs/units/*.md             -- canonical curriculum units (Phase 5 source-of-truth)
     config/dashboard.json       -- drill -> concept mapping
     docs/known-trap-topics.md   -- trap inventory entries with `Concept:` markers
+    docs/content-manifest.json  -- worksheet/primer/lesson manifest
+    config/diagnostic-test-unit-concepts.json -- diagnostic test units
 """
 
 import json
 import re
 import sys
 from pathlib import Path
+
+import yaml
 
 
 REPO = Path(__file__).resolve().parent.parent
@@ -24,7 +29,16 @@ DASHBOARD_JSON = REPO / "config" / "dashboard.json"
 TRAPS_MD = REPO / "docs" / "known-trap-topics.md"
 MANIFEST_JSON = REPO / "docs" / "content-manifest.json"
 DIAGNOSTIC_UNITS_JSON = REPO / "config" / "diagnostic-test-unit-concepts.json"
-SYLLABUS_UNITS_JSON = REPO / "docs" / "syllabus-units.json"
+UNITS_DIR = REPO / "docs" / "units"
+
+TOPIC_TO_SECTION = {
+    "verbs": "Verb System",
+    "tenses": "Tenses",
+    "grammar": "Grammar",
+    "vocabulary": "Vocabulary",
+    "pronunciation": "Pronunciation",
+    "conversation": "Communication",
+}
 
 
 def parse_canonical_concepts():
@@ -87,12 +101,42 @@ def load_diagnostic_units():
         return json.load(f).get("units", [])
 
 
-def load_syllabus_units():
-    """Return list of CEFR curriculum units with concept tags."""
-    if not SYLLABUS_UNITS_JSON.exists():
+def load_canonical_units():
+    """Return list of curriculum unit dicts read from docs/units/*.md frontmatter.
+
+    Replaces the legacy syllabus-units.json (deprecated in Phase 5). Each entry
+    carries: id (slug), level (lowercase cefr_level), unit (sequence_position
+    as float for sort key), name (title), section (explicit or default-from-topic),
+    variant, concepts.
+    """
+    if not UNITS_DIR.exists():
         return []
-    with SYLLABUS_UNITS_JSON.open("r", encoding="utf-8") as f:
-        return json.load(f).get("units", [])
+    units = []
+    for path in sorted(UNITS_DIR.glob("*.md")):
+        text = path.read_text(encoding="utf-8")
+        if not text.startswith("---\n"):
+            continue
+        end = text.find("\n---\n", 4)
+        if end < 0:
+            continue
+        try:
+            fm = yaml.safe_load(text[4:end])
+        except yaml.YAMLError:
+            continue
+        if not isinstance(fm, dict):
+            continue
+        cefr_level = fm.get("cefr_level", "")
+        topic = fm.get("topic", "")
+        units.append({
+            "id": fm.get("id", path.stem),
+            "level": cefr_level.lower() if cefr_level else "",
+            "unit": float(fm.get("sequence_position", 0)),
+            "name": fm.get("title", fm.get("id", path.stem)),
+            "section": fm.get("section") or TOPIC_TO_SECTION.get(topic, "Other"),
+            "variant": fm.get("variant", "shared"),
+            "concepts": fm.get("concepts", []) or [],
+        })
+    return units
 
 
 def query_concept(slug):
@@ -108,7 +152,7 @@ def query_concept(slug):
     worksheets = [w for w in manifest["worksheets"] if slug in w.get("concepts", [])]
     primers = [p for p in manifest["primers"] if slug in p.get("concepts", [])]
     diag_units = [u for u in load_diagnostic_units() if slug in u.get("concepts", [])]
-    syllabus_units = [u for u in load_syllabus_units() if slug in u.get("concepts", [])]
+    canonical_units = [u for u in load_canonical_units() if slug in u.get("concepts", [])]
 
     print(f"=== Concept: {slug} ===")
     print()
@@ -156,14 +200,15 @@ def query_concept(slug):
         print("Diagnostic test units: none")
     print()
 
-    if syllabus_units:
-        print(f"CEFR curriculum units ({len(syllabus_units)}):")
-        for u in sorted(syllabus_units, key=lambda x: (x["level"], x["unit"])):
+    if canonical_units:
+        print(f"Curriculum units ({len(canonical_units)}):")
+        for u in sorted(canonical_units, key=lambda x: (x["level"], x["unit"])):
             level = u["level"].upper()
             section = u.get("section", "?")
-            print(f"  [{level} #{u['unit']:>2}] {u['name']}  ({section})")
+            variant = u.get("variant", "shared")
+            print(f"  [{level} {u['unit']:>5} {variant:>6}] {u['id']}  ({section})")
     else:
-        print("CEFR curriculum units: none")
+        print("Curriculum units: none")
     print()
 
     if traps:
@@ -195,7 +240,7 @@ def find_orphans():
         used.update(p.get("concepts", []))
     for u in diag_units:
         used.update(u.get("concepts", []))
-    for u in load_syllabus_units():
+    for u in load_canonical_units():
         used.update(u.get("concepts", []))
 
     used.discard(None)
@@ -205,7 +250,7 @@ def find_orphans():
         for slug in orphans:
             print(f"  {slug}")
     else:
-        print("No orphans. Every concept used by drills, worksheets, primers, diagnostic units, or syllabus units is declared in docs/concepts.md.")
+        print("No orphans. Every concept used by drills, worksheets, primers, diagnostic units, or curriculum units is declared in docs/concepts.md.")
 
 
 def find_uncovered():
@@ -222,7 +267,7 @@ def find_uncovered():
         used.update(p.get("concepts", []))
     for u in diag_units:
         used.update(u.get("concepts", []))
-    for u in load_syllabus_units():
+    for u in load_canonical_units():
         used.update(u.get("concepts", []))
     used.discard(None)
 
