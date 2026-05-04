@@ -61,7 +61,7 @@ Added Christian (B1, Brazilian Portuguese) to the knowledge base.
 Created first printable worksheet for tutoring sessions.
 
 **Files created:**
-- `printables/preterite-worksheet-christian.html` - 70-exercise preterite tense worksheet
+- `printables/archive/preterite-worksheet-christian.html` - 70-exercise preterite tense worksheet
 
 **Features:**
 - Conjugation reference tables (regular + 12 irregular verbs)

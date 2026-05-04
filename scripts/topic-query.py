@@ -23,6 +23,7 @@ CONCEPTS_MD = REPO / "docs" / "concepts.md"
 DASHBOARD_JSON = REPO / "config" / "dashboard.json"
 TRAPS_MD = REPO / "docs" / "known-trap-topics.md"
 MANIFEST_JSON = REPO / "docs" / "content-manifest.json"
+DIAGNOSTIC_UNITS_JSON = REPO / "config" / "diagnostic-test-unit-concepts.json"
 
 
 def parse_canonical_concepts():
@@ -77,6 +78,14 @@ def load_manifest():
     }
 
 
+def load_diagnostic_units():
+    """Return list of diagnostic test units with concept tags."""
+    if not DIAGNOSTIC_UNITS_JSON.exists():
+        return []
+    with DIAGNOSTIC_UNITS_JSON.open("r", encoding="utf-8") as f:
+        return json.load(f).get("units", [])
+
+
 def query_concept(slug):
     canonical = parse_canonical_concepts()
     if slug not in canonical:
@@ -89,6 +98,7 @@ def query_concept(slug):
     manifest = load_manifest()
     worksheets = [w for w in manifest["worksheets"] if slug in w.get("concepts", [])]
     primers = [p for p in manifest["primers"] if slug in p.get("concepts", [])]
+    diag_units = [u for u in load_diagnostic_units() if slug in u.get("concepts", [])]
 
     print(f"=== Concept: {slug} ===")
     print()
@@ -125,6 +135,17 @@ def query_concept(slug):
         print("Primers: none")
     print()
 
+    if diag_units:
+        total_qs = sum(u.get("question_count", 0) for u in diag_units)
+        print(f"Diagnostic test units ({len(diag_units)}, ~{total_qs} questions):")
+        for u in sorted(diag_units, key=lambda x: x["unit"]):
+            phase = u.get("phase", "?")
+            qc = u.get("question_count", "?")
+            print(f"  [phase {phase}] unit {u['unit']:>3}: {u['name']}  ({qc}q)")
+    else:
+        print("Diagnostic test units: none")
+    print()
+
     if traps:
         print(f"Trap inventory entries ({len(traps)}):")
         for heading, _ in traps:
@@ -145,12 +166,15 @@ def find_orphans():
     canonical = parse_canonical_concepts()
     drills = load_drills()
     manifest = load_manifest()
+    diag_units = load_diagnostic_units()
 
     used = {d.get("concept") for d in drills if d.get("concept")}
     for w in manifest["worksheets"]:
         used.update(w.get("concepts", []))
     for p in manifest["primers"]:
         used.update(p.get("concepts", []))
+    for u in diag_units:
+        used.update(u.get("concepts", []))
 
     used.discard(None)
     orphans = sorted(used - canonical)
@@ -159,20 +183,23 @@ def find_orphans():
         for slug in orphans:
             print(f"  {slug}")
     else:
-        print("No orphans. Every concept used by drills, worksheets, or primers is declared in docs/concepts.md.")
+        print("No orphans. Every concept used by drills, worksheets, primers, or diagnostic units is declared in docs/concepts.md.")
 
 
 def find_uncovered():
-    """Concepts declared in concepts.md but not used by any artifact (drills + manifest)."""
+    """Concepts declared in concepts.md but not used by any artifact (drills + manifest + diagnostic)."""
     canonical = parse_canonical_concepts()
     drills = load_drills()
     manifest = load_manifest()
+    diag_units = load_diagnostic_units()
 
     used = {d.get("concept") for d in drills if d.get("concept")}
     for w in manifest["worksheets"]:
         used.update(w.get("concepts", []))
     for p in manifest["primers"]:
         used.update(p.get("concepts", []))
+    for u in diag_units:
+        used.update(u.get("concepts", []))
     used.discard(None)
 
     uncovered = sorted(canonical - used)
@@ -184,7 +211,7 @@ def find_uncovered():
         print("These may be intentional (covered only in trap notes or pedagogy doctrine)")
         print("or may indicate a gap to fill.")
     else:
-        print("Every concept in concepts.md is tagged on at least one drill, worksheet, or primer.")
+        print("Every concept in concepts.md is tagged on at least one drill, worksheet, primer, or diagnostic unit.")
 
 
 def main():

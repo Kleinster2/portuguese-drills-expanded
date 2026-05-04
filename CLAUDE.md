@@ -195,16 +195,17 @@ Two levels of classification across all teaching content:
 
 **Sources tagged with concepts:**
 - `config/dashboard.json` — every drill has a single `concept` field (120 drills).
-- `docs/content-manifest.json` — every worksheet, primer, and lesson page has a `concepts` array (multi-concept allowed; 24 worksheets + 1 primer so far).
+- `docs/content-manifest.json` — every worksheet, primer, and lesson page has a `concepts` array (21 worksheets + 1 primer; 3 archived).
 - `docs/known-trap-topics.md` — topic-specific trap entries have a `Concept:` line.
+- `config/diagnostic-test-unit-concepts.json` — 66/74 diagnostic test units tagged with `concepts` array (the 8 untagged are verb pairs and distinction-pair units with no clean concept fit). One unit covers ~4–12 questions, so this transitively tags ~300 of the 350 questions.
 
-**Querying:** `python scripts/topic-query.py <concept-slug>` lists matching drills + worksheets + primers + trap-inventory entries. Also supports `--list`, `--orphans` (concepts referenced but undeclared), `--uncovered` (declared but no artifact tagged).
+**Querying:** `python scripts/topic-query.py <concept-slug>` lists matching drills + worksheets + primers + diagnostic units + trap-inventory entries. Also supports `--list`, `--orphans` (concepts referenced but undeclared), `--uncovered` (declared but no artifact tagged).
 
 **Adding a new concept:** add the slug to `docs/concepts.md` first (between the BEGIN/END CONCEPT LIST markers), then start tagging artifacts. The query script validates against the canonical list.
 
 **Adding a new artifact** (worksheet/primer/lesson page): append an entry to `docs/content-manifest.json` with path, variant, cefr, concepts. Use `--orphans` to confirm no undeclared concepts slipped in.
 
-**Not yet tagged:** diagnostic test questions (`config/diagnostic-test-questions-v10.9-no-hints.json`). Could extend later — ~25 questions, low priority.
+**Adding a new diagnostic unit:** add an entry to the `units` array in `config/diagnostic-test-unit-concepts.json` (run `scripts/add-diagnostic-concept-tags.py` to regenerate from the question source).
 
 ### For Developers
 | Document | Description |

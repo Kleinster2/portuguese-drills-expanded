@@ -1,0 +1,658 @@
+{
+  "_doc": "Concept tags per diagnostic test unit. Read by scripts/topic-query.py to cross-reference diagnostic questions with the concept taxonomy in docs/concepts.md. Untagged units are left as `concepts: []` — these are intentionally not mapped (verb pairs, distinction pairs, idioms without a clean concept fit).",
+  "source": "config/diagnostic-test-questions-v10.9-no-hints.json",
+  "units": [
+    {
+      "unit": 1,
+      "name": "Identity Statements",
+      "phase": 1,
+      "question_count": 4,
+      "concepts": [
+        "self-introduction"
+      ]
+    },
+    {
+      "unit": 2,
+      "name": "Origin with Contractions",
+      "phase": 1,
+      "question_count": 5,
+      "concepts": [
+        "self-introduction",
+        "preposition-article-contractions"
+      ]
+    },
+    {
+      "unit": 3,
+      "name": "Definite Articles",
+      "phase": 1,
+      "question_count": 3,
+      "concepts": [
+        "definite-articles"
+      ]
+    },
+    {
+      "unit": 4,
+      "name": "Indefinite Articles",
+      "phase": 1,
+      "question_count": 4,
+      "concepts": [
+        "articles-broad"
+      ]
+    },
+    {
+      "unit": 5,
+      "name": "Verb Estar",
+      "phase": 1,
+      "question_count": 5,
+      "concepts": [
+        "ser-vs-estar"
+      ]
+    },
+    {
+      "unit": 6,
+      "name": "Adjective Agreement",
+      "phase": 1,
+      "question_count": 5,
+      "concepts": [
+        "adjective-agreement"
+      ]
+    },
+    {
+      "unit": 7,
+      "name": "Basic -AR Verbs",
+      "phase": 1,
+      "question_count": 1,
+      "concepts": [
+        "regular-ar-conjugation"
+      ]
+    },
+    {
+      "unit": 8,
+      "name": "Basic -AR Verbs",
+      "phase": 1,
+      "question_count": 1,
+      "concepts": [
+        "regular-ar-conjugation"
+      ]
+    },
+    {
+      "unit": 10,
+      "name": "Basic -AR Verbs",
+      "phase": 1,
+      "question_count": 1,
+      "concepts": [
+        "regular-ar-conjugation"
+      ]
+    },
+    {
+      "unit": 11,
+      "name": "Verb Ficar",
+      "phase": 1,
+      "question_count": 8,
+      "concepts": []
+    },
+    {
+      "unit": 12,
+      "name": "Verb Estar",
+      "phase": 1,
+      "question_count": 7,
+      "concepts": [
+        "ser-vs-estar"
+      ]
+    },
+    {
+      "unit": 13,
+      "name": "Location Prepositions",
+      "phase": 1,
+      "question_count": 1,
+      "concepts": [
+        "common-prepositions"
+      ]
+    },
+    {
+      "unit": 15,
+      "name": "Negation with Não",
+      "phase": 1,
+      "question_count": 4,
+      "concepts": []
+    },
+    {
+      "unit": 16,
+      "name": "Verb Ter",
+      "phase": 1,
+      "question_count": 3,
+      "concepts": [
+        "irregular-verb-conjugation"
+      ]
+    },
+    {
+      "unit": 20,
+      "name": "Demonstratives",
+      "phase": 2,
+      "question_count": 6,
+      "concepts": [
+        "demonstratives"
+      ]
+    },
+    {
+      "unit": 21,
+      "name": "Verb Precisar de",
+      "phase": 1,
+      "question_count": 10,
+      "concepts": [
+        "preposition-collocations"
+      ]
+    },
+    {
+      "unit": 22,
+      "name": "Pessoa vs Gente",
+      "phase": 2,
+      "question_count": 6,
+      "concepts": []
+    },
+    {
+      "unit": 23,
+      "name": "Bom vs Bem",
+      "phase": 2,
+      "question_count": 6,
+      "concepts": []
+    },
+    {
+      "unit": 24,
+      "name": "Regular -ER Verbs",
+      "phase": 2,
+      "question_count": 10,
+      "concepts": [
+        "regular-er-conjugation"
+      ]
+    },
+    {
+      "unit": 25,
+      "name": "Present Tense Verb Forms",
+      "phase": 2,
+      "question_count": 9,
+      "concepts": [
+        "present-tense"
+      ]
+    },
+    {
+      "unit": 26,
+      "name": "Present Tense Verb Forms",
+      "phase": 2,
+      "question_count": 9,
+      "concepts": [
+        "present-tense"
+      ]
+    },
+    {
+      "unit": 27,
+      "name": "Verb Gostar de",
+      "phase": 2,
+      "question_count": 10,
+      "concepts": [
+        "preposition-collocations"
+      ]
+    },
+    {
+      "unit": 28,
+      "name": "Regular -IR Verbs",
+      "phase": 2,
+      "question_count": 10,
+      "concepts": [
+        "regular-ir-conjugation"
+      ]
+    },
+    {
+      "unit": 29,
+      "name": "Future with Ir + Infinitive",
+      "phase": 2,
+      "question_count": 10,
+      "concepts": [
+        "future-immediate"
+      ]
+    },
+    {
+      "unit": 30,
+      "name": "Present Tense Verb Forms",
+      "phase": 2,
+      "question_count": 9,
+      "concepts": [
+        "present-tense"
+      ]
+    },
+    {
+      "unit": 31,
+      "name": "Porque Variations",
+      "phase": 3,
+      "question_count": 6,
+      "concepts": []
+    },
+    {
+      "unit": 32,
+      "name": "Common Question Words",
+      "phase": 2,
+      "question_count": 10,
+      "concepts": [
+        "question-words"
+      ]
+    },
+    {
+      "unit": 33,
+      "name": "Possessive Adjectives",
+      "phase": 2,
+      "question_count": 8,
+      "concepts": [
+        "possessives"
+      ]
+    },
+    {
+      "unit": 34,
+      "name": "Possessive Adjectives",
+      "phase": 2,
+      "question_count": 8,
+      "concepts": [
+        "possessives"
+      ]
+    },
+    {
+      "unit": 35,
+      "name": "Possessive Adjectives",
+      "phase": 2,
+      "question_count": 6,
+      "concepts": [
+        "possessives"
+      ]
+    },
+    {
+      "unit": 36,
+      "name": "Preterite Tense - Regular Verbs",
+      "phase": 2,
+      "question_count": 12,
+      "concepts": [
+        "preterite-regular"
+      ]
+    },
+    {
+      "unit": 37,
+      "name": "Preterite Tense - Regular Verbs",
+      "phase": 2,
+      "question_count": 9,
+      "concepts": [
+        "preterite-regular"
+      ]
+    },
+    {
+      "unit": 38,
+      "name": "Preterite Tense - Irregular Verbs",
+      "phase": 2,
+      "question_count": 9,
+      "concepts": [
+        "preterite-irregular"
+      ]
+    },
+    {
+      "unit": 39,
+      "name": "Preterite Tense - Irregular Verbs",
+      "phase": 2,
+      "question_count": 9,
+      "concepts": [
+        "preterite-irregular"
+      ]
+    },
+    {
+      "unit": 40,
+      "name": "Preterite Tense - Irregular Verbs",
+      "phase": 2,
+      "question_count": 3,
+      "concepts": [
+        "preterite-irregular"
+      ]
+    },
+    {
+      "unit": 41,
+      "name": "Preterite Tense - Irregular Verbs",
+      "phase": 2,
+      "question_count": 3,
+      "concepts": [
+        "preterite-irregular"
+      ]
+    },
+    {
+      "unit": 42,
+      "name": "Irregular Preterite - Poder/Pôr/Saber/Querer",
+      "phase": 2,
+      "question_count": 4,
+      "concepts": [
+        "preterite-irregular"
+      ]
+    },
+    {
+      "unit": 43,
+      "name": "Contractions with Preposition A",
+      "phase": 2,
+      "question_count": 6,
+      "concepts": [
+        "preposition-article-contractions",
+        "crase"
+      ]
+    },
+    {
+      "unit": 44,
+      "name": "Prepositions Por and Para",
+      "phase": 2,
+      "question_count": 4,
+      "concepts": [
+        "por-vs-para"
+      ]
+    },
+    {
+      "unit": 45,
+      "name": "Imperfect Tense",
+      "phase": 3,
+      "question_count": 2,
+      "concepts": [
+        "preterite-imperfect"
+      ]
+    },
+    {
+      "unit": 46,
+      "name": "Imperfect Tense",
+      "phase": 3,
+      "question_count": 3,
+      "concepts": [
+        "preterite-imperfect"
+      ]
+    },
+    {
+      "unit": 47,
+      "name": "Comparatives",
+      "phase": 3,
+      "question_count": 4,
+      "concepts": [
+        "adjective-comparison"
+      ]
+    },
+    {
+      "unit": 48,
+      "name": "Superlatives",
+      "phase": 3,
+      "question_count": 4,
+      "concepts": [
+        "adjective-comparison"
+      ]
+    },
+    {
+      "unit": 49,
+      "name": "Telling Time",
+      "phase": 3,
+      "question_count": 4,
+      "concepts": [
+        "time-expressions"
+      ]
+    },
+    {
+      "unit": 50,
+      "name": "Direct Object Pronouns",
+      "phase": 2,
+      "question_count": 4,
+      "concepts": [
+        "object-pronouns"
+      ]
+    },
+    {
+      "unit": 51,
+      "name": "Indirect Object Pronouns",
+      "phase": 3,
+      "question_count": 4,
+      "concepts": [
+        "object-pronouns"
+      ]
+    },
+    {
+      "unit": 52,
+      "name": "Pronoun Placement",
+      "phase": 3,
+      "question_count": 4,
+      "concepts": [
+        "object-pronouns"
+      ]
+    },
+    {
+      "unit": 56,
+      "name": "Demonstratives",
+      "phase": 3,
+      "question_count": 2,
+      "concepts": [
+        "demonstratives"
+      ]
+    },
+    {
+      "unit": 60,
+      "name": "Locations and Directions",
+      "phase": 3,
+      "question_count": 3,
+      "concepts": [
+        "directions"
+      ]
+    },
+    {
+      "unit": 63,
+      "name": "Frequency Adverbs",
+      "phase": 3,
+      "question_count": 4,
+      "concepts": [
+        "adverbs-frequency"
+      ]
+    },
+    {
+      "unit": 65,
+      "name": "Relative Pronouns",
+      "phase": 3,
+      "question_count": 3,
+      "concepts": [
+        "relative-pronouns"
+      ]
+    },
+    {
+      "unit": 66,
+      "name": "Relative Pronouns",
+      "phase": 3,
+      "question_count": 1,
+      "concepts": [
+        "relative-pronouns"
+      ]
+    },
+    {
+      "unit": 68,
+      "name": "Shopping and Money",
+      "phase": 3,
+      "question_count": 1,
+      "concepts": [
+        "shopping"
+      ]
+    },
+    {
+      "unit": 69,
+      "name": "Relative Pronouns",
+      "phase": 3,
+      "question_count": 1,
+      "concepts": [
+        "relative-pronouns"
+      ]
+    },
+    {
+      "unit": 71,
+      "name": "Demonstratives",
+      "phase": 3,
+      "question_count": 3,
+      "concepts": [
+        "demonstratives"
+      ]
+    },
+    {
+      "unit": 75,
+      "name": "Future Tense",
+      "phase": 4,
+      "question_count": 4,
+      "concepts": [
+        "future-tense"
+      ]
+    },
+    {
+      "unit": 76,
+      "name": "Conditional Tense",
+      "phase": 4,
+      "question_count": 4,
+      "concepts": [
+        "conditional-formation"
+      ]
+    },
+    {
+      "unit": 78,
+      "name": "Crase",
+      "phase": 4,
+      "question_count": 3,
+      "concepts": [
+        "crase"
+      ]
+    },
+    {
+      "unit": 79,
+      "name": "Tudo vs Todo",
+      "phase": 4,
+      "question_count": 3,
+      "concepts": [
+        "todo-vs-tudo"
+      ]
+    },
+    {
+      "unit": 80,
+      "name": "Commands/Imperative Mood",
+      "phase": 4,
+      "question_count": 3,
+      "concepts": [
+        "imperative-mood"
+      ]
+    },
+    {
+      "unit": 82,
+      "name": "Present Subjunctive - Regular Verbs",
+      "phase": 4,
+      "question_count": 4,
+      "concepts": [
+        "subjunctive-present"
+      ]
+    },
+    {
+      "unit": 83,
+      "name": "Present Subjunctive - Irregular Verbs",
+      "phase": 4,
+      "question_count": 4,
+      "concepts": [
+        "subjunctive-present"
+      ]
+    },
+    {
+      "unit": 84,
+      "name": "Imperfect Subjunctive",
+      "phase": 4,
+      "question_count": 6,
+      "concepts": [
+        "subjunctive-imperfect"
+      ]
+    },
+    {
+      "unit": 85,
+      "name": "Future Subjunctive",
+      "phase": 4,
+      "question_count": 3,
+      "concepts": [
+        "subjunctive-future"
+      ]
+    },
+    {
+      "unit": 86,
+      "name": "Colloquial Brazilian Portuguese",
+      "phase": 4,
+      "question_count": 1,
+      "concepts": [
+        "colloquial-speech"
+      ]
+    },
+    {
+      "unit": 89,
+      "name": "Advanced Por/Para & Idioms",
+      "phase": 4,
+      "question_count": 4,
+      "concepts": [
+        "por-vs-para"
+      ]
+    },
+    {
+      "unit": 90,
+      "name": "Existential Ter (BP)",
+      "phase": 1,
+      "question_count": 3,
+      "concepts": []
+    },
+    {
+      "unit": 91,
+      "name": "Present Progressive (Gerund)",
+      "phase": 2,
+      "question_count": 4,
+      "concepts": [
+        "present-continuous"
+      ]
+    },
+    {
+      "unit": 92,
+      "name": "Comparisons of Equality",
+      "phase": 3,
+      "question_count": 1,
+      "concepts": [
+        "adjective-comparison"
+      ]
+    },
+    {
+      "unit": 93,
+      "name": "Imperfect Subjunctive",
+      "phase": 4,
+      "question_count": 2,
+      "concepts": [
+        "subjunctive-imperfect"
+      ]
+    },
+    {
+      "unit": 94,
+      "name": "Future Subjunctive",
+      "phase": 4,
+      "question_count": 2,
+      "concepts": [
+        "subjunctive-future"
+      ]
+    },
+    {
+      "unit": 96,
+      "name": "Verbs of Communication",
+      "phase": 2,
+      "question_count": 2,
+      "concepts": []
+    },
+    {
+      "unit": 97,
+      "name": "Ir vs Vir",
+      "phase": 2,
+      "question_count": 1,
+      "concepts": []
+    },
+    {
+      "unit": 100,
+      "name": "Saber vs Conhecer",
+      "phase": 3,
+      "question_count": 5,
+      "concepts": [
+        "saber-vs-conhecer"
+      ]
+    }
+  ]
+}

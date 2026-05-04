@@ -26,7 +26,7 @@
 
 - Simple past (pretérito perfeito) — completed
 - Contractions (preposition + article) — in progress; Parts A-B done, C-G homework
-- Imperfeito — [worksheet](../printables/imperfeito-worksheet-christian.html) prepared for Wed Apr 8 session; covers regular -AR/-ER/-IR, 4 irregulars (ser/ter/vir/pôr), past continuous (estava + gerúndio), past intent (ia + infinitivo)
+- Imperfeito — [worksheet](../printables/archive/imperfeito-worksheet-christian.html) prepared for Wed Apr 8 session; covers regular -AR/-ER/-IR, 4 irregulars (ser/ter/vir/pôr), past continuous (estava + gerúndio), past intent (ia + infinitivo)
 
 ---
 
@@ -95,7 +95,7 @@
 | 2026-02-04 | Session | Christian 5 min late; sent audio/video after |
 | 2026-02-05 | Materials | Sent video; "Interessante" |
 | 2026-02-11 Wed | Session | Brookfield Place; finished simple past (pretérito perfeito) material; conversation: sister-in-law, trip to Philadelphia, Valentine's Day dinner at a brasserie |
-| 2026-02-18 Tue | Materials | Sent [preterite worksheet 2](../printables/preterite-worksheet-christian-2.html) as homework; next class in ~2 weeks |
+| 2026-02-18 Tue | Materials | Sent [preterite worksheet 2](../printables/archive/preterite-worksheet-christian-2.html) as homework; next class in ~2 weeks |
 | 2026-03-11 Wed | Session | Brookfield Place 5:30pm; [contractions worksheet](../printables/contractions-worksheet-christian.html) — covered Parts A-B (de + artigo, em + artigo) in class; Parts C-G assigned as homework |
 | 2026-03-18 Wed | Session | Brookfield Place 5:30pm (per calendar); no WhatsApp confirmation exchanged; no post-session notes |
 | 2026-03-30 Mon | Scheduling | Gil asked about Thu/Fri availability; Christian agreed to Thursday same time; also offered lunchtime near office |

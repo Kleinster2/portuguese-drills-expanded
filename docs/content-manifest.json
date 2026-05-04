@@ -147,30 +147,6 @@
       "variant": "ep",
       "cefr": "a2-b1",
       "concepts": ["adjective-agreement"]
-    },
-    {
-      "path": "printables/imperfeito-worksheet-christian.html",
-      "title": "Imperfeito — Worksheet",
-      "variant": "bp",
-      "cefr": "b1",
-      "concepts": ["preterite-imperfect"],
-      "notes": "Student name in filename — generic-audience violation; archive or rename"
-    },
-    {
-      "path": "printables/preterite-worksheet-christian.html",
-      "title": "Pretérito Perfeito (Simple Past)",
-      "variant": "bp",
-      "cefr": "a2",
-      "concepts": ["preterite-regular"],
-      "notes": "Student name in filename — generic-audience violation; archive or rename"
-    },
-    {
-      "path": "printables/preterite-worksheet-christian-2.html",
-      "title": "Pretérito Perfeito — Worksheet 2",
-      "variant": "bp",
-      "cefr": "a2",
-      "concepts": ["preterite-regular"],
-      "notes": "Student name in filename — generic-audience violation; archive or rename"
     }
   ],
   "primers": [
