@@ -11,9 +11,6 @@ prereqs: []
 ms_legacy: 23
 cefr_legacy: [A1.11]
 ---
-
-<!-- TODO: Phase 3 — split into a1-pron-voce-bp / a1-pron-voce-ep pair.
-     EP-divergent content (clitic placement, tu vs você, gerund vs estar a + infinitivo, etc.) needs separate unit. -->
 ## Outcomes
 
 - Ask questions using "você"

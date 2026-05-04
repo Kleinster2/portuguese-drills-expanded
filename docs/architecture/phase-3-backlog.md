@@ -101,15 +101,15 @@ Replaces `b1-compound-tenses` and `b2-compound-tenses-all`.
 Each pair: split the existing `-bp` unit into a `-bp` (BP-specific content) + `-ep` (EP-specific content). Shared content stays in… a third `shared` unit? Or duplicated? **Decision deferred to authoring time** — lean toward duplication for now (cleanest variant separation) unless the shared content is non-trivial.
 
 Pairs to create:
-- `a1-pron-voce-bp` + `a1-pron-voce-ep` (você vs tu pronoun system)
-- `a2-estar-gerundio-bp` + `a2-estar-a-infinitivo-ep` (gerund vs `estar a +` inf)
-- `a2-reflexivos-bp` + `a2-reflexivos-ep` (clitic placement diverges)
-- `a2-dop-bp` + `a2-dop-ep` (clitic placement)
-- `a2-iop-bp` + `a2-iop-ep` (clitic placement)
-- `a2-imperativo-bp` + `a2-imperativo-ep` (você-form vs tu-form commands)
-- `b1-condicional-bp` + `b1-condicional-ep` (EP imperfeito de cortesia substitution)
+- ~~`a1-pron-voce-bp` + `a1-pron-voce-ep`~~ → **shipped as `a1-pron-voce-bp` + `a1-pron-tu-ep`** (slug rename — EP uses tu, not você, as the informal default)
+- ~~`a2-estar-gerundio-bp` + `a2-estar-gerundio-ep`~~ → **shipped as `a2-estar-gerundio-bp` + `a2-estar-a-infinitivo-ep`** (slug rename — EP construction is structurally different)
+- ~~`a2-reflexivos-bp` + `a2-reflexivos-ep`~~ → **shipped** (parallel slugs)
+- ~~`a2-dop-bp` + `a2-dop-ep`~~ → **shipped** (parallel slugs)
+- ~~`a2-iop-bp` + `a2-iop-ep`~~ → **shipped** (parallel slugs)
+- ~~`a2-imperativo-bp` + `a2-imperativo-ep`~~ → **shipped** (parallel slugs)
+- ~~`b1-condicional-bp` + `b1-condicional-ep`~~ → **shipped** (parallel slugs)
 
-7 new `-ep` units from the Phase 2 split candidates. The 7 existing `-bp` units have their TODO markers removed.
+**Cluster 5a complete (2026-05-04).** All 7 Phase-2 split candidates resolved. The 7 existing `-bp` units had their TODO markers removed in the same commit.
 
 **Additional EP twins added by Cluster 3 (conditional system):**
 

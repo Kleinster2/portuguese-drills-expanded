@@ -11,9 +11,6 @@ prereqs: []
 ms_legacy: 71
 cefr_legacy: [A2.7]
 ---
-
-<!-- TODO: Phase 3 — split into a2-imperativo-bp / a2-imperativo-ep pair.
-     EP-divergent content (clitic placement, tu vs você, gerund vs estar a + infinitivo, etc.) needs separate unit. -->
 ## Outcomes
 
 - Give direct commands in Portuguese

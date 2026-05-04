@@ -11,9 +11,6 @@ prereqs: []
 ms_legacy: 44
 cefr_legacy: [A2.9]
 ---
-
-<!-- TODO: Phase 3 — split into a2-iop-bp / a2-iop-ep pair.
-     EP-divergent content (clitic placement, tu vs você, gerund vs estar a + infinitivo, etc.) needs separate unit. -->
 ## Outcomes
 
 - Express to/for whom actions are directed

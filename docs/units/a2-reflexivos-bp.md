@@ -11,9 +11,6 @@ prereqs: []
 ms_legacy: 39
 cefr_legacy: [A2.5]
 ---
-
-<!-- TODO: Phase 3 — split into a2-reflexivos-bp / a2-reflexivos-ep pair.
-     EP-divergent content (clitic placement, tu vs você, gerund vs estar a + infinitivo, etc.) needs separate unit. -->
 ## Outcomes
 
 - Introduce themselves formally: "Me chamo [name]"

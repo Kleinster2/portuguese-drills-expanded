@@ -11,9 +11,6 @@ prereqs: []
 ms_legacy: 40
 cefr_legacy: [A2.8]
 ---
-
-<!-- TODO: Phase 3 — split into a2-dop-bp / a2-dop-ep pair.
-     EP-divergent content (clitic placement, tu vs você, gerund vs estar a + infinitivo, etc.) needs separate unit. -->
 ## Outcomes
 
 - Replace direct objects with pronouns to sound more natural

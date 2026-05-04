@@ -11,9 +11,6 @@ prereqs: []
 ms_legacy: 30
 cefr_legacy: [A2.6]
 ---
-
-<!-- TODO: Phase 3 — split into a2-estar-gerundio-bp / a2-estar-gerundio-ep pair.
-     EP-divergent content (clitic placement, tu vs você, gerund vs estar a + infinitivo, etc.) needs separate unit. -->
 ## Outcomes
 
 - Form the gerund for all verb types (-ando, -endo, -indo)
