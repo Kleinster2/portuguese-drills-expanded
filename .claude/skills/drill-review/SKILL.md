@@ -10,6 +10,8 @@ Review a drill JSON against the full quality checklist. Run after creating or ed
 
 **Mandatory precondition:** invoke the `pedagogy` skill via the Skill tool before any other step. The hard rules (no fake accents, BP/EP separation, paulista pronunciation, native usage filter) must be in context. Also keep `docs/drills/DRILL_BEST_PRACTICES.md` open as a reference for the 10 practices.
 
+**Topic context:** if the drill covers a topic listed in `docs/known-trap-topics.md` (contractions, place name articles, imperatives, crase, open/closed vowel labels, -ar verb vowels, etc.), read that entry first — the documented traps inform what to look for during the audit.
+
 ## Setup
 
 Read the drill JSON and confirm:

@@ -19,11 +19,13 @@ Write exercises, deduplicate across sections, build the answer key. This skill a
 
 ---
 
-## 0. Check for a topic-specific drafting skill
+## 0. Check for topic-specific guidance
 
-Before drafting, check if a topic-specific skill exists for this exercise type (e.g., `/exercise-draft-contractions`). If one exists, run it alongside this skill — it contains traps and failure modes specific to that topic. If none exists, proceed with the general process below.
+Before drafting, check two places for known traps on this topic:
+1. **Topic-specific drafting skill** (e.g., `/exercise-draft-contractions`) — if one exists, run it alongside this skill.
+2. **`docs/known-trap-topics.md`** — inventory of trap-prone topics. Even topics without dedicated skills have documented failure modes here. Read the entry for your topic if listed.
 
-Topic skills are created when real failures reveal traps worth codifying. No topic skill means no documented traps — not that there are none.
+Topic skills are spun up when ≥2 distinct failures on the same topic accumulate. The inventory captures everything before that bar — including topics with one failure and topics that match high-frequency error patterns from `diagnostic-test-manager`. No skill and no inventory entry doesn't mean no traps — but those two places are the documented universe.
 
 ---
 
