@@ -112,6 +112,8 @@ When you need a new concept, add it here first (with a one-line description), th
 - `concessive-clauses` — embora, mesmo que
 - `purpose-result-clauses` — para que, de modo que
 - `reported-speech` — direct vs indirect speech
+- `tense-backshift` — tense shifts in reported speech (presente → imperfeito, etc.)
+- `indirect-questions` — yes/no via *se*, content via wh-words, no inversion
 - `cohesion-coherence` — discourse-level connectors
 
 ### advanced
