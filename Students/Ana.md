@@ -31,6 +31,7 @@
 | 2025-09-18 | Ana emailed asking about one-on-one tutoring or classes in NYC/Brooklyn |
 | 2025-09-22 | Gil replied (4-day delay); confirmed private sessions up to 90 min, in-person or online; offered a call |
 | 2026-05-02 | Ana followed up (7+ months later); work trip to Brazil in June; wants weekly lessons; asked to schedule a call |
+| 2026-05-04 | Gil replied asking for a good time to talk |
 
 ---
 
@@ -39,6 +40,7 @@
 | Date | Type | Notes |
 |------|------|-------|
 | 2026-05-02 | Scheduling | Ana emailed to resume after 7+ months; work trip to Brazil in June; wants weekly lessons; requested a call to discuss goals. |
+| 2026-05-04 | Scheduling | Gil replied asking when Ana is available to talk. |
 
 ---
 
