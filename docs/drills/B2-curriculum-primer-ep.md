@@ -88,10 +88,6 @@ Generated from `docs/units/`. Filter: `cefr_level == B2` AND `variant in (ep, sh
 - **Grammar:** Advanced por/para:: idiomatic expressions and fixed phrases
 - **Unit:** [[b2-por-para-avancado]]
 
-### Conditional Sentences (Full System)
-- **Grammar:** Real conditions: Se chover, fico em casa (future subj)
-- **Unit:** [[b2-condicionais-sistema]]
-
 ### Advanced Relative Clauses
 - **Grammar:** Cujo/cuja/cujos/cujas (whose)
 - **Unit:** [[b2-relativas-avancadas]]
@@ -147,3 +143,10 @@ Generated from `docs/units/`. Filter: `cefr_level == B2` AND `variant in (ep, sh
 - **Outcome:** Communicate effectively in Portuguese in real situations
 - **Grammar:** NO NEW GRAMMAR:: synthesis and integration only
 - **Unit:** [[b2-sintese]]
+
+## Pronunciation
+
+### Pronunciation — Broad phonetics review
+- **Outcome:** Apply the full BP pronunciation rule inventory (Rules 1-6) to extended speech.
+- **Grammar:** The 6 obligatory rules from [PRONUNCIATION_RULES.md](../../PRONUNCIATION_RULES.md).
+- **Unit:** [[b2-pron-phonetics-broad]]

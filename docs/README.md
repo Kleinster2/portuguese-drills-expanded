@@ -27,12 +27,12 @@ docs/
 
 | Document | Description |
 |----------|-------------|
-| [Annotation Workflow](pronunciation/ANNOTATION_WORKFLOW.md) | How to author content |
-| [Quick Reference](pronunciation/QUICK_REFERENCE.md) | Fast rule lookup |
-| [System Architecture](pronunciation/SYSTEM_ARCHITECTURE.md) | Technical design |
+| [Pronunciation Rules](../PRONUNCIATION_RULES.md) | Canonical 6-rule BP reference |
+| [Anchor units](units/) | `a1-pron-*` (6 rule anchors), `b1-pron-syllable-stress`, `b2-pron-phonetics-broad` |
 | [Notation Style](pronunciation/NOTATION_STYLE_GUIDE.md) | Formatting conventions |
 | [Substitution Mode](pronunciation/SUBSTITUTION_MODE.md) | Phonetic spelling system |
 | [Changelog](pronunciation/CHANGELOG.md) | Version history |
+| [Workflow docs (archived)](archive/pronunciation/) | Annotation Workflow / System Architecture / Quick Reference — archived Phase 7 (2026-05-04) when their primary input (`SYLLABUS_PHASE_1.md`) was archived |
 
 ## Simplifier
 

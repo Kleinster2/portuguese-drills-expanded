@@ -142,6 +142,9 @@ When you need a new concept, add it here first (with a one-line description), th
 - `palatalization-d-t` — paulista vs carioca (di/de, ti/te)
 - `final-l` — BP w-realization, EP retention
 - `lh-nh` — palatal consonants
+- `final-o-reduction` — unstressed final -o → [u] (Rule 1)
+- `final-e-reduction` — unstressed final -e → [i] (Rule 2)
+- `epenthesis-borrowed-words` — consonant-final loanwords gain epenthetic [i] (Rule 4)
 
 ## conversation
 

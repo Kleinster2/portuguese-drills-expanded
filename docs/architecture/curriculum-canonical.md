@@ -241,7 +241,8 @@ Note: legacy `syllabus-micro-sequence.md` is variant-mixed; the new generator em
 | 3 | Author missing B1/B2 sequence-form units (13 clusters; ~35 net new) | ✓ |
 | 4 | Build validator + rename + 2 generators | ✓ |
 | 5 | Archive legacy primers + MS sequence; deprecate `add-syllabus-concept-tags.py` (consumer `topic-query.py` updated to read from `docs/units/`) | ✓ |
-| 6 | Migrate 4-phase pronunciation curriculum into `docs/units/` with `topic: pronunciation` | pending |
+| 6 | Pronunciation migration architectural review (decision: Hybrid — thin anchor units only) | ✓ |
+| 7 | Hybrid pronunciation migration: 8 anchor units, 14 archives, mechanical fixups | ✓ |
 
 ## Phase 5 closeout (2026-05-04)
 
@@ -274,11 +275,68 @@ Run `python scripts/generate-ms-sequence.py --all` → produces 2 `docs/drills/s
 
 Final corpus target: ~150–170 units.
 
+## Phase 7 closeout (2026-05-04)
+
+**Pronunciation hybrid migration complete.** Closes the curriculum spine consolidation (Phases 0–7). Final corpus: **176 units** (164 from Phase 3 + 8 pronunciation anchors).
+
+Driven by [phase-6-review.md](phase-6-review.md). Six decisions locked upstream: reframing approved, Hybrid (thin anchors only), `variant: shared`, archive auxiliary, 8 unit anchors total (6 rules + 2 drill concepts), concept slugs unsuffixed.
+
+### Authored
+
+8 thin anchor units at `docs/units/`. All `topic: pronunciation`, `variant: shared`, `status: published`. Bodies are pointers to [PRONUNCIATION_RULES.md](../../PRONUNCIATION_RULES.md) — no rule-content duplication.
+
+| Slug | CEFR | Position | Concept | Maps to |
+|---|---|---|---|---|
+| `a1-pron-final-o` | A1 | 80.0 | `final-o-reduction` | Rule 1 |
+| `a1-pron-final-e` | A1 | 81.0 | `final-e-reduction` | Rule 2 |
+| `a1-pron-palatalization` | A1 | 82.0 | `palatalization-d-t` | Rule 3 |
+| `a1-pron-epenthesis` | A1 | 83.0 | `epenthesis-borrowed-words` | Rule 4 |
+| `a1-pron-nasal-vowels` | A1 | 84.0 | `nasal-vowels` | Rule 5 |
+| `a1-pron-l-vocalization` | A1 | 85.0 | `final-l` | Rule 6 |
+| `b1-pron-syllable-stress` | B1 | 89.0 | `syllable-stress` | drill `syllable-stress` |
+| `b2-pron-phonetics-broad` | B2 | 91.0 | `phonetics-broad` | drill `phonetics-br` |
+
+Slug shorthand note: `pron` does double duty in the controlled vocabulary — meaning "pronouns (subject)" in `a1-pron-voce-bp` / `a1-pron-tu-ep`, and "pronunciation" in the 8 anchors above. The second slug segment disambiguates (`voce`/`tu` vs `final-o`/`palatalization`/etc.). Not worth a rename; document and move on.
+
+### Archived (14 files)
+
+Moved to `docs/archive/` via `git mv` (history preserved):
+
+- 5 SYLLABUS source files: `SYLLABUS_PHASE_1.md`, `SYLLABUS_PHASE_1.source.md`, `SYLLABUS_PHASE_2.md`, `SYLLABUS_PHASE_3.md`, `SYLLABUS_PHASE_4.md`. Phase 1 was the BP self-introduction grammar curriculum (with pronunciation annotations). Phase 2/3/4 were vestigial A2/B1/B2 grammar-vocab outlines superseded by Phase 5's archived primers.
+- 3 orphan lesson HTMLs: `lessons/lesson-1.html`, `lessons/lesson-2.html`, `lessons/unit-1.html`. Not linked from any live page (verified via grep).
+- 3 wrapper scripts → `docs/archive/utils/`: `generate_annotated_syllabus.py`, `update_syllabus_annotations.py`, `strip_annotations.py`. Hardcoded paths to the archived files; would silently fail if run.
+- 3 workflow docs → `docs/archive/pronunciation/`: `ANNOTATION_WORKFLOW.md`, `SYSTEM_ARCHITECTURE.md`, `QUICK_REFERENCE.md`. Described the workflow whose primary input is now archived.
+
+`utils/annotate_pronunciation.py` (the rule engine itself) stays live as a generic BP-text annotator. `docs/pronunciation/CHANGELOG.md` and `CHANGELOG_v2.0.md` stay as historical records.
+
+### Mechanical fixups
+
+- `service-worker.js` — removed `/SYLLABUS_PHASE_1.md` from `DOCUMENTATION_ASSETS`; bumped `CACHE_NAME` from `v11-dashboard` to `v12-pron-archive` so old caches refresh.
+- `CLAUDE.md` — repointed Pronunciation table entry from `SYLLABUS_PHASE_1.md` to `PRONUNCIATION_RULES.md`; updated Pronunciation feature blurb; refreshed MS sequence unit counts (164/159).
+- `docs/README.md` — replaced 3 archived workflow doc links with rule reference + anchor unit pointers; added archive pointer.
+- `docs/concepts.md` — added 3 new pronunciation concepts: `final-o-reduction`, `final-e-reduction`, `epenthesis-borrowed-words`.
+
+### Validator state
+
+176 units parsed cleanly (was 168). All hard-fail rules pass. New soft warnings (expected per locked decisions):
+
+- 8 × "empty Vocabulary section" — pronunciation anchors are intentionally thin per the hybrid pattern. Documented as expected; no action.
+- 1 × "B2 unit with A1 prereqs" on `b2-pron-phonetics-broad` — broad-review unit prereqs all 6 A1 anchors plus the B1 stress unit. Per locked decisions, the recommended pattern.
+
+### Generated artifacts refreshed
+
+- 8 CEFR primers regenerated. A1 BP/EP each gained a "## Pronunciation" section at the back with 6 rule anchors. B1 BP/EP gained the syllable-stress anchor; B2 BP/EP gained the phonetics-broad anchor.
+- 2 MS sequences regenerated: BP=164 units, EP=159 units (up from 152/147 pre-Phase-7 — accounting for the 8 shared anchors crossing into both variant streams plus existing differential).
+
+### What stays as a future opportunistic task
+
+- Enrichment of the 8 anchors' Drills/Traps sections as student-session experience surfaces gaps. No further phases planned. The thin-body pattern is the floor, not a ceiling.
+- EP fork of pronunciation rules if Marvin's curriculum or a future EP cohort needs differentiated pronunciation reference words (PEDAGOGY footnote permits). Today, `variant: shared` is correct because the rule mechanics are universal Brazilian; EP is in a different phonological system that would need its own corpus, not a fork of these.
+
 ## Open questions for later phases
 
 Not blocking Phase 1 lock. Capture for Phase 2+:
 
-- **Drills sidecar parity.** `config/dashboard.json` has `concept` (singular). Should it gain a `unit` field linking to the unit it primarily practices? Defer to Phase 5.
+- **Drills sidecar parity.** `config/dashboard.json` has `concept` (singular). Should it gain a `unit` field linking to the unit it primarily practices? Defer.
 - **Worksheet manifest parity.** `docs/content-manifest.json` already has `concepts: []`. Should it gain `units: []`? Same question, same answer — defer.
-- **Per-unit estimated minutes.** Possibly useful for `/lesson-plan`. Not added now; Phase 3 will surface whether tutors actually want it.
-- **Pronunciation lessons.** Locked: the 4-phase pronunciation curriculum (`SYLLABUS_PHASE_1.md` + `lessons/*.html`) folds into `docs/units/` under `topic: pronunciation` in Phase 6. No `topic: pronunciation` units exist before then.
+- **Per-unit estimated minutes.** Possibly useful for `/lesson-plan`. Not added.

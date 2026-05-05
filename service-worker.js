@@ -1,7 +1,7 @@
 // Portuguese Drills - Service Worker
 // Version 1.0.0 - PWA Offline Support
 
-const CACHE_NAME = 'portuguese-drills-v11-dashboard';
+const CACHE_NAME = 'portuguese-drills-v12-pron-archive';
 const OFFLINE_URL = '/offline.html';
 
 // Assets to cache on install
@@ -30,7 +30,6 @@ const STATIC_ASSETS = [
 
 // Documentation files to cache (optional, for offline reference)
 const DOCUMENTATION_ASSETS = [
-  '/SYLLABUS_PHASE_1.md',
   '/PRONUNCIATION_RULES.md',
   '/PEDAGOGY.md'
 ];

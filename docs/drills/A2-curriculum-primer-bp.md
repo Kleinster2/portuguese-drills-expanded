@@ -2,7 +2,7 @@
 
 Generated from `docs/units/`. Filter: `cefr_level == A2` AND `variant in (bp, shared)` AND `status == published`.
 
-**Total units:** 40
+**Total units:** 42
 
 ## Verb System
 
@@ -72,6 +72,16 @@ Generated from `docs/units/`. Filter: `cefr_level == A2` AND `variant in (bp, sh
 - **Unit:** [[a2-imperativo-bp]]
 
 ## Grammar
+
+### Conjunções coordenativas (e, ou, mas, então, pois)
+- **Outcome:** Use the five core coordinating conjunctions to link equivalent grammatical units (words, phrases, clauses)
+- **Grammar:** *Eu falo português **e** inglês.* — I speak Portuguese and English.
+- **Unit:** [[a2-conjuncoes-coordenativas]]
+
+### Conjunções subordinativas (porque, quando, se, como, enquanto)
+- **Outcome:** Use the core subordinating conjunctions to make one clause depend on another (cause, time, condition, manner, purpose-precursor)
+- **Grammar:** *Não vou à festa **porque** estou doente.* — I'm not going to the party because I'm sick.
+- **Unit:** [[a2-conjuncoes-subordinativas]]
 
 ### Direct Object Pronouns (me, te, o/a, nos, os/as)
 - **Outcome:** Replace direct objects with pronouns to sound more natural

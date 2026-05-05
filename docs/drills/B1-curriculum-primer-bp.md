@@ -2,7 +2,7 @@
 
 Generated from `docs/units/`. Filter: `cefr_level == B1` AND `variant in (bp, shared)` AND `status == published`.
 
-**Total units:** 36
+**Total units:** 38
 
 ## Verb System
 
@@ -20,6 +20,11 @@ Generated from `docs/units/`. Filter: `cefr_level == B1` AND `variant in (bp, sh
 - **Outcome:** Distinguish **pude** (managed to, succeeded in doing on a specific occasion) from **podia** (was able to, had the general ability or context)
 - **Grammar:** pude: = managed to / succeeded in → completed action, specific moment, often after effort
 - **Unit:** [[b1-poder-aspect-bp]]
+
+### Particípios passados — formação (regular + irregular)
+- **Outcome:** Form regular past participles for any -AR / -ER / -IR verb (-ado / -ido endings)
+- **Grammar:** *Eu tenho **falado** com ela.* — I've been speaking with her.
+- **Unit:** [[b1-participios-introducao]]
 
 ### Querer: Aspectual Shift — quis vs queria
 - **Outcome:** Distinguish **quis** (acted on wanting / attempted / in negation, refused) from **queria** (wanted as an ongoing state, often unrealized)
@@ -189,3 +194,10 @@ Generated from `docs/units/`. Filter: `cefr_level == B1` AND `variant in (bp, sh
 ### Narration & Storytelling
 - **Grammar:** Combining preterite and imperfect
 - **Unit:** [[b1-narracao]]
+
+## Pronunciation
+
+### Pronunciation — Syllable stress and accent marks
+- **Outcome:** Identify the stressed syllable in a written Portuguese word using the default stress rules and accent marks.
+- **Grammar:** Words ending in -a, -e, -o, -as, -es, -os, -em, -ens stress the **penultimate** syllable: *casa* (CA-sa), *fala* (FA-la), *moram* (MO-ram).
+- **Unit:** [[b1-pron-syllable-stress]]

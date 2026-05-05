@@ -2,7 +2,7 @@
 
 Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == published`. Ordered by `sequence_position` ascending.
 
-**Total units:** 152
+**Total units:** 164
 
 ---
 
@@ -22,29 +22,65 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ### Vocabulary
 
-1. Eu (I)
-2. sou (am)
-3. Articles: o (masculine), a (feminine)
-4. Nationalities: brasileiro/brasileira, americano/americana, português/portuguesa
-5. Professions: professor/professora, estudante, médico/médica, engenheiro/engenheira
-6. Marital status: casado/casada, solteiro/solteira, divorciado/divorciada, viúvo/viúva
+1. **Eu** (I)
+2. **sou** (am)
+3. **Definite articles** — singular: *o* (masculine), *a* (feminine); plural: *os* (masculine), *as* (feminine)
+4. **Nationalities**: brasileiro/brasileira, americano/americana, português/portuguesa
+5. **Professions**: professor/professora, estudante, médico/médica, engenheiro/engenheira
+6. **Marital status**: casado/casada, solteiro/solteira, divorciado/divorciada, viúvo/viúva
 
 ### Grammar
 
-- First person singular: Eu sou
-- Gender agreement for adjectives (o/a endings)
-- Definite articles with names: o [masculine name], a [feminine name]
+- **First person singular:** *Eu sou*
+- **Gender agreement for adjectives:** *-o* endings = masculine, *-a* endings = feminine, *-e* endings = invariable (estudante)
+- **Definite articles with names:** *o [masculine name], a [feminine name]*
+- **Definite articles with nouns:** every Portuguese noun has grammatical gender. The article must agree.
+
+### Definite article system
+
+| Number | Masculine | Feminine |
+|---|---|---|
+| Singular | **o** | **a** |
+| Plural | **os** | **as** |
+
+Examples of article-noun agreement:
+
+- *o livro* (m sg) → *os livros* (m pl)
+- *a casa* (f sg) → *as casas* (f pl)
+- *o estudante* (m sg, person) → *os estudantes* (m pl)
+- *a estudante* (f sg, person) → *as estudantes* (f pl)
+
+The article matches the noun's gender + number, not the speaker's gender. *O João* says "the João" with masculine article because *João* is a masculine name; *a Maria* with feminine because *Maria* is feminine.
+
+### When to use the article
+
+Definite articles are used in Portuguese in many places where English doesn't use "the":
+
+- **With names of people** (mostly BP; EP omits more often): *Eu vi o João ontem.* (BP common; EP also acceptable)
+- **With countries (most)**: *o Brasil, os Estados Unidos, a França, a Inglaterra*. Exceptions: *Portugal, Israel, Cabo Verde* (no article).
+- **With languages after most prepositions**: *Eu falo português* (no article after *falar*) but *o português é difícil* (with article when subject).
+- **With abstract nouns**: *A vida é bela.* (Life is beautiful.)
+- **With body parts where English uses possessive**: *Lavou as mãos.* (He washed his hands.)
+
+### When to OMIT the article
+
+- **With professions after ser/estar (without modifier)**: *Eu sou médico.* (NOT *eu sou o médico*, unless specifically "I'm THE doctor [the one you're looking for]").
+- **With nationalities after ser**: *Ele é brasileiro.* (NOT *ele é o brasileiro*, unless specifically "he's THE Brazilian one").
+- **With names of cities**: *Moro em São Paulo, em Lisboa, em Coimbra.* (Most cities take no article.)
+- **With Portugal, Cabo Verde, Israel, Cuba**: *de Portugal, em Cabo Verde, para Israel*.
+- **In direct address**: *Olá, João!* (no article when calling someone).
 
 ### Exemplar sentences
 
-- Eu sou o João / Eu sou a Maria (name)
-- Eu sou brasileiro / Eu sou brasileira (nationality)
-- Eu sou americano / Eu sou americana
-- Eu sou professor / Eu sou professora (profession)
-- Eu sou estudante
-- Eu sou casado / Eu sou casada (marital status)
-- Eu sou solteiro / Eu sou solteira
-- Eu sou divorciado / Eu sou divorciada
+- *Eu sou o João / Eu sou a Maria* (name + article — common in BP, optional in EP)
+- *Eu sou brasileiro / Eu sou brasileira* (nationality — no article)
+- *Eu sou americano / Eu sou americana*
+- *Eu sou professor / Eu sou professora* (profession — no article)
+- *Eu sou estudante* (invariable, no article)
+- *Eu sou casado / Eu sou casada* (marital status — no article)
+- *Eu sou solteiro / Eu sou solteira*
+- *Eu sou divorciado / Eu sou divorciada*
+- *O livro é interessante. As casas são novas.* (article-noun agreement)
 
 ### Drills & artifacts
 
@@ -972,7 +1008,136 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 20 — Likes and Preferences (Gosto de)
+## Unit 20 — Pôr — presente do indicativo (verbo irregular)
+
+*Slug: `a1-por-presente-introducao` · Sequence position: 19.5 · CEFR: A1 · Variant: shared*
+
+**Concepts:** `irregular-verb-conjugation`
+
+### Outcomes
+
+After this unit, the student can:
+
+- Conjugate **pôr** (to put / to place) in present indicative
+- Recognize *pôr* as a productive parent verb for the *pôr* family of derivatives (compor, propor, expor, dispor, supor, repor, opor, depor, transpor, impor)
+- Use *pôr* in basic productive sentences (*ponho a mesa, ponho o livro na estante*)
+
+### Vocabulary
+
+- **pôr** — to put, place
+- Productive collocations: *pôr a mesa* (set the table), *pôr no lugar* (put in place), *pôr fora* (throw out)
+
+### Grammar
+
+Pôr is highly irregular and serves as the parent for an entire family of derivative verbs. Its present-indicative paradigm is short but distinctive — note the *-nh-* in the eu form and the *-õe* / *-õem* in the third-person forms.
+
+### Present indicative paradigm
+
+| Pessoa | Forma |
+|---|---|
+| eu | ponho |
+| tu | pões |
+| você / ele / ela | põe |
+| nós | pomos |
+| vocês / eles / elas | põem |
+
+### Stress and accent notes
+
+- The bare infinitive *pôr* takes a circumflex to distinguish it from the preposition *por*. Conjugated forms (*ponho, pões, põe, pomos, põem*) drop the circumflex because they're no longer monosyllabic.
+- *Põe* (3sg) takes a tilde over the *o* (nasal vowel).
+- *Põem* (3pl) takes a tilde + final *-m* (nasal diphthong).
+
+### Exemplar sentences
+
+- *Eu **ponho** a mesa para o jantar.* — I set the table for dinner.
+- *Tu **pões** o livro na estante.* — You put the book on the shelf.
+- *Ela **põe** os óculos para ler.* — She puts on her glasses to read.
+- *Nós **pomos** as compras na cozinha.* — We put the groceries in the kitchen.
+- *Eles **põem** sempre música ao jantar.* — They always put on music at dinner.
+
+### Drills & artifacts
+
+- Cross-link: see [[b1-por-derivados]] for the full derivative family (compor, propor, expor, etc.) — every derivative inherits this paradigm with a prefix attached.
+- Cross-link: see [[a2-pret-trazer-dizer-vir-por]] for *pôr*'s preterite forms (pus, puseste, pôs, pusemos, puseram).
+
+<!-- TODO: build a pôr-paradigm drill paired with the derivatives drill in b1-por-derivados. -->
+
+### Traps
+
+- **Don't confuse the bare *pôr* (verb infinitive) with the preposition *por***. Same pronunciation, different grammar. The circumflex on *pôr* is the disambiguator.
+- **The eu form *ponho* uses *-nh-***, not *-n-*. Compare with *vir* (venho) and *ter* (tenho) — three irregular verbs share this *-enho* / *-onho* eu-form pattern.
+- **Don't regularize the third-person forms.** *Põe* and *põem* with the tilde are mandatory; spelling them as *poe* / *poem* is wrong.
+- **All pôr family derivatives inherit this exact paradigm.** *Compor → componho, compões, compõe, compomos, compõem*. The prefix attaches; the irregular paradigm carries through.
+
+---
+
+## Unit 21 — Vir — presente do indicativo (verbo irregular)
+
+*Slug: `a1-vir-presente-introducao` · Sequence position: 19.7 · CEFR: A1 · Variant: shared*
+
+**Concepts:** `irregular-verb-conjugation`
+
+### Outcomes
+
+After this unit, the student can:
+
+- Conjugate **vir** (to come) in present indicative
+- Recognize the *-enho* eu-form pattern shared with *ter* (tenho) and *pôr* (ponho)
+- Use *vir* in basic productive sentences (*venho de São Paulo, vens à festa, vem cá*)
+- Recognize *vir* as parent verb for the *vir* family of derivatives (intervir, convir, provir, advir, sobrevir)
+
+### Vocabulary
+
+- **vir** — to come
+- Productive collocations: *vir cá* (come here), *vir embora* (come away), *vir de [place]* (come from [place])
+
+### Grammar
+
+Vir is irregular. Its present-indicative paradigm includes the *-enho* eu-form (shared with *ter* and *pôr*) and a stress-shift acute accent on the 3sg form.
+
+### Present indicative paradigm
+
+| Pessoa | Forma |
+|---|---|
+| eu | venho |
+| tu | vens |
+| você / ele / ela | vem |
+| nós | vimos |
+| vocês / eles / elas | vêm |
+
+### Stress and accent notes
+
+- The 3sg *vem* is unaccented (monosyllable ending in *-m*).
+- The 3pl *vêm* takes a circumflex on the *e* (nasal diphthong, plural marker).
+- The eu form *venho* parallels *tenho* (ter) and *ponho* (pôr) — three irregular verbs share this distinctive *-nh-* pattern.
+- The 1pl *vimos* is identical in spelling to the *ver* (to see) preterite 1pl form (*vimos* = "we saw"). Context disambiguates.
+
+### Exemplar sentences
+
+- *Eu **venho** de Lisboa.* — I come from Lisbon.
+- *Tu **vens** à festa amanhã?* — Are you coming to the party tomorrow?
+- *Ela **vem** sempre cedo.* — She always comes early.
+- *Nós **vimos** de carro.* — We come by car.
+- *Eles **vêm** a Coimbra todos os meses.* — They come to Coimbra every month.
+
+### Drills & artifacts
+
+- Cross-link: see [[b1-vir-derivados]] for the full derivative family (intervir, convir, provir, advir, sobrevir) — every derivative inherits this paradigm with a prefix attached, including the same accent pattern (3sg acute, 3pl circumflex).
+- Cross-link: see [[a2-pret-trazer-dizer-vir-por]] for *vir*'s preterite forms (vim, vieste, veio, viemos, vieram).
+- Cross-link: see [[a2-imp-irregular]] for *vir*'s imperfeito form (*vinha*).
+
+<!-- TODO: build a vir-paradigm drill paired with the derivatives drill in b1-vir-derivados. -->
+
+### Traps
+
+- **The 1pl *vimos* (vir present) collides with the 1pl preterite of *ver* (also *vimos* = we saw).** Context disambiguates: *vimos de carro* (we come by car — present) vs *vimos o filme ontem* (we saw the movie yesterday — preterite). Similar collision exists for several verbs; learners need to read context.
+- **Don't drop the circumflex on 3pl *vêm***. Without the diacritic, *vem* (3sg) and *vêm* (3pl) are indistinguishable in writing. Speech disambiguates by stress.
+- **Vir family derivatives inherit the accent rule.** *Intervir → intervém* (3sg, acute) / *intervêm* (3pl, circumflex). Same as *vir → vem / vêm*. The prefix doesn't change the diacritic placement.
+- **The eu form is *venho* (with *-nh-*), not *veno*.** Three verbs share this *-enho* / *-onho* eu-form pattern: *ter (tenho), vir (venho), pôr (ponho)*.
+
+---
+
+## Unit 22 — Likes and Preferences (Gosto de)
 
 *Slug: `a1-gosto-de` · Sequence position: 20.0 · CEFR: A1 · Variant: shared*
 
@@ -1022,7 +1187,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 21 — Liking Activities (Gosto de + Infinitive)
+## Unit 23 — Liking Activities (Gosto de + Infinitive)
 
 *Slug: `a1-gosto-infinitivo` · Sequence position: 21.0 · CEFR: A1 · Variant: shared*
 
@@ -1083,7 +1248,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 22 — -ER Verbs (como, bebo, corro)
+## Unit 24 — -ER Verbs (como, bebo, corro)
 
 *Slug: `a1-verbos-er` · Sequence position: 22.0 · CEFR: A1 · Variant: shared*
 
@@ -1141,7 +1306,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 23 — Você (You) - Questions and Answers
+## Unit 25 — Você (You) - Questions and Answers
 
 *Slug: `a1-pron-voce-bp` · Sequence position: 23.0 · CEFR: A1 · Variant: bp*
 
@@ -1196,7 +1361,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 24 — Ele/Ela (He/She) - Talking About Others
+## Unit 26 — Ele/Ela (He/She) - Talking About Others
 
 *Slug: `a1-pron-ele-ela` · Sequence position: 24.0 · CEFR: A1 · Variant: shared*
 
@@ -1247,7 +1412,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 25 — Nós (We) - First Person Plural
+## Unit 27 — Nós (We) - First Person Plural
 
 *Slug: `a1-pron-nos` · Sequence position: 25.0 · CEFR: A1 · Variant: shared*
 
@@ -1296,7 +1461,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 26 — Vocês (You Plural) - Talking to Groups
+## Unit 28 — Vocês (You Plural) - Talking to Groups
 
 *Slug: `a1-pron-voces` · Sequence position: 26.0 · CEFR: A1 · Variant: shared*
 
@@ -1346,7 +1511,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 27 — Eles/Elas (They) - Talking About Groups
+## Unit 29 — Eles/Elas (They) - Talking About Groups
 
 *Slug: `a1-pron-eles-elas` · Sequence position: 27.0 · CEFR: A1 · Variant: shared*
 
@@ -1400,7 +1565,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 28 — -IR Verbs (abro, parto, assisto)
+## Unit 30 — -IR Verbs (abro, parto, assisto)
 
 *Slug: `a1-verbos-ir` · Sequence position: 28.0 · CEFR: A1 · Variant: shared*
 
@@ -1458,7 +1623,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 29 — Future with Vou + Infinitive (Going to...)
+## Unit 31 — Future with Vou + Infinitive (Going to...)
 
 *Slug: `a1-vou-infinitivo` · Sequence position: 29.0 · CEFR: A1 · Variant: shared*
 
@@ -1511,7 +1676,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 30 — Progressive Tenses - Estar + Gerund (Estou Fazendo)
+## Unit 32 — Progressive Tenses - Estar + Gerund (Estou Fazendo)
 
 *Slug: `a2-estar-gerundio-bp` · Sequence position: 30.0 · CEFR: A2 · Variant: bp*
 
@@ -1561,7 +1726,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 31 — Plural Possessives: Meus/Minhas (My - Plural)
+## Unit 33 — Plural Possessives: Meus/Minhas (My - Plural)
 
 *Slug: `a1-poss-meus` · Sequence position: 31.0 · CEFR: A1 · Variant: shared*
 
@@ -1621,7 +1786,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 32 — Your/His/Her Possessives: Seu/Sua + Dele/Dela Construction
+## Unit 34 — Your/His/Her Possessives: Seu/Sua + Dele/Dela Construction
 
 *Slug: `a1-poss-seu-dele` · Sequence position: 32.0 · CEFR: A1 · Variant: shared*
 
@@ -1666,7 +1831,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 33 — Our Possessives: Nosso/Nossa/Nossos/Nossas
+## Unit 35 — Our Possessives: Nosso/Nossa/Nossos/Nossas
 
 *Slug: `a1-poss-nosso` · Sequence position: 33.0 · CEFR: A1 · Variant: shared*
 
@@ -1724,7 +1889,259 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 34 — Past Tense - Regular -AR Verbs (Preterite)
+## Unit 36 — Conjunções coordenativas (e, ou, mas, então, pois)
+
+*Slug: `a2-conjuncoes-coordenativas` · Sequence position: 33.5 · CEFR: A2 · Variant: shared*
+
+**Concepts:** `conjunctions`
+
+### Outcomes
+
+After this unit, the student can:
+
+- Use the five core coordinating conjunctions to link equivalent grammatical units (words, phrases, clauses)
+- Distinguish additive (*e*), alternative (*ou*), adversative (*mas*), conclusive (*então*), and explanatory (*pois*) coordination
+- Recognize the difference between coordination (linking equals) and subordination (one clause depending on another — covered in [[a2-conjuncoes-subordinativas]])
+
+### Vocabulary
+
+The coordinating conjunction inventory:
+
+| Conjunction | Type | Meaning |
+|---|---|---|
+| **e** | additive | and |
+| **nem** | additive (negative) | nor / neither |
+| **ou** | alternative | or |
+| **ou … ou …** | alternative (correlative) | either … or … |
+| **mas** | adversative | but |
+| **porém** | adversative (formal) | however |
+| **contudo** | adversative (formal) | however |
+| **então** | conclusive | so / then |
+| **portanto** | conclusive (formal) | therefore |
+| **pois** | explanatory / causal | because / for |
+
+### Grammar
+
+Coordinating conjunctions link two grammatically equivalent units — two words, two phrases, or two independent clauses. The key feature: the units they connect could each stand alone as complete (no clause-rank dependency).
+
+### The five core forms
+
+**1. e — additive**
+
+Joins parallel items or clauses:
+
+- *Eu falo português **e** inglês.* — I speak Portuguese and English.
+- *Compramos pão **e** queijo.* — We bought bread and cheese.
+- *O João trabalha **e** estuda.* — João works and studies.
+- *Ela ligou **e** eu atendi.* — She called and I answered.
+
+In long lists, *e* appears between the last two items only:
+
+- *Comprei pão, queijo, presunto **e** vinho.* (no comma before *e* in standard usage)
+
+**Negative version: nem** — connects two negated elements:
+
+- *Não falo francês **nem** alemão.* — I speak neither French nor German.
+- *Ele não come **nem** bebe.* — He neither eats nor drinks.
+
+**2. ou — alternative**
+
+Offers a choice:
+
+- *Café **ou** chá?* — Coffee or tea?
+- *Vamos hoje **ou** amanhã?* — Are we going today or tomorrow?
+
+Correlative form *ou … ou …* emphasizes mutual exclusivity:
+
+- *Ou estudas **ou** vais reprovar.* — Either you study or you'll fail.
+
+**3. mas — adversative**
+
+Marks contrast or opposition:
+
+- *Quero ir, **mas** estou cansado.* — I want to go, but I'm tired.
+- *O carro é caro, **mas** vale a pena.* — The car is expensive, but it's worth it.
+
+Formal alternatives: *porém, contudo*. Both more written:
+
+- *A proposta é interessante, **porém** problemática.* — The proposal is interesting, however problematic.
+
+**4. então — conclusive**
+
+Draws a consequence:
+
+- *Não tenho dinheiro, **então** não vou.* — I don't have money, so I'm not going.
+- *Choveu muito, **então** o jogo foi cancelado.* — It rained a lot, so the game was cancelled.
+
+Formal alternative: *portanto* (more written, more emphatic):
+
+- *Os dados são claros; **portanto**, a decisão é evidente.* — The data is clear; therefore the decision is evident.
+
+**5. pois — explanatory / causal**
+
+Provides reason or cause (postpositional — comes after the main clause):
+
+- *Saímos cedo, **pois** estava a chover.* — We left early, since it was raining.
+- *Não vou à festa, **pois** estou doente.* — I'm not going to the party, because I'm sick.
+
+*Pois* often parallels *porque* (subordinating, see [[a2-conjuncoes-subordinativas]]) but doesn't subordinate — both clauses remain independent in form.
+
+### Punctuation conventions
+
+- Coordinating clauses with *mas, porém, então, pois* take a comma BEFORE the conjunction: *Quero ir, mas estou cansado.*
+- *e* and *ou* in lists take no comma between items (except in elaborate enumeration).
+- Sentence-initial *então* (conclusive) often takes a comma after: *Então, vamos para casa.*
+
+### Exemplar set
+
+- *Comprei pão **e** vinho.*
+- *Vamos para a praia **ou** para o cinema?*
+- *Ela é simpática, **mas** muito tímida.*
+- *Estou cansado, **então** vou descansar.*
+- *Não vou trabalhar amanhã, **pois** é feriado.*
+- *Não falo russo **nem** chinês.*
+- *Os preços subiram, **portanto** vamos ter que cortar gastos.*
+
+### Drills & artifacts
+
+- Cross-link: see [[a2-conjuncoes-subordinativas]] for the subordinating-conjunction set (porque, quando, se, como, etc.) — the syntactic counterpart that creates clause-rank dependency rather than coordination.
+- Cross-link: see [[a1-falo-linguas]] where *e* is first introduced productively.
+- Cross-link: see [[b2-conectivos-textuais]] for the higher-register textual connectives (além disso, por outro lado, em conclusão) that operate at the paragraph/text level.
+
+<!-- TODO: build a coordination-vs-subordination drill (given a sentence pair, identify which conjunction type to use). Build a register drill (mas vs porém vs contudo). -->
+
+### Traps
+
+- **Don't put a comma before *e* or *ou* in standard lists.** *Comprei pão, e queijo* is unusual outside specific stylistic contexts. Use *Comprei pão e queijo*.
+- **Don't confuse *mas* with subordinating concessives.** *Mas* is coordinating (both clauses are independent). *Embora* / *apesar de que* are subordinating (the concessive clause depends on the main). See [[b2-concessivas]].
+- **Pois has a postpositional position.** Unlike English "since" or "because" which typically lead the subordinate clause, *pois* in Portuguese coordination follows the main clause: *Saímos cedo, pois chovia* — never *Pois chovia, saímos cedo* in this coordinate sense.
+- **Então as a conjunction vs então as a discourse marker.** *Então, vamos.* (= "well then, let's go" — discourse marker) vs *Estou cansado, então não vou.* (= "so I'm not going" — coordinator). Same word, both uses are productive; context disambiguates.
+- **Portanto is a written register.** Casual speech uses *então* much more often. Use *portanto* in essays, formal writing, professional contexts.
+- **Don't double-coordinate without restructuring.** *Quero ir mas estou cansado mas vou tentar* gets garbled. Restructure: *Quero ir, mas estou cansado; mesmo assim, vou tentar.*
+
+---
+
+## Unit 37 — Conjunções subordinativas (porque, quando, se, como, enquanto)
+
+*Slug: `a2-conjuncoes-subordinativas` · Sequence position: 33.7 · CEFR: A2 · Variant: shared*
+
+**Concepts:** `conjunctions`
+
+**Prereqs:** `a2-conjuncoes-coordenativas`
+
+### Outcomes
+
+After this unit, the student can:
+
+- Use the core subordinating conjunctions to make one clause depend on another (cause, time, condition, manner, purpose-precursor)
+- Distinguish subordination (clause depends on another) from coordination (clauses are equal — see [[a2-conjuncoes-coordenativas]])
+- Recognize which subordinating conjunctions take indicative vs subjuntivo (subjuntivo-triggering ones are covered in detail at [[b1-subj-trigger-conjuncoes]] for B1+)
+
+### Vocabulary
+
+The core A2 subordinating conjunction inventory (indicative-only — subjuntivo-triggering set is B1):
+
+| Conjunction | Type | Mood | Meaning |
+|---|---|---|---|
+| **porque** | causal | indicativo | because |
+| **como** | causal (initial position) | indicativo | since / as |
+| **quando** | temporal | indicativo / fut subj | when |
+| **enquanto** | temporal | indicativo | while / as long as |
+| **assim que** | temporal | fut subj (B1+) | as soon as |
+| **depois que** | temporal | indicativo | after |
+| **se** | conditional | indicativo / fut subj | if |
+| **como** | manner | indicativo | how / as |
+| **conforme** | manner | indicativo | according to / as |
+
+### Grammar
+
+Subordinating conjunctions create a hierarchical relationship between two clauses: the subordinate clause depends on the main clause grammatically and semantically. Without the main, the subordinate is a fragment.
+
+### Three categories at A2
+
+**1. Causal — porque, como (initial)**
+
+Express the reason or cause:
+
+- *Não vou à festa **porque** estou doente.* — I'm not going to the party because I'm sick.
+- *Como estava a chover, ficámos em casa.* — Since it was raining, we stayed home. (causal *como* must be in initial position)
+- *Liguei para ti **porque** preciso de ajuda.* — I called you because I need help.
+
+Note: *porque* never appears in initial position in standard Portuguese — it's always after the main clause. *Como* takes initial position for causal use.
+
+**2. Temporal — quando, enquanto, depois que**
+
+Anchor the action in time:
+
+- ***Quando** chego em casa, jantamos.* — When I arrive home, we have dinner. (habitual present)
+- ***Enquanto** estudas, eu cozinho.* — While you study, I cook. (parallel actions)
+- ***Depois que** terminou o trabalho, saiu.* — After he finished work, he left.
+
+For specific future events with *quando* and *assim que*, B1+ adds the futuro do subjuntivo: *quando chegares* (when you arrive). At A2, focus on the present-tense and past-tense uses with indicativo.
+
+**3. Conditional — se**
+
+Sets up a condition:
+
+- ***Se** chove, fico em casa.* — If it rains, I stay home. (general/habitual)
+- ***Se** quiseres mais informação, telefona-me.* — If you want more information, call me. (B1+ — futuro do subj)
+
+The B1 conditional system (Type 1/2/3) builds on this — see [[b1-cond-real-bp]] for the full Type 1 framework. At A2, focus on the simple habitual conditional.
+
+### Subordinating vs coordinating — the structural test
+
+| Coordination | Subordination |
+|---|---|
+| Both clauses can stand alone | Subordinate clause is a fragment without the main |
+| *Estou cansado, **mas** vou estudar.* | *Estou cansado **porque** trabalhei muito.* |
+| (Both halves are full sentences) | (*Porque trabalhei muito* alone is incomplete) |
+
+This structural test helps when choosing between similar-looking conjunctions:
+
+- *mas* vs *embora*: *mas* coordinates (both clauses independent); *embora* subordinates (clause needs main).
+- *então* vs *porque*: *então* draws a consequence on equal footing (coordinates); *porque* introduces a reason as dependent (subordinates).
+
+### Mood at A2 — indicativo only
+
+At A2, all the conjunctions in this unit take indicativo. The subjuntivo-triggering subordinating conjunctions (*embora, ainda que, mesmo que, sem que, antes que, contanto que, a menos que*) are introduced at B1 — see [[b1-subj-trigger-conjuncoes]] for the full subjuntivo-triggering set.
+
+The cleanest A2 rule: *porque, quando, enquanto, depois que, se, como, conforme* + indicativo. When the student moves to B1 and adds subjuntivo, the trigger set is a separate vocabulary set.
+
+### Exemplar set
+
+- *Estou em casa **porque** está a chover.* — I'm home because it's raining.
+- ***Quando** o telefone tocar, eu atendo.* — When the phone rings, I'll answer. (B1 — futuro do subj)
+- ***Quando** o telefone toca, eu atendo.* — When the phone rings (habitually), I answer. (A2 — indicativo)
+- ***Enquanto** estudas, eu vou ao supermercado.* — While you study, I'll go to the supermarket.
+- ***Se** tens tempo, ajuda-me.* — If you have time, help me.
+- ***Como** a Maria já chegou, podemos começar.* — Since Maria has arrived, we can start. (causal *como* in initial position)
+- *Saímos **depois que** o jantar acabou.* — We left after dinner ended.
+
+### Drills & artifacts
+
+- Cross-link: see [[a2-conjuncoes-coordenativas]] for the coordinating-conjunction counterpart (e, ou, mas, então, pois).
+- Cross-link: see [[b1-subj-trigger-conjuncoes]] for the B1+ subjuntivo-triggering subordinating conjunctions (embora, mesmo que, sem que, antes que, etc.).
+- Cross-link: see [[b1-cond-real-bp]] / [[b1-cond-real-ep]] for the conditional-sentence framework that *se* introduces.
+
+<!-- TODO: build a subordinating-vs-coordinating discrimination drill (given a sentence pair, choose which conjunction). Build a mood drill (which subordinators take indic vs subj at B1+). -->
+
+### Traps
+
+- **Porque vs por que vs por quê vs porquê.** All four exist in Portuguese with subtle distinctions:
+  - **porque** (one word) — subordinating conjunction "because": *Não vou porque estou doente.*
+  - **por que** (two words) — interrogative "why" in direct/indirect questions: *Por que saíste?* / *Perguntei por que saíste.*
+  - **por quê** (with circumflex, sentence-final) — interrogative at end of sentence: *Saíste por quê?*
+  - **porquê** (one word, with circumflex) — noun "the reason": *O porquê ainda é desconhecido.*
+  EP often writes *porquê* where BP would write *por quê* — register variation.
+- **Don't put porque in initial position.** *Porque está a chover, não vou* is wrong (or sounds bookish). For initial-position causal use, use *como*: *Como está a chover, não vou.*
+- **Como has multiple meanings.** Causal (*Como estava cansado, dormi cedo*), manner (*Faz como queres*), comparative (*alto como o pai*), question word (*Como te chamas?*). Context disambiguates.
+- **Quando + presente vs quando + futuro do subjuntivo.** *Quando chove* (when it rains, habitually — indic) vs *Quando chover amanhã* (when it rains tomorrow, specific future — futuro do subj, B1+). At A2, the habitual is the focus.
+- **Se has two functions.** Conjunction "if" (*Se chove, fico*) vs the indirect-question conjunction "whether" (*Pergunto-me se ele vem* — see [[b1-perguntas-indiretas]]). Context disambiguates.
+- **Don't combine porque with mas in the same clause for cause+contrast.** *Porque está a chover mas vou sair* is grammatically possible but semantically muddled. Restructure: *Embora esteja a chover, vou sair* (concessive — B1) or *Está a chover, mas vou sair* (coordinate contrast).
+
+---
+
+## Unit 38 — Past Tense - Regular -AR Verbs (Preterite)
 
 *Slug: `a2-pret-regular-ar` · Sequence position: 34.0 · CEFR: A2 · Variant: shared*
 
@@ -1779,7 +2196,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 35 — Past Tense - Regular -ER/-IR Verbs (Preterite)
+## Unit 39 — Past Tense - Regular -ER/-IR Verbs (Preterite)
 
 *Slug: `a2-pret-regular-er-ir` · Sequence position: 35.0 · CEFR: A2 · Variant: shared*
 
@@ -1832,7 +2249,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 36 — Past Tense - Essential Irregular Verbs (ser, ir, ter, estar)
+## Unit 40 — Past Tense - Essential Irregular Verbs (ser, ir, ter, estar)
 
 *Slug: `a2-pret-essenciais` · Sequence position: 36.0 · CEFR: A2 · Variant: shared*
 
@@ -1888,7 +2305,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 37 — Past Tense - Common Irregular Verbs (fazer, ver, dar)
+## Unit 41 — Past Tense - Common Irregular Verbs (fazer, ver, dar)
 
 *Slug: `a2-pret-fazer-ver-dar` · Sequence position: 37.0 · CEFR: A2 · Variant: shared*
 
@@ -1943,7 +2360,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 38 — Question Words (Interrogatives)
+## Unit 42 — Question Words (Interrogatives)
 
 *Slug: `a1-question-words` · Sequence position: 38.0 · CEFR: A1 · Variant: shared*
 
@@ -1999,7 +2416,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 39 — Reflexive Verbs (me chamo, me levanto, me sinto)
+## Unit 43 — Reflexive Verbs (me chamo, me levanto, me sinto)
 
 *Slug: `a2-reflexivos-bp` · Sequence position: 39.0 · CEFR: A2 · Variant: bp*
 
@@ -2080,7 +2497,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 40 — Direct Object Pronouns (me, te, o/a, nos, os/as)
+## Unit 44 — Direct Object Pronouns (me, te, o/a, nos, os/as)
 
 *Slug: `a2-dop-bp` · Sequence position: 40.0 · CEFR: A2 · Variant: bp*
 
@@ -2154,7 +2571,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 41 — Past Tense - More Common Irregular Verbs (poder, querer, saber)
+## Unit 45 — Past Tense - More Common Irregular Verbs (poder, querer, saber)
 
 *Slug: `a2-pret-poder-querer-saber` · Sequence position: 41.0 · CEFR: A2 · Variant: shared*
 
@@ -2217,7 +2634,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 42 — Para vs Por (Two meanings of for)
+## Unit 46 — Para vs Por (Two meanings of for)
 
 *Slug: `a2-por-vs-para` · Sequence position: 42.0 · CEFR: A2 · Variant: shared*
 
@@ -2301,7 +2718,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 43 — Past Tense - Additional Irregular Verbs (trazer, dizer, vir, pôr)
+## Unit 47 — Past Tense - Additional Irregular Verbs (trazer, dizer, vir, pôr)
 
 *Slug: `a2-pret-trazer-dizer-vir-por` · Sequence position: 43.0 · CEFR: A2 · Variant: shared*
 
@@ -2365,7 +2782,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 44 — Indirect Object Pronouns (lhe, lhes) + Review of me/te/nos
+## Unit 48 — Indirect Object Pronouns (lhe, lhes) + Review of me/te/nos
 
 *Slug: `a2-iop-bp` · Sequence position: 44.0 · CEFR: A2 · Variant: bp*
 
@@ -2440,7 +2857,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 45 — Imperfect Tense - Regular Verbs (Ongoing/Habitual Past)
+## Unit 49 — Imperfect Tense - Regular Verbs (Ongoing/Habitual Past)
 
 *Slug: `a2-imp-regular` · Sequence position: 45.0 · CEFR: A2 · Variant: shared*
 
@@ -2506,7 +2923,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 46 — Imperfect Tense - Irregular Verbs (ser, ter, vir)
+## Unit 50 — Imperfect Tense - Irregular Verbs (ser, ter, vir)
 
 *Slug: `a2-imp-irregular` · Sequence position: 46.0 · CEFR: A2 · Variant: shared*
 
@@ -2574,7 +2991,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 47 — Preterite vs Imperfect
+## Unit 51 — Preterite vs Imperfect
 
 *Slug: `a2-pret-vs-imp` · Sequence position: 46.5 · CEFR: A2 · Variant: shared*
 
@@ -2607,7 +3024,7 @@ Generated from `docs/units/`. Filter: `variant in (bp, shared)` AND `status == p
 
 ---
 
-## Unit 48 — Saber: Aspectual Shift — soube vs sabia
+## Unit 52 — Saber: Aspectual Shift — soube vs sabia
 
 *Slug: `b1-saber-aspect-bp` · Sequence position: 46.6 · CEFR: B1 · Variant: bp*
 
@@ -2666,7 +3083,7 @@ The same verb shifts meaning by tense:
 
 ---
 
-## Unit 49 — Conhecer: Aspectual Shift — conheci vs conhecia
+## Unit 53 — Conhecer: Aspectual Shift — conheci vs conhecia
 
 *Slug: `b1-conhecer-aspect-bp` · Sequence position: 46.7 · CEFR: B1 · Variant: bp*
 
@@ -2724,7 +3141,7 @@ Triggering markers for **conhecia** (familiarity, prior acquaintance):
 
 ---
 
-## Unit 50 — Poder: Aspectual Shift — pude vs podia
+## Unit 54 — Poder: Aspectual Shift — pude vs podia
 
 *Slug: `b1-poder-aspect-bp` · Sequence position: 46.8 · CEFR: B1 · Variant: bp*
 
@@ -2783,7 +3200,140 @@ Triggering markers for **podia** (general ability or background context):
 
 ---
 
-## Unit 51 — Querer: Aspectual Shift — quis vs queria
+## Unit 55 — Particípios passados — formação (regular + irregular)
+
+*Slug: `b1-participios-introducao` · Sequence position: 46.85 · CEFR: B1 · Variant: shared*
+
+**Concepts:** `compound-tenses`, `irregular-verb-conjugation`
+
+**Prereqs:** `a2-pret-regular-ar`, `a2-pret-regular-er-ir`
+
+### Outcomes
+
+After this unit, the student can:
+
+- Form regular past participles for any -AR / -ER / -IR verb (-ado / -ido endings)
+- Recognize and produce the core irregular past participles (*dito, feito, posto, visto, escrito, aberto, ganho, gasto, pago, vindo*)
+- Distinguish past participles from preterite verbs (*falado* vs *falou*) — same root, different forms, different functions
+- Use participles correctly with **agreement rules** depending on construction (active compound = invariable; passive ser = agrees with subject)
+
+### Vocabulary
+
+The participle inventory:
+
+### Regular formation
+
+- **-AR verbs** → **-ado**: falar → *falado*, comprar → *comprado*, trabalhar → *trabalhado*
+- **-ER verbs** → **-ido**: comer → *comido*, beber → *bebido*, vender → *vendido*
+- **-IR verbs** → **-ido**: partir → *partido*, abrir → *aberto* (irregular), assistir → *assistido*
+
+### Irregular participles (must memorize)
+
+| Verb | Particípio |
+|---|---|
+| dizer | dito |
+| fazer | feito |
+| pôr | posto |
+| ver | visto |
+| escrever | escrito |
+| abrir | aberto |
+| cobrir | coberto |
+| descobrir | descoberto |
+| ganhar | ganho |
+| gastar | gasto |
+| pagar | pago |
+| vir | vindo |
+| trazer | trazido (regular) |
+
+Plus all derivatives inherit the irregular forms: *propor → proposto, expor → exposto, manter → mantido, conter → contido, intervir → intervindo*.
+
+### Spotting the irregulars
+
+The shortest irregular forms are also the highest-frequency: *dito, feito, posto, visto, escrito, aberto*. Students should drill these as a memorized set rather than trying to derive them from the infinitive.
+
+### Grammar
+
+Past participles are verb forms that function as either:
+
+1. **The second element of compound tenses** (with auxiliary *ter* or *haver*) — *tenho falado, tinha visto, terei feito*
+2. **The second element of passive constructions** (with auxiliary *ser*) — *foi escrito, é dito, será feito*
+3. **Adjectivally** (as a stand-alone modifier) — *uma porta aberta, um livro escrito em português*
+
+Each construction has different agreement behavior.
+
+### Use 1 — Compound tenses with ter/haver: INVARIABLE
+
+When the participle pairs with *ter* (or *haver*) as the auxiliary, the participle stays in its base form (*-ado / -ido* or the irregular). It does NOT agree with anything:
+
+- *Eu tenho **falado** com ela.* — I've been speaking with her.
+- *Nós tínhamos **visto** o filme.* — We had seen the movie.
+- *Elas terão **terminado** até domingo.* — They will have finished by Sunday.
+
+The masc-singular form of the participle is the only form used. *Tenho faladas* would be wrong.
+
+### Use 2 — Passive with ser: AGREES with subject
+
+When the participle pairs with *ser* in a passive construction, it agrees with the grammatical subject in gender and number:
+
+- *O livro foi **escrito** em 2020.* — masc sg
+- *A carta foi **escrita** em 2020.* — fem sg
+- *Os livros foram **escritos** em 2020.* — masc pl
+- *As cartas foram **escritas** em 2020.* — fem pl
+
+See [[b1-passiva-ser]] for the full passive system.
+
+### Use 3 — Adjectival use: AGREES with noun modified
+
+When a participle modifies a noun directly (acting like an adjective), it agrees in gender + number:
+
+- *uma porta **aberta*** — fem sg (porta is fem)
+- *um livro **escrito*** — masc sg (livro is masc)
+- *casas **construídas*** — fem pl
+
+### Double participles — verbs with regular AND irregular forms
+
+A small set of verbs has both a regular *-ado/-ido* form and an irregular form. Convention:
+
+- **Regular form** (with *ter/haver*): *aceitado, ganhado, gastado, pagado, entregado*
+- **Irregular form** (with *ser/estar* in passive/adjectival): *aceito, ganho, gasto, pago, entregue*
+
+So: *Eu **tenho aceitado** todos os convites* (compound — regular) but *O convite **foi aceito*** (passive — irregular).
+
+In modern usage, especially in BP, the irregular forms (*aceito, ganho*) are increasingly used in compound tenses too — both *tenho aceito* and *tenho aceitado* are heard. EP is more conservative on this distinction. See [[b2-participios-duplos]] for the full inventory.
+
+### Exemplar sentences
+
+- *Eu já **tenho falado** com ele sobre isso.* — I've already spoken with him about it. (compound, invariable)
+- *A carta foi **escrita** ontem.* — The letter was written yesterday. (passive, agrees fem sg)
+- *As janelas estavam **abertas***. — The windows were open. (adjectival/state, agrees fem pl)
+- *Nós tínhamos **visto** o filme antes.* — We had seen the film before. (compound, invariable)
+- *O cheque foi **pago** ontem.* — The check was paid yesterday. (passive, irregular form)
+- *Tinha **pagado** todas as contas.* — I had paid all the bills. (compound, regular form preferred prescriptively)
+
+### Drills & artifacts
+
+- Cross-link: see [[b1-mais-que-perfeito-ind]] for *tinha + particípio* (pluperfect indicative).
+- Cross-link: see [[b1-pret-perfeito-composto-bp]] / [[b1-pret-perfeito-composto-ep]] for *tenho + particípio* (recent-iterative compound).
+- Cross-link: see [[b2-mais-que-perfeito-subj]] for *tivesse + particípio* (pluperfect subjunctive).
+- Cross-link: see [[b2-condicional-composto-bp]] / [[b2-condicional-composto-ep]] for *teria + particípio* (conditional perfect).
+- Cross-link: see [[b2-futuro-composto-ind]] / [[b2-futuro-composto-subj]] for *terei/tiver + particípio* (future-perfect forms).
+- Cross-link: see [[b1-passiva-ser]] for the passive use with agreement.
+- Cross-link: see [[b2-participios-duplos]] for the full double-participle inventory.
+
+<!-- TODO: build a regular-vs-irregular participle drill (given an infinitive, produce the participle). Build an agreement-context drill (compound vs passive vs adjectival, identify whether participle agrees). -->
+
+### Traps
+
+- **Don't agree the participle in compound tenses.** *Tenho faladas* is wrong even with feminine plural object — compound *ter +* particípio always uses the masc-sg form.
+- **Don't use the *-ado/-ido* form when the irregular is required.** *Eu tenho dizido* is wrong — should be *eu tenho dito*. The irregular wins for *dizer, fazer, pôr, ver, escrever, abrir*.
+- **Particípio vs preterite — same root, different forms.** *Falado* (participle) vs *falou* (preterite 3sg). Both come from *falar*, both refer to past action, but they're not interchangeable. Compound: *Ele tem falado*. Preterite: *Ele falou ontem*.
+- **The *ganho/ganhado* and *pago/pagado* distinction is fading in BP.** Modern BP often uses *tenho ganho* (irregular) where prescriptive grammar wants *tenho ganhado* (regular). Both are heard. EP is more conservative.
+- **Particípios irregulares for derivatives inherit from the parent.** *Compor → composto* (from pôr → posto). *Reter → retido* (from ter → tido). Don't try to derive them independently — apply the parent's rule with the prefix.
+- **The form *vindo* serves both as particípio of *vir* AND as gerúndio of *vir***. Context disambiguates: *tenho vindo* = compound (I've been coming); *vindo da escola* = gerund (coming from school).
+
+---
+
+## Unit 56 — Querer: Aspectual Shift — quis vs queria
 
 *Slug: `b1-querer-aspect-bp` · Sequence position: 46.9 · CEFR: B1 · Variant: bp*
 
@@ -2842,7 +3392,7 @@ Triggering markers for **queria** (ongoing desire, often unrealized):
 
 ---
 
-## Unit 52 — Pretérito perfeito composto (tenho falado) — uso habitual recente
+## Unit 57 — Pretérito perfeito composto (tenho falado) — uso habitual recente
 
 *Slug: `b1-pret-perfeito-composto-bp` · Sequence position: 46.91 · CEFR: B1 · Variant: bp*
 
@@ -2910,7 +3460,7 @@ The BP reading is **iterative-recent**: the action has been happening repeatedly
 
 ---
 
-## Unit 53 — Mais-que-perfeito do indicativo (tinha falado) — pluperfect
+## Unit 58 — Mais-que-perfeito do indicativo (tinha falado) — pluperfect
 
 *Slug: `b1-mais-que-perfeito-ind` · Sequence position: 46.93 · CEFR: B1 · Variant: shared*
 
@@ -2973,7 +3523,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 54 — Comparatives (mais...que, menos...que, tão...quanto)
+## Unit 59 — Comparatives (mais...que, menos...que, tão...quanto)
 
 *Slug: `a2-comparativos` · Sequence position: 47.0 · CEFR: A2 · Variant: shared*
 
@@ -3025,7 +3575,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 55 — Superlatives (O mais..., O menos...)
+## Unit 60 — Superlatives (O mais..., O menos...)
 
 *Slug: `a2-superlativos` · Sequence position: 48.0 · CEFR: A2 · Variant: shared*
 
@@ -3087,7 +3637,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 56 — Telling Time (Que horas são?)
+## Unit 61 — Telling Time (Que horas são?)
 
 *Slug: `a1-horas` · Sequence position: 49.0 · CEFR: A1 · Variant: shared*
 
@@ -3140,7 +3690,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 57 — Days of the Week (Dias da Semana)
+## Unit 62 — Days of the Week (Dias da Semana)
 
 *Slug: `a1-dias-semana` · Sequence position: 50.0 · CEFR: A1 · Variant: shared*
 
@@ -3208,7 +3758,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 58 — Months of the Year (Meses do Ano)
+## Unit 63 — Months of the Year (Meses do Ano)
 
 *Slug: `a1-meses` · Sequence position: 51.0 · CEFR: A1 · Variant: shared*
 
@@ -3275,7 +3825,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 59 — Dates (Calendar Dates - Dia, Mês, Ano)
+## Unit 64 — Dates (Calendar Dates - Dia, Mês, Ano)
 
 *Slug: `a1-datas` · Sequence position: 52.0 · CEFR: A1 · Variant: shared*
 
@@ -3340,7 +3890,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 60 — Ordinal Numbers (Primeiro, Segundo, Terceiro...)
+## Unit 65 — Ordinal Numbers (Primeiro, Segundo, Terceiro...)
 
 *Slug: `a1-num-ordinais` · Sequence position: 53.0 · CEFR: A1 · Variant: shared*
 
@@ -3409,7 +3959,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 61 — Weather Expressions (Tempo e Clima)
+## Unit 66 — Weather Expressions (Tempo e Clima)
 
 *Slug: `a2-tempo-clima` · Sequence position: 54.0 · CEFR: A2 · Variant: shared*
 
@@ -3484,7 +4034,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 62 — Colors (Cores Básicas)
+## Unit 67 — Colors (Cores Básicas)
 
 *Slug: `a1-cores` · Sequence position: 55.0 · CEFR: A1 · Variant: shared*
 
@@ -3555,7 +4105,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 63 — Clothing Basics (Roupas Básicas)
+## Unit 68 — Clothing Basics (Roupas Básicas)
 
 *Slug: `a1-roupas` · Sequence position: 56.0 · CEFR: A1 · Variant: shared*
 
@@ -3628,7 +4178,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 64 — Body Parts (Partes do Corpo)
+## Unit 69 — Body Parts (Partes do Corpo)
 
 *Slug: `a1-corpo` · Sequence position: 57.0 · CEFR: A1 · Variant: shared*
 
@@ -3703,7 +4253,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 65 — Family Members Expanded (Família - Detalhada)
+## Unit 70 — Family Members Expanded (Família - Detalhada)
 
 *Slug: `a1-familia` · Sequence position: 58.0 · CEFR: A1 · Variant: shared*
 
@@ -3762,7 +4312,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 66 — Emotions and Feelings (Emoções e Sentimentos)
+## Unit 71 — Emotions and Feelings (Emoções e Sentimentos)
 
 *Slug: `a2-emocoes` · Sequence position: 59.0 · CEFR: A2 · Variant: shared*
 
@@ -3834,7 +4384,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 67 — Locations and Directions (Localizações e Direções)
+## Unit 72 — Locations and Directions (Localizações e Direções)
 
 *Slug: `a2-localizacoes-direcoes` · Sequence position: 60.0 · CEFR: A2 · Variant: shared*
 
@@ -3917,7 +4467,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 68 — House and Rooms (Casa e Cômodos)
+## Unit 73 — House and Rooms (Casa e Cômodos)
 
 *Slug: `a1-casa-comodos` · Sequence position: 61.0 · CEFR: A1 · Variant: shared*
 
@@ -3993,7 +4543,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 69 — Daily Activities Verbs (Verbos de Atividades Diárias)
+## Unit 74 — Daily Activities Verbs (Verbos de Atividades Diárias)
 
 *Slug: `a2-atividades-diarias` · Sequence position: 62.0 · CEFR: A2 · Variant: shared*
 
@@ -4072,7 +4622,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 70 — Frequency Adverbs (Advérbios de Frequência)
+## Unit 75 — Frequency Adverbs (Advérbios de Frequência)
 
 *Slug: `a2-adv-frequencia` · Sequence position: 63.0 · CEFR: A2 · Variant: shared*
 
@@ -4157,7 +4707,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 71 — Food and Meals Expanded (Comida e Refeições)
+## Unit 76 — Food and Meals Expanded (Comida e Refeições)
 
 *Slug: `a2-comida-refeicoes` · Sequence position: 64.0 · CEFR: A2 · Variant: shared*
 
@@ -4254,7 +4804,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 72 — Transportation and Travel (Transporte e Viagem)
+## Unit 77 — Transportation and Travel (Transporte e Viagem)
 
 *Slug: `a2-transporte-viagem` · Sequence position: 65.0 · CEFR: A2 · Variant: shared*
 
@@ -4336,7 +4886,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 73 — Hobbies and Leisure Activities (Hobbies e Atividades de Lazer)
+## Unit 78 — Hobbies and Leisure Activities (Hobbies e Atividades de Lazer)
 
 *Slug: `a2-hobbies` · Sequence position: 66.0 · CEFR: A2 · Variant: shared*
 
@@ -4425,7 +4975,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 74 — Technology and Communication (Tecnologia e Comunicação)
+## Unit 79 — Technology and Communication (Tecnologia e Comunicação)
 
 *Slug: `a2-tecnologia` · Sequence position: 67.0 · CEFR: A2 · Variant: shared*
 
@@ -4513,7 +5063,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 75 — Shopping and Money (Compras e Dinheiro)
+## Unit 80 — Shopping and Money (Compras e Dinheiro)
 
 *Slug: `a2-compras` · Sequence position: 68.0 · CEFR: A2 · Variant: shared*
 
@@ -4604,7 +5154,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 76 — Professions and Work (Profissões e Trabalho)
+## Unit 81 — Professions and Work (Profissões e Trabalho)
 
 *Slug: `a2-profissoes` · Sequence position: 69.0 · CEFR: A2 · Variant: shared*
 
@@ -4698,7 +5248,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 77 — Health and Medical Basics (Saúde e Médico)
+## Unit 82 — Health and Medical Basics (Saúde e Médico)
 
 *Slug: `a2-saude` · Sequence position: 70.0 · CEFR: A2 · Variant: shared*
 
@@ -4784,7 +5334,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 78 — Commands/Imperative Mood (Imperativo)
+## Unit 83 — Commands/Imperative Mood (Imperativo)
 
 *Slug: `a2-imperativo-bp` · Sequence position: 71.0 · CEFR: A2 · Variant: bp*
 
@@ -4870,7 +5420,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 79 — Demonstratives - This/That (Demonstrativos)
+## Unit 84 — Demonstratives - This/That (Demonstrativos)
 
 *Slug: `a1-demonstrativos` · Sequence position: 72.0 · CEFR: A1 · Variant: shared*
 
@@ -4972,7 +5522,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 80 — Furniture and Household Items (Móveis e Objetos da Casa)
+## Unit 85 — Furniture and Household Items (Móveis e Objetos da Casa)
 
 *Slug: `a1-moveis` · Sequence position: 73.0 · CEFR: A1 · Variant: shared*
 
@@ -5057,7 +5607,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 81 — Nature and Animals (Natureza e Animais)
+## Unit 86 — Nature and Animals (Natureza e Animais)
 
 *Slug: `a2-natureza-animais` · Sequence position: 74.0 · CEFR: A2 · Variant: shared*
 
@@ -5145,7 +5695,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 82 — School and Education (Escola e Educação)
+## Unit 87 — School and Education (Escola e Educação)
 
 *Slug: `a2-escola` · Sequence position: 75.0 · CEFR: A2 · Variant: shared*
 
@@ -5237,7 +5787,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 83 — Future Tense (Farei, Fará)
+## Unit 88 — Future Tense (Farei, Fará)
 
 *Slug: `b1-fut-sintetico` · Sequence position: 76.0 · CEFR: B1 · Variant: shared*
 
@@ -5285,7 +5835,7 @@ The pluperfect needs another past event as anchor. Without one, use pretérito p
 
 ---
 
-## Unit 84 — Condicional simples — formas (âncora compartilhada)
+## Unit 89 — Condicional simples — formas (âncora compartilhada)
 
 *Slug: `b1-condicional` · Sequence position: 76.95 · CEFR: B1 · Variant: shared*
 
@@ -5356,7 +5906,7 @@ For BP/EP usage detail and the imperfeito-cortesia substitution pattern, see [[b
 
 ---
 
-## Unit 85 — Conditional Tense (Faria, Gostaria)
+## Unit 90 — Conditional Tense (Faria, Gostaria)
 
 *Slug: `b1-condicional-bp` · Sequence position: 77.0 · CEFR: B1 · Variant: bp*
 
@@ -5402,7 +5952,7 @@ For BP/EP usage detail and the imperfeito-cortesia substitution pattern, see [[b
 
 ---
 
-## Unit 86 — É que - Emphatic Questions
+## Unit 91 — É que - Emphatic Questions
 
 *Slug: `a2-e-que` · Sequence position: 78.0 · CEFR: A2 · Variant: shared*
 
@@ -5449,7 +5999,7 @@ For BP/EP usage detail and the imperfeito-cortesia substitution pattern, see [[b
 
 ---
 
-## Unit 87 — Crase (à, às)
+## Unit 92 — Crase (à, às)
 
 *Slug: `b1-crase` · Sequence position: 79.0 · CEFR: B1 · Variant: shared*
 
@@ -5499,7 +6049,7 @@ For BP/EP usage detail and the imperfeito-cortesia substitution pattern, see [[b
 
 ---
 
-## Unit 88 — Pronome relativo *que* — pronome relativo padrão
+## Unit 93 — Pronome relativo *que* — pronome relativo padrão
 
 *Slug: `b1-relativo-que` · Sequence position: 79.5 · CEFR: B1 · Variant: shared*
 
@@ -5578,7 +6128,7 @@ For [+human] antecedents after a preposition, **quem** typically replaces que (s
 
 ---
 
-## Unit 89 — Pronome relativo *quem* — antecedente humano após preposição
+## Unit 94 — Pronome relativo *quem* — antecedente humano após preposição
 
 *Slug: `b1-relativo-quem` · Sequence position: 79.6 · CEFR: B1 · Variant: shared*
 
@@ -5656,7 +6206,7 @@ For [-human] antecedents, *que* dominates and *quem* is wrong:
 
 ---
 
-## Unit 90 — Pronome relativo *cujo* — possessivo (concorda com o possuído)
+## Unit 95 — Pronome relativo *cujo* — possessivo (concorda com o possuído)
 
 *Slug: `b1-relativo-cujo` · Sequence position: 79.7 · CEFR: B1 · Variant: shared*
 
@@ -5739,7 +6289,7 @@ When a preposition combines with the article-bearing word in the noun phrase, co
 
 ---
 
-## Unit 91 — Pronomes relativos *o qual* (formal) e *onde* (locativo)
+## Unit 96 — Pronomes relativos *o qual* (formal) e *onde* (locativo)
 
 *Slug: `b1-relativo-formal-locativo` · Sequence position: 79.8 · CEFR: B1 · Variant: shared*
 
@@ -5836,7 +6386,45 @@ Onde can usually be replaced by *em que* in static-location contexts:
 
 ---
 
-## Unit 92 — Todo vs Tudo
+## Unit 97 — Pronunciation — Final unstressed -o
+
+*Slug: `a1-pron-final-o` · Sequence position: 80.0 · CEFR: A1 · Variant: shared*
+
+**Concepts:** `final-o-reduction`
+
+### Outcomes
+
+- Recognize and produce unstressed final `-o` as [u]: *americano* → americ[anu], *do* → [du].
+- Apply the same reduction to plural `-os` → [us]: *livros* → livr[us].
+
+### Vocabulary
+
+<!-- Pronunciation anchor — vocabulary lives in artifacts that exemplify the rule, not here. -->
+
+### Grammar
+
+Rule 1 of the BP pronunciation rule set. Every word ending in unstressed `-o` is pronounced [u]; plural `-os` becomes [us]. Stressed final `-o` (with circumflex: *avô*, *metrô*) keeps [o].
+
+Examples:
+- *americano* → americ[anu]
+- *o* (article) → [u]
+- *do, no, ao* → [du], [nu], [au]
+- *avô* (stressed) stays [avô] — the circumflex blocks reduction.
+
+Canonical reference: [PRONUNCIATION_RULES.md](../../PRONUNCIATION_RULES.md), Rule 1.
+
+### Drills & artifacts
+
+- Embedded in worksheets and primers via phonetic respellings (PEDAGOGY P14, P26).
+- [Students/primer-BP.html](../../Students/primer-BP.html) — applied throughout the BP primer.
+
+### Traps
+
+- *Stressed* final -o (written -ô) does NOT reduce. *avô* is [avô], not [avu]. The acute/circumflex is the cue.
+
+---
+
+## Unit 98 — Todo vs Tudo
 
 *Slug: `a2-todo-tudo` · Sequence position: 80.0 · CEFR: A2 · Variant: shared*
 
@@ -5884,13 +6472,13 @@ Onde can usually be replaced by *em que* in static-location contexts:
 
 ---
 
-## Unit 93 — Voz passiva analítica (ser + particípio)
+## Unit 99 — Voz passiva analítica (ser + particípio)
 
 *Slug: `b1-passiva-ser` · Sequence position: 80.5 · CEFR: B1 · Variant: shared*
 
 **Concepts:** `passive-voice`
 
-**Prereqs:** `a1-ser-identity`, `b1-mais-que-perfeito-ind`
+**Prereqs:** `a1-ser-identity`, `b1-participios-introducao`
 
 ### Outcomes
 
@@ -5991,7 +6579,7 @@ The agent is **optional**. Omit it when irrelevant or unknown:
 
 ---
 
-## Unit 94 — Passiva sintética / impessoal (verbo + se)
+## Unit 100 — Passiva sintética / impessoal (verbo + se)
 
 *Slug: `b1-passiva-se` · Sequence position: 80.6 · CEFR: B1 · Variant: shared*
 
@@ -6092,7 +6680,7 @@ Examples:
 
 ---
 
-## Unit 95 — Discurso direto vs discurso indireto (declarativo)
+## Unit 101 — Discurso direto vs discurso indireto (declarativo)
 
 *Slug: `b1-discurso-direto-indireto` · Sequence position: 80.7 · CEFR: B1 · Variant: shared*
 
@@ -6207,7 +6795,7 @@ These shifts apply when the reporting context is clearly displaced from the orig
 
 ---
 
-## Unit 96 — Perguntas indiretas (yes/no com *se*, conteúdo com wh-words)
+## Unit 102 — Perguntas indiretas (yes/no com *se*, conteúdo com wh-words)
 
 *Slug: `b1-perguntas-indiretas` · Sequence position: 80.8 · CEFR: B1 · Variant: shared*
 
@@ -6324,7 +6912,49 @@ The same backshift rules from `b1-discurso-direto-indireto` apply:
 
 ---
 
-## Unit 97 — Introduction to Subjunctive Mood
+## Unit 103 — Pronunciation — Final unstressed -e
+
+*Slug: `a1-pron-final-e` · Sequence position: 81.0 · CEFR: A1 · Variant: shared*
+
+**Concepts:** `final-e-reduction`
+
+### Outcomes
+
+- Recognize and produce unstressed final `-e` as [i]: *nome* → no[mi], *e* (and) → [i].
+- Apply the same reduction to plural `-es` → [is]: *nomes* → no[mis].
+- Recognize that this reduction triggers Rule 3 palatalization on `de` → [dʒi].
+
+### Vocabulary
+
+<!-- Pronunciation anchor — vocabulary lives in artifacts that exemplify the rule, not here. -->
+
+### Grammar
+
+Rule 2 of the BP pronunciation rule set. Every word ending in unstressed `-e` is pronounced [i]; plural `-es` becomes [is]. Stressed final `-e` (acute or circumflex: *café*, *você*) keeps [e].
+
+Examples:
+- *nome, ponte, parte, forte, grande, verde* → final -e is [i]
+- *e* (and) → always [i]
+- *nomes, fortes* → final -es is [is]
+- *café, você* (stressed) stay [e] — the accent blocks reduction.
+
+Feeds Rule 3: *de* ends in -e → becomes [di] → palatalization makes it [dʒi].
+
+Canonical reference: [PRONUNCIATION_RULES.md](../../PRONUNCIATION_RULES.md), Rule 2.
+
+### Drills & artifacts
+
+- Embedded in worksheets and primers via phonetic respellings (PEDAGOGY P14, P26).
+- [Students/primer-BP.html](../../Students/primer-BP.html) — applied throughout the BP primer.
+
+### Traps
+
+- The conjunction *e* (and) is one phoneme [i] alone. Easy to miss because it's short.
+- Stressed -ê / -é stays [e]. The accent is the cue.
+
+---
+
+## Unit 104 — Introduction to Subjunctive Mood
 
 *Slug: `b1-subj-introducao` · Sequence position: 81.0 · CEFR: B1 · Variant: shared*
 
@@ -6365,7 +6995,55 @@ The same backshift rules from `b1-discurso-direto-indireto` apply:
 
 ---
 
-## Unit 98 — Present Subjunctive - Regular Verbs
+## Unit 105 — Pronunciation — Palatalization of d/t before [i]
+
+*Slug: `a1-pron-palatalization` · Sequence position: 82.0 · CEFR: A1 · Variant: shared*
+
+**Concepts:** `palatalization-d-t`
+
+**Prereqs:** `a1-pron-final-e`
+
+### Outcomes
+
+- Recognize and produce *de* as [dʒi] in all contexts: *de Miami*, *de café*, *gosto de música*.
+- Recognize and produce ti/di sequences inside words as [tʃi]/[dʒi]: *notícia* → no[tʃi]cia, *dia* → [dʒi]a.
+- Recognize palatalization on consonant-final loanwords that take epenthetic [i] (handoff to Rule 4).
+
+### Vocabulary
+
+<!-- Pronunciation anchor — vocabulary lives in artifacts that exemplify the rule, not here. -->
+
+### Grammar
+
+Rule 3 of the BP pronunciation rule set. Paulista BP palatalizes /d/ → [dʒ] and /t/ → [tʃ] before [i] sounds. Three sub-cases:
+
+- 3a: *de* always palatalizes — [dʒi] in every context.
+- 3b: *te + i* at morpheme boundaries → [tʃi]: *contente* → conten[tʃi].
+- 3c: ti/di sequences within words → [tʃi]/[dʒi]: *notícia*, *partida*, *dia*, *médico*.
+
+Examples:
+- *de Miami* → [dʒi] miami
+- *gosto de café* → gosto [dʒi] café
+- *contente* → conten[tʃi]
+- *dia* → [dʒi]a; *médico* → mé[dʒi]co
+
+This is the paulista BP standard. Carioca BP also palatalizes; some Northern/Southern dialects don't. EP does not palatalize.
+
+Canonical reference: [PRONUNCIATION_RULES.md](../../PRONUNCIATION_RULES.md), Rule 3.
+
+### Drills & artifacts
+
+- Embedded in worksheets and primers via phonetic respellings (PEDAGOGY P14, P26).
+- [Students/primer-BP.html](../../Students/primer-BP.html) — applied throughout the BP primer.
+
+### Traps
+
+- Variant rule: paulista/carioca BP palatalize; EP does not. Memory note `paulista-only.md` — all BP material declares paulista pronunciation explicitly.
+- "te" before non-[i] vowels does not palatalize: *te-le-fone* stays [t], not [tʃ].
+
+---
+
+## Unit 106 — Present Subjunctive - Regular Verbs
 
 *Slug: `b1-subj-pres-regular` · Sequence position: 82.0 · CEFR: B1 · Variant: shared*
 
@@ -6412,7 +7090,50 @@ The same backshift rules from `b1-discurso-direto-indireto` apply:
 
 ---
 
-## Unit 99 — Present Subjunctive - Irregular Verbs
+## Unit 107 — Pronunciation — Epenthetic [i] on consonant-final loanwords
+
+*Slug: `a1-pron-epenthesis` · Sequence position: 83.0 · CEFR: A1 · Variant: shared*
+
+**Concepts:** `epenthesis-borrowed-words`
+
+**Prereqs:** `a1-pron-palatalization`
+
+### Outcomes
+
+- Recognize and produce epenthetic [i] on borrowed consonant-final words: *Facebook* → facebook[i], *Whatsapp* → whatsapp[i].
+- Recognize the palatalization handoff: *Internet* (ends -t) → interne[tʃi], *iPad* (ends -d) → ipa[dʒi].
+
+### Vocabulary
+
+<!-- Pronunciation anchor — vocabulary lives in artifacts that exemplify the rule, not here. -->
+
+### Grammar
+
+Rule 4 of the BP pronunciation rule set. Portuguese phonotactics disallow most consonant-final words. Loanwords gain an epenthetic [i] at the end:
+
+- 4a: when the final consonant is t or d, the new [i] triggers Rule 3 palatalization → [tʃi]/[dʒi]:
+  - *Internet* → interne[tʃi]
+  - *iPad* → ipa[dʒi]
+- 4b: other final consonants take a plain [i]:
+  - *Facebook* → facebook[i]
+  - *Whatsapp* → whatsapp[i]
+  - *Nova York* → york[i]
+
+Canonical reference: [PRONUNCIATION_RULES.md](../../PRONUNCIATION_RULES.md), Rule 4.
+
+### Drills & artifacts
+
+- Embedded in worksheets and primers via phonetic respellings (PEDAGOGY P14, P26).
+- [Students/primer-BP.html](../../Students/primer-BP.html) — applied throughout the BP primer.
+
+### Traps
+
+- Native PT consonant-final words (*mar*, *paz*, *rapaz*) are NOT subject to epenthesis. The rule fires on borrowed material only.
+- 4a uses shorter palatalization notation [tʃi]/[dʒi] (no preceding consonant in the bracket) to distinguish from internal Rule 3c notation.
+
+---
+
+## Unit 108 — Present Subjunctive - Irregular Verbs
 
 *Slug: `b1-subj-pres-irregular` · Sequence position: 83.0 · CEFR: B1 · Variant: shared*
 
@@ -6457,7 +7178,7 @@ The same backshift rules from `b1-discurso-direto-indireto` apply:
 
 ---
 
-## Unit 100 — Pôr e seus derivados (compor, propor, expor, dispor...)
+## Unit 109 — Pôr e seus derivados (compor, propor, expor, dispor...)
 
 *Slug: `b1-por-derivados` · Sequence position: 83.5 · CEFR: B1 · Variant: shared*
 
@@ -6554,7 +7275,7 @@ The same rule applies to all derivatives — *componho, expomos, dispus, supôs,
 
 ---
 
-## Unit 101 — Ter e seus derivados (manter, conter, obter, deter, reter, abster-se)
+## Unit 110 — Ter e seus derivados (manter, conter, obter, deter, reter, abster-se)
 
 *Slug: `b1-ter-derivados` · Sequence position: 83.6 · CEFR: B1 · Variant: shared*
 
@@ -6658,7 +7379,7 @@ This accent pattern is the **single highest-error point** for ter-derivatives.
 
 ---
 
-## Unit 102 — Vir e seus derivados (intervir, convir, provir, advir, sobrevir)
+## Unit 111 — Vir e seus derivados (intervir, convir, provir, advir, sobrevir)
 
 *Slug: `b1-vir-derivados` · Sequence position: 83.7 · CEFR: B1 · Variant: shared*
 
@@ -6763,7 +7484,48 @@ Other personal forms (*convenho, convéns, convimos*) are rare in conversation.
 
 ---
 
-## Unit 103 — Imperfect Subjunctive
+## Unit 112 — Pronunciation — Nasal vowel endings (-em, -am, -im, -om, -um)
+
+*Slug: `a1-pron-nasal-vowels` · Sequence position: 84.0 · CEFR: A1 · Variant: shared*
+
+**Concepts:** `nasal-vowels`
+
+### Outcomes
+
+- Recognize and produce the five nasal-vowel endings: -em, -am, -im, -om, -um/-uma.
+- Distinguish short-word notation (full syllable shown) from long-word notation (ending only).
+
+### Vocabulary
+
+<!-- Pronunciation anchor — vocabulary lives in artifacts that exemplify the rule, not here. -->
+
+### Grammar
+
+Rule 5 of the BP pronunciation rule set. Vowels followed by m or n in the same syllable produce nasal vowels with these realizations:
+
+- 5a: -em → [eyn] — *bem* [beyn], *também* [eyn], *quem* [keyn]
+- 5b: -am → [ãwn] — *falam*, *estavam* (verb endings)
+- 5c: -im → [ing] — *sim* [sing], *jardim* [ing]
+- 5d: -om → [oun] — *com* [coun], *bom* [boun], *som* [soun]
+- 5e: -um/-uma → [ũm]/[ũma] — *um*, *uma*, *algum*
+
+Words with tilde (*ão, ões, ãe*) are already-marked nasals and are NOT annotated under this rule.
+
+Canonical reference: [PRONUNCIATION_RULES.md](../../PRONUNCIATION_RULES.md), Rule 5.
+
+### Drills & artifacts
+
+- Embedded in worksheets and primers via phonetic respellings (PEDAGOGY P14, P26).
+- [Students/primer-BP.html](../../Students/primer-BP.html) — applied throughout the BP primer.
+
+### Traps
+
+- Short words (1-syllable with onset consonant) show the full syllable in respellings (*com* → [coun]) so the consonant is visible. Long words show ending only (*também* → [eyn]).
+- -am [ãwn] vs -ão [ãw]: both end with similar mouth shape but -am usually marks a verb (3pl), -ão usually marks a noun ending. Verb-ending -am has a slightly longer nasal closure than noun-ending -ão.
+
+---
+
+## Unit 113 — Imperfect Subjunctive
 
 *Slug: `b1-subj-imperfeito` · Sequence position: 84.0 · CEFR: B1 · Variant: shared*
 
@@ -6808,7 +7570,7 @@ Other personal forms (*convenho, convéns, convimos*) are rare in conversation.
 
 ---
 
-## Unit 104 — Subjuntivo após verbos de desejo e vontade
+## Unit 114 — Subjuntivo após verbos de desejo e vontade
 
 *Slug: `b1-subj-trigger-desejo` · Sequence position: 84.1 · CEFR: B1 · Variant: shared*
 
@@ -6871,7 +7633,7 @@ When the subject of the desire and the desired action is the same, use the infin
 
 ---
 
-## Unit 105 — Subjuntivo após verbos de emoção
+## Unit 115 — Subjuntivo após verbos de emoção
 
 *Slug: `b1-subj-trigger-emocao` · Sequence position: 84.2 · CEFR: B1 · Variant: shared*
 
@@ -6935,7 +7697,7 @@ When the emotion is followed by a *cause* (with *porque*), the verb is indicativ
 
 ---
 
-## Unit 106 — Subjuntivo após expressões impessoais
+## Unit 116 — Subjuntivo após expressões impessoais
 
 *Slug: `b1-subj-trigger-impessoal` · Sequence position: 84.3 · CEFR: B1 · Variant: shared*
 
@@ -6995,9 +7757,19 @@ The subjunctive is triggered when the impersonal expression introduces a *judgme
 - *É possível que ele **esteja** cansado.* — He might be tired. (subjuntivo: possibility)
 - *É evidente que ele **está** cansado.* — He's clearly tired. (indicative: assertion)
 
+### Personal-infinitive alternative
+
+Many impersonal expressions also accept a **personal infinitive** in place of the subjuntivo *que*-clause. Both forms are correct; the choice is register-driven (personal infinitive is more economical, slightly more formal in writing):
+
+- *É importante **que vocês saibam** disso.* (subjuntivo)
+- *É importante **vocês saberem** disso.* (personal infinitive — see [[b2-infinitivo-pessoal-uso]])
+
+The personal-infinitive path skips the *que* and inflects the infinitive for person/number directly. Same set of triggers (importante, necessário, melhor, possível, pena, convém, basta, pode ser) accepts both. See [[b2-infinitivo-pessoal-uso]] for the full inflection paradigm and the choice rules.
+
 ### Drills & artifacts
 
 <!-- TODO: link existing subjuntivo drills; pair with conditional system in Cluster 3. -->
+- Cross-link: see [[b2-infinitivo-pessoal-uso]] for the personal-infinitive alternative to impersonal-expression subjuntivo.
 
 ### Traps
 
@@ -7008,7 +7780,7 @@ The subjunctive is triggered when the impersonal expression introduces a *judgme
 
 ---
 
-## Unit 107 — Subjuntivo após verbos e expressões de dúvida
+## Unit 117 — Subjuntivo após verbos e expressões de dúvida
 
 *Slug: `b1-subj-trigger-duvida` · Sequence position: 84.4 · CEFR: B1 · Variant: shared*
 
@@ -7074,7 +7846,7 @@ The same flip applies to *acreditar que*, *crer que*, *parecer que* in the liter
 
 ---
 
-## Unit 108 — Subjuntivo após conjunções subordinativas
+## Unit 118 — Subjuntivo após conjunções subordinativas
 
 *Slug: `b1-subj-trigger-conjuncoes` · Sequence position: 84.5 · CEFR: B1 · Variant: shared*
 
@@ -7144,7 +7916,7 @@ When the main clause is in the past, the subordinate uses imperfeito subjuntivo:
 
 ---
 
-## Unit 109 — Subjuntivo em construções hipotéticas (se + imperfeito subjuntivo)
+## Unit 119 — Subjuntivo em construções hipotéticas (se + imperfeito subjuntivo)
 
 *Slug: `b1-subj-trigger-hipotetico` · Sequence position: 84.6 · CEFR: B1 · Variant: shared*
 
@@ -7207,7 +7979,7 @@ When the *se*-clause describes a real or future-likely event, **not** a hypothet
 
 ---
 
-## Unit 110 — Subjuntivo em orações relativas com antecedente indefinido ou inexistente
+## Unit 120 — Subjuntivo em orações relativas com antecedente indefinido ou inexistente
 
 *Slug: `b1-subj-trigger-relativo` · Sequence position: 84.7 · CEFR: B1 · Variant: shared*
 
@@ -7271,7 +8043,7 @@ The same relative pronoun (*que*) takes indicative when the antecedent is real a
 
 ---
 
-## Unit 111 — Condicional Tipo 1 — Real / provável (se + indicativo)
+## Unit 121 — Condicional Tipo 1 — Real / provável (se + indicativo)
 
 *Slug: `b1-cond-real-bp` · Sequence position: 84.8 · CEFR: B1 · Variant: bp*
 
@@ -7338,7 +8110,57 @@ The main clause uses presente indicativo (informal future) or futuro indicativo 
 
 ---
 
-## Unit 112 — Future Subjunctive
+## Unit 122 — Pronunciation — Syllable-final L → [u]
+
+*Slug: `a1-pron-l-vocalization` · Sequence position: 85.0 · CEFR: A1 · Variant: shared*
+
+**Concepts:** `final-l`
+
+### Outcomes
+
+- Recognize and produce syllable-final l as [u]: *Brasil* → brasi[u], *futebol* → futebo[u].
+- Recognize mid-word syllable-final l: *alto* → a[u]to, *calma* → ca[u]ma.
+
+### Vocabulary
+
+<!-- Pronunciation anchor — vocabulary lives in artifacts that exemplify the rule, not here. -->
+
+### Grammar
+
+Rule 6 of the BP pronunciation rule set ("vocalization of /l/"). The lateral consonant becomes a back rounded vowel/glide [u] when the l is in syllable-coda position.
+
+- 6a: simple word-final L → [u]:
+  - *Brasil* → brasi[u]
+  - *futebol* → futebo[u]
+  - *hotel* → hote[u]
+  - *azul* → azu[u]
+  - *fácil* → fáci[u]
+- 6b: mid-word or multiple L's:
+  - *alto* → a[u]to
+  - *calma* → ca[u]ma
+  - *falso* → fa[u]so
+  - *álcool* → á[u]coo[u] (both L's vocalize)
+
+When l starts a syllable, it stays [l]: *lá*, *livro*, *salada* (sa-LA-da).
+
+This is BP-specific. EP keeps a velarized [ɫ] in coda position.
+
+Canonical reference: [PRONUNCIATION_RULES.md](../../PRONUNCIATION_RULES.md), Rule 6.
+
+### Drills & artifacts
+
+- Embedded in worksheets and primers via phonetic respellings (PEDAGOGY P14, P26).
+- [Students/primer-BP.html](../../Students/primer-BP.html) — applied throughout the BP primer.
+
+### Traps
+
+- Variant split: BP vocalizes; EP retains a dark [ɫ]. EP students must NOT apply this rule.
+- Onset l (*livro*, *lá*) is not affected — only coda l vocalizes.
+- BP speakers writing in formal contexts may approximate the [u] with a slight [w] glide; both are acceptable.
+
+---
+
+## Unit 123 — Future Subjunctive
 
 *Slug: `b2-subj-futuro` · Sequence position: 85.0 · CEFR: B2 · Variant: shared*
 
@@ -7383,7 +8205,7 @@ The main clause uses presente indicativo (informal future) or futuro indicativo 
 
 ---
 
-## Unit 113 — Mais-que-perfeito do subjuntivo (tivesse falado)
+## Unit 124 — Mais-que-perfeito do subjuntivo (tivesse falado)
 
 *Slug: `b2-mais-que-perfeito-subj` · Sequence position: 85.1 · CEFR: B2 · Variant: shared*
 
@@ -7456,7 +8278,7 @@ Both forms are grammatical and interchangeable. *Tivesse* dominates in spoken us
 
 ---
 
-## Unit 114 — Condicional composto (teria falado)
+## Unit 125 — Condicional composto (teria falado)
 
 *Slug: `b2-condicional-composto-bp` · Sequence position: 85.2 · CEFR: B2 · Variant: bp*
 
@@ -7535,7 +8357,7 @@ EP students learn this divergence in their twin unit (Cluster 5 backlog). BP stu
 
 ---
 
-## Unit 115 — Futuro composto do indicativo (terei falado) — future perfect
+## Unit 126 — Futuro composto do indicativo (terei falado) — future perfect
 
 *Slug: `b2-futuro-composto-ind` · Sequence position: 85.3 · CEFR: B2 · Variant: shared*
 
@@ -7603,7 +8425,7 @@ EP usage is similar but slightly more comfortable with the synthetic form in wri
 
 ---
 
-## Unit 116 — Futuro composto do subjuntivo (tiver falado) — future perfect subjunctive
+## Unit 127 — Futuro composto do subjuntivo (tiver falado) — future perfect subjunctive
 
 *Slug: `b2-futuro-composto-subj` · Sequence position: 85.4 · CEFR: B2 · Variant: shared*
 
@@ -7672,7 +8494,7 @@ Both are correct after *quando*; the compound emphasizes completion before the m
 
 ---
 
-## Unit 117 — Orações concessivas (embora, ainda que, mesmo que, apesar de)
+## Unit 128 — Orações concessivas (embora, ainda que, mesmo que, apesar de)
 
 *Slug: `b2-concessivas` · Sequence position: 85.5 · CEFR: B2 · Variant: shared*
 
@@ -7770,7 +8592,7 @@ The coordinative pattern is structurally simpler — two independent clauses joi
 
 ---
 
-## Unit 118 — Orações finais (para que, a fim de que) + alternativa com infinitivo pessoal
+## Unit 129 — Orações finais (para que, a fim de que) + alternativa com infinitivo pessoal
 
 *Slug: `b2-finalidade` · Sequence position: 85.6 · CEFR: B2 · Variant: shared*
 
@@ -7870,7 +8692,7 @@ The purpose-clause subjuntivo follows the main verb's tense:
 
 ---
 
-## Unit 119 — Orações consecutivas (tão / tanto … que — resultado, indicativo)
+## Unit 130 — Orações consecutivas (tão / tanto … que — resultado, indicativo)
 
 *Slug: `b2-consecutivas` · Sequence position: 85.7 · CEFR: B2 · Variant: shared*
 
@@ -7972,7 +8794,7 @@ Same surface conjunction, two distinct grammatical paths. Same applies to *de fo
 
 ---
 
-## Unit 120 — Conjunções condicionais além de *se* (caso, a menos que, contanto que, desde que)
+## Unit 131 — Conjunções condicionais além de *se* (caso, a menos que, contanto que, desde que)
 
 *Slug: `b2-conj-condicionais` · Sequence position: 85.8 · CEFR: B2 · Variant: shared*
 
@@ -8103,7 +8925,7 @@ Standard tense agreement:
 
 ---
 
-## Unit 121 — Colloquial Brazilian Portuguese Consolidated
+## Unit 132 — Colloquial Brazilian Portuguese Consolidated
 
 *Slug: `b2-coloquial-bp` · Sequence position: 86.0 · CEFR: B2 · Variant: bp*
 
@@ -8155,7 +8977,7 @@ Standard tense agreement:
 
 ---
 
-## Unit 122 — Condicional Tipo 2 — Irreal presente/futuro (se + imperfeito subj + condicional)
+## Unit 133 — Condicional Tipo 2 — Irreal presente/futuro (se + imperfeito subj + condicional)
 
 *Slug: `b2-cond-irreal-bp` · Sequence position: 86.5 · CEFR: B2 · Variant: bp*
 
@@ -8225,7 +9047,7 @@ Either clause can come first; the verb forms don't change:
 
 ---
 
-## Unit 123 — Condicional Tipo 3 — Contrafactual passado (se + mais-que-perfeito subj + condicional composto)
+## Unit 134 — Condicional Tipo 3 — Contrafactual passado (se + mais-que-perfeito subj + condicional composto)
 
 *Slug: `b2-cond-contra-bp` · Sequence position: 86.6 · CEFR: B2 · Variant: bp*
 
@@ -8293,7 +9115,7 @@ The *se*-clause is mais-que-perfeito subjuntivo (past condition); the main claus
 
 ---
 
-## Unit 124 — Advanced Demonstratives - Discourse and Temporal Uses
+## Unit 135 — Advanced Demonstratives - Discourse and Temporal Uses
 
 *Slug: `a2-dem-avancados` · Sequence position: 87.0 · CEFR: A2 · Variant: shared*
 
@@ -8329,7 +9151,7 @@ The *se*-clause is mais-que-perfeito subjuntivo (past condition); the main claus
 
 ---
 
-## Unit 125 — Infinitivo pessoal — formação
+## Unit 136 — Infinitivo pessoal — formação
 
 *Slug: `b2-infinitivo-pessoal-formacao` · Sequence position: 87.5 · CEFR: B2 · Variant: shared*
 
@@ -8450,7 +9272,7 @@ This is the most common confusion point and is covered in the use unit (`b2-infi
 
 ---
 
-## Unit 126 — Infinitivo pessoal — uso (sujeito distinto, preposições, expressões impessoais)
+## Unit 137 — Infinitivo pessoal — uso (sujeito distinto, preposições, expressões impessoais)
 
 *Slug: `b2-infinitivo-pessoal-uso` · Sequence position: 87.6 · CEFR: B2 · Variant: shared*
 
@@ -8567,7 +9389,7 @@ Personal infinitive forms often collide with **futuro do subjuntivo** forms (esp
 
 ---
 
-## Unit 127 — Conversational Strategies and Discourse Markers
+## Unit 138 — Conversational Strategies and Discourse Markers
 
 *Slug: `b1-discourse-markers` · Sequence position: 88.0 · CEFR: B1 · Variant: shared*
 
@@ -8607,7 +9429,7 @@ Personal infinitive forms often collide with **futuro do subjuntivo** forms (esp
 
 ---
 
-## Unit 128 — Conectivos textuais avançados (aditivos, contrastivos, causais, consecutivos, enumerativos, conclusivos)
+## Unit 139 — Conectivos textuais avançados (aditivos, contrastivos, causais, consecutivos, enumerativos, conclusivos)
 
 *Slug: `b2-conectivos-textuais` · Sequence position: 88.5 · CEFR: B2 · Variant: shared*
 
@@ -8740,7 +9562,7 @@ The five connectives mark text structure cleanly: addition (além disso) → con
 
 ---
 
-## Unit 129 — Argumentação — estrutura, tese, evidência, refutação, conclusão
+## Unit 140 — Argumentação — estrutura, tese, evidência, refutação, conclusão
 
 *Slug: `b2-argumentacao` · Sequence position: 88.6 · CEFR: B2 · Variant: shared*
 
@@ -8886,7 +9708,7 @@ The concessive opening (*É verdade que / Embora / Concordo*) signals fair engag
 
 ---
 
-## Unit 130 — Coesão e coerência textual (referência, substituição, encadeamento)
+## Unit 141 — Coesão e coerência textual (referência, substituição, encadeamento)
 
 *Slug: `b2-coesao` · Sequence position: 88.7 · CEFR: B2 · Variant: shared*
 
@@ -9031,7 +9853,7 @@ First sentence: announces topic (turismo as economic driver). Middle sentences: 
 
 ---
 
-## Unit 131 — Registo académico — vocabulário formal, hedging, citação
+## Unit 142 — Registo académico — vocabulário formal, hedging, citação
 
 *Slug: `b2-academico` · Sequence position: 88.8 · CEFR: B2 · Variant: shared*
 
@@ -9188,7 +10010,7 @@ The paragraph combines: nominalization (*A análise dos dados*), impersonal verb
 
 ---
 
-## Unit 132 — Registo mediático e empresarial — convenções formuláicas, vocabulário, salutações
+## Unit 143 — Registo mediático e empresarial — convenções formuláicas, vocabulário, salutações
 
 *Slug: `b2-registro-midia-empresarial` · Sequence position: 88.9 · CEFR: B2 · Variant: shared*
 
@@ -9379,7 +10201,47 @@ Opinion-piece writing leans on impersonal subjuntivo for editorial commentary:
 
 ---
 
-## Unit 133 — Advanced Por/Para and Idiomatic Expressions
+## Unit 144 — Pronunciation — Syllable stress and accent marks
+
+*Slug: `b1-pron-syllable-stress` · Sequence position: 89.0 · CEFR: B1 · Variant: shared*
+
+**Concepts:** `syllable-stress`
+
+### Outcomes
+
+- Identify the stressed syllable in a written Portuguese word using the default stress rules and accent marks.
+- Distinguish acute/circumflex marking *quality* (open/closed) from acute marking *stress* alone.
+
+### Vocabulary
+
+<!-- Pronunciation anchor — vocabulary lives in artifacts that exemplify the rule, not here. -->
+
+### Grammar
+
+Default stress in Portuguese:
+- Words ending in -a, -e, -o, -as, -es, -os, -em, -ens stress the **penultimate** syllable: *casa* (CA-sa), *fala* (FA-la), *moram* (MO-ram).
+- Words ending in any other letter (consonants like -l, -r, -z; or -i, -u, -is, -us, nasals -ã/-ão/-ões) stress the **final** syllable: *Brasil* (bra-SIL), *falar* (fa-LAR), *capaz* (ca-PAZ), *irmão* (ir-MÃO).
+- An acute (´) or circumflex (^) overrides the default: *fácil* (FÁ-cil), *café* (ca-FÉ), *você* (vo-CÊ).
+
+Accent jobs (PEDAGOGY §27 — distinguish):
+- (a) **Stress location**: *está* — stress on last syllable (the acute marks *where*, not *which* vowel quality).
+- (b) **Vowel quality**: *avó* (open, grandmother) vs *avô* (closed, grandfather).
+- (c) **Word disambiguation**: *pôde* (could, past) vs *pode* (can, present).
+
+Canonical reference: [PRONUNCIATION_RULES.md](../../PRONUNCIATION_RULES.md) sets the rule inventory; this unit anchors the stress concept itself.
+
+### Drills & artifacts
+
+- [[syllable-stress]] — B1 dashboard drill (`config/prompts/syllable-stress.json`).
+
+### Traps
+
+- Acute on -á is often a stress marker only, not a quality marker (no "open vs closed A" minimal pair exists in BP — see PEDAGOGY §27). Don't teach *está* as "open á."
+- Circumflex on -ô vs acute on -ó IS a quality marker (*avô*/*avó* are a real minimal pair).
+
+---
+
+## Unit 145 — Advanced Por/Para and Idiomatic Expressions
 
 *Slug: `b2-por-para-avancado` · Sequence position: 89.0 · CEFR: B2 · Variant: shared*
 
@@ -9427,7 +10289,7 @@ Opinion-piece writing leans on impersonal subjuntivo for editorial commentary:
 
 ---
 
-## Unit 134 — BP vs EP — pronomes pessoais e formas de tratamento
+## Unit 146 — BP vs EP — pronomes pessoais e formas de tratamento
 
 *Slug: `b2-bp-ep-pronomes-tratamento` · Sequence position: 89.5 · CEFR: B2 · Variant: shared*
 
@@ -9524,7 +10386,7 @@ Encounters with *vós* in modern texts are typically:
 
 ---
 
-## Unit 135 — BP vs EP — colocação clítica e usos divergentes de tempos verbais
+## Unit 147 — BP vs EP — colocação clítica e usos divergentes de tempos verbais
 
 *Slug: `b2-bp-ep-clitica-tempos` · Sequence position: 89.6 · CEFR: B2 · Variant: shared*
 
@@ -9659,7 +10521,7 @@ Quick diagnostic: look for clitic placement first.
 
 ---
 
-## Unit 136 — BP vs EP — vocabulário regional (catálogo por domínio)
+## Unit 148 — BP vs EP — vocabulário regional (catálogo por domínio)
 
 *Slug: `b2-bp-ep-vocabulario-regional` · Sequence position: 89.7 · CEFR: B2 · Variant: shared*
 
@@ -9835,7 +10697,7 @@ Same content, BP vs EP:
 
 ---
 
-## Unit 137 — Synthesis and Communication - Integration of All Skills
+## Unit 149 — Synthesis and Communication - Integration of All Skills
 
 *Slug: `b2-sintese` · Sequence position: 90.0 · CEFR: B2 · Variant: shared*
 
@@ -9873,7 +10735,53 @@ Same content, BP vs EP:
 
 ---
 
-## Unit 138 — Greetings & Politeness
+## Unit 150 — Pronunciation — Broad phonetics review
+
+*Slug: `b2-pron-phonetics-broad` · Sequence position: 91.0 · CEFR: B2 · Variant: shared*
+
+**Concepts:** `phonetics-broad`
+
+**Prereqs:** `a1-pron-final-o`, `a1-pron-final-e`, `a1-pron-palatalization`, `a1-pron-epenthesis`, `a1-pron-nasal-vowels`, `a1-pron-l-vocalization`, `b1-pron-syllable-stress`
+
+### Outcomes
+
+- Apply the full BP pronunciation rule inventory (Rules 1-6) to extended speech.
+- Distinguish open/closed vowel pairs (*avó*/*avô*, *pôde*/*pode*) and recognize stress vs quality accents.
+- Handle BP-specific variation: paulista vs carioca palatalization extent, sibilant variation (annotated only where pedagogically useful).
+
+### Vocabulary
+
+<!-- Pronunciation anchor — broad-review unit; exemplification lives in primers and worksheets. -->
+
+### Grammar
+
+Capstone unit covering the BP sound system in aggregate. References:
+- The 6 obligatory rules from [PRONUNCIATION_RULES.md](../../PRONUNCIATION_RULES.md).
+- Open/closed vowel quality from `open-vs-closed-vowels` concept.
+- Stress system from [[b1-pron-syllable-stress]].
+- Optional Step-5 phenomena (vowel reductions, contractions, coalescence, sandhi) — colloquial register only.
+
+Sub-areas not annotated by Rules 1-6 (per PEDAGOGY pedagogical decisions):
+- Sibilant variation /s/ → [ʃ] in coda (carioca/paulista difference).
+- Rhotic variation (the /r/ system varies widely by region).
+- Internal vowel reduction in unstressed syllables.
+
+These exist phonetically but are filtered out of annotation systems for pedagogical economy.
+
+### Drills & artifacts
+
+- [[phonetics-br]] — B2 dashboard drill (`config/prompts/phonetics-br.json`).
+- [Students/primer-BP.html](../../Students/primer-BP.html) — primer where the rule inventory is exemplified.
+
+### Traps
+
+- Rule 6 (l-vocalization) is BP-specific. EP retains the dark [ɫ]. Marvin and any other EP students must not apply it.
+- Rule 3 palatalization extent varies by BP region. Paulista and carioca palatalize fully; some Northern/Southern dialects palatalize less. PEDAGOGY mandates paulista for all BP teaching material.
+- Open vowel claims require a minimal pair (PEDAGOGY §27). "Open á" is cosmetic — no minimal pair.
+
+---
+
+## Unit 151 — Greetings & Politeness
 
 *Slug: `a1-greetings` · Sequence position: 200.02 · CEFR: A1 · Variant: shared*
 
@@ -9903,7 +10811,7 @@ Same content, BP vs EP:
 
 ---
 
-## Unit 139 — Noun Plurals
+## Unit 152 — Noun Plurals
 
 *Slug: `a1-plurais` · Sequence position: 200.14 · CEFR: A1 · Variant: shared*
 
@@ -9932,7 +10840,7 @@ Same content, BP vs EP:
 
 ---
 
-## Unit 140 — Pronoun Placement
+## Unit 153 — Pronoun Placement
 
 *Slug: `a2-pron-placement` · Sequence position: 300.1 · CEFR: A2 · Variant: shared*
 
@@ -9962,7 +10870,7 @@ Same content, BP vs EP:
 
 ---
 
-## Unit 141 — Saber vs Conhecer
+## Unit 154 — Saber vs Conhecer
 
 *Slug: `a2-saber-vs-conhecer` · Sequence position: 300.14 · CEFR: A2 · Variant: shared*
 
@@ -9992,7 +10900,7 @@ Same content, BP vs EP:
 
 ---
 
-## Unit 142 — More Preposition Usage
+## Unit 155 — More Preposition Usage
 
 *Slug: `a2-prep-mais` · Sequence position: 300.15 · CEFR: A2 · Variant: shared*
 
@@ -10024,7 +10932,7 @@ Same content, BP vs EP:
 
 ---
 
-## Unit 143 — Manner Adverbs
+## Unit 156 — Manner Adverbs
 
 *Slug: `a2-adv-mente` · Sequence position: 300.17 · CEFR: A2 · Variant: shared*
 
@@ -10053,7 +10961,7 @@ Same content, BP vs EP:
 
 ---
 
-## Unit 144 — Muito, Pouco, Tanto, Demais
+## Unit 157 — Muito, Pouco, Tanto, Demais
 
 *Slug: `a2-muito-pouco-tanto` · Sequence position: 300.18 · CEFR: A2 · Variant: shared*
 
@@ -10082,7 +10990,7 @@ Same content, BP vs EP:
 
 ---
 
-## Unit 145 — Time Expressions (Connectors)
+## Unit 158 — Time Expressions (Connectors)
 
 *Slug: `a2-tempo-conjuncoes` · Sequence position: 300.21 · CEFR: A2 · Variant: shared*
 
@@ -10112,7 +11020,7 @@ Same content, BP vs EP:
 
 ---
 
-## Unit 146 — Expressing Opinions
+## Unit 159 — Expressing Opinions
 
 *Slug: `b1-opinioes` · Sequence position: 400.21 · CEFR: B1 · Variant: shared*
 
@@ -10142,7 +11050,7 @@ Same content, BP vs EP:
 
 ---
 
-## Unit 147 — Narration & Storytelling
+## Unit 160 — Narration & Storytelling
 
 *Slug: `b1-narracao` · Sequence position: 400.22 · CEFR: B1 · Variant: shared*
 
@@ -10173,7 +11081,7 @@ Same content, BP vs EP:
 
 ---
 
-## Unit 148 — Subjunctive in All Contexts
+## Unit 161 — Subjunctive in All Contexts
 
 *Slug: `b2-subj-broad` · Sequence position: 500.02 · CEFR: B2 · Variant: shared*
 
@@ -10204,38 +11112,7 @@ Same content, BP vs EP:
 
 ---
 
-## Unit 149 — Conditional Sentences (Full System)
-
-*Slug: `b2-condicionais-sistema` · Sequence position: 500.03 · CEFR: B2 · Variant: shared*
-
-**Concepts:** `conditional-sentences`
-
-### Outcomes
-
-<!-- TODO: enrich in Phase 3 (sparse CEFR-only unit) -->
-
-### Vocabulary
-
-<!-- TODO: enrich in Phase 3 -->
-
-### Grammar
-
-- Real conditions: Se chover, fico em casa (future subj)
-- Hypothetical present: Se eu fosse rico, viajaria (imperfect subj)
-- Hypothetical past: Se eu tivesse estudado, teria passado
-- Mixed conditionals
-
-### Drills & artifacts
-
-<!-- TODO: link drills, worksheets, lessons in Phase 3 -->
-
-### Traps
-
-<!-- TODO: enrich in Phase 3 -->
-
----
-
-## Unit 150 — Double Participles
+## Unit 162 — Double Participles
 
 *Slug: `b2-participios-duplos` · Sequence position: 500.07 · CEFR: B2 · Variant: shared*
 
@@ -10266,7 +11143,7 @@ Same content, BP vs EP:
 
 ---
 
-## Unit 151 — Advanced Relative Clauses
+## Unit 163 — Advanced Relative Clauses
 
 *Slug: `b2-relativas-avancadas` · Sequence position: 500.08 · CEFR: B2 · Variant: shared*
 
@@ -10297,7 +11174,7 @@ Same content, BP vs EP:
 
 ---
 
-## Unit 152 — False Cognates
+## Unit 164 — False Cognates
 
 *Slug: `b2-falsos-cognatos` · Sequence position: 500.14 · CEFR: B2 · Variant: shared*
 

@@ -2,9 +2,14 @@
 
 Generated from `docs/units/`. Filter: `cefr_level == B1` AND `variant in (ep, shared)` AND `status == published`.
 
-**Total units:** 32
+**Total units:** 34
 
 ## Verb System
+
+### Particípios passados — formação (regular + irregular)
+- **Outcome:** Form regular past participles for any -AR / -ER / -IR verb (-ado / -ido endings)
+- **Grammar:** *Eu tenho **falado** com ela.* — I've been speaking with her.
+- **Unit:** [[b1-participios-introducao]]
 
 ### Pôr e seus derivados (compor, propor, expor, dispor...)
 - **Outcome:** Conjugate any verb derived from **pôr** by inheriting the parent's irregular paradigm — present, preterite, imperfeito, futuro, condicional, subjuntivo
@@ -169,3 +174,10 @@ Generated from `docs/units/`. Filter: `cefr_level == B1` AND `variant in (ep, sh
 ### Narration & Storytelling
 - **Grammar:** Combining preterite and imperfect
 - **Unit:** [[b1-narracao]]
+
+## Pronunciation
+
+### Pronunciation — Syllable stress and accent marks
+- **Outcome:** Identify the stressed syllable in a written Portuguese word using the default stress rules and accent marks.
+- **Grammar:** Words ending in -a, -e, -o, -as, -es, -os, -em, -ens stress the **penultimate** syllable: *casa* (CA-sa), *fala* (FA-la), *moram* (MO-ram).
+- **Unit:** [[b1-pron-syllable-stress]]

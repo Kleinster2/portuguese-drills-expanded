@@ -2,13 +2,13 @@
 
 Generated from `docs/units/`. Filter: `cefr_level == A1` AND `variant in (ep, shared)` AND `status == published`.
 
-**Total units:** 47
+**Total units:** 55
 
 ## Verb System
 
 ### Identity Statements (Eu sou)
 - **Outcome:** Introduce themselves by name
-- **Grammar:** First person singular: Eu sou
+- **Grammar:** First person singular:: *Eu sou*
 - **Unit:** [[a1-ser-identity]]
 
 ### Location/Residence (Eu moro em)
@@ -55,6 +55,16 @@ Generated from `docs/units/`. Filter: `cefr_level == A1` AND `variant in (ep, sh
 - **Outcome:** Express what they own/possess (pets, vehicles, belongings)
 - **Grammar:** Third irregular verb: **tenho** (I have) - from "ter"
 - **Unit:** [[a1-ter-posse]]
+
+### Pôr — presente do indicativo (verbo irregular)
+- **Outcome:** Conjugate **pôr** (to put / to place) in present indicative
+- **Grammar:** The bare infinitive *pôr* takes a circumflex to distinguish it from the preposition *por*. Conjugated forms (*ponho, pões, põe, pomos, põem*) drop the circumflex because they're...
+- **Unit:** [[a1-por-presente-introducao]]
+
+### Vir — presente do indicativo (verbo irregular)
+- **Outcome:** Conjugate **vir** (to come) in present indicative
+- **Grammar:** The 3sg *vem* is unaccented (monosyllable ending in *-m*).
+- **Unit:** [[a1-vir-presente-introducao]]
 
 ### Likes and Preferences (Gosto de)
 - **Outcome:** Express likes and dislikes (with nouns)
@@ -246,3 +256,35 @@ Generated from `docs/units/`. Filter: `cefr_level == A1` AND `variant in (ep, sh
 ### Greetings & Politeness
 - **Grammar:** Greetings: Olá, Bom dia, Boa tarde, Boa noite
 - **Unit:** [[a1-greetings]]
+
+## Pronunciation
+
+### Pronunciation — Final unstressed -o
+- **Outcome:** Recognize and produce unstressed final `-o` as [u]: *americano* → americ[anu], *do* → [du].
+- **Grammar:** *americano* → americ[anu]
+- **Unit:** [[a1-pron-final-o]]
+
+### Pronunciation — Final unstressed -e
+- **Outcome:** Recognize and produce unstressed final `-e` as [i]: *nome* → no[mi], *e* (and) → [i].
+- **Grammar:** *nome, ponte, parte, forte, grande, verde* → final -e is [i]
+- **Unit:** [[a1-pron-final-e]]
+
+### Pronunciation — Palatalization of d/t before [i]
+- **Outcome:** Recognize and produce *de* as [dʒi] in all contexts: *de Miami*, *de café*, *gosto de música*.
+- **Grammar:** 3a: *de* always palatalizes — [dʒi] in every context.
+- **Unit:** [[a1-pron-palatalization]]
+
+### Pronunciation — Epenthetic [i] on consonant-final loanwords
+- **Outcome:** Recognize and produce epenthetic [i] on borrowed consonant-final words: *Facebook* → facebook[i], *Whatsapp* → whatsapp[i].
+- **Grammar:** 4a: when the final consonant is t or d, the new [i] triggers Rule 3 palatalization → [tʃi]/[dʒi]:
+- **Unit:** [[a1-pron-epenthesis]]
+
+### Pronunciation — Nasal vowel endings (-em, -am, -im, -om, -um)
+- **Outcome:** Recognize and produce the five nasal-vowel endings: -em, -am, -im, -om, -um/-uma.
+- **Grammar:** 5a: -em → [eyn] — *bem* [beyn], *também* [eyn], *quem* [keyn]
+- **Unit:** [[a1-pron-nasal-vowels]]
+
+### Pronunciation — Syllable-final L → [u]
+- **Outcome:** Recognize and produce syllable-final l as [u]: *Brasil* → brasi[u], *futebol* → futebo[u].
+- **Grammar:** 6a: simple word-final L → [u]:
+- **Unit:** [[a1-pron-l-vocalization]]

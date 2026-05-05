@@ -60,12 +60,12 @@ Read anything in Portuguese at your level.
 - Hover/tap any word for English translation
 - 3000+ word dictionary with Claude fallback
 
-### 4. Pronunciation Lessons
-Structured curriculum for Brazilian Portuguese sounds.
-- 4 phases, 8+ units with audio
-- 6 pronunciation rules with annotations
-- 5-step progressive format per lesson
-- Programmatic annotation system (Python + JS)
+### 4. Pronunciation Reference
+The 6 obligatory BP pronunciation rules + open/closed vowels and stress.
+- 6 rules covering final-vowel reduction, palatalization, epenthesis, nasal vowels, l-vocalization
+- Embedded into worksheets and primers via phonetic respellings (per PEDAGOGY P14, P26)
+- Canonical reference: [PRONUNCIATION_RULES.md](PRONUNCIATION_RULES.md)
+- Taxonomic anchors at `docs/units/a1-pron-*` (6) + `b1-pron-syllable-stress` + `b2-pron-phonetics-broad`
 
 ### 5. PWA Support
 Installable app with offline mode.
@@ -177,7 +177,7 @@ Curriculum follows CEFR levels (A1-B2). Canonical source is `docs/units/*.md` (1
 | Diagnostic Test | — | `config/diagnostic-test-*.json` |
 | AI Drills | [Curriculum](docs/drills/) | [Drill Template](docs/drills/DRILL_TEMPLATE.md) |
 | Text Simplifier | — | [Hover Translations](docs/simplifier/hover-translations.md) |
-| Pronunciation | [Syllabus](SYLLABUS_PHASE_1.md) | [Annotation Workflow](docs/pronunciation/ANNOTATION_WORKFLOW.md) |
+| Pronunciation | [Rule Reference](PRONUNCIATION_RULES.md) | [Anchor units](docs/units/) (`a1-pron-*`, `b1-pron-syllable-stress`, `b2-pron-phonetics-broad`) |
 
 ### Foundation
 | Document | Description |
@@ -185,7 +185,7 @@ Curriculum follows CEFR levels (A1-B2). Canonical source is `docs/units/*.md` (1
 | [Pedagogy](PEDAGOGY.md) | **Governing document** — teaching methodology, variant rules, native usage filter |
 | [Drill Best Practices](docs/drills/DRILL_BEST_PRACTICES.md) | 10 codified practices for drill design |
 | [Drill Template](docs/drills/DRILL_TEMPLATE.md) | Ready-to-copy template implementing all best practices |
-| Micro-Sequence Syllabus | Generated: [BP](docs/drills/syllabus-micro-sequence-bp.md) (152 units) · [EP](docs/drills/syllabus-micro-sequence-ep.md) (147 units). Source: `docs/units/*.md`. Legacy mixed-variant single-file archived at `docs/archive/`. |
+| Micro-Sequence Syllabus | Generated: [BP](docs/drills/syllabus-micro-sequence-bp.md) (164 units) · [EP](docs/drills/syllabus-micro-sequence-ep.md) (159 units). Source: `docs/units/*.md`. Legacy mixed-variant single-file archived at `docs/archive/`. |
 | [Curriculum Canonical Schema](docs/architecture/curriculum-canonical.md) | The frontmatter spec + slug rules + validator rules for `docs/units/*.md` |
 | [Concept Taxonomy](docs/concepts.md) | Granular concept slugs for cross-referencing teaching content |
 | [Known Trap Topics](docs/known-trap-topics.md) | Inventory of trap-prone topics with documented past failures |
@@ -220,7 +220,6 @@ Two levels of classification across all teaching content:
 | [Project Architecture](docs/development/PROJECT_README.md) | Tech stack, serverless design |
 | [Code Map](docs/development/CODEMAP.md) | Find code by feature with line numbers |
 | [Pronunciation Rules](PRONUNCIATION_RULES.md) | The 6 rules and how they work |
-| [Quick Reference](docs/pronunciation/QUICK_REFERENCE.md) | Fast lookup for patterns |
 
 ## Project Structure
 
@@ -287,7 +286,7 @@ npx playwright test tests/ui.spec.js  # UI tests (nav, dashboard, drills)
 2. Run `npm run build` ← **REQUIRED! Rebuilds the bundle**
 3. Deploy with `npx wrangler pages deploy . --project-name=portuguese-drills-expanded`
 
-**Pronunciation**: Write clean Portuguese → run through annotation tool → get annotated output
+**Pronunciation**: Embed phonetic respellings at point of use in worksheets/primers (PEDAGOGY P14, P26). Canonical rules in [PRONUNCIATION_RULES.md](PRONUNCIATION_RULES.md). Standalone annotation pipeline archived 2026-05-04 (Phase 7) — `utils/annotate_pronunciation.py` remains as a generic BP-text annotator if needed.
 
 ## License
 
