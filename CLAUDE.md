@@ -19,7 +19,7 @@ For any question about one specific student, invoke `/student <name>`. Never ans
 Part of a multi-repo ecosystem. Full map in `~/.claude/CLAUDE.md`.
 
 - **Brazil vault** (`~/obsidian/brazil/`) — Brazilian culture, politics, institutions. Context for teaching materials and cultural references in drills.
-- **Business vault** (`~/obsidian/business/`) — Tutoring business operations (invoicing, scheduling, revenue). Student profiles live HERE in `Students/`, not in business vault.
+- **Personal vault** (`~/obsidian/personal/`) — Tutoring business operations (invoicing, scheduling, revenue). Student profiles live HERE in `Students/`, not in personal vault.
 - **financial-charts** (`~/financial-charts/`) — Gil's market research system. Separate domain but same ecosystem.
 
 ---
