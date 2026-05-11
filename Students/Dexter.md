@@ -79,6 +79,7 @@
 | 2026-04-28 | Dexter replied: prefers Thursday; will bring her packet |
 | 2026-04-28 | Gil confirmed: Thursday 4/30 at ZACA. "Até quinta-feira!" |
 | 2026-04-30 | Session confirmed by Venmo payment ($70.00, 'Aula do dia 30 de abril. Obrigado!'). Venue: ZACA Cafe (default from profile). |
+| 2026-05-10 | Gil emailed asking if Dexter is available Thursday this week (subject: "Aula esta semana"); no reply yet |
 
 ---
 
