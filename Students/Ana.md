@@ -4,7 +4,7 @@
 
 **Full name:** Ana Nogueira
 **Email:** ananogi2@gmail.com
-**Status:** Prospective — followed up 2026-05-02; wants lessons before June Brazil trip; requested a call
+**Status:** Prospective — followed up 2026-05-02; wants lessons before June Brazil trip; requested a call. Gil followed up again 2026-05-11 (no reply yet).
 **Referral:** Idlewild
 
 ---
@@ -32,6 +32,7 @@
 | 2025-09-22 | Gil replied (4-day delay); confirmed private sessions up to 90 min, in-person or online; offered a call |
 | 2026-05-02 | Ana followed up (7+ months later); work trip to Brazil in June; wants weekly lessons; asked to schedule a call |
 | 2026-05-04 | Gil replied asking for a good time to talk |
+| 2026-05-11 | Gil sent second follow-up; asked if Ana is still interested in discussing things further |
 
 ---
 
@@ -41,6 +42,7 @@
 |------|------|-------|
 | 2026-05-02 | Scheduling | Ana emailed to resume after 7+ months; work trip to Brazil in June; wants weekly lessons; requested a call to discuss goals. |
 | 2026-05-04 | Scheduling | Gil replied asking when Ana is available to talk. |
+| 2026-05-11 | Scheduling | Gil sent second follow-up; asked if Ana is still interested in discussing things further. |
 
 ---
 
