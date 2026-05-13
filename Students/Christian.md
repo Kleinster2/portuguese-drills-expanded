@@ -108,6 +108,7 @@
 | 2026-04-20 Mon | Scheduling confirmed | Christian offered Tue 4/21 (Thu 4/23 he's in DC); Gil confirmed Tue; both said "Até amanhã!" |
 | 2026-04-21 Tue | Session | Brookfield Place 5:30 PM; conversation-only — Christian wanted to talk about France trip with Fernanda. Imperfeito/preterite worksheets deferred. |
 | 2026-04-27 week | No session | Christian unavailable next week (confirmed in-session). Resume week of 5/4. |
+| 2026-05-12 | Session | Confirmed by Venmo payment ($60.00, 'Aula'). Venue not specified in record; Starbucks / Brookfield Place (default from profile). |
 
 ---
 
