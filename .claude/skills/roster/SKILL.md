@@ -19,19 +19,32 @@ Run for the **current month and the prior month**. Every `Students/*.md` file wi
 
 `list_events` on the Gilberto Aulas calendar (`fmn4i9pf5s3ile6hbl5d9rngeg@group.calendar.google.com`) for the current month + prior month.
 
-## 3. Cross-reference
+## 3. Sweep Gmail for missed comms
 
-- **In calendar + in grep** → standard case. Proceed to Step 4.
+Extract the email address from each active student's profile (`**Email:**` line). Run one combined Gmail search across all of them:
+
+```
+(from:<email1> OR to:<email1> OR from:<email2> OR to:<email2> ...) newer_than:7d
+```
+
+For each returned thread, identify the student (by sender or recipient address) and check whether the message is already captured in `Students/<Name>.md` (session/contact log) or `Students/<Name>-email-log.txt`. Any undocumented thread is a **missed comm** — flag it in the report under the student's open actions and offer to ingest.
+
+This is a backstop for the standing "Gmail student check" cron, which uses `newer_than:2d` and runs every 6h. A 7d sweep at session start catches anything the cron silently dropped (the cron has failed in the past without surfacing any signal). Belt-and-suspenders; one query, cheap.
+
+## 4. Cross-reference
+
+- **In calendar + in grep** → standard case. Proceed to Step 5.
 - **In grep, not in calendar** → WhatsApp-only student (Amanda pattern). **Always open WhatsApp in Chrome and scan their thread for unread messages — no exceptions, even on fast headcounts.** The calendar is structurally blind to them; the local chat-log file is not auto-synced. Live WhatsApp Web is the only source of truth.
 - **In calendar, not in grep** → either stale recurring event (e.g., Nick Curran's Zoom), non-student event, or the dog ("Katie"). Filter out before reporting.
+- **Gmail thread without a file record** → undocumented comm. Flag as a missed-ingest action, attached to the student in the relevant Active or Leads bucket below.
 
-## 4. Per-student deep-dive (optional but default)
+## 5. Per-student deep-dive (optional but default)
 
 For any student where Gil is likely to want current state — i.e., unless the question is strictly "list names" — run `/student <name>` on each active student. That handles thread read, WhatsApp check, last-lesson confirmation, and open actions.
 
-If the question is a fast headcount, skip Step 4 and just report names — **but the WhatsApp scan in Step 3 for WhatsApp-only students is never skipped.**
+If the question is a fast headcount, skip Step 5 and just report names — **but the WhatsApp scan in Step 4 for WhatsApp-only students is never skipped, and the Gmail sweep in Step 3 is never skipped.**
 
-## 5. Output format
+## 6. Output format
 
 Group by status:
 
@@ -47,15 +60,15 @@ Group by status:
 **Cold / dormant**
 - Student — last contact date, status (e.g., "postponed indefinitely")
 
-## 6. Must-cite rule
+## 7. Must-cite rule
 
-Any roster answer must name both sources explicitly. Example footer: *"Grep surfaced: Christian, Marvin, Dexter, Amanda, Daniel-McNamara. Calendar window shows: Christian (recurring), Marvin (recurring), Dexter (4/21 ZACA)."* If I can't write that footer, I haven't done the work — go back to Step 1.
+Any roster answer must name all three input sources explicitly. Example footer: *"Grep surfaced: Christian, Marvin, Dexter, Amanda, Daniel-McNamara. Calendar window: Christian (recurring), Marvin (recurring), Dexter (4/21 ZACA). Gmail sweep (7d): no missed threads."* If a sweep found undocumented threads, list them in the footer too. If I can't write that footer, I haven't done the work — go back to Step 1.
 
-## 7. Known WhatsApp-only students
+## 8. Known WhatsApp-only students
 
 - **Amanda Hynynen Pilnik** — Wed/Thu/Fri ad hoc, $60/90min, Toby's Estate / PlantShed / Café Kitsuné / Air Mail. Full chat at `Students/Amanda-whatsapp-chat.txt`.
 
-## 8. Known non-students to filter
+## 9. Known non-students to filter
 
 - **Katie** — Gil's dog. Vet/walk events. Never a student (per `user_katie-dog`).
 - Kate-Macina and Katherine-Katie-Harrigan are real students but would have surnames on the calendar, not bare "Katie."
