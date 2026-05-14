@@ -11,7 +11,7 @@
 **Rate:** $60/class (up to 90 min)
 **Payment:** Venmo
 **Referral:** Idlewild class listing
-**Next session:** None scheduled — Christian unavailable week of 2026-04-27; resume week of 2026-05-04
+**Next session:** Wed 2026-05-20 5:30 PM, Brookfield Place (back to Wed cadence)
 
 ---
 
@@ -26,7 +26,7 @@
 
 - Simple past (pretérito perfeito) — completed
 - Contractions (preposition + article) — in progress; Parts A-B done, C-G homework
-- Imperfeito — [worksheet](../printables/archive/imperfeito-worksheet-christian.html) prepared for Wed Apr 8 session; covers regular -AR/-ER/-IR, 4 irregulars (ser/ter/vir/pôr), past continuous (estava + gerúndio), past intent (ia + infinitivo)
+- Imperfeito — in progress; sections A-C done in-session 5/12 (regular -AR/-ER/-IR, 4 irregulars ser/ter/vir/pôr, past continuous estava + gerúndio). Sections D-E (past intent ia + infinitivo, mixed practice) as homework — review next session. Worksheet: [imperfeito-worksheet-christian.pdf](../printables/archive/imperfeito-worksheet-christian.pdf)
 
 ---
 
@@ -106,9 +106,14 @@
 | 2026-04-15 Wed | Skipped | No session — Christian on vacation in France |
 | 2026-04-19 Sun | Scheduling | Christian back from France; Gil asked for availability other than Wed 4/22 |
 | 2026-04-20 Mon | Scheduling confirmed | Christian offered Tue 4/21 (Thu 4/23 he's in DC); Gil confirmed Tue; both said "Até amanhã!" |
-| 2026-04-21 Tue | Session | Brookfield Place 5:30 PM; conversation-only — Christian wanted to talk about France trip with Fernanda. Imperfeito/preterite worksheets deferred. |
+| 2026-04-21 Tue | Session | Brookfield Place 5:30 PM; Christian wrote at 4:07 PM "não me sentindo bem, talvez possamos fazer apenas uma hora hoje" — shortened session, conversation about France trip with Fernanda. Imperfeito/preterite worksheets deferred. |
 | 2026-04-27 week | No session | Christian unavailable next week (confirmed in-session). Resume week of 5/4. |
-| 2026-05-12 | Session | Confirmed by Venmo payment ($60.00, 'Aula'). Venue not specified in record; Starbucks / Brookfield Place (default from profile). |
+| 2026-05-03 Sun | Scheduling | Gil asked Christian for an alternate day this week. Christian replied he's only available on Wed (the regular slot) — has after-work commitments every other day. Christian: "Podemos nos encontrar na semana que vem." Implied Wed 5/6 cancelled by Gil. |
+| 2026-05-04 Mon | Materials/Cancellation | Christian sent Five Boro Bike Tour photos (40 miles, all five boroughs). Gil apologized for cancelling Wed 5/6. Christian: "Não se preocupe com a aula. Tenho alguns exercícios nas planilhas anteriores que posso fazer esta semana, e depois podemos revisá-los juntos." Christian self-studying existing worksheets. |
+| 2026-05-06 Wed | Cancelled (Gil) | Wed slot cancelled — Gil unavailable. |
+| 2026-05-10 Sun | Scheduling confirmed | Gil asked again for an alternate day. Christian: sogros (in-laws) visiting; available Tue 5/12; wants to return to Wed cadence after. Gil confirmed Tue 5/12. Christian: "Abracos!" Gil reacted 👍. |
+| 2026-05-12 Tue | Imperfeito | Brookfield Place 5:30 PM. First imperfeito session — worksheet had been prepared since early April but deferred twice (4/21 conversation-only, 5/6 cancelled). Worked through sections A-C of [imperfeito worksheet](../printables/archive/imperfeito-worksheet-christian.pdf) — regular -AR/-ER/-IR, 4 irregulars (ser/ter/vir/pôr), past continuous (estava + gerúndio). Sections D-E (past intent ia + infinitivo, mixed practice) assigned as homework; review next session. |
+| 2026-05-12 Tue | Payment | Session confirmed by Venmo payment ($60.00, memo 'Aula'). |
 
 ---
 
