@@ -8,6 +8,10 @@ argument-hint: "[student name]"
 
 Enforces the rules in `feedback_read-full-email-threads` (rolling threads, top-to-bottom) and `feedback_calendar-is-not-the-roster` (authoritative source over convenient one). Composed by `/roster` for each active student.
 
+## Prerequisite — sync local with origin
+
+Run `git pull origin master` before reading the student file. The Gmail student check cron writes to origin every 6h and the daily-roster cron writes every morning; local state lags until pulled. Reading a stale profile produces stale answers. See `feedback_git-pull-before-state-checks`.
+
 ## 1. Read the student file
 
 `Students/<Name>.md` in full — profile, session log, contact log, communications. Note:

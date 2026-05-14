@@ -7,6 +7,10 @@ description: Active-roster scan — who's currently taking lessons, where each o
 
 Enforces the rule in `feedback_calendar-is-not-the-roster`: never answer a roster question from the calendar alone.
 
+## Prerequisite — sync local with origin
+
+Run `git pull origin master` before anything else. Cron jobs (Gmail student check every 6h, daily roster check 7 AM ET, weekly slow-student sweep Mon 9 AM ET) write to origin while Gil is between sessions; the local clone is stale until pulled. Skipping this step caused a self-inflicted "cron is broken" misdiagnosis on 2026-05-14 — every subsequent diagnostic (grep, file mtimes) was reading frozen local state instead of current origin state. See `feedback_git-pull-before-state-checks`.
+
 ## 1. Grep the authoritative source
 
 ```
