@@ -10,7 +10,7 @@
 **Session frequency:** Weekly (Tuesdays, sometimes Thursdays), 1.5 hours, in-person (Brooklyn Navy Yard / Essex Market / Manhattan)
 **Rate:** $60/session (up to 90 min, cancel anytime)
 **Referral:** Idlewild (referred ~early 2024, contacted Gil Mar 2025)
-**Next session:** None scheduled — Marvin on Portugal trip (Açores → Algarve → Lisboa, May 2026).
+**Next session:** Tentative Tue 2026-05-19 3:30 PM, Brooklyn Navy Yard — Gil to confirm with Marvin over weekend of 5/17-5/18. Marvin mid-trip as of 5/13 (climbed Mt. Pico that morning); Algarve + Lisboa legs ahead.
 
 ---
 
@@ -101,7 +101,9 @@
 | 2026-04-14 Tue | Travel EP | Transmitter Brewery patio (BNY), Gil ~5 min late. Covered [transportes worksheet](../printables/ep-travel-transportes-worksheet.html) and [cortesia worksheet](../printables/ep-travel-cortesia-worksheet.html). |
 | 2026-04-21 Tue | Travel EP | BNY, 3:00–4:30 PM (rescheduled from 3:30 for tighter logistics). Covered [farmácia+aeroporto worksheet](../printables/ep-travel-farmacia-aeroporto-worksheet.html) and [compras worksheet](../printables/ep-travel-compras-worksheet.html). |
 | 2026-04-28 Tue | Restaurante + Compras | BNY, 3:30 scheduled; Marvin ~20 min late ("Vou estar atrasado" 3:30 PM). Worked through the merged [restaurante worksheet](../printables/ep-travel-restaurante-worksheet.html) (full ementa literacy + ordering + dose/meia dose/couvert + 8 pratos típicos + cooking methods) and revisited the [compras worksheet](../printables/ep-travel-compras-worksheet.html). Trip prep continuing — May Portugal trip. Payment confirmed via Venmo ($60, "Aula do dia 28 de abril. Obrigado!"). |
-| 2026-05-05 Tue | Session | Confirmed by Venmo payment ($60, 'Aula do dia 5 de maio. Obrigado, e boa viagem!'). Venue not specified in record; Brooklyn Navy Yard (default). Gil signed off with "boa viagem!" — Portugal trip begins. |
+| 2026-05-05 Tue | Conversa com locais + Açores ao ar livre | BNY, 3:30 PM as scheduled — no change. Two new EP travel worksheets built same-day for this session, covering the imminent May trip (Açores → Algarve → Lisboa). Worked through the [conversa com locais worksheet](../printables/ep-travel-conversa-locais-worksheet.html) — openers (tudo bem?, como estás?, de onde és?, há quanto tempo cá estás?, vens cá muitas vezes?), reaction markers (a sério?, pois é, que giro, que fixe, não me digas), small-talk topics (tempo/comida/viagem), parting formulas (foi um prazer, ficamos em contacto, boa viagem). Then the [Açores ao ar livre worksheet](../printables/ep-travel-acores-ao-ar-livre-worksheet.html) — activities (caminhada, observação de baleias/cetáceos, mergulho, canoagem, banho nas termas), paisagem (lagoa, miradouro, caldeira, fumarola, fajã, falésia), useful verbs (subir/descer/atravessar/avistar), gear (fato de banho, colete salva-vidas, protetor solar), then narration practice in pretérito/imperfeito and a whale-watching booking dialogue at Horta. Went well, both landed. No homework assigned. Payment confirmed via Venmo ($60, "Aula do dia 5 de maio. Obrigado, e boa viagem!"). Pessoas worksheet remains the only unused EP travel piece — natural opener for next session post-trip. |
+| 2026-05-13 Tue | Communication | Marvin sent WhatsApp photo at 6:58 AM (no caption): Governo dos Açores certificate confirming he climbed Mt. Pico (2,351m, Portugal's highest peak) on 13/Mai/2026. **Mid-trip milestone, not a return signal** — Algarve and Lisboa legs still ahead per original itinerary. |
+| 2026-05-14 Wed | Scheduling note | Tentative return for Tue 5/19 3:30 PM BNY slot — based on original trip end-of-May target. The 5/13 Pico certificate confirms Marvin was still in Azores Tue morning; Algarve + Lisboa legs still ahead. Confirm before the slot. |
 
 ---
 

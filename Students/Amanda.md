@@ -13,7 +13,7 @@
 **Rate:** $60/session (90 min)
 **Payment:** Cash or Venmo
 **Referral:** Idlewild (direct introduction via email, Mar 17, 2022)
-**Next session:** Wed 2026-04-29, 4:00 PM @ Toby's Estate
+**Next session:** Tentative Thu 2026-05-21 (Amanda asked 5/13 via WhatsApp); awaiting Gil's reply. Amanda traveling to Michigan weekend of 5/16.
 
 ---
 
@@ -115,6 +115,8 @@
 | 2026-04-15 Wed | Contact | Gil shared Pop Base post (Jorginho/Chappell Roan) Tue 4/14 PM; Amanda replied "KKKK 😂x9" Wed 11:45 AM. No lesson discussion since. |
 | 2026-04-28 Tue | Scheduling | Confirmed Wed 4/29 at 4 PM at Toby's via WhatsApp. Amanda asked Sun 4/26 about a Wed lesson; back-and-forth landed on 4 PM. Gil: "Perfeito! Até amanhã às 4." |
 | 2026-04-29 Wed | Session | Confirmed by Venmo payment ("Aula April 29!" — $60). Venue not specified in record; likely Toby's Estate (default). |
+| 2026-04-29 Wed | Session detail | WhatsApp: Amanda 30 min late ("estou no post office") at 4:00 PM; Gil: "Sem problemas!" Post-session, Gil sent "Tiramisu donut, Donut Plant" 4:17 PM (photo caption). Amanda replied 5/1 1:10 PM: "Hehehe fofinhaaaaa". |
+| 2026-05-13 Wed | Scheduling | Amanda WhatsApp 11:17 AM: "Oi Gil! Essa semana fugiu! Você tem tempo para aula a semana que vem, na quinta? Eu vou viajar para Michigan esse fin de semana para alguns dias." Asks for Thursday next week (5/21); traveling to Michigan this weekend. Awaiting Gil's reply. |
 
 ---
 

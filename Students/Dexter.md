@@ -6,8 +6,8 @@
 **Email:** dextermayo4@gmail.com
 **LinkedIn:** linkedin.com/in/dexter-mayo
 **Gender:** Female (she/her)
-**Status:** Active — five lessons completed; last was Thu 4/30 at ZACA
-**Next session:** None scheduled — week of 2026-05-11 skipped (family visit); next week (week of 2026-05-18) proposed by Dexter, not yet confirmed
+**Status:** Active — five lessons completed; last was Thu 4/30 at ZACA; reschedule pending for Tue 5/19 (Gil to confirm over weekend)
+**Next session:** Tentative Tue 2026-05-19 6:30 PM, ZACA — Gil to confirm with Dexter over weekend of 5/17-5/18 (after her cousin's graduation).
 **Primer progress:** Through Part VIII (ter + age + family + possessives). Next: Part IX (poder, querer, gostar de).
 **Referral:** Unknown (no mention of source)
 
