@@ -9,27 +9,13 @@ import re
 import glob
 
 OBSIDIAN_DIR = os.path.expanduser("~/obsidian/contacts/People")
-STUDENTS_DIR = os.path.expanduser("~/cascadeprojects/portuguese-drills-expanded/Students")
+STUDENTS_DIR = os.path.expanduser("~/portuguese/Students")
 
-# Students already in Students/ folder — skip these
-EXISTING = {
-    "Amanda Hynynen Pilnik",
-    "Ana Nogueira",
-    "Ben Posnick",
-    "Christian Loubeau",
-    "Danny Victorio",
-    "Dexter Mayo",
-    "Emily Taylor",
-    "Gaby Sant'Anna",
-    "Grant Mitchell",
-    "Julian Massarani",
-    "Marvin Michel",
-    "Nicholas Kulish",
-    "Rachel Doyle",
-    "Nick Curran",
-    "Rafael Rubio",
-    "Teodora Pasca",
-}
+# Existing Students/ files are detected dynamically (file-exists check before
+# write). The old hardcoded EXISTING set went stale within months; the on-disk
+# check is the authoritative gate. Filenames here use either full-name pattern
+# (Adam-Sandel.md) or first-name-only (Christian.md) — both are matched via the
+# canonical-name lookup below.
 
 # Tier 1 contacts (warm — have personal context for re-engagement)
 TIER1 = {
@@ -53,7 +39,8 @@ def parse_obsidian_contact(filepath):
     data = {"raw": content, "filepath": filepath}
 
     # Check if tagged as student
-    if "student" not in content.lower().split("tags:")[1].split("\n")[0] if "tags:" in content else "":
+    tags_match = re.search(r'tags:\s*\[([^\]]*)\]', content)
+    if not tags_match or 'student' not in tags_match.group(1).lower():
         return None
 
     # Extract filename as name
@@ -275,9 +262,38 @@ def generate_student_file(data, tier):
     return "\n".join(lines)
 
 
+def existing_canonical_names():
+    """Build a lowercase-token set of names already present in Students/.
+
+    Detects both Adam-Sandel.md and Christian.md patterns by checking
+    the H1 header inside each file plus the filename stem. A new name
+    is "already in Students/" if any token of it matches an existing entry.
+    """
+    canonical = set()
+    if not os.path.isdir(STUDENTS_DIR):
+        return canonical
+    for fn in os.listdir(STUDENTS_DIR):
+        if not fn.endswith(".md") or fn.startswith("_"):
+            continue
+        canonical.add(fn[:-3].lower())
+        try:
+            with open(os.path.join(STUDENTS_DIR, fn), "r", encoding="utf-8") as f:
+                for line in f:
+                    m = re.match(r"^#\s+(?!#)(.+)$", line.strip())
+                    if m:
+                        h1 = m.group(1).lower()
+                        canonical.add(h1)
+                        canonical.update(h1.split())
+                        break
+        except Exception:
+            pass
+    return canonical
+
+
 def main():
     # Find all student-tagged files
     all_files = glob.glob(os.path.join(OBSIDIAN_DIR, "*.md"))
+    existing = existing_canonical_names()
 
     created = 0
     skipped_existing = 0
@@ -291,7 +307,9 @@ def main():
             continue
 
         name = data["name"]
-        if name in EXISTING:
+        name_l = name.lower()
+        first = name_l.split()[0] if name_l else name_l
+        if name_l in existing or first in existing:
             skipped_existing += 1
             continue
 
