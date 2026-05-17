@@ -64,34 +64,17 @@ Concise summary, no preamble:
 Example:
 > **Amanda** — last lesson 2026-04-13 (Toby's Estate, 10:45 AM, confirmed via "Estou indo!"). Last contact 2026-04-15 (joke exchange). Next: due — no scheduling message this week. Open actions: send a nudge for this week.
 
-## 8. Pre-draft re-anchor — composing outbound messages
+## 8. Composing outbound messages — delegate to `/draft`
 
-**Mandatory whenever I'm about to draft any outbound message to this student** (Gmail, WhatsApp, anything they will read). Before composing the body, output in chat:
+For any outbound message to this student (Gmail, WhatsApp, anything they will read), follow the universal composition discipline in `.claude/skills/draft/SKILL.md`: re-anchor → compose → whole-draft check (6 questions) → show paired with inbound. Non-skippable even for one-line replies.
 
-**Latest inbound from <Name> (verbatim):**
-> Quote the student's most recent message exactly, with the sender timestamp. Don't paraphrase — the verbatim words are what anchor the natural reply.
+The disciplines are recipient-agnostic (apply to anyone Gil drafts to, not just students), but the student-specific facts to surface in the `/draft` re-anchor step are:
 
-**Facts on the table:**
-- Specific dates / times / venues / asks the student offered or referenced (e.g., "today or tomorrow morning" → resolve to absolute dates: 2026-05-15 or morning of 2026-05-16)
-- Current calendar state for this student (next event date/time/location, or "no event")
-- Anything pending from the prior thread (homework due, worksheet drafted but unsent, etc.)
+- **Latest inbound from <Name>** (verbatim with timestamp) — Gmail message, or WhatsApp message for WhatsApp-only students (Amanda).
+- **Calendar state for this student** — next event date/time/location, or "no event."
+- **Pedagogy state** — homework owed, worksheet drafted but unsent, focus topic for next session, register guidance (e.g., Marvin EP-only, Amanda's Toby's-default).
 
-**Then compose.** Every temporal and contextual phrase in the draft body must derive from those facts — not from elsewhere in the session. If the draft says *"the weekend"* but the inbound said *"today or tomorrow morning,"* that phrase isn't anchored to this student's facts; rewrite using language derivable from the verbatim quote.
-
-**Then run the whole-draft check (post-compose, AND after every revision).** Before showing the draft, output a structured check answering each of the following against the inbound. Non-skippable. Each question gets a one-line answer in chat:
-
-1. **Tone match.** Does the draft's opener and closer reciprocate the inbound's register? Warm inbound ("Hi Gil!!", thank-you, exclamations) deserves at least one warmth marker in the reply. Curt inbound can take a curt reply.
-2. **Acknowledgment of context.** If the inbound created an obligation Gil owes back (missed window, slow reply, declined a specific offer, etc.), is that acknowledged? If a prior revision cut the acknowledgment by accident, restore it.
-3. **Substantive asks — registered or surfaced.** Did the inbound name a topic of substance (a trip, a goal, a problem, a deadline)? Either register it in the draft using Gil-derivable phrasing, OR surface the gap to Gil explicitly ("she named X — fold it in or save for the call?") so he can decide. Don't silently default to omit.
-4. **Temporal anchors.** Every time-referent in the draft traces to the inbound's specific facts (or to a fact Gil stated in this conversation), not to session-ambient phrasing inherited from another task.
-5. **Cumulative integrity (revision-specific).** If this is a revision, has any earlier necessary content been silently dropped by the patch? A correction to one phrase shouldn't cut the apology, the warmth marker, or the substantive engagement that was correctly in the prior version.
-6. **Recipient POV — joint implications.** Each clause can be true in isolation while the message taken together implies something about the recipient they haven't signaled. *"I'm around anytime today. What time works for you?"* — both clauses derive from Gil's stated availability (true), but the joint frame asks Ana to pick a time today when she's said nothing about Sunday (false implication). If the joint message asks the recipient to act on an availability, preference, or commitment they haven't signaled, fix it: ask them to signal first, or reframe as an open offer without binding their next action to my assumption.
-
-If any check fails, fix and re-run — don't ship a draft with a failing check expecting Gil to catch it.
-
-**Then show the draft as a block** (per `feedback_show-drafts-in-chat`) — paired with the inbound being replied to, To / Subject / Body inside a code fence — *before* any `create_draft` call or typing into WhatsApp.
-
-This whole step is non-skippable, even for one-line replies. For short replies the blocks are compact, but every gate still runs. The discipline catches: (a) frame transfer from cross-student session context (e.g., "weekend" phrasing bleeding from Marvin/Dexter profiles into an Ana draft on 2026-05-17 — see `feedback_frame-capture` point 5); and (b) patch-mode myopia — shipping a revision without re-evaluating the whole, which lost the apology + warmth + substantive engagement across three rounds of Ana revisions in the same session.
+After invoking `/draft`, the whole-draft check runs against this student's specific inbound and these specific facts. See `feedback_frame-capture` point 5 and `feedback_patch-mode-myopia` for the failure cases the check exists to catch.
 
 ## 9. Special-case students
 
