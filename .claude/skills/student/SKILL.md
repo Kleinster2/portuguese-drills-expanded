@@ -78,9 +78,19 @@ Example:
 
 **Then compose.** Every temporal and contextual phrase in the draft body must derive from those facts — not from elsewhere in the session. If the draft says *"the weekend"* but the inbound said *"today or tomorrow morning,"* that phrase isn't anchored to this student's facts; rewrite using language derivable from the verbatim quote.
 
-**Then show the draft as a block** (per `feedback_show-drafts-in-chat`) — To / Subject / Body inside a code fence — *before* any `create_draft` call or typing into WhatsApp.
+**Then run the whole-draft check (post-compose, AND after every revision).** Before showing the draft, output a structured check answering each of the following against the inbound. Non-skippable. Each question gets a one-line answer in chat:
 
-This step is non-skippable, even for one-line replies. For short replies the block is compact, but the re-anchor still runs. The discipline catches frame transfer from cross-student session context (e.g., "weekend" phrasing bleeding from Marvin/Dexter profiles into an Ana draft on 2026-05-17). See `feedback_frame-capture` point 5.
+1. **Tone match.** Does the draft's opener and closer reciprocate the inbound's register? Warm inbound ("Hi Gil!!", thank-you, exclamations) deserves at least one warmth marker in the reply. Curt inbound can take a curt reply.
+2. **Acknowledgment of context.** If the inbound created an obligation Gil owes back (missed window, slow reply, declined a specific offer, etc.), is that acknowledged? If a prior revision cut the acknowledgment by accident, restore it.
+3. **Substantive asks — registered or surfaced.** Did the inbound name a topic of substance (a trip, a goal, a problem, a deadline)? Either register it in the draft using Gil-derivable phrasing, OR surface the gap to Gil explicitly ("she named X — fold it in or save for the call?") so he can decide. Don't silently default to omit.
+4. **Temporal anchors.** Every time-referent in the draft traces to the inbound's specific facts (or to a fact Gil stated in this conversation), not to session-ambient phrasing inherited from another task.
+5. **Cumulative integrity (revision-specific).** If this is a revision, has any earlier necessary content been silently dropped by the patch? A correction to one phrase shouldn't cut the apology, the warmth marker, or the substantive engagement that was correctly in the prior version.
+
+If any check fails, fix and re-run — don't ship a draft with a failing check expecting Gil to catch it.
+
+**Then show the draft as a block** (per `feedback_show-drafts-in-chat`) — paired with the inbound being replied to, To / Subject / Body inside a code fence — *before* any `create_draft` call or typing into WhatsApp.
+
+This whole step is non-skippable, even for one-line replies. For short replies the blocks are compact, but every gate still runs. The discipline catches: (a) frame transfer from cross-student session context (e.g., "weekend" phrasing bleeding from Marvin/Dexter profiles into an Ana draft on 2026-05-17 — see `feedback_frame-capture` point 5); and (b) patch-mode myopia — shipping a revision without re-evaluating the whole, which lost the apology + warmth + substantive engagement across three rounds of Ana revisions in the same session.
 
 ## 9. Special-case students
 
