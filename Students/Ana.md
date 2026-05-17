@@ -34,6 +34,7 @@
 | 2026-05-04 | Gil replied asking for a good time to talk |
 | 2026-05-11 | Gil sent second follow-up; asked if Ana is still interested in discussing things further |
 | 2026-05-15 | Ana replied; confirmed she'd love to chat about lessons for next month and potentially beyond; available May 15 or morning of May 16 for a call |
+| 2026-05-17 | Gil replied; available today or tomorrow for a call; asked Ana to send a window |
 
 ---
 
@@ -45,6 +46,7 @@
 | 2026-05-04 | Scheduling | Gil replied asking when Ana is available to talk. |
 | 2026-05-11 | Scheduling | Gil sent second follow-up; asked if Ana is still interested in discussing things further. |
 | 2026-05-15 | Scheduling | Ana replied confirming interest; wants lessons for next month and potentially beyond; available May 15 or morning of May 16 for a call. |
+| 2026-05-17 | Scheduling | Gil replied; available today or tomorrow for a call; asked Ana to send a window. |
 
 ---
 
