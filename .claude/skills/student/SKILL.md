@@ -64,7 +64,25 @@ Concise summary, no preamble:
 Example:
 > **Amanda** — last lesson 2026-04-13 (Toby's Estate, 10:45 AM, confirmed via "Estou indo!"). Last contact 2026-04-15 (joke exchange). Next: due — no scheduling message this week. Open actions: send a nudge for this week.
 
-## 8. Special-case students
+## 8. Pre-draft re-anchor — composing outbound messages
+
+**Mandatory whenever I'm about to draft any outbound message to this student** (Gmail, WhatsApp, anything they will read). Before composing the body, output in chat:
+
+**Latest inbound from <Name> (verbatim):**
+> Quote the student's most recent message exactly, with the sender timestamp. Don't paraphrase — the verbatim words are what anchor the natural reply.
+
+**Facts on the table:**
+- Specific dates / times / venues / asks the student offered or referenced (e.g., "today or tomorrow morning" → resolve to absolute dates: 2026-05-15 or morning of 2026-05-16)
+- Current calendar state for this student (next event date/time/location, or "no event")
+- Anything pending from the prior thread (homework due, worksheet drafted but unsent, etc.)
+
+**Then compose.** Every temporal and contextual phrase in the draft body must derive from those facts — not from elsewhere in the session. If the draft says *"the weekend"* but the inbound said *"today or tomorrow morning,"* that phrase isn't anchored to this student's facts; rewrite using language derivable from the verbatim quote.
+
+**Then show the draft as a block** (per `feedback_show-drafts-in-chat`) — To / Subject / Body inside a code fence — *before* any `create_draft` call or typing into WhatsApp.
+
+This step is non-skippable, even for one-line replies. For short replies the block is compact, but the re-anchor still runs. The discipline catches frame transfer from cross-student session context (e.g., "weekend" phrasing bleeding from Marvin/Dexter profiles into an Ana draft on 2026-05-17). See `feedback_frame-capture` point 5.
+
+## 9. Special-case students
 
 - **Amanda** — schedules ad hoc on WhatsApp only. Don't expect calendar events. Default venues: Toby's Estate / PlantShed / Café Kitsuné / Air Mail.
 - **Marvin** — recurring Tuesday. Pinned WhatsApp.
