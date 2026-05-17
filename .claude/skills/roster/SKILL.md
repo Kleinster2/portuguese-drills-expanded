@@ -33,7 +33,9 @@ Extract the email address from each active student's profile (`**Email:**` line)
 
 For each returned thread, identify the student (by sender or recipient address) and check whether the message is already captured in `Students/<Name>.md` (session/contact log) or `Students/<Name>-email-log.txt`. Any undocumented thread is a **missed comm** — flag it in the report under the student's open actions and offer to ingest.
 
-This is a backstop for the standing "Gmail student check" cron, which uses `newer_than:2d` and runs every 6h. A 7d sweep at session start catches anything the cron silently dropped (the cron has failed in the past without surfacing any signal). Belt-and-suspenders; one query, cheap.
+**Snippet caveat.** `search_threads` returns at most ~5 message previews per thread, oldest-first — the latest reply on a long thread can be hidden. For any thread that bears on current state, follow up with `get_thread` `messageFormat: FULL_CONTENT` and check the newest message's `labelIds` (`UNREAD` matters). See `feedback_read-full-email-threads`.
+
+This Gmail step is also a backstop for the standing "Gmail student check" cron (`newer_than:2d`, every 6h). A 7d sweep at session start catches anything the cron silently dropped (the cron has failed in the past without surfacing any signal). Belt-and-suspenders; one query, cheap.
 
 ## 4. Cross-reference
 
@@ -42,15 +44,34 @@ This is a backstop for the standing "Gmail student check" cron, which uses `newe
 - **In calendar, not in grep** → either stale recurring event (e.g., Nick Curran's Zoom), non-student event, or the dog ("Katie"). Filter out before reporting.
 - **Gmail thread without a file record** → undocumented comm. Flag as a missed-ingest action, attached to the student in the relevant Active or Leads bucket below.
 
-## 5. Per-student deep-dive (optional but default)
+## 5. Identify urgent items
+
+**Non-skippable, even on fast headcounts.** Before composing the output, scan all gathered signals for items that demand top billing regardless of student status. See `feedback_roster-lead-with-urgent`.
+
+What qualifies as urgent:
+
+- **Expired or expiring-today prospect call windows.** A prospect offered a specific call slot (today, tomorrow morning, etc.) that has passed or passes today with no logged contact. Read the latest inbound message in every prospect's `*-email-log.txt` or profile.
+- **Unread inbox emails** from any prospect or active student. The `UNREAD` label only shows via `get_thread` `messageFormat: FULL_CONTENT` — `search_threads` snippets won't show it and may also truncate to the 5 oldest messages, hiding the latest inbound entirely.
+- **Confirmation gaps within 24–48h.** A Tentative session needing Gil to send a confirmation today or tomorrow.
+- **Any flag the prior-day daily-roster cron raised that isn't resolved.** Read `daily-roster/YYYY-MM-DD.md` for yesterday (and the day before, if today is Monday). The cron's `Flags` section is a stronger prior than this skill's status-group ordering — if it flagged something yesterday and it hasn't been resolved, it stays urgent today.
+
+Every urgent item identified here goes in the output's top section (Step 7), even if the student also appears in the per-status breakdown below.
+
+## 6. Per-student deep-dive (optional but default)
 
 For any student where Gil is likely to want current state — i.e., unless the question is strictly "list names" — run `/student <name>` on each active student. That handles thread read, WhatsApp check, last-lesson confirmation, and open actions.
 
-If the question is a fast headcount, skip Step 5 and just report names — **but the WhatsApp scan in Step 4 for WhatsApp-only students is never skipped, and the Gmail sweep in Step 3 is never skipped.**
+If the question is a fast headcount, skip Step 6 and just report names — **but the WhatsApp scan in Step 4 for WhatsApp-only students is never skipped, the Gmail sweep in Step 3 is never skipped, and the urgent-items scan in Step 5 is never skipped.**
 
-## 6. Output format
+## 7. Output format
 
-Group by status:
+Lead with urgency, then group by status.
+
+**Urgent — surface first (any group)**
+
+Every item identified in Step 5. If Step 5 found nothing, write `(none today)` — never omit this section, since omission can't be distinguished from "didn't bother to scan."
+
+- Item — what it is, what action it needs, deadline. Pulled directly from Step 5.
 
 **Active — next 7 days**
 - Student — next session date/time/venue, open action (if any)
@@ -64,15 +85,15 @@ Group by status:
 **Cold / dormant**
 - Student — last contact date, status (e.g., "postponed indefinitely")
 
-## 7. Must-cite rule
+## 8. Must-cite rule
 
-Any roster answer must name all three input sources explicitly. Example footer: *"Grep surfaced: Christian, Marvin, Dexter, Amanda, Daniel-McNamara. Calendar window: Christian (recurring), Marvin (recurring), Dexter (4/21 ZACA). Gmail sweep (7d): no missed threads."* If a sweep found undocumented threads, list them in the footer too. If I can't write that footer, I haven't done the work — go back to Step 1.
+Any roster answer must name all input sources explicitly and explicitly confirm the urgent-items scan was performed. Example footer: *"Grep surfaced: Christian, Marvin, Dexter, Amanda, Daniel-McNamara. Calendar window: Christian (recurring), Marvin (recurring), Dexter (4/21 ZACA). Gmail sweep (7d): no missed threads. Urgent scan (Step 5): 1 item — Ana call window expired 5/16, email UNREAD."* If a sweep found undocumented threads, list them in the footer too. If I can't write that footer, I haven't done the work — go back to Step 1.
 
-## 8. Known WhatsApp-only students
+## 9. Known WhatsApp-only students
 
 - **Amanda Hynynen Pilnik** — Wed/Thu/Fri ad hoc, $60/90min, Toby's Estate / PlantShed / Café Kitsuné / Air Mail. Full chat at `Students/Amanda-whatsapp-chat.txt`.
 
-## 9. Known non-students to filter
+## 10. Known non-students to filter
 
 - **Katie** — Gil's dog. Vet/walk events. Never a student (per `user_katie-dog`).
 - Kate-Macina and Katherine-Katie-Harrigan are real students but would have surnames on the calendar, not bare "Katie."
