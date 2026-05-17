@@ -85,6 +85,7 @@ Example:
 3. **Substantive asks — registered or surfaced.** Did the inbound name a topic of substance (a trip, a goal, a problem, a deadline)? Either register it in the draft using Gil-derivable phrasing, OR surface the gap to Gil explicitly ("she named X — fold it in or save for the call?") so he can decide. Don't silently default to omit.
 4. **Temporal anchors.** Every time-referent in the draft traces to the inbound's specific facts (or to a fact Gil stated in this conversation), not to session-ambient phrasing inherited from another task.
 5. **Cumulative integrity (revision-specific).** If this is a revision, has any earlier necessary content been silently dropped by the patch? A correction to one phrase shouldn't cut the apology, the warmth marker, or the substantive engagement that was correctly in the prior version.
+6. **Recipient POV — joint implications.** Each clause can be true in isolation while the message taken together implies something about the recipient they haven't signaled. *"I'm around anytime today. What time works for you?"* — both clauses derive from Gil's stated availability (true), but the joint frame asks Ana to pick a time today when she's said nothing about Sunday (false implication). If the joint message asks the recipient to act on an availability, preference, or commitment they haven't signaled, fix it: ask them to signal first, or reframe as an open offer without binding their next action to my assumption.
 
 If any check fails, fix and re-run — don't ship a draft with a failing check expecting Gil to catch it.
 
