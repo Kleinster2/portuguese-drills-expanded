@@ -27,12 +27,23 @@
 
 ## Background
 
-- First-generation American, father from Brazil
-- Screenwriter — wrote the movie Supergirl
-- 5-day press tour in Rio starting Thu 2026-06-12: interviews with the main actor and director
+- First-generation American (father from Brazil); grew up in East Falls, Philadelphia
+- BFA in Theatre, Boston Conservatory at Berklee (2007)
+- Multi-hyphenate: actress, playwright, screenwriter
+- Acting credits: Penny Ares on *The Vampire Diaries*; *The Michael J. Fox Show*; *Hightown*; Sarah on *Sarah + Dee*
+- Originated Eliza Hamilton in the Vassar workshop production of Lin-Manuel Miranda's *Hamilton*
+- Plays written: *Empathitrax*, *Which Way to the Stage*
+- Screenwriting — all DC Studios:
+  - *Supergirl* (dir. Craig Gillespie; stars Milly Alcock; based on Tom King's *Supergirl: Woman of Tomorrow* graphic novel; her first produced screenplay; theatrical release 2026-06-26)
+  - *Wonder Woman* reboot (in progress)
+  - *Teen Titans* live-action (in progress)
+- 5-day Rio press tour starting Thu 2026-06-12 (~9 days before *Supergirl*'s 2026-06-26 US theatrical release; standard international-launch press circuit)
+- Married to actor/writer Nick Blaemire
+- Has a daughter born September 2022 (~3.5 years old)
 - Lives in Carroll Gardens, Brooklyn
-- Self-described beginner Portuguese
+- Self-described beginner Portuguese; reconnecting with Brazilian roots
 - Open to in-person or online; prefers Carroll Gardens area for in-person
+- Background sourced from Wikipedia + trade reporting (Variety, The Hollywood Reporter, Deadline, TheWrap); verified 2026-05-18
 
 ---
 
@@ -76,6 +87,7 @@
 - Ana re-engaged May 2026 with a clear motivation (Rio press tour for Supergirl)
 - Trip prep priority: working-level Brazilian Portuguese suitable for press-adjacent interactions (interviews, hosts, local crew), plus general comfort for Rio
 - Lesson cadence is constrained by the 2026-06-12 departure — likely ~3 lessons possible before trip if weekly (5/21, 5/28, 6/4, and possibly 6/11)
+- Career context — screenwriter on a major studio release (Supergirl) with a press-tour deadline. Implication for teaching: lessons should be efficient and deadline-aware; press-tour niche (small talk, host pleasantries, brand-positive Brazil reactions) is more specific than general beginner curriculum. (Gil and Ana have not met in person; first lesson Thu 2026-05-21.)
 
 ---
 
