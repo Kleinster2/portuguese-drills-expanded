@@ -6,12 +6,12 @@
 **Email:** ananogi2@gmail.com
 **Phone:** (267) 760-2143
 **Address:** Carroll Gardens, Brooklyn
-**Status:** Active — intro call completed Mon 2026-05-18. First lesson targeted for early afternoon Thursday 2026-05-21; Ana to suggest a venue in Carroll Gardens.
-**Started:** 2026-05-18 (intro call); first lesson pending.
+**Status:** Active — intro call completed Mon 2026-05-18; first lesson confirmed Thu 2026-05-21, 1:20–3:30 PM block at Poetica Coffee, 251 Smith St (Cobble Hill). Ana free to arrive any time before 2 PM; Gil holds the table from 1:20.
+**Started:** 2026-05-18 (intro call); first lesson Thu 2026-05-21.
 **Current level:** Beginner
 **Session frequency:** Targeting weekly, with trip-prep focus through 2026-06-12 Rio departure
-**Location:** Carroll Gardens, Brooklyn (Ana to propose specific venues); also open to online
-**Next session:** Targeted Thu 2026-05-21 early afternoon, Carroll Gardens (Ana to suggest venue)
+**Location:** Poetica Coffee, 251 Smith St, Cobble Hill/Carroll Gardens border (Ana's pick for first lesson); also open to online
+**Next session:** Confirmed Thu 2026-05-21, block 1:20–3:30 PM at Poetica Coffee, 251 Smith St. Ana free to arrive any time before 2 PM; Gil holds the table from 1:20. Calendar event `khu5npneqpcuu6p2m45aks58vg`, attendee invite sent + update confirmation sent.
 **Rate:** (TBD — confirm whether quoted on 2026-05-18 intro call)
 **Referral:** Idlewild
 
@@ -61,6 +61,8 @@
 | 2026-05-17 | Ana replied (9:07 PM); confirmed free on May 18 before 2pm; gave phone (267) 760-2143 |
 | 2026-05-17 | Gil confirmed (9:20 PM); will call from (212) 470-9062 |
 | 2026-05-18 | Intro call. Lives in Carroll Gardens. Wrote the movie Supergirl; 5-day Rio press tour starting Thu 2026-06-12 with main actor and director. Targeting first lesson Thu 2026-05-21 early afternoon; Ana to suggest Carroll Gardens venue. |
+| 2026-05-18 | Ana emailed 4:03 PM proposing Poetica Coffee, 251 Smith St (Cobble Hill/Carroll Gardens border) for Thursday; can meet as early as 1:20 PM. Gil sent reply confirming the spot + arrival ahead of her to hold a table. First lesson Thu 2026-05-21 1:20 PM locked. |
+| 2026-05-18 | Calendar event `khu5npneqpcuu6p2m45aks58vg` created on Aulas calendar with Ana as attendee + invite email. Initial location field didn't save on creation; Gil added Poetica Coffee location manually and widened the block to 1:20–3:30 PM (giving Ana flexibility to arrive any time before 2 PM). Update notification re-sent to Ana via calendar. |
 
 ---
 
