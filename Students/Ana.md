@@ -1,26 +1,38 @@
-#student #prospective
+#student #active
 
 # Ana Nogueira
 
 **Full name:** Ana Nogueira
 **Email:** ananogi2@gmail.com
-**Status:** Prospective — call scheduled for Mon 2026-05-18 before 2 PM; Ana confirmed free, gave phone (267) 760-2143; Gil to call from (212) 470-9062.
+**Phone:** (267) 760-2143
+**Address:** Carroll Gardens, Brooklyn
+**Status:** Active — intro call completed Mon 2026-05-18. First lesson targeted for early afternoon Thursday 2026-05-21; Ana to suggest a venue in Carroll Gardens.
+**Started:** 2026-05-18 (intro call); first lesson pending.
+**Current level:** Beginner
+**Session frequency:** Targeting weekly, with trip-prep focus through 2026-06-12 Rio departure
+**Location:** Carroll Gardens, Brooklyn (Ana to propose specific venues); also open to online
+**Next session:** Targeted Thu 2026-05-21 early afternoon, Carroll Gardens (Ana to suggest venue)
+**Rate:** (TBD — confirm whether quoted on 2026-05-18 intro call)
 **Referral:** Idlewild
 
 ---
 
 ## Goals
 
-- Improve beginner Portuguese
-- Reconnect with Brazilian roots
+- Prep for 5-day Rio press tour starting Thu 2026-06-12 — interviews with the main actor and director for the movie Supergirl (which she wrote)
+- Build conversational Brazilian Portuguese suitable for interview-adjacent interaction (press, hosts, local crew)
+- Improve beginner Portuguese; reconnect with Brazilian roots
 
 ---
 
 ## Background
 
-- First generation American, father from Brazil
-- Beginner level
-- Interested in one-on-one tutoring or classes in NYC/Brooklyn
+- First-generation American, father from Brazil
+- Screenwriter — wrote the movie Supergirl
+- 5-day press tour in Rio starting Thu 2026-06-12: interviews with the main actor and director
+- Lives in Carroll Gardens, Brooklyn
+- Self-described beginner Portuguese
+- Open to in-person or online; prefers Carroll Gardens area for in-person
 
 ---
 
@@ -37,6 +49,7 @@
 | 2026-05-17 | Gil replied; available today or tomorrow for a call; asked Ana to send a window |
 | 2026-05-17 | Ana replied (9:07 PM); confirmed free on May 18 before 2pm; gave phone (267) 760-2143 |
 | 2026-05-17 | Gil confirmed (9:20 PM); will call from (212) 470-9062 |
+| 2026-05-18 | Intro call. Lives in Carroll Gardens. Wrote the movie Supergirl; 5-day Rio press tour starting Thu 2026-06-12 with main actor and director. Targeting first lesson Thu 2026-05-21 early afternoon; Ana to suggest Carroll Gardens venue. |
 
 ---
 
@@ -51,15 +64,18 @@
 | 2026-05-17 | Scheduling | Gil replied; available today or tomorrow for a call; asked Ana to send a window. |
 | 2026-05-17 | Scheduling | Ana confirmed free on May 18 before 2pm; gave phone (267) 760-2143. |
 | 2026-05-17 | Scheduling | Gil confirmed call from (212) 470-9062 on May 18. |
+| 2026-05-18 | Intro call | Gil + Ana spoke. Established: Carroll Gardens (her neighborhood), screenwriter of the movie Supergirl, 5-day Rio press tour starting Thu 2026-06-12 with main actor + director. Targeting Thu 2026-05-21 early afternoon for first lesson; Ana to suggest venue. |
 
 ---
 
 ## Notes
 
 - Brazilian surname (Nogueira) — father from Brazil
-- Open to in-person or online
+- Open to in-person or online; prefers Carroll Gardens area for in-person
 - Gil's reply was warm and prompt relative to other inquiries
-- Ana re-engaged May 2026 with a clear motivation (upcoming Brazil trip)
+- Ana re-engaged May 2026 with a clear motivation (Rio press tour for Supergirl)
+- Trip prep priority: working-level Brazilian Portuguese suitable for press-adjacent interactions (interviews, hosts, local crew), plus general comfort for Rio
+- Lesson cadence is constrained by the 2026-06-12 departure — likely ~3 lessons possible before trip if weekly (5/21, 5/28, 6/4, and possibly 6/11)
 
 ---
 

@@ -54,6 +54,7 @@ What qualifies as urgent:
 - **Unread inbox emails** from any prospect or active student. The `UNREAD` label only shows via `get_thread` `messageFormat: FULL_CONTENT` — `search_threads` snippets won't show it and may also truncate to the 5 oldest messages, hiding the latest inbound entirely.
 - **Confirmation gaps within 24–48h.** A Tentative session needing Gil to send a confirmation today or tomorrow.
 - **Any flag the prior-day daily-roster cron raised that isn't resolved.** Read `daily-roster/YYYY-MM-DD.md` for yesterday (and the day before, if today is Monday). The cron's `Flags` section is a stronger prior than this skill's status-group ordering — if it flagged something yesterday and it hasn't been resolved, it stays urgent today.
+- **Multi-message cascades in flight.** Any reschedule or coordination cascade (touching 2+ students or calendar events) that hasn't fully resolved. State the cascade ledger explicitly in the output: which messages are sent / gated / pending, which calendar updates are deferred, what reply unblocks what. See `/cascade` skill for the structural procedure and `feedback_multi-message-cascade-gating` for the rule.
 
 Every urgent item identified here goes in the output's top section (Step 7), even if the student also appears in the per-status breakdown below.
 

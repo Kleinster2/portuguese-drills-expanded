@@ -6,8 +6,8 @@
 **Email:** dextermayo4@gmail.com
 **LinkedIn:** linkedin.com/in/dexter-mayo
 **Gender:** Female (she/her)
-**Status:** Active — five lessons completed; last was Thu 4/30 at ZACA; reschedule pending for Tue 5/19 (Gil to confirm over weekend)
-**Next session:** Tentative Tue 2026-05-19 6:30 PM, ZACA — Gil to confirm with Dexter over weekend of 5/17-5/18 (after her cousin's graduation).
+**Status:** Active — five lessons completed; last was Thu 4/30 at ZACA. As of 2026-05-18, Gil emailed proposing Thu 5/21 instead of the loose Tue 5/19 carryover. Awaiting her reply.
+**Next session:** Pending Dexter's reply to 2026-05-18 ask — targeting Thu 2026-05-21 evening at ZACA. Calendar still carries Tue 2026-05-19 6:30 PM ZACA as a tentative placeholder; will move once Dexter confirms Thursday.
 **Primer progress:** Through Part VIII (ter + age + family + possessives). Next: Part IX (poder, querer, gostar de).
 **Referral:** Unknown (no mention of source)
 
@@ -82,6 +82,7 @@
 | 2026-05-10 | Gil emailed asking if Dexter is available Thursday this week (subject: "Aula esta semana") |
 | 2026-05-11 | Dexter replied: too busy this week (cousin graduating, family in town); asked to push to next week |
 | 2026-05-11 | Gil replied: "Sem problema, Dexter. Enjoy the family. Boa semana para você!" |
+| 2026-05-18 | Gil emailed (continuing thread "Re: Aula esta semana"): warm acknowledgment of cousin's graduation, asked if this Thursday (5/21) works. Time + venue left open for Dexter to propose. Sent via Gmail draft `r-9197650869009895735`. Goal is to consolidate Brooklyn travel by stacking Dexter Thu evening with Ana Thu early afternoon (Carroll Gardens); if Dexter agrees, will then ask Amanda to move from Thu 5/21 4 PM. |
 
 ---
 
