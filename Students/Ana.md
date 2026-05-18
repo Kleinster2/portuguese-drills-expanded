@@ -4,7 +4,7 @@
 
 **Full name:** Ana Nogueira
 **Email:** ananogi2@gmail.com
-**Status:** Prospective — replied 2026-05-15; confirmed interest in lessons for next month and potentially beyond; offered to call May 15 or morning of May 16.
+**Status:** Prospective — call scheduled for Mon 2026-05-18 before 2 PM; Ana confirmed free, gave phone (267) 760-2143; Gil to call from (212) 470-9062.
 **Referral:** Idlewild
 
 ---
@@ -35,6 +35,8 @@
 | 2026-05-11 | Gil sent second follow-up; asked if Ana is still interested in discussing things further |
 | 2026-05-15 | Ana replied; confirmed she'd love to chat about lessons for next month and potentially beyond; available May 15 or morning of May 16 for a call |
 | 2026-05-17 | Gil replied; available today or tomorrow for a call; asked Ana to send a window |
+| 2026-05-17 | Ana replied (9:07 PM); confirmed free on May 18 before 2pm; gave phone (267) 760-2143 |
+| 2026-05-17 | Gil confirmed (9:20 PM); will call from (212) 470-9062 |
 
 ---
 
@@ -47,6 +49,8 @@
 | 2026-05-11 | Scheduling | Gil sent second follow-up; asked if Ana is still interested in discussing things further. |
 | 2026-05-15 | Scheduling | Ana replied confirming interest; wants lessons for next month and potentially beyond; available May 15 or morning of May 16 for a call. |
 | 2026-05-17 | Scheduling | Gil replied; available today or tomorrow for a call; asked Ana to send a window. |
+| 2026-05-17 | Scheduling | Ana confirmed free on May 18 before 2pm; gave phone (267) 760-2143. |
+| 2026-05-17 | Scheduling | Gil confirmed call from (212) 470-9062 on May 18. |
 
 ---
 
