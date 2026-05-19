@@ -74,6 +74,8 @@ Every item identified in Step 5. If Step 5 found nothing, write `(none today)` �
 
 - Item — what it is, what action it needs, deadline. Pulled directly from Step 5.
 
+**Inbound-message rule.** Whenever an Urgent item is triggered by an actual message from a student or prospect (email, WhatsApp, SMS), quote the message in full — sender / timestamp / body — before any summary, task framing, or proposed action. Parallel to [[feedback_show-drafts-in-chat]] (which governs outbound drafts): the same surface-the-text discipline applies to inbound when it's load-bearing. Summarized one-liners ("Dexter replied: busy Thu, blocking Thu 5/28") force Gil to ask "what did she actually say?" — that nudge means the skill failed. Quote first, summarize/act second. If Gil's own reply has already been sent in response, quote that too (paired below the inbound), and note its sync status to local files.
+
 **Active — next 7 days**
 - Student — next session date/time/venue, open action (if any)
 
