@@ -6,8 +6,8 @@
 **Email:** dextermayo4@gmail.com
 **LinkedIn:** linkedin.com/in/dexter-mayo
 **Gender:** Female (she/her)
-**Status:** Active — five lessons completed; last was Thu 4/30 at ZACA. Gil emailed 5/18–19 (three messages); Dexter replied 5/19: busy Thu 5/21, will block off Thu 5/28.
-**Next session:** Pending — Thu 2026-05-28 (Dexter replied 5/19 she'll block off next Thursday). Time and venue TBC; standing slot is 6:30 PM at ZACA.
+**Status:** Active — five lessons completed; last was Thu 4/30 at ZACA. Thu 5/28 6:30 PM ZACA confirmed by email exchange 5/19 (Dexter committed 9:25 AM, Gil acknowledged 4:30 PM).
+**Next session:** Confirmed Thu 2026-05-28 at 6:30–8:00 PM, ZACA Cafe (426 Marcus Garvey Blvd, Bed-Stuy). Calendar event `47mccvbpv5jpb119f5turkdsg8` (single event, Dexter as attendee, no notification fired).
 **Primer progress:** Through Part VIII (ter + age + family + possessives). Next: Part IX (poder, querer, gostar de).
 **Referral:** Unknown (no mention of source)
 
@@ -86,6 +86,7 @@
 | 2026-05-18 | Gil emailed (same thread, 8:17 PM): expanded to Tue OR Thu — ZACA at 6:30 either way. |
 | 2026-05-19 | Gil emailed (same thread, 12:27 AM): walked back Tuesday — Thursday at ZACA 6:30 is the standing ask. |
 | 2026-05-19 | Dexter replied (email, 9:25 AM): busy Thu 5/21; will block off Thu 5/28. |
+| 2026-05-19 | Gil replied (email, 4:30 PM): "Perfect. Have a good week! -G". Thu 5/28 6:30 PM ZACA confirmed. |
 
 ---
 
