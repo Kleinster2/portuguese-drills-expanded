@@ -26,3 +26,4 @@
 | 2026-04-20 | Email received | Dexter: "6:30 is great. Obrigada!" |
 | 2026-04-20 | Email sent | Gil: "Great! See you Thursday!" |
 | 2026-04-23 | Session | Fourth lesson scheduled — ZACA Cafe (426 Marcus Garvey Blvd, Bed-Stuy), 6:30 PM |
+| 2026-05-18 | Email sent | 8:17 PM ET (follow-up to 12:15 PM ask): "Oi Dexter, Just adding to my note from earlier — Tuesday (tomorrow) evening also works if Thursday is tight. ZACA at 6:30 either way. Let me know what fits. Abraços, Gil". Expanded the ask from Thursday-only to Tue OR Thu. Same thread "Re: Aula esta semana" (msg id 19e3d98a0a0e9e5c). |

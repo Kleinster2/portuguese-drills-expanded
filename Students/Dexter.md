@@ -6,8 +6,8 @@
 **Email:** dextermayo4@gmail.com
 **LinkedIn:** linkedin.com/in/dexter-mayo
 **Gender:** Female (she/her)
-**Status:** Active — five lessons completed; last was Thu 4/30 at ZACA. As of 2026-05-18, Gil emailed proposing Thu 5/21 instead of the loose Tue 5/19 carryover. Awaiting her reply.
-**Next session:** Pending Dexter's reply to 2026-05-18 ask — targeting Thu 2026-05-21 evening at ZACA. Calendar still carries Tue 2026-05-19 6:30 PM ZACA as a tentative placeholder; will move once Dexter confirms Thursday.
+**Status:** Active — five lessons completed; last was Thu 4/30 at ZACA. As of 2026-05-18, Gil emailed twice: 12:15 PM proposing Thu 5/21 only; 8:17 PM follow-up expanding to Tue (5/19) OR Thu (5/21), 6:30 PM at ZACA either day. Awaiting her reply.
+**Next session:** Pending Dexter's reply to 2026-05-18 dual-option ask (Tue 5/19 OR Thu 5/21, 6:30 PM at ZACA). Calendar carries Tue 2026-05-19 6:30 PM ZACA as placeholder; will adjust once she picks.
 **Primer progress:** Through Part VIII (ter + age + family + possessives). Next: Part IX (poder, querer, gostar de).
 **Referral:** Unknown (no mention of source)
 
