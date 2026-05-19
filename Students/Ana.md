@@ -12,7 +12,7 @@
 **Session frequency:** Targeting weekly, with trip-prep focus through 2026-06-12 Rio departure
 **Location:** Poetica Coffee, 251 Smith St, Cobble Hill/Carroll Gardens border (Ana's pick for first lesson); also open to online
 **Next session:** Confirmed Thu 2026-05-21, block 1:20–3:30 PM at Poetica Coffee, 251 Smith St. Ana free to arrive any time before 2 PM; Gil holds the table from 1:20. Calendar event `khu5npneqpcuu6p2m45aks58vg`, attendee invite sent + update confirmation sent.
-**Rate:** (TBD — confirm whether quoted on 2026-05-18 intro call)
+**Rate:** $75/session (quoted on 2026-05-18 intro call)
 **Referral:** Idlewild
 
 ---
@@ -44,6 +44,24 @@
 - Self-described beginner Portuguese; reconnecting with Brazilian roots
 - Open to in-person or online; prefers Carroll Gardens area for in-person
 - Background sourced from Wikipedia + trade reporting (Variety, The Hollywood Reporter, Deadline, TheWrap); verified 2026-05-18
+
+---
+
+## Current focus
+
+Lesson 1 (Thu 2026-05-21) — Phase 1 Eu, Parts I–IV of `Students/primer-BP.html`:
+- I — *Eu sou* (identity: name, nationality, profession)
+- II — *Eu moro em* (location)
+- III — *Eu trabalho em/com* (profession)
+- IV — *Eu falo* (languages) + conjunction *e*
+
+Pronunciation: nasal vowels (`ão`, `em`, `om`) — most distinctive BP sound, deployed constantly in Rio (*não, bom, obrigada, também*).
+
+Press-tour vocab anchor (10 min): *roteirista, escritora, filme, cinema, ator, diretor, entrevista, imprensa.* Verbal, no dedicated worksheet for lesson 1.
+
+Press-tour worksheet (Path A — Marvin pattern): generic `printables/bp-press-tour-worksheet.html` to be authored between lessons 1 and 2 (week of 5/22–5/27) for use starting lesson 2. Not lesson-1 material.
+
+Pacing reserve: Ana has heritage exposure (Brazilian father) — if Parts I–IV land in ~40 min instead of ~60, route the extra to deeper pronunciation drills + a real-time mock interview-opening exchange. Tighten as we go rather than overpack.
 
 ---
 
