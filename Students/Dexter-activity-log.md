@@ -27,3 +27,5 @@
 | 2026-04-20 | Email sent | Gil: "Great! See you Thursday!" |
 | 2026-04-23 | Session | Fourth lesson scheduled — ZACA Cafe (426 Marcus Garvey Blvd, Bed-Stuy), 6:30 PM |
 | 2026-05-18 | Email sent | 8:17 PM ET (follow-up to 12:15 PM ask): "Oi Dexter, Just adding to my note from earlier — Tuesday (tomorrow) evening also works if Thursday is tight. ZACA at 6:30 either way. Let me know what fits. Abraços, Gil". Expanded the ask from Thursday-only to Tue OR Thu. Same thread "Re: Aula esta semana" (msg id 19e3d98a0a0e9e5c). |
+| 2026-05-19 | Email sent | 12:27 AM ET (walkback): "Oi Dexter, Quick update — Tuesday is off after all. Thursday at ZACA, 6:30 is the plan. Let me know! Abraços, Gil". Tuesday option removed; Thursday-only standing. Same thread (msg id 19e3e7d4cc3228c5). |
+| 2026-05-19 | Calendar | Deleted Tue 5/19 6:30 PM ZACA Brooklyn instance (event id `..._20260519T223000Z`, notificationLevel=NONE). Recurring series preserved. Will reconfigure the recurrence target day once Dexter confirms Thursday cadence. |
