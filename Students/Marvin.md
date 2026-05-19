@@ -10,7 +10,7 @@
 **Session frequency:** Weekly (Tuesdays, sometimes Thursdays), 1.5 hours, in-person (Brooklyn Navy Yard / Essex Market / Manhattan)
 **Rate:** $60/session (up to 90 min, cancel anytime)
 **Referral:** Idlewild (referred ~early 2024, contacted Gil Mar 2025)
-**Next session:** Tentative Tue 2026-05-19 3:30 PM, Brooklyn Navy Yard — Gil to confirm with Marvin over weekend of 5/17-5/18. Marvin mid-trip as of 5/13 (climbed Mt. Pico that morning); Algarve + Lisboa legs ahead.
+**Next session:** Pending — Marvin still in Portugal as of 2026-05-18, returning "na próxima semana" (week of 5/25). Tue 5/19 BNY cancelled (event deleted notificationLevel=NONE). Will reschedule once Marvin proposes a specific date on return.
 
 ---
 

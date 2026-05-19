@@ -12,3 +12,6 @@
 | 2026-04-02 | Session | Session at Brookfield Place. Gil arrived late (~5:45pm). Christian confirmed "Ta bom!" |
 | 2026-04-04 | WhatsApp | Gil asked about another day this week; Christian offered Monday; Gil corrected to Wednesday; agreed on Wed 4/8 |
 | 2026-04-08 | Session | Session at Brookfield Place. Christian arriving 10 min late ("Estou chegando em 10 minutos. Disculpa"), Gil: "Não tem problema." |
+| 2026-05-18 | WhatsApp received | 3:48 PM (edited): "Oi Gil tudo bem? Podemos nos encontrar na próxima quarta em vez desta? Meus sogros vão voltar pro Brasil esta quarta". Christian asked to move Wed 5/20 → Wed 5/27 — in-laws flying back to Brazil 5/20. |
+| 2026-05-18 | WhatsApp sent | 7:13 PM: "Oi Christian. Sem problemas! Aproveite os seus sogros. Boa semana para você. Até a próxima quarta!" Accepted the reschedule. |
+| 2026-05-18 | Calendar | Deleted Wed 5/20 5:30 PM Brookfield Place instance (event id `..._20260520T213000Z`, notificationLevel=NONE). Recurring series preserved — Wed 5/27 is the next instance in the existing series, no new event needed. |

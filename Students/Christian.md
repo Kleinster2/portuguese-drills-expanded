@@ -11,7 +11,7 @@
 **Rate:** $60/class (up to 90 min)
 **Payment:** Venmo
 **Referral:** Idlewild class listing
-**Next session:** Wed 2026-05-20 5:30 PM, Brookfield Place (back to Wed cadence)
+**Next session:** Wed 2026-05-27 5:30 PM, Brookfield Place. Rescheduled from Wed 5/20 — Christian's in-laws flying back to Brazil 5/20, asked via WhatsApp 3:48 PM on 2026-05-18, Gil accepted 7:13 PM. Wed 5/20 calendar instance deleted (notificationLevel=NONE).
 
 ---
 
