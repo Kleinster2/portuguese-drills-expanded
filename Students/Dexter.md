@@ -6,8 +6,8 @@
 **Email:** dextermayo4@gmail.com
 **LinkedIn:** linkedin.com/in/dexter-mayo
 **Gender:** Female (she/her)
-**Status:** Active — five lessons completed; last was Thu 4/30 at ZACA. As of 2026-05-18, Gil emailed three times in same thread: 12:15 PM proposing Thu 5/21; 8:17 PM expanding to Tue OR Thu; 12:27 AM (5/19) walked back Tuesday — Thursday-only at ZACA 6:30 is the standing ask. Awaiting her reply.
-**Next session:** Pending Dexter's reply to walked-back single-day ask (Thu 5/21, 6:30 PM at ZACA). Tue 5/19 calendar instance deleted (recurring series preserved); Thursday recurrence not yet established, will reconfigure once she confirms Thursday cadence.
+**Status:** Active — five lessons completed; last was Thu 4/30 at ZACA. Gil emailed 5/18–19 (three messages); Dexter replied 5/19: busy Thu 5/21, will block off Thu 5/28.
+**Next session:** Pending — Thu 2026-05-28 (Dexter replied 5/19 she'll block off next Thursday). Time and venue TBC; standing slot is 6:30 PM at ZACA.
 **Primer progress:** Through Part VIII (ter + age + family + possessives). Next: Part IX (poder, querer, gostar de).
 **Referral:** Unknown (no mention of source)
 
@@ -85,6 +85,7 @@
 | 2026-05-18 | Gil emailed (continuing thread "Re: Aula esta semana"): warm acknowledgment of cousin's graduation, asked if this Thursday (5/21) works. Time + venue left open for Dexter to propose. Sent via Gmail draft `r-9197650869009895735`. Goal is to consolidate Brooklyn travel by stacking Dexter Thu evening with Ana Thu early afternoon (Carroll Gardens); if Dexter agrees, will then ask Amanda to move from Thu 5/21 4 PM. |
 | 2026-05-18 | Gil emailed (same thread, 8:17 PM): expanded to Tue OR Thu — ZACA at 6:30 either way. |
 | 2026-05-19 | Gil emailed (same thread, 12:27 AM): walked back Tuesday — Thursday at ZACA 6:30 is the standing ask. |
+| 2026-05-19 | Dexter replied (email, 9:25 AM): busy Thu 5/21; will block off Thu 5/28. |
 
 ---
 
