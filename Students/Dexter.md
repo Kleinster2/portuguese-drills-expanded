@@ -83,6 +83,8 @@
 | 2026-05-11 | Dexter replied: too busy this week (cousin graduating, family in town); asked to push to next week |
 | 2026-05-11 | Gil replied: "Sem problema, Dexter. Enjoy the family. Boa semana para você!" |
 | 2026-05-18 | Gil emailed (continuing thread "Re: Aula esta semana"): warm acknowledgment of cousin's graduation, asked if this Thursday (5/21) works. Time + venue left open for Dexter to propose. Sent via Gmail draft `r-9197650869009895735`. Goal is to consolidate Brooklyn travel by stacking Dexter Thu evening with Ana Thu early afternoon (Carroll Gardens); if Dexter agrees, will then ask Amanda to move from Thu 5/21 4 PM. |
+| 2026-05-18 | Gil emailed (same thread, 8:17 PM): expanded to Tue OR Thu — ZACA at 6:30 either way. |
+| 2026-05-19 | Gil emailed (same thread, 12:27 AM): walked back Tuesday — Thursday at ZACA 6:30 is the standing ask. |
 
 ---
 
