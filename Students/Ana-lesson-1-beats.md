@@ -53,7 +53,7 @@ Target sentences:
 - *Eu trabalho na DC Studios.* (model the contraction casually — *em + a*)
 - Optional: *Eu trabalho em Hollywood.*
 
-Conversational layer: ask about her work — what she writes, what's coming after Supergirl. Natural opening to practice the verb pattern with real content.
+Conversational layer: ask about her work — what she writes, what's coming after Supergirl. Natural opening to practice the verb pattern with real content. (Background per Omelete 2025-10-02 ingest: Ana's stated creative POV on the character is the gritty Tom King *Woman of Tomorrow* take — she rejected the "cheerful Supergirl" reading because the character "saw Krypton be completely destroyed." If she opens this up, validate — it's the angle Brazilian press will probe.)
 
 **Watch for:**
 - Spanish *"trabajo"* (with /x/) bleeding into *"trabalho"* (with /ʎ/-like sound, palatalized). The *-lh-* is a key BP sound.
@@ -97,6 +97,8 @@ Verbal only, no handout. Vocab list to introduce (she repeats each, Gil corrects
 - *entrevista, imprensa* — what she'll do
 
 Anchor sentence: *"Eu sou roteirista. Eu escrevi um filme."* — past tense *"escrevi"* is technically A2, but introducing it as a single memorized form gives her a payoff sentence for the press tour. Flag it as "we'll learn this properly next time."
+
+**Brazil hook to plant verbally (no drilling):** the source graphic novel for *Supergirl* — *Woman of Tomorrow*, by Tom King — was illustrated by **Bilquis Evely**, a Brazilian artist from Rio. This is a direct unprompted talking point Ana can carry into any Rio press interaction. The BP sentence form (*"O quadrinho foi ilustrado por uma brasileira"* / *"...por uma artista brasileira, Bilquis Evely"*) is A2+ (passive or *por* + agent), so don't drill it now. Just plant the fact verbally and tell her we'll build the sentence properly in lesson 2 or 3. Builds anticipation + gives her something concrete to remember between lessons.
 
 ## Beat 8 — Wrap (~5 min)
 

@@ -34,7 +34,14 @@
 - Originated Eliza Hamilton in the Vassar workshop production of Lin-Manuel Miranda's *Hamilton*
 - Plays written: *Empathitrax*, *Which Way to the Stage*
 - Screenwriting — all DC Studios:
-  - *Supergirl* (dir. Craig Gillespie; stars Milly Alcock; based on Tom King's *Supergirl: Woman of Tomorrow* graphic novel; her first produced screenplay; theatrical release 2026-06-26)
+  - *Supergirl* — her first produced screenplay. Originally titled *Supergirl: Woman of Tomorrow*, shortened to *Supergirl* during development.
+    - Director: Craig Gillespie (*Cruella*).
+    - Cast: Milly Alcock (Supergirl), Eve Ridley (Ruthye Marie Knoll), Matthias Schoenaerts (Krem), David Krumholtz + Emily Beecham as Supergirl's parents Zor-El and Alura In-Ze, Jason Momoa (Lobo); Krypto the Superdog also appears.
+    - Source material: Tom King's graphic novel *Supergirl: Woman of Tomorrow*, illustrated by Brazilian artist Bilquis Evely (born Rio de Janeiro). Direct Brazil hook for press-tour talking points — Evely is well-known in Brazilian comics circles.
+    - Plot: sci-fi epic in which Supergirl joins young Ruthye on a space-faring journey to find the killer of Ruthye's father, Krem.
+    - Ana's creative POV on the character (per Omelete 2025-10-02, citing a ComicBookMovie interview): rejected the "cheerful Supergirl" reading — argued she "saw Krypton be completely destroyed" and couldn't square that with a sunny tone; drawn to Tom King's "grittier, rawer, bolder, funnier" take. Useful for lesson-prep around how she'll talk about her own creative choices.
+    - Theatrical release: 2026-06-26 (US, per Variety/THR); 2026-06-25 (Brazil, per Omelete 2025-10-02) — typical one-day international/US stagger.
+    - Pre-history: originally hired by Warner to write a different Supergirl film starring Sasha Calle; project was reshaped after DC Studios restructured under Gunn/Safran.
   - *Wonder Woman* reboot (in progress)
   - *Teen Titans* live-action (in progress)
 - 5-day Rio press tour starting Thu 2026-06-12 (~9 days before *Supergirl*'s 2026-06-26 US theatrical release; standard international-launch press circuit)
@@ -43,7 +50,7 @@
 - Lives in Carroll Gardens, Brooklyn
 - Self-described beginner Portuguese; reconnecting with Brazilian roots
 - Open to in-person or online; prefers Carroll Gardens area for in-person
-- Background sourced from Wikipedia + trade reporting (Variety, The Hollywood Reporter, Deadline, TheWrap); verified 2026-05-18
+- Background sourced from Wikipedia + trade reporting (Variety, The Hollywood Reporter, Deadline, TheWrap); verified 2026-05-18. *Supergirl* creative-POV, granular cast/plot, Bilquis Evely Brazil hook, and pre-history (Sasha Calle version) added from Omelete (omelete.com.br) article by Felipe Brandão, "Supergirl | Roteirista revela o que lhe atraiu à história", 2025-10-02, ingested 2026-05-19.
 
 ---
 
