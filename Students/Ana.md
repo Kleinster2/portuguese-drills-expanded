@@ -78,6 +78,7 @@
 | 2026-05-17 | Scheduling | Ana confirmed free on May 18 before 2pm; gave phone (267) 760-2143. |
 | 2026-05-17 | Scheduling | Gil confirmed call from (212) 470-9062 on May 18. |
 | 2026-05-18 | Intro call | Gil + Ana spoke. Established: Carroll Gardens (her neighborhood), screenwriter of the movie Supergirl, 5-day Rio press tour starting Thu 2026-06-12 with main actor + director. Targeting Thu 2026-05-21 early afternoon for first lesson; Ana to suggest venue. |
+| 2026-05-18 | Confirmed | Ana proposed Poetica Coffee, 251 Smith St (Cobble Hill) for Thu 2026-05-21 at 1:20 PM; Gil confirmed the spot. |
 
 ---
 
