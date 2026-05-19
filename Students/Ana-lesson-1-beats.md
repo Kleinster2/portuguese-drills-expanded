@@ -100,6 +100,8 @@ Anchor sentence: *"Eu sou roteirista. Eu escrevi um filme."* — past tense *"es
 
 **Brazil hook to plant verbally (no drilling):** the source graphic novel for *Supergirl* — *Woman of Tomorrow*, by Tom King — was illustrated by **Bilquis Evely**, a Brazilian artist from Rio. This is a direct unprompted talking point Ana can carry into any Rio press interaction. The BP sentence form (*"O quadrinho foi ilustrado por uma brasileira"* / *"...por uma artista brasileira, Bilquis Evely"*) is A2+ (passive or *por* + agent), so don't drill it now. Just plant the fact verbally and tell her we'll build the sentence properly in lesson 2 or 3. Builds anticipation + gives her something concrete to remember between lessons.
 
+**BP movie titles to recognize (no drilling):** Brazilian press uses *Mulher-Maravilha* for Wonder Woman and *Os Jovens Titãs* for Teen Titans — her two other DC projects. For *Supergirl*, current marketing is just *Supergirl*, but earlier BR press during the development phase used the literal translation *Supergirl: Mulher do Amanhã*. Plant for recognition only — she shouldn't have to produce these, but if a reporter mentions her other DC projects in BP, she should know what's being referred to.
+
 ## Beat 8 — Wrap (~5 min)
 
 - Set homework verbally: practice introducing yourself in BP to a mirror every day this week (5–6 sentences using *Eu sou / Eu moro / Eu trabalho / Eu falo*)
